@@ -69,6 +69,7 @@ export INPUTRC=$HOME/.inputrc
 alias ll='ls -alF'
 alias la='ls -lahL'
 alias l='ls -CF'
+alias grp='grep -RiI'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -88,6 +89,15 @@ fi
 
 # git alias:
 alias g='git'
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit '
+alias gcm='git commit -m '
+alias gd='git diff '
+alias go='git checkout '
+#alias gp='git push '
+alias gp='git push origin master '
 
 # ========================================================= #
 # ruby config                                               #
@@ -110,6 +120,8 @@ alias auto='sudo apt-get autoremove'
 alias uu='sudo apt-get update & sudo apt-get upgrade'
 
 # Relative Jumps
+alias cdv='cd /home/dbt/git/vagrant '
+alias cdg='cd /home/dbt/git/ '
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -120,7 +132,7 @@ alias .....='cd ../../../..'
 # ========================================================= #
 
 # Add alias for stats python env
-alias pystats='source ~/Envs/stats/bin/activate'
+alias pystats='source /home/dbt/Envs/stats/bin/activate'
 
 # Add some pip shortcuts
 alias pyi='pip install'
