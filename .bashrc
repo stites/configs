@@ -100,6 +100,13 @@ alias go='git checkout '
 alias gp='git push origin master '
 
 # ========================================================= #
+# vagrantbox stuff                                          #
+# ========================================================= #
+
+#alias cdv="cd /vagrant "
+alias cdv='cd /home/dbt/git/vagrant '
+
+# ========================================================= #
 # ruby config                                               #
 # ========================================================= #
 
@@ -120,7 +127,6 @@ alias auto='sudo apt-get autoremove'
 alias uu='sudo apt-get update & sudo apt-get upgrade'
 
 # Relative Jumps
-alias cdv='cd /home/dbt/git/vagrant '
 alias cdg='cd /home/dbt/git/ '
 alias ..='cd ..'
 alias ...='cd ../..'
