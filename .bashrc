@@ -128,6 +128,8 @@ alias uu='sudo apt-get update & sudo apt-get upgrade'
 
 # Relative Jumps
 alias cdg='cd /home/dbt/git/ '
+alias cdd='cd /home/dbt/Downloads/'
+alias cdk='cd /home/dbt/Downloads/kaggle'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
