@@ -32,12 +32,37 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+
+
 if [ "$color_prompt" = yes ]; then
-    PS1="\e[32;1m[\u@\[\e[35;1m\]\H \[\e[0m\]\W]\$ "
+    # At home, grey path
+    PS1="[\e[1;32m\u\[\e[1;35m\]@\H \[\e[1;30m\]\W\e[0m]\$ "
+    # at home, white path
+    #PS1="[\e[1;32m\u\[\e[1;35m\]@\H \[\e[0m\]\W]\$ "
+    
+    # In vagrant, grey path:
+    # PS1="[\e[34;1m\u\[\e[0;34m\]@\H \[\e[1;30m\]\W\e[0m]\$ "
+
+    # In AWS, white path:
+    # PS1="[\e[0;33m\u\[\e[0;36m\]@aws \[\e[0m\]\W]\$ "
+    # In AWS, grey path:
+    # PS1="[\e[0;33m\u\[\e[0;36m\]@aws \[\e[1;30m\]\W\e[0m]\$ "
+
 else
     PS1="[\u@\h:\W]\$ "
 fi
 unset color_prompt force_color_prompt
+
+# Color   Code
+# Black   0;30
+# Blue    0;34
+# Green   0;32
+# Cyan    0;36
+# Red     0;31
+# Purple  0;35
+# Brown   0;33
+# replace 0 with 1 for a lighter version
+
 
 # ========================================================= #
 # history and autofill                                      #
@@ -105,6 +130,7 @@ alias gp='git push origin master '
 
 #alias cdv="cd /vagrant "
 alias cdv='cd /home/dbt/git/vagrant '
+alias vagrantboot='vagrant up; vagrant ssh'
 
 # ========================================================= #
 # ruby config                                               #
@@ -148,3 +174,9 @@ alias pysi='sudo pip install'
 
 # And some ipython shortcuts
 alias notebook='ipython notebook --pylab=inline'
+
+# =================================== #
+# ssh alias'                          #
+# =================================== #
+alias ssh_se='ssh -i /home/dbt/.ssh/aws/stites_se.pem ubuntu@ec2-50-112-63-215.us-west-2.compute.amazonaws.com'
+
