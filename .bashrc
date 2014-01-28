@@ -1,3 +1,5 @@
+export EDITOR='subl -w'
+
 # ~/.bashrc: executed by bash(1) for non-login shells.  # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -7,6 +9,8 @@
 # ========================================================= #
 # beautify the terminal                                     #
 # ========================================================= #
+
+#HOSTNAME="MacAir"
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -36,10 +40,10 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     # At home, grey path
-    PS1="[\e[1;32m\u\[\e[1;35m\]@\H \[\e[1;30m\]\W\e[0m]\$ "
+#   PS1="[\e[1;32m\u\[\e[1;35m\]@\H \[\e[1;30m\]\W\e[0m]\$ "
+    PS1="\e[33;1m\]@\[\e[34;1m\]\W\e[35;1m\]~ \[\e[0m\]"
     # at home, white path
     #PS1="[\e[1;32m\u\[\e[1;35m\]@\H \[\e[0m\]\W]\$ "
-    
     # In vagrant, grey path:
     # PS1="[\e[34;1m\u\[\e[0;34m\]@\H \[\e[1;30m\]\W\e[0m]\$ "
 
@@ -91,92 +95,144 @@ export INPUTRC=$HOME/.inputrc
 # ========================================================= #
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -lahL'
-alias l='ls -CF'
+alias l="pwd && ls -halGpF "
+#alias l='ls -CF'
 alias grp='grep -RiI'
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
+alias ls='pwd && ls -G'
+alias tree='tree -C'
 
 # ========================================================= #
 # git config                                                #
 # ========================================================= #
 
 # git alias:
-alias g='git'
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit '
-alias gcm='git commit -m '
-alias gd='git diff '
-alias go='git checkout '
-#alias gp='git push '
-alias gp='git push origin master '
+alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad @ %cr) %C(bold blue)<%an>%Creset' --graph --abbrev-commit --date=short"
+alias g="git "
+alias gfl="git fetch && gl"
+alias gpl="git pull upstream master && gl"
+alias go="git checkout "
+alias gs='git status'
+alias greset='git reset'
+alias gmv="git mv "
+alias gm="git merge "
+alias gr="git rm "
+alias ga="git add "
+alias gc="git commit "
+alias gclone="git clone "
+alias gcm="gc -m "
+alias grm='git rm '
+alias gp='git push '
+alias gpo='gp origin'
+alias gpom='gpo master'
+alias gpog='gpo gh-pages'
+alias gpub='go gh-pages && gpog && go master && gm gh-pages && gpom && go gh-pages && gs'
+alias ghUp="gh pr --remote upstream -s"
+alias gd="git diff"
+alias stash="git stash"
+alias pop="git stash pop"
+alias gb='git branch'
+alias gpull="git pull"
+alias gpullup="gpull upstream master"
 
 # ========================================================= #
 # vagrantbox stuff                                          #
 # ========================================================= #
 
 #alias cdv="cd /vagrant "
-alias cdv='cd /home/dbt/git/vagrant '
+#alias cdv='cd /home/dbt/git/vagrant '
 alias vagrantboot='vagrant up; vagrant ssh'
 
 # ========================================================= #
-# ruby config                                               #
+# kill processes                                           #
 # ========================================================= #
+
+alias killnode='killall -9 node'
+alias killgrunt='killall -9 grunt'
+alias killpsql='killall -9 psql'
+alias killpostgres='killall -9 postgres'
+alias exterminate='killall -9 node && killall -9 postgres && killall -9 psql && killall -9 grunt'
+
+# ========================================================= #
+# PATH Exports                                              #
+# ========================================================= #
+
+# add ruby paths for MACSTUFF!!!!
+export PATH=$PATH:/usr/local/bin:/usr/local/share/npm/bin:/Users/stites/.rvm/gems/ruby-1.9.3-p448/bin:/Users/stites/.rvm/gems/ruby-1.9.3-p448@global/bin:/Users/stites/.rvm/rubies/ruby-1.9.3-p448/bin:/Users/stites/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/stites/.rvm/bin
+export PATH=$PATH:/usr/local/sbin:/usr/local/share/npm/bin:/Users/stites/.rvm/gems/ruby-1.9.3-p448/bin:/Users/stites/.rvm/gems/ruby-1.9.3-p448@global/bin:/Users/stites/.rvm/rubies/ruby-1.9.3-p448/bin:/Users/stites/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/stites/.rvm/bin
 
 # Add RVM to PATH for scripting:
 PATH=$PATH:$HOME/.rvm/bin 
+# do the same for node:
+export PATH="/usr/local/share/npm/bin:$PATH"
+export NODE_PATH="/usr/local/lib/node"
+
+# Get Java 7 for Mac:
+export JAVA_PATH="/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin"
 
 # ========================================================= #
-# apt-get                                                   #
+# vim, bash editing, terminal settings, relative jumps      #
 # ========================================================= #
 
-# add alias':
-alias i='sudo apt-get -y install'
-alias r='sudo apt-get remove'
-alias s='sudo apt-cache search'
-alias u='sudo apt-get update'
-alias rep='sudo add-apt-repository'
-alias auto='sudo apt-get autoremove'
-alias uu='sudo apt-get update & sudo apt-get upgrade'
+# vim:
+alias v='vim '
+alias vrc='vim ~/.bashrc'
+alias src='source ~/.bashrc'
 
-# Relative Jumps
-alias cdg='cd /home/dbt/git/ '
-alias cdd='cd /home/dbt/Downloads/'
-alias cdk='cd /home/dbt/Downloads/kaggle'
+# rename tabs:
+function tabname {
+  printf "\e]1;$1\a"
+  }
+  function winname {
+    printf "\e]2;$1\a"
+}
+
+# Relative Jumps:
+#alias cdk='cd ~/Downloads/kaggle'
+alias ~='cd ~ '
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
+# terminal commands:
+alias c="clear"
+alias to="touch "
+alias mk="mkdir "
+alias mkp='mkdir -p '
+
 # ========================================================= #
-# virtualenv, pip & python                                  #
+# Redis                                                     #
 # ========================================================= #
+alias redis-local="redis-server /usr/local/etc/redis.conf"
 
-# Add alias for stats python env
-alias pystats='source /home/dbt/Envs/stats/bin/activate'
+# ========================================================= #
+# Postgres                                                  #
+# ========================================================= #
+alias pg="postgres -D /usr/local/var/postgres/"
+alias psqlSEED="psql -h 127.0.0.1 -p 5432 -U stites -w seedchange"
+alias psql-w="psql -h 127.0.0.1 -p 5432 -U stites -w "
+alias psqlSEEDAWS="psql -h seedchangeim.c66sp35lkt8d.us-west-1.rds.amazonaws.com -p 5432 -U seed -W changeIM -d seedchange"
+alias sshSEEDAWS="ssh -i seedchange.pem ec2-user@ec2-54-193-55-47.us-west-1.compute.amazonaws.com"
+# ========================================================= #
+# MacOSX-specific                                           #
+# ========================================================= #
+alias displayType='ioreg -lw0 | grep "EDID" | sed "/[^<]*</s///" | xxd -p -r | strings -6'
 
-# Add some pip shortcuts
-alias pyi='pip install'
-alias pysi='sudo pip install'
+# ========================================================= #
+# initialization scripts which are auto-generated           #
+# ========================================================= #
+eval "$(fasd --init auto)"
 
-# And some ipython shortcuts
-alias notebook='ipython notebook --pylab=inline'
+# some aws stuff: command to start the init script:
+# alias nodejs='sh /etc/rc.d/init.d/nodejs restart'
+alias gpob='gpo bugfix'
+alias k9='killall -9 '
+alias r='grunt'
+export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
+export SLIMERJS_BIN=/Applications/Firefox.app/Contents/MacOS/firefox
+alias grebase='git pull --rebase'
+alias grup='grebase upstream'
+alias grud='grup dev'
 
-# =================================== #
-# ssh alias'                          #
-# =================================== #
-alias ssh_se='ssh -i /home/dbt/.ssh/aws/stites_se.pem ubuntu@ec2-50-112-63-215.us-west-2.compute.amazonaws.com'
-
+# added by travis gem
+[ -f /Users/stites/.travis/travis.sh ] && source /Users/stites/.travis/travis.sh
