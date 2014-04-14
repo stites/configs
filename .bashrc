@@ -95,7 +95,7 @@ export INPUTRC=$HOME/.inputrc
 # ========================================================= #
 
 # some more ls aliases
-alias l="pwd && ls -halGpF "
+alias l="ls -halGpF "
 #alias l='ls -CF'
 alias grp='grep -RiI'
 alias ls='pwd && ls -G'
@@ -123,7 +123,9 @@ alias gcm="gc -m "
 alias grm='git rm '
 alias gp='git push '
 alias gpo='gp origin'
+alias gph='gp heroku'
 alias gpom='gpo master'
+alias gphm='gph master'
 alias gpog='gpo gh-pages'
 alias gpub='go gh-pages && gpog && go master && gm gh-pages && gpom && go gh-pages && gs'
 alias ghUp="gh pr --remote upstream -s"
@@ -138,9 +140,9 @@ alias gpullup="gpull upstream master"
 # vagrantbox stuff                                          #
 # ========================================================= #
 
-#alias cdv="cd /vagrant "
+alias cdv="cd ~/vagrant "
 #alias cdv='cd /home/dbt/git/vagrant '
-alias vagrantboot='vagrant up; vagrant ssh'
+alias vboot='vagrant up; vagrant ssh'
 
 # ========================================================= #
 # kill processes                                           #
@@ -181,10 +183,11 @@ alias src='source ~/.bashrc'
 # rename tabs:
 function tabname {
   printf "\e]1;$1\a"
-  }
-  function winname {
-    printf "\e]2;$1\a"
 }
+function winname {
+  printf "\e]2;$1\a"
+}
+
 
 # Relative Jumps:
 #alias cdk='cd ~/Downloads/kaggle'
@@ -228,11 +231,35 @@ eval "$(fasd --init auto)"
 alias gpob='gpo bugfix'
 alias k9='killall -9 '
 alias r='grunt'
-export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
-export SLIMERJS_BIN=/Applications/Firefox.app/Contents/MacOS/firefox
 alias grebase='git pull --rebase'
 alias grup='grebase upstream'
 alias grud='grup dev'
 
 # added by travis gem
 [ -f /Users/stites/.travis/travis.sh ] && source /Users/stites/.travis/travis.sh
+alias vssh='vagrant ssh'
+alias vhalt='vagrant halt'
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+alias treeClient='tree -I ./client/bower_components -I node_modules'
+alias boom='gulp && gulp server'
+alias sp='source ~/vagrant/stats/bin/activate'
+alias pb='gulp browserify'
+export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
+alias stats='source /Users/stites/vagrant/stats/bin/activate'
+
+#######NWDP:
+nwBase=/Users/stites/git/DemandCube/Sparkngin-developer-setup
+alias nw="${nwBase}/setup.sh"
+alias DP="${nwBase}/destroyAndCleanup.sh"
+
+
+##########
+# bash functions
+
+function j {
+  javac $1.java
+  java $1 ${@:2}
+}
+export DOCKER_HOST=tcp://localhost:4243
