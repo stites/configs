@@ -1,1 +1,1 @@
-sh setup.sh {guest|host}
+. setup.sh {guest|host}
