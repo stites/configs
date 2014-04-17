@@ -6,7 +6,7 @@ function init {
   sudo $pkgmanager update -y && sudo $pkgmanager upgrade -y
   sudo $pkgmanager install -y vim wget git
 
-  curl http://j.mp/spf13-vim3 -L -o - | sh 
+  curl http://j.mp/spf13-vim3 -L -o - | sh
   curl https://github.com/clvv/fasd/tarball/1.0.1 -L -o fasd_dir
   tar xvf fasd_dir
   cd clvv-fasd-4822024
@@ -15,8 +15,9 @@ function init {
   rm -rf fasd_dir
   rm -rf clvv-fasd-4822024
 
-  cp -f ./.bash_profile  ~/.bash_profile
-  cp -f ./.bashrc        ~/.bashrc
+  cp -f ./.bash_colors.sh ~/.bash_colors.sh
+  cp -f ./.bash_profile   ~/.bash_profile
+  cp -f ./.bashrc         ~/.bashrc
 }
 
 case "$1" in
