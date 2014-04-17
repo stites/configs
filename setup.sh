@@ -26,7 +26,7 @@ case "$1" in
     ;;
   guest)
     init
-    echo 'PS1="${NORMAL}[${BRIGHT_BLUE}@${BLUE}${os_type}${NORMAL}] ${RESET}"' >> ~/.bashrc
+    echo 'PS1="${NORMAL}[${BRIGHT_BLUE}\u${BLUE}@${os_type}${NORMAL}|${BRIGHT_BLACK}\W${NORMAL}] ${RESET}"' >> ~/.bashrc
     ;;
   *)
     echo "Usage: $0 {guest|host}" >&2
