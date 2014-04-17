@@ -36,12 +36,14 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-
+# Use the colors shell file
+. .bash_colors.sh
+# source bash_colors.sh
 
 if [ "$color_prompt" = yes ]; then
     # At home, grey path
 #   PS1="[\e[1;32m\u\[\e[1;35m\]@\H \[\e[1;30m\]\W\e[0m]\$ "
-    PS1="\e[33;1m\]@\[\e[34;1m\]\W\e[35;1m\]~ \[\e[0m\]"
+    PS1="${BRIGHT_YELLOW}@${BRIGHT_BLUE}\W${BRIGHT_VIOLET}~ ${RESET}"
     # at home, white path
     #PS1="[\e[1;32m\u\[\e[1;35m\]@\H \[\e[0m\]\W]\$ "
     # In vagrant, grey path:
@@ -56,16 +58,6 @@ else
     PS1="[\u@\h:\W]\$ "
 fi
 unset color_prompt force_color_prompt
-
-# Color   Code
-# Black   0;30
-# Blue    0;34
-# Green   0;32
-# Cyan    0;36
-# Red     0;31
-# Purple  0;35
-# Brown   0;33
-# replace 0 with 1 for a lighter version
 
 
 # ========================================================= #
@@ -238,6 +230,7 @@ alias grud='grup dev'
 # added by travis gem
 [ -f /Users/stites/.travis/travis.sh ] && source /Users/stites/.travis/travis.sh
 alias vssh='vagrant ssh'
+alias vup='vagrant up'
 alias vhalt='vagrant halt'
 
 ### Added by the Heroku Toolbelt
