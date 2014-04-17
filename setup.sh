@@ -1,4 +1,5 @@
 pkgmanager=$(uname -a | grep ubuntu && echo "apt-get" || echo "yum")
+os_type=$(uname -a | grep ubuntu && echo "ubuntu" || echo "centOS")
 sudo $pkgmanager update -y && sudo $pkgmanager upgrade -y
 sudo $pkgmanager install -y vim wget git
 
@@ -20,7 +21,7 @@ case "$1" in
     # Gotta fix this one a little bit!
     ;;
   guest)
-    echo 'PS1="[\e[34;1m\u\[\e[0;34m\]@\H \[\e[1;30m\]\W\e[0m]\$ "' >> ~/.bashrc
+    echo 'PS1="${NORMAL}[${BRIGHT_BLUE}@${BLUE}${os_type}${NORMAL}] ${RESET}"' >> ~/.bashrc
     ;;
   *)
     echo "Usage: $0 {guest|host}" >&2
