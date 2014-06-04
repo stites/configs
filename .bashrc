@@ -1,4 +1,4 @@
-export EDITOR='subl -w'
+export EDITOR='vim'
 
 # ~/.bashrc: executed by bash(1) for non-login shells.  # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -37,7 +37,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 # Use the colors shell file
-. .bash_colors.sh
+. ~/.bash_colors.sh
 # source bash_colors.sh
 
 if [ "$color_prompt" = yes ]; then
@@ -82,16 +82,51 @@ shopt -s checkwinsize   # check the window size after each command and, if
 # scrolls through your history for this. Store function in .inputrc
 export INPUTRC=$HOME/.inputrc 
 
+function h {
+  if [[ "$1" =~ "^\d+$" ]]; then
+    !$1
+  elif [ "$1" != "" ]; then
+    history | grep $1
+  else
+    history
+  fi
+}
+
 # ========================================================= #
 # ls config                                                 #
 # ========================================================= #
 
 # some more ls aliases
-alias l="ls -halGpF "
-#alias l='ls -CF'
 alias grp='grep -RiI'
-alias ls='pwd && ls -G'
 alias tree='tree -C'
+alias ls='ls -G'
+#function ls {
+#  DIR=$( pwd )
+#  if [ -e "${DIR}/$1" ]; then
+#    ls -G $1
+#  elif [ "$1" != "" ]; then
+#    ls -halpGF | grep $1
+#    echo "--> grep $1"
+#  else
+#    ls -halpGF
+#  fi
+#}
+
+
+function l {
+  if [ "$2" != "" ]; then
+    ls -halGpF $1 | grep $2
+    echo "--> grep $2"
+  elif [ -e "$1" ]; then
+    ls -halGpF $1
+  elif [ "$1" != "" ]; then
+    ls -halGpF | grep $1
+    echo "--> grep $1"
+  else
+    ls -halGpF
+  fi
+}
+
 
 # ========================================================= #
 # git config                                                #
@@ -134,7 +169,7 @@ alias gpullup="gpull upstream master"
 
 alias cdv="cd ~/vagrant "
 #alias cdv='cd /home/dbt/git/vagrant '
-alias vboot='vagrant up; vagrant ssh'
+#alias vboot='vagrant up; vagrant ssh'
 
 # ========================================================= #
 # kill processes                                           #
@@ -168,12 +203,10 @@ export JAVA_PATH="/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/H
 # ========================================================= #
 
 # vim:
-alias v='vim '
-alias vrc='vim ~/.bashrc'
-alias src='source ~/.bashrc'
+#alias v='vim '
 
 # rename tabs:
-function tabname {
+function t {
   printf "\e]1;$1\a"
 }
 function winname {
@@ -183,17 +216,17 @@ function winname {
 
 # Relative Jumps:
 #alias cdk='cd ~/Downloads/kaggle'
-alias ~='cd ~ '
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
+#alias ~='cd ~ '
+#alias ..='cd ..'
+#alias ...='cd ../..'
+#alias ....='cd ../../..'
+#alias .....='cd ../../../..'
 
 # terminal commands:
-alias c="clear"
-alias to="touch "
-alias mk="mkdir "
-alias mkp='mkdir -p '
+#alias c="clear"
+#alias to="touch "
+#alias mk="mkdir "
+#alias mkp='mkdir -p '
 
 # ========================================================= #
 # Redis                                                     #
@@ -217,11 +250,12 @@ alias displayType='ioreg -lw0 | grep "EDID" | sed "/[^<]*</s///" | xxd -p -r | s
 # initialization scripts which are auto-generated           #
 # ========================================================= #
 eval "$(fasd --init auto)"
+#source ~/.bin/tmuxinator.bash
 
 # some aws stuff: command to start the init script:
 # alias nodejs='sh /etc/rc.d/init.d/nodejs restart'
 alias gpob='gpo bugfix'
-alias k9='killall -9 '
+#alias k9='killall -9 '
 alias r='grunt'
 alias grebase='git pull --rebase'
 alias grup='grebase upstream'
@@ -256,3 +290,70 @@ function j {
   java $1 ${@:2}
 }
 export DOCKER_HOST=tcp://localhost:4243
+alias boot2docker='~/.bin/boot2docker'
+# ===================== #
+# Kafka                 #
+# ===================== #
+alias zookeeper='~/.kafka_2.9.2-0.8.1/bin/zookeeper-server-start.sh ~/.kafka_2.9.2-0.8.1/config/zookeeper.properties'
+alias broker='~/.kafka_2.9.2-0.8.1/bin/kafka-server-start.sh ~/.kafka_2.9.2-0.8.1/config/server.properties'
+alias topic='~/.kafka_2.9.2-0.8.1/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic '
+alias list-topics='~/.kafka_2.9.2-0.8.1/bin/kafka-topics.sh --list --zookeeper localhost:2181'
+alias producer='~/.kafka_2.9.2-0.8.1/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic '
+alias consumer='~/.kafka_2.9.2-0.8.1/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --from-beginning --topic '
+
+# ===================== #
+# .bashrc functions     #
+# ===================== #
+alias vrc='vim ~/.bashrc'
+alias src='source ~/.bashrc'
+
+function ignore {
+  echo $1 >> .gitignore
+}
+function addrc {
+  echo $1 >> ~/.bashrc
+  src
+}
+
+export LH=http://127.0.0.1
+
+# ===================== #
+# tmux functionality    #
+# ===================== #
+alias tmux='tmux -2'
+
+function trc {
+  if which tmux 2>&1 >/dev/null; then
+    # if no session is started, start a new session
+      test -z ${TMUX} && tmux new -s default
+
+    # when quitting tmux, try to attach
+    while test -z ${TMUX}; do
+      tmux attach || break
+    done
+  fi
+}
+
+function rsc() {
+  CLIENTID=$1.`date +%S`
+  tmux new-session -d -t $1 -s $CLIENTID \; set-option destroy-unattached \; attach-session -t $CLIENTID
+}
+
+function mksc() {
+  tmux new-session -d -s $1
+  rsc $1
+}
+
+# init tmux on startup
+#trc
+
+function tmux-switch {
+  TMUX= tmux new-session -d -s $1
+  tmux switch-client -t $1
+}
+alias gpum='gp upstream master'
+stites='107.170.148.166'
+kl='107.170.192.92'
+alias betty="~/.betty/main.rb"
+alias git=hub
+eval "$(hub alias -s)"
