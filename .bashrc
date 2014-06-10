@@ -403,6 +403,8 @@ function seq () {
     ;;
   esac
 
+  #read -s -p "Enter password for user $user: " userPass
+
   echo \n
   echo settings
   echo   launcher: $launcher
@@ -411,5 +413,7 @@ function seq () {
   echo   branch: $branch
   echo   box: $box
   echo   user: $user
+  echo \n
+
   java -jar $launcher --rigtype $rig --rigargs "$git $branch $box" --username $user
 }
