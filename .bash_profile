@@ -7,3 +7,6 @@ export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Users
 
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
 export PATH=/usr/local/bin:$PATH
+
+
+alias subl='open -a "Sublime Text"'
