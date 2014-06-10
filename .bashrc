@@ -417,3 +417,4 @@ function seq () {
 
   java -jar $launcher --rigtype $rig --rigargs "$git $branch $box" --username $user
 }
+alias gpod='gpo develop'
