@@ -43,7 +43,7 @@ fi
 if [ "$color_prompt" = yes ]; then
     # At home, grey path
 #   PS1="[\e[1;32m\u\[\e[1;35m\]@\H \[\e[1;30m\]\W\e[0m]\$ "
-    PS1="${BRIGHT_YELLOW}@${BRIGHT_BLUE}\W${BRIGHT_VIOLET}~ ${RESET}"
+    PS1="${BRIGHT_CYAN}@${CYAN} \W ${RESET}"
     # at home, white path
     #PS1="[\e[1;32m\u\[\e[1;35m\]@\H \[\e[0m\]\W]\$ "
     # In vagrant, grey path:
@@ -357,3 +357,58 @@ kl='107.170.192.92'
 alias betty="~/.betty/main.rb"
 alias git=hub
 eval "$(hub alias -s)"
+function seq () {
+  launcher=~/git/bina/test-integration-launcher.jar
+  rig="BinaDevelopment"
+  case $1 in
+    -h|--help)
+      echo "usage:       seq [[ branch  ] gitUserName ]"
+      echo "defaults to: seq  [ branch  ] stites       "
+      echo "           : seq    develop   stites       "
+      exit 0
+      ;;
+    *)
+    if [[ "$1" -ne "" ]]; then
+      echo "git branch:"
+      echo "> defaults to \`develop\`"
+      read -p ">> " branch
+
+      if [[ "$2" -ne "" ]]; then
+        echo "your git username:"
+        echo "> defaults to \`BinaTechnologies\`"
+        read -p ">> " gitUser
+        gitUser=${gitUser:-BinaTechnologies}
+
+        echo "enter your username for deployment:"
+        read -p ">> " user
+      fi
+    fi
+    ;;
+  esac
+
+  branch=${branch:-develop}
+  gitUser=${gitUser:-stites}
+  git="--gitURL git@github.com:$gitUser/seqalto.git"
+  user=${user:-sam}
+
+  echo "which tehran box are you using?"
+  echo "> enter a num to prefix with 'tehran-num'"
+  read -p ">> " box
+  case $box in
+  [0-9])
+    box="tehran-0$box"
+    ;;
+  0[0-9])
+    box="tehran-$box"
+    ;;
+  esac
+
+  echo \n
+  echo launcher: $launcher
+  echo rig: $rig
+  echo git: $git
+  echo branch: $branch
+  echo box: $box
+  echo user: $user
+  java -jar $launcher --rigtype $rig --rigargs "$git $branch $box" --username $user
+}
