@@ -405,15 +405,15 @@ function seq () {
 
   #read -s -p "Enter password for user $user: " userPass
 
-  echo \n
-  echo settings
-  echo   launcher: $launcher
-  echo   rig: $rig
-  echo   git: $git
-  echo   branch: $branch
-  echo   box: $box
-  echo   user: $user
-  echo \n
+  echo
+  echo "settings"
+  echo "> launcher: $launcher"
+  echo "> rig: $rig"
+  echo "> git: $git"
+  echo "> branch: $branch"
+  echo "> box: $box"
+  echo "> user: $user"
+  echo
 
   java -jar $launcher --rigtype $rig --rigargs "$git $branch $box" --username $user
 }
