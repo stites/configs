@@ -404,11 +404,12 @@ function seq () {
   esac
 
   echo \n
-  echo launcher: $launcher
-  echo rig: $rig
-  echo git: $git
-  echo branch: $branch
-  echo box: $box
-  echo user: $user
+  echo settings
+  echo   launcher: $launcher
+  echo   rig: $rig
+  echo   git: $git
+  echo   branch: $branch
+  echo   box: $box
+  echo   user: $user
   java -jar $launcher --rigtype $rig --rigargs "$git $branch $box" --username $user
 }
