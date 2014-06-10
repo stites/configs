@@ -423,7 +423,7 @@ function seq () {
   echo "settings"
   echo "> launcher: $launcher"
   echo "> rig: $rig"
-  echo "> git: $git"
+  echo "> git repo: " $(echo $git | cut -c 10-)
   echo "> branch: $branch"
   echo "> box: $box"
   echo "> user: $user"
