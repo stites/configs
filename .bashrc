@@ -133,35 +133,59 @@ function l {
 # ========================================================= #
 
 # git alias:
-alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad @ %cr) %C(bold blue)<%an>%Creset' --graph --abbrev-commit --date=short"
 alias g="git "
-alias gfl="git fetch && gl"
-alias gpl="git pull upstream master && gl"
+alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad @ %cr) %C(bold blue)<%an>%Creset' --graph --abbrev-commit --date=short"
 alias go="git checkout "
 alias gs='git status'
-alias greset='git reset'
-alias gmv="git mv "
+alias gr='git reset'
 alias gm="git merge "
-alias gr="git rm "
 alias ga="git add "
-alias gc="git commit "
-alias gclone="git clone "
-alias gcm="gc -m "
-alias grm='git rm '
-alias gp='git push '
-alias gpo='gp origin'
-alias gph='gp heroku'
-alias gpom='gpo master'
-alias gphm='gph master'
-alias gpog='gpo gh-pages'
-alias gpub='go gh-pages && gpog && go master && gm gh-pages && gpom && go gh-pages && gs'
-alias ghUp="gh pr --remote upstream -s"
 alias gd="git diff"
+alias gb='git branch'
+
 alias stash="git stash"
 alias pop="git stash pop"
-alias gb='git branch'
+
+alias gc="git commit "
+alias gcm="gc -m "
+
+alias gp='git push '
+alias gpo='gp origin'
+alias gpom='gpo master'
+alias gpod='gpo develop'
+alias gpocb='gpo $(cb)'
+#alias gpob='gpo bugfix'
+#alias gpog='gpo gh-pages'
+alias gph='gp heroku'
+alias gphm='gph master'
+
+alias gmv="git mv "
+alias grm="git rm "
+
+alias gcl="git clone "
+alias gfl="git fetch && gl"
+alias gpl="git pull upstream master && gl"
+
+alias gpub='go gh-pages && gpog && go master && gm gh-pages && gpom && go gh-pages && gs'
+alias ghUp="gh pr --remote upstream -s"
 alias gpull="git pull"
 alias gpullup="gpull upstream master"
+alias gpum='gp upstream master'
+alias grebase='git pull --rebase'
+alias grup='grebase upstream'
+alias grud='grup dev'
+
+alias git=hub
+eval "$(hub alias -s)"
+
+function ignore {
+  echo $1 >> .gitignore
+}
+
+function cb {
+  git status | grep "On branch " | cut -c 11-
+}
+
 
 # ========================================================= #
 # vagrantbox stuff                                          #
@@ -252,15 +276,10 @@ alias displayType='ioreg -lw0 | grep "EDID" | sed "/[^<]*</s///" | xxd -p -r | s
 eval "$(fasd --init auto)"
 #source ~/.bin/tmuxinator.bash
 
+alias r='grunt'
 # some aws stuff: command to start the init script:
 # alias nodejs='sh /etc/rc.d/init.d/nodejs restart'
-alias gpob='gpo bugfix'
 #alias k9='killall -9 '
-alias r='grunt'
-alias grebase='git pull --rebase'
-alias grup='grebase upstream'
-alias grud='grup dev'
-
 # added by travis gem
 [ -f /Users/stites/.travis/travis.sh ] && source /Users/stites/.travis/travis.sh
 alias vssh='vagrant ssh'
@@ -307,9 +326,6 @@ alias consumer='~/.kafka_2.9.2-0.8.1/bin/kafka-console-consumer.sh --zookeeper l
 alias vrc='vim ~/.bashrc'
 alias src='source ~/.bashrc'
 
-function ignore {
-  echo $1 >> .gitignore
-}
 function addrc {
   echo $1 >> ~/.bashrc
   src
@@ -351,12 +367,10 @@ function tmux-switch {
   TMUX= tmux new-session -d -s $1
   tmux switch-client -t $1
 }
-alias gpum='gp upstream master'
 stites='107.170.148.166'
 kl='107.170.192.92'
 alias betty="~/.betty/main.rb"
-alias git=hub
-eval "$(hub alias -s)"
+
 function seq () {
   launcher=~/git/bina/test-integration-launcher.jar
   rig="BinaDevelopment"
@@ -417,4 +431,3 @@ function seq () {
 
   java -jar $launcher --rigtype $rig --rigargs "$git $branch $box" --username $user
 }
-alias gpod='gpo develop'
