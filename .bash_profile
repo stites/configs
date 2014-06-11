@@ -9,4 +9,3 @@ export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Users
 export PATH=/usr/local/bin:$PATH
 
 
-alias subl='open -a "Sublime Text"'

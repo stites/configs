@@ -3,6 +3,8 @@ source .bashrc_kafka
 source .bashrc_git
 source .bashrc_bina
 source .bashrc_tmux
+# if we are on a Mac, then:
+source .bashrc_mac
 
 export EDITOR='vim'
 
@@ -171,7 +173,7 @@ export JAVA_PATH="/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/H
 # ========================================================= #
 
 # vim:
-#alias v='vim '
+alias v='vim '
 
 # rename tabs:
 function t {
@@ -183,18 +185,17 @@ function winname {
 
 
 # Relative Jumps:
-#alias cdk='cd ~/Downloads/kaggle'
-#alias ~='cd ~ '
-#alias ..='cd ..'
-#alias ...='cd ../..'
-#alias ....='cd ../../..'
-#alias .....='cd ../../../..'
+alias ~='cd ~ '
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
 # terminal commands:
-#alias c="clear"
-#alias to="touch "
-#alias mk="mkdir "
-#alias mkp='mkdir -p '
+alias c="clear"
+alias to="touch "
+alias mk="mkdir "
+alias mkp='mkdir -p '
 
 # ========================================================= #
 # Redis                                                     #
@@ -267,6 +268,5 @@ function addrc {
 
 export LH=http://127.0.0.1
 stites='107.170.148.166'
-kl='107.170.192.92'
 alias betty="~/.betty/main.rb"
 
