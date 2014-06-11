@@ -1,10 +1,10 @@
-source .bash_colors
-source .bashrc_kafka
-source .bashrc_git
-source .bashrc_bina
-source .bashrc_tmux
-# if we are on a Mac, then:
-source .bashrc_mac
+source ~/.bash_colors
+source ~/.bashrc_kafka
+source ~/.bashrc_git
+source ~/.bashrc_bina
+source ~/.bashrc_tmux
+# if we~/ are on a Mac, then:
+source ~/.bashrc_mac
 
 export EDITOR='vim'
 
