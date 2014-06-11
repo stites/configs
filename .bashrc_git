@@ -1,0 +1,60 @@
+
+# ========================================================= #
+# git config                                                #
+# ========================================================= #
+
+# git alias:
+alias g="git "
+alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad @ %cr) %C(bold blue)<%an>%Creset' --graph --abbrev-commit --date=short"
+alias go="git checkout "
+alias gs='git status'
+alias gr='git reset'
+alias gm="git merge "
+alias ga="git add "
+alias gd="git diff"
+alias gb='git branch'
+
+alias stash="git stash"
+alias pop="git stash pop"
+
+alias gc="git commit "
+alias gcm="gc -m "
+
+alias gp='git push '
+alias gpo='gp origin'
+alias gpom='gpo master'
+alias gpod='gpo develop'
+alias gpocb='gpo $(cb)'
+#alias gpob='gpo bugfix'
+#alias gpog='gpo gh-pages'
+alias gph='gp heroku'
+alias gphm='gph master'
+
+alias gmv="git mv "
+alias grm="git rm "
+
+alias gcl="git clone "
+alias gfl="git fetch && gl"
+alias gpl="git pull upstream master && gl"
+
+alias gpub='go gh-pages && gpog && go master && gm gh-pages && gpom && go gh-pages && gs'
+alias ghUp="gh pr --remote upstream -s"
+alias gpull="git pull"
+alias gpullup="gpull upstream master"
+alias gpum='gp upstream master'
+alias grebase='git pull --rebase'
+alias grup='grebase upstream'
+alias grud='grup dev'
+
+alias git=hub
+eval "$(hub alias -s)"
+
+function ignore {
+  echo $1 >> .gitignore
+}
+
+function cb {
+  git status | grep "On branch " | cut -c 11-
+}
+
+

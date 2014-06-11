@@ -1,3 +1,9 @@
+source .bash_colors
+source .bashrc_kafka
+source .bashrc_git
+source .bashrc_bina
+source .bashrc_tmux
+
 export EDITOR='vim'
 
 # ~/.bashrc: executed by bash(1) for non-login shells.  # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -36,9 +42,6 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-# Use the colors shell file
-. ~/.bash_colors.sh
-# source bash_colors.sh
 
 if [ "$color_prompt" = yes ]; then
     # At home, grey path
@@ -125,65 +128,6 @@ function l {
   else
     ls -halGpF
   fi
-}
-
-
-# ========================================================= #
-# git config                                                #
-# ========================================================= #
-
-# git alias:
-alias g="git "
-alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad @ %cr) %C(bold blue)<%an>%Creset' --graph --abbrev-commit --date=short"
-alias go="git checkout "
-alias gs='git status'
-alias gr='git reset'
-alias gm="git merge "
-alias ga="git add "
-alias gd="git diff"
-alias gb='git branch'
-
-alias stash="git stash"
-alias pop="git stash pop"
-
-alias gc="git commit "
-alias gcm="gc -m "
-
-alias gp='git push '
-alias gpo='gp origin'
-alias gpom='gpo master'
-alias gpod='gpo develop'
-alias gpocb='gpo $(cb)'
-#alias gpob='gpo bugfix'
-#alias gpog='gpo gh-pages'
-alias gph='gp heroku'
-alias gphm='gph master'
-
-alias gmv="git mv "
-alias grm="git rm "
-
-alias gcl="git clone "
-alias gfl="git fetch && gl"
-alias gpl="git pull upstream master && gl"
-
-alias gpub='go gh-pages && gpog && go master && gm gh-pages && gpom && go gh-pages && gs'
-alias ghUp="gh pr --remote upstream -s"
-alias gpull="git pull"
-alias gpullup="gpull upstream master"
-alias gpum='gp upstream master'
-alias grebase='git pull --rebase'
-alias grup='grebase upstream'
-alias grud='grup dev'
-
-alias git=hub
-eval "$(hub alias -s)"
-
-function ignore {
-  echo $1 >> .gitignore
-}
-
-function cb {
-  git status | grep "On branch " | cut -c 11-
 }
 
 
@@ -311,16 +255,6 @@ function j {
 export DOCKER_HOST=tcp://localhost:4243
 alias boot2docker='~/.bin/boot2docker'
 # ===================== #
-# Kafka                 #
-# ===================== #
-alias zookeeper='~/.kafka_2.9.2-0.8.1/bin/zookeeper-server-start.sh ~/.kafka_2.9.2-0.8.1/config/zookeeper.properties'
-alias broker='~/.kafka_2.9.2-0.8.1/bin/kafka-server-start.sh ~/.kafka_2.9.2-0.8.1/config/server.properties'
-alias topic='~/.kafka_2.9.2-0.8.1/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic '
-alias list-topics='~/.kafka_2.9.2-0.8.1/bin/kafka-topics.sh --list --zookeeper localhost:2181'
-alias producer='~/.kafka_2.9.2-0.8.1/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic '
-alias consumer='~/.kafka_2.9.2-0.8.1/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --from-beginning --topic '
-
-# ===================== #
 # .bashrc functions     #
 # ===================== #
 alias vrc='vim ~/.bashrc'
@@ -332,102 +266,7 @@ function addrc {
 }
 
 export LH=http://127.0.0.1
-
-# ===================== #
-# tmux functionality    #
-# ===================== #
-alias tmux='tmux -2'
-
-function trc {
-  if which tmux 2>&1 >/dev/null; then
-    # if no session is started, start a new session
-      test -z ${TMUX} && tmux new -s default
-
-    # when quitting tmux, try to attach
-    while test -z ${TMUX}; do
-      tmux attach || break
-    done
-  fi
-}
-
-function rsc() {
-  CLIENTID=$1.`date +%S`
-  tmux new-session -d -t $1 -s $CLIENTID \; set-option destroy-unattached \; attach-session -t $CLIENTID
-}
-
-function mksc() {
-  tmux new-session -d -s $1
-  rsc $1
-}
-
-# init tmux on startup
-#trc
-
-function tmux-switch {
-  TMUX= tmux new-session -d -s $1
-  tmux switch-client -t $1
-}
 stites='107.170.148.166'
 kl='107.170.192.92'
 alias betty="~/.betty/main.rb"
 
-function seq () {
-  launcher=~/git/bina/test-integration-launcher.jar
-  rig="BinaDevelopment"
-  case $1 in
-    -h|--help)
-      echo "usage:       seq [[ branch  ] gitUserName ]"
-      echo "defaults to: seq  [ branch  ] stites       "
-      echo "           : seq    develop   stites       "
-      exit 0
-      ;;
-    *)
-    if [[ "$1" -ne "" ]]; then
-      echo "git branch:"
-      echo "> defaults to \`develop\`"
-      read -p ">> " branch
-
-      if [[ "$2" -ne "" ]]; then
-        echo "your git username:"
-        echo "> defaults to \`BinaTechnologies\`"
-        read -p ">> " gitUser
-        gitUser=${gitUser:-BinaTechnologies}
-
-        echo "enter your username for deployment:"
-        read -p ">> " user
-      fi
-    fi
-    ;;
-  esac
-
-  branch=${branch:-develop}
-  gitUser=${gitUser:-stites}
-  git="--gitURL git@github.com:$gitUser/seqalto.git"
-  user=${user:-sam}
-
-  echo "which tehran box are you using?"
-  echo "> enter a num to prefix with 'tehran-num'"
-  read -p ">> " box
-  case $box in
-  [0-9])
-    box="tehran-0$box"
-    ;;
-  0[0-9])
-    box="tehran-$box"
-    ;;
-  esac
-
-  #read -s -p "Enter password for user $user: " userPass
-
-  echo
-  echo "settings"
-  echo "> launcher: $launcher"
-  echo "> rig: $rig"
-  echo "> git repo: " $(echo $git | cut -c 10-)
-  echo "> branch: $branch"
-  echo "> box: $box"
-  echo "> user: $user"
-  echo
-
-  java -jar $launcher --rigtype $rig --rigargs "$git $branch $box" --username $user
-}
