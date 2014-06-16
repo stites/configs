@@ -45,7 +45,7 @@ function seq () {
     ;;
   esac
 
-  #read -s -p "Enter password for user $user: " userPass
+  read -s -p "Enter the password for $user on $box:" userPass
 
   echo
   echo "settings"
@@ -56,8 +56,9 @@ function seq () {
   echo "> box: $box"
   echo "> user: $user"
   echo
+  sleep 1
 
-  java -jar $launcher --rigtype $rig --rigargs "$git $branch $box" --username $user
+  java -jar $launcher --rigtype $rig --rigargs "$git $branch $box" --username $user --password $userPass
 }
 
 
