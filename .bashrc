@@ -1,8 +1,8 @@
-source .bash_colors
-source .bashrc_kafka
-source .bashrc_git
-source .bashrc_bina
-source .bashrc_tmux
+source ~/.bash_colors
+source ~/.bashrc_kafka
+source ~/.bashrc_git
+source ~/.bashrc_bina
+source ~/.bashrc_tmux
 
 export EDITOR='vim'
 
@@ -46,7 +46,7 @@ fi
 if [ "$color_prompt" = yes ]; then
     # At home, grey path
 #   PS1="[\e[1;32m\u\[\e[1;35m\]@\H \[\e[1;30m\]\W\e[0m]\$ "
-    PS1="${BRIGHT_CYAN}@${CYAN} \W ${RESET}"
+    PS1="${BRIGHT_YELLOW}@${BRIGHT_BLUE}\W${BRIGHT_VIOLET}~ ${RESET}"
     # at home, white path
     #PS1="[\e[1;32m\u\[\e[1;35m\]@\H \[\e[0m\]\W]\$ "
     # In vagrant, grey path:
@@ -77,13 +77,13 @@ HISTFILESIZE=4000
 
 shopt -s histappend     # append to the history file, don't overwrite it
 shopt -s nocaseglob     # auto corrects the case
-shopt -s checkwinsize   # check the window size after each command and, if 
+shopt -s checkwinsize   # check the window size after each command and, if
                         # necessary, update the values of LINES and COLUMNS.
 
 # bash automatically fetches the last command that starts with the
 # given term: E.G. you type in ‘ssh’ and press the ‘Page Up’ key and bash
 # scrolls through your history for this. Store function in .inputrc
-export INPUTRC=$HOME/.inputrc 
+export INPUTRC=$HOME/.inputrc
 
 function h {
   if [[ "$1" =~ "^\d+$" ]]; then
@@ -158,7 +158,7 @@ export PATH=$PATH:/usr/local/bin:/usr/local/share/npm/bin:/Users/stites/.rvm/gem
 export PATH=$PATH:/usr/local/sbin:/usr/local/share/npm/bin:/Users/stites/.rvm/gems/ruby-1.9.3-p448/bin:/Users/stites/.rvm/gems/ruby-1.9.3-p448@global/bin:/Users/stites/.rvm/rubies/ruby-1.9.3-p448/bin:/Users/stites/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/stites/.rvm/bin
 
 # Add RVM to PATH for scripting:
-PATH=$PATH:$HOME/.rvm/bin 
+PATH=$PATH:$HOME/.rvm/bin
 # do the same for node:
 export PATH="/usr/local/share/npm/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node"
@@ -269,4 +269,10 @@ export LH=http://127.0.0.1
 stites='107.170.148.166'
 kl='107.170.192.92'
 alias betty="~/.betty/main.rb"
+
+
+
+
+
+
 
