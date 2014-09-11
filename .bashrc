@@ -219,7 +219,6 @@ alias displayType='ioreg -lw0 | grep "EDID" | sed "/[^<]*</s///" | xxd -p -r | s
 # initialization scripts which are auto-generated           #
 # ========================================================= #
 eval "$(fasd --init auto)"
-#source ~/.bin/tmuxinator.bash
 
 alias r='grunt'
 # some aws stuff: command to start the init script:
@@ -270,3 +269,4 @@ export LH=http://127.0.0.1
 stites='107.170.148.166'
 alias betty="~/.betty/main.rb"
 
+alias start_irssi='bitlebee -F -u stites && irssi'
