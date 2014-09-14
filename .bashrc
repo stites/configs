@@ -46,18 +46,8 @@ fi
 
 
 if [ "$color_prompt" = yes ]; then
-    # At home, grey path
-#   PS1="[\e[1;32m\u\[\e[1;35m\]@\H \[\e[1;30m\]\W\e[0m]\$ "
-    PS1="${BRIGHT_YELLOW}@${BRIGHT_BLUE}\W${BRIGHT_VIOLET}~ ${RESET}"
-    # at home, white path
-    #PS1="[\e[1;32m\u\[\e[1;35m\]@\H \[\e[0m\]\W]\$ "
-    # In vagrant, grey path:
-    # PS1="[\e[34;1m\u\[\e[0;34m\]@\H \[\e[1;30m\]\W\e[0m]\$ "
-
-    # In AWS, white path:
-    # PS1="[\e[0;33m\u\[\e[0;36m\]@aws \[\e[0m\]\W]\$ "
-    # In AWS, grey path:
-    # PS1="[\e[0;33m\u\[\e[0;36m\]@aws \[\e[1;30m\]\W\e[0m]\$ "
+    #PS1="${BRIGHT_YELLOW}@${BRIGHT_BLUE}\W${BRIGHT_VIOLET}~ ${RESET}"
+    PS1="$BRIGHT_CYAN@ $CYAN\W ${RESET}"
 
 else
     PS1="[\u@\h:\W]\$ "
@@ -269,9 +259,4 @@ export LH=http://127.0.0.1
 stites='107.170.148.166'
 alias betty="~/.betty/main.rb"
 alias start_irssi='bitlebee -F -u stites && irssi'
-
-
-
-
-
-
+alias gauss=107.170.241.191
