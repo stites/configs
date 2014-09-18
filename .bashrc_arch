@@ -1,0 +1,7 @@
+
+alias packer="sudo packer --noconfirm"
+alias pki="packer -S"
+alias pks="packer -Ss"
+alias pkr="sudo pacman -R"
+
+

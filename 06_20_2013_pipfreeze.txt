@@ -1,9 +1,6 @@
-BitTorrent==3.4.2
 Counter==1.0.0
 Mako==0.7.3
 MarkupSafe==0.15
-Nautilus-scripts-manager==1.7
-PAM==0.4.2
 Pillow==2.0.0
 Twisted-Core==12.3.0
 Twisted-Names==12.3.0
