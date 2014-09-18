@@ -33,8 +33,8 @@ function seq () {
   git="--gitURL git@github.com:$gitUser/seqalto.git"
   user=${user:-sam}
 
-  echo "which tehran box are you using?"
-  echo "> enter a num to prefix with 'tehran-num'"
+  echo "which box are you using?"
+  echo "> enter a num to prefix with 'tehran-\$num'"
   read -p ">> " box
   case $box in
   [0-9])
@@ -45,7 +45,7 @@ function seq () {
     ;;
   esac
 
-  #read -s -p "Enter password for user $user: " userPass
+  read -s -p "Enter the password for $user on $box:" userPass
 
   echo
   echo "settings"
@@ -56,8 +56,27 @@ function seq () {
   echo "> box: $box"
   echo "> user: $user"
   echo
-
-  java -jar $launcher --rigtype $rig --rigargs "$git $branch $box" --username $user
+  sleep 1
+  if [[ "$1" -ne "debug" ]]; then
+    java -jar $launcher --rigtype $rig --rigargs "$git $branch $box" --username $user --password $userPass
+  else
+    java -jar $launcher --rigtype $rig --rigargs "$git $branch $box" --username $user --password $userPass | grep -nr localhost
+  fi
 }
 
 
+alias itl='java -jar ~/git/bina/test-integration-launcher.jar --rigtype "BinaDevelopment" --rigargs "develop tehran-06" --username sam'
+#alias itl_sam='java -jar ~/git/bina/test-integration-launcher.jar --rigtype "BinaDevelopment" --rigargs "--gitURL git@github.com:stites/seqalto.git develop tehran-06" --username sam'
+#alias itl="echo $itl_temp && itl_temp"
+
+alias canary='open -a Google\ Chrome\ Canary --args --disable-web-security http://localhost:1337'
+alias chrome='open -a Google\ Chrome --args --disable-web-security http://localhost:1337'
+
+function s () {
+  echo "SEQ-$1"
+}
+
+export SAMTOOLS_HOME=/Users/sam/libraries/samtools-0.1.19
+export PATH=$SAMTOOLS_HOME:$PATH
+export PATH=$SAMTOOLS_HOME/bcftools/:$PATH
+export PATH=$SAMTOOLS_HOME/misc/:$PATH
