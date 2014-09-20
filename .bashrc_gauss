@@ -2,7 +2,7 @@
 # beautify the terminal                                     #
 # ========================================================= #
 
-#HOSTNAME="MacAir"
+HOSTNAME="gauss"
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -28,18 +28,11 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-
 if [ "$color_prompt" = yes ]; then
-    #PS1="${BRIGHT_YELLOW}@${BRIGHT_BLUE}\W${BRIGHT_VIOLET}~ ${RESET}"
-    PS1="$BRIGHT_CYAN@ $CYAN\W ${RESET}"
-
+    PS1="$GREEN\h $BRIGHT_GREEN@ $GREEN\W ${RESET}"
 else
-    PS1="[\u@\h:\W]\$ "
+  PS1="[\u@\h:\W]\$ "
 fi
+
 unset color_prompt force_color_prompt
 
-# ========================================================= #
-# Mac commands                                     #
-# ========================================================= #
-
-alias subl='open -a "Sublime Text"'

@@ -11,6 +11,7 @@ alias gs='git status'
 alias gr='git reset'
 alias gm="git merge "
 alias ga="git add "
+alias ga\.="git add . "
 alias gd="git diff"
 alias gb='git branch'
 
