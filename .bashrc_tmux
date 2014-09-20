@@ -33,4 +33,7 @@ function tmux-switch {
   TMUX= tmux new-session -d -s $1
   tmux switch-client -t $1
 }
-
+# ==================== #
+#     tmuxinator       #
+# ==================== #
+source ~/.bin/tmuxinator.bash
