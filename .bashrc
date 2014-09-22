@@ -5,6 +5,7 @@ source ~/.bashrc_bina
 source ~/.bashrc_tmux
 [[ ! -f ~/.bashrc_arch ]] || source ~/.bashrc_arch
 [[ ! -f ~/.bashrc_mac  ]] || source ~/.bashrc_mac
+[[ ! -f ~/.bashrc_jira  ]] || source ~/.bashrc_jira
 
 export EDITOR='vim'
 
@@ -53,7 +54,7 @@ function h {
 # some more ls aliases
 alias grp='grep -RiI'
 alias tree='tree -C'
-alias ls='ls -G --color'
+#alias ls='ls -G --color'
 #function ls {
 #  DIR=$( pwd )
 #  if [ -e "${DIR}/$1" ]; then
@@ -122,7 +123,7 @@ export JAVA_PATH="/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/H
 # ========================================================= #
 
 # vim:
-alias v='vim '
+#alias v='vim '
 
 # rename tabs:
 function t {
@@ -197,10 +198,10 @@ alias DP="${nwBase}/destroyAndCleanup.sh"
 ##########
 # bash functions
 
-function j {
-  javac $1.java
-  java $1 ${@:2}
-}
+#function j {
+#  javac $1.java
+#  java $1 ${@:2}
+#}
 export DOCKER_HOST=tcp://localhost:4243
 alias boot2docker='~/.bin/boot2docker'
 # ===================== #
@@ -215,7 +216,10 @@ function addrc {
 }
 
 export LH=http://127.0.0.1
-stites='107.170.148.166'
 alias betty="~/.betty/main.rb"
 alias start_irssi='bitlebee -F -u stites && irssi'
 alias gauss=107.170.241.191
+alias t=task
+
+export NVM_DIR="/Users/sam/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
