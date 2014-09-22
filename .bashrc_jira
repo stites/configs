@@ -15,6 +15,8 @@ function j {
 }
 
 function jsl {
+  sprint=
+  stat=
   case "$1" in
     open)
       stat='status in (Open, "In Progress", Reopened, "Order Placed", "To Do")';;
@@ -29,6 +31,5 @@ function jsl {
   fi
 
   echo "$stat $sprint AND assignee in (currentUser()) ORDER BY priority DESC, updatedDate ASC"
-  sprint=
-  stat=
 }
+
