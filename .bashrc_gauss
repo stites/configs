@@ -2,7 +2,7 @@
 # beautify the terminal                                     #
 # ========================================================= #
 
-HOSTNAME="arch"
+HOSTNAME="gauss"
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -29,19 +29,10 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-  PS1="$BRIGHT_BLUE\h $VIOLET@ $BRIGHT_BLUE\W ${RESET}"
+    PS1="$GREEN\h $BRIGHT_GREEN@ $GREEN\W ${RESET}"
 else
   PS1="[\u@\h:\W]\$ "
 fi
 
 unset color_prompt force_color_prompt
 
-# ============================================= #
-# Arch-specific commands
-
-
-alias packer="sudo packer --noconfirm"
-alias pki="packer -S"
-alias pks="packer -Ss"
-alias pkr="sudo pacman -R"
-alias battery="acpi"

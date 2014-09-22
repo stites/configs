@@ -4,6 +4,7 @@ source ~/.bashrc_git
 source ~/.bashrc_bina
 source ~/.bashrc_tmux
 [[ ! -f ~/.bashrc_arch ]] || source ~/.bashrc_arch
+[[ ! -f ~/.bashrc_gauss ]] || source ~/.bashrc_gauss
 [[ ! -f ~/.bashrc_mac  ]] || source ~/.bashrc_mac
 [[ ! -f ~/.bashrc_jira  ]] || source ~/.bashrc_jira
 
