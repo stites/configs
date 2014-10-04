@@ -3,11 +3,13 @@ source ~/.bashrc_kafka
 source ~/.bashrc_git
 source ~/.bashrc_bina
 source ~/.bashrc_tmux
+source ~/.bashrc_python
 [[ ! -f ~/.bashrc_arch ]] || source ~/.bashrc_arch
 [[ ! -f ~/.bashrc_gauss ]] || source ~/.bashrc_gauss
 [[ ! -f ~/.bashrc_mac  ]] || source ~/.bashrc_mac
 
 export EDITOR='vim'
+set +o vi
 
 # ~/.bashrc: executed by bash(1) for non-login shells.  # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -220,3 +222,4 @@ stites='107.170.148.166'
 alias betty="~/.betty/main.rb"
 alias start_irssi='bitlebee -F -u stites && irssi'
 alias gauss=107.170.241.191
+alias t=task

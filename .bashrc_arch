@@ -51,3 +51,4 @@ alias pki="packer -S"
 alias pks="packer -Ss"
 alias pkr="sudo pacman -R"
 alias battery="acpi"
+alias startx='startx &> ~/.xlog'
