@@ -36,3 +36,4 @@ function tmux-switch {
 # ==================== #
 #     tmuxinator       #
 # ==================== #
+[[ ! -f ~/.bin/tmuxinator.bash ]] || source ~/.bin/tmuxinator.bash
