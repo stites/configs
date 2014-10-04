@@ -14,12 +14,12 @@ function j {
   esac
 }
 
-function jsl {
+function jsq {
   sprint=
   stat=
   case "$1" in
     open)
-      stat='status in (Open, "In Progress", Reopened, "Order Placed", "To Do")';;
+      stat="status in (Open, 'In Progress', Reopened, 'Order Placed', 'To Do')";;
     closed)
       stat='status in (Resolved, Closed, Done)';;
     inprogress)
@@ -32,4 +32,4 @@ function jsl {
 
   echo "$stat $sprint AND assignee in (currentUser()) ORDER BY priority DESC, updatedDate ASC"
 }
-
+alias sprint='jira -s "$(jsl open sprint)"'

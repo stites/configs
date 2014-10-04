@@ -7,6 +7,7 @@ source ~/.bashrc_tmux
 [[ ! -f ~/.bashrc_gauss ]] || source ~/.bashrc_gauss
 [[ ! -f ~/.bashrc_mac  ]] || source ~/.bashrc_mac
 [[ ! -f ~/.bashrc_jira  ]] || source ~/.bashrc_jira
+[[ ! -f ~/.bashrc_emacs  ]] || source ~/.bashrc_emacs
 
 export EDITOR='vim'
 
@@ -225,3 +226,8 @@ alias t=task
 export NVM_DIR="/Users/sam/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export TREX_SERVER="LD_LIBRARY_PATH=/home/sam/.bin/lib /home/sam/.bin/bin/mosh-server"
+alias t_b="task add project:bina"
+alias gpucb='git pull upstream QC-Reports'
+alias restarte='kille & starte'
+alias gplucb='git pull upstream QC-Reports'
+alias gplocb='git pull origin QC-Reports'
