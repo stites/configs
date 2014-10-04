@@ -4,11 +4,12 @@ source ~/.bashrc_git
 source ~/.bashrc_bina
 source ~/.bashrc_tmux
 source ~/.bashrc_python
-[[ ! -f ~/.bashrc_arch ]] || source ~/.bashrc_arch
+[[ ! -f ~/.bashrc_arch  ]] || source ~/.bashrc_arch
 [[ ! -f ~/.bashrc_gauss ]] || source ~/.bashrc_gauss
-[[ ! -f ~/.bashrc_mac  ]] || source ~/.bashrc_mac
+[[ ! -f ~/.bashrc_mac   ]] || source ~/.bashrc_mac
 [[ ! -f ~/.bashrc_jira  ]] || source ~/.bashrc_jira
-[[ ! -f ~/.bashrc_emacs  ]] || source ~/.bashrc_emacs
+[[ ! -f ~/.bashrc_emacs ]] || source ~/.bashrc_emacs
+[[ ! -f ~/.bashrc_mu    ]] || source ~/.bashrc_mu
 
 export EDITOR='vim'
 set +o vi
