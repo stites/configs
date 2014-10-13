@@ -27,9 +27,9 @@ data.location=~/.task
 
 taskd.server=freecinc.com:53589
 taskd.credentials=FreeCinc\/freecinc_965a6868\/f68f7363-839c-4672-bf6d-084111619bc5
-taskd.certificate=$HOME\/.task\/freecinc_965a6868.cert.pem
-taskd.ca=$HOME\/.task\/freecinc_965a6868.ca.pem
-taskd.key=$HOME\/.task\/freecinc_965a6868.key.pem
+taskd.certificate=~\/.task\/freecinc_965a6868.cert.pem
+taskd.ca=~\/.task\/freecinc_965a6868.ca.pem
+taskd.key=~\/.task\/freecinc_965a6868.key.pem
 color=on
 alias.bina=project:bina
 alias.arch=project:arch

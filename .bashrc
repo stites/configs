@@ -3,13 +3,13 @@ source ~/.bashrc_kafka
 source ~/.bashrc_git
 source ~/.bashrc_bina
 source ~/.bashrc_tmux
-source ~/.bashrc_python
-[[ ! -f ~/.bashrc_arch  ]] || source ~/.bashrc_arch
-[[ ! -f ~/.bashrc_gauss ]] || source ~/.bashrc_gauss
-[[ ! -f ~/.bashrc_mac   ]] || source ~/.bashrc_mac
-[[ ! -f ~/.bashrc_jira  ]] || source ~/.bashrc_jira
-[[ ! -f ~/.bashrc_emacs ]] || source ~/.bashrc_emacs
-[[ ! -f ~/.bashrc_mu    ]] || source ~/.bashrc_mu
+[[ ! -f ~/.bashrc_python ]] || source ~/.bashrc_python
+[[ ! -f ~/.bashrc_arch   ]] || source ~/.bashrc_arch
+[[ ! -f ~/.bashrc_gauss  ]] || source ~/.bashrc_gauss
+[[ ! -f ~/.bashrc_mac    ]] || source ~/.bashrc_mac
+[[ ! -f ~/.bashrc_jira   ]] || source ~/.bashrc_jira
+[[ ! -f ~/.bashrc_emacs  ]] || source ~/.bashrc_emacs
+[[ ! -f ~/.bashrc_mu     ]] || source ~/.bashrc_mu
 
 export EDITOR='vim'
 set +o vi
@@ -29,8 +29,8 @@ set +o vi
 HISTCONTROL=ignoredups:ignorespace
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=2000
-HISTFILESIZE=4000
+HISTSIZE=1000
+HISTFILESIZE=1000
 
 shopt -s histappend     # append to the history file, don't overwrite it
 shopt -s nocaseglob     # auto corrects the case
@@ -224,3 +224,4 @@ alias start_irssi='bitlebee -F -u stites && irssi'
 alias t=task
 
 export TREX_SERVER="LD_LIBRARY_PATH=/home/sam/.bin/lib /home/sam/.bin/bin/mosh-server"
+alias gim="ga . && gcm"

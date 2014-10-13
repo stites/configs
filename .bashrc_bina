@@ -1,3 +1,6 @@
+function kiev {
+  sed -i ''  "s/window.location.protocol + '\/\/' + window.location.host + '/'https:\/\/kiev:19009/" $1
+}
 
 function seq () {
   launcher=~/git/bina/test-integration-launcher.jar
