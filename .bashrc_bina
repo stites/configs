@@ -1,5 +1,6 @@
 function kiev {
-  sed -i ''  "s/window.location.protocol + '\/\/' + window.location.host + '/'https:\/\/kiev:19009/" $1
+  APP="${1:-/Users/sam/git/bina/seqalto/portal/site/public/js/app.js}"
+  sed -i ''  "s/window.location.protocol + '\/\/' + window.location.host + '/'https:\/\/kiev:19009/" $APP
 }
 
 function seq () {
