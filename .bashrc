@@ -10,7 +10,7 @@ source ~/.bashrc_python
 [[ ! -f ~/.bashrc_jira  ]] || source ~/.bashrc_jira
 [[ ! -f ~/.bashrc_emacs ]] || source ~/.bashrc_emacs
 [[ ! -f ~/.bashrc_mu    ]] || source ~/.bashrc_mu
-
+export TERM="xterm-256color"
 export EDITOR='vim'
 set +o vi
 
@@ -224,3 +224,6 @@ alias start_irssi='bitlebee -F -u stites && irssi'
 alias t=task
 
 export TREX_SERVER="LD_LIBRARY_PATH=/home/sam/.bin/lib /home/sam/.bin/bin/mosh-server"
+
+export NVM_DIR="/home/stites/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
