@@ -1,3 +1,10 @@
+function kiev {
+  APP="${1:-/Users/sam/git/bina/seqalto/portal/site/public/js/app.js}"
+  sed -i ''  "s/window.location.protocol + '\/\/' + window.location.host + '/'https:\/\/kiev:19009/" $APP
+}
+
+alias newdev='go develop && gplucb && go -b '
+alias newng='go Angular && gplucb && go -b '
 
 function seq () {
   launcher=~/git/bina/test-integration-launcher.jar

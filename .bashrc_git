@@ -12,6 +12,7 @@ alias gr='git reset'
 alias gm="git merge "
 alias ga="git add "
 alias ga\.="git add . "
+alias gim="ga . && gcm"
 alias gd="git diff"
 alias gb='git branch'
 
@@ -46,9 +47,9 @@ alias gpum='gp upstream master'
 alias grebase='git pull --rebase'
 alias grup='grebase upstream'
 alias grud='grup dev'
-alias gpucb='git pull upstream QC-Reports'
-alias gplucb='git pull upstream QC-Reports'
-alias gplocb='git pull origin QC-Reports'
+alias gpucb='git pull upstream $(cb)'
+alias gplucb='git pull upstream $(cb)'
+alias gplocb='git pull origin $(cb)'
 
 alias git=hub
 eval "$(hub alias -s)"
