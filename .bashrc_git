@@ -46,9 +46,9 @@ alias gpum='gp upstream master'
 alias grebase='git pull --rebase'
 alias grup='grebase upstream'
 alias grud='grup dev'
-alias gpucb='git pull upstream QC-Reports'
-alias gplucb='git pull upstream QC-Reports'
-alias gplocb='git pull origin QC-Reports'
+alias gpucb='git pull upstream $(cb)'
+alias gplucb='git pull upstream $(cb)'
+alias gplocb='git pull origin $(cb)'
 
 alias git=hub
 eval "$(hub alias -s)"

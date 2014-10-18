@@ -3,6 +3,9 @@ function kiev {
   sed -i ''  "s/window.location.protocol + '\/\/' + window.location.host + '/'https:\/\/kiev:19009/" $APP
 }
 
+alias newdev='go develop && gplucb && go -b '
+alias newng='go Angular && gplucb && go -b '
+
 function seq () {
   launcher=~/git/bina/test-integration-launcher.jar
   rig="BinaDevelopment"
