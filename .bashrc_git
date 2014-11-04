@@ -60,5 +60,5 @@ function ignore {
 function cb {
   git status | grep "On branch " | cut -c 11-
 }
-
+alias guiau='git update-index --assume-unchanged'
 

@@ -11,6 +11,16 @@ source ~/.bashrc_tmux
 [[ ! -f ~/.bashrc_emacs  ]] || source ~/.bashrc_emacs
 [[ ! -f ~/.bashrc_mu     ]] || source ~/.bashrc_mu
 
+function safe_path_add {
+  PATH_FOUND=$(echo $PATH | grep -o -E "(^|:)$1" | head -1)
+
+  if [ -z $PATH_FOUND ] && [ -d $1 ]; then
+    export PATH=$PATH:$1
+  else
+    test -z $PATH_FOUND && echo "$1 not a directory" || echo "$1 in PATH"
+  fi
+}
+
 export EDITOR='vim'
 set +o vi
 
@@ -225,3 +235,4 @@ alias t=task
 
 export TREX_SERVER="LD_LIBRARY_PATH=/home/sam/.bin/lib /home/sam/.bin/bin/mosh-server"
 alias gim="ga . && gcm"
+alias json2report='java -jar ../../../../json2report/target/assembly/json2-report.jar --reportTemplateHTML cache/app.js --reportResultHTML app2.js --resultJSONPrefix . --sequencingJSON ./tmp/QC/FastQC2Json/fastqc.json --alignmentJSON ./tmp/QC/Picard2Json/alignment.qc.json --vcfJSON ./tmp/QC/VCFMetrics/variants.qc.json --jobJSON ./tmp/job\ \(1\).json --fastQCImageRoot ./tmp/QC'

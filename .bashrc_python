@@ -1,11 +1,18 @@
 export PYENV_ROOT="${HOME}/.pyenv"
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+export PATH="$HOME/.pyenv/bin:$PATH"
 
+# things installed:
+#  +  https://github.com/yyuu/pyenv-virtualenvwrapper
+#  +  https://github.com/yyuu/pyenv
+# be wary of this:
+#  +  https://stackoverflow.com/questions/24358572/pyenv-virtualenv-not-activating-tried-everything-i-know
+
+# run pyenv stuff only if it's there:
 if [ -d "${PYENV_ROOT}" ]; then
     export PATH="${PYENV_ROOT}/bin:${PATH}"
     eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
 fi
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
+alias bw="source ~/virtualenv/bugwarrior/bin/activate"

@@ -43,3 +43,4 @@ unset color_prompt force_color_prompt
 # ========================================================= #
 
 alias subl='open -a "Sublime Text"'
+export PATH="$HOME/Library/Haskell/bin:$PATH"
