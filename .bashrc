@@ -1,15 +1,4 @@
-source ~/.bash_colors
-source ~/.bashrc_kafka
-source ~/.bashrc_git
-source ~/.bashrc_bina
-source ~/.bashrc_tmux
-[[ ! -f ~/.bashrc_python ]] || source ~/.bashrc_python
-[[ ! -f ~/.bashrc_arch   ]] || source ~/.bashrc_arch
-[[ ! -f ~/.bashrc_gauss  ]] || source ~/.bashrc_gauss
-[[ ! -f ~/.bashrc_mac    ]] || source ~/.bashrc_mac
-[[ ! -f ~/.bashrc_jira   ]] || source ~/.bashrc_jira
-[[ ! -f ~/.bashrc_emacs  ]] || source ~/.bashrc_emacs
-[[ ! -f ~/.bashrc_mu     ]] || source ~/.bashrc_mu
+[[ ! -f  ~/.bash_colors  ]] || source ~/.bash_colors
 
 export EDITOR='vim'
 set +o vi
@@ -95,14 +84,12 @@ function l {
 alias cdv='cd ~/vagrant'
 alias vssh='vagrant ssh'
 alias vup='vagrant up'
+alias vhalt='vagrant halt'
 alias vboot='vagrant up; vagrant ssh'
 
 # ========================================================= #
 # Load Environments                                         #
 # ========================================================= #
-
-# This loads NVM
-[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -145,9 +132,6 @@ done
 # vim, bash editing, terminal settings, relative jumps      #
 # ========================================================= #
 
-# vim:
-#alias v='vim '
-
 # rename tabs:
 function t {
   printf "\e]1;$1\a"
@@ -171,24 +155,6 @@ alias mk="mkdir "
 alias mkp='mkdir -p '
 
 # ========================================================= #
-# Redis                                                     #
-# ========================================================= #
-alias redis-local="redis-server /usr/local/etc/redis.conf"
-
-# ========================================================= #
-# Postgres                                                  #
-# ========================================================= #
-alias pg="postgres -D /usr/local/var/postgres/"
-alias psqlSEED="psql -h 127.0.0.1 -p 5432 -U stites -w seedchange"
-alias psql-w="psql -h 127.0.0.1 -p 5432 -U stites -w "
-alias psqlSEEDAWS="psql -h seedchangeim.c66sp35lkt8d.us-west-1.rds.amazonaws.com -p 5432 -U seed -W changeIM -d seedchange"
-alias sshSEEDAWS="ssh -i seedchange.pem ec2-user@ec2-54-193-55-47.us-west-1.compute.amazonaws.com"
-# ========================================================= #
-# MacOSX-specific                                           #
-# ========================================================= #
-alias displayType='ioreg -lw0 | grep "EDID" | sed "/[^<]*</s///" | xxd -p -r | strings -6'
-
-# ========================================================= #
 # initialization scripts which are auto-generated           #
 # ========================================================= #
 eval "$(fasd --init auto)"
@@ -201,22 +167,10 @@ alias r='grunt'
 [ -f /Users/stites/.travis/travis.sh ] && source /Users/stites/.travis/travis.sh
 alias vssh='vagrant ssh'
 alias vup='vagrant up'
-alias vhalt='vagrant halt'
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-alias treeClient='tree -I ./client/bower_components -I node_modules'
-alias boom='gulp && gulp server'
-alias sp='source ~/vagrant/stats/bin/activate'
-alias pb='gulp browserify'
+safe_path_add /usr/local/heroku/bin
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
-alias stats='source /Users/stites/vagrant/stats/bin/activate'
-
-#######NWDP:
-nwBase=/Users/stites/git/DemandCube/Sparkngin-developer-setup
-alias nw="${nwBase}/setup.sh"
-alias DP="${nwBase}/destroyAndCleanup.sh"
-
 
 ##########
 # bash functions
@@ -225,8 +179,6 @@ alias DP="${nwBase}/destroyAndCleanup.sh"
 #  javac $1.java
 #  java $1 ${@:2}
 #}
-export DOCKER_HOST=tcp://localhost:4243
-alias boot2docker='~/.bin/boot2docker'
 # ===================== #
 # .bashrc functions     #
 # ===================== #
@@ -243,3 +195,10 @@ alias t=task
 
 export TREX_SERVER="LD_LIBRARY_PATH=/home/sam/.bin/lib /home/sam/.bin/bin/mosh-server"
 alias gim="ga . && gcm"
+
+# ========================================= #
+# Load the remaining settings               #
+# ========================================= #
+for SETTING in kafka git bina tmux python arch gauss mac jira emacs mu; do
+  [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
+done

@@ -39,8 +39,8 @@ fi
 unset color_prompt force_color_prompt
 
 # ========================================================= #
-# Mac commands                                     #
+# Mac commands                                              #
 # ========================================================= #
 
 alias subl='open -a "Sublime Text"'
-export PATH="$HOME/Library/Haskell/bin:$PATH"
+alias displayType='ioreg -lw0 | grep "EDID" | sed "/[^<]*</s///" | xxd -p -r | strings -6'

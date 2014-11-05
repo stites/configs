@@ -15,24 +15,43 @@ alias ga\.="git add . "
 alias gd="git diff"
 alias gb='git branch'
 
+# start/pop
 alias stash="git stash"
 alias pop="git stash pop"
 
+# commit
 alias gc="git commit "
 alias gcm="gc -m "
 
-alias gp='git push '
-alias gpo='gp origin'
-alias gpom='gpo master'
-alias gpod='gpo develop'
-alias gpocb='gpo $(cb)'
-#alias gpob='gpo bugfix'
-alias gpog='gpo gh-pages'
-alias gph='gp heroku'
-alias gphm='gph master'
+# push
+alias gp='      git push'
+alias gpo='    gp origin'
+alias gpu='  gp upstream'
+alias gpom='  gpo master'
+alias gpum='  gpu master'
+alias gpod=' gpo develop'
+alias gpud=' gpu develop'
+alias gpocb='  gpo $(cb)'
+alias gpucb='  gpu $(cb)'
 
+# pull
+alias gpl='       git pull'
+alias gplo='    gpl origin'
+alias gplu='  gpl upstream'
+alias gplom='  gplo master'
+alias gplum='  gplu master'
+alias gplod=' gplo develop'
+alias gplud=' gplu develop'
+alias gplocb='  gplo $(cb)'
+alias gplucb='  gplu $(cb)'
+
+# move and remove
 alias gmv="git mv "
 alias grm="git rm "
+
+# update index
+alias guiau=' git update-index --assume-unchanged'
+alias guinau='git update-index --no-assume-unchanged'
 
 alias gcl="git clone "
 alias gfl="git fetch && gl"
@@ -40,15 +59,6 @@ alias gpl="git pull upstream master && gl"
 
 alias gpub='go gh-pages && gpog && go master && gm gh-pages && gpom && go gh-pages && gs'
 alias ghUp="gh pr --remote upstream -s"
-alias gpull="git pull"
-alias gpullup="gpull upstream master"
-alias gpum='gp upstream master'
-alias grebase='git pull --rebase'
-alias grup='grebase upstream'
-alias grud='grup dev'
-alias gpucb='git pull upstream $(cb)'
-alias gplucb='git pull upstream $(cb)'
-alias gplocb='git pull origin $(cb)'
 
 alias git=hub
 eval "$(hub alias -s)"
@@ -60,5 +70,5 @@ function ignore {
 function cb {
   git status | grep "On branch " | cut -c 11-
 }
-alias guiau='git update-index --assume-unchanged'
+alias gitTree='tree -I ./client/bower_components -I node_modules'
 

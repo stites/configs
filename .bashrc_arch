@@ -39,7 +39,7 @@ unset color_prompt force_color_prompt
 # PATH
 # ============================================= #
 
-PATH=/home/stites/.gem/ruby/2.1.0/bin:$PATH
+safe_path_add $HOME/.gem/ruby/2.1.0/bin
 
 # ============================================= #
 # Arch-specific commands

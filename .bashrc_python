@@ -1,6 +1,6 @@
 export PYENV_ROOT="${HOME}/.pyenv"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-export PATH="$HOME/.pyenv/bin:$PATH"
+safe_path_add $HOME/.pyenv/bin
 
 # things installed:
 #  +  https://github.com/yyuu/pyenv-virtualenvwrapper
@@ -10,7 +10,7 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 
 # run pyenv stuff only if it's there:
 if [ -d "${PYENV_ROOT}" ]; then
-    export PATH="${PYENV_ROOT}/bin:${PATH}"
+    safe_path_add $PYENV_ROOT/bin
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
