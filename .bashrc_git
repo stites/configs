@@ -55,7 +55,6 @@ alias guinau='git update-index --no-assume-unchanged'
 
 alias gcl="git clone "
 alias gfl="git fetch && gl"
-alias gpl="git pull upstream master && gl"
 
 alias gpub='go gh-pages && gpog && go master && gm gh-pages && gpom && go gh-pages && gs'
 alias ghUp="gh pr --remote upstream -s"
