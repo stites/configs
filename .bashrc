@@ -1,5 +1,6 @@
 [[ ! -f  ~/.bash_colors  ]] || source ~/.bash_colors
 
+export TERM="xterm-256color"
 export EDITOR='vim'
 set +o vi
 
@@ -192,9 +193,6 @@ function addrc {
 
 alias start_irssi='bitlebee -F -u stites && irssi'
 alias t=task
-
-export TREX_SERVER="LD_LIBRARY_PATH=/home/sam/.bin/lib /home/sam/.bin/bin/mosh-server"
-alias gim="ga . && gcm"
 
 # ========================================= #
 # Load the remaining settings               #

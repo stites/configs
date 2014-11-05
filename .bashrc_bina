@@ -7,6 +7,7 @@ function kiev {
 
 alias newdev='go develop && gplucb && go -b '
 alias newng='go Angular && gplucb && go -b '
+export TREX_SERVER="LD_LIBRARY_PATH=/home/sam/.bin/lib /home/sam/.bin/bin/mosh-server"
 
 alias canary='open -a Google\ Chrome\ Canary --args --disable-web-security http://localhost:1337'
 alias chrome='open -a Google\ Chrome --args --disable-web-security http://localhost:1337'

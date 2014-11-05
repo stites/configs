@@ -12,6 +12,7 @@ alias gr='git reset'
 alias gm="git merge "
 alias ga="git add "
 alias ga\.="git add . "
+alias gim="ga . && gcm"
 alias gd="git diff"
 alias gb='git branch'
 
@@ -22,6 +23,7 @@ alias pop="git stash pop"
 # commit
 alias gc="git commit "
 alias gcm="gc -m "
+alias gim="ga . && gcm"
 
 # push
 alias gp='      git push'
