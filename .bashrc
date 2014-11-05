@@ -11,16 +11,6 @@ source ~/.bashrc_tmux
 [[ ! -f ~/.bashrc_emacs  ]] || source ~/.bashrc_emacs
 [[ ! -f ~/.bashrc_mu     ]] || source ~/.bashrc_mu
 
-function safe_path_add {
-  PATH_FOUND=$(echo $PATH | grep -o -E "(^|:)$1" | head -1)
-
-  if [ -z $PATH_FOUND ] && [ -d $1 ]; then
-    export PATH=$PATH:$1
-  else
-    test -z $PATH_FOUND && echo "$1 not a directory" || echo "$1 in PATH"
-  fi
-}
-
 export EDITOR='vim'
 set +o vi
 
@@ -102,36 +92,54 @@ function l {
 # vagrantbox stuff                                          #
 # ========================================================= #
 
-alias cdv="cd ~/vagrant "
-#alias cdv='cd /home/dbt/git/vagrant '
-#alias vboot='vagrant up; vagrant ssh'
+alias cdv='cd ~/vagrant'
+alias vssh='vagrant ssh'
+alias vup='vagrant up'
+alias vboot='vagrant up; vagrant ssh'
 
 # ========================================================= #
-# kill processes                                           #
+# Load Environments                                         #
 # ========================================================= #
 
-alias killnode='killall -9 node'
-alias killgrunt='killall -9 grunt'
-alias killpsql='killall -9 psql'
-alias killpostgres='killall -9 postgres'
-alias exterminate='killall -9 node && killall -9 postgres && killall -9 psql && killall -9 grunt'
+# This loads NVM
+[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Get Java 7 for Mac:
+JAVA_PATH="/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin"
+test -d "$JAVA_PATH" && export JAVA_PATH
 
 # ========================================================= #
 # PATH Exports                                              #
 # ========================================================= #
+function safe_path_add {
+  PATH_FOUND=$(echo $PATH | grep -o -E "(^|:)$1" | head -1)
 
-# add ruby paths for MACSTUFF!!!!
-export PATH=$PATH:/usr/local/bin:/usr/local/share/npm/bin:/Users/stites/.rvm/gems/ruby-1.9.3-p448/bin:/Users/stites/.rvm/gems/ruby-1.9.3-p448@global/bin:/Users/stites/.rvm/rubies/ruby-1.9.3-p448/bin:/Users/stites/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/stites/.rvm/bin
-export PATH=$PATH:/usr/local/sbin:/usr/local/share/npm/bin:/Users/stites/.rvm/gems/ruby-1.9.3-p448/bin:/Users/stites/.rvm/gems/ruby-1.9.3-p448@global/bin:/Users/stites/.rvm/rubies/ruby-1.9.3-p448/bin:/Users/stites/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/stites/.rvm/bin
+  if [ -z $PATH_FOUND ] && [ -d $1 ]; then
+    export PATH=$PATH:$1
+  else
+    test -z $PATH_FOUND && echo "$1 not a directory" || echo "$1 in PATH"
+  fi
+}
+export -f safe_path_add
 
-# Add RVM to PATH for scripting:
-PATH=$PATH:$HOME/.rvm/bin
-# do the same for node:
-export PATH="/usr/local/share/npm/bin:$PATH"
-export NODE_PATH="/usr/local/lib/node"
+# nvm, rvm
+for ENV_MGR in .nvm .rvm; do
+  test ! -d $HOME/$ENV_MGR && echo "$ENV_MGR not detected" && continue;
+  find -P  $HOME/$ENV_MGR -type d -maxdepth 3 -name bin | xargs -n 1 bash -c 'safe_path_add "$@"' _
+done
 
-# Get Java 7 for Mac:
-export JAVA_PATH="/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin"
+# pyenv
+safe_path_add $HOME/.pyenv/bin
+safe_path_add $HOME/.pyenv/shims
+
+for BIN_PATH in '' /usr /usr/local; do
+  for BIN_TYPE in /bin /sbin; do
+    safe_path_add $BIN_PATH$BIN_TYPE
+  done
+done
 
 # ========================================================= #
 # vim, bash editing, terminal settings, relative jumps      #
@@ -235,4 +243,3 @@ alias t=task
 
 export TREX_SERVER="LD_LIBRARY_PATH=/home/sam/.bin/lib /home/sam/.bin/bin/mosh-server"
 alias gim="ga . && gcm"
-alias json2report='java -jar ../../../../json2report/target/assembly/json2-report.jar --reportTemplateHTML cache/app.js --reportResultHTML app2.js --resultJSONPrefix . --sequencingJSON ./tmp/QC/FastQC2Json/fastqc.json --alignmentJSON ./tmp/QC/Picard2Json/alignment.qc.json --vcfJSON ./tmp/QC/VCFMetrics/variants.qc.json --jobJSON ./tmp/job\ \(1\).json --fastQCImageRoot ./tmp/QC'
