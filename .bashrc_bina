@@ -1,8 +1,16 @@
-function kiev {
-  APP="${1:-~/git/bina/seqalto/portal/site/public/js/app.js}"
-  SERVER="${2:-kiev}"
-  PORT="${3:-19009}"
-  sed -i ''  "s/window.location.protocol + '\/\/' + window.location.host + '/'https:\/\/$SERVER:$PORT/" $APP
+function patchapp {
+  case $1 in
+    -h|--help)
+      echo "format: patchapp [path/to/app.js [server port]]"
+      ;;
+    *)
+      APP="${1:-$HOME/git/seqalto/portal/site/src/js/app.js}"
+      SERVER="${2:-science}"
+      PORT="${3:-19007}"
+      sed -i ''  "s/window.location.protocol + '\/\/' + window.location.host + '/'https:\/\/$SERVER:$PORT/" $APP
+      if [ -n `which git` ]; then git update-index --assume-unchanged $APP; fi
+      ;;
+  esac
 }
 
 alias newdev='go develop && gplucb && go -b '

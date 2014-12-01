@@ -5,6 +5,7 @@
 
 # git alias:
 alias g="git "
+alias gf="git flow"
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad @ %cr) %C(bold blue)<%an>%Creset' --graph --abbrev-commit --date=short"
 alias go="git checkout "
 alias gs='git status'
@@ -61,8 +62,28 @@ alias gfl="git fetch && gl"
 alias gpub='go gh-pages && gpog && go master && gm gh-pages && gpom && go gh-pages && gs'
 alias ghUp="gh pr --remote upstream -s"
 
+# ====================================== #
+# git helpers: hub, flow, twig           #
+# ====================================== #
+TWIG_COMPLETION=~/.twig/twig-completion.bash
+FLOW_COMPLETION=/usr/local/etc/bash_completion.d/git-flow-completion.bash
+
+for GIT_HELPER in $TWIG_COMPLETION $FLOW_COMPLETION; do
+  [[ -s $GIT_HELPER ]] && source $GIT_HELPER
+done
+
 alias git=hub
-eval "$(hub alias -s)"
+
+# hub-functionality
+function gpr {
+  case $1 in
+    develop)
+      shift
+      git pull-request -b "BinaTechnologies/seqalto:develop" $* ;;
+    *)
+      git pull-request $* ;;
+  esac
+}
 
 function ignore {
   echo $1 >> .gitignore
@@ -71,5 +92,5 @@ function ignore {
 function cb {
   git status | grep "On branch " | cut -c 11-
 }
-alias gitTree='tree -I ./client/bower_components -I node_modules'
 
+alias gitTree='tree -I ./client/bower_components -I node_modules'

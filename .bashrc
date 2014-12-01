@@ -4,9 +4,6 @@ export TERM="xterm-256color"
 export EDITOR='vim'
 set +o vi
 
-# ~/.bashrc: executed by bash(1) for non-login shells.  # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -93,7 +90,8 @@ alias vboot='vagrant up; vagrant ssh'
 # ========================================================= #
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+RVM=$HOME/.rvm/scripts/rvm
+test -s "$RVM" && source "$RVM"
 
 # Get Java 7 for Mac:
 JAVA_PATH="/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin"
@@ -107,8 +105,8 @@ function safe_path_add {
 
   if [ -z $PATH_FOUND ] && [ -d $1 ]; then
     export PATH=$PATH:$1
-  else
-    test -z $PATH_FOUND && echo "$1 not a directory" || echo "$1 in PATH"
+  # else
+  #    test -z $PATH_FOUND && echo "$1 not a directory" || echo "$1 in PATH"
   fi
 }
 export -f safe_path_add
@@ -149,29 +147,16 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
-# terminal commands:
-alias c="clear"
-alias to="touch "
-alias mk="mkdir "
-alias mkp='mkdir -p '
-
 # ========================================================= #
 # initialization scripts which are auto-generated           #
 # ========================================================= #
 eval "$(fasd --init auto)"
+alias start_irssi='bitlebee -F -u stites && irssi'
 
 alias r='grunt'
-# some aws stuff: command to start the init script:
-# alias nodejs='sh /etc/rc.d/init.d/nodejs restart'
-#alias k9='killall -9 '
-# added by travis gem
-[ -f /Users/stites/.travis/travis.sh ] && source /Users/stites/.travis/travis.sh
-alias vssh='vagrant ssh'
-alias vup='vagrant up'
+alias t='clear && task'
 
-### Added by the Heroku Toolbelt
-safe_path_add /usr/local/heroku/bin
-export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
+export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$HOME/.nvm/v0.10.32/lib/node_modules
 
 ##########
 # bash functions
@@ -180,6 +165,7 @@ export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
 #  javac $1.java
 #  java $1 ${@:2}
 #}
+
 # ===================== #
 # .bashrc functions     #
 # ===================== #
@@ -190,13 +176,13 @@ function addrc {
   echo $1 >> ~/.bashrc
   src
 }
-
-alias start_irssi='bitlebee -F -u stites && irssi'
-alias t=task
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 
 # ========================================= #
 # Load the remaining settings               #
 # ========================================= #
-for SETTING in kafka git bina tmux python arch gauss mac jira emacs mu; do
+for SETTING in kafka git bina tmux npm python arch gauss mac jira emacs mu; do
   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
 done

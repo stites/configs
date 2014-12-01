@@ -3,7 +3,7 @@ NPM_PACKAGES="$HOME/.npm-packages"
 
 if [ ! -d "$DIRECTORY" ]; then
   mkdir -p "$NPM_PACKAGES"
-  if [ -f ~/.npmrc ]; then echo "prefix = $NPM_PACKAGES" >> ~/.npmrc
+  test -f ~/.npmrc && echo "prefix = $NPM_PACKAGES" >> ~/.npmrc
 fi
 
 
@@ -18,5 +18,5 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
 # load nvm
-export NVM_DIR=$HOME/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+NVM_DIR=$HOME/.nvm
+test -s "$NVM_DIR/nvm.sh" && source "$NVM_DIR/nvm.sh"

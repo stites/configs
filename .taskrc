@@ -26,10 +26,10 @@ data.location=~/.task
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-gray-256.theme
 
 taskd.server=freecinc.com:53589
-taskd.credentials=FreeCinc\/freecinc_965a6868\/f68f7363-839c-4672-bf6d-084111619bc5
-taskd.certificate=~\/.task\/freecinc_965a6868.cert.pem
-taskd.ca=~\/.task\/freecinc_965a6868.ca.pem
-taskd.key=~\/.task\/freecinc_965a6868.key.pem
+taskd.credentials=FreeCinc\/freecinc_fb1aed14\/00b04183-7d0e-4f52-8bb7-2ba54235a8d1
+taskd.certificate=\/Users\/stites\/.task\/freecinc_fb1aed14.cert.pem
+taskd.ca=\/Users\/stites\/.task\/freecinc_fb1aed14.ca.pem
+taskd.key=\/Users\/stites\/.task\/freecinc_fb1aed14.key.pem
 color=on
 alias.bina=project:bina
 alias.arch=project:arch

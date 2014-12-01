@@ -1,0 +1,3 @@
+#!/bin/bash
+curl -sSL https://get.rvm.io | bash -s -- --autolibs=read-fail --with-default-gems="rails haml"
+echo progress-bar >> ~/.curlrc
