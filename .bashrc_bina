@@ -13,7 +13,7 @@ function patchapp {
   esac
 }
 
-alias newdev='go develop && gplucb && go -b '
+alias newdev='git fetch upstream develop:develop && go develop && gpocb && go -b '
 alias newng='go Angular && gplucb && go -b '
 export TREX_SERVER="LD_LIBRARY_PATH=/home/sam/.bin/lib /home/sam/.bin/bin/mosh-server"
 
