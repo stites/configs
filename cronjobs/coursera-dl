@@ -1,0 +1,3 @@
+#!/bin/bash
+COURSERA_PATH=$HOME/Dropbox/Public/coursera
+/usr/local/bin/coursera-dl -n -- --path $COURSERA_PATH -f "mp4" `\ls $COURSERA_PATH`
