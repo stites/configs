@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<account version='1.0'>
+	<account>
+		<protocol>prpl-jabber</protocol>
+		<name>stites.sr@gmail.com/Adium</name>
+		<statuses>
+			<status type='available' name='Available' active='true'>
+				<attributes>
+					<attribute id='priority' value='0'/>
+				</attributes>
+			</status>
+			<status type='mood' name='Feeling' active='false'>
+				<attributes/>
+			</status>
+			<status type='freeforchat' name='Chatty' active='false'>
+				<attributes/>
+			</status>
+			<status type='away' name='Away' active='false'>
+				<attributes/>
+			</status>
+			<status type='extended_away' name='Extended away' active='false'>
+				<attributes/>
+			</status>
+			<status type='dnd' name='Do Not Disturb' active='false'>
+				<attributes/>
+			</status>
+			<status type='offline' name='Offline' active='false'>
+				<attributes/>
+			</status>
+		</statuses>
+		<userinfo>&lt;vCard xmlns=&apos;vcard-temp&apos;&gt;&lt;FN&gt;Sam Stites&lt;/FN&gt;&lt;URL&gt;https://plus.google.com/+SamStites&lt;/URL&gt;&lt;PHOTO&gt;&lt;TYPE&gt;image/jpeg&lt;/TYPE&gt;&lt;BINVAL&gt;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&lt;/BINVAL&gt;&lt;/PHOTO&gt;&lt;/vCard&gt;</userinfo>
+		<settings>
+			<setting name='bosh_url' type='string'></setting>
+			<setting name='buddy_icon_timestamp' type='int'>0</setting>
+			<setting name='auth_plain_in_clear' type='bool'>0</setting>
+			<setting name='custom_smileys' type='bool'>1</setting>
+			<setting name='port' type='int'>5222</setting>
+			<setting name='connect_server' type='string'>talk.google.com</setting>
+			<setting name='ft_proxies' type='string'>proxy.eu.jabber.org</setting>
+			<setting name='check-mail' type='bool'>0</setting>
+			<setting name='buddy_icon'/>
+			<setting name='connection_security' type='string'>opportunistic_tls</setting>
+			<setting name='ssl_cdsa_buggy_tls_workaround' type='bool'>0</setting>
+			<setting name='server' type='string'>talk.google.com</setting>
+		</settings>
+		<settings ui='Adium'>
+			<setting name='auto-login' type='bool'>1</setting>
+		</settings>
+		<current_error/>
+	</account>
+	<account>
+		<protocol>prpl-jabber</protocol>
+		<name>sam@bina.com/Adium</name>
+		<statuses>
+			<status type='available' name='Available' active='true'>
+				<attributes>
+					<attribute id='priority' value='0'/>
+				</attributes>
+			</status>
+			<status type='mood' name='Feeling' active='false'>
+				<attributes/>
+			</status>
+			<status type='freeforchat' name='Chatty' active='false'>
+				<attributes/>
+			</status>
+			<status type='away' name='Away' active='false'>
+				<attributes/>
+			</status>
+			<status type='extended_away' name='Extended away' active='false'>
+				<attributes/>
+			</status>
+			<status type='dnd' name='Do Not Disturb' active='false'>
+				<attributes/>
+			</status>
+			<status type='offline' name='Offline' active='false'>
+				<attributes/>
+			</status>
+		</statuses>
+		<userinfo>&lt;vCard xmlns=&apos;vcard-temp&apos;&gt;&lt;FN&gt;Sam Stites&lt;/FN&gt;&lt;URL&gt;https://plus.google.com/114423636095751023849&lt;/URL&gt;&lt;/vCard&gt;</userinfo>
+		<settings>
+			<setting name='bosh_url' type='string'></setting>
+			<setting name='buddy_icon_timestamp' type='int'>0</setting>
+			<setting name='auth_plain_in_clear' type='bool'>0</setting>
+			<setting name='custom_smileys' type='bool'>1</setting>
+			<setting name='port' type='int'>5222</setting>
+			<setting name='connect_server' type='string'>talk.google.com</setting>
+			<setting name='ft_proxies' type='string'>proxy.eu.jabber.org</setting>
+			<setting name='check-mail' type='bool'>0</setting>
+			<setting name='buddy_icon'/>
+			<setting name='connection_security' type='string'>opportunistic_tls</setting>
+			<setting name='ssl_cdsa_buggy_tls_workaround' type='bool'>0</setting>
+			<setting name='server' type='string'>talk.google.com</setting>
+		</settings>
+		<settings ui='Adium'>
+			<setting name='auto-login' type='bool'>1</setting>
+		</settings>
+		<current_error/>
+	</account>
+	<account>
+		<protocol>prpl-irc</protocol>
+		<name>stites@irc.freenode.net</name>
+		<statuses>
+			<status type='available' name='Available' active='true'>
+				<attributes/>
+			</status>
+			<status type='away' name='Away' active='false'>
+				<attributes/>
+			</status>
+			<status type='offline' name='Offline' active='false'>
+				<attributes/>
+			</status>
+		</statuses>
+		<settings>
+			<setting name='encoding' type='string'>UTF-8</setting>
+			<setting name='buddy_icon_timestamp' type='int'>0</setting>
+			<setting name='ssl' type='bool'>1</setting>
+			<setting name='custom_smileys' type='bool'>0</setting>
+			<setting name='port' type='int'>7070</setting>
+			<setting name='check-mail' type='bool'>0</setting>
+			<setting name='realname' type='string'>Adium User</setting>
+			<setting name='username' type='string'>Adium</setting>
+			<setting name='server' type='string'>irc.freenode.net</setting>
+		</settings>
+		<settings ui='Adium'>
+			<setting name='auto-login' type='bool'>0</setting>
+		</settings>
+		<current_error/>
+	</account>
+	<account>
+		<protocol>prpl-jabber</protocol>
+		<name>sam@stites.io/Adium</name>
+		<statuses>
+			<status type='available' name='Available' active='true'>
+				<attributes>
+					<attribute id='priority' value='0'/>
+				</attributes>
+			</status>
+			<status type='mood' name='Feeling' active='false'>
+				<attributes/>
+			</status>
+			<status type='freeforchat' name='Chatty' active='false'>
+				<attributes/>
+			</status>
+			<status type='away' name='Away' active='false'>
+				<attributes/>
+			</status>
+			<status type='extended_away' name='Extended away' active='false'>
+				<attributes/>
+			</status>
+			<status type='dnd' name='Do Not Disturb' active='false'>
+				<attributes/>
+			</status>
+			<status type='offline' name='Offline' active='false'>
+				<attributes/>
+			</status>
+		</statuses>
+		<settings>
+			<setting name='buddy_icon_timestamp' type='int'>0</setting>
+			<setting name='auth_plain_in_clear' type='bool'>0</setting>
+			<setting name='custom_smileys' type='bool'>1</setting>
+			<setting name='port' type='int'>5222</setting>
+			<setting name='connect_server' type='string'>talk.google.com</setting>
+			<setting name='ft_proxies' type='string'>proxy.eu.jabber.org</setting>
+			<setting name='check-mail' type='bool'>0</setting>
+			<setting name='connection_security' type='string'>opportunistic_tls</setting>
+			<setting name='ssl_cdsa_buggy_tls_workaround' type='bool'>0</setting>
+			<setting name='server' type='string'>talk.google.com</setting>
+		</settings>
+		<settings ui='Adium'>
+			<setting name='auto-login' type='bool'>0</setting>
+		</settings>
+		<current_error/>
+	</account>
+	<account>
+		<protocol>prpl-jabber</protocol>
+		<name>-1677870028@chat.facebook.com/Adium</name>
+		<statuses>
+			<status type='available' name='Available' active='true'>
+				<attributes/>
+			</status>
+			<status type='mood' name='Feeling' active='false'>
+				<attributes/>
+			</status>
+			<status type='freeforchat' name='Chatty' active='false'>
+				<attributes/>
+			</status>
+			<status type='away' name='Away' active='false'>
+				<attributes/>
+			</status>
+			<status type='extended_away' name='Extended away' active='false'>
+				<attributes/>
+			</status>
+			<status type='dnd' name='Do Not Disturb' active='false'>
+				<attributes/>
+			</status>
+			<status type='offline' name='Offline' active='false'>
+				<attributes/>
+			</status>
+		</statuses>
+		<userinfo>&lt;vCard xmlns=&apos;vcard-temp&apos;&gt;&lt;FN&gt;Sam Stites&lt;/FN&gt;&lt;PHOTO&gt;&lt;TYPE&gt;image/jpeg&lt;/TYPE&gt;&lt;BINVAL&gt;/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gOTUK/9sAQwACAQEBAQECAQEBAgICAgIEAwICAgIFBAQDBAYFBgYGBQYGBgcJCAYHCQcGBggLCAkKCgoKCgYICwwLCgwJCgoK/9sAQwECAgICAgIFAwMFCgcGBwoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoK/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/n/r1LUP2XPEOoeB4fHPwz8S2fiZE0yC71fS7Lb9s08yKTtZUZ0c8E7VfzAOWjWvLa7n9nTw5418d/GDQPAXgbV7q1v9R1ALaPbu48uUow3/ACAkYUn5uwzyBkjgx6xSpqpRqKHLdu6upK2z2a9Yu/qtH24F4eVR06tNz5rJWdmnfdaNP0at6bql4Q+CHxO8ZeJ08K2nhS7s5QryXVxqdu8ENpFGMySyuy/IiDk9+gAJIBh+LPgrwz4B8Wf8I/4T8eWniS0FpFIdUslAjaRl+dQAzEAHIG7DYwSq9K+qP2tf+Cc37VP7F/wcfx9cfGGbWdL+3RXetJoGozxRadeOwXdJuZS8ozGpIGQW4PFfGc00txK1xcSs8jsWd3bJYnkkk9TWGCrYjGV3WVWLpq65Yp6vS7k5a6dEtO93t047D0cDSVGVKSqOzvJrRa6JLTXq3r2t1GjZSFIOe4x0r1r9m74E/tAa74u0n4g/DaObRXsZ0u7HWZpXi4DEZQKCzqcMvTaRkE4Jrye0t/td3FamdI/NkVPMlbCrk4yT2Ar9efhBb+DvC+i6X4PkjgjNppUKafNwVaEKAoBHGMDg9+a/QeFuH8Jn1WpHEytCKWiau279+lt9Dy1Nwamugn/BXnQ/iz+0b+zz4P8ADPhHVtOuDf6oda1OFZlAkkSN12/Ip2tmc/ezkgDPy5P5ReKfBw8E317ofim01Oz1CLyzZwTWaqsindvZjv4AYALtDA/NkjGD/QJd/so+Gte+FWk63I95pWpQeFr3UNQuorWS/wBNlSLZIomniLfZZvKZCyFdgEsWSrFhX48/8FQ7TTo/iloF9DZNa3E+kSBraSAxuIBKTGxB7EtIM+qmuGPCOR5Dw9JYPEynOnN35uVcylK2iTd7W3i3dXbUT0M1zWtnGMeInCztFaXsrK34n//Z&lt;/BINVAL&gt;&lt;/PHOTO&gt;&lt;/vCard&gt;</userinfo>
+		<settings>
+			<setting name='buddy_icon_timestamp' type='int'>0</setting>
+			<setting name='fb_api_secret' type='string'>bb9d2d9771790e69a0e943771ddf33c8</setting>
+			<setting name='custom_smileys' type='bool'>0</setting>
+			<setting name='check-mail' type='bool'>0</setting>
+			<setting name='buddy_icon'/>
+			<setting name='connection_security' type='string'></setting>
+			<setting name='server' type='string'>chat.facebook.com</setting>
+			<setting name='fb_api_key' type='string'>add7b04ecedcd84645f3c32e7884682d</setting>
+		</settings>
+		<settings ui='Adium'>
+			<setting name='auto-login' type='bool'>1</setting>
+		</settings>
+		<current_error/>
+	</account>
+</account>

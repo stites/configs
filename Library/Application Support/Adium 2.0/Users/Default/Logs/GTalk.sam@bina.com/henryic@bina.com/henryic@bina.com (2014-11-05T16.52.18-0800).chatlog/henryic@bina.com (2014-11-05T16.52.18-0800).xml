@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-11-05T16:52:22-0800"></event>
+<message sender="sam@bina.com" time="2014-11-05T16:52:22-0800" alias="sam"><div>hey henry!</div></message>
+<message sender="sam@bina.com" time="2014-11-05T16:52:29-0800" alias="sam"><div>i have a question about our network setup!</div></message>
+<message sender="henryic@bina.com" time="2014-11-05T16:52:44-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">okay</span></div></message>
+<message sender="henryic@bina.com" time="2014-11-05T16:52:45-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">shoot</span></div></message>
+<message sender="sam@bina.com" time="2014-11-05T16:52:58-0800" alias="sam"><div>i&apos;m thinking of setting up a homeserver</div></message>
+<message sender="sam@bina.com" time="2014-11-05T16:53:22-0800" alias="sam"><div>well</div></message>
+<message sender="sam@bina.com" time="2014-11-05T16:53:48-0800" alias="sam"><div>i guess what I want to do is set up a personal server which doubles as a router</div></message>
+<message sender="sam@bina.com" time="2014-11-05T16:54:30-0800" alias="sam"><div>so that I can serve webapps off of it, run some data analysis queries, and not have to pay aws for stuff</div></message>
+<message sender="sam@bina.com" time="2014-11-05T16:54:50-0800" alias="sam"><div>i can&apos;t seem to find any resources so I was wondering what our setup here was — if it was something simila</div></message>
+<message sender="sam@bina.com" time="2014-11-05T16:54:51-0800" alias="sam"><div>r</div></message>
+<message sender="sam@bina.com" time="2014-11-05T16:55:33-0800" alias="sam"><div>i mean — i&apos;m wondering if it&apos;s a similar setup with the network servers</div></message>
+<message sender="sam@bina.com" time="2014-11-05T16:55:50-0800" alias="sam"><div>(i guess that&apos;s t-rex)</div></message>
+<message sender="sam@bina.com" time="2014-11-05T16:56:24-0800" alias="sam"><div>and also if I&apos;m just really thinking about a DNS server</div></message>
+<message sender="sam@bina.com" time="2014-11-05T16:56:35-0800" alias="sam"><div>with some kind of wireless capabilities</div></message>
+<message sender="henryic@bina.com" time="2014-11-05T16:56:48-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">well, there&apos;s a couple of components</span></div></message>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-05T17:06:48-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-05T17:12:55-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-05T17:14:23-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-05T17:27:04-0800"><div>You have connected</div></status>
+<status type="online" sender="henryic@bina.com" time="2014-11-05T17:37:02-0800"></status>
+<status type="offline" sender="henryic@bina.com" time="2014-11-05T17:52:46-0800"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-05T17:59:54-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-06T10:50:04-0800"><div>You have connected</div></status>
+<status type="away" sender="henryic@bina.com" time="2014-11-06T11:26:16-0800"></status>
+<status type="online" sender="henryic@bina.com" time="2014-11-06T11:38:50-0800"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-11-06T11:57:04-0800"></event></chat>

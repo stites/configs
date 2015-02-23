@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-02-04T11:13:10-0800"></event>
+<message sender="sam@bina.com" time="2015-02-04T11:13:09-0800" alias="sam"><div>hey jian!</div></message>
+<message sender="sam@bina.com" time="2015-02-04T11:13:20-0800" alias="sam"><div>did you get the slack notification i sent to @channel?</div></message>
+<message sender="jianl@bina.com" time="2015-02-04T11:13:52-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">um..no... what is channel?</span></div></message>
+<message sender="sam@bina.com" time="2015-02-04T11:14:06-0800" alias="sam"><div>i think it&apos;s because we have a free account</div></message>
+<message sender="sam@bina.com" time="2015-02-04T11:14:19-0800" alias="sam"><div>@channel simply sends a notification to everyone in the channel</div></message>
+<message sender="sam@bina.com" time="2015-02-04T11:14:50-0800" alias="sam"><div>here</div></message>
+<message sender="sam@bina.com" time="2015-02-04T11:14:50-0800" alias="sam"><div><a href="https://code2cure.slack.com/archives/general/p1423075799000006">https://code2cure.slack.com/archives/general/p1423075799000006</a></div></message>
+<message sender="jianl@bina.com" time="2015-02-04T11:17:29-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">I see, I don&apos;t even have an account, let me create one</span></div></message>
+<message sender="sam@bina.com" time="2015-02-04T11:17:37-0800" alias="sam"><div>ah</div></message>
+<message sender="sam@bina.com" time="2015-02-04T11:17:55-0800" alias="sam"><div>i think you need to go to the link that amir sent out in an email a while back</div></message>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-04T11:56:35-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-04T13:20:10-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-02-04T13:22:20-0800"></event></chat>

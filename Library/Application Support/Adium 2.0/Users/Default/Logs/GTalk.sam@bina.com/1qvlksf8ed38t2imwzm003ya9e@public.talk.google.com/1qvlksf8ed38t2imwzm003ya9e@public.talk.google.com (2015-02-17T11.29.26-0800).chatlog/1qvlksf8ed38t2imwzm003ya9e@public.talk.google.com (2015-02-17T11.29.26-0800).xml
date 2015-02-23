@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-02-17T11:29:33-0800"></event>
+<status type="connected" time="2015-02-17T11:29:32-0800"><div>You have connected</div></status>
+<status type="purple" time="2015-02-17T11:29:32-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com is now known as Greg Gibeling.<br /></span></div></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-17T12:28:41-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-17T12:28:41-0800" alias="Greg Gibeling"></status>
+<status type="available" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-17T12:28:41-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-17T12:28:43-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-17T12:30:43-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-17T12:47:25-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-17T13:38:59-0800" alias="Greg Gibeling"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-02-17T13:47:21-0800"></event></chat>

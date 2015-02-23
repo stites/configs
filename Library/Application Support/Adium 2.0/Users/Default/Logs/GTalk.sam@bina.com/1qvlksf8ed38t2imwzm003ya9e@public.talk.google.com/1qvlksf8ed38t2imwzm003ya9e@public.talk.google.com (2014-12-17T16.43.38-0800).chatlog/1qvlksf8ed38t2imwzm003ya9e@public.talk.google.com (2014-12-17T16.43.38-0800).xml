@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-17T16:47:22-0800"></event>
+<message sender="sam@bina.com" time="2014-12-17T16:47:21-0800" alias="sam"><div>I can&apos;t seem to replicate <a href="https://binatechnologies.atlassian.net/browse/SEQ-3474">https://binatechnologies.atlassian.net/browse/SEQ-3474</a></div></message>
+<message sender="sam@bina.com" time="2014-12-17T16:47:48-0800" alias="sam"><div>i think I can fix it pretty quickly if you have time to explain the problem</div></message>
+<message sender="sam@bina.com" time="2014-12-17T16:47:55-0800" alias="sam"><div>if not, don&apos;t worry about it</div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-17T18:05:02-0800"></event></chat>

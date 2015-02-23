@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-01-02T13:53:29-0800"></event>
+<message sender="sam@bina.com" time="2015-01-02T13:53:29-0800" alias="sam"><div>hey austin</div></message>
+<status type="away" sender="austind@bina.com" time="2015-01-02T13:53:38-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">I&apos;m not here right now</span></div></status>
+<status type="idle" sender="austind@bina.com" time="2015-01-02T13:53:38-0800" alias="austin"></status>
+<message sender="sam@bina.com" time="2015-01-02T13:54:09-0800" alias="sam"><div>would you happen to have a job where I can check the qc radar data?</div></message>
+<status type="available" sender="austind@bina.com" time="2015-01-02T13:54:14-0800" alias="austin"></status>
+<status type="online" sender="austind@bina.com" time="2015-01-02T13:54:14-0800" alias="austin"></status>
+<message sender="sam@bina.com" time="2015-01-02T13:54:19-0800" alias="sam"><div>I&apos;m looking to add reference visibility</div></message>
+<message sender="austind@bina.com" time="2015-01-02T13:54:22-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">uhh</span></div></message>
+<message sender="austind@bina.com" time="2015-01-02T14:01:56-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">lol ok here is one</span></div></message>
+<message sender="austind@bina.com" time="2015-01-02T14:01:57-0800" alias="austin"><div><a href="https://nara-00:19001/#/binabox/view/2/db7f1870-28b9-45fe-b0cf-ea39a4d82c2a" style="font-family: Helvetica; font-size: 12pt;">https://nara-00:19001/#/binabox/view/2/db7f1870-28b9-45fe-b0cf-ea39a4d82c2a</a></div></message>
+<message sender="sam@bina.com" time="2015-01-02T14:02:05-0800" alias="sam"><div>cool! thanks</div></message>
+<status type="offline" sender="austind@bina.com" time="2015-01-02T14:06:19-0800" alias="austin"></status>
+<status type="online" sender="austind@bina.com" time="2015-01-02T14:06:42-0800" alias="austin"></status>
+<status type="away" sender="austind@bina.com" time="2015-01-02T14:15:01-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">I&apos;m not here right now</span></div></status>
+<status type="idle" sender="austind@bina.com" time="2015-01-02T14:15:01-0800" alias="austin"></status>
+<status type="available" sender="austind@bina.com" time="2015-01-02T14:17:10-0800" alias="austin"></status>
+<status type="online" sender="austind@bina.com" time="2015-01-02T14:17:10-0800" alias="austin"></status>
+<status type="away" sender="austind@bina.com" time="2015-01-02T15:06:52-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">I&apos;m not here right now</span></div></status>
+<status type="idle" sender="austind@bina.com" time="2015-01-02T15:06:52-0800" alias="austin"></status>
+<status type="available" sender="austind@bina.com" time="2015-01-02T15:09:40-0800" alias="austin"></status>
+<status type="online" sender="austind@bina.com" time="2015-01-02T15:09:40-0800" alias="austin"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-01-02T15:40:21-0800"></event></chat>

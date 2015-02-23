@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-01-07T13:10:21-0800"></event>
+<message sender="sam@bina.com" time="2015-01-07T13:10:21-0800" alias="sam"><div>hey austin! when you have a chance can you tell me how to run the new report generator? it looks like you&apos;ve split it into more granular services. I&apos;ll verify that it works for all the new workflows</div></message>
+<status type="away" sender="austind@bina.com" time="2015-01-07T13:18:15-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">I&apos;m not here right now</span></div></status>
+<status type="idle" sender="austind@bina.com" time="2015-01-07T13:18:15-0800" alias="austin"></status>
+<status type="available" sender="austind@bina.com" time="2015-01-07T13:24:27-0800" alias="austin"></status>
+<status type="online" sender="austind@bina.com" time="2015-01-07T13:24:27-0800" alias="austin"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-01-07T13:31:26-0800"></event></chat>

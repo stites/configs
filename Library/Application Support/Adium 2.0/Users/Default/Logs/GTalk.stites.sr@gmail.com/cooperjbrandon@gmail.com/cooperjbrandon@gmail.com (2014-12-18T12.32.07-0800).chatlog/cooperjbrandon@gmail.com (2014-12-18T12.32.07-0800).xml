@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-12-18T12:32:21-0800"></event>
+<status type="connected" time="2014-12-18T12:32:21-0800"><div>You have connected</div></status>
+<status type="offline" sender="cooperjbrandon@gmail.com" time="2014-12-18T12:41:00-0800" alias="Brandon Cooper"></status>
+<status type="online" sender="cooperjbrandon@gmail.com" time="2014-12-18T12:49:54-0800" alias="Brandon Cooper"></status>
+<status type="away" sender="cooperjbrandon@gmail.com" time="2014-12-18T12:49:55-0800" alias="Brandon Cooper"></status>
+<status type="offline" sender="cooperjbrandon@gmail.com" time="2014-12-18T12:57:34-0800" alias="Brandon Cooper"></status>
+<status type="online" sender="cooperjbrandon@gmail.com" time="2014-12-18T12:59:23-0800" alias="Brandon Cooper"></status>
+<status type="online" sender="cooperjbrandon@gmail.com" time="2014-12-18T12:59:23-0800" alias="Brandon Cooper"></status>
+<status type="away" sender="cooperjbrandon@gmail.com" time="2014-12-18T12:59:24-0800" alias="Brandon Cooper"></status>
+<status type="offline" sender="cooperjbrandon@gmail.com" time="2014-12-18T13:03:07-0800" alias="Brandon Cooper"></status>
+<status type="online" sender="cooperjbrandon@gmail.com" time="2014-12-18T13:12:32-0800" alias="Brandon Cooper"></status>
+<status type="online" sender="cooperjbrandon@gmail.com" time="2014-12-18T13:12:32-0800" alias="Brandon Cooper"></status>
+<status type="away" sender="cooperjbrandon@gmail.com" time="2014-12-18T13:12:32-0800" alias="Brandon Cooper"></status>
+<status type="online" sender="cooperjbrandon@gmail.com" time="2014-12-18T13:14:23-0800" alias="Brandon Cooper"></status>
+<status type="offline" sender="cooperjbrandon@gmail.com" time="2014-12-18T14:25:05-0800" alias="Brandon Cooper"></status>
+<status type="online" sender="cooperjbrandon@gmail.com" time="2014-12-18T14:29:49-0800" alias="Brandon Cooper"></status>
+<status type="offline" sender="cooperjbrandon@gmail.com" time="2014-12-18T14:31:14-0800" alias="Brandon Cooper"></status>
+<status type="online" sender="cooperjbrandon@gmail.com" time="2014-12-18T16:01:46-0800" alias="Brandon Cooper"></status>
+<status type="away" sender="cooperjbrandon@gmail.com" time="2014-12-18T17:04:11-0800" alias="Brandon Cooper"></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-18T17:05:37-0800" alias="sam"><div>You have disconnected</div></status>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-12-19T14:09:33-0800"></event></chat>

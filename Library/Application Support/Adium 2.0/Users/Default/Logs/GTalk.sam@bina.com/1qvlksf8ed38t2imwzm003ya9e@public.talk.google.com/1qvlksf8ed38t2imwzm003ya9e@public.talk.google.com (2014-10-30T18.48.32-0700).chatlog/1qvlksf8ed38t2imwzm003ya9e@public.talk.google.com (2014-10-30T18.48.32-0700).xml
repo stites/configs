@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-10-30T18:50:32-0700"></event>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T18:50:32-0700" alias="Greg Gibeling"><div><a href="http://t-rex:19007/#/binabox/monitor/1/28f10c4d-a245-484c-bb87-7acbda3d916b" style="font-family: Helvetica; font-size: 12pt;">http://t-rex:19007/#/binabox/monitor/1/28f10c4d-a245-484c-bb87-7acbda3d916b</a></div></message>
+<status type="offline" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T19:18:09-0700" alias="Greg Gibeling"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-30T19:30:37-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-30T20:48:05-0700"><div>You have connected</div></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:31:07-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:31:07-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:31:09-0700" alias="Greg Gibeling"></status>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:31:58-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Am I still waiting on that PR?  I don&apos;t mind either way, but I should probably get the release tests started so they can run over night.  Thoughts?</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:32:13-0700" alias="sam"><div>ah! i am submitting a PR</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:32:14-0700" alias="sam"><div>but</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:32:21-0700" alias="sam"><div>i can&apos;t ssh into hq</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:32:42-0700" alias="sam"><div>i think it&apos;s because i don&apos;t have access after reinstalling OSX</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:33:03-0700" alias="sam"><div>/my keys are not synced in</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:33:04-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Ah jeez.  Could you ssh into t-rex when you were in the office?</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:33:10-0700" alias="sam"><div>yeah</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:33:14-0700" alias="sam"><div>that&apos;s what&apos;s weird about it</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:33:26-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Hmmmm.  That is weird.  What&apos;s the ssh command you&apos;re using?</span></div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:33:30-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">ssh <a href="http://corp.bina.com">corp.bina.com</a>?</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:33:38-0700" alias="sam"><div>no <a href="http://hq.bina.com">hq.bina.com</a></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:33:40-0700" alias="sam"><div>lemme try that</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:33:48-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Oh!  I&apos;m not sure wht hq is...</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:34:14-0700" alias="sam"><div>still getting a permission denied</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:34:28-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">How odd...</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:34:37-0700" alias="sam"><div>everything is set except that the &quot;runtime&quot; section is missing in all summaries</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:34:42-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">What IP do you see when you ping?</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:35:00-0700" alias="sam"><div>209.36.5.218</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:35:08-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Huh.  Me too.</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:35:15-0700" alias="sam"><div>i was just going to submit a [do not merge] PR</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:35:20-0700" alias="sam"><div>and clean it up tomorrow</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:35:45-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Don&apos;t worry about it if I shouldn&apos;t merge.</span></div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:35:55-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Well, or does it fix some things?</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:36:06-0700" alias="sam"><div>it fixes a few things</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:36:19-0700" alias="sam"><div>covers:<br />+ SEQ-3278 - a problem with the symlink<br />+ SEQ-3282 - fixed angular formatting<br /><br />issues discovered:<br />+ summary no longer rendering<br />+ removal of a sizable chunk of code in summary-services.<br /></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:36:30-0700" alias="sam"><div>was what i was going to write in</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:36:32-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">How would you feel about merging it now and then fixing more later?</span></div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:36:57-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Maybe that&apos;s not a great idea with the summary missing, huh?</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:37:05-0700" alias="sam"><div>oh no!</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:37:11-0700" alias="sam"><div>that was fixed</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:37:28-0700" alias="sam"><div>sorry!</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:37:54-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">NP.  I&apos;m just trying to figure out whether it&apos;ll be working <span style="font-weight: bold;">enough</span> that it&apos;s better to merge than not.</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:38:25-0700" alias="sam"><div>i do think you should merge this is. Everything is functional except the runtime field doesn&apos;t render.</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:38:31-0700" alias="sam"><div>a huge blocker</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:38:33-0700" alias="sam"><div>but</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:38:43-0700" alias="sam"><div>austin needs to test the report generation</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:39:23-0700" alias="sam"><div>so it is probably more important to let him work on that since that affects the build process</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:39:43-0700" alias="sam"><div>the UI i can get a PR in first thing tomorrow</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:41:08-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Okay.  Sounds good.  Thank you!  So when you submit, I&apos;ll merge and run the tests.  Sound about right?</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:44:32-0700" alias="sam"><div>yup</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:44:51-0700" alias="sam"><div>I just assigned you the PR</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:45:07-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Thank you, sir!  Anything else I should know?</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:45:12-0700" alias="sam"><div>nope!</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:45:21-0700" alias="sam"><div>I&apos;m headed out to eat ice cream — have a good night!</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:45:25-0700" alias="sam"><div>i&apos;ll see you tomorrow</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T21:45:54-0700" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Sounds like fun!  Hope it&apos;s good stuff: have fun!</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:46:30-0700" alias="sam"><div>if anything goes haywire i&apos;m always on gchat so just ping me</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:47:04-0700" alias="sam"><div>jk! I&apos;m useless tonight.</div></message>
+<message sender="sam@bina.com" time="2014-10-30T21:47:13-0700" alias="sam"><div>but just let me know!</div></message>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-30T21:47:15-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-31T11:08:45-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-31T11:22:10-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-31T11:23:05-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-31T11:25:04-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-31T11:29:40-0700"><div>You have connected</div></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T11:38:32-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T11:58:08-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T12:41:45-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T12:46:11-0700" alias="Greg Gibeling"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-31T12:48:12-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-31T12:57:33-0700"><div>You have connected</div></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T13:01:50-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T13:23:58-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T13:51:29-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T13:52:15-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T14:22:06-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T14:36:34-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T14:53:49-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T14:58:08-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T15:45:25-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-31T15:49:16-0700" alias="Greg Gibeling"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-31T16:38:23-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-31T16:47:37-0700"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-10-31T17:13:36-0700"></event></chat>

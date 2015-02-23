@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-12-22T10:55:53-0500"></event>
+<status type="connected" time="2014-12-22T10:55:53-0500"><div>You have connected</div></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T11:35:36-0500" alias="anastasia"></status>
+<status type="available" sender="anastasia.aizman@gmail.com" time="2014-12-22T11:35:36-0500" alias="anastasia"></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T11:42:37-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">morning!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T11:45:15-0500" alias="sam"><div>morning!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T11:45:35-0500" alias="sam"><div>in a call with ruan&apos;s friend</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T11:45:44-0500" alias="sam"><div>it&apos;s so strange!!!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T11:45:50-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">!!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T11:52:02-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">tell me!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T11:52:04-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">??</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T11:53:01-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">no...</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T11:53:19-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i thought i saw something similar about uber in another state</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T11:53:36-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">oh! boston area</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T11:53:40-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that&apos;s the one</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T11:53:46-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">thought it said bay area</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T11:54:24-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">The authorities said Mr. Done had posed as the driver when he picked up the woman, but it is unclear whether Mr. Done used information from the Uber application to aim at the woman.</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T11:55:03-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">might not be uber, this time around</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T11:58:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">:D</span></div></message>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-12-22T12:00:14-0500"></event>
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-12-22T12:01:33-0500"></event>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T12:01:33-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">hahaha</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T12:01:36-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">nice</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T12:01:40-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok showertime</span></div></message>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-22T12:02:55-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T12:10:04-0500" alias="anastasia"></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T12:16:23-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">new episode of bob&apos;s burgers!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T12:17:17-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">crap</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T12:17:19-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it was a lie</span></div></message>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-22T12:41:57-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T13:02:42-0500" alias="anastasia"></status>
+<status type="away" sender="anastasia.aizman@gmail.com" time="2014-12-22T13:02:42-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T13:05:03-0500" alias="anastasia"></status>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-22T13:11:22-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T13:13:14-0500" alias="anastasia"></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T13:57:25-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">mog</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T13:57:26-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">omg</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T13:57:28-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">mog!!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T13:57:30-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">omg*</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T13:57:38-0500" alias="sam"><div>!!!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T13:57:42-0500" alias="sam"><div>what happened!!!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T13:57:43-0500" alias="sam"><div>ALSO</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T13:57:53-0500" alias="sam"><div>I FIGURED OUT EVERYTHING!!!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T13:58:11-0500" alias="sam"><div>my report is FIXED!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T13:58:15-0500" alias="sam"><div>almost</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T13:58:18-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">:D</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T13:58:20-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">guess what</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T13:58:28-0500" alias="sam"><div>what!!!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:00:26-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i might do design here</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:00:27-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yay</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:00:31-0500" alias="sam"><div>WHAT</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:00:33-0500" alias="sam"><div>AMAZING!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:00:34-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">of that stupid error bug i was working on</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:00:52-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:00:54-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i will</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:00:56-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s in tracker</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:01:00-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i get to be a designer, yay</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:01:04-0500" alias="sam"><div>yay!!!!!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:01:04-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i don&apos;t know why that&apos;s good!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:01:07-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but it feels good!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:01:20-0500" alias="sam"><div>good!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:01:56-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yay</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:01:58-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">awesome</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:02:05-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i get to redo g&apos;s bad work</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:02:26-0500" alias="sam"><div>haha</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:02:32-0500" alias="sam"><div>very true</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:03:47-0500" alias="sam"><div>also you get to use design skills!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:03:59-0500" alias="sam"><div>which is pretty sweet!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:06:03-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">:D</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:08:40-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah no that&apos;s the point</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:08:44-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and if it goes well</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:08:48-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i could do all things everything</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:09:09-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and then finally figure out how to merge both sets of skills</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:09:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yay</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:11:14-0500" alias="sam"><div>anastasia!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:11:18-0500" alias="sam"><div>that&apos;s so amazing!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:11:35-0500" alias="sam"><div>you basically get to see the ENTIRE pipeline of building something!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:13:34-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yay!!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:13:47-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">gonna work on it tonight</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:14:33-0500" alias="sam"><div>nice!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:15:13-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">the thing is i&apos;m really bad at web design</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:15:16-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">er, i used to be</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:15:24-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">pretty sure i&apos;m bad at design in general now</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:15:37-0500" alias="sam"><div>you never know!!!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:15:37-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">cause it&apos;s very different from graphic design</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:15:39-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:15:52-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">plus i&apos;ve had a lot of time with our app</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:16:00-0500" alias="sam"><div>well this is a great first project then!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:16:56-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">:D</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:16:58-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:16:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yes</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:16:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:17:00-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">cool</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:17:02-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">psyched</span></div></message>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-22T14:24:43-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T14:25:32-0500" alias="anastasia"></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:27:02-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">so was the talk with ruan&apos;s person good today?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:27:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">or was it like what you expected/</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:27:09-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:32:13-0500" alias="sam"><div>it was strange - but pretty much what i expected.</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:32:17-0500" alias="sam"><div>hold on!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:32:22-0500" alias="sam"><div>sprint demo</div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-22T14:32:46-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-22T14:33:23-0500"><div>You have connected</div></status>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:33:23-0500" alias="sam"><div>OH LIES</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:33:35-0500" alias="sam"><div>WHAT TIME IS IT OVER THERE</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:33:39-0500" alias="sam"><div>11:30?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:35:29-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yep</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:35:33-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s only 3 hours behind!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:35:39-0500" alias="sam"><div>thank god!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:35:46-0500" alias="sam"><div>I am so close to finishing</div></message>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-22T14:37:21-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T14:38:53-0500" alias="anastasia"></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:40:45-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">this is really creepy</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:40:54-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i had to restart my computer and it asked me if i want to abort installation</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:41:00-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i wasn&apos;t installing anything, that i know of</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:41:47-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and i just started the comp back up and installer was running again</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:41:50-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">force quit it.....</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:43:51-0500" alias="sam"><div>what do you think it was?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:44:21-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">no idea!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:45:58-0500" alias="sam"><div>MALWARRRREEEEEE!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T14:46:37-0500" alias="sam"><div>or perhaps it&apos;s the broken fan!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:47:02-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">perhaps</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:47:02-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:55:22-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i found a git bug!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:55:25-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">we found a git bug</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:55:34-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i might submit an issue to git</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:55:35-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ha</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:55:36-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ha</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:55:36-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ha</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T14:55:39-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that&apos;d be amazing</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T15:03:26-0500" alias="sam"><div>what! what happened!!!!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T15:03:32-0500" alias="sam"><div>a git bug!?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T15:03:37-0500" alias="sam"><div>that&apos;s pretty cool!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T15:03:47-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T15:03:49-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">maybe not</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T15:03:53-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i mean maybe</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T15:03:55-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but maybe not</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T15:04:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i need to read up on it</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T15:05:27-0500" alias="sam"><div>there was a git security bug that happened recently</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T15:05:44-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">really?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T15:05:49-0500" alias="sam"><div>yeah...</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T15:06:59-0500" alias="sam"><div>it&apos;s...</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T15:08:32-0500" alias="sam"><div><a href="http://www.eweek.com/security/git-vulnerability-exposed-patch-now-or-be-hacked-later.html">http://www.eweek.com/security/git-vulnerability-exposed-patch-now-or-be-hacked-later.html</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T15:08:34-0500" alias="sam"><div>here!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T15:08:38-0500" alias="sam"><div>was this it?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T15:09:43-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">haha yeah right</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T15:09:53-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">no this one is just to do with the pull requesting system</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T15:09:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it doesn&apos;t make sense to me</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T15:20:45-0500" alias="sam"><div>OH MAN</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T15:20:46-0500" alias="sam"><div>sorry</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T15:20:59-0500" alias="sam"><div>i just squeezed through and finished this feature</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T15:22:04-0500" alias="sam"><div>wait so what&apos;s happening in this pull request?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T15:22:41-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;ll tell you later!</span></div></message>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-22T15:23:52-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T16:09:52-0500" alias="anastasia"></status>
+<status type="away" sender="anastasia.aizman@gmail.com" time="2014-12-22T16:32:53-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T16:34:45-0500" alias="anastasia"></status>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-22T16:39:55-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T16:56:42-0500" alias="anastasia"></status>
+<status type="away" sender="anastasia.aizman@gmail.com" time="2014-12-22T16:56:42-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T16:57:16-0500" alias="anastasia"></status>
+<status type="away" sender="anastasia.aizman@gmail.com" time="2014-12-22T17:16:42-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T17:22:18-0500" alias="anastasia"></status>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-22T17:28:18-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T17:30:13-0500" alias="anastasia"></status>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-22T17:59:35-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T18:05:21-0500" alias="anastasia"></status>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-22T18:09:18-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T18:12:05-0500" alias="anastasia"></status>
+<status type="away" sender="anastasia.aizman@gmail.com" time="2014-12-22T18:20:48-0500" alias="anastasia"></status>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-22T18:24:34-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T18:31:56-0500" alias="anastasia"></status>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:39:06-0500" alias="sam"><div>HEY HEY</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:39:11-0500" alias="sam"><div>what happened with that PR?</div></message>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T18:41:06-0500" alias="anastasia"></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T18:41:13-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">nothign!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T18:41:15-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">nothing</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T18:41:18-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;ll tell you later!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:45:04-0500" alias="sam"><div>okay!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:45:21-0500" alias="sam"><div>ahhhh so i finished this MDNA report!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:45:31-0500" alias="sam"><div>it&apos;s very pretty!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:45:33-0500" alias="sam"><div>thank you!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:45:40-0500" alias="sam"><div>also check this out!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:46:41-0500" alias="sam"><div><a href="https://github.com/vpnguy/ntpdos">https://github.com/vpnguy/ntpdos</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:47:28-0500" alias="sam"><div>for the next time you get a call from a scammer</div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-22T18:47:32-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-22T18:54:39-0500"><div>You have connected</div></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T18:54:40-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T18:54:42-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">what&apos;s this</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T18:54:47-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">how to ddos attack?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:54:55-0500" alias="sam"><div>yeah!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:55:05-0500" alias="sam"><div>it&apos;s a script to do it</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T18:55:07-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T18:55:13-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">who would i want to ddos attack?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T18:55:58-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">what&apos;s the supposed &quot;legal&quot; use of this code?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:56:45-0500" alias="sam"><div>well if someone calls you and it&apos;s a phone scam</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:56:52-0500" alias="sam"><div>that&apos;s legal… right?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T18:56:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">don&apos;t know?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T18:57:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">how would you ddos a phone scam?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:57:57-0500" alias="sam"><div>well - you&apos;d have to find out their website!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:58:11-0500" alias="sam"><div>but after that you&apos;d be golden!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T18:58:13-0500" alias="sam"><div>: )</div></message>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-22T19:02:48-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T19:04:48-0500" alias="anastasia"></status>
+<status type="away" sender="anastasia.aizman@gmail.com" time="2014-12-22T19:13:49-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-22T19:19:26-0500" alias="anastasia"></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:20:43-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">nice</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:20:47-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">let&apos;s ddos everyone</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:22:29-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">let&apos;s ddos some evil thing</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:31:25-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">soooooooo</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:31:32-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i currently have three pages i&apos;m &quot;designing&quot;</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:36:24-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">:P</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:38:57-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">also</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:39:01-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m working from home tomorrow</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:39:04-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">soooooo</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:39:06-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you should come work with me</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:39:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">in my bed</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:39:11-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">tomorrow</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:39:16-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;ll need all sorts of help</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:39:25-0500" alias="sam"><div>ahhhh</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:39:27-0500" alias="sam"><div>i want to </div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:39:38-0500" alias="sam"><div>but i think i will be indisposed tomorrow</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:39:52-0500" alias="sam"><div>oh man</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:39:58-0500" alias="sam"><div>today was filled with phonecalls</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:40:02-0500" alias="sam"><div>terrible</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:40:08-0500" alias="sam"><div>i never want to do that again</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:40:18-0500" alias="sam"><div>how are those designs?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:40:20-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">whyyyyyy</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:40:42-0500" alias="sam"><div>idk i had some phonecalls today so i just made them all happen today</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:40:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">about whaaaaty</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:41:06-0500" alias="sam"><div>well</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:41:09-0500" alias="sam"><div>my sprint demo</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:41:15-0500" alias="sam"><div>sprint planning</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:41:20-0500" alias="sam"><div>tax conversatinos</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:41:27-0500" alias="sam"><div>investment conversations</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:41:35-0500" alias="sam"><div>project management discussions</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:41:51-0500" alias="sam"><div>it was a lot</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:42:00-0500" alias="sam"><div>i also watched an episode of dr who</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:42:24-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">!!!!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:42:27-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">how dare you</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:42:29-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s mine now</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:42:35-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you may only watch with me</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:42:48-0500" alias="sam"><div>whahaaaat!?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:42:52-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yes</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:43:03-0500" alias="sam"><div>I THOUGHT YOU DIDN&apos;T WATCH DR WHO</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:43:16-0500" alias="sam"><div>(notice how great of a person I&apos;m being)</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:43:18-0500" alias="sam"><div>: P</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:43:30-0500" alias="sam"><div>also this</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:44:20-0500" alias="sam"><div><a href="http://www.businessinsider.com/afp-pope-launches-scathing-attack-on-vatican-plagued-by-ills-2014-12">http://www.businessinsider.com/afp-pope-launches-scathing-attack-on-vatican-plagued-by-ills-2014-12</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:46:46-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wow</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:46:51-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that&apos;s great</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:47:05-0500" alias="sam"><div>and this!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:47:19-0500" alias="sam"><div><a href="http://storycorps.org/">http://storycorps.org/</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:47:26-0500" alias="sam"><div>have you heard of this?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:47:34-0500" alias="sam"><div>apparently it&apos;s a big deal!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:48:13-0500" alias="sam"><div>apparently the founder got a genius grant for his work</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:48:30-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">haha totally</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:48:39-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i even tried to get a job at the place that sets up those booths</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:48:43-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">boothes</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:48:51-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">no, booths</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:49:00-0500" alias="anastasia"><div><a href="https://www.google.com/search?q=story+corps+booth&amp;espv=2&amp;biw=1440&amp;bih=757&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ei=8buYVMemINb8oQTemoJ4&amp;ved=0CAkQ_AUoBA" style="font-family: Helvetica; font-size: 12pt;">https://www.google.com/search?q=story+corps+booth&amp;espv=2&amp;biw=1440&amp;bih=757&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ei=8buYVMemINb8oQTemoJ4&amp;ved=0CAkQ_AUoBA</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:51:43-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">anyway, i used to subscribe to the podcast. they have some really lovely stories</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:51:57-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and i believe they all get archived in the national library</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:52:05-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">in dc</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:55:56-0500" alias="sam"><div>cool!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:56:02-0500" alias="sam"><div>i just found out about them</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T19:56:08-0500" alias="sam"><div>we&apos;re watching PBS</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T19:56:22-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">: )</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:00:25-0500" alias="sam"><div>wait so what was it like working for them?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:00:30-0500" alias="sam"><div>did you do the mediating?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:05:56-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">nooooo i tried to get a job there</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:05:57-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s a studio</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:06:07-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">storycorps was one of their clients</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:06:11-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">they turned me down</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:06:59-0500" alias="sam"><div>awww</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:07:46-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah it was sucky</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:07:51-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">the interview, too, it was hard</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:08:05-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">all of it just felt wrong</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:08:14-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but i was emailing that studio since i was in like, freshman year</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:08:26-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">finally got an interview after i finished college, and wk12</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:08:38-0500" alias="sam"><div>nice!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:08:52-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">well, not so nice</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:08:55-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">they turned me down</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:09:55-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but they are still super cool</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:10:07-0500" alias="anastasia"><div><a href="http://localprojects.net/projects/" style="font-family: Helvetica; font-size: 12pt;">http://localprojects.net/projects/</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:10:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">like, super cool</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:10:41-0500" alias="sam"><div>woad</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:10:44-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">&quot;Hello Anastasia,</span><br /><br /><span style="font-family: Helvetica; font-size: 12pt;">It has taken us awhile but we have finally made the decision to go with another candidate to fill the Graphic Designer position.&quot;</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:10:46-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">bleeehhhhh</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:10:57-0500" alias="sam"><div>heeeey</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:11:00-0500" alias="sam"><div>don&apos;t do that!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:11:07-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s fine!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:11:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it felt wrong anyway</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:11:27-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i think by the time i had that interview i was questioning whether i wanna be a designer in the first place</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:11:34-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">questioning it, a lot</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:11:50-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i think my enthusiasm for their interactive stuff came through but not for the position itself</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:11:53-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">if i were to guess</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:12:02-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">plus i don&apos;t think design-wise i was what they were looking for</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:12:41-0500" alias="sam"><div>okay then</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:12:42-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">oh wait, yeah. that was just a few months before i moved here</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:13:00-0500" alias="sam"><div>want to hear more good news happening in the world today?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:13:12-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yes, good news, always!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:13:28-0500" alias="sam"><div><a href="http://www.theguardian.com/business/2014/dec/17/american-apparel-ceo-dov-charney-fired-fall-icon-sleaze">http://www.theguardian.com/business/2014/dec/17/american-apparel-ceo-dov-charney-fired-fall-icon-sleaze</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:13:36-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">hahaha</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:13:42-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">for at least the second time</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:13:44-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">he might be back</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:14:27-0500" alias="sam"><div>this sounds somewhat more serious though!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:14:32-0500" alias="sam"><div>just by a bit</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:15:05-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">nice</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:22:44-0500" alias="sam"><div>and</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:22:44-0500" alias="sam"><div><a href="http://www.rollingstone.com/politics/news/policing-is-a-dirty-job-but-nobodys-gotta-do-it-6-ideas-for-a-cop-free-world-20141216">http://www.rollingstone.com/politics/news/policing-is-a-dirty-job-but-nobodys-gotta-do-it-6-ideas-for-a-cop-free-world-20141216</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:23:18-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:23:22-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">been meaning to read that</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:23:24-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s come up a lot</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:23:29-0500" alias="sam"><div>yeah</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:23:29-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">how about htis</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:23:30-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">this</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:23:31-0500" alias="anastasia"><div><a href="http://gawker.com/slimy-baltimore-fox-affiliate-caught-faking-kill-a-cop-1674040381" style="font-family: Helvetica; font-size: 12pt;">http://gawker.com/slimy-baltimore-fox-affiliate-caught-faking-kill-a-cop-1674040381</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:23:42-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m sitting in the darkness here</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:23:45-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">darkneeessss</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:25:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and this <a href="http://www.theatlantic.com/politics/archive/2014/12/blue-lives-matter-nypd-shooting/383977/?single_page=true#disqus_thread">http://www.theatlantic.com/politics/archive/2014/12/blue-lives-matter-nypd-shooting/383977/?single_page=true#disqus_thread</a></span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T20:25:36-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">haven&apos;t read it yet but the author&apos;s that one guy</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:26:36-0500" alias="sam"><div>hold on</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:26:47-0500" alias="sam"><div>didn&apos;t get to read that last one </div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:26:54-0500" alias="sam"><div>i need to take a quick nap</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T20:26:56-0500" alias="sam"><div>10 min</div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-22T20:27:00-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-22T20:27:05-0500"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-22T20:27:45-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-22T21:40:46-0500"><div>You have connected</div></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:02:22-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wake up</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:05:58-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wake up and hang out with me!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:07:17-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">haaaaa i figured out what airbnb symbol looks like</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:07:19-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">a vagina</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:07:21-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m a genius</span></div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-22T22:07:26-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-22T22:09:50-0500"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-22T22:19:01-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-22T22:21:13-0500"><div>You have connected</div></status>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:30:34-0500" alias="sam"><div>I&apos;M BACK</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:30:40-0500" alias="sam"><div>genius</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:30:46-0500" alias="sam"><div>it IS a vagina</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:35:40-0500" alias="sam"><div>look look</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:35:41-0500" alias="sam"><div><a href="https://www.airbnb.com/rooms/3865176?checkin=04%2F08%2F2015&amp;checkout=04%2F17%2F2015&amp;guests=2&amp;s=GzeQ">https://www.airbnb.com/rooms/3865176?checkin=04%2F08%2F2015&amp;checkout=04%2F17%2F2015&amp;guests=2&amp;s=GzeQ</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:36:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">:D</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:36:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:36:09-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">lemme</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:36:14-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">hmmmm</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:36:21-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">maybe i can share the places i&apos;ve found so far</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:36:47-0500" alias="anastasia"><div><a href="https://www.airbnb.com/wishlists/45975236" style="font-family: Helvetica; font-size: 12pt;">https://www.airbnb.com/wishlists/45975236</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:36:55-0500" alias="sam"><div>mmk!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:37:33-0500" alias="anastasia"><div><a href="https://www.airbnb.com/wishlists/45975030" style="font-family: Helvetica; font-size: 12pt;">https://www.airbnb.com/wishlists/45975030</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:37:43-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">barcelona and iceland</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:39:41-0500" alias="sam"><div>nice!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:40:09-0500" alias="sam"><div>we can rent the place i just posted for 290/wk!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:40:21-0500" alias="sam"><div>there are 3 bedrooms though</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:40:55-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">&quot;Those dates are not available&quot;</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:40:57-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:41:14-0500" alias="sam"><div>ahhh!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:41:15-0500" alias="sam"><div>damn</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:42:12-0500" alias="anastasia"><div><a href="https://www.airbnb.com/rooms/1851161"><span style="font-family: Helvetica; font-size: 12pt;">https://www.airbnb.com/rooms/1851161</span></a><span style="font-family: Helvetica; font-size: 12pt;"> ?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:42:22-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">cheaaap</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:45:16-0500" alias="sam"><div>but no kitchen!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:45:42-0500" alias="sam"><div>what about this one?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:45:43-0500" alias="sam"><div><a href="https://www.airbnb.com/rooms/878067">https://www.airbnb.com/rooms/878067</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:47:26-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that looks great!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:48:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it looks really lovely</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:48:24-0500" alias="sam"><div>aprit 8 to 18th!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:48:41-0500" alias="sam"><div>er</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:48:42-0500" alias="sam"><div>19</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:48:53-0500" alias="sam"><div>April 8-19!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:49:20-0500" alias="sam"><div>oh no!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:49:28-0500" alias="sam"><div>we can&apos;t get it for those days!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:49:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">oh crap</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:50:05-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">damnit</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:50:56-0500" alias="sam"><div><a href="https://www.airbnb.com/rooms/1838068?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;s=wiV1">https://www.airbnb.com/rooms/1838068?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;s=wiV1</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:51:51-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">woowwwww</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:51:56-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that is <span style="font-weight: bold;">fancy*</span></span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:51:59-0500" alias="sam"><div>it&apos;s small!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:52:04-0500" alias="sam"><div>it&apos;s just a studio</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:52:26-0500" alias="sam"><div>here look</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:52:35-0500" alias="sam"><div><a href="https://www.airbnb.com/s/Barcelona--Spain?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;room_types%5B%5D=Entire+home%2Fapt&amp;price_max=60&amp;hosting_amenities%5B%5D=4&amp;hosting_amenities%5B%5D=8&amp;ss_id=7nuq915r">https://www.airbnb.com/s/Barcelona--Spain?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;room_types%5B%5D=Entire+home%2Fapt&amp;price_max=60&amp;hosting_amenities%5B%5D=4&amp;hosting_amenities%5B%5D=8&amp;ss_id=7nuq915r</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:52:47-0500" alias="sam"><div>that&apos;s a search for rentals with kitchens and wifi</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:52:55-0500" alias="sam"><div>under $60</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:52:57-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wow</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:52:58-0500" alias="sam"><div>for our days</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:53:04-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait shouldn&apos;t we do iceland first</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:53:06-0500" alias="sam"><div>there are 140 of them!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:53:11-0500" alias="sam"><div>either one!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:53:13-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i guess it doesn&apos;t matter</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:53:37-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i think we need to zoom into the city center</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:53:44-0500" alias="sam"><div>yeah...</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:54:03-0500" alias="anastasia"><div><a href="https://www.airbnb.com/rooms/3886434?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;s=fh1H" style="font-family: Helvetica; font-size: 12pt;">https://www.airbnb.com/rooms/3886434?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;s=fh1H</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:54:04-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">:P</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:54:46-0500" alias="sam"><div>: P</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:55:50-0500" alias="sam"><div>Things to be aware of: <br />...<br />Lots of mosquitoes!!! We think they were nesting in the boat itself in damp spots. You will need insect repellent! </div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:55:56-0500" alias="sam"><div>vetod!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:56:22-0500" alias="anastasia"><div><a href="https://www.airbnb.com/rooms/996713?checkin=04/08/2015&amp;checkout=04/19/2015&amp;guests=2&amp;s=fh1H"><span style="font-family: Helvetica; font-size: 12pt;">https://www.airbnb.com/rooms/996713?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;s=fh1H</span></a><span style="font-family: Helvetica; font-size: 12pt;"> penthouse</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:56:25-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wow</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:56:33-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">about the masquitos</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:56:41-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">also for the fact that there&apos;s no bath or bathroom</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:56:43-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you know.</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:56:46-0500" alias="sam"><div>i just was about to send that one!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:56:46-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but masquitos too</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:56:48-0500" alias="sam"><div>yeah</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:57:14-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">oh wait</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:57:15-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">I am renting a 20 sqm ROOM with double bed and a sofa bed in a lovely flat located in the trendy and central area of Plaza Universitat (EIXAMPLE IZQUIERDA). From 24th of december to 06th of anuary IT IS POSSIBLE TO RENT THE ENTIRE FLAT.</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:57:20-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i don&apos;t think it means a whole house then</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:57:45-0500" alias="sam"><div>well it&apos;s an option, we just have to enquire</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:58:35-0500" alias="sam"><div>want to email him?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:58:46-0500" alias="sam"><div>i can do it too!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:58:56-0500" alias="anastasia"><div><a href="https://www.airbnb.com/rooms/597984?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;s=xZZC" style="font-family: Helvetica; font-size: 12pt;">https://www.airbnb.com/rooms/597984?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;s=xZZC</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:59:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">not fancy but seems like a nice location, private</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:59:15-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you do it</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:59:16-0500" alias="sam"><div>yeah</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T22:59:17-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">youuuuu</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T22:59:18-0500" alias="sam"><div>mmk</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:00:17-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m designing stuff</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:00:19-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">for my work</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:00:23-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">as part of my job</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:00:33-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">as a fullstack software engineer and designer</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:00:34-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">whaaaat</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:05:17-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">sry</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:05:45-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i can help with whatever</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:06:45-0500" alias="anastasia"><div><a href="https://www.airbnb.com/rooms/2602738?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;s=5rsc" style="font-family: Helvetica; font-size: 12pt;">https://www.airbnb.com/rooms/2602738?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;s=5rsc</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:07:01-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:11:21-0500" alias="sam"><div>hahaha</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:11:27-0500" alias="sam"><div>okay look at this</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:11:28-0500" alias="sam"><div>Hi Sid!<br /><br />My name is Sam Stites — I work at a sub-branch of Roche Sequencing Solutions out of San Francisco where we are trying to solve cancer. My girlfriend and I are looking to work remotely out of Barcelona for 11 days and were wondering if we could rent your apartment for the dates attached.<br /><br />It seems like you are right in the middle of everything which is must be amazing! We are probably just looking to hole up in coffeeshops to work off of the wifi during the day, while going walking/urban exploring during the night. <br /><br />I noticed that you occasionally rent the entire flat — would it be possible in April? If so, could you also give us some advice for some quiet spots to work?<br /><br />Thanks and Happy Holidays!<br />-Sam</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:13:00-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">hmmmmmm delete the first part about roche</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:13:05-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">not important</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:13:11-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">also you can link to my profile</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:13:14-0500" alias="sam"><div>well he asks</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:13:19-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ohhh</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:13:20-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">where?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:13:26-0500" alias="sam"><div><span style="font-family: Helvetica; font-size: 12pt; font-weight: bold;">Hi, I&apos;m Sid!<br /></span>Thanks for checking out my listing. I&apos;d love to know:<br />	•	Where are you from?<br />	•	What brings you to Barcelona? Who&apos;s joining you?<br />	•	Would you like to know more about the neighborhood?<br /></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:13:56-0500" alias="sam"><div>might just be a boiler plate but that&apos;s the context</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:14:12-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok ok holdon lemme at it</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:14:14-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">for a sec</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:14:18-0500" alias="sam"><div>i could just say I&apos;m an engineer</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:14:23-0500" alias="sam"><div>yeah go for it</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:15:04-0500" alias="sam"><div>i just figure that, being more specific gives more of a backdrop.</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:17:17-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">also i gotta tell you &quot;solve cancer&quot; sounds strange</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:17:34-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i don&apos;t know!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:19:06-0500" alias="sam"><div>sure</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:21:33-0500" alias="sam"><div>Hi Sid!<br /><br />My name is Sam Stites — I work as an engineer in San Francisco at Roche Sequencing Solutions and will be traveling from March 27th to April 19th with my girlfriend. Both of us are looking to work remotely out of Barcelona for the last 11 days and were wondering if we could rent your apartment for that time.<br /></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:21:46-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait wait</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:21:47-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">Hi Sid!</span><br /><br /><span style="font-family: Helvetica; font-size: 12pt;">My name is Sam Stites. </span><br /><span style="font-family: Helvetica; font-size: 12pt;">My girlfriend, Anastasia (<a href="https://www.airbnb.com/users/show/3977970">https://www.airbnb.com/users/show/3977970</a>) and I, both computer engineers living in San Francisco, CA, are going to be traveling to Barcelona for 11 days to try to see a bit of the world while we work full-time, abroad.</span><br /><span style="font-family: Helvetica; font-size: 12pt;">We plan to spend our days holed up in coffeeshops and public libraries doing work, and running around exploring the streets of the city at night. </span><br /><br /><br /><span style="font-family: Helvetica; font-size: 12pt;">I noticed that you occasionally rent the entire flat — would it be possible rent it in April for the 11 days specified?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:23:15-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i think at the least it&apos;s worth to link to my profile</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:23:34-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i have one review and i&apos;m a &quot;real person&quot; by having been verified</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:24:28-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">oops, no need to say 11 days twice</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:24:34-0500" alias="sam"><div>mmhm!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:25:05-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok wait here</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:25:06-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">Hi Sid!</span><br /><br /><span style="font-family: Helvetica; font-size: 12pt;">My name is Sam Stites. </span><br /><span style="font-family: Helvetica; font-size: 12pt;">My girlfriend, Anastasia (<a href="https://www.airbnb.com/users/show/3977970">https://www.airbnb.com/users/show/3977970</a>) and I, both computer engineers living in San Francisco, CA, are going to be traveling to Barcelona to try to see a bit of the world while we work full-time, abroad.</span><br /><span style="font-family: Helvetica; font-size: 12pt;">We plan to spend our days holed up in coffeeshops and public libraries doing work, and run around exploring the streets of the city in the evenings.</span><br /><br /><span style="font-family: Helvetica; font-size: 12pt;">I noticed that you occasionally rent the entire flat — would it be possible rent it in April for the 11 days specified?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:25:14-0500" alias="sam"><div>i what about this</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:25:57-0500" alias="sam"><div>Hi Sid!<br /><br />My name is Sam Stites. <br />My girlfriend, Anastasia (<a href="https://www.airbnb.com/users/show/3977970">https://www.airbnb.com/users/show/3977970</a>) and I, are software engineers living in San Francisco, CA and will be traveling to Barcelona for 11 days to see a bit of the world as we work full-time, abroad.<br /><br />We plan to spend our days holed up in coffeeshops and public libraries for work, while running around exploring the streets of Barcelona at night. <br /><br />I noticed that you occasionally rent the entire flat — would that be possible to do from the 8th to the 19th of April?<br /><br />Thanks and Happy Holidays!<br />-Sam</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:26:14-0500" alias="sam"><div>computer engineers sounds strange!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:27:18-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:27:19-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:27:20-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:27:22-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">a couple things</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:27:28-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait lemme call you</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:27:29-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:27:36-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">also i found the perfect place</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:27:40-0500" alias="anastasia"><div><a href="https://www.airbnb.com/rooms/847375?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;s=fh1H#host-profile" style="font-family: Helvetica; font-size: 12pt;">https://www.airbnb.com/rooms/847375?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;s=fh1H#host-profile</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:28:14-0500" alias="sam"><div>mmk</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:28:55-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">callliiiing</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:28:58-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">answerrrrr</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:29:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i mean hangouts callling</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:37:08-0500" alias="anastasia"><div><a href="http://www.codeshare.io/m0hZe" style="font-family: Helvetica; font-size: 12pt;">http://www.codeshare.io/m0hZe</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:39:56-0500" alias="sam"><div><a href="https://www.airbnb.com/users/show/807502">https://www.airbnb.com/users/show/807502</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-22T23:56:24-0500" alias="sam"><div><a href="http://www.lonelyplanet.com/iceland/reykjavik/hotels/apartments?utf8=%E2%9C%93&amp;search%5Bpage_offsets%5D=0%2C60&amp;search%5Bfrom%5D=28+Mar+2015&amp;search%5Bto%5D=7+Apr+2015&amp;search%5Bguests%5D=2&amp;search%5Bcurrency%5D=USD&amp;filters%5Bproperty_type_group%5D%5Bguesthouse%5D=true&amp;filters%5Bproperty_type_group%5D%5Bapartment%5D=true&amp;filters%5Bprice%5D%5Blow%5D=true&amp;filters%5Bfacilities%5D%5Bwi_fi_internet%5D=true">http://www.lonelyplanet.com/iceland/reykjavik/hotels/apartments?utf8=%E2%9C%93&amp;search%5Bpage_offsets%5D=0%2C60&amp;search%5Bfrom%5D=28+Mar+2015&amp;search%5Bto%5D=7+Apr+2015&amp;search%5Bguests%5D=2&amp;search%5Bcurrency%5D=USD&amp;filters%5Bproperty_type_group%5D%5Bguesthouse%5D=true&amp;filters%5Bproperty_type_group%5D%5Bapartment%5D=true&amp;filters%5Bprice%5D%5Blow%5D=true&amp;filters%5Bfacilities%5D%5Bwi_fi_internet%5D=true</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-22T23:59:43-0500" alias="anastasia"><div><a href="http://www.tripadvisor.com/Hotel_Review-g189959-d1771190-Reviews-Viking_Village_Hotel-Hafnarfjordur_Reykjavik_Capital_Region.html" style="font-family: Helvetica; font-size: 12pt;">http://www.tripadvisor.com/Hotel_Review-g189959-d1771190-Reviews-Viking_Village_Hotel-Hafnarfjordur_Reykjavik_Capital_Region.html</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T00:04:53-0500" alias="anastasia"><div><a href="https://www.airbnb.com/wishlists/45975030" style="font-family: Helvetica; font-size: 12pt;">https://www.airbnb.com/wishlists/45975030</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T00:11:19-0500" alias="anastasia"><div><a href="https://www.airbnb.com/rooms/4322780?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;s=QraP" style="font-family: Helvetica; font-size: 12pt;">https://www.airbnb.com/rooms/4322780?checkin=04%2F08%2F2015&amp;checkout=04%2F19%2F2015&amp;guests=2&amp;s=QraP</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T00:12:12-0500" alias="anastasia"><div><a href="https://www.airbnb.com/rooms/2792966?checkin=03%2F28%2F2015&amp;checkout=04%2F08%2F2015&amp;guests=2&amp;s=Xy5b" style="font-family: Helvetica; font-size: 12pt;">https://www.airbnb.com/rooms/2792966?checkin=03%2F28%2F2015&amp;checkout=04%2F08%2F2015&amp;guests=2&amp;s=Xy5b</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T00:13:51-0500" alias="anastasia"><div><a href="https://www.airbnb.com/rooms/1242462?checkin=03%2F28%2F2015&amp;checkout=04%2F08%2F2015&amp;guests=2&amp;s=N3FX" style="font-family: Helvetica; font-size: 12pt;">https://www.airbnb.com/rooms/1242462?checkin=03%2F28%2F2015&amp;checkout=04%2F08%2F2015&amp;guests=2&amp;s=N3FX</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T00:21:26-0500" alias="anastasia"><div><a href="http://stacker.newsbound.com/" style="font-family: Helvetica; font-size: 12pt;">http://stacker.newsbound.com/</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T00:30:14-0500" alias="anastasia"><div><a href="https://www.airbnb.com/rooms/1242462?checkin=03%2F28%2F2015&amp;checkout=04%2F08%2F2015&amp;guests=2&amp;s=N3FX" style="font-family: Helvetica; font-size: 12pt;">https://www.airbnb.com/rooms/1242462?checkin=03%2F28%2F2015&amp;checkout=04%2F08%2F2015&amp;guests=2&amp;s=N3FX</a></div></message>
+<status type="away" sender="anastasia.aizman@gmail.com" time="2014-12-23T00:54:03-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-23T00:55:15-0500" alias="anastasia"></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T01:11:43-0500" alias="anastasia"><div><a href="http://i.imgur.com/pHXfN.jpg" style="font-family: Helvetica; font-size: 12pt;">http://i.imgur.com/pHXfN.jpg</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T01:12:13-0500" alias="anastasia"><div><a href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTcM7VvX0bO1NyffCwWuHPXaVvvpEJKUTW0IQD8Ph-eUONS23Gexg" style="font-family: Helvetica; font-size: 12pt;">https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTcM7VvX0bO1NyffCwWuHPXaVvvpEJKUTW0IQD8Ph-eUONS23Gexg</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T01:44:46-0500" alias="sam"><div>&lt;#</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T01:44:50-0500" alias="sam"><div>&lt;3</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T01:44:54-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">pound it</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T01:44:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">###</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T01:45:02-0500" alias="sam"><div>###</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T01:45:13-0500" alias="sam"><div>boom shakalaka</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T01:46:03-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">&lt;3</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T01:49:19-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m on &quot;the christmas invasion&quot; season 2 episode 1</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T01:49:22-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s very festive</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T01:49:27-0500" alias="sam"><div>ah yeah!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T01:49:36-0500" alias="sam"><div>they always do a christmas episode</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T01:49:47-0500" alias="sam"><div>as the lead-in to the season before it starts</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T01:49:56-0500" alias="sam"><div>it&apos;s usually not related to the plot too much</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T01:50:21-0500" alias="sam"><div>they usually use it as a teaser for the new characters so that there&apos;s a tiny bit of context</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T01:50:41-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">those british</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T01:50:45-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">they&apos;re so interesting</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T01:51:05-0500" alias="sam"><div>: D</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T01:59:50-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">this is one dark christmas episode</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T02:10:55-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">1 minute!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T02:11:13-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">now go go go</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T02:11:14-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">oh wait.</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T02:11:18-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">3 hour difference.</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T02:14:55-0500" alias="sam"><div>HMMM?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T02:15:06-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">11:11!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T02:15:10-0500" alias="sam"><div>oh no!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T02:15:15-0500" alias="sam"><div>yeah it&apos;s 2:11 here</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T02:15:24-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">go tto sleeeeeeep</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T02:15:30-0500" alias="sam"><div>nooooooooooooooooooooo</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T02:15:38-0500" alias="sam"><div>i like being jet lagged!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T02:15:53-0500" alias="sam"><div>it gives me quiet time here</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T02:16:03-0500" alias="sam"><div>otherwise it&apos;s impossible to do anything</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T02:16:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">aww</span></div></message>
+<status type="away" sender="anastasia.aizman@gmail.com" time="2014-12-23T02:33:22-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-23T02:47:44-0500" alias="anastasia"></status>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-23T02:47:52-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-23T03:16:32-0500" alias="anastasia"></status>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-23T03:21:42-0500" alias="anastasia"></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-23T05:07:09-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-23T05:07:13-0500"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-23T05:07:54-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-23T13:53:37-0500"><div>You have connected</div></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:07:27-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">whoa</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:07:31-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">are you gettting them or something?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:07:51-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">also wanna see the latest design thing?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:07:55-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i cleaned it up a lot</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:08:01-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">k seemed excited about it</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:08:40-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but i feel weird doing this without an explicit go ahead from tim (though josh said it&apos;s cool...)</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:08:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m possibly stepping on toes</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:09:42-0500" alias="sam"><div>well just ping him and tell him that you were told to do it</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:09:50-0500" alias="sam"><div>and then do some collaboration on it</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:09:54-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">nooooo he knows i sort of alluded to it</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:09:58-0500" alias="sam"><div>then pass it over to k</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:10:01-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">he didn&apos;t seem to mind but i don&apos;t know!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:10:09-0500" alias="sam"><div>just ask for his opinion</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:10:43-0500" alias="sam"><div>he&apos;s the lead designer-person so he should have final veto power</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:10:56-0500" alias="sam"><div>righT?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:12:06-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i guess!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:12:11-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i don&apos;t know how it works</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:12:19-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;ll ask k</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:12:37-0500" alias="sam"><div>mmk!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:14:49-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but but do you wanna see it</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:14:54-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i took your suggestions</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:15:33-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">also i might drive to the office for a sec today like an awesome person with a car and a drivers license</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:21:55-0500" alias="sam"><div>: P</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:22:02-0500" alias="sam"><div>yeah i wanna see it!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:22:09-0500" alias="sam"><div>I&apos;m wrapping presents though!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:22:23-0500" alias="sam"><div>basically everything I got from the FSA store is going under the tree</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:22:49-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">hahaha oh man</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:30:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">sam</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:30:14-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i have no gifts for anyone</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:30:15-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">anyone!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:30:17-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">at all</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:30:24-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m terrible at this</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:31:46-0500" alias="sam"><div>what about the portraits!!!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:33:23-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">still working on them</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:33:42-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i mean i haven&apos;t in a couple days cause i&apos;ve been doing work work</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:33:52-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but if they don&apos;t work out then i&apos;ve got nothing!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:36:30-0500" alias="sam"><div>i have a secret to share with you</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:36:35-0500" alias="sam"><div>about presents</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:36:36-0500" alias="sam"><div>it&apos;s</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:36:40-0500" alias="sam"><div><a href="http://www.fsastore.com">www.fsastore.com</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:37:49-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ummmmmm</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:37:54-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">uhhh</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:37:58-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">first, i don&apos;t have fsa</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:38:17-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">second..... that doesn&apos;t seem right for my parents</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:38:33-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i have a list of things i need to get them, anyway, i just gotta do it</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:39:06-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s all super boring presents which is why i haven&apos;t just done it</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:40:13-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait fsa is mostly pills</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:40:17-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">what do you find there?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:47:21-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">sorry. i think that all sounded dickish — aahhhhhh</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:47:27-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">sry.</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:50:30-0500" alias="sam"><div>lols! it was a joke!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:50:33-0500" alias="sam"><div>no worries!!!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:50:57-0500" alias="sam"><div>everything I got was completely impersonal and health-concious</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:51:27-0500" alias="sam"><div>i did, however, get ARTHERITUS GLOVES</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:51:35-0500" alias="sam"><div>which is amazing</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:52:42-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">have you tried them on?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:55:35-0500" alias="sam"><div>yes</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:55:40-0500" alias="sam"><div>they&apos;re so strange</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T14:55:59-0500" alias="sam"><div>but it makes you feel like a HAXXXORRRR</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T14:56:20-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">nice</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T15:13:37-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i just changed our websites font</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T15:13:41-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">eveerryyyywhhheeeeerrreee</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T15:13:45-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it feels oh so good</span></div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-23T15:24:07-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-23T15:24:10-0500"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-23T15:24:12-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-23T15:24:45-0500"><div>You have connected</div></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:17:27-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">sam</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:17:28-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">sam</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:17:33-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">sam</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:17:38-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">crucial design moment right now</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:17:39-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">erm</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:17:42-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">k says</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:17:42-0500" alias="sam"><div>HMMM?!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:17:54-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">context: introducing the whole i can design things to josh</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:18:05-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">trying to get him on board with starting to move towards a new direction</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:18:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">k says this:</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:18:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">why don&apos;t you throw the last one into nerds as a &quot;sketch&quot; - mention that it was just you organizing your thoughts on the user profile page but interested in feedback on what could be a basic &quot;skin&quot; of our current UI with the updated font/style/logo?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:19:11-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">halp</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:19:11-0500" alias="sam"><div>hmmmm</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:19:19-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i sent you the latest thing</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:19:21-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">halp</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:19:23-0500" alias="sam"><div>ping tim personally?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:19:25-0500" alias="sam"><div>sure</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:19:29-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">no not tim!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:19:33-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">this&apos;ll be between josh and k</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:19:37-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and josh can do whatever</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:20:11-0500" alias="sam"><div>mmk</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:20:18-0500" alias="sam"><div>what about this one?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:20:21-0500" alias="sam"><div>i like it</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:20:31-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok ok hold on here:</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:20:37-0500" alias="sam"><div>you should put K&apos;s fase on it though</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:21:00-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">Hey! I was organizing my thoughts with the user profile page last night and I made a quick sketch trying to follow Tim&apos;s design direction.</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:21:14-0500" alias="sam"><div>yeah that sounds good!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:21:28-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">I would love to hear feedback on it!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:21:39-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">...?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:21:51-0500" alias="sam"><div>yeah that&apos;s fine</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:21:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">I would love to hear feedback on what could be a basic &quot;skin&quot; of our current UI with the updated font/style/logo</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:23:31-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">okokok done</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:24:28-0500" alias="sam"><div>nice!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:24:57-0500" alias="sam"><div>the only comment I would say is that without the actual profile i could see the design as feeling a bit cold</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:25:04-0500" alias="sam"><div>well - not really</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:25:58-0500" alias="sam"><div>but with an actual person it would be a nice balance of clean and personable</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:28:30-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">currently i don&apos;t think we&apos;ll have that capability for a long while</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:29:11-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but the icon should at least be designed, right now it&apos;s just thrown up for filler</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:29:31-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">heyheyhey</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:29:32-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">tim:</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:29:33-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m into it. i think it&apos;d be cool if the &quot;start a new stack&quot; was right under the last stack. In this example it&apos;s be right under the ACLU stack.<br />And the stack names could look nice left justified. maybe take a look. I think the only other thing I would say is to lighten the grey on the dates under the status line. just to have it feel a little bit more designeyyy</span><br /><span style="font-family: Helvetica; font-size: 12pt;">but it looks really nice. great work</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:30:35-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yayyyyyyyyyyyy i&apos;m so happy</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:39:20-0500" alias="sam"><div>hey hey hey</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:39:50-0500" alias="sam"><div>let&apos;s do the Barcelona thing!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:40:07-0500" alias="sam"><div>and the Reykjiavik one?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:41:23-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you want to just take the barcelona one?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:45:18-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;d be so nice to have our own place</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:45:46-0500" alias="sam"><div>yeah lets do it</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:45:55-0500" alias="sam"><div>wait but then what about Iceland?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:46:05-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok, let&apos;s check it again</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:46:11-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">iceland is how much?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:46:19-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and barcelona, you&apos;re not staying there as long as i am</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:46:38-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:49:46-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">669.66 for 11 nights</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:50:07-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">on this end</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:50:53-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait...that&apos;s less than i thought</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:51:20-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah i guess that&apos;s right!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:51:27-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">except honest, it&apos;s not per person per night</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:51:40-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">well because it&apos;s one less night for you!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:51:45-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and it doesn&apos;t work out that way</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:51:53-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:52:00-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">let&apos;s do this right</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:52:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah i can handle that : P</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:52:24-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">thanks, sam : )</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:52:28-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that&apos;s really nice of you</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:52:29-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">anyway</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:52:31-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i can book</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:53:23-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">oh right</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:53:26-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;ll do that</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:53:29-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:54:18-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:54:32-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">so I think I&apos;ll owe you money by th eend of it</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:54:36-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">cause yours is more expensive</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:55:40-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">shit i think my laptop charger stopped working</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:56:17-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i will i will and then i&apos;ll venmo you the money + whatever i owe you</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:57:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah let&apos;s just do it</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:57:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">get it over with</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:57:22-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">now&apos;s as good time as any</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:57:22-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">way</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:57:22-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:57:27-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s in the center city right?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:57:35-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s not in another city...l</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T16:59:47-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i still have to activate this card</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T16:59:54-0500" alias="sam"><div>mmk</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:01:24-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">hey</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:01:29-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">do i have the same card number as you?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:01:39-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">cause i don&apos;t have your password / username for barclays</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:01:48-0500" alias="sam"><div>no you dont!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:01:51-0500" alias="sam"><div>you have your own!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:02:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">oh ok</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:02:15-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">new cardmember</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:02:20-0500" alias="sam"><div>yeah</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:02:34-0500" alias="sam"><div>you can call in and use your birthday as verification</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:04:54-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">The information you entered did not match our records. We were unable to locate your account. Please verify the information below.[I-1039] weird</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:09:56-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;ll do that now</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:10:03-0500" alias="sam"><div>mmk!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:39:53-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ahhh i&apos;ll do it later</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:39:56-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;ll do it tonight</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:44:40-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">soooo we&apos;re doing the design stuff : )</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:45:01-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and yeah, it totally is cold and lacks personality</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:45:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">maybe we can figure that all out later</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:45:18-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but for now i want to get rid of g&apos;s stuff</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:50:54-0500" alias="sam"><div><a href="https://github.com/h5bp/Front-end-Developer-Interview-Questions">https://github.com/h5bp/Front-end-Developer-Interview-Questions</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:50:56-0500" alias="sam"><div>oops!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:51:02-0500" alias="sam"><div>talking to amir about hiring</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:51:52-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ha</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:52:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">how many ways can you name to hide an element on the page!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:52:19-0500" alias="sam"><div>lols</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:52:21-0500" alias="sam"><div>also</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:52:22-0500" alias="sam"><div>Fun Questions: &quot;What&apos;s your favorite feature of Internet Explorer?&quot;</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:52:27-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">hahaahaha</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:52:30-0500" alias="sam"><div>so goood</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T17:52:34-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">evil</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:58:34-0500" alias="sam"><div>I think i would ask browser questions</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:58:44-0500" alias="sam"><div>i&apos;m currently considering </div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:58:55-0500" alias="sam"><div>&quot;let&apos;s build the DOM&quot;</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:58:55-0500" alias="sam"><div>and</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:59:45-0500" alias="sam"><div>&quot;<span style="font-family: Helvetica; font-size: 12pt; font-weight: bold;">How might you design a program that lets people play <a href="http://en.wikipedia.org/wiki/Monopoly_%28game%29" style="text-decoration: underline;">Monopoly</a> with each other over the internet?</span>&quot;</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:59:47-0500" alias="sam"><div>from</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T17:59:50-0500" alias="sam"><div><a href="http://weblog.raganwald.com/2006/06/my-favourite-interview-question.html">http://weblog.raganwald.com/2006/06/my-favourite-interview-question.html</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T18:00:57-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">awesome</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T18:00:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">sounds complex</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T18:01:28-0500" alias="sam"><div>well — it&apos;s a &quot;whatever you&apos;re interested in&quot; question</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T18:01:37-0500" alias="sam"><div>you could just talk about UI</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T18:01:44-0500" alias="sam"><div>or distributed systems</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T18:01:58-0500" alias="sam"><div>or only modeling and schemas</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T18:02:44-0500" alias="sam"><div>oh god</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T18:02:48-0500" alias="sam"><div>dinner</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T18:02:54-0500" alias="sam"><div>it&apos;s with guests</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-23T18:02:59-0500" alias="sam"><div>I&apos;m going to be trapped</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-23T18:04:42-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">good luck!</span></div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-23T18:08:15-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-23T18:09:44-0500"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-23T18:09:50-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-24T00:46:16-0500"><div>You have connected</div></status>
+<message sender="stites.sr@gmail.com" time="2014-12-24T00:46:34-0500" alias="sam"><div>hey hey hey</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T00:46:35-0500" alias="sam"><div>hey</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T00:47:19-0500" alias="sam"><div><a href="http://bit.ly/1CGlUub">http://bit.ly/1CGlUub</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T00:47:28-0500" alias="sam"><div>this is where the iceland spot is in</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T00:47:43-0500" alias="sam"><div>is that okay?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T00:48:38-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">absolutely!!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T00:48:48-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">looks like it&apos;s a 25 minute walk from the airport: P</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T00:48:55-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">or a seven minute car ride</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T00:49:00-0500" alias="sam"><div>awesome!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T00:49:07-0500" alias="sam"><div>gunna book it!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T00:49:11-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yay do it!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T00:55:21-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok so ermmmm if my math is right</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T00:55:36-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">if you uh wanted to</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T00:55:42-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you could venmo me $100</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T00:56:06-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">(920-650)/2-30</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T00:56:28-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">or not</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T00:56:29-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">whatevr</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T00:56:41-0500" alias="sam"><div>hmmm?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T00:57:03-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i uhh accidentally venmoed you too much</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T00:57:05-0500" alias="sam"><div>hold on, sending the host a message in response</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T00:57:11-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">because i didn&apos;t think anything through</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T00:57:35-0500" alias="sam"><div>hold on...</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:02:00-0500" alias="sam"><div>mmk!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:02:02-0500" alias="sam"><div>so lets see</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:03:15-0500" alias="sam"><div>okay so you sent me <span style="font-family: Helvetica; font-size: 12pt; font-weight: bold;">650.00</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:04:53-0500" alias="sam"><div>in total we have 920+650=1570</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:05:11-0500" alias="sam"><div>but really, you&apos;re staying an extra night in the 650 one</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:05:14-0500" alias="sam"><div>so thats...</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:05:24-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">(920-650)/2-30</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:05:34-0500" alias="sam"><div>mmmm…</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:05:35-0500" alias="sam"><div>wait</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:05:36-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;ll wait :P</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:05:46-0500" alias="sam"><div>why 920-650?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:05:51-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">because you paid 920</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:05:54-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but i paid you 650</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:05:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">so you paid 920-650</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:05:59-0500" alias="sam"><div>wait</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:06:08-0500" alias="sam"><div>but they&apos;re both on this card</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:06:14-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i venmoed you!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:06:21-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">by accident</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:06:29-0500" alias="sam"><div>that&apos;s 920+650 in total, divided by both of us</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:06:37-0500" alias="sam"><div>so isn&apos;t it</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:06:41-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">sam, i just venmoed you 650</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:06:44-0500" alias="sam"><div>yeah!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:06:46-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">check your account</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:06:51-0500" alias="sam"><div>hold on...</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:07:30-0500" alias="sam"><div>i&apos;m confused! calling!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:10:18-0500" alias="sam"><div>920/2 = 460</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:10:30-0500" alias="sam"><div>325 per person</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:10:51-0500" alias="sam"><div>29.55</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:11:14-0500" alias="sam"><div>(920+650)/2</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:11:40-0500" alias="sam"><div>(650/11/2)=29.55</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:12:19-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">460 + 325</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:12:28-0500" alias="sam"><div>460+325</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:12:44-0500" alias="sam"><div>75</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:13:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">785-650</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:13:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">135</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:13:41-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">460+325</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:13:44-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">= 785</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:13:57-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">785 - 650</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:14:06-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">= 135</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:14:13-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">165</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:20:36-0500" alias="anastasia"><div><a href="https://www.google.com/maps/d/edit?mid=zaISv_bCXmME.kLcHKYd5pZQE" style="font-family: Helvetica; font-size: 12pt;">https://www.google.com/maps/d/edit?mid=zaISv_bCXmME.kLcHKYd5pZQE</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:22:13-0500" alias="anastasia"><div><a href="https://www.google.com/search?q=palma+island&amp;espv=2&amp;biw=1440&amp;bih=801&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ei=h1uaVL_6DYzdoASxmICAAw&amp;ved=0CAcQ_AUoAg" style="font-family: Helvetica; font-size: 12pt;">https://www.google.com/search?q=palma+island&amp;espv=2&amp;biw=1440&amp;bih=801&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ei=h1uaVL_6DYzdoASxmICAAw&amp;ved=0CAcQ_AUoAg</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:25:17-0500" alias="anastasia"><div><a href="https://www.google.com/maps/d/edit?mid=zaISv_bCXmME.k8Jsv97K4h-Q" style="font-family: Helvetica; font-size: 12pt;">https://www.google.com/maps/d/edit?mid=zaISv_bCXmME.k8Jsv97K4h-Q</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:32:47-0500" alias="anastasia"><div><a href="https://www.google.com/search?q=west+point+inn&amp;espv=2&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ei=s12aVPb7CdLzoATNjIHwDA&amp;ved=0CAYQ_AUoAQ&amp;biw=1440&amp;bih=801" style="font-family: Helvetica; font-size: 12pt;">https://www.google.com/search?q=west+point+inn&amp;espv=2&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ei=s12aVPb7CdLzoATNjIHwDA&amp;ved=0CAYQ_AUoAQ&amp;biw=1440&amp;bih=801</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T01:33:49-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">lost you there</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T01:47:00-0500" alias="sam"><div><a href="http://ayjay.tumblr.com/post/105866644478/so-im-fine-with-ai-because-i-dont-believe-in-it">http://ayjay.tumblr.com/post/105866644478/so-im-fine-with-ai-because-i-dont-believe-in-it</a></div></message>
+<status type="away" sender="anastasia.aizman@gmail.com" time="2014-12-24T02:15:35-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-24T02:22:41-0500" alias="anastasia"></status>
+<message sender="stites.sr@gmail.com" time="2014-12-24T02:22:47-0500" alias="sam"><div><a href="http://bit.ly/1AHlvYZ">http://bit.ly/1AHlvYZ</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T02:25:58-0500" alias="anastasia"><div><a href="https://www.youtube.com/watch?v=smKnSRA1GzE" style="font-family: Helvetica; font-size: 12pt;">https://www.youtube.com/watch?v=smKnSRA1GzE</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T02:28:24-0500" alias="anastasia"><div><a href="http://i.dailymail.co.uk/i/pix/2012/04/20/article-2132798-12AF38EE000005DC-423_470x695.jpg" style="font-family: Helvetica; font-size: 12pt;">http://i.dailymail.co.uk/i/pix/2012/04/20/article-2132798-12AF38EE000005DC-423_470x695.jpg</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T02:29:22-0500" alias="anastasia"><div><a href="https://www.youtube.com/watch?v=qBXr15K2uSc" style="font-family: Helvetica; font-size: 12pt;">https://www.youtube.com/watch?v=qBXr15K2uSc</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T02:31:00-0500" alias="sam"><div><a href="https://www.youtube.com/watch?v=hk2iNanCWik">https://www.youtube.com/watch?v=hk2iNanCWik</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T02:31:47-0500" alias="sam"><div><a href="https://www.youtube.com/watch?v=z2lrkaAr_zM">https://www.youtube.com/watch?v=z2lrkaAr_zM</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T02:33:07-0500" alias="sam"><div><a href="https://www.youtube.com/watch?v=yyEfAUw2GHc">https://www.youtube.com/watch?v=yyEfAUw2GHc</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T02:35:11-0500" alias="sam"><div><a href="https://www.youtube.com/watch?v=udSvkE4yl64">https://www.youtube.com/watch?v=udSvkE4yl64</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T02:36:03-0500" alias="sam"><div><a href="https://www.youtube.com/watch?v=OlJ0Orfiy68">https://www.youtube.com/watch?v=OlJ0Orfiy68</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T02:38:17-0500" alias="anastasia"><div><a href="https://www.youtube.com/watch?v=qBXr15K2uSc" style="font-family: Helvetica; font-size: 12pt;">https://www.youtube.com/watch?v=qBXr15K2uSc</a></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T02:39:33-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">oh no!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T02:39:35-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">what?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T02:39:47-0500" alias="sam"><div>hmmm?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T02:39:57-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">oh i thought you started saying something</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T02:40:05-0500" alias="sam"><div>no worries!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T02:40:10-0500" alias="sam"><div>i didn&apos;t!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T02:40:16-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok ok ok</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T02:40:16-0500" alias="sam"><div>just goodbye!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T02:40:19-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">then i&apos;m off</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T02:40:20-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">bye!</span></div></message>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-24T02:40:25-0500" alias="anastasia"></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-24T10:48:20-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-24T10:48:26-0500"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-24T12:23:29-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-24T17:01:10-0500"><div>You have connected</div></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:15:44-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">hey there</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:16:07-0500" alias="sam"><div>&apos;suuup</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:16:10-0500" alias="sam"><div>: )</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:17:00-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">my aunt who&apos;s a breast cancer survivor</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:17:07-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">they found something again</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:17:33-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s different this time, cll/sll i think</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:17:56-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and her husband, once again, leaving her</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:17:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">he&apos;s the worst</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:18:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">just, the worst human being</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:18:29-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i mean he&apos;s just going to israel and he&apos;ll be back but he&apos;s absolutely useless, the coward</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:18:35-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and so mom&apos;s going there in january</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:18:56-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and if they need me this time i&apos;ll go there too!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:19:27-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but so mom&apos;s called off her friends for new years so it&apos;s just going to be us</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:19:39-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and you&apos;re welcome there of course</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:19:46-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but just thought you should know</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:19:48-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i guess</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:19:51-0500" alias="sam"><div>mmk!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:19:56-0500" alias="sam"><div>are you okay?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:20:05-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah! it&apos;s just real bullshit</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:20:12-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that family has gone through way too much</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:20:35-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and they caught it really early so it&apos;s good</span></div></message>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-24T17:20:43-0500" alias="anastasia"></status>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:21:42-0500" alias="sam"><div>they caught it early so it&apos;s good?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:22:03-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:22:16-0500" alias="sam"><div>what does that mean?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:22:21-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:22:25-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">they caught the thing early</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:22:36-0500" alias="sam"><div>you&apos;re talking about a family that just went through a lot of misfortune!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:22:44-0500" alias="sam"><div>how is that good?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:22:47-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">what?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:22:55-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m talking about what she has right now</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:22:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">they caught it early</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:23:03-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">in its early stages</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:23:05-0500" alias="sam"><div>oooooh!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:23:06-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">so that&apos;s good</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:23:06-0500" alias="sam"><div>i see</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:23:10-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">as opposed to later</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:23:24-0500" alias="sam"><div>oh man, that was out of context for me</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:25:22-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but sam</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:25:30-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">how would any other context ever make sense</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:25:35-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ever</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:26:02-0500" alias="sam"><div>i thought you were talking about one of the bad things</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:26:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">if you know me you know i would never wish anything like what your context implies</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:26:09-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ever</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:26:11-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">on anyone</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:26:17-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i mean come on</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:26:26-0500" alias="sam"><div>?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:26:37-0500" alias="sam"><div>that&apos;s why i was confused </div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T17:26:56-0500" alias="sam"><div>because all you were saying was bad things</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:27:47-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i still don&apos;t understand</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T17:27:48-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">whatever</span></div></message>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-24T17:28:38-0500" alias="anastasia"></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-24T17:44:13-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-24T18:24:08-0500"><div>You have connected</div></status>
+<message sender="stites.sr@gmail.com" time="2014-12-24T18:24:13-0500" alias="sam"><div>hey</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T18:24:17-0500" alias="sam"><div>you&apos;re amazing</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T18:25:13-0500" alias="sam"><div>and I always think that above all else</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T18:25:46-0500" alias="sam"><div>(just a thought that i had over dinner — could be real awkward when you get back online)</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T18:25:57-0500" alias="sam"><div>also i may have bricked my phone</div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-24T18:58:01-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-24T19:20:51-0500"><div>You have connected</div></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T19:22:28-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">: )</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T19:38:09-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">how&apos;s that?</span></div></message>
+<status type="away" sender="anastasia.aizman@gmail.com" time="2014-12-24T19:53:13-0500" alias="anastasia"></status>
+<message sender="stites.sr@gmail.com" time="2014-12-24T19:53:53-0500" alias="sam"><div>BACK IN IT</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T19:53:55-0500" alias="sam"><div>also</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T19:54:02-0500" alias="sam"><div>i killed my phone</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T19:54:17-0500" alias="sam"><div>gunna have to fix it tomorrow...</div></message>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-24T20:00:34-0500" alias="anastasia"></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T20:02:34-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that sucks</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T20:02:40-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i had to restart one of the drawings</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T20:02:51-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">so now i have two half finished ones and two started</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T20:02:58-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but they all look pretty terrible</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T20:03:07-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">nothing to give as a gift</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T20:03:09-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">baahhh</span></div></message>
+<status type="away" sender="anastasia.aizman@gmail.com" time="2014-12-24T20:27:30-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-24T20:30:53-0500" alias="anastasia"></status>
+<status type="away" sender="anastasia.aizman@gmail.com" time="2014-12-24T21:06:05-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-24T21:08:51-0500" alias="anastasia"></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:09:09-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i think i really like dr who episodes that are without all those stupid monsters</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:09:20-0500" alias="sam"><div>: )</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:09:20-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">like when they&apos;re mostly about our reality with one odd thing</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:09:28-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">like that one with the statues, that was so cool</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:09:37-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and the one with the traffic jam</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:09:43-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it was good too</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:09:53-0500" alias="sam"><div>the weeping angels are fantastic</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:09:54-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s what i like in fiction and sci fi as well</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:10:07-0500" alias="sam"><div>mmmhm?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:10:24-0500" alias="sam"><div>well, i don&apos;t like the latest doctor that much</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:10:31-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that&apos;s why i like modern eastern european literature so much</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:10:37-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s always like that</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:10:42-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">slightly strange</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:11:00-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">kafka, too, for instance</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:11:26-0500" alias="sam"><div>subtly strange</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:11:49-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yep!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:11:54-0500" alias="sam"><div>BUT</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:12:40-0500" alias="sam"><div>metamorphosis is too outlandish though, in the beginning </div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:13:01-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ha</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:13:05-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but it&apos;s totally normal</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:13:26-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">apart from the guy turning into a cockroach everything is super dull</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:13:58-0500" alias="sam"><div>except his thoughts are the total opposite of normal!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:14:25-0500" alias="sam"><div>he turns into a cockroach and his first thought is &quot;damn, i&apos;m gunna be late to work&quot;</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:14:50-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">well, first, he doesn&apos;t grasp that he&apos;s a cockroach right away</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:15:02-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and he thinks he&apos;s going to get better, right?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:15:18-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you don&apos;t know how you&apos;d respond if you turned into a cockroach!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:15:27-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you might think of bina first!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:15:38-0500" alias="sam"><div>mmmm… </div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:15:58-0500" alias="sam"><div>even if i did</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:16:39-0500" alias="sam"><div>it wouldn&apos;t be about making sure bina was going to be alright</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:16:44-0500" alias="sam"><div>idk</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:16:47-0500" alias="sam"><div>anyhow</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:16:52-0500" alias="sam"><div>still need to finish it</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:17:07-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ha</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:17:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:17:12-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s not reality</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:17:15-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you know</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:17:17-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s a story!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:17:24-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but you should read some other books i like</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:17:33-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and anyway metamorphosis is not my favorite</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:17:41-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you should read kafka&apos;s other stories</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:17:52-0500" alias="sam"><div>yeah but it was just felt a little too out of touch — so it war hard to get started</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:19:53-0500" alias="sam"><div>MMMMY PPHONE</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:19:57-0500" alias="sam"><div>IS FUCKED</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:21:07-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">how?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:22:18-0500" alias="sam"><div>trying to update it</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:23:12-0500" alias="sam"><div>i think this OS is not compatible with my phone because it&apos;s from Verizon</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T21:23:19-0500" alias="sam"><div>: /</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:24:58-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ohnoo</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:58:51-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i can&apos;t draw my sister</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:58:57-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">she looks like an alien</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T21:58:59-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">aaaahhhhh</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:23:25-0500" alias="sam"><div>released!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:23:38-0500" alias="sam"><div>from the clutches of this terrible movie</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:23:52-0500" alias="sam"><div>so many movies when I&apos;m here</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:24:04-0500" alias="sam"><div>i don&apos;t get it</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:24:12-0500" alias="sam"><div>&gt;&lt;</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:25:11-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that&apos;s not bad, is it?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:27:44-0500" alias="sam"><div>its just SO much!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:28:08-0500" alias="sam"><div>no worries!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:28:17-0500" alias="sam"><div>tomorrow we go on our walk</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:28:27-0500" alias="sam"><div>how is the alien drawing?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:29:12-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:29:19-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s an alien no more</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:29:27-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but i&apos;m taking a break for a sec</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:29:40-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;ll have, if this works out, mom, cat, and anna</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:31:00-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">maybe.</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:31:12-0500" alias="sam"><div>nice!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:31:19-0500" alias="sam"><div>are you headed home tomorrow?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:31:22-0500" alias="sam"><div>or there now?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:31:23-0500" alias="sam"><div>HEY </div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:31:24-0500" alias="sam"><div>HEY</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:31:25-0500" alias="sam"><div>HEY</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:31:32-0500" alias="sam"><div>YOU&apos;VE HAD VACATION ALL DAY!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:31:36-0500" alias="sam"><div>HOW&apos;D IT FEEL?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:31:47-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it was alright</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:31:54-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;ve been home for most of the day</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:32:00-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">drawing, all of it</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:32:06-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">so little to show for!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:32:08-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:34:08-0500" alias="sam"><div>mmmm</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:34:18-0500" alias="sam"><div>it was a terribly dreadful day</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:34:20-0500" alias="sam"><div>got up at 12</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:35:00-0500" alias="sam"><div>then breakfast, terrible movie, phone stuff, dinner, game, movie</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:35:50-0500" alias="sam"><div>i think the sleep thing is catching up with me though</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:35:58-0500" alias="sam"><div>i&apos;m dreadfully tired already</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:36:04-0500" alias="sam"><div>which doesn&apos;t usually happen</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:36:48-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you should sleep then!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:37:43-0500" alias="sam"><div>in a bit!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:43:37-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">tell me something!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:53:55-0500" alias="sam"><div>done!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:54:35-0500" alias="sam"><div>After hours of standing in a bread line</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:54:45-0500" alias="sam"><div>a young man suddenly throws up his hands and shouts, &quot;Enough! I&apos;ve had it! I&apos;m going to go kill Gorbachev!!&quot;</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:54:51-0500" alias="sam"><div>and stomps off.</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:54:59-0500" alias="sam"><div>An hour later</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:55:40-0500" alias="sam"><div>he returns to the line he was in</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:55:47-0500" alias="sam"><div>his head hanging down</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:55:59-0500" alias="sam"><div>&quot;What happened?&quot; the other people in line ask.</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:56:09-0500" alias="sam"><div>&quot;I thought you were going to kill Gorbachev!&quot;</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:56:18-0500" alias="sam"><div>&quot;That line was even longer,&quot; he says.</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:56:48-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">hahahahahaha noooooo</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:56:55-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">depressing russian jokes</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:56:58-0500" alias="sam"><div>: D</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:58:06-0500" alias="sam"><div>i have my sources</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-24T23:59:08-0500" alias="sam"><div>The KGB, the FBI and the CIA are all trying to prove that they are the best at catching criminals.  The Secretary General of the UN decides to give them a test. He releases  a rabbit into a forest and each of them has to catch it. <br /><br />The CIA goes  in. They place animal informants throughout the forest. They question  all plant and mineral witnesses. After three months of extensive  investigations they conclude that the rabbit does not exist. <br /><br />The FBI goes in. After two weeks with no leads they burn the forest,  killing everything in it, including the rabbit, and make no apologies:  the rabbit had it coming. <br /><br />The KGB goes in. They come out two hours later  with a badly beaten bear. The bear is yelling: &quot;Okay! Okay! I&apos;m a  rabbit! I&apos;m a rabbit!&quot;</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:59:45-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">haaaaaaaa</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-24T23:59:57-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">except that doesn&apos;t stand the test of time</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-25T00:00:03-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">cia would have done the same</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-25T00:02:31-0500" alias="sam"><div>really? the cia barely does anything!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-25T00:02:54-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">.....what?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-25T00:03:11-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">have you completely missed the torture report?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-25T00:03:48-0500" alias="sam"><div>ah yeah</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-25T00:03:58-0500" alias="sam"><div>i forgot about that</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-25T00:04:04-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">oh man.</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-25T00:04:11-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you.. uh.. shouldn&apos;t</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-25T00:04:17-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s very important that you don&apos;t</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-25T00:04:30-0500" alias="sam"><div>got it!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-25T00:04:48-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">otherwise it perpetuates the myth about america</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-25T00:04:55-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that it&apos;s some wonderful salvation for the world</span></div></message>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-12-25T00:05:04-0500" alias="anastasia"></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-12-25T00:05:24-0500" alias="anastasia"></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-25T00:06:38-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">anyway, that&apos;s what i think. i dunno</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-25T00:08:38-0500" alias="sam"><div>i know!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-25T00:09:20-0500" alias="sam"><div>mmmm!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-25T00:09:30-0500" alias="sam"><div>I&apos;m gunna go sleep!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-12-25T00:09:51-0500" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">k gnight</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-25T00:10:07-0500" alias="sam"><div>mmk</div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-25T00:11:54-0500" alias="sam"><div>You have disconnected</div></status>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-12-25T00:11:59-0500"></event></chat>

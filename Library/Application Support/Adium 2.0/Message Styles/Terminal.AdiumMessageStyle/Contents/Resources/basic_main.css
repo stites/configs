@@ -1,0 +1,19 @@
+body
+{
+	color: #000000;
+	background-color: #FFFFFF;
+	margin: 2px;
+	line-height: 1.4em;
+}
+
+.status {
+	margin: 5px 30px;
+}
+
+.history span {
+	opacity: .5!important;
+}
+
+#Chat {
+	padding-bottom: 2px;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-02-02T11:39:39-0800"></event>
+<status type="connected" time="2015-02-02T11:39:38-0800"><div>You have connected</div></status>
+<status type="purple" time="2015-02-02T11:39:38-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com is now known as Amirhossein Kiani.<br /></span></div></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-02T12:09:33-0800" alias="amir"></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-02T12:09:33-0800" alias="amir"></status>
+<status type="available" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-02T12:09:33-0800" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-02T12:09:33-0800" alias="amir"></status>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-02T12:56:01-0800" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-02T13:04:20-0800" alias="amir"></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-02T13:04:20-0800" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-02T13:04:21-0800" alias="amir"></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-02T13:04:29-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-02T13:13:45-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-02-02T13:57:08-0800"></event></chat>

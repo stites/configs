@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-05T09:26:23-0800"></event>
+<message sender="sam@bina.com" time="2014-12-05T09:26:23-0800" alias="sam"><div>hey sharon!</div></message>
+<status type="online" sender="sharon@bina.com" time="2014-12-05T09:26:27-0800" alias="Sharon Barr"></status>
+<message sender="sharon@bina.com" time="2014-12-05T09:26:33-0800" alias="Sharon Barr"><div><span style="font-family: Helvetica; font-size: 12pt;">hey</span></div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:26:35-0800" alias="sam"><div>i just sent you an email</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:26:52-0800" alias="sam"><div>is this the job you were looking for</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:26:53-0800" alias="sam"><div><a href="http://t-rex:18447/#/binabox/view/6/13608338-da9f-4213-96c6-37784c59d819"><span style="text-decoration: underline;">http://t-rex:18447/#/binabox/view/6/13608338-da9f-4213-96c6-37784c59d819</span></a><span style="text-decoration: underline;"><br /></span></div></message>
+<message sender="sharon@bina.com" time="2014-12-05T09:27:16-0800" alias="Sharon Barr"><div><span style="font-family: Helvetica; font-size: 12pt;">i get: Error loading job 13608338-da9f-4213-96c6-37784c59d819 from Bina Box. This might be because the job is no longer in running state. Consider visiting the &quot;Analysis Queue&quot; to check on this job&apos;s status.</span></div></message>
+<message sender="sharon@bina.com" time="2014-12-05T09:27:32-0800" alias="Sharon Barr"><div><span style="font-family: Helvetica; font-size: 12pt;">maybe user permission issue?</span></div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:27:39-0800" alias="sam"><div>maybe…</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:27:47-0800" alias="sam"><div>it&apos;s just a normal box though</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:27:57-0800" alias="sam"><div>all the permissions should be the same</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:28:07-0800" alias="sam"><div>also - aren&apos;t you an admin?</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:28:14-0800" alias="sam"><div>try</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:28:33-0800" alias="sam"><div>did you try clearing your cache?</div></message>
+<message sender="sharon@bina.com" time="2014-12-05T09:28:37-0800" alias="Sharon Barr"><div><span style="font-family: Helvetica; font-size: 12pt;">i should be. yes</span></div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:29:57-0800" alias="sam"><div>okay</div></message>
+<message sender="sharon@bina.com" time="2014-12-05T09:30:03-0800" alias="Sharon Barr"><div><span style="font-family: Helvetica; font-size: 12pt;">ok, changed my uid/gid to 0/0 and now i can see it</span></div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:30:13-0800" alias="sam"><div>can I redirect you to austin as I head into the office?</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:30:40-0800" alias="sam"><div>this instance is identical to a normal box</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:30:57-0800" alias="sam"><div>and the mount permissions should be viewable by everybody</div></message>
+<message sender="sharon@bina.com" time="2014-12-05T09:31:06-0800" alias="Sharon Barr"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s ok now. will give you more feedback on the report later.</span></div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:31:55-0800" alias="sam"><div>just to verify - is the 2.2 server working?</div></message>
+<message sender="sharon@bina.com" time="2014-12-05T09:33:47-0800" alias="Sharon Barr"><div><span style="font-family: Helvetica; font-size: 12pt;">yes. we don&apos;t need it though. 2.3 is enough</span></div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:37:39-0800" alias="sam"><div>sure</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:38:13-0800" alias="sam"><div>I&apos;m running a sweep over my shared folder to make sure that all the permissions are correct</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:38:43-0800" alias="sam"><div>which is the last thing I can think of which would stop you from viewing the job</div></message>
+<message sender="sharon@bina.com" time="2014-12-05T09:38:52-0800" alias="Sharon Barr"><div><span style="font-family: Helvetica; font-size: 12pt;">thanks. it&apos;s a demo server and for now i can demo so don&apos;t spend too much on it.</span></div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:39:07-0800" alias="sam"><div>it should be done now! try again</div></message>
+<message sender="sharon@bina.com" time="2014-12-05T09:40:57-0800" alias="Sharon Barr"><div><span style="font-family: Helvetica; font-size: 12pt;">looks great. can you put a tool tip over the donuts graph with the values or just put the values there?</span></div></message>
+<message sender="sharon@bina.com" time="2014-12-05T09:41:25-0800" alias="Sharon Barr"><div><span style="font-family: Helvetica; font-size: 12pt;">you can remove the 2.2 server.</span></div></message>
+<message sender="sharon@bina.com" time="2014-12-05T09:41:31-0800" alias="Sharon Barr"><div><span style="font-family: Helvetica; font-size: 12pt;">18417</span></div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:41:37-0800" alias="sam"><div>perfect</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:41:49-0800" alias="sam"><div>I&apos;ll head into the office and we can talk about improvements</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:42:18-0800" alias="sam"><div>oh but! the values are supposed to be on hover</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:42:24-0800" alias="sam"><div>and seen in the top-left</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:42:38-0800" alias="sam"><div>it should probably be moved though</div></message>
+<message sender="sam@bina.com" time="2014-12-05T09:43:01-0800" alias="sam"><div>also, if you hover over the filename in sequencing, it should expand</div></message>
+<message sender="sharon@bina.com" time="2014-12-05T09:44:51-0800" alias="Sharon Barr"><div><span style="font-family: Helvetica; font-size: 12pt;">the values only show on the left, not on hover</span></div></message>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-05T09:45:00-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-05T09:45:12-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-05T09:45:13-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-05T11:20:27-0800"><div>You have connected</div></status>
+<status type="away" sender="sharon@bina.com" time="2014-12-05T11:52:10-0800" alias="Sharon Barr"></status>
+<status type="online" sender="sharon@bina.com" time="2014-12-05T11:53:35-0800" alias="Sharon Barr"></status>
+<status type="away" sender="sharon@bina.com" time="2014-12-05T12:41:04-0800" alias="Sharon Barr"></status>
+<status type="online" sender="sharon@bina.com" time="2014-12-05T12:56:31-0800" alias="Sharon Barr"></status>
+<status type="offline" sender="sharon@bina.com" time="2014-12-05T12:57:59-0800" alias="Sharon Barr"></status>
+<status type="online" sender="sharon@bina.com" time="2014-12-05T13:02:38-0800" alias="Sharon Barr"></status>
+<status type="offline" sender="sharon@bina.com" time="2014-12-05T13:15:30-0800" alias="Sharon Barr"></status>
+<status type="online" sender="sharon@bina.com" time="2014-12-05T13:24:55-0800" alias="Sharon Barr"></status>
+<status type="away" sender="sharon@bina.com" time="2014-12-05T13:26:17-0800" alias="Sharon Barr"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-05T13:36:33-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-05T13:36:42-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-05T13:37:30-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-05T14:03:19-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-05T14:10:33-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-05T14:12:19-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-05T14:20:19-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-05T14:22:20-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-05T14:23:48-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-05T14:24:30-0800"><div>You have connected</div></status>
+<status type="offline" sender="sharon@bina.com" time="2014-12-05T14:35:06-0800" alias="Sharon Barr"></status>
+<status type="online" sender="sharon@bina.com" time="2014-12-05T14:47:51-0800" alias="Sharon Barr"></status>
+<status type="online" sender="sharon@bina.com" time="2014-12-05T15:18:52-0800" alias="Sharon Barr"></status>
+<status type="away" sender="sharon@bina.com" time="2014-12-05T16:02:47-0800" alias="Sharon Barr"></status>
+<status type="online" sender="sharon@bina.com" time="2014-12-05T16:05:49-0800" alias="Sharon Barr"></status>
+<status type="away" sender="sharon@bina.com" time="2014-12-05T16:20:52-0800" alias="Sharon Barr"></status>
+<status type="online" sender="sharon@bina.com" time="2014-12-05T16:27:30-0800" alias="Sharon Barr"></status>
+<status type="away" sender="sharon@bina.com" time="2014-12-05T16:55:51-0800" alias="Sharon Barr"></status>
+<status type="online" sender="sharon@bina.com" time="2014-12-05T17:08:24-0800" alias="Sharon Barr"></status>
+<status type="offline" sender="sharon@bina.com" time="2014-12-05T18:00:38-0800" alias="Sharon Barr"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-05T18:39:51-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-06T15:53:07-0800"><div>You have connected</div></status></chat>

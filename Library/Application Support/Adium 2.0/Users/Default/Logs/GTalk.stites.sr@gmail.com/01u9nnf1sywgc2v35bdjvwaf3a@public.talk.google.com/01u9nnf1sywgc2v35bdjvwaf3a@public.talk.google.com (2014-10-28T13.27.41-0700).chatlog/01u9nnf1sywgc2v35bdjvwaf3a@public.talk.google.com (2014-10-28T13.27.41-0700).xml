@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-10-28T13:27:59-0700"></event>
+<status type="connected" time="2014-10-28T13:27:58-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-10-28T19:43:25-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-28T20:42:27-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-10-28T21:55:51-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-28T21:58:32-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-10-29T02:45:07-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-29T08:23:58-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-10-29T08:25:48-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-29T08:40:05-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-10-29T10:42:14-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-29T11:25:14-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-10-29T15:08:28-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-29T15:28:36-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-10-29T18:33:50-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-30T10:53:11-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-10-30T11:12:47-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-30T11:19:12-0700"><div>You have connected</div></status>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-10-30T12:43:50-0700"></event></chat>

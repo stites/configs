@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-17T18:28:04-0800"></event>
+<message sender="sam@bina.com" time="2014-12-17T18:28:04-0800" alias="sam"><div>kodiak:/volumes/river/shared/users/sam/reportsV3</div></message>
+<message sender="sam@bina.com" time="2014-12-17T18:28:06-0800" alias="sam"><div>/net/kodiak/volumes/river/shared/users/sam/reportsV3</div></message>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-17T19:15:11-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-17T22:38:17-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-17T22:50:14-0800"></event></chat>

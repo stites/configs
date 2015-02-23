@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2015-02-15T16:31:38-0800"></event>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:31:38-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ping</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:31:44-0800" alias="sam"><div>hey hey hey</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:31:52-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i have to commit to messaging you now</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:31:52-0800" alias="sam"><div>how are you?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:31:54-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s stressful</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:32:06-0800" alias="sam"><div>haha!</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:32:08-0800" alias="sam"><div>no</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:32:13-0800" alias="sam"><div>you should just message me!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:32:24-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but what if i changed my mind</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:32:29-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i don&apos;t have options anymore</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:33:34-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">how</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:33:40-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">how&apos;s it going?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:34:43-0800" alias="sam"><div>haha</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:34:45-0800" alias="sam"><div>it&apos;s going good</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:34:57-0800" alias="sam"><div>i finished the hard part</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:35:09-0800" alias="sam"><div>now I have to do this pain-in-the-butt form stuff</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:35:36-0800" alias="sam"><div>it&apos;s so bloated but there&apos;s nothing i can do about it</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:36:01-0800" alias="sam"><div>did you get your 10min of drawing in?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:36:13-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">no not yet</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:36:17-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i mean</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:36:19-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i don&apos;t think i will</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:36:35-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i keep going on tangents and then realizing i&apos;m really far from what i need to be doing</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:36:37-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">like right now</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:36:54-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i was working on successfully deploying to heroku in circle</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:36:58-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but i don&apos;t need to do that</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:37:01-0800" alias="sam"><div>: [</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:37:03-0800" alias="sam"><div>noooo</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:37:12-0800" alias="sam"><div>what do you need to be doing then?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:38:06-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i need to get selenium working on circleci</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:38:18-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">apparently i should be able to get protractor tests running</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:38:32-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i don&apos;t care about the fact that browsers are headless</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:38:47-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">circleci supports selenium and therefore protractor should run, too</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:39:45-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">so i need to backtrack on a lot of the work i did</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:41:27-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">bleh, i can&apos;t even get circleci to recognize i have circle&apos;s config file called circle.yml right in my folder</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:41:32-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s a whole big mess</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:41:48-0800" alias="sam"><div>&gt;&lt;</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:42:02-0800" alias="sam"><div>meeerp</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:42:06-0800" alias="sam"><div>that seems pretty bad</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:42:31-0800" alias="sam"><div>can you c/p someone else&apos;s project or look at other Public CircleCI repos?</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:42:34-0800" alias="sam"><div>and go from there?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:43:31-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that&apos;s all i&apos;ve been looking at but no luck yet</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:43:33-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s ok</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:43:40-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;ll get as far as i can and then whatever</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:50:34-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ha!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:50:42-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">this is idiotic</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:50:53-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i spelled the filename cicrle.yml</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:51:10-0800" alias="sam"><div>noooooooooooooooooo!!!!</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:51:13-0800" alias="sam"><div>oh man</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:51:23-0800" alias="sam"><div>that held me up for a half of friday</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:51:37-0800" alias="sam"><div>i declared  a directive with a space in the name</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:51:43-0800" alias="sam"><div>and I was so stuck</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:51:58-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">noooooooooo</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:54:09-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">did you get your bike back?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:54:14-0800" alias="sam"><div>nope!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:54:16-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you have six minutes till they close</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:54:20-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you should go there!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:54:21-0800" alias="sam"><div>they have to replace the wheel</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:54:27-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">noooo</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:54:28-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wait</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:54:29-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">shit</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:54:30-0800" alias="sam"><div>yeah</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:54:42-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i should have gotten your car keys from you so that i could pick you up</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:54:47-0800" alias="sam"><div>that&apos;s okay!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-02-15T16:54:52-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i was thinking it, too!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:54:56-0800" alias="sam"><div>hey said it&apos;d be done by now</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-15T16:55:01-0800" alias="sam"><div>I&apos;ll head over there to check</div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2015-02-15T16:55:36-0800" alias="sam"><div>You have disconnected</div></status></chat>

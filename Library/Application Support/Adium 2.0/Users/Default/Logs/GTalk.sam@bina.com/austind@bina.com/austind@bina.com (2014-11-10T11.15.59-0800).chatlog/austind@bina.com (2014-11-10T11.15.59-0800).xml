@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-11-10T11:16:05-0800"></event>
+<status type="purple" time="2014-11-10T11:16:05-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">austind@bina.com is now known as Austin Doupnik.<br /></span></div></status>
+<message sender="sam@bina.com" time="2014-11-10T11:16:36-0800" alias="sam"><div>/net/kodiak/volumes/river/shared/users/sam/reportsV2/.bina/</div></message>
+<message sender="sam@bina.com" time="2014-11-10T11:16:50-0800" alias="sam"><div>is the directory I&apos;m working out of</div></message>
+<message sender="sam@bina.com" time="2014-11-10T11:16:52-0800" alias="sam"><div>and</div></message>
+<message sender="sam@bina.com" time="2014-11-10T11:17:25-0800" alias="sam"><div>less /net/kodiak/volumes/river/shared/users/sam/reportsV2/.bina/9ab89ba0-0000-1111-2222-333333333333/metrics/qcRadar.json</div></message>
+<message sender="sam@bina.com" time="2014-11-10T11:17:36-0800" alias="sam"><div>is an example of a qcRadar&apos;s json input</div></message>
+<message sender="sam@bina.com" time="2014-11-10T11:18:00-0800" alias="sam"><div>although right now it&apos;s just using the first item in sample</div></message>
+<message sender="austind@bina.com" time="2014-11-10T11:20:33-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">ok thanks</span></div></message>
+<status type="away" sender="austind@bina.com" time="2014-11-10T12:47:34-0800" alias="austin"></status>
+<status type="online" sender="austind@bina.com" time="2014-11-10T13:02:13-0800" alias="austin"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-11-10T13:02:33-0800"></event></chat>

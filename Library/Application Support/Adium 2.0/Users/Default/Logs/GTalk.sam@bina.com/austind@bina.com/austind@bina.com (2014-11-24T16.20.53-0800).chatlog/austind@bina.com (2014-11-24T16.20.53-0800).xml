@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-11-24T16:20:59-0800"></event>
+<message sender="sam@bina.com" time="2014-11-24T16:20:59-0800" alias="sam"><div>hey austin!</div></message>
+<message sender="sam@bina.com" time="2014-11-24T16:22:24-0800" alias="sam"><div>would you have a recommendation for dealing with libraries that chain functions, like d3, in a functional way?</div></message>
+<message sender="sam@bina.com" time="2014-11-24T16:22:33-0800" alias="sam"><div>cause it sucks right now</div></message>
+<status type="offline" sender="austind@bina.com" time="2014-11-24T16:32:01-0800" alias="austin"></status>
+<message sender="sam@bina.com" time="2014-11-24T16:32:03-0800" alias="sam"><div>god</div></message>
+<message sender="sam@bina.com" time="2014-11-24T16:32:29-0800" alias="sam"><div>it&apos;s even worse because it&apos;s a facade pattern so they&apos;re trying to do several things in each function</div></message>
+<status type="online" sender="austind@bina.com" time="2014-11-24T16:32:39-0800" alias="austin"></status>
+<message sender="austind@bina.com" time="2014-11-24T16:35:07-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">hmm</span></div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:35:14-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">its too bad there isn&apos;t just like</span></div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:35:29-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">chain.conditionalBegin(d).foo().bar().conditionalEnd</span></div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:35:33-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">or something</span></div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:35:43-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">i guess you can write it yourself and do</span></div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:35:59-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">conditional(chain, d).foo().bar()</span></div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:35:59-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">or something</span></div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:36:16-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">i have not looked at how they implement this stuff though</span></div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:36:20-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">i bet it is pretty nasty</span></div></message>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-24T16:45:11-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-24T16:45:29-0800"><div>You have connected</div></status>
+<message sender="austind@bina.com" time="2014-11-24T16:50:23-0800" alias="austin"><div><a href="http://jsfiddle.net/bartaz/8hYNh/" style="font-family: Helvetica; font-size: 12pt;">http://jsfiddle.net/bartaz/8hYNh/</a></div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:50:44-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">i have no idea how you would get d3 to do it</span></div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:50:56-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">i guess there is filter</span></div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:50:57-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">kind of</span></div></message>
+<message sender="sam@bina.com" time="2014-11-24T16:51:09-0800" alias="sam"><div>is this just in jquery?</div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:51:17-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">not even in jquery</span></div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:51:22-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">just something i found that someone else had added</span></div></message>
+<message sender="sam@bina.com" time="2014-11-24T16:51:34-0800" alias="sam"><div>nice</div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:51:43-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">its too bad everyone implements their own promises</span></div></message>
+<message sender="austind@bina.com" time="2014-11-24T16:51:50-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">there is no canonical promise library</span></div></message>
+<status type="offline" sender="austind@bina.com" time="2014-11-24T17:14:05-0800" alias="austin"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-24T19:15:44-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T00:13:01-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-25T00:20:12-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T00:22:25-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-25T00:22:32-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T00:22:40-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-25T01:10:08-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T10:58:44-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-25T11:03:43-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T11:06:22-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-25T11:07:51-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T11:13:44-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-25T11:17:15-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T11:23:53-0800"><div>You have connected</div></status>
+<status type="away" sender="austind@bina.com" time="2014-11-25T12:22:34-0800" alias="austin"></status>
+<status type="online" sender="austind@bina.com" time="2014-11-25T13:14:46-0800" alias="austin"></status>
+<status type="away" sender="austind@bina.com" time="2014-11-25T13:29:56-0800" alias="austin"></status>
+<status type="online" sender="austind@bina.com" time="2014-11-25T13:34:11-0800" alias="austin"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-11-25T13:39:41-0800"></event></chat>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-02-10T13:25:46-0800"></event>
+<message sender="sam@bina.com" time="2015-02-10T13:25:46-0800" alias="sam"><div>hey amir</div></message>
+<message sender="sam@bina.com" time="2015-02-10T13:26:06-0800" alias="sam"><div>should I update portal to use bootstrap 3?</div></message>
+<message sender="sam@bina.com" time="2015-02-10T13:26:35-0800" alias="sam"><div>and — if so — should I also use the aaim bootswatch theme?</div></message>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-10T16:35:06-0800" alias="sam"><div>You have disconnected</div></status></chat>

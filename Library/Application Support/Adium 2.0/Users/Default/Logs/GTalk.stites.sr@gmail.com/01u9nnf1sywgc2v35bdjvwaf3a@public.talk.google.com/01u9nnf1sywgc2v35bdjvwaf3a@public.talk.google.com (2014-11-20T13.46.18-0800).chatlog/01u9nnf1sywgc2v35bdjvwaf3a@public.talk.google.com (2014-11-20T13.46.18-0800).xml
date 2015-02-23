@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-11-20T13:46:20-0800"></event>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-11-20T13:46:19-0800" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Some day</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-20T13:48:56-0800" alias="sam"><div>where&apos;d you get to!</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-11-20T13:49:23-0800" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Well, I stopped working on data stuff</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-11-20T13:49:33-0800" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">But I&apos;m coming back to it</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-20T13:49:45-0800" alias="sam"><div>in the setup though!</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-11-20T13:49:51-0800" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Ahh</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-11-20T13:49:53-0800" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">yes</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-11-20T13:49:55-0800" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">lets see</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-11-20T13:53:33-0800" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">I got Virtualbox (no VM thought), and cygwin installed</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-11-20T13:53:47-0800" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">I haven&apos;t done anything with Docker yet</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-20T13:53:59-0800" alias="sam"><div>k</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-20T13:54:48-0800" alias="sam"><div>well!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-20T13:54:49-0800" alias="sam"><div>do it!</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-11-20T13:54:55-0800" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Would I need to install it on some liniux VM?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-20T13:54:57-0800" alias="sam"><div>and tell me when you finish!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-20T13:55:02-0800" alias="sam"><div>nope</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-11-20T13:55:05-0800" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">I need some intense hand-holding here</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-20T13:55:10-0800" alias="sam"><div>haha</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-20T13:55:46-0800" alias="sam"><div>not a whole lot of people are interested in things that i do</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-20T13:55:51-0800" alias="sam"><div>so i get excited</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-20T13:55:56-0800" alias="sam"><div>tell me if it&apos;s too much!</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-11-20T13:56:02-0800" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Ok</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-11-20T13:56:45-0800" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">I&apos;m going through their Windows install tut</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-11-20T13:56:54-0800" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">That&apos;s as far as I&apos;ll get today</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-20T13:56:59-0800" alias="sam"><div>sure!</div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-20T16:20:26-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-20T16:20:33-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-20T18:51:53-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-20T20:13:20-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-20T20:13:40-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-20T20:17:39-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-20T20:56:21-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-20T20:57:35-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-20T20:57:57-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-20T22:21:02-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-20T22:58:00-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-20T23:07:02-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-20T23:11:30-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-21T09:41:31-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-21T09:51:19-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-21T11:53:25-0800"><div>You have connected</div></status>
+<message sender="stites.sr@gmail.com" time="2014-11-21T12:14:04-0800" alias="sam"><div>ping!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-21T12:14:06-0800" alias="sam"><div>: D</div></message>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-11-21T12:14:07-0800"></event></chat>

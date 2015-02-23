@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="1677870028" service="Facebook" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="1677870028" time="2015-01-05T15:31:40-0800"></event>
+<message sender="-508087940@chat.facebook.com" time="2015-01-05T15:31:40-0800" alias="Naomi Tlg"><div><span style="font-family: Helvetica; font-size: 12pt;">HEY!</span></div></message>
+<message sender="-508087940@chat.facebook.com" time="2015-01-05T15:31:47-0800" alias="Naomi Tlg"><div><span style="font-family: Helvetica; font-size: 12pt;">are you currently living in SFO?</span></div></message>
+<message sender="-508087940@chat.facebook.com" time="2015-01-05T15:31:54-0800" alias="Naomi Tlg"><div><span style="font-family: Helvetica; font-size: 12pt;">(long time no see/chat btw)</span></div></message>
+<message sender="1677870028" time="2015-01-05T15:36:45-0800" alias="Sam Stites"><div>hey!</div></message>
+<message sender="1677870028" time="2015-01-05T15:37:01-0800" alias="Sam Stites"><div>good to hear from you again!</div></message>
+<message sender="1677870028" time="2015-01-05T15:37:11-0800" alias="Sam Stites"><div>yeah — i&apos;m in sf</div></message>
+<message sender="1677870028" time="2015-01-05T15:37:16-0800" alias="Sam Stites"><div>are you as well?</div></message>
+<message sender="-508087940@chat.facebook.com" time="2015-01-05T15:40:54-0800" alias="Naomi Tlg"><div><span style="font-family: Helvetica; font-size: 12pt;">yep</span></div></message>
+<message sender="-508087940@chat.facebook.com" time="2015-01-05T15:41:01-0800" alias="Naomi Tlg"><div><span style="font-family: Helvetica; font-size: 12pt;">i just relocated here a month ago</span></div></message>
+<message sender="-508087940@chat.facebook.com" time="2015-01-05T15:41:01-0800" alias="Naomi Tlg"><div><span style="font-family: Helvetica; font-size: 12pt;">almost 2</span></div></message>
+<message sender="1677870028" time="2015-01-05T15:49:39-0800" alias="Sam Stites"><div>nice! did you move for work, with work, or to find work?</div></message>
+<message sender="-508087940@chat.facebook.com" time="2015-01-05T15:49:58-0800" alias="Naomi Tlg"><div><span style="font-family: Helvetica; font-size: 12pt;">for/with work</span></div></message>
+<message sender="1677870028" time="2015-01-05T15:51:52-0800" alias="Sam Stites"><div>nice</div></message>
+<message sender="1677870028" time="2015-01-05T15:52:40-0800" alias="Sam Stites"><div>so how do you like SF?</div></message>
+<status type="disconnected" sender="1677870028" time="2015-01-05T15:56:38-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2015-01-05T15:56:46-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="1677870028" time="2015-01-05T15:57:47-0800"></event></chat>

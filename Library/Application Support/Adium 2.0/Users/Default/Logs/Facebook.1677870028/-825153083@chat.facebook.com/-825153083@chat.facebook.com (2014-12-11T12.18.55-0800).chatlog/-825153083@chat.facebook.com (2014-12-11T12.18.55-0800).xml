@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="1677870028" service="Facebook" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="1677870028" time="2014-12-11T12:18:55-0800"></event>
+<message sender="-825153083@chat.facebook.com" time="2014-12-11T12:18:55-0800" alias="Maxwell Walters"><div><span style="font-family: Helvetica; font-size: 12pt;">&lt;3</span></div></message>
+<message sender="-825153083@chat.facebook.com" time="2014-12-11T12:18:58-0800" alias="Maxwell Walters"><div><span style="font-family: Helvetica; font-size: 12pt;">it was full time</span></div></message>
+<message sender="-825153083@chat.facebook.com" time="2014-12-11T12:19:11-0800" alias="Maxwell Walters"><div><span style="font-family: Helvetica; font-size: 12pt;">lol stopped working at the begining of this month</span></div></message>
+<message sender="-825153083@chat.facebook.com" time="2014-12-11T12:19:16-0800" alias="Maxwell Walters"><div><span style="font-family: Helvetica; font-size: 12pt;">back on the job market</span></div></message>
+<status type="offline" sender="-825153083@chat.facebook.com" time="2014-12-11T12:23:54-0800" alias="Maxwell Walters"></status>
+<event type="windowClosed" sender="1677870028" time="2014-12-11T12:38:59-0800"></event></chat>

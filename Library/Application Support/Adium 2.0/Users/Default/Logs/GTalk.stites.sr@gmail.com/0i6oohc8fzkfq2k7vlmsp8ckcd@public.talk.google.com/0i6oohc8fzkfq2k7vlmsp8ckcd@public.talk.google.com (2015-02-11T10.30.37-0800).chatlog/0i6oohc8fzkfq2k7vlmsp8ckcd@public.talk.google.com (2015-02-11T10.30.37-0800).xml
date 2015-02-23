@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2015-02-11T10:31:39-0800"></event>
+<message sender="0i6oohc8fzkfq2k7vlmsp8ckcd@public.talk.google.com" time="2015-02-11T10:31:39-0800" alias="David Vorriccelli"><div><span style="font-family: Helvetica; font-size: 12pt;">hey, can we sync up on this invisible website thing tomorrow or friday? I still haven&apos;t gotten the .net connection figured out</span></div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2015-02-11T10:32:45-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-11T10:33:43-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2015-02-11T10:34:15-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-11T11:06:13-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2015-02-11T11:06:14-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-11T11:07:23-0800"><div>You have connected</div></status>
+<message sender="stites.sr@gmail.com" time="2015-02-11T11:08:50-0800" alias="sam"><div><a href="http://protonmail.ch">protonmail.ch</a></div></message>
+<status type="online" sender="0i6oohc8fzkfq2k7vlmsp8ckcd@public.talk.google.com" time="2015-02-11T11:08:51-0800" alias="David Vorriccelli"></status>
+<message sender="stites.sr@gmail.com" time="2015-02-11T11:09:02-0800" alias="sam"><div>started by a couple of cern scientists</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-11T11:09:20-0800" alias="sam"><div>the UI is not the greatest</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-11T11:09:44-0800" alias="sam"><div>but it&apos;s a helluva lot better than outlook — which seems to be the standard for these kinds of things</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-11T11:10:15-0800" alias="sam"><div><a href="mailto:stites@protonmail.ch">stites@protonmail.ch</a></div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-11T11:10:21-0800" alias="sam"><div>send me something!</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-11T11:10:32-0800" alias="sam"><div>I&apos;m looking to try to move from gmail</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-11T11:10:45-0800" alias="sam"><div>or at least all of my <a href="http://stites.io">stites.io</a> stuff</div></message>
+<message sender="0i6oohc8fzkfq2k7vlmsp8ckcd@public.talk.google.com" time="2015-02-11T11:12:49-0800" alias="David Vorriccelli"><div><span style="font-family: Helvetica; font-size: 12pt;">kk</span></div></message>
+<message sender="0i6oohc8fzkfq2k7vlmsp8ckcd@public.talk.google.com" time="2015-02-11T11:12:53-0800" alias="David Vorriccelli"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m with you on that</span></div></message>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2015-02-11T12:13:15-0800"></event></chat>

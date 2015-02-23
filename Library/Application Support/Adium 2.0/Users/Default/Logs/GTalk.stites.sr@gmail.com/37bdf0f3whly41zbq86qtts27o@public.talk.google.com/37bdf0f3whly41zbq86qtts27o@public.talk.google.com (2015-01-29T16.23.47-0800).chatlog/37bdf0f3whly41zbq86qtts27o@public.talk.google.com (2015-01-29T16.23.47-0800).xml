@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2015-01-29T16:23:50-0800"></event>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:23:50-0800" alias="sam"><div>yo will!</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:24:47-0800" alias="sam"><div>I am allergic to watching sports — I can&apos;t go to your party.</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:25:03-0800" alias="sam"><div>sorry about that</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:25:08-0800" alias="sam"><div>i break out in rash</div></message>
+<message sender="37bdf0f3whly41zbq86qtts27o@public.talk.google.com" time="2015-01-29T16:25:29-0800" alias="Will Gester"><div><span style="font-family: Helvetica; font-size: 12pt;">haha, no worries</span></div></message>
+<message sender="37bdf0f3whly41zbq86qtts27o@public.talk.google.com" time="2015-01-29T16:25:38-0800" alias="Will Gester"><div><span style="font-family: Helvetica; font-size: 12pt;">it was more going to be about the fried food and beer</span></div></message>
+<message sender="37bdf0f3whly41zbq86qtts27o@public.talk.google.com" time="2015-01-29T16:25:54-0800" alias="Will Gester"><div><span style="font-family: Helvetica; font-size: 12pt;">but I understand preexisting allergies to ball things</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:26:16-0800" alias="sam"><div>thanks for understanding</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:26:32-0800" alias="sam"><div>i just don&apos;t like it when I talk to people and they are half paying attention to things on TV</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:26:46-0800" alias="sam"><div>which happens a lot on Superbowl Sunday</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:26:57-0800" alias="sam"><div>how is famous going for you?</div></message>
+<message sender="37bdf0f3whly41zbq86qtts27o@public.talk.google.com" time="2015-01-29T16:28:00-0800" alias="Will Gester"><div><span style="font-family: Helvetica; font-size: 12pt;">is going well, I&apos;ve gotten to learn some rails, node, and shell scripting in the past couple weeks</span></div></message>
+<message sender="37bdf0f3whly41zbq86qtts27o@public.talk.google.com" time="2015-01-29T16:28:04-0800" alias="Will Gester"><div><span style="font-family: Helvetica; font-size: 12pt;">which has been fun</span></div></message>
+<message sender="37bdf0f3whly41zbq86qtts27o@public.talk.google.com" time="2015-01-29T16:28:08-0800" alias="Will Gester"><div><span style="font-family: Helvetica; font-size: 12pt;">how bout yourself?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:29:01-0800" alias="sam"><div>nice!</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:29:11-0800" alias="sam"><div>bina&apos;s doing great</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:29:53-0800" alias="sam"><div>I&apos;m finishing up sequencing reports for the last type of job we run</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:29:54-0800" alias="sam"><div>RNA</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:30:01-0800" alias="sam"><div>and doing the hiring thing</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:30:23-0800" alias="sam"><div>which is a weird position to be in</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:31:15-0800" alias="sam"><div>what are you building with your newfound knowledge?</div></message>
+<message sender="37bdf0f3whly41zbq86qtts27o@public.talk.google.com" time="2015-01-29T16:35:44-0800" alias="Will Gester"><div><span style="font-family: Helvetica; font-size: 12pt;">auth server, github migration script, codepen ui</span></div></message>
+<message sender="37bdf0f3whly41zbq86qtts27o@public.talk.google.com" time="2015-01-29T16:35:53-0800" alias="Will Gester"><div><span style="font-family: Helvetica; font-size: 12pt;">random stuff</span></div></message>
+<message sender="37bdf0f3whly41zbq86qtts27o@public.talk.google.com" time="2015-01-29T16:36:36-0800" alias="Will Gester"><div><span style="font-family: Helvetica; font-size: 12pt;">how&apos;s life in general?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:55:03-0800" alias="sam"><div>ballin!</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:55:37-0800" alias="sam"><div>I&apos;m thinking of moving our frontend to TypeScript</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:56:12-0800" alias="sam"><div>and i&apos;ve been pushing a lot of hardcore functional stuff</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:56:29-0800" alias="sam"><div>so the codes don&apos;t need too much testing</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-29T16:56:37-0800" alias="sam"><div>which is pretty great</div></message>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2015-01-29T17:03:40-0800"></event></chat>

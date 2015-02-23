@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2015-01-04T14:59:10-0800"></event>
+<message sender="rstites2921@gmail.com" time="2015-01-04T14:59:09-0800" alias="Dad"><div><span style="font-family: Helvetica; font-size: 12pt;">Sam, if you&apos;re there, I have a question</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-04T14:59:22-0800" alias="sam"><div>yeah!</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-04T14:59:24-0800" alias="sam"><div>what&apos;s up?</div></message>
+<message sender="rstites2921@gmail.com" time="2015-01-04T14:59:50-0800" alias="Dad"><div><span style="font-family: Helvetica; font-size: 12pt;">What do I do if I&apos;ve forgotten the network login for our network?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-04T15:00:04-0800" alias="sam"><div>the home network?</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-04T15:00:13-0800" alias="sam"><div>the password for that?</div></message>
+<message sender="rstites2921@gmail.com" time="2015-01-04T15:00:16-0800" alias="Dad"><div><span style="font-family: Helvetica; font-size: 12pt;">yes</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-04T15:00:19-0800" alias="sam"><div>it&apos;s</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-04T15:00:34-0800" alias="sam"><div>the same as the wireless password</div></message>
+<message sender="rstites2921@gmail.com" time="2015-01-04T15:00:37-0800" alias="Dad"><div><span style="font-family: Helvetica; font-size: 12pt;">??</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-04T15:00:39-0800" alias="sam"><div>i changed it</div></message>
+<message sender="rstites2921@gmail.com" time="2015-01-04T15:00:50-0800" alias="Dad"><div><span style="font-family: Helvetica; font-size: 12pt;">and what is the wireless pw?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-04T15:00:57-0800" alias="sam"><div>so it should be barker03road@hk</div></message>
+<message sender="rstites2921@gmail.com" time="2015-01-04T15:01:19-0800" alias="Dad"><div><span style="font-family: Helvetica; font-size: 12pt;">ah....Ithought so but for some reason I hadn&apos;t written it down.</span></div></message>
+<message sender="rstites2921@gmail.com" time="2015-01-04T15:01:32-0800" alias="Dad"><div><span style="font-family: Helvetica; font-size: 12pt;">we have a guest in the basement I need to give it to</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-04T15:01:43-0800" alias="sam"><div>no worries!</div></message>
+<message sender="rstites2921@gmail.com" time="2015-01-04T15:01:57-0800" alias="Dad"><div><span style="font-family: Helvetica; font-size: 12pt;">ok - thanks - gotta get back to the guest</span></div></message>
+<message sender="rstites2921@gmail.com" time="2015-01-04T15:02:04-0800" alias="Dad"><div><span style="font-family: Helvetica; font-size: 12pt;">luv ya</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-04T15:02:05-0800" alias="sam"><div>mmk!</div></message>
+<status type="away" sender="rstites2921@gmail.com" time="2015-01-04T15:17:16-0800" alias="Dad"></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2015-01-04T15:21:23-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-01-05T10:54:57-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2015-01-05T10:55:09-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-01-05T11:01:59-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2015-01-05T11:26:40-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-01-05T11:34:14-0800"><div>You have connected</div></status>
+<status type="online" sender="rstites2921@gmail.com" time="2015-01-05T12:02:57-0800" alias="Dad"></status>
+<status type="away" sender="rstites2921@gmail.com" time="2015-01-05T12:33:24-0800" alias="Dad"></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2015-01-05T12:59:38-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-01-05T13:02:14-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2015-01-05T13:02:33-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-01-05T13:03:43-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2015-01-05T14:01:14-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-01-05T14:01:39-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2015-01-05T14:12:34-0800"></event></chat>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-01-16T11:46:22-0800"></event>
+<message sender="sam@bina.com" time="2015-01-16T11:46:22-0800" alias="sam"><div><a href="https://github.com/johnpapa/angularjs-styleguide">https://github.com/johnpapa/angularjs-styleguide</a></div></message>
+<message sender="sam@bina.com" time="2015-01-16T11:46:25-0800" alias="sam"><div>btw!</div></message>
+<message sender="sam@bina.com" time="2015-01-16T11:46:40-0800" alias="sam"><div>i found this the other day in someone&apos;s blog posts</div></message>
+<message sender="sam@bina.com" time="2015-01-16T11:46:50-0800" alias="sam"><div>it&apos;s has some good guidelines</div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-16T11:46:56-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">great</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-16T11:47:08-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">let’s start putting a wiki page on style and practices on Attlasina </span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-16T11:47:15-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">that had too many typos</span></div></message>
+<message sender="sam@bina.com" time="2015-01-16T11:47:20-0800" alias="sam"><div>haha</div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-16T11:47:21-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">for new team members</span></div></message>
+<message sender="sam@bina.com" time="2015-01-16T11:47:23-0800" alias="sam"><div>sounds good!</div></message>
+<message sender="sam@bina.com" time="2015-01-16T11:47:40-0800" alias="sam"><div>I&apos;ll make a ticket for it</div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-16T11:47:47-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">gereyt</span></div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2015-01-16T12:12:04-0800"></event></chat>

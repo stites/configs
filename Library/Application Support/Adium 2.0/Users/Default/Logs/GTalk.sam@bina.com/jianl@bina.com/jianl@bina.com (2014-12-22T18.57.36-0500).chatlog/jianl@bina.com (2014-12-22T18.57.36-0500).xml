@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-22T18:57:36-0500"></event>
+<message sender="jianl@bina.com" time="2014-12-22T18:57:36-0500" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">Hi Sam, Hugo is still not back yet from a meeting at Stanford</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-22T18:57:49-0500" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">do you want to reschedule to another time?</span></div></message>
+<message sender="sam@bina.com" time="2014-12-22T18:59:38-0500" alias="sam"><div>sure — does tomorrow work or should i shoot for Friday?</div></message>
+<message sender="jianl@bina.com" time="2014-12-22T18:59:59-0500" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">tomorrow should work</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-22T19:00:17-0500" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">and I&apos;m not in office Friday</span></div></message>
+<message sender="sam@bina.com" time="2014-12-22T19:02:05-0500" alias="sam"><div>okay cool!</div></message>
+<message sender="sam@bina.com" time="2014-12-22T19:02:12-0500" alias="sam"><div>i&apos;ll set something up</div></message>
+<message sender="jianl@bina.com" time="2014-12-22T19:02:16-0500" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">Thanks!</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-22T19:02:36-0500" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">actually all I have is about the thing I asked during sprint demo</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-22T19:02:45-0500" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">the highlight around certain cells</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-22T19:02:52-0500" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">let&apos;s see whether Hugo have other inputs</span></div></message>
+<message sender="sam@bina.com" time="2014-12-22T19:41:02-0500" alias="sam"><div>mmk!</div></message>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-22T20:27:00-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-22T20:27:05-0500"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-22T20:27:46-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-22T21:40:45-0500"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-22T22:07:26-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-22T22:09:51-0500"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-22T22:19:01-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-22T22:21:12-0500"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-23T00:30:15-0500"></event></chat>

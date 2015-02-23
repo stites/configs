@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-11-10T11:22:51-0800"></event>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:22:51-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">is using homebrew a good idea?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:22:58-0800" alias="sam"><div>?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:23:02-0800" alias="sam"><div>what for?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:23:19-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">installing mongodb</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:23:29-0800" alias="sam"><div>yes</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:23:31-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">we have an old laptop we need to bring up to speed here</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:23:39-0800" alias="sam"><div>you should homebrew all the things</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:23:41-0800" alias="sam"><div>in fact</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:23:44-0800" alias="sam"><div>you can</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:23:57-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i remember hearing bad things about homebrew</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:24:09-0800" alias="sam"><div><a href="https://github.com/caskroom/homebrew-cask">https://github.com/caskroom/homebrew-cask</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:24:17-0800" alias="sam"><div>no</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:24:22-0800" alias="sam"><div>homebrew is great</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:24:36-0800" alias="sam"><div>it&apos;s also the only option for package management on a mac</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:25:27-0800" alias="sam"><div>that  link i sent you — if you want you can take everything on your current computer</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:25:27-0800" alias="sam"><div>then</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:25:34-0800" alias="sam"><div>&quot;cask&quot; it </div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:25:45-0800" alias="sam"><div>and send it to your other computer</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:25:54-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">whoa</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:25:56-0800" alias="sam"><div>and it&apos;ll install everything there</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:26:04-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">everything including what</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:26:09-0800" alias="sam"><div>i, personally, haven&apos;t used it though</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:26:10-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">everything that&apos;s been homebrew installed?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:26:15-0800" alias="sam"><div>you</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:26:22-0800" alias="sam"><div>yeah*</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:26:30-0800" alias="sam"><div>but you can almost install everything with homebrew</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:26:40-0800" alias="sam"><div>including, apparently, google chrome</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:26:52-0800" alias="sam"><div>(which is on that repo i sent you)</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:26:56-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">well, if simply homebrew installing mongodb doesn&apos;t work i&apos;ll try cask</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:27:07-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">thanks!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:27:35-0800" alias="sam"><div>that might not work since cask just sends a list of files to brew install</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:27:49-0800" alias="sam"><div>but brew installing should work</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:28:28-0800" alias="sam"><div>the two things you need to do to make sure it does work is (1) follow any instructions that are printed at the end of an install</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:28:29-0800" alias="sam"><div>and</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:29:16-0800" alias="sam"><div>(2) make sure you have permissions to access /usr/local withoug sudo access</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:29:27-0800" alias="sam"><div>not sure why i numbered those</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:29:41-0800" alias="sam"><div>that first one i miss a lot though, and things get messed up</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:29:53-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">: )</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:30:09-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m pretty sure it&apos;s stuck right now</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:30:10-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">gah</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:30:15-0800" alias="sam"><div>hmmm?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:30:27-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">homebrew installed to 100% and hung</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:30:36-0800" alias="sam"><div>just wait!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:30:37-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">think i might have to unlink and try again</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:30:39-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yeha?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:30:41-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:30:42-0800" alias="sam"><div>it&apos;s probably compiling</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:30:50-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok i&apos;ll wait longer</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:30:53-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s been a while</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:30:56-0800" alias="sam"><div>wait you 10 minutes</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:31:07-0800" alias="sam"><div>WAIT LIKE 10 MINUTES</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:31:16-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:31:17-0800" alias="sam"><div>WHY CAN&apos;T I TYPE YOU</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:31:20-0800" alias="sam"><div>GOOD</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:31:22-0800" alias="sam"><div>&lt;_&lt;</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:31:57-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">you can!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:32:00-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i believe in you!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:33:03-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i really do think it&apos;s hung</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:33:11-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it hasn&apos;t said anything</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:33:20-0800" alias="sam"><div>mongod or homebrew?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:34:38-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">homebrew installation</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:34:44-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">think it&apos;s been at least 10 minutes</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:34:49-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m going to start over</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:43:51-0800" alias="sam"><div>you&apos;re using the ruby command line?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:44:09-0800" alias="sam"><div>perhaps it&apos;s a ruby thing?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:49:55-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it hangs at this: </span><br /><span style="font-family: Helvetica; font-size: 12pt;">==&gt; /usr/local/opt/scons/bin/scons install --prefix=/usr/local/Cellar/mongodb/2.6.5</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:50:17-0800" alias="sam"><div>wait are you installing mongod now?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:50:32-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i tried to uninstall mongodb entirely, and now if i run brew install mongodb it tells me &quot;already downloaded&quot; and tries to install that Cellar/mongodb line</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:50:40-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah trying to</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:50:59-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">do you happen to know the steps for installing without brew?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:52:32-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">gotta go talk to the boss now :/</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:55:05-0800" alias="sam"><div>mmm</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:55:20-0800" alias="sam"><div><a href="http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/">http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:55:30-0800" alias="sam"><div>the manual install is at the bottom</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:58:24-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">hey boss said yes!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:58:25-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">:D</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:58:28-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">he said totally</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:58:30-0800" alias="sam"><div>nice!!!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:58:31-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">to everything</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:58:36-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m going to work remotely for a month and a half</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T11:58:37-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">woo</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T11:59:21-0800" alias="sam"><div>woooo!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:05:33-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">!!!!</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:05:39-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">so excited</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:18:22-0800" alias="sam"><div>: D</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:20:52-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok — successfully downloaded mongo (you were right about letting it wait) but it&apos;s still throwing the same error (failed to connect to localhost:27017) any chance you have other ides?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:20:53-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ideas</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:21:50-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">uhhhhhhhhhh maybe nvm, i think it&apos;s also missing nodejs</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:21:51-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">:/</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:25:57-0800" alias="sam"><div>mmm</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:26:06-0800" alias="sam"><div>just brew install node</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:26:19-0800" alias="sam"><div>if you want to be fancy — you can use nvm</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:26:27-0800" alias="sam"><div>but I don&apos;t think that&apos;s too important</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:30:58-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">gosh you&apos;re the bestest</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:31:02-0800" alias="sam"><div>and</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:31:03-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m serious</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:31:10-0800" alias="sam"><div>for mango, you know you need to run</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:31:13-0800" alias="sam"><div>mongod</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:31:17-0800" alias="sam"><div>in a seperate terminal</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:31:22-0800" alias="sam"><div>and then run mongo</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:31:44-0800" alias="sam"><div>perhaps that was what was causing the localhost issue</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:32:06-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i should be able to find that command somewhere in our files, then, no?</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:32:12-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i only ever have to run npm start</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:32:38-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yep</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:32:39-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">unless mongoose.connection.db</span><br /><span style="font-family: Helvetica; font-size: 12pt;">  mongoose.connect(MONGO_URL)</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:32:53-0800" alias="sam"><div>echo $MONGO_URL</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:39:51-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">now that i brew installed nodejs, npm start command doesn&apos;t exist — i think it&apos;s confusing path</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:39:53-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">path</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:39:53-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">s</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:40:09-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i have both brew version of node and /usr/local/bin version of node</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:40:15-0800" alias="sam"><div>type in which node</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:41:04-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">crap i think my removing node worked, cause brew suggested i remove it</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:41:09-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">no node now</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:41:49-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">said before : target usr/local/bin/node already exists so i rm-ed it but it threw an error</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:42:05-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but.... i think i removed it successfully? what a mess</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:43:28-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">fuck it — brew installing git, then going from thehere</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-11-10T12:43:29-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">there</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:52:43-0800" alias="sam"><div>mmm</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:52:51-0800" alias="sam"><div>so wait</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:52:55-0800" alias="sam"><div>node is messed up?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:53:13-0800" alias="sam"><div>if node is messed up then you should use nvm</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:53:39-0800" alias="sam"><div>don&apos;t install node from source</div></message>
+<message sender="stites.sr@gmail.com" time="2014-11-10T12:53:51-0800" alias="sam"><div>cause that can become a mess in the long run</div></message>
+<status type="offline" sender="anastasia.aizman@gmail.com" time="2014-11-10T12:56:59-0800" alias="anastasia"></status>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-11-10T13:02:33-0800"></event></chat>

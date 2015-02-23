@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-12-17T13:14:40-0800"></event>
+<message sender="shirastites@gmail.com" time="2014-12-17T13:14:40-0800" alias="shira"><div><span style="font-family: Helvetica; font-size: 12pt;">gahh, why is it only wednesday</span></div></message>
+<status type="offline" sender="shirastites@gmail.com" time="2014-12-17T13:21:52-0800" alias="shira"></status>
+<status type="online" sender="shirastites@gmail.com" time="2014-12-17T13:23:28-0800" alias="shira"></status>
+<status type="offline" sender="shirastites@gmail.com" time="2014-12-17T13:24:58-0800" alias="shira"></status>
+<message sender="stites.sr@gmail.com" time="2014-12-17T14:00:55-0800" alias="sam"><div>haha!</div></message>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-12-17T18:05:10-0800"></event></chat>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-01-07T13:33:03-0800"></event>
+<message sender="sam@bina.com" time="2015-01-07T13:33:03-0800" alias="sam"><div>just got your message!</div></message>
+<message sender="sam@bina.com" time="2015-01-07T13:33:33-0800" alias="sam"><div>I dont see anything unexpected with the job - even with the broken QC reports</div></message>
+<message sender="sam@bina.com" time="2015-01-07T13:33:56-0800" alias="sam"><div>can you come over and show me what you thought was strange?</div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2015-01-07T13:41:53-0800"></event></chat>

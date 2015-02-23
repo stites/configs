@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-02-13T12:12:15-0800"></event>
+<message sender="sam@bina.com" time="2015-02-13T12:12:15-0800" alias="sam"><div>hey armi</div></message>
+<message sender="sam@bina.com" time="2015-02-13T12:12:18-0800" alias="sam"><div>amir*</div></message>
+<message sender="sam@bina.com" time="2015-02-13T12:12:22-0800" alias="sam"><div>is this meeting happening?</div></message>
+<message sender="sam@bina.com" time="2015-02-13T12:12:28-0800" alias="sam"><div>the webex has no audio</div></message>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-13T12:12:40-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-13T12:12:45-0800"><div>You have connected</div></status>
+<message sender="sam@bina.com" time="2015-02-13T12:12:59-0800" alias="sam"><div>okay nevermind! its working now</div></message>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-13T12:14:26-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-13T12:15:31-0800"><div>You have connected</div></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-13T12:25:12-0800" alias="amir"></status>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-13T12:57:20-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">Sorry didnt see</span></div></message>
+<message sender="sam@bina.com" time="2015-02-13T12:57:28-0800" alias="sam"><div>no worries!</div></message>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-13T13:25:04-0800" alias="amir"></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-13T13:25:04-0800" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-13T13:27:03-0800" alias="amir"></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-13T13:28:18-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-13T13:40:29-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-13T14:06:30-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-13T14:06:36-0800"><div>You have connected</div></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-13T14:55:35-0800" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-13T14:57:44-0800" alias="amir"></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-13T15:42:11-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-13T15:43:02-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-13T15:47:28-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-13T15:47:35-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-13T15:53:34-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-13T15:53:40-0800"><div>You have connected</div></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-13T16:10:15-0800" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-13T16:45:24-0800" alias="amir"></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-13T18:01:58-0800" alias="amir"></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-13T19:11:32-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-13T20:23:01-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-13T20:47:03-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-15T11:13:58-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-02-15T13:03:01-0800"></event></chat>

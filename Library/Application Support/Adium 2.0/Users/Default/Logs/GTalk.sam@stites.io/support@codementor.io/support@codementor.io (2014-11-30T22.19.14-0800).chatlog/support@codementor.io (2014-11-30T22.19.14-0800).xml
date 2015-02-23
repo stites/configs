@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@stites.io" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@stites.io" time="2014-11-30T22:19:14-0800"></event>
+<message sender="support@codementor.io" time="2014-11-30T22:19:14-0800" alias="Codementor Team"><div><span style="font-family: Helvetica; font-size: 12pt;">Wesley Winter sent message: *hi sam*.  Reply:  <a href="https://www.codementor.io/dashboard">https://www.codementor.io/dashboard</a></span></div></message>
+<message sender="support@codementor.io" time="2014-11-30T22:19:21-0800" alias="Codementor Team"><div><span style="font-family: Helvetica; font-size: 12pt;">Wesley Winter sent message: *im doing a python project for my university*.  Reply:  <a href="https://www.codementor.io/dashboard">https://www.codementor.io/dashboard</a></span></div></message>
+<message sender="support@codementor.io" time="2014-11-30T22:19:25-0800" alias="Codementor Team"><div><span style="font-family: Helvetica; font-size: 12pt;">Wesley Winter sent message: *my deadlines tonight*.  Reply:  <a href="https://www.codementor.io/dashboard">https://www.codementor.io/dashboard</a></span></div></message>
+<message sender="support@codementor.io" time="2014-11-30T22:19:35-0800" alias="Codementor Team"><div><span style="font-family: Helvetica; font-size: 12pt;">Wesley Winter sent message: *and i need help can u help me out ?*.  Reply:  <a href="https://www.codementor.io/dashboard">https://www.codementor.io/dashboard</a></span></div></message>
+<event type="windowClosed" sender="sam@stites.io" time="2014-11-30T23:18:55-0800"></event></chat>

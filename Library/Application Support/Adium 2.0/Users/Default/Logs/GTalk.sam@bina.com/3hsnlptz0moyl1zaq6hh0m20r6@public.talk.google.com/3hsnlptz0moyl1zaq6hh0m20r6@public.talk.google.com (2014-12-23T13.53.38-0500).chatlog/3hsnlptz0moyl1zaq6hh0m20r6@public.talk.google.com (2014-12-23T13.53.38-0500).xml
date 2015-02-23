@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-23T13:53:38-0500"></event>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T13:53:38-0500" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">i didn&apos;t see the forms</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T13:53:38-0500" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">wait</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T13:54:10-0500" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">on this page?</span></div></message>
+<message sender="sam@bina.com" time="2014-12-23T13:54:14-0500" alias="sam"><div>sorry</div></message>
+<message sender="sam@bina.com" time="2014-12-23T13:54:23-0500" alias="sam"><div>directives &gt; text feilds</div></message>
+<message sender="sam@bina.com" time="2014-12-23T13:54:57-0500" alias="sam"><div>i was going to see if we can nab a few of these while maintaining the current UI</div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T13:56:57-0500" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">oooo</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T13:57:05-0500" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">okay i had not seen that page</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T13:57:09-0500" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">gotta go for an interview</span></div></message>
+<message sender="sam@bina.com" time="2014-12-23T13:58:02-0500" alias="sam"><div>do it!</div></message>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T14:28:16-0500" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T14:32:37-0500" alias="amir"></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T15:04:04-0500" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T15:10:56-0500" alias="amir"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-23T15:24:08-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-23T15:24:10-0500"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-23T15:24:12-0500" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-23T15:24:46-0500"><div>You have connected</div></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T15:37:28-0500" alias="amir"></status>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T15:57:14-0500" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T16:12:17-0500" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-23T16:13:12-0500" alias="amir"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-23T17:02:55-0500"></event></chat>

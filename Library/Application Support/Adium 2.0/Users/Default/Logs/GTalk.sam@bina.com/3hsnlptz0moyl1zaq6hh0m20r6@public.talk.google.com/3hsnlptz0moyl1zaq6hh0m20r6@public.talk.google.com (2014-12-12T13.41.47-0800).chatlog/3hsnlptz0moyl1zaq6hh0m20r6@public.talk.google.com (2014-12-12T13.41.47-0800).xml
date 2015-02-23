@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-12T13:41:49-0800"></event>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-12-12T13:41:49-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">wtf!</span></div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-12T13:46:22-0800"></event></chat>

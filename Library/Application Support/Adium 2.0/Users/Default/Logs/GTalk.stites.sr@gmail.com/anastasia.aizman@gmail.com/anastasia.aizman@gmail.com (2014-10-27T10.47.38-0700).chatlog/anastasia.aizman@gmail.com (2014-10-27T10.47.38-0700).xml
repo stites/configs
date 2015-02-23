@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-10-27T10:47:59-0700"></event>
+<status type="connected" time="2014-10-27T10:47:59-0700"><div>You have connected</div></status>
+<status type="purple" time="2014-10-27T10:47:59-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">anastasia.aizman@gmail.com is now known as Anastasia A.<br /></span></div></status>
+<status type="purple" time="2014-10-27T10:47:59-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">anastasia.aizman@gmail.com is now known as Anastasia A.<br /></span></div></status>
+<status type="online" sender="anastasia.aizman@gmail.com" time="2014-10-27T11:08:44-0700" alias="anastasia"></status>
+<status type="available" sender="anastasia.aizman@gmail.com" time="2014-10-27T11:08:44-0700" alias="anastasia"></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-27T11:18:17-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">hey</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-27T11:31:44-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">sam!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:38:11-0700" alias="sam"><div>HEY!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:38:18-0700" alias="sam"><div>just went over the last of that bug</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:38:21-0700" alias="sam"><div>with austin</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-27T11:39:29-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">is everything working now?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:46:49-0700" alias="sam"><div>kinda</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:47:11-0700" alias="sam"><div>we just talked through it and we&apos;ll get it doe later</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:47:17-0700" alias="sam"><div>kicking it till sprint planning*</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-27T11:50:41-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">cool</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:52:04-0700" alias="sam"><div>how are you?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-27T11:53:29-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ok</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-27T11:53:36-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">kinda fucked up my foot again</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-27T11:53:39-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but otherwise ok</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-27T11:53:48-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">the coveralls are here</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:55:16-0700" alias="sam"><div>great!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-27T11:56:13-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ive been listening to weird music for the past day and it&apos;s putting me in a strange mood</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-27T11:56:38-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s a song called Glömd, by the artist Koop :P</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:00:12-0700" alias="sam"><div>haha!</div></message>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-10-27T12:30:06-0700"></event></chat>

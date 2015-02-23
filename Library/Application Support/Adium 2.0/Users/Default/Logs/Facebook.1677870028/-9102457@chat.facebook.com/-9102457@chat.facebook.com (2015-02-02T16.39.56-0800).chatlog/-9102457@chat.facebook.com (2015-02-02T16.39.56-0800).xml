@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="1677870028" service="Facebook" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="1677870028" time="2015-02-02T16:39:56-0800"></event>
+<message sender="-9102457@chat.facebook.com" time="2015-02-02T16:39:56-0800" alias="Peter De Croos"><div><span style="font-family: Helvetica; font-size: 12pt;">were there any books on machine learning you found especially useful when you were learning?</span></div></message>
+<status type="offline" sender="-9102457@chat.facebook.com" time="2015-02-02T17:10:41-0800" alias="Peter De Croos"></status>
+<status type="online" sender="-9102457@chat.facebook.com" time="2015-02-02T17:15:19-0800" alias="Peter De Croos"></status>
+<status type="offline" sender="-9102457@chat.facebook.com" time="2015-02-02T17:20:21-0800" alias="Peter De Croos"></status>
+<status type="online" sender="-9102457@chat.facebook.com" time="2015-02-02T17:22:52-0800" alias="Peter De Croos"></status>
+<status type="offline" sender="-9102457@chat.facebook.com" time="2015-02-02T17:25:23-0800" alias="Peter De Croos"></status>
+<status type="online" sender="-9102457@chat.facebook.com" time="2015-02-02T17:35:27-0800" alias="Peter De Croos"></status>
+<status type="offline" sender="-9102457@chat.facebook.com" time="2015-02-02T17:40:11-0800" alias="Peter De Croos"></status>
+<status type="online" sender="-9102457@chat.facebook.com" time="2015-02-02T17:57:14-0800" alias="Peter De Croos"></status>
+<status type="offline" sender="-9102457@chat.facebook.com" time="2015-02-02T18:04:35-0800" alias="Peter De Croos"></status>
+<status type="online" sender="-9102457@chat.facebook.com" time="2015-02-02T18:04:59-0800" alias="Peter De Croos"></status>
+<status type="offline" sender="-9102457@chat.facebook.com" time="2015-02-02T18:08:10-0800" alias="Peter De Croos"></status>
+<status type="disconnected" sender="1677870028" time="2015-02-02T18:36:10-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-03T10:36:00-0800"><div>You have connected</div></status>
+<message sender="1677870028" time="2015-02-03T10:41:07-0800" alias="Sam Stites"><div>ah!</div></message>
+<message sender="1677870028" time="2015-02-03T10:41:12-0800" alias="Sam Stites"><div>sorry about the afk</div></message>
+<message sender="1677870028" time="2015-02-03T10:41:35-0800" alias="Sam Stites"><div>for learning resources — if you&apos;re tight on time — just walk through a kaggle competition</div></message>
+<message sender="1677870028" time="2015-02-03T10:42:08-0800" alias="Sam Stites"><div>if you have tons of time — Andrew Ng&apos;s Machine Learning Coursera class is good</div></message>
+<message sender="1677870028" time="2015-02-03T10:42:17-0800" alias="Sam Stites"><div>is a good start*</div></message>
+<event type="windowClosed" sender="1677870028" time="2015-02-03T10:44:33-0800"></event></chat>

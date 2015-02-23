@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-10-30T13:09:07-0700"></event>
+<message sender="sam@bina.com" time="2014-10-30T13:09:07-0700" alias="sam"><div>hey amir!</div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T13:09:13-0700" alias="Amirhossein Kiani"><div><span style="font-family: Helvetica; font-size: 12pt;">hey!</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T13:09:24-0700" alias="sam"><div>when do you get back from your trip?</div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T13:09:27-0700" alias="Amirhossein Kiani"><div><span style="font-family: Helvetica; font-size: 12pt;">tsup</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T13:09:31-0700" alias="Amirhossein Kiani"><div><span style="font-family: Helvetica; font-size: 12pt;">im on the plane</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T13:09:35-0700" alias="Amirhossein Kiani"><div><span style="font-family: Helvetica; font-size: 12pt;">will arive in 30 min</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T13:09:36-0700" alias="sam"><div>what?!</div></message>
+<message sender="sam@bina.com" time="2014-10-30T13:09:40-0700" alias="sam"><div>wow!</div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T13:09:40-0700" alias="Amirhossein Kiani"><div><span style="font-family: Helvetica; font-size: 12pt;">and then will come to the office</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T13:09:45-0700" alias="sam"><div>okay cool!</div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T13:09:47-0700" alias="Amirhossein Kiani"><div><span style="font-family: Helvetica; font-size: 12pt;">lol</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T13:09:51-0700" alias="sam"><div>mind if we do a 1-1?</div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T13:09:52-0700" alias="Amirhossein Kiani"><div><span style="font-family: Helvetica; font-size: 12pt;">whats up</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T13:10:06-0700" alias="Amirhossein Kiani"><div><span style="font-family: Helvetica; font-size: 12pt;">of course</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T13:10:09-0700" alias="sam"><div>cool!</div></message>
+<message sender="sam@bina.com" time="2014-10-30T13:10:23-0700" alias="sam"><div>you don&apos;t have any meetings today, do you?</div></message>
+<status type="purple" time="2014-10-30T13:10:28-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com is now known as Amirhossein Kiani.<br /></span></div></status>
+<message sender="sam@bina.com" time="2014-10-30T13:12:14-0700" alias="sam"><div>okay <span style="font-family: Helvetica; font-size: 11pt;">— i just sent you something, feel free to change it</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T13:12:39-0700" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">no</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T13:12:43-0700" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">sounds good</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T13:13:14-0700" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">any particular agenda?</span></div></message>
+<message sender="sam@bina.com" time="2014-10-30T13:14:34-0700" alias="sam"><div>just office dynamics</div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T13:14:41-0700" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">sure</span></div></message>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T13:34:46-0700" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T14:51:20-0700" alias="amir"></status>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T15:08:00-0700" alias="amir"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-30T15:13:57-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-30T15:41:52-0700"><div>You have connected</div></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T15:50:59-0700" alias="amir"></status>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T16:17:16-0700" alias="amir"><div><a href="https://github.com/BinaTechnologies/seqalto/pull/3149/files" style="font-family: Helvetica; font-size: 12pt;">https://github.com/BinaTechnologies/seqalto/pull/3149/files</a></div></message>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T17:32:11-0700" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T17:49:13-0700" alias="amir"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-30T17:58:36-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-30T18:09:19-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-30T18:10:49-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-30T18:10:53-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-30T19:30:37-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-30T20:48:05-0700"><div>You have connected</div></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T21:46:40-0700" alias="amir"></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-30T21:46:40-0700" alias="amir"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-30T21:47:15-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-31T11:08:45-0700"><div>You have connected</div></status>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T11:17:38-0700" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">glad to hear that</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T11:18:16-0700" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">sorry if i over reacted, just wanted to make sure i get everything possible done. </span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T11:18:26-0700" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">i take cultural issues super seriously.</span></div></message>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-31T11:22:10-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-31T11:23:05-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-31T11:25:04-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-31T11:29:40-0700"><div>You have connected</div></status>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T12:40:02-0700" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T12:41:33-0700" alias="amir"></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T12:44:15-0700" alias="amir"></status>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T12:47:48-0700" alias="amir"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-31T12:48:12-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-31T12:57:33-0700"><div>You have connected</div></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T13:01:15-0700" alias="amir"></status>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T13:04:57-0700" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T13:46:34-0700" alias="amir"></status>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T14:16:30-0700" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T14:16:43-0700" alias="amir"></status>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T14:41:43-0700" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T14:43:28-0700" alias="amir"></status>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T15:00:22-0700" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T15:14:41-0700" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T15:15:21-0700" alias="amir"></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T15:25:30-0700" alias="amir"></status>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T15:29:22-0700" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T16:26:13-0700" alias="amir"></status>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T16:29:58-0700" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T16:36:55-0700" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2014-10-31T16:37:05-0700" alias="amir"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-31T16:38:23-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-31T16:47:37-0700"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-10-31T17:13:42-0700"></event></chat>

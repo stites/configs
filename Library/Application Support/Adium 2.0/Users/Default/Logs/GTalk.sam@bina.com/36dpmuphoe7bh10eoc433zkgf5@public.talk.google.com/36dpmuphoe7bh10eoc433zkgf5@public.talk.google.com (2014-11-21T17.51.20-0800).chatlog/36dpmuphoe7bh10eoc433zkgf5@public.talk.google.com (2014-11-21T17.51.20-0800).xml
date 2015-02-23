@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-11-21T17:51:21-0800"></event>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-11-21T17:51:21-0800" alias="John Mu"><div><a href="https://nara-00:19001/#/binabox/runjobs/rna" style="font-family: Helvetica; font-size: 12pt;">https://nara-00:19001/#/binabox/runjobs/rna</a></div></message>
+<status type="away" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-11-21T18:07:56-0800" alias="John Mu"></status>
+<status type="online" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-11-21T18:29:21-0800" alias="John Mu"></status>
+<status type="away" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-11-21T18:44:35-0800" alias="John Mu"></status>
+<status type="online" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-11-21T18:57:20-0800" alias="John Mu"></status>
+<status type="purple" time="2014-11-21T19:02:52-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com is now known as John Mu.<br /></span></div></status>
+<status type="away" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-11-21T19:12:52-0800" alias="John Mu"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-21T19:16:41-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-22T13:08:49-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-22T13:08:51-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-22T14:04:15-0800"><div>You have connected</div></status>
+<status type="online" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-11-22T14:10:36-0800" alias="John Mu"></status>
+<status type="away" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-11-22T14:30:30-0800" alias="John Mu"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-22T14:31:44-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-22T16:40:10-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-22T16:44:15-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-22T17:06:51-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-22T17:21:07-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-22T17:24:27-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-22T17:38:21-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-22T18:03:02-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-22T18:05:38-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-22T18:08:39-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-11-22T19:59:24-0800"></event></chat>

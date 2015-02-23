@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-10-28T01:13:29-0700"></event>
+<status type="connected" time="2014-10-28T01:13:29-0700"><div>You have connected</div></status>
+<status type="purple" time="2014-10-28T01:13:29-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">anastasia.aizman@gmail.com is now known as Anastasia A.<br /></span></div></status>
+<status type="purple" time="2014-10-28T01:13:29-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">anastasia.aizman@gmail.com is now known as Anastasia A.<br /></span></div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-10-28T02:16:50-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-28T11:15:22-0700"><div>You have connected</div></status>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-28T11:22:26-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">found*</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-28T11:41:20-0700" alias="sam"><div>ah!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-28T11:41:29-0700" alias="sam"><div>just got in and was bug-sniped</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-28T11:41:37-0700" alias="sam"><div>did you figure it out?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-28T11:42:25-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">yep!</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-28T11:43:00-0700" alias="sam"><div>good good!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-28T11:43:33-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">trying to figure out how to publish a bunch of stacks at once</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-28T11:43:46-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">next step: figuring out how to publish just UI and not actual stack data</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-28T11:44:40-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">sometimes angular has the worst error messaging</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-28T11:46:33-0700" alias="sam"><div>THE WORST</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-28T11:46:44-0700" alias="sam"><div>even worse if you are working with it ajax&apos;d in</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-28T11:48:13-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">&quot;undefined is not a function&quot;</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2014-10-28T11:48:16-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">assholes</span></div></message>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-10-28T11:49:09-0700"></event></chat>

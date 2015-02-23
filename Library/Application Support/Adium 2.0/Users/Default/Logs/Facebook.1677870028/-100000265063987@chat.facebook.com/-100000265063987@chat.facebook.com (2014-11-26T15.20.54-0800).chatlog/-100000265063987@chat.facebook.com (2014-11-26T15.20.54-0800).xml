@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="1677870028" service="Facebook" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="1677870028" time="2014-11-26T15:21:15-0800"></event>
+<message sender="-100000265063987@chat.facebook.com" time="2014-11-26T15:21:14-0800" alias="Ethan Engel"><div><span style="font-family: Helvetica; font-size: 12pt;">Aum mani Padme hum!</span></div></message>
+<message sender="1677870028" time="2014-11-26T15:22:03-0800" alias="Sam Stites"><div>sorry — fixing a terrible bug.</div></message>
+<message sender="1677870028" time="2014-11-26T15:22:27-0800" alias="Sam Stites"><div>gimme a few hours</div></message>
+<status type="disconnected" sender="1677870028" time="2014-11-26T16:27:26-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-26T16:31:07-0800"><div>You have connected</div></status>
+<status type="offline" sender="-100000265063987@chat.facebook.com" time="2014-11-26T16:41:48-0800" alias="Ethan Engel"></status>
+<status type="online" sender="-100000265063987@chat.facebook.com" time="2014-11-26T16:43:27-0800" alias="Ethan Engel"></status>
+<status type="offline" sender="-100000265063987@chat.facebook.com" time="2014-11-26T16:47:28-0800" alias="Ethan Engel"></status>
+<status type="online" sender="-100000265063987@chat.facebook.com" time="2014-11-26T16:48:31-0800" alias="Ethan Engel"></status>
+<status type="disconnected" sender="1677870028" time="2014-11-26T17:03:29-0800" alias="Sam Stites"><div>You have disconnected</div></status></chat>

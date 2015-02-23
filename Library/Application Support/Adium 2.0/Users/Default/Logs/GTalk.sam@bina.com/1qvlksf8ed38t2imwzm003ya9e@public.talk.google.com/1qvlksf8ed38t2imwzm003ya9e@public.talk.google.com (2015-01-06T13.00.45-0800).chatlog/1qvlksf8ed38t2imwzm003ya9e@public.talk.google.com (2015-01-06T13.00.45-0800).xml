@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-01-06T13:00:50-0800"></event>
+<message sender="sam@bina.com" time="2015-01-06T13:00:50-0800" alias="sam"><div>stop everything!</div></message>
+<message sender="sam@bina.com" time="2015-01-06T13:02:25-0800" alias="sam"><div>…holy crap, false alarm</div></message>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-01-06T13:02:27-0800" alias="Greg Gibeling"></status>
+<message sender="sam@bina.com" time="2015-01-06T13:03:24-0800" alias="sam"><div>i thought a bug was introduced where the FastQC image thumbnails were the same size as in the expanded images.</div></message>
+<message sender="sam@bina.com" time="2015-01-06T13:03:39-0800" alias="sam"><div>but it appears to only be on my feature branch</div></message>
+<message sender="sam@bina.com" time="2015-01-06T13:03:51-0800" alias="sam"><div>just double-checking now</div></message>
+<message sender="sam@bina.com" time="2015-01-06T13:09:18-0800" alias="sam"><div>yup - all good</div></message>
+<message sender="sam@bina.com" time="2015-01-06T13:09:22-0800" alias="sam"><div>sorry about the scare!</div></message>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-01-06T13:10:05-0800" alias="Greg Gibeling"></status>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-01-06T13:10:38-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Lol.  Good timing, I was eating lunch and didn&apos;t read any of this until now. HAH!</span></div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-01-06T13:11:00-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Oh, and I tested 2.3.1 for that anyway, so don&apos;t worry.</span></div></message>
+<message sender="sam@bina.com" time="2015-01-06T13:11:17-0800" alias="sam"><div>nice</div></message>
+<message sender="sam@bina.com" time="2015-01-06T13:11:23-0800" alias="sam"><div>yeah I think i did as well</div></message>
+<message sender="sam@bina.com" time="2015-01-06T13:11:41-0800" alias="sam"><div>but it just appeared in this feature branch which is terrible!</div></message></chat>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-22T15:57:16-0500"></event>
+<status type="offline" sender="sharon@bina.com" time="2014-12-22T15:57:16-0500" alias="Sharon Barr"></status>
+<status type="online" sender="sharon@bina.com" time="2014-12-22T16:31:58-0500" alias="Sharon Barr"></status>
+<status type="away" sender="sharon@bina.com" time="2014-12-22T16:31:59-0500" alias="Sharon Barr"></status>
+<status type="offline" sender="sharon@bina.com" time="2014-12-22T16:35:20-0500" alias="Sharon Barr"></status>
+<status type="online" sender="sharon@bina.com" time="2014-12-22T17:44:21-0500" alias="Sharon Barr"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-22T18:39:01-0500"></event></chat>

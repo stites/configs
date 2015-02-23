@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@stites.io" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@stites.io" time="2014-11-23T12:26:17-0800"></event>
+<message sender="sam@stites.io" time="2014-11-23T12:26:17-0800" alias="Sam Stites"><div>hey baba</div></message>
+<message sender="sam@stites.io" time="2014-11-23T12:26:29-0800" alias="Sam Stites"><div>i took a look at the computer you picked!</div></message>
+<message sender="sam@stites.io" time="2014-11-23T12:27:00-0800" alias="Sam Stites"><div>I&apos;m a little worried that the processor isn&apos;t going to be able to handle everything </div></message>
+<message sender="sam@stites.io" time="2014-11-23T12:27:32-0800" alias="Sam Stites"><div>here&apos;s a link of a newegg search that I made for you</div></message>
+<message sender="sam@stites.io" time="2014-11-23T12:27:32-0800" alias="Sam Stites"><div><a href="http://bit.ly/1zfHGTh">http://bit.ly/1zfHGTh</a></div></message>
+<message sender="sam@stites.io" time="2014-11-23T12:27:55-0800" alias="Sam Stites"><div>but you should take a look at this wizard to help you choose the processor</div></message>
+<message sender="sam@stites.io" time="2014-11-23T12:28:09-0800" alias="Sam Stites"><div><a href="http://www.newegg.com/All-in-One-PCs/Category/ID-355">http://www.newegg.com/All-in-One-PCs/Category/ID-355</a></div></message>
+<status type="disconnected" sender="sam@stites.io" time="2014-11-23T12:28:37-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-23T13:10:45-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-11-23T13:10:52-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-23T13:11:34-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@stites.io" time="2014-11-23T13:11:54-0800"></event></chat>

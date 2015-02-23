@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@stites.io" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@stites.io" time="2014-12-01T12:18:12-0800"></event>
+<status type="connected" time="2014-12-01T12:18:12-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-12-01T14:08:41-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-01T14:09:49-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-12-01T14:21:01-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-01T14:24:46-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-12-01T14:27:01-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-01T14:27:13-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-12-01T14:28:28-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-01T14:34:23-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-12-01T14:37:28-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-01T14:47:14-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-12-01T19:53:33-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-01T19:53:41-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-12-01T20:06:33-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-01T20:06:39-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-12-01T20:10:10-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-01T21:46:48-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-12-01T21:46:55-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-01T22:07:56-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-12-02T01:58:37-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-02T01:59:38-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-12-02T02:50:24-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-02T02:53:44-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-12-02T02:54:13-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-02T03:52:41-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@stites.io" time="2014-12-02T04:05:44-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-02T11:22:48-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@stites.io" time="2014-12-02T15:25:31-0800"></event></chat>

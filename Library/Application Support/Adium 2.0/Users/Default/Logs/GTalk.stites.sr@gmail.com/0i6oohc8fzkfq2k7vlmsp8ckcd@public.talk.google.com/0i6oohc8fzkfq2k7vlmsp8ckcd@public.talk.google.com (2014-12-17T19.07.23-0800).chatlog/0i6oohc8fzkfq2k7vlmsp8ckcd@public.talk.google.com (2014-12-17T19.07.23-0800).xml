@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-12-17T19:07:53-0800"></event>
+<message sender="0i6oohc8fzkfq2k7vlmsp8ckcd@public.talk.google.com" time="2014-12-17T19:07:53-0800" alias="David Vorriccelli"><div><span style="font-family: Helvetica; font-size: 12pt;">its 696 Monterey blvd</span></div></message>
+<message sender="0i6oohc8fzkfq2k7vlmsp8ckcd@public.talk.google.com" time="2014-12-17T19:08:01-0800" alias="David Vorriccelli"><div><span style="font-family: Helvetica; font-size: 12pt;">shanghai dumpling King</span></div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-17T19:15:11-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-17T22:38:17-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-12-17T22:50:14-0800"></event></chat>

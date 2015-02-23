@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-01-19T11:30:03-0800"></event>
+<status type="connected" time="2015-01-19T11:30:03-0800"><div>You have connected</div></status>
+<status type="online" sender="jianl@bina.com" time="2015-01-19T11:31:30-0800" alias="Jian Li"></status>
+<status type="away" sender="jianl@bina.com" time="2015-01-19T11:52:59-0800" alias="Jian Li"></status>
+<status type="online" sender="jianl@bina.com" time="2015-01-19T12:08:36-0800" alias="Jian Li"></status>
+<status type="away" sender="jianl@bina.com" time="2015-01-19T12:27:54-0800" alias="Jian Li"></status>
+<status type="online" sender="jianl@bina.com" time="2015-01-19T13:02:31-0800" alias="Jian Li"></status>
+<status type="away" sender="jianl@bina.com" time="2015-01-19T13:17:56-0800" alias="Jian Li"></status>
+<status type="online" sender="jianl@bina.com" time="2015-01-19T13:42:32-0800" alias="Jian Li"></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-01-19T13:59:14-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-01-19T14:26:31-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-01-19T15:12:57-0800"></event></chat>

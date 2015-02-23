@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2015-02-21T16:58:43-0800"></event>
+<message sender="stites.sr@gmail.com" time="2015-02-21T16:58:43-0800" alias="sam"><div><a href="http://www.nytimes.com/2015/02/21/your-money/an-engineer-creates-for-fun-after-a-lifetime-of-workaday-rules.html">http://www.nytimes.com/2015/02/21/your-money/an-engineer-creates-for-fun-after-a-lifetime-of-workaday-rules.html</a></div></message>
+<message sender="27evbp0r35xdt1637xzip356q0@public.talk.google.com" time="2015-02-21T17:01:23-0800" alias="Savannah Kunovsky"><div><span style="font-family: Helvetica; font-size: 12pt;">no wonder you have so much nesting going on</span></div></message>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2015-02-21T17:31:08-0800"></event></chat>

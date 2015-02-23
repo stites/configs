@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2015-01-26T18:25:01-0800"></event>
+<message sender="stites.sr@gmail.com" time="2015-01-26T18:25:01-0800" alias="sam"><div>heyo!</div></message>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2015-01-26T18:25:08-0800"></event></chat>

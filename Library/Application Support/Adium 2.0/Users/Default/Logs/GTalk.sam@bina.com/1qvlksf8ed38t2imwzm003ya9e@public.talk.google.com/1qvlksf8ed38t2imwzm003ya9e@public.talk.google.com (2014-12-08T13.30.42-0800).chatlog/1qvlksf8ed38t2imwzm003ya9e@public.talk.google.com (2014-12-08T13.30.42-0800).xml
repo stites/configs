@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-08T13:33:01-0800"></event>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-12-08T13:33:01-0800" alias="Greg Gibeling"></status>
+<message sender="sam@bina.com" time="2014-12-08T13:34:27-0800" alias="sam"><div>greg!</div></message>
+<message sender="sam@bina.com" time="2014-12-08T13:34:28-0800" alias="sam"><div>is this</div></message>
+<message sender="sam@bina.com" time="2014-12-08T13:34:29-0800" alias="sam"><div><a href="https://science:19007/#/binabox/view/4/0be89ddd-a3eb-497a-b163-241fbd68e612">https://science:19007/#/binabox/view/4/0be89ddd-a3eb-497a-b163-241fbd68e612</a></div></message>
+<message sender="sam@bina.com" time="2014-12-08T13:34:42-0800" alias="sam"><div>a job I can start to use as a multisample example?</div></message>
+<message sender="sam@bina.com" time="2014-12-08T13:35:28-0800" alias="sam"><div>cancel that - everything will be canned anyhow</div></message>
+<message sender="sam@bina.com" time="2014-12-08T13:35:35-0800" alias="sam"><div>I&apos;ll just use it</div></message>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-12-08T14:16:09-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-12-08T14:17:08-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-12-08T14:37:13-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-12-08T14:46:31-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-12-08T15:25:56-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-12-08T15:32:29-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-12-08T15:49:13-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-12-08T15:58:30-0800" alias="Greg Gibeling"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-08T16:02:19-0800"></event></chat>

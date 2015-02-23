@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2015-02-13T11:17:55-0800"></event>
+<message sender="stites.sr@gmail.com" time="2015-02-13T11:17:55-0800" alias="sam"><div>ping!</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-13T11:18:09-0800" alias="sam"><div>i just found this project — you might find it interesting</div></message>
+<message sender="stites.sr@gmail.com" time="2015-02-13T11:18:09-0800" alias="sam"><div><a href="https://samza.apache.org/">https://samza.apache.org/</a></div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2015-02-13T11:20:03-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-13T11:20:28-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2015-02-13T11:27:33-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-13T11:27:45-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2015-02-13T11:55:10-0800"></event></chat>

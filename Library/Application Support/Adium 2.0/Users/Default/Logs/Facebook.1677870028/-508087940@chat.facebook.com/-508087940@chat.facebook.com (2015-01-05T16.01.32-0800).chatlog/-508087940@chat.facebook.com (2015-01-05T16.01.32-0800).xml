@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="1677870028" service="Facebook" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="1677870028" time="2015-01-05T16:02:29-0800"></event>
+<status type="online" sender="-508087940@chat.facebook.com" time="2015-01-05T16:02:27-0800"></status>
+<status type="available" sender="-508087940@chat.facebook.com" time="2015-01-05T16:02:27-0800"></status>
+<status type="connected" time="2015-01-05T16:02:29-0800"><div>You have connected</div></status>
+<message sender="-508087940@chat.facebook.com" time="2015-01-05T16:12:32-0800" alias="Naomi Tlg"><div><span style="font-family: Helvetica; font-size: 12pt;">everything&apos;s so expensive!!! T.T</span></div></message>
+<message sender="1677870028" time="2015-01-05T16:20:04-0800" alias="Sam Stites"><div>not thaaat much!</div></message>
+<message sender="1677870028" time="2015-01-05T16:20:05-0800" alias="Sam Stites"><div>housing</div></message>
+<message sender="1677870028" time="2015-01-05T16:20:08-0800" alias="Sam Stites"><div>definitely</div></message>
+<message sender="1677870028" time="2015-01-05T16:20:14-0800" alias="Sam Stites"><div>food is so-so though</div></message>
+<message sender="-508087940@chat.facebook.com" time="2015-01-05T16:31:25-0800" alias="Naomi Tlg"><div><span style="font-family: Helvetica; font-size: 12pt;">haha</span></div></message>
+<message sender="-508087940@chat.facebook.com" time="2015-01-05T16:31:29-0800" alias="Naomi Tlg"><div><span style="font-family: Helvetica; font-size: 12pt;">well the food trucks aren&apos;t TOO bad</span></div></message>
+<message sender="-508087940@chat.facebook.com" time="2015-01-05T16:31:36-0800" alias="Naomi Tlg"><div><span style="font-family: Helvetica; font-size: 12pt;">but everyone was telling me how SF is such a foodie place</span></div></message>
+<message sender="-508087940@chat.facebook.com" time="2015-01-05T16:31:43-0800" alias="Naomi Tlg"><div><span style="font-family: Helvetica; font-size: 12pt;">for the price though, meh</span></div></message>
+<message sender="-508087940@chat.facebook.com" time="2015-01-05T16:31:53-0800" alias="Naomi Tlg"><div><span style="font-family: Helvetica; font-size: 12pt;">but then agian i haven&apos;t had haute cuisine here so...</span></div></message>
+<status type="disconnected" sender="1677870028" time="2015-01-05T20:26:45-0800" alias="Sam Stites"><div>You have disconnected</div></status></chat>

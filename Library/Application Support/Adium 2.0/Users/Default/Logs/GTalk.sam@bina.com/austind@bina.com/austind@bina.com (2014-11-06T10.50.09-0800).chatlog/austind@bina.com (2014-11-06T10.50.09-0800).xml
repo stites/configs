@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-11-06T10:50:15-0800"></event>
+<message sender="sam@bina.com" time="2014-11-06T10:50:15-0800" alias="sam"><div>hey austin!</div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:51:12-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">hey</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:51:13-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">whats up</span></div></message>
+<message sender="sam@bina.com" time="2014-11-06T10:51:31-0800" alias="sam"><div>i was talking to Henry last night about a home server setup /build and he mentioned that you had a pretty great buildthat I should ask you for</div></message>
+<message sender="sam@bina.com" time="2014-11-06T10:51:52-0800" alias="sam"><div>any chance you would still have the specs lying around?</div></message>
+<message sender="sam@bina.com" time="2014-11-06T10:51:53-0800" alias="sam"><div>: )</div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:53:23-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">oh uhh hmm</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:53:30-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah i do</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:53:40-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">i mean idk what would be so good about it</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:54:56-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">the main thing i use it for is as a storage for my media stuff</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:55:01-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">and virtual machines/dockers</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:56:02-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">lol i am trying to look up the specs but newegg isn&apos;t loading</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:56:07-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">ill send them to you when it does</span></div></message>
+<message sender="sam@bina.com" time="2014-11-06T10:56:26-0800" alias="sam"><div>sure thing!</div></message>
+<message sender="sam@bina.com" time="2014-11-06T10:57:20-0800" alias="sam"><div>yeah I was just thinking of playing around with some ML/hadoop/storm combos and doing some VPN stuff</div></message>
+<message sender="sam@bina.com" time="2014-11-06T10:58:33-0800" alias="sam"><div>i pay for a server on Digital Ocean, but i realized that can basically use my home IP and a homeserver for the same thing</div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:59:24-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah same</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:59:30-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">while i was at cal i had a VPS</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:59:32-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">through linode</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:59:39-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">then i started using AWS for some stuff</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:59:45-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">then figured out after like a year</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:59:47-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">it would be cheaper to build</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T10:59:51-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">and run it at home</span></div></message>
+<message sender="sam@bina.com" time="2014-11-06T10:59:56-0800" alias="sam"><div>exactly!</div></message>
+<message sender="sam@bina.com" time="2014-11-06T11:00:46-0800" alias="sam"><div>since &quot;VPS&quot; basically means some random box in the bay area anyhow</div></message>
+<message sender="austind@bina.com" time="2014-11-06T11:01:00-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah lol</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T11:01:03-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">and they are a pain to manage</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T11:01:07-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">i couldn&apos;t install any OS</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T11:01:21-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">and i had to ssh to this random management node that i always forgot</span></div></message>
+<message sender="austind@bina.com" time="2014-11-06T11:01:58-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">plus this let me do RAIDd local storage for my movies and pictures and music and what not for my media pc</span></div></message>
+<status type="away" sender="austind@bina.com" time="2014-11-06T11:26:32-0800"></status>
+<status type="online" sender="austind@bina.com" time="2014-11-06T11:37:58-0800"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-11-06T11:57:08-0800"></event></chat>

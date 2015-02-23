@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-09T11:47:06-0800"></event>
+<message sender="jianl@bina.com" time="2014-12-09T11:47:06-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">Hi Sam, could you send me a link to the current WES QC report mockup page if you have one please?</span></div></message>
+<message sender="sam@bina.com" time="2014-12-09T11:49:20-0800" alias="sam"><div>ahhh</div></message>
+<message sender="sam@bina.com" time="2014-12-09T11:49:24-0800" alias="sam"><div>the wes?</div></message>
+<message sender="sam@bina.com" time="2014-12-09T11:49:35-0800" alias="sam"><div>that should be on the box currently</div></message>
+<message sender="sam@bina.com" time="2014-12-09T11:49:55-0800" alias="sam"><div>the demo server, which is currently up to date, is at</div></message>
+<message sender="jianl@bina.com" time="2014-12-09T11:49:57-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">do you have an example job I can look at?</span></div></message>
+<message sender="sam@bina.com" time="2014-12-09T11:50:51-0800" alias="sam"><div><a href="http://t-rex:18609/#binabox/listjobs">http://t-rex:18609/#binabox/listjobs</a></div></message>
+<message sender="sam@bina.com" time="2014-12-09T11:51:09-0800" alias="sam"><div>oh damn, something is wrong, the directory is empty</div></message>
+<message sender="sam@bina.com" time="2014-12-09T11:51:23-0800" alias="sam"><div>that wasn&apos;t happening yesterday…</div></message>
+<message sender="sam@bina.com" time="2014-12-09T11:51:37-0800" alias="sam"><div>let me try and fix it. one second</div></message>
+<message sender="jianl@bina.com" time="2014-12-09T11:51:59-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">sure, thanks a lot!</span></div></message>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-09T12:11:50-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-09T12:12:44-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-09T13:06:48-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-09T14:23:10-0800"><div>You have connected</div></status>
+<message sender="sam@bina.com" time="2014-12-09T15:01:11-0800" alias="sam"><div>jian!</div></message>
+<message sender="sam@bina.com" time="2014-12-09T15:02:05-0800" alias="sam"><div>it turned out that one of these jobs I had created was breaking the server&apos;s response message</div></message>
+<message sender="sam@bina.com" time="2014-12-09T15:02:23-0800" alias="sam"><div>if you navigate to <a href="http://t-rex:18609/">http://t-rex:18609</a> now</div></message>
+<message sender="sam@bina.com" time="2014-12-09T15:02:40-0800" alias="sam"><div>you should be able to take a look at the different demo jobs</div></message>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-09T15:24:38-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-09T16:18:53-0800"><div>You have connected</div></status>
+<message sender="sam@bina.com" time="2014-12-09T16:23:53-0800" alias="sam"><div>I needed to update the report json files at a certain point, so I copied some new jobs and moved the data from the old ones into the new ones</div></message>
+<message sender="sam@bina.com" time="2014-12-09T16:24:16-0800" alias="sam"><div>I then had john look over it to make sure it didn&apos;t look too off</div></message>
+<message sender="jianl@bina.com" time="2014-12-09T16:24:59-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">there are no target sequencing metrics available ...</span></div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-09T17:01:43-0800"></event>
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-09T17:02:00-0800"></event>
+<message sender="jianl@bina.com" time="2014-12-09T17:02:34-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">yeah, maybe reverting to a whole consistent set of information might be better</span></div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:02:45-0800" alias="sam"><div>okay</div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:04:44-0800" alias="sam"><div>just moved everything back</div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:05:03-0800" alias="sam"><div>i also generated fields of targeted regions </div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:05:19-0800" alias="sam"><div>which were based on the ratios of the values from the other job</div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:05:24-0800" alias="sam"><div>can you take a look?</div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:07:17-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">wait, so this was a real job? so the coverage plots I thought were faked are actually real?</span></div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:07:45-0800" alias="sam"><div>this job on the page now is based on a real job</div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:08:07-0800" alias="sam"><div>any fields we don&apos;t support I&apos;ve bootstrapped in</div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:08:47-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">I see ... but for target job the usual coverage plots are useful for the users are for targeted regions</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:08:54-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">so they cannot be so low ...</span></div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:09:36-0800" alias="sam"><div>mmmmm… sorry, say that again</div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:09:59-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">is it possible you use all the metrics in that google doc, and bootstrap in things not in there?</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:10:20-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">so the coverage plot shows the highest percentage are with coverage &quot;0&quot;</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:10:28-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">this is true if you look at the whole genome</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:10:35-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">since this is a target job</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:10:47-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">but this information won&apos;t be helpful for the users</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:10:57-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">they want to know what&apos;s the coverage for targeted regions</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:11:04-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">which should be usually high</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:11:14-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">(that&apos;s why we do targeted sequencing)</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:11:28-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">so if we use this as mock-up to show people</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:11:33-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">we may have problem</span></div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:11:34-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">...</span></div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:12:14-0800" alias="sam"><div>okay</div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:12:34-0800" alias="sam"><div>is it possible to simple make minor hacks at the current job?</div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:12:51-0800" alias="sam"><div>because the primary issue with the other job is the fastQC</div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:13:30-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">how about I transform the data to the format you can read easily?</span></div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:13:37-0800" alias="sam"><div>sure!</div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:13:41-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">but I may not be able to do it today</span></div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:13:43-0800" alias="sam"><div>okay</div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:14:11-0800" alias="sam"><div>yeah my main concern is that i will get caught up in this, cause it can be pretty time consuming, and not have any time to do the mdna chart</div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:14:51-0800" alias="sam"><div>all the jobs are available at /net/kodiak/volumes/river/shared/sam/reportsV2</div></message>
+<message sender="jianl@bina.com" time="2014-12-09T17:15:00-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">sure, I&apos;ll leave soon, so may send you the table tonight/ tomorrow</span></div></message>
+<message sender="sam@bina.com" time="2014-12-09T17:15:05-0800" alias="sam"><div>mmk</div></message>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-09T18:34:42-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-10T21:35:00-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-10T23:33:35-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-11T12:07:06-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-11T12:39:01-0800"></event></chat>

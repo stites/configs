@@ -1,0 +1,17 @@
+Bash is a Message Style for Adium.
+
+h2. How do I get this to work
+
+You go to your Adium Message Style directory.
+
+cd ~/Library/Application Support/Adium 2.0/Message Styles
+
+And then you clone this repository.
+
+git clone git://github.com/jao/Bash.AdiumMessageStyle.git
+
+After that go to your Adium's Message Style Preferences window, and choose the one named Bash, and pick your favorite variant.
+
+h2. Easy mode (if you rather not do all that)
+
+Visit the "Xtra's page":http://www.adiumxtras.com/index.php?a=xtras&xtra_id=3665 and click *install* if you don't want to do all this.

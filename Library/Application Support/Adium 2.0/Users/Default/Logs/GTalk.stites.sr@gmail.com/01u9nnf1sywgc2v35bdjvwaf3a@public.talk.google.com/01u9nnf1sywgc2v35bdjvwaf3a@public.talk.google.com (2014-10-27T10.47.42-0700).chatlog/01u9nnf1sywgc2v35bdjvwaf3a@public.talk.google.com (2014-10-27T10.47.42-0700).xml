@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-10-27T10:47:59-0700"></event>
+<status type="connected" time="2014-10-27T10:47:59-0700"><div>You have connected</div></status>
+<status type="away" sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T10:48:56-0700"></status>
+<status type="online" sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T10:48:58-0700"></status>
+<status type="away" sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T10:49:22-0700"></status>
+<status type="online" sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T10:49:27-0700"></status>
+<status type="away" sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T10:55:11-0700"></status>
+<status type="online" sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T10:57:32-0700"></status>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:33:42-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">So, did you feel like going to work today?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:37:42-0700" alias="sam"><div>i did—today is sprint planning</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:37:54-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">oh yes, prints</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:37:59-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">sprints</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:38:02-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">I&apos;ve heard of those</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:38:06-0700" alias="sam"><div>just got in! what are you looking at right now</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:38:16-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">Spreadsheets</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:38:26-0700" alias="sam"><div>of what?</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:38:41-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">BOM costs</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:38:48-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">Bill of Materials</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:38:56-0700" alias="sam"><div>?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:39:03-0700" alias="sam"><div>what is that?</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:39:22-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">All of the materials/components in a product</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:39:34-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">With the costs associated with that time</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:39:38-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">item*</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:40:16-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">So our printers may cost us a certain amount one day, and a slightly different amount another day</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:41:06-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">I&apos;m just reporting on how the BOM is trending</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:41:22-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">Either costing us more, or less, or breaking even</span></div></message>
+<status type="purple" time="2014-10-27T11:43:43-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com is now known as Gabe Kelly-Ramirez.<br /></span></div></status>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:44:23-0700" alias="sam"><div>cool!  how are you doing the analysis?</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:44:41-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Nothing exciting</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:44:59-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Just averaging numbers</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:45:54-0700" alias="sam"><div>mmmm</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:46:01-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">It&apos;s busy work</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:46:17-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">But I don&apos;t have much busy work, so I like doing this because I can just </span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:46:28-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">mellow out and power though it</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:46:29-0700" alias="sam"><div>how many months does the data go back?</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:46:54-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">It depends on the product. Some have been out for years, other only about 6 months</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:47:11-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">pocky</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:47:16-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Costco sized pocky</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:47:18-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">in my mouth</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:47:29-0700" alias="sam"><div>haha</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:47:32-0700" alias="sam"><div>well</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:47:53-0700" alias="sam"><div>if you want to use my python kit — you can access it at…</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:48:20-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">anticipation...</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:48:30-0700" alias="sam"><div><a href="http://gauss.stites.io:5678">gauss.stites.io:5678</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:48:39-0700" alias="sam"><div>the certificate is self-signed</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:49:16-0700" alias="sam"><div>so it looks sketchy</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:49:45-0700" alias="sam"><div>but you can use...</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:50:03-0700" alias="sam"><div><a href="http://pandas.pydata.org/pandas-docs/stable/">http://pandas.pydata.org/pandas-docs/stable/</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:50:18-0700" alias="sam"><div>which might things go really fast</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:50:46-0700" alias="sam"><div>i used to do all my data analysis in it</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:51:01-0700" alias="sam"><div>there&apos;s also <a href="http://scikit-learn.org/stable/">http://scikit-learn.org/stable/</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:51:24-0700" alias="sam"><div>and this suite</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:51:25-0700" alias="sam"><div><a href="http://www.scipy.org/docs.html">http://www.scipy.org/docs.html</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:51:39-0700" alias="sam"><div>but pandas basically does everything</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:57:23-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Alright</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:57:25-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Let&apos;s take a look</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:58:15-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Well, your first link doesn&apos;t work</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:58:34-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Pandas looks useful</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T11:59:23-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">but with a learning curve</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:59:40-0700" alias="sam"><div>naw, do this…</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:59:43-0700" alias="sam"><div>hold on…</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T11:59:56-0700" alias="sam"><div>gimme an hour or so to set this up</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:00:11-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">It might be overkill</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:00:18-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">For my current project anway</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:00:36-0700" alias="sam"><div>yeah but then when you do it next time it&apos;ll be trivial!</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:04:24-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">I&apos;m using a WASD by the way</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:04:42-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Are yous still using your CODE Clears?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:13:50-0700" alias="sam"><div>greens actually!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:13:53-0700" alias="sam"><div>hey</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:14:02-0700" alias="sam"><div>gimme your public ssh!</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:15:53-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">I don&apos;t have a current one</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:16:07-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">and I&apos;m on a windows machine right now</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:16:23-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">I don&apos;t know how to generate a pair on Windows</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:16:36-0700" alias="sam"><div>no worries!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:17:01-0700" alias="sam"><div>i&apos;m just trying to see how you would get a csv uploaded to the server</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:17:32-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Well, I&apos;m not going to send you any spreadsheets</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:17:39-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">if that&apos;s what you&apos;re after</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:17:40-0700" alias="sam"><div>i know!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:18:09-0700" alias="sam"><div>well — if you&apos;re unsure about putting things on the server then...</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:18:29-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Haha</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:18:40-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Well, I&apos;m *sure* I can&apos;t</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:18:44-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">without getting fired</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:18:46-0700" alias="sam"><div>no worries</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:18:57-0700" alias="sam"><div>do you have virtualbox?</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:19:29-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Like a virtual machine?</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:19:33-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">No</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:19:42-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">I&apos;m all windows these days</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:19:45-0700" alias="sam"><div><a href="https://www.virtualbox.org/">https://www.virtualbox.org/</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:19:48-0700" alias="sam"><div>get that!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:19:52-0700" alias="sam"><div>then this:</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:19:56-0700" alias="sam"><div><a href="https://www.vagrantup.com/downloads">https://www.vagrantup.com/downloads</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:19:58-0700" alias="sam"><div>then this</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:20:05-0700" alias="sam"><div><a href="http://docker.readthedocs.org/en/v0.7.3/installation/windows/">http://docker.readthedocs.org/en/v0.7.3/installation/windows/</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:20:15-0700" alias="sam"><div>okay hold up</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:20:24-0700" alias="sam"><div>i&apos;m getting too caught up in this</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:20:43-0700" alias="sam"><div>want to do this whole pandas/python thing?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:20:58-0700" alias="sam"><div>cause if you do — i&apos;m clearly more than willing to help</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:21:06-0700" alias="sam"><div>if not, i understand</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:21:12-0700" alias="sam"><div>you have things to do!</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:21:13-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Yes, I&apos;d like to learn it. But we can hold up if you need to </span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:21:21-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">I do, but today is slow</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:21:33-0700" alias="sam"><div>lols i&apos;m kicking it before sprint planning</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:21:44-0700" alias="sam"><div>okay install those three things in order!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:22:09-0700" alias="sam"><div>virtualbox allows you to run ubuntu</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:22:17-0700" alias="sam"><div>on a windows machine</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:22:19-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">Alright, give me an hour</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:22:47-0700" alias="sam"><div>vagrant allows you to run virtualbox without a gui (so it just looks like you are running windows)</div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:22:56-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">ah</span></div></message>
+<message sender="01u9nnf1sywgc2v35bdjvwaf3a@public.talk.google.com" time="2014-10-27T12:23:00-0700" alias="gabe"><div><span style="font-family: Helvetica; font-size: 12pt;">I was just reading about it</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:23:23-0700" alias="sam"><div>and then docker pulls in a development environment so that you don&apos;t have to set one up yourself</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:24:20-0700" alias="sam"><div>once upon a time it took me 3 days of hair pulling to set this up</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:24:25-0700" alias="sam"><div>everytime i wanted to set it up</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:24:32-0700" alias="sam"><div>it&apos;s so stupid</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:24:55-0700" alias="sam"><div>now it should just take you a few hours to do all that</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:25:31-0700" alias="sam"><div>and this is the docker container you need to get ipython and pandas</div></message>
+<message sender="stites.sr@gmail.com" time="2014-10-27T12:25:32-0700" alias="sam"><div><a href="https://registry.hub.docker.com/u/parente/ipython-notebook/">https://registry.hub.docker.com/u/parente/ipython-notebook/</a></div></message>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-10-27T12:30:06-0700"></event></chat>

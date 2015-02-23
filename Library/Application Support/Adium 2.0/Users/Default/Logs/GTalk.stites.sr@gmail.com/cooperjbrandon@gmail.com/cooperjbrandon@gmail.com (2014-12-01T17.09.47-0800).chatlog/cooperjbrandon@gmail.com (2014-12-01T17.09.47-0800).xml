@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-12-01T17:09:48-0800"></event>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:09:47-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">hey man</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:17:17-0800" alias="sam"><div>yo!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:17:25-0800" alias="sam"><div>how&apos;s the job situation?</div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:17:47-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">definitely working on it!</span></div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:19:02-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">its actually kinda why im hitting u up right now</span></div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:19:06-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">actually, I&apos;m trying to show a company that&apos;s interested in me <a href="http://satellite.io">satellite.io</a>. the website works, but <a href="http://play.satellite.io">play.satellite.io</a> doesn&apos;t</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:19:18-0800" alias="sam"><div>waaa</div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:19:18-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">do u have any idea why?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:19:21-0800" alias="sam"><div>mmm</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:19:26-0800" alias="sam"><div>well that&apos;s on heroku</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:19:38-0800" alias="sam"><div>it might be that it takes some time for them to spin up the server</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:19:51-0800" alias="sam"><div>lemme check</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:20:09-0800" alias="sam"><div>it probably just means that no one has visited that site in a while</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:20:30-0800" alias="sam"><div>I&apos;ve heard it can take up to 5 min to get that back up and running if they sipn you down</div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:20:36-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">haha not suprised</span></div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:20:42-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">thanks man, appreciate it.</span></div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:21:22-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">maybe we have to do something to manually spin it up</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:22:43-0800" alias="sam"><div>naw you just have to wait for a bit</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:22:57-0800" alias="sam"><div>i just checked it out and there&apos;s nothing you can do in heroku</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:23:07-0800" alias="sam"><div>but i also visited the site and it still works!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:23:51-0800" alias="sam"><div>I&apos;ll set up a script to ping the website for a month and make sure it gets some kind of healthy activity</div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:25:25-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">the webiste works, but i think <a href="http://play.satellite.io">play.satellite.io</a> is still down though</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:25:36-0800" alias="sam"><div>naw I can get to iit</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:25:39-0800" alias="sam"><div>check it out</div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:26:10-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">whattttt, that&apos;s so weird, doesn&apos;t work for me</span></div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:26:17-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;ll try again in a few mins</span></div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:26:33-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">what&apos;s the link you are using?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:27:15-0800" alias="sam"><div>HUH</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:27:17-0800" alias="sam"><div>you are right</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:27:26-0800" alias="sam"><div>i went through heroku</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:27:30-0800" alias="sam"><div>it must be a dns thing</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:27:32-0800" alias="sam"><div>one sec</div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:27:35-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">ahhhh icic</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:34:39-0800" alias="sam"><div>okay</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:34:41-0800" alias="sam"><div>i think it&apos;s up</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:35:16-0800" alias="sam"><div>I&apos;d give it an hour or so to update cloudflare&apos;s ip tables</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:35:33-0800" alias="sam"><div>usually it&apos;s must faster, though</div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:35:49-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">can you send me the heroku url as well, just incase?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:36:30-0800" alias="sam"><div>sure</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:36:42-0800" alias="sam"><div>i can authorize you as well, i think</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:36:44-0800" alias="sam"><div>one sec</div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:36:50-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">dude, thank you so much</span></div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:37:02-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">seriously, you&apos;re going above and beyond</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:37:05-0800" alias="sam"><div><a href="http://satellite-game.herokuapp.com">satellite-game.herokuapp.com</a><br /></div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:37:15-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">this is very much appreciated</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:37:24-0800" alias="sam"><div>can you c/p your email?</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:37:31-0800" alias="sam"><div>i can&apos;t see it from my terminal</div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:37:34-0800" alias="Brandon Cooper"><div><a href="mailto:cooperjbrandon@gmail.com" style="font-family: Helvetica; font-size: 12pt;">cooperjbrandon@gmail.com</a></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:37:58-0800" alias="sam"><div>sent</div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T17:39:31-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">hmm didn&apos;t get it</span></div></message>
+<status type="offline" sender="cooperjbrandon@gmail.com" time="2014-12-01T17:51:47-0800" alias="Brandon Cooper"></status>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:57:32-0800" alias="sam"><div>yeah it disappeared</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:57:35-0800" alias="sam"><div>sent it again </div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:57:52-0800" alias="sam"><div>also wrote a small script to ping the server for a month</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-01T17:59:11-0800" alias="sam"><div>…and dns is locked in. play.satellite should be working again</div></message>
+<status type="online" sender="cooperjbrandon@gmail.com" time="2014-12-01T19:19:10-0800" alias="Brandon Cooper"></status>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T19:20:33-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">awesome man! dude you rock</span></div></message>
+<message sender="cooperjbrandon@gmail.com" time="2014-12-01T19:20:54-0800" alias="Brandon Cooper"><div><span style="font-family: Helvetica; font-size: 12pt;">still didn&apos;t get though for some reason</span></div></message>
+<status type="offline" sender="cooperjbrandon@gmail.com" time="2014-12-01T19:25:33-0800" alias="Brandon Cooper"></status>
+<status type="online" sender="cooperjbrandon@gmail.com" time="2014-12-01T19:28:39-0800" alias="Brandon Cooper"></status>
+<status type="offline" sender="cooperjbrandon@gmail.com" time="2014-12-01T19:41:43-0800" alias="Brandon Cooper"></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-01T19:54:00-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-01T19:54:09-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-01T20:07:09-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-01T20:07:15-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-01T20:10:10-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-01T21:46:48-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-01T21:46:55-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-01T22:07:57-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-02T01:58:36-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-02T01:59:38-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-02T02:50:23-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-02T02:53:44-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-02T02:54:12-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-02T03:52:42-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-02T04:05:44-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-02T11:22:48-0800"><div>You have connected</div></status>
+<status type="away" sender="cooperjbrandon@gmail.com" time="2014-12-02T11:56:19-0800" alias="Brandon Cooper"></status>
+<status type="online" sender="cooperjbrandon@gmail.com" time="2014-12-02T12:23:49-0800" alias="Brandon Cooper"></status>
+<status type="offline" sender="cooperjbrandon@gmail.com" time="2014-12-02T12:43:12-0800" alias="Brandon Cooper"></status>
+<status type="online" sender="cooperjbrandon@gmail.com" time="2014-12-02T12:51:18-0800" alias="Brandon Cooper"></status>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-12-02T14:14:44-0800"></event></chat>

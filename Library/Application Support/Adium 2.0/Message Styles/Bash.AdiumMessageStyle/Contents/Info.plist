@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllowTextColors</key>
+	<false/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Bash</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.adiumx.bash.style</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>1.1</string>
+	<key>CFBundleName</key>
+	<string>Bash</string>
+	<key>CFBundlePackageType</key>
+	<string>AdIM</string>
+	<key>DefaultBackgroundColor</key>
+	<string>000000</string>
+	<key>DefaultFontFamily</key>
+	<string>Monaco</string>
+	<key>DefaultFontSize</key>
+	<integer>10</integer>
+	<key>DisableCombineConsecutive</key>
+	<true/>
+	<key>DisableCustomBackground</key>
+	<true/>
+	<key>DisplayNameForNoVariant</key>
+	<string>None</string>
+	<key>DefaultVariant</key>
+	<string>yellow and white</string>
+	<key>MessageViewVersion</key>
+	<integer>3</integer>
+	<key>ShowsUserIcons</key>
+	<false/>
+</dict>
+</plist>

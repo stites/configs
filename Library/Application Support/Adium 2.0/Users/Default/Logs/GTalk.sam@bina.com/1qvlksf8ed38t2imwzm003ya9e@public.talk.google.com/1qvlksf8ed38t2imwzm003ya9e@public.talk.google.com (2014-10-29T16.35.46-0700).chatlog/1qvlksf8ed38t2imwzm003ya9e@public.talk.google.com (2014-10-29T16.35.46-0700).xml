@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-10-29T16:35:46-0700"></event>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-29T16:35:46-0700" alias="Greg Gibeling"><div><a href="https://binatechnologies.atlassian.net/builds/download/SEQ-IT8-JOB1/build_logs/SEQ-IT8-JOB1-2.log" style="font-family: Helvetica; font-size: 12pt;">https://binatechnologies.atlassian.net/builds/download/SEQ-IT8-JOB1/build_logs/SEQ-IT8-JOB1-2.log</a></div></message>
+<message sender="sam@bina.com" time="2014-10-29T16:39:22-0700" alias="sam"><div><a href="https://stackoverflow.com/questions/12913141/installing-from-npm-fails">https://stackoverflow.com/questions/12913141/installing-from-npm-fails</a></div></message>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-29T17:28:12-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-29T17:46:11-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-29T18:01:20-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-29T18:02:15-0700" alias="Greg Gibeling"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-29T18:33:50-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-30T10:53:11-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-30T11:12:47-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-30T11:19:12-0700"><div>You have connected</div></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T11:28:58-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T11:28:58-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T11:30:03-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T11:36:14-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T11:51:03-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T12:25:24-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T12:38:22-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T13:20:17-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T13:24:45-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T14:32:31-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T14:33:02-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T14:58:30-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T15:00:44-0700" alias="Greg Gibeling"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-10-30T15:13:57-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-30T15:41:52-0700"><div>You have connected</div></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T15:58:03-0700" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T16:11:54-0700" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-10-30T16:38:57-0700" alias="Greg Gibeling"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-10-30T16:54:29-0700"></event></chat>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2015-01-27T11:08:07-0800"></event>
+<status type="connected" time="2015-01-27T11:08:07-0800"><div>You have connected</div></status>
+<status type="purple" time="2015-01-27T11:08:07-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">anastasia.aizman@gmail.com is now known as Anastasia A.<br /></span></div></status>
+<status type="purple" time="2015-01-27T11:08:07-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">anastasia.aizman@gmail.com is now known as Anastasia A.<br /></span></div></status>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:08:13-0800" alias="sam"><div>MMM</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:08:15-0800" alias="sam"><div>okay</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:08:18-0800" alias="sam"><div>in the office now</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:08:20-0800" alias="sam"><div>1</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:08:34-0800" alias="sam"><div>i thought we were doing the bootcamp together tomorrow in the morning</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:08:52-0800" alias="sam"><div>2</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:08:55-0800" alias="sam"><div>yes, that</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:09:09-0800" alias="sam"><div>I get a notification once in a blue moon</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:09:14-0800" alias="sam"><div>3 yes</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-01-27T11:10:51-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">maybe i should go then.....</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:11:46-0800" alias="sam"><div>yes</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:11:49-0800" alias="sam"><div>yes you should!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-01-27T11:11:56-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">but it hurrts</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:12:04-0800" alias="sam"><div>you mean bike?</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:12:05-0800" alias="sam"><div>well</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-01-27T11:12:11-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:12:12-0800" alias="sam"><div>if there&apos;s no class tomorrow...</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-01-27T11:14:22-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">ugh maybe i should maybe you&apos;re right</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-01-27T11:14:43-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">no,you&apos;re wrong</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-01-27T11:14:48-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">i&apos;m going to not go</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-01-27T11:14:54-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and then i&apos;m going to go on thursday</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-01-27T11:15:06-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">cause i think i need to give the bod a break</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-01-27T11:15:13-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">cause of reasons</span></div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2015-01-27T11:17:02-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-01-27T11:17:08-0800"><div>You have connected</div></status>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:17:12-0800" alias="sam"><div>: D</div></message>
+<message sender="stites.sr@gmail.com" time="2015-01-27T11:17:19-0800" alias="sam"><div>okay then — want me to pick you up?</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-01-27T11:17:31-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">no i&apos;ll ride over</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-01-27T11:17:32-0800" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">from here</span></div></message>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2015-01-27T11:20:41-0800"></event></chat>

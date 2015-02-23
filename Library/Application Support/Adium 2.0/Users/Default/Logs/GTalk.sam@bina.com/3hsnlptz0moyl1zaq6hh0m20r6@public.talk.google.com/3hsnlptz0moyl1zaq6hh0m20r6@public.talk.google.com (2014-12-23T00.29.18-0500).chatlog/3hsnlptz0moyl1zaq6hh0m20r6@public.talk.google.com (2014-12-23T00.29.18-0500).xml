@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-23T00:29:35-0500"></event>
+<message sender="sam@bina.com" time="2014-12-23T00:29:35-0500" alias="sam"><div>amir! you should check this out</div></message>
+<message sender="sam@bina.com" time="2014-12-23T00:29:36-0500" alias="sam"><div><a href="http://ui.lumapps.com">http://ui.lumapps.com</a></div></message>
+<message sender="sam@bina.com" time="2014-12-23T00:29:48-0500" alias="sam"><div>some of these google materials are pretty cool</div></message>
+<message sender="sam@bina.com" time="2014-12-23T00:30:01-0500" alias="sam"><div>and it all looks pretty aaim-like</div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-23T00:30:13-0500"></event></chat>

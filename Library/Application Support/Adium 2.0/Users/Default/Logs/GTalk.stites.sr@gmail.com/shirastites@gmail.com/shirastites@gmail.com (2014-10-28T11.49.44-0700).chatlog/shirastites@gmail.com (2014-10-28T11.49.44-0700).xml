@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-10-28T11:50:24-0700"></event>
+<status type="connected" time="2014-10-28T11:50:24-0700"><div>You have connected</div></status>
+<status type="purple" time="2014-10-28T11:55:42-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">shirastites@gmail.com is now known as * Shira *.<br /></span></div></status>
+<status type="online" sender="shirastites@gmail.com" time="2014-10-28T12:13:03-0700" alias="shira"></status>
+<status type="available" sender="shirastites@gmail.com" time="2014-10-28T12:13:03-0700" alias="shira"></status>
+<status type="offline" sender="shirastites@gmail.com" time="2014-10-28T12:14:53-0700" alias="shira"></status>
+<status type="online" sender="shirastites@gmail.com" time="2014-10-28T12:29:53-0700" alias="shira"></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-10-28T12:35:10-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-28T12:37:06-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-10-28T12:39:05-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-10-28T13:03:57-0700"><div>You have connected</div></status>
+<status type="offline" sender="shirastites@gmail.com" time="2014-10-28T13:05:36-0700" alias="shira"></status>
+<status type="online" sender="shirastites@gmail.com" time="2014-10-28T13:05:39-0700" alias="shira"></status>
+<status type="offline" sender="shirastites@gmail.com" time="2014-10-28T13:06:53-0700" alias="shira"></status>
+<status type="online" sender="shirastites@gmail.com" time="2014-10-28T13:26:14-0700" alias="shira"></status>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-10-28T13:26:52-0700"></event></chat>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-01-27T14:57:58-0800"></event>
+<status type="connected" time="2015-01-27T14:57:58-0800"><div>You have connected</div></status>
+<status type="purple" time="2015-01-27T14:57:58-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com is now known as Amirhossein Kiani.<br /></span></div></status>
+<message sender="sam@bina.com" time="2015-01-27T16:18:57-0800" alias="sam"><div>Please sign in to Jobvite<br /></div></message>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-27T17:03:40-0800" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-27T17:19:17-0800" alias="amir"></status>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-27T17:26:46-0800" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-27T17:29:11-0800" alias="amir"></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-27T17:29:11-0800" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-27T17:29:11-0800" alias="amir"></status>
+<status type="offline" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-27T17:42:54-0800" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-27T18:01:02-0800" alias="amir"></status>
+<status type="away" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-27T18:01:02-0800" alias="amir"></status>
+<status type="online" sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-27T18:01:09-0800" alias="amir"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-01-27T18:40:25-0800"></event></chat>

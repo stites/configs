@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-12-15T13:00:25-0800"></event>
+<message sender="shirastites@gmail.com" time="2014-12-15T13:00:25-0800" alias="shira"><div><span style="font-family: Helvetica; font-size: 12pt;">hey how long are you in dc til?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-15T13:00:58-0800" alias="sam"><div>the 29th</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-15T13:01:04-0800" alias="sam"><div>why? what&apos;s up?</div></message>
+<message sender="shirastites@gmail.com" time="2014-12-15T13:03:14-0800" alias="shira"><div><span style="font-family: Helvetica; font-size: 12pt;">just curious</span></div></message>
+<message sender="shirastites@gmail.com" time="2014-12-15T13:03:27-0800" alias="shira"><div><span style="font-family: Helvetica; font-size: 12pt;">i think you won&apos;t get to meet vik</span></div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-15T13:05:36-0800" alias="sam"><div><br />!</div></message>
+<message sender="stites.sr@gmail.com" time="2014-12-15T13:05:39-0800" alias="sam"><div>ahhh damn</div></message>
+<message sender="shirastites@gmail.com" time="2014-12-15T13:10:26-0800" alias="shira"><div><span style="font-family: Helvetica; font-size: 12pt;">it&apos;s all good, looking forward to seeing youuu</span></div></message>
+<status type="offline" sender="shirastites@gmail.com" time="2014-12-15T13:11:03-0800" alias="shira"></status>
+<status type="online" sender="shirastites@gmail.com" time="2014-12-15T18:52:06-0800" alias="shira"></status>
+<status type="online" sender="shirastites@gmail.com" time="2014-12-15T18:52:09-0800" alias="shira"></status>
+<status type="offline" sender="shirastites@gmail.com" time="2014-12-15T18:53:08-0800" alias="shira"></status>
+<status type="online" sender="shirastites@gmail.com" time="2014-12-15T18:55:17-0800" alias="shira"></status>
+<status type="offline" sender="shirastites@gmail.com" time="2014-12-15T19:01:45-0800" alias="shira"></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-15T19:31:18-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-15T22:18:48-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-15T22:25:35-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-15T22:25:43-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-15T22:39:13-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-15T22:39:22-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-15T22:45:16-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-15T22:57:29-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-12-15T23:09:14-0800" alias="sam"><div>You have disconnected</div></status>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-12-15T23:10:03-0800"></event></chat>

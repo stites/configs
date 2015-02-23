@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-02-04T13:22:13-0800"></event>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-04T13:22:13-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">hey</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-04T13:22:14-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">there?</span></div></message>
+<message sender="sam@bina.com" time="2015-02-04T13:22:24-0800" alias="sam"><div>yup</div></message>
+<message sender="sam@bina.com" time="2015-02-04T13:22:26-0800" alias="sam"><div>what&apos;s up?</div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-04T13:22:36-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">we&apos;re doing rave planning earlier</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-04T13:22:40-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">can i call u in?</span></div></message>
+<message sender="sam@bina.com" time="2015-02-04T13:22:45-0800" alias="sam"><div>of course</div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-02-04T13:22:54-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">whats a  good number?</span></div></message>
+<message sender="sam@bina.com" time="2015-02-04T13:22:58-0800" alias="sam"><div>7033991812</div></message>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-04T14:58:44-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-04T14:58:50-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-04T16:20:06-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-04T16:47:54-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-04T16:49:05-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-04T17:19:11-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-02-04T17:19:29-0800"></event></chat>

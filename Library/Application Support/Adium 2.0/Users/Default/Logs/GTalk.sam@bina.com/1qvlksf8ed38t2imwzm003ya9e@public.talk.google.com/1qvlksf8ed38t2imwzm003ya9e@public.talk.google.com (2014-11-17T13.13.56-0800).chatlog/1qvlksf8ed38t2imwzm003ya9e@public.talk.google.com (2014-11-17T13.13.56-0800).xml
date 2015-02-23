@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-11-17T13:14:01-0800"></event>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T13:14:01-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">ssh <a href="mailto:ubuntu@ec2-54-163-126-128.compute-1.amazonaws.com">ubuntu@ec2-54-163-126-128.compute-1.amazonaws.com</a></span></div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T13:14:18-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">sudo su bamboo</span></div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T13:14:20-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">cd </span><br /><br /><span style="font-family: Helvetica; font-size: 12pt;"> ~/bamboo-agent-home/xml-data/build-dir/SEQ-IT-JOB1/genomics/quality/src/main/webapp</span></div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T13:14:45-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">VERSION=$(../../../../../loomis2/sh/version-from-git) npm install --production --force</span></div></message>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T13:44:36-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T13:44:42-0800" alias="Greg Gibeling"></status>
+<status type="offline" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T13:47:45-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T14:13:33-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T14:13:33-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T14:18:23-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T14:33:32-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T14:35:07-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T14:54:20-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2014-11-17T15:08:33-0800" alias="Greg Gibeling"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-17T16:12:18-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-17T16:12:33-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-17T16:14:02-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-17T16:24:12-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-11-17T16:25:40-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-17T16:34:26-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-11-17T16:35:36-0800"></event></chat>

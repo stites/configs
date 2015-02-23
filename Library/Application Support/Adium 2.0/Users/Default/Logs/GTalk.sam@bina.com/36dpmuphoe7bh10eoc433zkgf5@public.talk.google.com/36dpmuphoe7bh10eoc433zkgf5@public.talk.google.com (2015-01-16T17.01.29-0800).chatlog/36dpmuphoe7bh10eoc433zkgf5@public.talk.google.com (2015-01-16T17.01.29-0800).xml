@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-01-16T17:01:29-0800"></event>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:01:29-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">btw</span></div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:01:30-0800" alias="John Mu"><div><a href="https://reno-00:19003/#/binabox/monitor/1/51061e19-3dae-48df-ab42-18229b1a47a6" style="font-family: Helvetica; font-size: 12pt;">https://reno-00:19003/#/binabox/monitor/1/51061e19-3dae-48df-ab42-18229b1a47a6</a></div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:01:39-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">can you see the messed up bars here?</span></div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:01:53-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">Austin could not see them on his computer before</span></div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:02:04-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">say for pindel</span></div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:04:08-0800" alias="sam"><div>yeah i see them</div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:04:36-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">ok, just checking if it was only my computer/browser</span></div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:04:42-0800" alias="sam"><div>nope!</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:05:40-0800" alias="sam"><div>say</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:05:44-0800" alias="sam"><div>i have a question</div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:05:49-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">ok</span></div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:05:53-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">go ahead</span></div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:06:12-0800" alias="sam"><div>my brain feels like it&apos;s dying from all this UI stuff again</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:06:24-0800" alias="sam"><div>and so I was looking into some ML projects</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:06:30-0800" alias="sam"><div>I was wondering</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:06:58-0800" alias="sam"><div>is there any interesting genomics data lying around that I could try to impliment?</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:07:30-0800" alias="sam"><div>specifically I was just going to mess around with this</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:07:31-0800" alias="sam"><div><a href="http://torch.ch">torch.ch</a></div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:07:33-0800" alias="sam"><div>this weekend</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:07:47-0800" alias="sam"><div>and wanted to just try some easy stuff on my computer</div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:07:47-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">yes, we do for the venter project. However, it is currently stuck at marghoob and I generating features </span></div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:07:57-0800" alias="sam"><div>ahhhhh!</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:08:06-0800" alias="sam"><div>i don&apos;t think i can do anything with Science data</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:08:16-0800" alias="sam"><div>that&apos;s probably some kind of legal problem</div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:08:22-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">hahaha</span></div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:08:37-0800" alias="sam"><div>I was more asking for large-ish data sets</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:08:58-0800" alias="sam"><div>and maybe some papers where I could try to follow along with some neural nets</div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:09:07-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">if you want to play with datasets, i would recommend using the UCI datasets</span></div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:09:31-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">otherwise you will be spending a lot of time cleaning the data, etc..</span></div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:09:58-0800" alias="sam"><div>perfect!</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:09:59-0800" alias="sam"><div>thanks</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:10:52-0800" alias="sam"><div>and where do you think should look for for NN papers?</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:11:11-0800" alias="sam"><div>oh this repo!</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:11:14-0800" alias="sam"><div>i know this one</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:11:15-0800" alias="sam"><div>cool!</div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:11:58-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">hmmm, for NN, I would look at the proceedings of the main conferences, ICML, UAI, KDD</span></div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:12:09-0800" alias="sam"><div>perfect!</div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:12:13-0800" alias="sam"><div>thans john!</div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:12:17-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">no worries</span></div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:13:42-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">also if you can&apos;t access any paper, you can bug me for the pdf... until september this year</span></div></message>
+<message sender="sam@bina.com" time="2015-01-16T17:13:54-0800" alias="sam"><div>great!</div></message>
+<status type="away" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:35:13-0800" alias="John Mu"></status>
+<status type="online" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-01-16T17:35:36-0800" alias="John Mu"></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-01-16T17:40:11-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-01-16T23:55:58-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-01-16T23:56:41-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-01-17T09:44:09-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-01-17T09:44:23-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-01-17T16:59:07-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-01-17T17:22:23-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-01-17T22:45:58-0800"><div>You have connected</div></status></chat>

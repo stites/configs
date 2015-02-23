@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-30T11:49:55-0800"></event>
+<message sender="sam@bina.com" time="2014-12-30T11:49:55-0800" alias="sam"><div>hey fernando!</div></message>
+<status type="online" sender="fernando@bina.com" time="2014-12-30T11:49:58-0800" alias="Fernando Claverino"></status>
+<message sender="fernando@bina.com" time="2014-12-30T11:50:03-0800" alias="Fernando Claverino"><div><span style="font-family: Helvetica; font-size: 12pt;">hey Sam</span></div></message>
+<message sender="sam@bina.com" time="2014-12-30T11:50:21-0800" alias="sam"><div>i was wondering if you had a moment to go over some smart table stuff with me!</div></message>
+<message sender="fernando@bina.com" time="2014-12-30T11:50:30-0800" alias="Fernando Claverino"><div><span style="font-family: Helvetica; font-size: 12pt;">yes, sure</span></div></message>
+<message sender="sam@bina.com" time="2014-12-30T11:50:34-0800" alias="sam"><div>right now?</div></message>
+<message sender="fernando@bina.com" time="2014-12-30T11:50:41-0800" alias="Fernando Claverino"><div><span style="font-family: Helvetica; font-size: 12pt;">yes</span></div></message>
+<message sender="sam@bina.com" time="2014-12-30T11:50:59-0800" alias="sam"><div>awesome!</div></message>
+<message sender="sam@bina.com" time="2014-12-30T11:51:01-0800" alias="sam"><div>one second</div></message>
+<status type="away" sender="fernando@bina.com" time="2014-12-30T12:24:03-0800" alias="Fernando Claverino"></status>
+<status type="disconnected" sender="sam@bina.com" time="2014-12-30T12:47:18-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-12-30T12:59:42-0800"><div>You have connected</div></status>
+<status type="online" sender="fernando@bina.com" time="2014-12-30T13:00:50-0800" alias="Fernando Claverino"></status>
+<status type="offline" sender="fernando@bina.com" time="2014-12-30T13:15:50-0800" alias="Fernando Claverino"></status>
+<status type="online" sender="fernando@bina.com" time="2014-12-30T13:17:43-0800" alias="Fernando Claverino"></status>
+<status type="offline" sender="fernando@bina.com" time="2014-12-30T13:26:49-0800" alias="Fernando Claverino"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-30T13:28:22-0800"></event></chat>

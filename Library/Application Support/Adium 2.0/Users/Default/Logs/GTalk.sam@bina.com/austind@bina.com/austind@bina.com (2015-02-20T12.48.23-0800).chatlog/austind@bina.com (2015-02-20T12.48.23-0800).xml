@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-02-20T12:48:25-0800"></event>
+<message sender="sam@bina.com" time="2015-02-20T12:48:25-0800" alias="sam"><div><a href="https://www.coursera.org/course/hetero">https://www.coursera.org/course/hetero</a></div></message>
+<message sender="sam@bina.com" time="2015-02-20T12:48:30-0800" alias="sam"><div><a href="https://www.coursera.org/course/mmds">https://www.coursera.org/course/mmds</a></div></message>
+<status type="away" sender="austind@bina.com" time="2015-02-20T13:08:54-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">I&apos;m not here right now</span></div></status>
+<status type="idle" sender="austind@bina.com" time="2015-02-20T13:08:54-0800" alias="austin"></status>
+<status type="available" sender="austind@bina.com" time="2015-02-20T13:11:45-0800" alias="austin"></status>
+<status type="online" sender="austind@bina.com" time="2015-02-20T13:11:45-0800" alias="austin"></status>
+<status type="away" sender="austind@bina.com" time="2015-02-20T13:22:52-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">I&apos;m not here right now</span></div></status>
+<status type="idle" sender="austind@bina.com" time="2015-02-20T13:22:52-0800" alias="austin"></status>
+<status type="available" sender="austind@bina.com" time="2015-02-20T13:24:04-0800" alias="austin"></status>
+<status type="online" sender="austind@bina.com" time="2015-02-20T13:24:04-0800" alias="austin"></status>
+<status type="away" sender="austind@bina.com" time="2015-02-20T14:37:56-0800" alias="austin"><div><span style="font-family: Helvetica; font-size: 12pt;">I&apos;m not here right now</span></div></status>
+<status type="idle" sender="austind@bina.com" time="2015-02-20T14:37:56-0800" alias="austin"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-02-20T14:38:00-0800"></event></chat>

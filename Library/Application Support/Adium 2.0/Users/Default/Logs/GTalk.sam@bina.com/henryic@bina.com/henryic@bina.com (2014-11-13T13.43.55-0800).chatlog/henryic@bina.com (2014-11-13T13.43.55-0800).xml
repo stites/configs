@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-11-13T13:43:55-0800"></event>
+<message sender="henryic@bina.com" time="2014-11-13T13:43:55-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">will you have some time today to take a look at SEQ-3426 with me?</span></div></message>
+<message sender="sam@bina.com" time="2014-11-13T13:44:10-0800" alias="sam"><div>i&apos;m looking at it now</div></message>
+<message sender="sam@bina.com" time="2014-11-13T13:44:22-0800" alias="sam"><div>one sec</div></message>
+<status type="away" sender="henryic@bina.com" time="2014-11-13T15:28:52-0800"></status>
+<status type="online" sender="henryic@bina.com" time="2014-11-13T15:32:00-0800"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-11-13T16:17:49-0800"></event></chat>

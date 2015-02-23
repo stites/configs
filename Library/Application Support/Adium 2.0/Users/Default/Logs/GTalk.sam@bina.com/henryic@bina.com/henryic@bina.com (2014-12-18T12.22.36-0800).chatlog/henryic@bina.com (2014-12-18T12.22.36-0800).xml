@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-18T12:22:46-0800"></event>
+<message sender="sam@bina.com" time="2014-12-18T12:22:46-0800" alias="sam"><div>fixed SEQ-3520, just fyi</div></message>
+<message sender="henryic@bina.com" time="2014-12-18T12:25:27-0800" alias="henry"><div><span style="font-family: Helvetica; font-size: 12pt;">sweet, thanks</span></div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-18T12:25:29-0800"></event></chat>

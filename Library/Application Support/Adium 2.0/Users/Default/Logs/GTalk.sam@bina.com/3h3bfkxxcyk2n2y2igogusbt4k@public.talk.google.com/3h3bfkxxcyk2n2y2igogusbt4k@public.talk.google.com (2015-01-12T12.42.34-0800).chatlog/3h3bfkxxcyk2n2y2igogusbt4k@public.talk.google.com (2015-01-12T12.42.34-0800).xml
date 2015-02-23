@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-01-12T12:42:47-0800"></event>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-01-12T12:42:46-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">can you point me to a test job where the somatic qc shows up?</span></div></message>
+<message sender="sam@bina.com" time="2015-01-12T12:43:09-0800" alias="sam"><div>i keep them all on my own mount</div></message>
+<message sender="sam@bina.com" time="2015-01-12T12:43:19-0800" alias="sam"><div>check out...</div></message>
+<message sender="sam@bina.com" time="2015-01-12T12:43:23-0800" alias="sam"><div>oh!</div></message>
+<message sender="sam@bina.com" time="2015-01-12T12:43:29-0800" alias="sam"><div>you can go to t-rex:18601</div></message>
+<message sender="sam@bina.com" time="2015-01-12T12:43:30-0800" alias="sam"><div>or</div></message>
+<message sender="sam@bina.com" time="2015-01-12T12:45:04-0800" alias="sam"><div>mount this</div></message>
+<message sender="sam@bina.com" time="2015-01-12T12:45:04-0800" alias="sam"><div>kodiak:/volumes/river/shared/users/sam/reportsV3</div></message>
+<message sender="sam@bina.com" time="2015-01-12T12:45:09-0800" alias="sam"><div>and just search for somatic</div></message>
+<message sender="sam@bina.com" time="2015-01-12T12:45:19-0800" alias="sam"><div>there are only 3 jobs on it</div></message>
+<message sender="sam@bina.com" time="2015-01-12T12:45:29-0800" alias="sam"><div>so it should be a fast mount</div></message>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-01-12T12:46:07-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">thanks.</span></div></message>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-01-12T12:47:00-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">and what is the job id?</span></div></message>
+<message sender="sam@bina.com" time="2015-01-12T12:47:17-0800" alias="sam"><div><a href="http://localhost:1337/?#/binabox/view/6/13608338-da9f-4213-96c6-37784c59d819">13608338-da9f-4213-96c6-37784c59d819</a></div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2015-01-12T14:47:36-0800"></event></chat>

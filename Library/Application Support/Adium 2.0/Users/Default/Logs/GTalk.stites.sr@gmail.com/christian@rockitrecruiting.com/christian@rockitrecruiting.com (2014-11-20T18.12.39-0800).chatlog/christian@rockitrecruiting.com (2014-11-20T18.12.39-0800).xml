@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-11-20T18:12:50-0800"></event>
+<message sender="stites.sr@gmail.com" time="2014-11-20T18:12:50-0800" alias="sam"><div>hey! so are we still on for drinks?</div></message>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-20T18:51:53-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-20T20:13:20-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-20T20:13:40-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-20T20:17:39-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-20T20:56:21-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-20T20:57:35-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-20T20:57:57-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-20T22:21:02-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-20T22:58:00-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-20T23:07:02-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="stites.sr@gmail.com" time="2014-11-20T23:11:30-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-21T09:41:31-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-11-21T09:41:50-0800"></event></chat>

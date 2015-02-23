@@ -1,0 +1,15 @@
+@import url("../main.css");
+body {color: #FFF; font-weight: normal;}
+a {color: #0047AB;}
+a:active, a:hover {text-decoration: none;}
+
+#sendername {color: #fdfc7e;}
+#service {color: #71c24b; text-transform: lowercase;}
+#sn {color: #191fb1;}
+#dollar {color: #FFF;}
+
+#incoming {color: #71c24b;}
+#incoming em {color: #71c24b; background-color: #333;}
+
+#status {color: #EEE;}
+#filetransfer {color: #71c24b;}

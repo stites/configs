@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-17T17:24:27-0800"></event>
+<message sender="0d6gt86ndy30s1l0gtgqi0o4zs@public.talk.google.com" time="2014-12-17T17:24:27-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">Hey Sam what time do you arrive at your destination tomorrow?</span></div></message>
+<message sender="0d6gt86ndy30s1l0gtgqi0o4zs@public.talk.google.com" time="2014-12-17T17:24:32-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">can we schedule the call when you get there?</span></div></message>
+<message sender="0d6gt86ndy30s1l0gtgqi0o4zs@public.talk.google.com" time="2014-12-17T17:24:48-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">Roche people are not going to be here until 11:30am</span></div></message>
+<message sender="sam@bina.com" time="2014-12-17T17:28:23-0800" alias="sam"><div>ahhh</div></message>
+<message sender="sam@bina.com" time="2014-12-17T17:28:24-0800" alias="sam"><div>well</div></message>
+<message sender="sam@bina.com" time="2014-12-17T17:28:37-0800" alias="sam"><div>i have a layover in texas which might work</div></message>
+<message sender="sam@bina.com" time="2014-12-17T17:28:43-0800" alias="sam"><div>but I think it&apos;s pretty short</div></message>
+<message sender="sam@bina.com" time="2014-12-17T17:28:45-0800" alias="sam"><div>one second</div></message>
+<message sender="sam@bina.com" time="2014-12-17T17:29:44-0800" alias="sam"><div>so my flight details are that I take off at 11:50</div></message>
+<message sender="sam@bina.com" time="2014-12-17T17:32:52-0800" alias="sam"><div>i have an hour from 3:20pm (5:20 CST) to 4:20 (5:20 CST) but I&apos;m not sure how easy that will be</div></message>
+<message sender="sam@bina.com" time="2014-12-17T17:33:04-0800" alias="sam"><div>sorry</div></message>
+<message sender="sam@bina.com" time="2014-12-17T17:33:35-0800" alias="sam"><div>3:20pm (5:20 CST) to 4:05pm (6:05 CST)</div></message>
+<message sender="sam@bina.com" time="2014-12-17T17:34:06-0800" alias="sam"><div>and then I touch down in DC at 6:40pm PST (9:40 EST)</div></message>
+<status type="purple" time="2014-12-17T17:34:16-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">0d6gt86ndy30s1l0gtgqi0o4zs@public.talk.google.com is now known as Hoda Mirhashemi.<br /></span></div></status>
+<status type="away" sender="0d6gt86ndy30s1l0gtgqi0o4zs@public.talk.google.com" time="2014-12-17T17:41:04-0800" alias="Hoda Mirhashemi"></status>
+<status type="offline" sender="0d6gt86ndy30s1l0gtgqi0o4zs@public.talk.google.com" time="2014-12-17T17:44:45-0800" alias="Hoda Mirhashemi"></status>
+<status type="online" sender="0d6gt86ndy30s1l0gtgqi0o4zs@public.talk.google.com" time="2014-12-17T17:45:09-0800" alias="Hoda Mirhashemi"></status>
+<status type="online" sender="0d6gt86ndy30s1l0gtgqi0o4zs@public.talk.google.com" time="2014-12-17T18:02:54-0800" alias="Hoda Mirhashemi"></status>
+<status type="offline" sender="0d6gt86ndy30s1l0gtgqi0o4zs@public.talk.google.com" time="2014-12-17T18:03:59-0800" alias="Hoda Mirhashemi"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-17T18:05:07-0800"></event></chat>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="1677870028" service="Facebook" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="1677870028" time="2014-11-24T12:27:56-0800"></event>
+<status type="connected" time="2014-11-24T12:27:55-0800"><div>You have connected</div></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T12:35:25-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T12:38:53-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T12:42:10-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T12:44:34-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T12:49:51-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T12:59:12-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T13:04:06-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T13:08:06-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T13:11:25-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T13:13:05-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T13:16:07-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T13:16:30-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T13:23:47-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T13:24:53-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T13:28:15-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T13:32:12-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T13:35:39-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T13:41:35-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T13:45:51-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T13:48:15-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T13:52:25-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T14:06:54-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T14:10:13-0800" alias="Tomasz Kolodziejak"></status>
+<status type="disconnected" sender="1677870028" time="2014-11-24T14:46:50-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-24T14:47:00-0800"><div>You have connected</div></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T15:01:21-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T15:16:32-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T15:20:09-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T15:24:17-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T15:26:44-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T15:30:47-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T15:45:15-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T15:52:13-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T16:10:00-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T16:15:02-0800" alias="Tomasz Kolodziejak"></status>
+<status type="disconnected" sender="1677870028" time="2014-11-24T16:36:44-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-24T16:36:53-0800"><div>You have connected</div></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T16:39:23-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T16:41:37-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T16:41:53-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T16:44:01-0800" alias="Tomasz Kolodziejak"></status>
+<status type="disconnected" sender="1677870028" time="2014-11-24T16:45:11-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-24T16:45:32-0800"><div>You have connected</div></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T18:13:34-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T18:18:36-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-24T18:39:48-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-24T18:43:46-0800" alias="Tomasz Kolodziejak"></status>
+<status type="disconnected" sender="1677870028" time="2014-11-24T19:15:44-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T00:13:04-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="1677870028" time="2014-11-25T00:20:12-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T00:22:38-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="1677870028" time="2014-11-25T01:10:08-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T10:58:52-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="1677870028" time="2014-11-25T11:01:53-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T11:02:02-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="1677870028" time="2014-11-25T11:03:43-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T11:06:26-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="1677870028" time="2014-11-25T11:07:51-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T11:13:46-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="1677870028" time="2014-11-25T11:17:15-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T11:23:56-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="1677870028" time="2014-11-25T11:29:29-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2014-11-25T11:32:06-0800"><div>You have connected</div></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-25T13:07:17-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-25T13:13:47-0800" alias="Tomasz Kolodziejak"></status>
+<status type="online" sender="-561881794@chat.facebook.com" time="2014-11-25T13:22:46-0800" alias="Tomasz Kolodziejak"></status>
+<status type="offline" sender="-561881794@chat.facebook.com" time="2014-11-25T13:24:56-0800" alias="Tomasz Kolodziejak"></status>
+<event type="windowClosed" sender="1677870028" time="2014-11-25T13:40:35-0800"></event></chat>

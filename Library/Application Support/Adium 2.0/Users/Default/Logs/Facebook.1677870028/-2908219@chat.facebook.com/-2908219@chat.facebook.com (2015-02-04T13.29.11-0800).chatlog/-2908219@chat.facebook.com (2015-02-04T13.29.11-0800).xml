@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="1677870028" service="Facebook" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="1677870028" time="2015-02-04T13:29:11-0800"></event>
+<message sender="-2908219@chat.facebook.com" time="2015-02-04T13:29:11-0800" alias="Anna Aizman"><div><span style="font-family: Helvetica; font-size: 12pt;">Thanks, Sam! :D</span></div></message>
+<event type="windowClosed" sender="1677870028" time="2015-02-04T13:53:49-0800"></event></chat>

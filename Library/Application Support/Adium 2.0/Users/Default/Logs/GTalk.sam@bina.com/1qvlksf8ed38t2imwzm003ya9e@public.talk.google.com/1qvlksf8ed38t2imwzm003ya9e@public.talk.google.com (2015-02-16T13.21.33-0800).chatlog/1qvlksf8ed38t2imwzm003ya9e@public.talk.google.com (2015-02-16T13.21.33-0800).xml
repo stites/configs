@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-02-16T13:21:39-0800"></event>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T13:21:39-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Thanks for the meeting reschedule.  Much appreciated.  Sorry about the confusion</span></div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2015-02-16T13:36:13-0800"></event>
+<event type="windowOpened" sender="sam@bina.com" time="2015-02-16T13:46:00-0800"></event>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T13:46:01-0800" alias="Greg Gibeling"><div><a href="https://hilo:19011/?#/binabox/view/2/57888949-1935-4492-81ab-3d3e872a01ad" style="font-family: Helvetica; font-size: 12pt;">https://hilo:19011/?#/binabox/view/2/57888949-1935-4492-81ab-3d3e872a01ad</a></div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T13:46:05-0800" alias="Greg Gibeling"><div><a href="https://hilo:19011/?#/binabox/view/2/e9e5695f-e73c-455d-b640-4627cd98027b" style="font-family: Helvetica; font-size: 12pt;">https://hilo:19011/?#/binabox/view/2/e9e5695f-e73c-455d-b640-4627cd98027b</a></div></message>
+<message sender="sam@bina.com" time="2015-02-16T14:10:35-0800" alias="sam"><div><a href="https://github.com/BinaTechnologies/seqalto/pull/3705">https://github.com/BinaTechnologies/seqalto/pull/3705</a></div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T14:11:45-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Thank you!</span></div></message>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T15:14:51-0800" alias="Greg Gibeling"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-02-16T15:38:32-0800"></event>
+<event type="windowOpened" sender="sam@bina.com" time="2015-02-16T15:45:18-0800"></event>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T16:02:11-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T16:21:39-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T16:34:33-0800" alias="Greg Gibeling"></status>
+<message sender="sam@bina.com" time="2015-02-16T16:38:35-0800" alias="sam"><div>hey greg want to do this meeting?</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T16:40:05-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">bio break, then meeting</span></div></message>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T17:17:03-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T17:21:47-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T18:09:47-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T18:21:23-0800" alias="Greg Gibeling"></status>
+<status type="offline" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T18:43:54-0800" alias="Greg Gibeling"></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-16T19:49:30-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-16T20:44:46-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-16T20:45:21-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-16T20:46:18-0800"><div>You have connected</div></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T20:47:33-0800" alias="Greg Gibeling"></status>
+<status type="offline" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-16T20:47:33-0800" alias="Greg Gibeling"></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-16T23:49:02-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-16T23:59:56-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-17T00:09:54-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-17T10:57:05-0800"><div>You have connected</div></status></chat>

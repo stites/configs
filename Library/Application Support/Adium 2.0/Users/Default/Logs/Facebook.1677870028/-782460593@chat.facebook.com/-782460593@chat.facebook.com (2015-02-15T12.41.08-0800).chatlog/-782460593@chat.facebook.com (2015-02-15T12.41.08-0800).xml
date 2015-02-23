@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="1677870028" service="Facebook" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="1677870028" time="2015-02-15T12:41:08-0800"></event>
+<message sender="-782460593@chat.facebook.com" time="2015-02-15T12:41:08-0800" alias="Scourge Nuggles"><div><span style="font-family: Helvetica; font-size: 12pt;">yo!</span></div></message>
+<message sender="-782460593@chat.facebook.com" time="2015-02-15T12:41:11-0800" alias="Scourge Nuggles"><div><span style="font-family: Helvetica; font-size: 12pt;">happy birthday</span></div></message>
+<message sender="-782460593@chat.facebook.com" time="2015-02-15T12:41:14-0800" alias="Scourge Nuggles"><div><span style="font-family: Helvetica; font-size: 12pt;">!!</span></div></message>
+<message sender="-782460593@chat.facebook.com" time="2015-02-15T12:41:27-0800" alias="Scourge Nuggles"><div><span style="font-family: Helvetica; font-size: 12pt;">we&apos;re old as fuck now! weird eh?</span></div></message>
+<message sender="-782460593@chat.facebook.com" time="2015-02-15T12:42:39-0800" alias="Scourge Nuggles"><div><span style="font-family: Helvetica; font-size: 12pt;">Wanted to say thank you for pointing me in the direction of hack reactor, and sorry for not getting in touch sooner. I&apos;m on thesis status now, the work load and remote time difference crushed my free time haha.</span></div></message>
+<message sender="-782460593@chat.facebook.com" time="2015-02-15T12:44:36-0800" alias="Scourge Nuggles"><div><span style="font-family: Helvetica; font-size: 12pt;">I have an idea I wanted to run by you. I&apos;m going to apply for HIR and and pitch them this but I want to speak to you as well and get your thoughts</span></div></message>
+<message sender="-782460593@chat.facebook.com" time="2015-02-15T12:44:58-0800" alias="Scourge Nuggles"><div><span style="font-family: Helvetica; font-size: 12pt;">I want to open an HR in HK, with a summer program dedicated to the expat students of HK</span></div></message>
+<message sender="-782460593@chat.facebook.com" time="2015-02-15T12:45:56-0800" alias="Scourge Nuggles"><div><span style="font-family: Helvetica; font-size: 12pt;">This will also serve as a secondary remote program hq, which will benefit all the HR remote students from hk/india/london, etc</span></div></message>
+<message sender="-782460593@chat.facebook.com" time="2015-02-15T12:46:39-0800" alias="Scourge Nuggles"><div><span style="font-family: Helvetica; font-size: 12pt;">I think this is very doable considering the people we know in hong kong, and my mothers connections with all the schools and banks in Hong kong because of her time as cfo of hkis</span></div></message>
+<message sender="-782460593@chat.facebook.com" time="2015-02-15T12:48:08-0800" alias="Scourge Nuggles"><div><span style="font-family: Helvetica; font-size: 12pt;">when I thought of this idea I thought of you, and I was wondering if you had any interest in pursuing this with me, before I speak to HR</span></div></message>
+<message sender="-782460593@chat.facebook.com" time="2015-02-15T12:48:56-0800" alias="Scourge Nuggles"><div><span style="font-family: Helvetica; font-size: 12pt;">Anyway sorry for the wall of text, Happy bday! Speak to you soon hopefully</span></div></message>
+<message sender="1677870028" time="2015-02-15T12:50:04-0800" alias="Sam Stites"><div>ah!</div></message>
+<message sender="1677870028" time="2015-02-15T12:50:07-0800" alias="Sam Stites"><div>lots of thoughts!</div></message>
+<message sender="1677870028" time="2015-02-15T12:50:18-0800" alias="Sam Stites"><div>first off</div></message>
+<message sender="1677870028" time="2015-02-15T12:50:47-0800" alias="Sam Stites"><div>thanks for the birthday wishes and for thinking of me!</div></message>
+<message sender="1677870028" time="2015-02-15T12:51:06-0800" alias="Sam Stites"><div>it&apos;s totally doable, what you&apos;re thinking of</div></message>
+<message sender="1677870028" time="2015-02-15T12:52:05-0800" alias="Sam Stites"><div>there is actually a group of alumns in HK that started a contracting shop out of there, since one of them is pretty active in the business/startup community there</div></message>
+<message sender="1677870028" time="2015-02-15T12:53:11-0800" alias="Sam Stites"><div>Willson Mok was with them until he had visa issues and had to move back to the US</div></message>
+<message sender="1677870028" time="2015-02-15T12:53:12-0800" alias="Sam Stites"><div><a href="https://www.facebook.com/willson.mock/about">https://www.facebook.com/willson.mock/about</a></div></message>
+<message sender="1677870028" time="2015-02-15T12:53:28-0800" alias="Sam Stites"><div>you should reach out to him!</div></message>
+<status type="offline" sender="-782460593@chat.facebook.com" time="2015-02-15T12:54:30-0800" alias="Scourge Nuggles"></status>
+<message sender="1677870028" time="2015-02-15T12:55:03-0800" alias="Sam Stites"><div>Unfortunately, I&apos;m pretty happy here in SF</div></message>
+<message sender="1677870028" time="2015-02-15T12:56:38-0800" alias="Sam Stites"><div>but I do know that, if you are interested in pursuing Remote Beta, you should have a chat with some of the staff members about what kinds of things need to be built for it</div></message>
+<message sender="1677870028" time="2015-02-15T12:56:54-0800" alias="Sam Stites"><div>because it&apos;s, as the name implies, still in beta</div></message>
+<message sender="1677870028" time="2015-02-15T12:58:11-0800" alias="Sam Stites"><div>and the infrastructure that supports it is still in development — i think?</div></message>
+<status type="purple" time="2015-02-15T12:59:38-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">-782460593@chat.facebook.com is now known as Scourge Nuggles.<br /></span></div></status>
+<event type="windowClosed" sender="1677870028" time="2015-02-15T13:00:00-0800"></event></chat>

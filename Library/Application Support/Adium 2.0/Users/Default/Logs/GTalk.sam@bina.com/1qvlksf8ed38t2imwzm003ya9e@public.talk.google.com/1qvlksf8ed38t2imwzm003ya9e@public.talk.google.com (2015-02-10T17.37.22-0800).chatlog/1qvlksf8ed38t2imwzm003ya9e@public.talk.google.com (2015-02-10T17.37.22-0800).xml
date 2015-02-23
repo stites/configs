@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-02-10T17:37:23-0800"></event>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-10T17:37:23-0800" alias="Greg Gibeling"><div><a href="https://binatechnologies.atlassian.net/browse/SEQ-3790" style="font-family: Helvetica; font-size: 12pt;">https://binatechnologies.atlassian.net/browse/SEQ-3790</a></div></message>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-10T18:44:05-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-10T20:07:41-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-10T20:29:24-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-10T20:30:34-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-10T20:41:00-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-10T23:48:10-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-11T02:15:21-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-11T09:43:11-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-11T10:32:45-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-11T10:33:43-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-11T10:34:15-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-11T11:06:13-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-02-11T11:06:15-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-11T11:07:24-0800"><div>You have connected</div></status>
+<message sender="sam@bina.com" time="2015-02-11T11:21:50-0800" alias="sam"><div>hey greg</div></message>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-11T11:35:37-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-11T11:35:37-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-11T11:45:56-0800" alias="Greg Gibeling"></status>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-11T11:46:02-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Yo</span></div></message>
+<message sender="sam@bina.com" time="2015-02-11T11:46:38-0800" alias="sam"><div>nevermind!</div></message>
+<message sender="sam@bina.com" time="2015-02-11T11:46:42-0800" alias="sam"><div>pull request in!</div></message>
+<message sender="sam@bina.com" time="2015-02-11T11:47:00-0800" alias="sam"><div>also added a comment to the ticket</div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-02-11T11:47:31-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Thanks</span></div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2015-02-11T12:13:19-0800"></event></chat>

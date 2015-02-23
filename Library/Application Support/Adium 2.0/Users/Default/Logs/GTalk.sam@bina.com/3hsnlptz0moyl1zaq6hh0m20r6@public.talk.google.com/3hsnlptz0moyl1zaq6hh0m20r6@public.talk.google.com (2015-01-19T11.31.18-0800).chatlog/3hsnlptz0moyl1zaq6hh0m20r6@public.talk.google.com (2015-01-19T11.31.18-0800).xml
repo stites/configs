@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-01-19T11:31:20-0800"></event>
+<message sender="sam@bina.com" time="2015-01-19T11:31:20-0800" alias="sam"><div><a href="http://typecsdev.com/">http://typecsdev.com/</a></div></message>
+<message sender="sam@bina.com" time="2015-01-19T11:31:25-0800" alias="sam"><div><a href="https://www.jetbrains.com/webstorm/help/typescript-support.html">https://www.jetbrains.com/webstorm/help/typescript-support.html</a></div></message>
+<message sender="sam@bina.com" time="2015-01-19T11:32:59-0800" alias="sam"><div><a href="http://blogs.msdn.com/b/typescript/archive/2015/01/16/announcing-typescript-1-4.aspx">http://blogs.msdn.com/b/typescript/archive/2015/01/16/announcing-typescript-1-4.aspx</a></div></message>
+<message sender="sam@bina.com" time="2015-01-19T11:33:13-0800" alias="sam"><div>also this was an announcement 2 days ago</div></message>
+<message sender="sam@bina.com" time="2015-01-19T11:33:18-0800" alias="sam"><div>with Typescript features</div></message>
+<message sender="sam@bina.com" time="2015-01-19T11:33:25-0800" alias="sam"><div>for their 1.4 release</div></message>
+<message sender="sam@bina.com" time="2015-01-19T11:35:14-0800" alias="sam"><div>also</div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-19T11:35:29-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">created a UI channel</span></div></message>
+<message sender="3hsnlptz0moyl1zaq6hh0m20r6@public.talk.google.com" time="2015-01-19T11:35:34-0800" alias="amir"><div><span style="font-family: Helvetica; font-size: 12pt;">write these there so others see it too</span></div></message>
+<message sender="sam@bina.com" time="2015-01-19T11:36:43-0800" alias="sam"><div>perfect!</div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2015-01-19T12:12:31-0800"></event></chat>

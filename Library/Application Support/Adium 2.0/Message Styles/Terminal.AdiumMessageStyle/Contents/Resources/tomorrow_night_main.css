@@ -1,0 +1,37 @@
+body
+{
+	color: #d1d2d3;
+	background-color: #1d1f21;
+	margin: 2px;
+	line-height: 1.4em;
+}
+
+.status {
+	margin: 5px 30px;
+}
+
+.history span {
+	opacity: .5!important;
+}
+
+#Chat {
+	padding-bottom: 2px;
+}
+
+a:link
+{
+	color: #de935f;
+	text-decoration: underline;
+}
+
+a:hover
+{
+	color: #cc6666;
+	text-decoration: underline;
+}
+
+a:active
+{
+	color: #b5bd68;
+	text-decoration: underline;
+}

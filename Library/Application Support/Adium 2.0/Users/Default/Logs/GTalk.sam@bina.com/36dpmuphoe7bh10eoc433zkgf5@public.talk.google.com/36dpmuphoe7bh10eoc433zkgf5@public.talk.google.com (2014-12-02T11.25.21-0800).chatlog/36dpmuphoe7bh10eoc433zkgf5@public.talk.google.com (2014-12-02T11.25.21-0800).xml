@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2014-12-02T11:25:22-0800"></event>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-12-02T11:25:22-0800" alias="John Mu"><div><a href="https://science:19007/#/binabox/view/4/8eca9402-2c3f-42d8-ad80-3d1f2cf4f63e" style="font-family: Helvetica; font-size: 12pt;">https://science:19007/#/binabox/view/4/8eca9402-2c3f-42d8-ad80-3d1f2cf4f63e</a></div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-12-02T11:26:08-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">also for that one if you look at the FASTQC stuff it kind of gets clipped off</span></div></message>
+<status type="online" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-12-02T12:04:43-0800" alias="John Mu"></status>
+<status type="away" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-12-02T12:43:06-0800" alias="John Mu"></status>
+<status type="online" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-12-02T12:54:16-0800" alias="John Mu"></status>
+<status type="away" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-12-02T13:11:31-0800" alias="John Mu"></status>
+<status type="online" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-12-02T13:14:06-0800" alias="John Mu"></status>
+<message sender="sam@bina.com" time="2014-12-02T13:40:43-0800" alias="sam"><div>hey john</div></message>
+<message sender="sam@bina.com" time="2014-12-02T13:41:03-0800" alias="sam"><div>have you come across any jobs that have empty VCF sections recently?</div></message>
+<message sender="sam@bina.com" time="2014-12-02T13:41:10-0800" alias="sam"><div>we have that problem at UW</div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-12-02T13:41:46-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">what do you mean by empty vcf sections?</span></div></message>
+<message sender="sam@bina.com" time="2014-12-02T13:42:08-0800" alias="sam"><div>like a vcf section with no information, but the section header in there</div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-12-02T13:42:33-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">no, i don&apos;t think so </span></div></message>
+<message sender="sam@bina.com" time="2014-12-02T13:42:38-0800" alias="sam"><div>mmk...</div></message>
+<message sender="sam@bina.com" time="2014-12-02T13:42:41-0800" alias="sam"><div>thanks!</div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-12-02T13:42:47-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">no worries!</span></div></message>
+<message sender="sam@bina.com" time="2014-12-02T13:42:58-0800" alias="sam"><div>one more question</div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-12-02T13:43:03-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">sure</span></div></message>
+<message sender="sam@bina.com" time="2014-12-02T13:43:12-0800" alias="sam"><div>if a user selects variant calling</div></message>
+<message sender="sam@bina.com" time="2014-12-02T13:43:30-0800" alias="sam"><div>i can assume that the indel and snp sections will have some content in them</div></message>
+<message sender="sam@bina.com" time="2014-12-02T13:43:31-0800" alias="sam"><div>right?</div></message>
+<message sender="sam@bina.com" time="2014-12-02T13:43:50-0800" alias="sam"><div>so these feilds</div></message>
+<message sender="sam@bina.com" time="2014-12-02T13:43:59-0800" alias="sam"><div><a href="https://www.dropbox.com/s/wlal2kp0lzzuor1/Screenshot%202014-12-02%2013.43.56.png?dl=0">https://www.dropbox.com/s/wlal2kp0lzzuor1/Screenshot%202014-12-02%2013.43.56.png?dl=0</a></div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2014-12-02T13:44:04-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">yes, unless the variant calling fails</span></div></message>
+<message sender="sam@bina.com" time="2014-12-02T13:44:06-0800" alias="sam"><div>there will be at least one</div></message>
+<message sender="sam@bina.com" time="2014-12-02T13:44:09-0800" alias="sam"><div>mmk</div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2014-12-02T14:14:41-0800"></event></chat>

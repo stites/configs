@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-01-26T10:54:55-0800"></event>
+<message sender="sam@bina.com" time="2015-01-26T10:54:55-0800" alias="sam"><div>Fernando!</div></message>
+<status type="online" sender="fernando@bina.com" time="2015-01-26T10:55:03-0800" alias="Fernando Claverino"></status>
+<message sender="fernando@bina.com" time="2015-01-26T10:55:08-0800" alias="Fernando Claverino"><div><span style="font-family: Helvetica; font-size: 12pt;">Hey Sam!</span></div></message>
+<message sender="sam@bina.com" time="2015-01-26T10:55:11-0800" alias="sam"><div>want to do a hangout to get through the stateprovider stuff?</div></message>
+<message sender="fernando@bina.com" time="2015-01-26T10:55:19-0800" alias="Fernando Claverino"><div><span style="font-family: Helvetica; font-size: 12pt;">yes, thanks</span></div></message>
+<message sender="sam@bina.com" time="2015-01-26T10:55:27-0800" alias="sam"><div>is now a good time?</div></message>
+<message sender="fernando@bina.com" time="2015-01-26T10:55:35-0800" alias="Fernando Claverino"><div><span style="font-family: Helvetica; font-size: 12pt;">let me a minute, I will look for my headset</span></div></message>
+<message sender="sam@bina.com" time="2015-01-26T10:55:44-0800" alias="sam"><div>same here!</div></message>
+<message sender="fernando@bina.com" time="2015-01-26T10:55:48-0800" alias="Fernando Claverino"><div><span style="font-family: Helvetica; font-size: 12pt;">yes is ok for me</span></div></message>
+<message sender="fernando@bina.com" time="2015-01-26T10:57:44-0800" alias="Fernando Claverino"><div><span style="font-family: Helvetica; font-size: 12pt;">I am ready</span></div></message>
+<message sender="sam@bina.com" time="2015-01-26T10:57:44-0800" alias="sam"><div>hold on! trying to find a room now</div></message>
+<status type="away" sender="fernando@bina.com" time="2015-01-26T11:19:40-0800" alias="Fernando Claverino"></status>
+<status type="offline" sender="fernando@bina.com" time="2015-01-26T11:24:51-0800" alias="Fernando Claverino"></status>
+<status type="online" sender="fernando@bina.com" time="2015-01-26T11:27:13-0800" alias="Fernando Claverino"></status>
+<message sender="fernando@bina.com" time="2015-01-26T11:27:57-0800" alias="Fernando Claverino"><div><span style="font-family: Helvetica; font-size: 12pt;">sorry Sam, my chrome is crashing</span></div></message>
+<message sender="fernando@bina.com" time="2015-01-26T11:28:20-0800" alias="Fernando Claverino"><div><span style="font-family: Helvetica; font-size: 12pt;">let me restart my computer</span></div></message>
+<status type="offline" sender="fernando@bina.com" time="2015-01-26T11:28:59-0800" alias="Fernando Claverino"></status>
+<status type="online" sender="fernando@bina.com" time="2015-01-26T11:36:19-0800" alias="Fernando Claverino"></status>
+<message sender="fernando@bina.com" time="2015-01-26T11:36:37-0800" alias="Fernando Claverino"><div><span style="font-family: Helvetica; font-size: 12pt;">Hi Sam, I am ready again</span></div></message>
+<message sender="fernando@bina.com" time="2015-01-26T11:36:41-0800" alias="Fernando Claverino"><div><span style="font-family: Helvetica; font-size: 12pt;">sorry for that</span></div></message>
+<message sender="sam@bina.com" time="2015-01-26T11:36:47-0800" alias="sam"><div>mmk!</div></message>
+<status type="online" sender="fernando@bina.com" time="2015-01-26T11:55:00-0800" alias="Fernando Claverino"></status>
+<status type="away" sender="fernando@bina.com" time="2015-01-26T12:09:08-0800" alias="Fernando Claverino"></status>
+<status type="online" sender="fernando@bina.com" time="2015-01-26T12:24:16-0800" alias="Fernando Claverino"></status>
+<status type="offline" sender="fernando@bina.com" time="2015-01-26T12:27:22-0800" alias="Fernando Claverino"></status>
+<status type="online" sender="fernando@bina.com" time="2015-01-26T12:28:28-0800" alias="Fernando Claverino"></status>
+<status type="away" sender="fernando@bina.com" time="2015-01-26T12:56:21-0800" alias="Fernando Claverino"></status>
+<status type="online" sender="fernando@bina.com" time="2015-01-26T13:03:46-0800" alias="Fernando Claverino"></status>
+<status type="offline" sender="fernando@bina.com" time="2015-01-26T13:11:33-0800" alias="Fernando Claverino"></status>
+<message sender="sam@bina.com" time="2015-01-26T14:05:13-0800" alias="sam"><div>fernando!</div></message>
+<message sender="sam@bina.com" time="2015-01-26T14:16:09-0800" alias="sam"><div>i just spoke with Amir — looks like I was wrong</div></message>
+<message sender="sam@bina.com" time="2015-01-26T14:16:37-0800" alias="sam"><div>We need to convert all the param queries (the ones that make sense) to use slashes, not params</div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2015-01-26T14:16:39-0800"></event></chat>
