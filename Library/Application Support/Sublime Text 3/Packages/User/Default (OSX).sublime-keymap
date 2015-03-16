@@ -1,6 +1,0 @@
-[
-// use `sublime.log_commands(True)` in the console to see everything 
-// that Sublime is doing. There isn't a comprehensive list atm. 
-// [Sublimetext Forums][http://goo.gl/ESwTXU]
-{ "keys": ["command+f3"], "command": "find_all_under" }
-]
