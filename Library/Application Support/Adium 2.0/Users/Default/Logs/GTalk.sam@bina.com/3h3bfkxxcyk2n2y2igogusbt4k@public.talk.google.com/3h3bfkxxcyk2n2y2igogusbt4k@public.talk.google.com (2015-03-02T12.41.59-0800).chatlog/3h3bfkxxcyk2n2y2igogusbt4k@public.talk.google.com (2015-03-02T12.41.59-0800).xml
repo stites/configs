@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-03-02T12:42:00-0800"></event>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-03-02T12:41:59-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">how do i enable mdna qc in the js?</span></div></message>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-03-02T14:45:03-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">??</span></div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:47:24-0800" alias="sam"><div>ah</div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:47:46-0800" alias="sam"><div>are you running off an itl?</div></message>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-03-02T14:47:55-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">not yet. but i&apos;d like to.</span></div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:48:17-0800" alias="sam"><div>will you be running the new or old UI?</div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:48:29-0800" alias="sam"><div>as in — is this a 2.4.1 or 2.5 feature?</div></message>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-03-02T14:48:33-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">2.5</span></div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:48:41-0800" alias="sam"><div>okay</div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:48:57-0800" alias="sam"><div>I think it&apos;s going to default to having mdna</div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:49:12-0800" alias="sam"><div>but if you can&apos;t get the UI </div></message>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-03-02T14:49:17-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">so if i merge from develop, mdna should be enabled?</span></div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:49:19-0800" alias="sam"><div>or if you wind up without it</div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:49:24-0800" alias="sam"><div>not yet</div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:49:27-0800" alias="sam"><div>have to talk to greg</div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:50:08-0800" alias="sam"><div>anyhow — if you want it this second, you can go to /portal/site/{src|dist}/common/configs.js</div></message>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-03-02T14:50:08-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">so it&apos;s not a simple change as in turning some variable from false to true in some javascript?</span></div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:50:14-0800" alias="sam"><div>and change the cariable</div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:50:18-0800" alias="sam"><div>variable*</div></message>
+<message sender="sam@bina.com" time="2015-03-02T14:50:52-0800" alias="sam"><div>it still is — it&apos;s just that the UI is in flux for the moment</div></message>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-03-02T15:24:11-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">okay, thanks.</span></div></message>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-03-02T17:30:39-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">how do you handle missing &quot;clusters&quot; field in the mdna json?</span></div></message>
+<message sender="sam@bina.com" time="2015-03-02T17:30:53-0800" alias="sam"><div>mmm, right now we dont</div></message>
+<message sender="sam@bina.com" time="2015-03-02T17:31:10-0800" alias="sam"><div>without the clusters the visualization is just a repeat of the table, really</div></message>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-03-02T17:55:11-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">is there an easy way to ignore the clustering and just draw the heatmap?</span></div></message>
+<message sender="sam@bina.com" time="2015-03-02T18:04:45-0800" alias="sam"><div>not at the moment</div></message>
+<message sender="sam@bina.com" time="2015-03-02T18:04:52-0800" alias="sam"><div>i can add it pretty quick though</div></message>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-03-02T18:05:32-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">thanks. that would be very helpful.</span></div></message>
+<message sender="sam@bina.com" time="2015-03-02T18:05:47-0800" alias="sam"><div>can you file a ticket for me?</div></message>
+<message sender="3h3bfkxxcyk2n2y2igogusbt4k@public.talk.google.com" time="2015-03-02T18:07:13-0800" alias="Marghoob Mohiyuddin"><div><span style="font-family: Helvetica; font-size: 12pt;">okay.</span></div></message>
+<status type="disconnected" sender="sam@bina.com" time="2015-03-02T20:30:18-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-03-02T21:33:45-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-03-02T23:56:42-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-03-02T23:56:49-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-03-02T23:57:58-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-03-03T08:47:01-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-03-03T09:23:26-0800"></event></chat>

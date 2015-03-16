@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="1677870028" service="Facebook" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="1677870028" time="2015-02-24T12:40:48-0800"></event>
+<message sender="-1331070002@chat.facebook.com" time="2015-02-24T12:40:47-0800" alias="Alex Prokop"><div><span style="font-family: Helvetica; font-size: 12pt;">Quite a swing</span></div></message>
+<message sender="-1331070002@chat.facebook.com" time="2015-02-24T12:40:54-0800" alias="Alex Prokop"><div><span style="font-family: Helvetica; font-size: 12pt;">Sure</span></div></message>
+<message sender="1677870028" time="2015-02-24T12:43:27-0800" alias="Sam Stites"><div>done!</div></message>
+<message sender="1677870028" time="2015-02-24T12:43:32-0800" alias="Sam Stites"><div>where are you working these days?</div></message>
+<status type="offline" sender="-1331070002@chat.facebook.com" time="2015-02-24T12:45:16-0800" alias="Alex Prokop"></status>
+<status type="online" sender="-1331070002@chat.facebook.com" time="2015-02-24T12:50:18-0800" alias="Alex Prokop"></status>
+<status type="offline" sender="-1331070002@chat.facebook.com" time="2015-02-24T12:52:48-0800" alias="Alex Prokop"></status>
+<event type="windowClosed" sender="1677870028" time="2015-02-24T13:33:37-0800"></event></chat>

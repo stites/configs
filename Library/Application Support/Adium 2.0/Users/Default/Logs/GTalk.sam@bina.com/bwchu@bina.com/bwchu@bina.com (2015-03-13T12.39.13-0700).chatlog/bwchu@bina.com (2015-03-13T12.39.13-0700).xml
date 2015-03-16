@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-03-13T12:39:14-0700"></event>
+<message sender="sam@bina.com" time="2015-03-13T12:39:14-0700" alias="sam"><div><a href="https://twitter.com/ID_AA_Carmack/status/575788622554628096">https://twitter.com/ID_AA_Carmack/status/575788622554628096</a></div></message>
+<status type="away" sender="bwchu@bina.com" time="2015-03-13T13:08:08-0700" alias="Bernie Chu"></status>
+<status type="online" sender="bwchu@bina.com" time="2015-03-13T13:08:09-0700" alias="Bernie Chu"></status>
+<message sender="bwchu@bina.com" time="2015-03-13T13:37:42-0700" alias="Bernie Chu"><div><span style="font-family: Helvetica; font-size: 12pt;">need a quick sanity check when you have a min</span></div></message>
+<event type="windowClosed" sender="sam@bina.com" time="2015-03-13T14:02:58-0700"></event></chat>

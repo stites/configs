@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-03-10T14:32:56-0700"></event>
+<message sender="sam@bina.com" time="2015-03-10T14:32:56-0700" alias="sam"><div>we spent the entire time trying to write a reduce function</div></message>
+<message sender="sam@bina.com" time="2015-03-10T14:32:58-0700" alias="sam"><div>&gt;_&gt;</div></message>
+<message sender="sam@bina.com" time="2015-03-10T14:33:18-0700" alias="sam"><div>we also had to debug his for-loop</div></message>
+<status type="idle" sender="austind@bina.com" time="2015-03-10T15:37:00-0700" alias="austin"></status>
+<status type="available" sender="austind@bina.com" time="2015-03-10T15:38:41-0700" alias="austin"></status>
+<status type="online" sender="austind@bina.com" time="2015-03-10T15:38:41-0700" alias="austin"></status>
+<status type="offline" sender="austind@bina.com" time="2015-03-10T16:53:31-0700" alias="austin"></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-03-10T17:51:40-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-03-10T18:33:24-0700"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-03-10T19:37:11-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-03-10T21:30:49-0700"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-03-10T22:44:26-0700"></event></chat>

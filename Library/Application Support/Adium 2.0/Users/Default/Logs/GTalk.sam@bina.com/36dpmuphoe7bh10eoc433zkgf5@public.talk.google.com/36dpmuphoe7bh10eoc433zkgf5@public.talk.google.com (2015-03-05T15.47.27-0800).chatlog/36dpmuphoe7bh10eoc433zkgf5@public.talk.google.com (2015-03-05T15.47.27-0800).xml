@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-03-05T15:47:30-0800"></event>
+<message sender="sam@bina.com" time="2015-03-05T15:47:30-0800" alias="sam"><div>hey john</div></message>
+<message sender="sam@bina.com" time="2015-03-05T15:47:55-0800" alias="sam"><div>can you give me a link of a job where you injected html in the job name?</div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-03-05T15:48:23-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">haha</span></div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-03-05T15:48:27-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">ok let me see</span></div></message>
+<message sender="sam@bina.com" time="2015-03-05T15:48:31-0800" alias="sam"><div>: D</div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-03-05T15:49:26-0800" alias="John Mu"><div><a href="https://science:19007/#/binabox/view/3/5d28be8d-48ed-4f06-8839-f3c19d113ace" style="font-family: Helvetica; font-size: 12pt;">https://science:19007/#/binabox/view/3/5d28be8d-48ed-4f06-8839-f3c19d113ace</a></div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-03-05T15:49:31-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">this is a more mild example</span></div></message>
+<message sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-03-05T15:49:37-0800" alias="John Mu"><div><span style="font-family: Helvetica; font-size: 12pt;">i think my other ones got deleted</span></div></message>
+<message sender="sam@bina.com" time="2015-03-05T15:49:40-0800" alias="sam"><div>haha, okay</div></message>
+<status type="away" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-03-05T16:39:09-0800" alias="John Mu"></status>
+<status type="online" sender="36dpmuphoe7bh10eoc433zkgf5@public.talk.google.com" time="2015-03-05T17:16:35-0800" alias="John Mu"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-03-05T17:27:18-0800"></event></chat>

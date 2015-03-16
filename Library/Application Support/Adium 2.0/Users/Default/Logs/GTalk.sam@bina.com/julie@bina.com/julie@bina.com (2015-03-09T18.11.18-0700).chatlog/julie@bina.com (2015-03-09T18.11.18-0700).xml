@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-03-09T18:11:35-0700"></event>
+<message sender="sam@bina.com" time="2015-03-09T18:11:35-0700" alias="sam"><div>hey julie — can we do testing first thing tomorrow?</div></message>
+<status type="online" sender="julie@bina.com" time="2015-03-09T18:25:14-0700" alias="Julie Saffarian"></status>
+<message sender="julie@bina.com" time="2015-03-09T18:25:20-0700" alias="Julie Saffarian"><div><span style="font-family: Helvetica; font-size: 12pt;">yes sure!</span></div></message>
+<status type="away" sender="julie@bina.com" time="2015-03-09T18:40:29-0700" alias="Julie Saffarian"></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-03-09T18:56:57-0700" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-03-10T10:17:54-0700"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-03-10T10:21:42-0700"></event></chat>

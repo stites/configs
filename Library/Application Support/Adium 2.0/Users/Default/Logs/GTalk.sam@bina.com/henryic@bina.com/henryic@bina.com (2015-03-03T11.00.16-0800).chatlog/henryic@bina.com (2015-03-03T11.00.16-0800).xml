@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-03-03T11:00:19-0800"></event>
+<message sender="sam@bina.com" time="2015-03-03T11:00:19-0800" alias="sam"><div>I SOLVED IT!</div></message>
+<message sender="sam@bina.com" time="2015-03-03T11:00:40-0800" alias="sam"><div>it was bothering me all night so I couldn&apos;t put it down</div></message>
+<message sender="sam@bina.com" time="2015-03-03T11:01:08-0800" alias="sam"><div>it&apos;s the fact that tun/tap drivers are terrible on a mac</div></message>
+<message sender="sam@bina.com" time="2015-03-03T11:02:16-0800" alias="sam"><div>the drivers I installed didn&apos;t add the interfaces to the kernel, i guess?</div></message>
+<message sender="sam@bina.com" time="2015-03-03T11:02:26-0800" alias="sam"><div>so i had to reference by device name</div></message>
+<message sender="sam@bina.com" time="2015-03-03T11:02:27-0800" alias="sam"><div>then this</div></message>
+<message sender="sam@bina.com" time="2015-03-03T11:02:28-0800" alias="sam"><div><a href="https://stackoverflow.com/questions/17510101/how-do-i-set-an-ip-address-for-tun-interface-on-osx-without-destination-address">https://stackoverflow.com/questions/17510101/how-do-i-set-an-ip-address-for-tun-interface-on-osx-without-destination-address</a></div></message>
+<message sender="sam@bina.com" time="2015-03-03T11:03:21-0800" alias="sam"><div>which means that for a tunnel device on mac, i guess I needed a connecting port</div></message>
+<message sender="sam@bina.com" time="2015-03-03T11:03:28-0800" alias="sam"><div>device*</div></message>
+<message sender="sam@bina.com" time="2015-03-03T11:04:01-0800" alias="sam"><div>although the answer doesn&apos;t seem to be mac-sepecific </div></message>
+<message sender="sam@bina.com" time="2015-03-03T11:04:27-0800" alias="sam"><div>so, in the end, I used a tap device and it works beautifully</div></message>
+<message sender="sam@bina.com" time="2015-03-03T11:06:47-0800" alias="sam"><div>i just need to randomize the ip addresses and I&apos;m done!</div></message>
+<status type="away" sender="henryic@bina.com" time="2015-03-03T12:03:12-0800" alias="henry"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-03-03T12:21:10-0800"></event></chat>

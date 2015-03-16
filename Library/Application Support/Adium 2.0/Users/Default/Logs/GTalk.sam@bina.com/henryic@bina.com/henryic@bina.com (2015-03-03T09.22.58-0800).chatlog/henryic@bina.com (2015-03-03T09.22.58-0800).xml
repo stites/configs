@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-03-03T09:23:22-0800"></event>
+<message sender="sam@bina.com" time="2015-03-03T09:23:22-0800" alias="sam"><div>ping! would you have time to help me out? not a problem if are busy</div></message>
+<status type="away" sender="henryic@bina.com" time="2015-03-03T09:38:57-0800" alias="henry"></status>
+<status type="online" sender="henryic@bina.com" time="2015-03-03T09:44:54-0800" alias="henry"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-03-03T09:53:24-0800"></event></chat>

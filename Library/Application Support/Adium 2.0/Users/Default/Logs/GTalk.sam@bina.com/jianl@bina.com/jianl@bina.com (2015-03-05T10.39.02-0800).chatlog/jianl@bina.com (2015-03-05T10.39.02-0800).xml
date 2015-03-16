@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-03-05T10:39:05-0800"></event>
+<message sender="sam@bina.com" time="2015-03-05T10:39:05-0800" alias="sam"><div>hey jian!</div></message>
+<message sender="sam@bina.com" time="2015-03-05T10:39:17-0800" alias="sam"><div>can you send me the sabeti_multi_stats.txt file</div></message>
+<status type="online" sender="jianl@bina.com" time="2015-03-05T12:03:55-0800" alias="Jian Li"></status>
+<status type="available" sender="jianl@bina.com" time="2015-03-05T12:03:55-0800" alias="Jian Li"></status>
+<status type="away" sender="jianl@bina.com" time="2015-03-05T12:03:55-0800" alias="Jian Li"></status>
+<message sender="jianl@bina.com" time="2015-03-05T12:44:53-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">sure</span></div></message>
+<message sender="jianl@bina.com" time="2015-03-05T12:46:23-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">sent by email</span></div></message>
+<status type="online" sender="jianl@bina.com" time="2015-03-05T12:54:49-0800" alias="Jian Li"></status>
+<message sender="sam@bina.com" time="2015-03-05T13:08:54-0800" alias="sam"><div>thanks!</div></message>
+<message sender="jianl@bina.com" time="2015-03-05T13:09:08-0800" alias="Jian Li"><div><span style="font-family: Helvetica; font-size: 12pt;">np</span></div></message>
+<status type="away" sender="jianl@bina.com" time="2015-03-05T13:10:40-0800" alias="Jian Li"></status>
+<status type="online" sender="jianl@bina.com" time="2015-03-05T13:33:53-0800" alias="Jian Li"></status>
+<status type="away" sender="jianl@bina.com" time="2015-03-05T13:50:10-0800" alias="Jian Li"></status>
+<status type="online" sender="jianl@bina.com" time="2015-03-05T13:55:15-0800" alias="Jian Li"></status>
+<status type="away" sender="jianl@bina.com" time="2015-03-05T14:45:14-0800" alias="Jian Li"></status>
+<status type="online" sender="jianl@bina.com" time="2015-03-05T15:45:44-0800" alias="Jian Li"></status>
+<status type="away" sender="jianl@bina.com" time="2015-03-05T15:49:56-0800" alias="Jian Li"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-03-05T17:27:23-0800"></event></chat>

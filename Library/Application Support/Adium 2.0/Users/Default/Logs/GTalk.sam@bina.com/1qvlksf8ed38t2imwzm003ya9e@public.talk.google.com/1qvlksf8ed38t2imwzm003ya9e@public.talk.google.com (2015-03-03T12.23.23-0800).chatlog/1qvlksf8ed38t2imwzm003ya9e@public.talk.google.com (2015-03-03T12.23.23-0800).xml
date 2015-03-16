@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-03-03T12:24:22-0800"></event>
+<message sender="sam@bina.com" time="2015-03-03T12:24:21-0800" alias="sam"><div>hey greg — I&apos;m starting to kick off protractor testing. </div></message>
+<message sender="sam@bina.com" time="2015-03-03T12:24:39-0800" alias="sam"><div>where would i find the configs for our selenium server?</div></message>
+<status type="offline" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T12:24:48-0800" alias="Greg Gibeling"></status>
+<message sender="sam@bina.com" time="2015-03-03T12:25:40-0800" alias="sam"><div>or would it be better to run on a separate testing service</div></message>
+<message sender="sam@bina.com" time="2015-03-03T12:26:15-0800" alias="sam"><div>(like TravisCI / CircleCI / etc)</div></message>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T12:30:39-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T12:30:41-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T12:35:15-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T12:41:54-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T12:50:38-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T12:51:12-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T12:51:15-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T13:06:51-0800" alias="Greg Gibeling"></status>
+<message sender="sam@bina.com" time="2015-03-03T13:07:22-0800" alias="sam"><div><a href="http://tinc-vpn.org/">http://tinc-vpn.org/</a></div></message>
+<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T13:07:35-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Awesome, thanks!</span></div></message>
+<message sender="sam@bina.com" time="2015-03-03T13:07:41-0800" alias="sam"><div>of course!</div></message>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T14:02:54-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T14:17:53-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T14:42:44-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T14:44:06-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T14:52:55-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T14:54:06-0800" alias="Greg Gibeling"></status>
+<status type="away" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T15:58:01-0800" alias="Greg Gibeling"></status>
+<status type="online" sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-03-03T16:09:58-0800" alias="Greg Gibeling"></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-03-03T17:26:27-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-03-03T17:49:44-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="sam@bina.com" time="2015-03-03T17:53:03-0800" alias="sam"><div>You have disconnected</div></status>
+<status type="connected" time="2015-03-03T18:28:56-0800"><div>You have connected</div></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-03-03T18:29:24-0800"></event></chat>

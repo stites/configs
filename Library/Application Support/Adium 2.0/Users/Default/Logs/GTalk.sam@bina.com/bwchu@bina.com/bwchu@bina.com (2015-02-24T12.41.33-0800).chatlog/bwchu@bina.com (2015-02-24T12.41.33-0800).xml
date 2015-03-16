@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="sam@bina.com" time="2015-02-24T12:41:34-0800"></event>
+<message sender="sam@bina.com" time="2015-02-24T12:41:34-0800" alias="sam"><div><a href="http://lapwinglabs.com/blog/hacker-guide-to-setting-up-your-mac">http://lapwinglabs.com/blog/hacker-guide-to-setting-up-your-mac</a></div></message>
+<status type="offline" sender="bwchu@bina.com" time="2015-02-24T12:54:59-0800" alias="Bernie Chu"></status>
+<status type="online" sender="bwchu@bina.com" time="2015-02-24T12:56:40-0800" alias="Bernie Chu"></status>
+<message sender="sam@bina.com" time="2015-02-24T12:57:05-0800" alias="sam"><div>alias canary=&apos;open -a Google\ Chrome\ Canary --args --disable-web-security <a href="http://localhost:1337">http://localhost:1337</a>&apos;<br />alias chrome=&apos;open -a Google\ Chrome --args --disable-web-security <a href="http://localhost:1337">http://localhost:1337</a>&apos;</div></message>
+<status type="online" sender="bwchu@bina.com" time="2015-02-24T13:00:41-0800" alias="Bernie Chu"></status>
+<status type="offline" sender="bwchu@bina.com" time="2015-02-24T13:06:48-0800" alias="Bernie Chu"></status>
+<status type="online" sender="bwchu@bina.com" time="2015-02-24T13:08:19-0800" alias="Bernie Chu"></status>
+<status type="away" sender="bwchu@bina.com" time="2015-02-24T13:08:19-0800" alias="Bernie Chu"></status>
+<status type="offline" sender="bwchu@bina.com" time="2015-02-24T13:11:50-0800" alias="Bernie Chu"></status>
+<event type="windowClosed" sender="sam@bina.com" time="2015-02-24T13:33:37-0800"></event></chat>

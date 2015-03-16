@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="1677870028" service="Facebook" adiumversion="1.5.10" buildid="7ad57fbf4c17">
+<event type="windowOpened" sender="1677870028" time="2015-02-26T10:15:23-0800"></event>
+<status type="online" sender="-590053301@chat.facebook.com" time="2015-02-26T10:15:23-0800" alias="Alex Ace Antazo"></status>
+<message sender="-590053301@chat.facebook.com" time="2015-02-26T10:16:01-0800" alias="Alex Ace Antazo"><div><span style="font-family: Helvetica; font-size: 12pt;">You&apos;re welcome of course! Just check in with Jessica when you&apos;re finished with everything ;)</span></div></message>
+<status type="offline" sender="-590053301@chat.facebook.com" time="2015-02-26T10:19:51-0800" alias="Alex Ace Antazo"></status>
+<status type="disconnected" sender="1677870028" time="2015-02-26T10:29:18-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-26T11:56:28-0800"><div>You have connected</div></status>
+<message sender="1677870028" time="2015-02-26T12:21:41-0800" alias="Sam Stites"><div>okay sounds good!</div></message>
+<status type="online" sender="-590053301@chat.facebook.com" time="2015-02-26T12:23:21-0800" alias="Alex Ace Antazo"></status>
+<status type="offline" sender="-590053301@chat.facebook.com" time="2015-02-26T12:28:51-0800" alias="Alex Ace Antazo"></status>
+<status type="disconnected" sender="1677870028" time="2015-02-26T13:03:11-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-26T13:03:18-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="1677870028" time="2015-02-26T18:39:49-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-26T18:39:58-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="1677870028" time="2015-02-26T19:30:30-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-26T19:30:39-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="1677870028" time="2015-02-26T20:18:10-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<status type="connected" time="2015-02-26T20:19:07-0800"><div>You have connected</div></status>
+<status type="disconnected" sender="1677870028" time="2015-02-26T20:20:28-0800" alias="Sam Stites"><div>You have disconnected</div></status>
+<event type="windowClosed" sender="1677870028" time="2015-02-27T13:14:44-0800"></event></chat>

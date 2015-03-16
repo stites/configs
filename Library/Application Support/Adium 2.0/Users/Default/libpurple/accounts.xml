@@ -17,7 +17,9 @@
 				<attributes/>
 			</status>
 			<status type='away' name='Away' active='false'>
-				<attributes/>
+				<attributes>
+					<attribute id='message' value='&lt;FONT&gt;Away&lt;/FONT&gt;'/>
+				</attributes>
 			</status>
 			<status type='extended_away' name='Extended away' active='false'>
 				<attributes/>
@@ -65,7 +67,9 @@
 				<attributes/>
 			</status>
 			<status type='away' name='Away' active='false'>
-				<attributes/>
+				<attributes>
+					<attribute id='message' value='&lt;FONT&gt;Away&lt;/FONT&gt;'/>
+				</attributes>
 			</status>
 			<status type='extended_away' name='Extended away' active='false'>
 				<attributes/>
@@ -105,12 +109,15 @@
 				<attributes/>
 			</status>
 			<status type='away' name='Away' active='false'>
-				<attributes/>
+				<attributes>
+					<attribute id='message' value='Away'/>
+				</attributes>
 			</status>
 			<status type='offline' name='Offline' active='false'>
 				<attributes/>
 			</status>
 		</statuses>
+		<userinfo></userinfo>
 		<settings>
 			<setting name='encoding' type='string'>UTF-8</setting>
 			<setting name='buddy_icon_timestamp' type='int'>0</setting>
@@ -118,6 +125,7 @@
 			<setting name='custom_smileys' type='bool'>0</setting>
 			<setting name='port' type='int'>7070</setting>
 			<setting name='check-mail' type='bool'>0</setting>
+			<setting name='buddy_icon'/>
 			<setting name='realname' type='string'>Adium User</setting>
 			<setting name='username' type='string'>Adium</setting>
 			<setting name='server' type='string'>irc.freenode.net</setting>
@@ -163,6 +171,7 @@
 			<setting name='connect_server' type='string'>talk.google.com</setting>
 			<setting name='ft_proxies' type='string'>proxy.eu.jabber.org</setting>
 			<setting name='check-mail' type='bool'>0</setting>
+			<setting name='buddy_icon'/>
 			<setting name='connection_security' type='string'>opportunistic_tls</setting>
 			<setting name='ssl_cdsa_buggy_tls_workaround' type='bool'>0</setting>
 			<setting name='server' type='string'>talk.google.com</setting>
@@ -186,7 +195,9 @@
 				<attributes/>
 			</status>
 			<status type='away' name='Away' active='false'>
-				<attributes/>
+				<attributes>
+					<attribute id='message' value='Away'/>
+				</attributes>
 			</status>
 			<status type='extended_away' name='Extended away' active='false'>
 				<attributes/>
