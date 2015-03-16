@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="1677870028" service="Facebook" adiumversion="1.5.10" buildid="7ad57fbf4c17">
-<event type="windowOpened" sender="1677870028" time="2015-02-16T11:19:10-0800"></event>
-<message sender="-665285342@chat.facebook.com" time="2015-02-16T11:19:10-0800" alias="Robin Mele"><div><span style="font-family: Helvetica; font-size: 12pt;">Haha well the dancing is supposed to be for business, not pleasure xP</span></div></message>
-<status type="online" sender="-665285342@chat.facebook.com" time="2015-02-16T11:19:25-0800" alias="Robin Mele"></status>
-<message sender="-665285342@chat.facebook.com" time="2015-02-16T11:19:26-0800" alias="Robin Mele"><div><span style="font-family: Helvetica; font-size: 12pt;">I&apos;ve been hanging out with new friends who speak Japanese, so that&apos;s pretty cool</span></div></message>
-<status type="offline" sender="-665285342@chat.facebook.com" time="2015-02-16T11:25:02-0800" alias="Robin Mele"></status>
-<event type="windowClosed" sender="1677870028" time="2015-02-16T11:50:53-0800"></event></chat>

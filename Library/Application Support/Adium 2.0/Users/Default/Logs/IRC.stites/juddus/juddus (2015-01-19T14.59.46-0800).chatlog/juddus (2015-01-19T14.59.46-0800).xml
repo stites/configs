@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites" service="IRC" adiumversion="1.5.10" buildid="7ad57fbf4c17">
-<event type="windowOpened" sender="stites" time="2015-01-19T14:59:46-0800"></event>
-<message sender="juddus" time="2015-01-19T14:59:46-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">Received CTCP &apos;CLIENTINFO&apos; (to stites) from juddus</span></div></message>
-<event type="windowClosed" sender="stites" time="2015-01-19T15:04:00-0800"></event></chat>

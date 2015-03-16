@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
-<event type="windowOpened" sender="sam@bina.com" time="2015-01-13T11:24:25-0800"></event>
-<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-01-13T11:24:25-0800" alias="Greg Gibeling"><div><a href="https://kiev:19009/#/binabox/monitor/1/07831caa-d16e-43a8-bd3c-e2884c2eb635" style="font-family: Helvetica; font-size: 12pt;">https://kiev:19009/#/binabox/monitor/1/07831caa-d16e-43a8-bd3c-e2884c2eb635</a></div></message>
-<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-01-13T11:24:35-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">Change to view/4 and it redirects back to monitor/1</span></div></message>
-<message sender="1qvlksf8ed38t2imwzm003ya9e@public.talk.google.com" time="2015-01-13T11:25:51-0800" alias="Greg Gibeling"><div><span style="font-family: Helvetica; font-size: 12pt;">If you change it to view/3 it works fine, since it&apos;s on mount 3.  Still a pretty weird issue, but you can file this and it can wait</span></div></message>
-<event type="windowClosed" sender="sam@bina.com" time="2015-01-13T11:54:39-0800"></event></chat>

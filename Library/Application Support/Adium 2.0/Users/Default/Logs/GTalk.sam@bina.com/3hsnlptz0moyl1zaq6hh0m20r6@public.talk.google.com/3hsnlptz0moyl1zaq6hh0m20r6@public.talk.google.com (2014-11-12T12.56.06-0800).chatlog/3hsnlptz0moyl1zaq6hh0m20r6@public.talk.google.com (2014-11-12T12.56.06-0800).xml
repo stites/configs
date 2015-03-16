@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
-<event type="windowOpened" sender="sam@bina.com" time="2014-11-12T12:56:08-0800"></event>
-<message sender="sam@bina.com" time="2014-11-12T12:56:08-0800" alias="sam"><div><a href="http://vimeo.com/110633932" style="text-decoration: underline;">http://vimeo.com/110633932</a></div></message>
-<event type="windowClosed" sender="sam@bina.com" time="2014-11-12T13:28:04-0800"></event></chat>

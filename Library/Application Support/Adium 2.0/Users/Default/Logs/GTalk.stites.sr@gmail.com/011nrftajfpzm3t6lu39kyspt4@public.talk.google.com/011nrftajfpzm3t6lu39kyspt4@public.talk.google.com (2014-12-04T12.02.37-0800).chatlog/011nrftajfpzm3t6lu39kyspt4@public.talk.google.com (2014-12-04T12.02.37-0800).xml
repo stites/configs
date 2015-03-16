@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
-<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-12-04T12:02:43-0800"></event>
-<message sender="stites.sr@gmail.com" time="2014-12-04T12:02:43-0800" alias="sam"><div>Happy birthday!</div></message>
-<status type="online" sender="011nrftajfpzm3t6lu39kyspt4@public.talk.google.com" time="2014-12-04T12:56:59-0800" alias="Brannon Lucas"></status>
-<status type="away" sender="011nrftajfpzm3t6lu39kyspt4@public.talk.google.com" time="2014-12-04T12:57:00-0800" alias="Brannon Lucas"></status>
-<message sender="011nrftajfpzm3t6lu39kyspt4@public.talk.google.com" time="2014-12-04T12:57:10-0800" alias="Brannon Lucas"><div><span style="font-family: Helvetica; font-size: 12pt;">thank you Sam!</span></div></message>
-<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-12-04T12:57:35-0800"></event></chat>

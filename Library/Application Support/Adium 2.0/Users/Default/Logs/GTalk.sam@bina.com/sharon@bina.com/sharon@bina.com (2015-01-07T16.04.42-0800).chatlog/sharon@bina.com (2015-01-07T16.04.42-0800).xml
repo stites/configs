@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
-<event type="windowOpened" sender="sam@bina.com" time="2015-01-07T16:05:03-0800"></event>
-<message sender="sam@bina.com" time="2015-01-07T16:05:03-0800" alias="sam"><div>just got a call from a recruiter (no idea how he got my number)</div></message>
-<message sender="sam@bina.com" time="2015-01-07T16:05:29-0800" alias="sam"><div>he wants to help us with hiring, i told him to shoot me an email</div></message>
-<message sender="sam@bina.com" time="2015-01-07T16:05:36-0800" alias="sam"><div>and I&apos;d forward it to you</div></message>
-<message sender="sam@bina.com" time="2015-01-07T16:06:24-0800" alias="sam"><div>do we need more recruiters? i can block him if you&apos;d prefer.</div></message>
-<event type="windowClosed" sender="sam@bina.com" time="2015-01-07T16:07:31-0800"></event></chat>

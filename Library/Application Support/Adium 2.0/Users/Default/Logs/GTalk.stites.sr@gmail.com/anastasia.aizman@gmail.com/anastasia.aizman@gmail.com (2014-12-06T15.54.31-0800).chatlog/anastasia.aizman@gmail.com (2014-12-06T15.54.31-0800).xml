@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="stites.sr@gmail.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
-<event type="windowOpened" sender="stites.sr@gmail.com" time="2014-12-06T15:54:44-0800"></event>
-<status type="connected" time="2014-12-06T15:54:44-0800"><div>You have connected</div></status>
-<status type="purple" time="2014-12-06T15:54:44-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">anastasia.aizman@gmail.com is now known as Anastasia A.<br /></span></div></status>
-<status type="purple" time="2014-12-06T15:54:44-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">anastasia.aizman@gmail.com is now known as Anastasia A.<br /></span></div></status>
-<event type="windowClosed" sender="stites.sr@gmail.com" time="2014-12-06T15:55:19-0800"></event></chat>

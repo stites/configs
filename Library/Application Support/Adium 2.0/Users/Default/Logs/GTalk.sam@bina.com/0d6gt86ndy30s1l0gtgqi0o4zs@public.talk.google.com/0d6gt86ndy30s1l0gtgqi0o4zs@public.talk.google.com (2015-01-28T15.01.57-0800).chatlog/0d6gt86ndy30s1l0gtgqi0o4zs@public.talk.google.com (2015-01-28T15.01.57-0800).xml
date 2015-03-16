@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
-<event type="windowOpened" sender="sam@bina.com" time="2015-01-28T15:01:57-0800"></event>
-<message sender="0d6gt86ndy30s1l0gtgqi0o4zs@public.talk.google.com" time="2015-01-28T15:01:57-0800"><div><span style="font-family: Helvetica; font-size: 12pt;">Hey Sam, I scheduled the candidate Greg for 2/10</span></div></message>
-<status type="offline" sender="0d6gt86ndy30s1l0gtgqi0o4zs@public.talk.google.com" time="2015-01-28T15:25:42-0800"></status>
-<status type="online" sender="0d6gt86ndy30s1l0gtgqi0o4zs@public.talk.google.com" time="2015-01-28T15:25:44-0800"></status>
-<status type="offline" sender="0d6gt86ndy30s1l0gtgqi0o4zs@public.talk.google.com" time="2015-01-28T16:46:00-0800"></status>
-<message sender="sam@bina.com" time="2015-01-28T17:15:01-0800" alias="sam"><div>thanks hoda</div></message>
-<event type="windowClosed" sender="sam@bina.com" time="2015-01-28T17:15:02-0800"></event></chat>

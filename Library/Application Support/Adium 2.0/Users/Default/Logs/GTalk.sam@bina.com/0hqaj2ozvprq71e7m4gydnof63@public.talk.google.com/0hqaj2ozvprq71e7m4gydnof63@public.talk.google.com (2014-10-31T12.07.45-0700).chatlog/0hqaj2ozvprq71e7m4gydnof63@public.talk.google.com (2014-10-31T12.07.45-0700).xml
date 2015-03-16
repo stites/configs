@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
-<event type="windowOpened" sender="sam@bina.com" time="2014-10-31T12:48:12-0700"></event>
-<status type="disconnected" sender="sam@bina.com" time="2014-10-31T12:48:12-0700" alias="sam"><div>You have disconnected</div></status>
-<status type="connected" time="2014-10-31T12:57:33-0700"><div>You have connected</div></status>
-<status type="disconnected" sender="sam@bina.com" time="2014-10-31T16:38:23-0700" alias="sam"><div>You have disconnected</div></status>
-<status type="connected" time="2014-10-31T16:47:37-0700"><div>You have connected</div></status>
-<event type="windowClosed" sender="sam@bina.com" time="2014-10-31T17:13:39-0700"></event></chat>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
-<event type="windowOpened" sender="sam@bina.com" time="2014-10-23T11:26:03-0700"></event>
-<message sender="sam@bina.com" time="2014-10-23T11:26:03-0700" alias="Sam Stites"><div><a href="https://developer.chrome.com/devtools/docs/workspaces">https://developer.chrome.com/devtools/docs/workspaces</a></div></message>
-<message sender="austind@bina.com" time="2014-10-23T11:26:19-0700"><div><span style="font-family: Helvetica; font-size: 12pt;">thanks</span></div></message>
-<message sender="sam@bina.com" time="2014-10-23T11:27:04-0700" alias="Sam Stites"><div>kp</div></message>
-<message sender="sam@bina.com" time="2014-10-23T11:27:06-0700" alias="Sam Stites"><div>np*</div></message>
-<event type="windowClosed" sender="sam@bina.com" time="2014-10-23T11:40:43-0700"></event></chat>

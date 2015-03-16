@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
-<event type="windowOpened" sender="sam@bina.com" time="2015-03-06T16:04:44-0800"></event>
-<message sender="sam@bina.com" time="2015-03-06T16:04:44-0800" alias="sam"><div>hey amir</div></message>
-<event type="windowClosed" sender="sam@bina.com" time="2015-03-06T16:19:45-0800"></event></chat>

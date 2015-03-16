@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="1677870028" service="Facebook" adiumversion="1.5.10" buildid="7ad57fbf4c17">
-<event type="windowOpened" sender="1677870028" time="2014-11-28T19:21:42-0800"></event>
-<status type="connected" time="2014-11-28T19:21:41-0800"><div>You have connected</div></status>
-<event type="windowClosed" sender="1677870028" time="2014-11-28T19:42:57-0800"></event></chat>

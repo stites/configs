@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<chat xmlns="http://purl.org/net/ulf/ns/0.4-02" account="sam@bina.com" service="GTalk" adiumversion="1.5.10" buildid="7ad57fbf4c17">
-<event type="windowOpened" sender="sam@bina.com" time="2015-03-16T11:00:16-0700"></event>
-<message sender="sam@bina.com" time="2015-03-16T11:00:16-0700" alias="sam"><div><a href="http://blog.jetbrains.com/scala/">http://blog.jetbrains.com/scala/</a></div></message>
-<event type="windowClosed" sender="sam@bina.com" time="2015-03-16T11:12:33-0700"></event></chat>
