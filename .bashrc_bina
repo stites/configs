@@ -16,9 +16,9 @@ function patchapp {
 alias newdev='git fetch upstream develop:develop && go develop && gpocb && go -b '
 alias newng='go Angular && gplucb && go -b '
 export TREX_SERVER="LD_LIBRARY_PATH=/home/sam/.bin/lib /home/sam/.bin/bin/mosh-server"
-
-alias canary='open -a Google\ Chrome\ Canary --args --disable-web-security http://localhost:1337'
-alias chrome='open -a Google\ Chrome --args --disable-web-security http://localhost:1337'
+export CHROME_ARGS="--remote-debugging-port=9222 --disable-web-security"
+alias canary="open -a Google\ Chrome\ Canary --args $CHROME_ARGS http://localhost:1337"
+alias chrome="open -a Google\ Chrome         --args $CHROME_ARGS http://localhost:1337"
 
 function s () {
   echo "SEQ-$1"

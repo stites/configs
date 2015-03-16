@@ -44,3 +44,8 @@ unset color_prompt force_color_prompt
 
 alias subl='open -a "Sublime Text"'
 alias displayType='ioreg -lw0 | grep "EDID" | sed "/[^<]*</s///" | xxd -p -r | strings -6'
+
+# fix brew installed caveats:
+# LDFLAGS:  -L/usr/local/opt/readline/lib
+# CPPFLAGS: -I/usr/local/opt/readline/include
+safe_path_add $(brew --prefix coreutils)/libexec/gnubin

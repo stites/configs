@@ -1,0 +1,13 @@
+if [ ! -d "$HOME/.jenv" ]; then
+  git clone https://github.com/gcuisinier/jenv.git ~/.jenv
+fi
+
+safe_path_add $HOME/.jenv/bin
+
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+#MAC_PATH=/Library/Java/JavaVirtualMachines
+#for jdk in `ls $MAC_PATH`; do
+#  JDK_PATH=$MAC_PATH/$jdk/Contents/Home
+#  jenv add $JDK_PATH
+#done

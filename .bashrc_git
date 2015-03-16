@@ -75,15 +75,8 @@ done
 alias git=hub
 
 # hub-functionality
-function gpr {
-  case $1 in
-    develop)
-      shift
-      git pull-request -b "BinaTechnologies/seqalto:develop" $* ;;
-    *)
-      git pull-request $* ;;
-  esac
-}
+alias gpr='  hub pull-request'
+alias gprud='hub pull-request -b `remote-name upstream`\/`repo-name upstream`:develop -h `remote-name origin`\/`repo-name origin`:`cb`'
 
 function ignore {
   echo $1 >> .gitignore
@@ -91,6 +84,15 @@ function ignore {
 
 function cb {
   git status | grep "On branch " | cut -c 11-
+}
+function remote-full {
+  git remote -v | grep $1 | head -n 1 | cut -d ':' -f 2 | cut -d '.' -f 1
+}
+function remote-name {
+  remote-full $1 | cut -d '/' -f 1
+}
+function repo-name {
+  remote-full $1 | cut -d '/' -f 2
 }
 
 alias gitTree='tree -I ./client/bower_components -I node_modules'

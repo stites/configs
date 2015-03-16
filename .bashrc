@@ -89,14 +89,6 @@ alias vboot='vagrant up; vagrant ssh'
 # Load Environments                                         #
 # ========================================================= #
 
-# Load RVM into a shell session *as a function*
-RVM=$HOME/.rvm/scripts/rvm
-test -s "$RVM" && source "$RVM"
-
-# Get Java 7 for Mac:
-JAVA_PATH="/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin"
-test -d "$JAVA_PATH" && export JAVA_PATH
-
 # ========================================================= #
 # PATH Exports                                              #
 # ========================================================= #
@@ -158,14 +150,6 @@ alias t='clear && task'
 
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$HOME/.nvm/v0.10.32/lib/node_modules
 
-##########
-# bash functions
-
-#function j {
-#  javac $1.java
-#  java $1 ${@:2}
-#}
-
 # ===================== #
 # .bashrc functions     #
 # ===================== #
@@ -176,6 +160,7 @@ function addrc {
   echo $1 >> ~/.bashrc
   src
 }
+
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
@@ -183,6 +168,6 @@ fi
 # ========================================= #
 # Load the remaining settings               #
 # ========================================= #
-for SETTING in kafka git bina tmux npm python arch gauss mac jira emacs mu; do
+for SETTING in kafka git bina tmux npm python arch gauss mac jira emacs mu java ssh task spark ruby; do
   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
 done
