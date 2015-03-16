@@ -49,4 +49,17 @@
 <message sender="anastasia.aizman@gmail.com" time="2015-03-16T11:36:12-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">oh</span></div></message>
 <message sender="anastasia.aizman@gmail.com" time="2015-03-16T11:36:13-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">wai</span></div></message>
 <message sender="anastasia.aizman@gmail.com" time="2015-03-16T11:36:13-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">t</span></div></message>
-<message sender="anastasia.aizman@gmail.com" time="2015-03-16T11:36:21-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that could possibly be the key</span></div></message></chat>
+<message sender="anastasia.aizman@gmail.com" time="2015-03-16T11:36:21-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">that could possibly be the key</span></div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-03-16T11:36:37-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">because in my app router i do:</span><br /><span style="font-family: Helvetica; font-size: 12pt;">  $urlRouterProvider.otherwise(&apos;/dashboard&apos;)</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-03-16T11:36:56-0700" alias="sam"><div>try that!</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-03-16T11:37:21-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">so, how would i route it through the angular app? should i create a logout state?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-03-16T11:37:28-0700" alias="sam"><div>ah</div></message>
+<message sender="stites.sr@gmail.com" time="2015-03-16T11:37:32-0700" alias="sam"><div>not nessecarily</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-03-16T11:37:35-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">and on logout .transitionTo &apos;login&apos;?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-03-16T11:37:36-0700" alias="sam"><div>just do a</div></message>
+<message sender="stites.sr@gmail.com" time="2015-03-16T11:37:38-0700" alias="sam"><div>yeah</div></message>
+<message sender="stites.sr@gmail.com" time="2015-03-16T11:37:50-0700" alias="sam"><div>so</div></message>
+<message sender="anastasia.aizman@gmail.com" time="2015-03-16T11:37:52-0700" alias="anastasia"><div><span style="font-family: Helvetica; font-size: 12pt;">oh i could just do an ng-click .transitionTo &apos;login&apos; ?</span></div></message>
+<message sender="stites.sr@gmail.com" time="2015-03-16T11:38:14-0700" alias="sam"><div>when someone clicks logout, it triggers a function which removes all authentication information and transitions to /login</div></message>
+<message sender="stites.sr@gmail.com" time="2015-03-16T11:39:11-0700" alias="sam"><div>i normally also have the $.otherwise go to the /login page, but i never actually hit that edge case</div></message>
+<message sender="stites.sr@gmail.com" time="2015-03-16T11:39:22-0700" alias="sam"><div>it should really be navigating to you 404, i think</div></message></chat>
