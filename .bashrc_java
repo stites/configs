@@ -11,3 +11,6 @@ if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 #  JDK_PATH=$MAC_PATH/$jdk/Contents/Home
 #  jenv add $JDK_PATH
 #done
+
+# finally, add java home
+JAVA_HOME=`which java`
