@@ -26,7 +26,7 @@ windows:
       panes:
         - clear && task
         # - calcurse
-        - rainbowstream --image-on-term
+        - rainbowstream
   - ssh:
       panes:
         - ssh t-rex || ssh hq
