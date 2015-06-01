@@ -1,6 +1,6 @@
 [[ ! -f  ~/.bash_colors  ]] || source ~/.bash_colors
 
-export TERM="xterm-256color"
+export TERM="screen-256color"
 export EDITOR='vim'
 set +o vi
 
