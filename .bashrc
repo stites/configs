@@ -168,6 +168,6 @@ fi
 # ========================================= #
 # Load the remaining settings               #
 # ========================================= #
-for SETTING in kafka git bina tmux npm python arch gauss mac jira emacs mu java ssh task spark ruby; do
+for SETTING in kafka git bina tmux npm python arch gauss mac jira emacs mu java ssh task spark ruby nginx; do
   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
 done

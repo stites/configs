@@ -1,0 +1,3 @@
+# bashrc to alias nginx conf
+
+alias 'nginx.conf'='vim /usr/local/etc/nginx/nginx.conf'
