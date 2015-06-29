@@ -147,6 +147,7 @@ alias start_irssi='bitlebee -F -u stites && irssi'
 
 alias r='grunt'
 alias t='clear && task'
+alias in='task add +in'
 
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$HOME/.nvm/v0.10.32/lib/node_modules
 
@@ -168,6 +169,6 @@ fi
 # ========================================= #
 # Load the remaining settings               #
 # ========================================= #
-for SETTING in kafka git bina tmux npm python arch gauss mac jira emacs mu java ssh task spark ruby nginx; do
+for SETTING in git bina tmux npm python arch gauss mac jira emacs mu java ssh task spark ruby nginx; do
   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
 done

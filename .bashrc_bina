@@ -14,7 +14,7 @@ function patchapp {
 }
 
 alias newdev='git fetch upstream develop:develop && go develop && gpocb && go -b '
-alias newng='go Angular && gplucb && go -b '
+alias newgms='go Feature-GMSUI && gplucb && go -b '
 export TREX_SERVER="LD_LIBRARY_PATH=/home/sam/.bin/lib /home/sam/.bin/bin/mosh-server"
 export CHROME_ARGS="--remote-debugging-port=9222 --disable-web-security"
 alias chromestable="open -a Google\ Chrome\ Stable --args $CHROME_ARGS http://localhost:1337"
