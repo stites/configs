@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [[ ! -f "$HOME/.emacs.d/core/prelude-core.el" ]]; then
   curl -L http://git.io/epre | sh
 fi

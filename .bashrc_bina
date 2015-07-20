@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function patchapp {
   case $1 in
     -h|--help)

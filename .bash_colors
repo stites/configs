@@ -1,3 +1,4 @@
+#!/bin/bash
 DULL=0
 BRIGHT=1
 

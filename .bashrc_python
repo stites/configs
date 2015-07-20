@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export PYENV_ROOT="${HOME}/.pyenv"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 safe_path_add $HOME/.pyenv/bin
