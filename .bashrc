@@ -57,10 +57,14 @@ alias vrc='vim ~/.bashrc'
 alias src='source ~/.bashrc'
 
 # ========================================= #
+# TODO: load init configs in plist somehow  #
+# ========================================= #
+[[ ! -f ~/git/cfg/init.d/load_env  ]] || source ~/git/cfg/init.d/load_env
+
+# ========================================= #
 # Load the remaining settings               #
 # ========================================= #
 
-for SETTING in task git bina tmux npm arch gauss mac jira emacs mu task spark ruby nginx; do
+for SETTING in task git bina tmux mac emacs task nginx; do
   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
 done
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home"

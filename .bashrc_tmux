@@ -8,8 +8,7 @@ alias tmux='tmux -2'
 function trc {
   if which tmux 2>&1 >/dev/null; then
     # if no session is started, start a new session
-      test -z ${TMUX} && tmux new -s default
-
+    test -z ${TMUX} && tmux new -s default
     # when quitting tmux, try to attach
     while test -z ${TMUX}; do
       tmux attach || break
@@ -28,7 +27,7 @@ function mksc() {
 }
 
 # init tmux on startup
-#trc
+# trc
 
 function tmux-switch {
   TMUX= tmux new-session -d -s $1

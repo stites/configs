@@ -1,4 +1,9 @@
 #!/bin/bash
+# ============================================= #
+# DEPRECIATED                                   #
+# ============================================= #
+
+
 
 export PYENV_ROOT="${HOME}/.pyenv"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
@@ -17,4 +22,6 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
-alias bw="source ~/virtualenv/bugwarrior/bin/activate"
+# pyenv
+safe_path_add $HOME/.pyenv/bin
+safe_path_add $HOME/.pyenv/shims

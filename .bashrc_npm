@@ -24,3 +24,6 @@ if [ ! $NVM_NODEJS_ORG_MIRROR ]; then
     NVM_DIR=$HOME/.nvm
     test -s "$NVM_DIR/nvm.sh" && source "$NVM_DIR/nvm.sh"
 fi
+
+test ! -d $HOME/.nvm && echo "nvm not detected" && continue;
+find -P  $HOME/.nvm -type d -maxdepth 3 -name bin | xargs -n 1 bash -c 'safe_path_add "$@"' _

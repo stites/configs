@@ -1,20 +1,5 @@
 #!/bin/bash
 
-function patchapp {
-  case $1 in
-    -h|--help)
-      echo "format: patchapp [path/to/app.js [server port]]"
-      ;;
-    *)
-      APP="${1:-$HOME/git/seqalto/portal/site/src/js/app.js}"
-      SERVER="${2:-science}"
-      PORT="${3:-19007}"
-      sed -i ''  "s/window.location.protocol + '\/\/' + window.location.host + '/'https:\/\/$SERVER:$PORT/" $APP
-      if [ -n `which git` ]; then git update-index --assume-unchanged $APP; fi
-      ;;
-  esac
-}
-
 alias newdev='git fetch upstream develop:develop && go develop && gpocb --no-verify && go -b '
 alias newgms='go Feature-GMSUI && gplucb && go -b '
 export TREX_SERVER="LD_LIBRARY_PATH=/home/sam/.bin/lib /home/sam/.bin/bin/mosh-server"
