@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# ========================= #
+# Load "run-once" settings  #
+# ========================= #
+[[ ! -f  ~/.bash_colors  ]] || source ~/.bash_colors
+[[ ! -f  ./udfs          ]] || source ./udfs
+
+eval "$(fasd --init auto)"
+
+if [ -f /usr/local/etc/bash_completion ]; then
+  . /usr/local/etc/bash_completion
+fi
+
+# ========================================================= #
+# PATH Exports                                              #
+# ========================================================= #
+
+# nvm, rvm
+for ENV_MGR in .nvm .rvm; do
+  test ! -d $HOME/$ENV_MGR && echo "$ENV_MGR not detected" && continue;
+  find -P  $HOME/$ENV_MGR -type d -maxdepth 3 -name bin | xargs -n 1 bash -c 'safe_path_add "$@"' _
+done
+
+# pyenv
+safe_path_add $HOME/.pyenv/bin
+safe_path_add $HOME/.pyenv/shims
+
+# binpaths
+safe_path_add /bin
+safe_path_add /sbin
+safe_path_add /usr/bin
+safe_path_add /usr/sbin
+safe_path_add /usr/local/bin
+safe_path_add /usr/local/sbin

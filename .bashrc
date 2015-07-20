@@ -1,5 +1,3 @@
-[[ ! -f  ~/.bash_colors  ]] || source ~/.bash_colors
-
 export TERM="screen-256color"
 export EDITOR='vim'
 set +o vi
@@ -29,110 +27,12 @@ shopt -s checkwinsize   # check the window size after each command and, if
 # scrolls through your history for this. Store function in .inputrc
 export INPUTRC=$HOME/.inputrc
 
-function h {
-  if [[ "$1" =~ "^\d+$" ]]; then
-    !$1
-  elif [ "$1" != "" ]; then
-    history | grep $1
-  else
-    history
-  fi
-}
-
 # ========================================================= #
 # ls config                                                 #
 # ========================================================= #
-
-# some more ls aliases
-alias grp='grep -RiI'
+# some ls aliases
 alias tree='tree -C'
-#alias ls='ls -G --color'
-#function ls {
-#  DIR=$( pwd )
-#  if [ -e "${DIR}/$1" ]; then
-#    ls -G $1
-#  elif [ "$1" != "" ]; then
-#    ls -halpGF | grep $1
-#    echo "--> grep $1"
-#  else
-#    ls -halpGF
-#  fi
-#}
-
-
-function l {
-  if [ "$2" != "" ]; then
-    ls -halGpF $1 | grep $2
-    echo "--> grep $2"
-  elif [ -e "$1" ]; then
-    ls -halGpF $1
-  elif [ "$1" != "" ]; then
-    ls -halGpF | grep $1
-    echo "--> grep $1"
-  else
-    ls -halGpF
-  fi
-}
-
-
-# ========================================================= #
-# vagrantbox stuff                                          #
-# ========================================================= #
-
-alias cdv='cd ~/vagrant'
-alias vssh='vagrant ssh'
-alias vup='vagrant up'
-alias vhalt='vagrant halt'
-alias vboot='vagrant up; vagrant ssh'
-
-# ========================================================= #
-# Load Environments                                         #
-# ========================================================= #
-
-# ========================================================= #
-# PATH Exports                                              #
-# ========================================================= #
-function safe_path_add {
-  PATH_FOUND=$(echo $PATH | grep -o -E "(^|:)$1" | head -1)
-
-  if [ -z $PATH_FOUND ] && [ -d $1 ]; then
-    export PATH=$PATH:$1
-  # else
-  #    test -z $PATH_FOUND && echo "$1 not a directory" || echo "$1 in PATH"
-  fi
-}
-export -f safe_path_add
-
-# nvm, rvm
-for ENV_MGR in .nvm .rvm; do
-  test ! -d $HOME/$ENV_MGR && echo "$ENV_MGR not detected" && continue;
-  find -P  $HOME/$ENV_MGR -type d -maxdepth 3 -name bin | xargs -n 1 bash -c 'safe_path_add "$@"' _
-done
-
-# pyenv
-safe_path_add $HOME/.pyenv/bin
-safe_path_add $HOME/.pyenv/shims
-
-# binpaths
-safe_path_add /bin
-safe_path_add /sbin
-safe_path_add /usr/bin
-safe_path_add /usr/sbin
-safe_path_add /usr/local/bin
-safe_path_add /usr/local/sbin
-
-# ========================================================= #
-# vim, bash editing, terminal settings, relative jumps      #
-# ========================================================= #
-
-# rename tabs:
-function t {
-  printf "\e]1;$1\a"
-}
-function winname {
-  printf "\e]2;$1\a"
-}
-
+alias ls='ls -G'
 
 # Relative Jumps:
 alias ~='cd ~ '
@@ -145,9 +45,7 @@ alias .....='cd ../../../..'
 # initialization scripts which are auto-generated           #
 # ========================================================= #
 # disabling for speed - you might have to run these on startx
-eval "$(fasd --init auto)"
 alias start_irssi='bitlebee -F -u stites && irssi'
-
 alias r='grunt'
 
 #export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$HOME/.nvm/v0.10.32/lib/node_modules
@@ -157,16 +55,6 @@ alias r='grunt'
 # ===================== #
 alias vrc='vim ~/.bashrc'
 alias src='source ~/.bashrc'
-
-function addrc {
-  echo $1 >> ~/.bashrc
-  src
-}
-
-#  this is slowing things down a lot
-if [ -f /usr/local/etc/bash_completion ]; then
- . /usr/local/etc/bash_completion
-fi
 
 # ========================================= #
 # Load the remaining settings               #
