@@ -113,11 +113,13 @@ done
 safe_path_add $HOME/.pyenv/bin
 safe_path_add $HOME/.pyenv/shims
 
-for BIN_PATH in '' /usr /usr/local; do
-  for BIN_TYPE in /bin /sbin; do
-    safe_path_add $BIN_PATH$BIN_TYPE
-  done
-done
+# binpaths
+safe_path_add /bin
+safe_path_add /sbin
+safe_path_add /usr/bin
+safe_path_add /usr/sbin
+safe_path_add /usr/local/bin
+safe_path_add /usr/local/sbin
 
 # ========================================================= #
 # vim, bash editing, terminal settings, relative jumps      #
@@ -142,12 +144,13 @@ alias .....='cd ../../../..'
 # ========================================================= #
 # initialization scripts which are auto-generated           #
 # ========================================================= #
+# disabling for speed - you might have to run these on startx
 eval "$(fasd --init auto)"
 alias start_irssi='bitlebee -F -u stites && irssi'
 
 alias r='grunt'
 
-export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$HOME/.nvm/v0.10.32/lib/node_modules
+#export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$HOME/.nvm/v0.10.32/lib/node_modules
 
 # ===================== #
 # .bashrc functions     #
@@ -160,13 +163,16 @@ function addrc {
   src
 }
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+#  this is slowing things down a lot
+if [ -f /usr/local/etc/bash_completion ]; then
+ . /usr/local/etc/bash_completion
 fi
 
 # ========================================= #
 # Load the remaining settings               #
 # ========================================= #
-for SETTING in task git bina tmux npm python arch gauss mac jira emacs mu java ssh task spark ruby nginx; do
+
+for SETTING in task git bina tmux npm arch gauss mac jira emacs mu task spark ruby nginx; do
   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
 done
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home"

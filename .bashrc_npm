@@ -1,10 +1,10 @@
 # NPM packages in homedir
 NPM_PACKAGES="$HOME/.npm-packages"
 
-if [ ! -d "$DIRECTORY" ]; then
-  mkdir -p "$NPM_PACKAGES"
-  test -f ~/.npmrc && echo "prefix = $NPM_PACKAGES" >> ~/.npmrc
-fi
+#if [ ! -d "$DIRECTORY" ]; then
+#  mkdir -p "$NPM_PACKAGES"
+#  test -f ~/.npmrc && echo "prefix = $NPM_PACKAGES" >> ~/.npmrc
+#fi
 
 
 # Tell our environment about user-installed node tools
@@ -17,6 +17,8 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 # Tell Node about these packages
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
-# load nvm
-NVM_DIR=$HOME/.nvm
-test -s "$NVM_DIR/nvm.sh" && source "$NVM_DIR/nvm.sh"
+# load nvm if exported variable does not exist
+if [ ! $NVM_NODEJS_ORG_MIRROR ]; then
+    NVM_DIR=$HOME/.nvm
+    test -s "$NVM_DIR/nvm.sh" && source "$NVM_DIR/nvm.sh"
+fi

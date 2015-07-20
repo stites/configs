@@ -13,7 +13,7 @@ function patchapp {
   esac
 }
 
-alias newdev='git fetch upstream develop:develop && go develop && gpocb && go -b '
+alias newdev='git fetch upstream develop:develop && go develop && gpocb --no-verify && go -b '
 alias newgms='go Feature-GMSUI && gplucb && go -b '
 export TREX_SERVER="LD_LIBRARY_PATH=/home/sam/.bin/lib /home/sam/.bin/bin/mosh-server"
 export CHROME_ARGS="--remote-debugging-port=9222 --disable-web-security"

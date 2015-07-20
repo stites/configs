@@ -48,4 +48,4 @@ alias displayType='ioreg -lw0 | grep "EDID" | sed "/[^<]*</s///" | xxd -p -r | s
 # fix brew installed caveats:
 # LDFLAGS:  -L/usr/local/opt/readline/lib
 # CPPFLAGS: -I/usr/local/opt/readline/include
-safe_path_add $(brew --prefix coreutils)/libexec/gnubin
+safe_path_add /usr/local/opt/coreutils/libexec/gnubin
