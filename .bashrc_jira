@@ -40,4 +40,3 @@ function jsq {
   echo "$stat $sprint AND assignee in (currentUser()) ORDER BY priority DESC, updatedDate ASC"
 }
 alias sprint='jira -s "$(jsl open sprint)"'
-alias bw="source ~/virtualenv/bugwarrior/bin/activate"
