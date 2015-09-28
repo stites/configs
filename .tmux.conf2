@@ -1,0 +1,106 @@
+# Sync panes
+bind y setw synchronize-panes
+
+# Switching panes
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# resize panes
+bind-key -r J resize-pane -D 5
+bind-key -r K resize-pane -U 5
+bind-key -r H resize-pane -L 5
+bind-key -r L resize-pane -R 5
+
+# Fixes for ssh-agent
+set -g update-environment "SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTION"
+
+# 1.9 open new panes in $PWD
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
+
+# ++++++++++++++++++++++++++++ #
+#         use vi mode          #
+# ++++++++++++++++++++++++++++ #
+set-window-option -g mode-keys vi
+set  -g status-keys vi
+setw -g mode-keys   vi
+
+
+# ++++++++++++++++++++++++++++ #
+#      use vi copy/paste       #
+# ++++++++++++++++++++++++++++ #
+# see: http://bit.ly/1LuQQ8h
+unbind [
+bind Escape copy-mode
+unbind p
+bind p paste-buffer
+bind-key -t vi-copy 'v' begin-selection
+bind-key -t vi-copy 'y' copy-selection
+
+# ++++++++++++++++++++++++++++ #
+#    set panes to start at 1   #
+# ++++++++++++++++++++++++++++ #
+set-window-option -g pane-base-index 1
+set-window-option -g base-index 1
+set -g default-terminal "screen-256color"
+set -g status-bg blue
+set -g status-fg black
+
+# ++++++++++++++++++++++++++++ #
+#    change the prefix key     #
+# ++++++++++++++++++++++++++++ #
+set -g prefix C-b
+unbind C-b
+bind C-b send-prefix
+
+# +++++++++++++++++++++++++++++ #
+# set titles on and use un@host #
+# +++++++++++++++++++++++++++++ #
+# set titles on
+set -g set-titles-string "#T"
+
+# ++++++++++++++++++++++++++++ #
+#     change terminal stuff    #
+# ++++++++++++++++++++++++++++ #
+#setw -g aggressive-resize  on
+#set  -g terminal-overrides "xterm*:XT:smcup@:rmcup@"
+
+# ++++++++++++++++++++++++++++ #
+#  remove delay time for keys  #
+# ++++++++++++++++++++++++++++ #
+set -s escape-time 0
+
+#### COLOUR (Solarized 256)
+
+# default statusbar colors
+set-option -g status-bg colour235 #base02
+set-option -g status-fg colour136 #yellow
+set-option -g status-attr default
+
+# default window title colors
+set-window-option -g window-status-fg colour244 #base0
+set-window-option -g window-status-bg default
+#set-window-option -g window-status-attr dim
+
+# active window title colors
+set-window-option -g window-status-current-fg colour166 #orange
+set-window-option -g window-status-current-bg default
+#set-window-option -g window-status-current-attr bright
+
+# pane border
+set-option -g pane-border-fg colour235 #base02
+set-option -g pane-active-border-fg colour240 #base01
+
+# message text
+set-option -g message-bg colour235 #base02
+set-option -g message-fg colour166 #orange
+
+# pane number display
+set-option -g display-panes-active-colour colour33 #blue
+set-option -g display-panes-colour colour166 #orange
+
+# clock
+set-window-option -g clock-mode-colour colour64 #green

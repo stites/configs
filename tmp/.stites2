@@ -1,0 +1,35 @@
+needs definition and specs added for - /api/directories/project/1
++ projects:tags and properties (expanded)
++ samples vs properties?
+portal/site/src/gms/model/valueObjects/queryResponse.d.ts
+
+check: /settings/resources/new
+       /project/2/samples/dashboard
+
+conferences are the big stuff:
++ icml - feb
++ nips - june
++ aistats - october
++ kdd
++ colt - pure theory
+
+input-output. never considered chaining them.
+
+plan:
+- test out v0.1 in C++, move to haskell
+- neural spike trains ? read this and see how this fits in as testing cases
+
+- code
+  + reproduce CSSR.
+- test
+  + fmri from cosma
+  + small benchmarks with small states where we know
+  + toy models - look for jim's papers, dave feldmen? did most of the work with jim
+- rebuttle
+- writing = 1 month (combining with below)
+- editing = 1 month
+- submission is deadline
+
+
+
+

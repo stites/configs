@@ -56,6 +56,13 @@ alias r='grunt'
 alias vrc='vim ~/.bashrc'
 alias src='source ~/.bashrc'
 
+#=======================#
+# Use Nix               #
+#=======================#
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
+  . $HOME/.nix-profile/etc/profile.d/nix.sh;
+fi
+
 # ========================================= #
 # TODO: load init configs in plist somehow  #
 # ========================================= #
@@ -65,6 +72,6 @@ alias src='source ~/.bashrc'
 # Load the remaining settings               #
 # ========================================= #
 
-for SETTING in task git bina tmux mac emacs task nginx; do
+for SETTING in java task git bina tmux mac emacs task nginx vim; do
   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
 done

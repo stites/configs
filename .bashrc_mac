@@ -42,6 +42,7 @@ unset color_prompt force_color_prompt
 # ========================================================= #
 # Mac commands                                              #
 # ========================================================= #
+safe_path_add ~/.bin
 
 alias subl='open -a "Sublime Text"'
 alias displayType='ioreg -lw0 | grep "EDID" | sed "/[^<]*</s///" | xxd -p -r | strings -6'
@@ -50,3 +51,20 @@ alias displayType='ioreg -lw0 | grep "EDID" | sed "/[^<]*</s///" | xxd -p -r | s
 # LDFLAGS:  -L/usr/local/opt/readline/lib
 # CPPFLAGS: -I/usr/local/opt/readline/include
 safe_path_add /usr/local/opt/coreutils/libexec/gnubin
+safe_path_add /Applications/Postgres.app/Contents/Versions/9.4/bin
+
+# ===========================
+# haskell stuff : from https://twdkz.wordpress.com/2015/02/25/haskell-on-yosemite-osx-10-10/
+# ===========================
+
+# Add GHC 7.10.2 to the PATH, via https://ghcformacosx.github.io/
+export GHC_DOT_APP="/Applications/ghc-7.10.2.app"
+if [ -d "$GHC_DOT_APP" ]; then
+  export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
+fi
+
+# later steps in the build processes need to find libraries
+# like xcb-shm via package config. Tell pkg-config
+# where they are.
+export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
+

@@ -17,8 +17,14 @@
 # #for jdk in `ls $MAC_PATH`; do
 # #  JDK_PATH=$MAC_PATH/$jdk/Contents/Home
 # #  jenv add $JDK_PATH
-# #done
-# 
-# # finally, add java home
-# JAVA_HOME=`which java`
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home"
+# #doneless
+# # finally, add ja | help
+# maybe include thijava`
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
+MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1 -Xms1024m -Xmx4096m -XX:PermSize=1024m"
+function mvn_install {
+  mvn install -pl $1 -am —offline
+}
+export -f mvn_install
+
+

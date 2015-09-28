@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # NPM packages in homedir
-NPM_PACKAGES="$HOME/.npm-packages"
+# NPM_PACKAGES="$HOME/.npm-packages"
 
 #if [ ! -d "$DIRECTORY" ]; then
 #  mkdir -p "$NPM_PACKAGES"
@@ -10,20 +10,21 @@ NPM_PACKAGES="$HOME/.npm-packages"
 
 
 # Tell our environment about user-installed node tools
-safe_path_add $NPM_PACKAGES/bin
-
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-unset MANPATH  # delete if you already modified MANPATH elsewhere in your configuration
-MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-
-# Tell Node about these packages
-NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+#safe_path_add $NPM_PACKAGES/bin
+#
+## Unset manpath so we can inherit from /etc/manpath via the `manpath` command
+#unset MANPATH  # delete if you already modified MANPATH elsewhere in your configuration
+#MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+#
+## Tell Node about these packages
+#NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
 # load nvm if exported variable does not exist
-if [ ! $NVM_NODEJS_ORG_MIRROR ]; then
+if [ -n $NVM_DIR ]; then
     NVM_DIR=$HOME/.nvm
     test -s "$NVM_DIR/nvm.sh" && source "$NVM_DIR/nvm.sh"
 fi
 
 test ! -d $HOME/.nvm && echo "nvm not detected" && continue;
-find -P  $HOME/.nvm -type d -maxdepth 3 -name bin | xargs -n 1 bash -c 'safe_path_add "$@"' _
+# find -P  $HOME/.nvm -type d -maxdepth 3 -name bin | xargs -n 1 bash -c 'safe_path_add "$@"' _
+safe_path_add ${HOME}${NVM_PATH}/current/lib/node_modules/bin

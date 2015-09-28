@@ -1,0 +1,39 @@
+" ========== GENERAL VIM SETTINGS ==========
+" do not care about vi
+set nocompatible
+" ignore case on commands
+set ignorecase
+
+" set hybrid-number-d gutters
+set relativenumber
+set number
+
+" Enable search highlighting
+set hlsearch
+
+" Use F11 to toggle between paste and nopaste
+set pastetoggle=<F11>
+
+" vim-sensible enables smarttab. Here, we configure the rest:
+" Set the display size of t characters
+set tabstop=2
+
+" When hitting , insert combination of t and spaces for this width.
+" This combination is deleted as if it were 1 t when using backspace.
+set softtabstop=2
+
+" Set code-shifting width. Since smarttab is enabled, this is also the tab
+" insert size for the beginning of a line.
+set shiftwidth=2
+
+" When inserting tab characters, use spaces instead
+set expandtab
+
+" Instead of failing command, present dialog if unsaved changes
+set confirm
+
+" Enable mouse in all modes
+set mouse=a
+
+"set column-width to half my mb-pro"13 screen size
+set tw=85

@@ -18,9 +18,9 @@ fi
 # TODO: rename spark->maven, npm->node
 # TODO: re-add ssh
 
-for SETTING in python ruby npm spark tmux java; do
-  [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
-done
+# for SETTING in python ruby npm spark tmux java; do
+#   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
+# done
 
 # ========================================================= #
 # PATH Exports                                              #

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [[ ! -f "$HOME/.emacs.d/core/prelude-core.el" ]]; then
-  curl -L http://git.io/epre | sh
-fi
+# if [[ ! -f "$HOME/.emacs.d/core/prelude-core.el" ]]; then
+#   curl -L http://git.io/epre | sh
+# fi
 alias e='emacsclient -t'
 alias ec='emacsclient -c'
 alias kille='emacsclient -e "(kill-emacs)"'

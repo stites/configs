@@ -11,31 +11,36 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=~/.task
+data.location=/Users/stites/.task
 
 # Color theme (uncomment one to use)
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/light-16.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/light-256.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-16.theme
- #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-256.theme
+#include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-256.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-red-256.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-green-256.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-blue-256.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-violets-256.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-gray-256.theme
+include /Users/stites/.task/extras/rc/dark-violets-256.theme
 
-taskd.server=freecinc.com:53589
-taskd.credentials=FreeCinc\/freecinc_fb1aed14\/00b04183-7d0e-4f52-8bb7-2ba54235a8d1
-taskd.certificate=\/Users\/stites\/.task\/freecinc_fb1aed14.cert.pem
-taskd.ca=\/Users\/stites\/.task\/freecinc_fb1aed14.ca.pem
-taskd.key=\/Users\/stites\/.task\/freecinc_fb1aed14.key.pem
+taskd.certificate=/Users/stites/.task/private.cert
+taskd.key=/Users/stites/.task/private.key
+taskd.ca=/Users/stites/.task/ca.cert.pem
+taskd.server=taskwarrior.inthe.am:53589
+taskd.credentials=inthe_am/stites.sr/d215c691-bf9b-4750-9637-95c1a5ce8683
+taskd.trust=ignore hostname
+
+
 color=on
 alias.bina=project:bina
 alias.arch=project:arch
 alias.now=due:today
 alias.inbox=project:Inbox
 alias.personal=project:personal
+
 uda.url.type=string
 uda.url.label=url
 uda.isBlocker.type=string
@@ -46,3 +51,9 @@ uda.est.type=string
 uda.est.label=est
 uda.sprint.type=numeric
 uda.sprint.label=sprint
+
+urgency.user.tag.in.coefficient=15.0
+report.in.columns           = id,description
+report.in.description       = Inbox
+report.in.filter            = status:pending limit:page (+in)
+report.in.labels            = ID,Description
