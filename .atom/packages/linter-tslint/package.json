@@ -1,0 +1,418 @@
+{
+  "name": "linter-tslint",
+  "main": "./lib/init",
+  "linter-package": true,
+  "version": "0.3.0",
+  "description": "Linter plugin for Typescript, using tslint",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AtomLinter/linter-tslint.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "tslint": "^2.1.1"
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/AtomLinter/linter-tslint/issues"
+  },
+  "homepage": "https://github.com/AtomLinter/linter-tslint",
+  "dist": {
+    "shasum": "ef99bad67e3e7db0dc69d8d379272ef02f4a4a21"
+  },
+  "readme": "linter-tslint\n=========================\n\nThis linter plugin for AtomLinter provides an interface to [tslint](https://github.com/palantir/tslint). It will be used with files that have the \"TypeScript\" syntax.\n\n## Installation\nLinter package must be installed in order to use this plugin. If Linter is not installed, please follow the instructions [here](https://github.com/AtomLinter/Linter).\n\n### tslint installation (optional if you wish to use an older version of tslint than the plugin)\nBefore using this plugin, you must ensure that `tslint` is installed on your system. To install `tslint`, do the following:\n\n1. Install [Node.js](http://nodejs.org) (and [npm](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager) on Linux).\n\n1. Install `tslint` by typing the following in a terminal:\n   ```\n   npm install -g tslint\n   ```\n\n1. If you are using `nvm` and `zsh`, ensure that the line to load `nvm` is in `.zshenv` and not `.zshrc`.\n1. Set the linter-tslint linter path setting to the location of the installed tslint\n\n**Note:** This plugin requires `tslint` 0.4.8 or later.\n\nNow you can proceed to install the linter-tslint plugin.\n\n### Plugin installation\n```\n$ apm install linter-tslint\n```\n\n## Settings\nYou can configure linter-tslint by editing ~/.atom/config.cson (choose Open Your Config in Atom menu):\n```\n'linter-tslint':\n  'tslintExecutablePath': null #tslint path. run 'which tslint' to find the path\n```\n\n## Contributing\nIf you would like to contribute enhancements or fixes, please do the following:\n\n1. Fork the plugin repository.\n1. Hack on a separate topic branch created from the latest `master`.\n1. Commit and push the topic branch.\n1. Make a pull request.\n1. welcome to the club\n\nPlease note that modifications should follow these coding guidelines:\n\n- Indent is 2 spaces.\n- Code should pass coffeelint linter.\n- Vertical whitespace helps readability, don’t be afraid to use it.\n\nThank you for helping out!\n\n## Donation\n[![Share the love!](https://chewbacco-stuff.s3.amazonaws.com/donate.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KXUYS4ARNHCN8)\n",
+  "_id": "linter-tslint@0.3.0",
+  "_shasum": "cd13c23e6f97db77d13772c782a6dc705df800e6",
+  "_resolved": "file:../d-115725-37259-1m7cgpm/package.tgz",
+  "_from": "../d-115725-37259-1m7cgpm/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "tslint",
+        "version": "2.4.3",
+        "path": "node_modules/tslint/lib/tslint.js"
+      },
+      {
+        "name": "findup-sync",
+        "version": "0.2.1",
+        "path": "node_modules/tslint/node_modules/findup-sync/lib/findup-sync.js"
+      },
+      {
+        "name": "glob",
+        "version": "4.3.5",
+        "path": "node_modules/tslint/node_modules/findup-sync/node_modules/glob/glob.js"
+      },
+      {
+        "name": "inflight",
+        "version": "1.0.4",
+        "path": "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/inflight/inflight.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.1",
+        "path": "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.1",
+        "path": "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "2.0.10",
+        "path": "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "brace-expansion",
+        "version": "1.1.0",
+        "path": "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js"
+      },
+      {
+        "name": "balanced-match",
+        "version": "0.2.0",
+        "path": "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js"
+      },
+      {
+        "name": "concat-map",
+        "version": "0.0.1",
+        "path": "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js"
+      },
+      {
+        "name": "once",
+        "version": "1.3.2",
+        "path": "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/once/once.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.1",
+        "path": "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js"
+      },
+      {
+        "name": "optimist",
+        "version": "0.6.1",
+        "path": "node_modules/tslint/node_modules/optimist/index.js"
+      },
+      {
+        "name": "minimist",
+        "version": "0.0.10",
+        "path": "node_modules/tslint/node_modules/optimist/node_modules/minimist/index.js"
+      },
+      {
+        "name": "wordwrap",
+        "version": "0.0.3",
+        "path": "node_modules/tslint/node_modules/optimist/node_modules/wordwrap/index.js"
+      },
+      {
+        "name": "underscore.string",
+        "version": "3.1.1",
+        "path": "node_modules/tslint/node_modules/underscore.string/index.js"
+      }
+    ],
+    "extensions": {
+      ".coffee": [
+        "lib/init.coffee",
+        "lib/linter-tslint.coffee"
+      ],
+      ".json": [
+        "node_modules/tslint/.settings/settings.json",
+        "node_modules/tslint/.settings/tasks.json",
+        "node_modules/tslint/docs/sample.tslint.json",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/inflight/node_modules/wrappy/package.json",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/inflight/package.json",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/inherits/package.json",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/package.json",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/package.json",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/once/node_modules/wrappy/package.json",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/once/package.json",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/package.json",
+        "node_modules/tslint/node_modules/findup-sync/package.json",
+        "node_modules/tslint/node_modules/optimist/node_modules/minimist/package.json",
+        "node_modules/tslint/node_modules/optimist/node_modules/wordwrap/package.json",
+        "node_modules/tslint/node_modules/optimist/package.json",
+        "node_modules/tslint/node_modules/underscore.string/bower.json",
+        "node_modules/tslint/node_modules/underscore.string/component.json",
+        "node_modules/tslint/node_modules/underscore.string/package.json",
+        "node_modules/tslint/package.json",
+        "package.json"
+      ],
+      ".js": [
+        "node_modules/tslint/bin/tslint-cli.js",
+        "node_modules/tslint/build/formatters/jsonFormatter.js",
+        "node_modules/tslint/build/formatters/pmdFormatter.js",
+        "node_modules/tslint/build/formatters/proseFormatter.js",
+        "node_modules/tslint/build/formatters/verboseFormatter.js",
+        "node_modules/tslint/build/rules/alignRule.js",
+        "node_modules/tslint/build/rules/banRule.js",
+        "node_modules/tslint/build/rules/classNameRule.js",
+        "node_modules/tslint/build/rules/commentFormatRule.js",
+        "node_modules/tslint/build/rules/curlyRule.js",
+        "node_modules/tslint/build/rules/eoflineRule.js",
+        "node_modules/tslint/build/rules/forinRule.js",
+        "node_modules/tslint/build/rules/indentRule.js",
+        "node_modules/tslint/build/rules/interfaceNameRule.js",
+        "node_modules/tslint/build/rules/jsdocFormatRule.js",
+        "node_modules/tslint/build/rules/labelPositionRule.js",
+        "node_modules/tslint/build/rules/labelUndefinedRule.js",
+        "node_modules/tslint/build/rules/maxLineLengthRule.js",
+        "node_modules/tslint/build/rules/memberAccessRule.js",
+        "node_modules/tslint/build/rules/memberOrderingRule.js",
+        "node_modules/tslint/build/rules/noAnyRule.js",
+        "node_modules/tslint/build/rules/noArgRule.js",
+        "node_modules/tslint/build/rules/noBitwiseRule.js",
+        "node_modules/tslint/build/rules/noConditionalAssignmentRule.js",
+        "node_modules/tslint/build/rules/noConsecutiveBlankLinesRule.js",
+        "node_modules/tslint/build/rules/noConsoleRule.js",
+        "node_modules/tslint/build/rules/noConstructRule.js",
+        "node_modules/tslint/build/rules/noConstructorVarsRule.js",
+        "node_modules/tslint/build/rules/noDebuggerRule.js",
+        "node_modules/tslint/build/rules/noDuplicateKeyRule.js",
+        "node_modules/tslint/build/rules/noDuplicateVariableRule.js",
+        "node_modules/tslint/build/rules/noEmptyRule.js",
+        "node_modules/tslint/build/rules/noEvalRule.js",
+        "node_modules/tslint/build/rules/noInternalModuleRule.js",
+        "node_modules/tslint/build/rules/noRequireImportsRule.js",
+        "node_modules/tslint/build/rules/noShadowedVariableRule.js",
+        "node_modules/tslint/build/rules/noStringLiteralRule.js",
+        "node_modules/tslint/build/rules/noSwitchCaseFallThroughRule.js",
+        "node_modules/tslint/build/rules/noTrailingCommaRule.js",
+        "node_modules/tslint/build/rules/noTrailingWhitespaceRule.js",
+        "node_modules/tslint/build/rules/noUnreachableRule.js",
+        "node_modules/tslint/build/rules/noUnusedExpressionRule.js",
+        "node_modules/tslint/build/rules/noUnusedVariableRule.js",
+        "node_modules/tslint/build/rules/noUseBeforeDeclareRule.js",
+        "node_modules/tslint/build/rules/noVarKeywordRule.js",
+        "node_modules/tslint/build/rules/noVarRequiresRule.js",
+        "node_modules/tslint/build/rules/oneLineRule.js",
+        "node_modules/tslint/build/rules/quotemarkRule.js",
+        "node_modules/tslint/build/rules/radixRule.js",
+        "node_modules/tslint/build/rules/semicolonRule.js",
+        "node_modules/tslint/build/rules/sortObjectLiteralKeysRule.js",
+        "node_modules/tslint/build/rules/switchDefaultRule.js",
+        "node_modules/tslint/build/rules/tripleEqualsRule.js",
+        "node_modules/tslint/build/rules/typedefRule.js",
+        "node_modules/tslint/build/rules/typedefWhitespaceRule.js",
+        "node_modules/tslint/build/rules/useStrictRule.js",
+        "node_modules/tslint/build/rules/variableNameRule.js",
+        "node_modules/tslint/build/rules/whitespaceRule.js",
+        "node_modules/tslint/lib/tslint.js",
+        "node_modules/tslint/node_modules/findup-sync/lib/findup-sync.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/common.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/glob.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/inflight/inflight.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/inflight/test.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/inherits/inherits.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/inherits/inherits_browser.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/inherits/test.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/browser.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/minimatch.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/example.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/example.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example/map.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/once/once.js",
+        "node_modules/tslint/node_modules/findup-sync/node_modules/glob/sync.js",
+        "node_modules/tslint/node_modules/optimist/example/bool.js",
+        "node_modules/tslint/node_modules/optimist/example/boolean_double.js",
+        "node_modules/tslint/node_modules/optimist/example/boolean_single.js",
+        "node_modules/tslint/node_modules/optimist/example/default_hash.js",
+        "node_modules/tslint/node_modules/optimist/example/default_singles.js",
+        "node_modules/tslint/node_modules/optimist/example/divide.js",
+        "node_modules/tslint/node_modules/optimist/example/line_count.js",
+        "node_modules/tslint/node_modules/optimist/example/line_count_options.js",
+        "node_modules/tslint/node_modules/optimist/example/line_count_wrap.js",
+        "node_modules/tslint/node_modules/optimist/example/nonopt.js",
+        "node_modules/tslint/node_modules/optimist/example/reflect.js",
+        "node_modules/tslint/node_modules/optimist/example/short.js",
+        "node_modules/tslint/node_modules/optimist/example/string.js",
+        "node_modules/tslint/node_modules/optimist/example/usage-options.js",
+        "node_modules/tslint/node_modules/optimist/example/xup.js",
+        "node_modules/tslint/node_modules/optimist/index.js",
+        "node_modules/tslint/node_modules/optimist/node_modules/minimist/example/parse.js",
+        "node_modules/tslint/node_modules/optimist/node_modules/minimist/index.js",
+        "node_modules/tslint/node_modules/optimist/node_modules/wordwrap/example/center.js",
+        "node_modules/tslint/node_modules/optimist/node_modules/wordwrap/example/meat.js",
+        "node_modules/tslint/node_modules/optimist/node_modules/wordwrap/index.js",
+        "node_modules/tslint/node_modules/underscore.string/camelize.js",
+        "node_modules/tslint/node_modules/underscore.string/capitalize.js",
+        "node_modules/tslint/node_modules/underscore.string/chars.js",
+        "node_modules/tslint/node_modules/underscore.string/chop.js",
+        "node_modules/tslint/node_modules/underscore.string/classify.js",
+        "node_modules/tslint/node_modules/underscore.string/clean.js",
+        "node_modules/tslint/node_modules/underscore.string/count.js",
+        "node_modules/tslint/node_modules/underscore.string/dasherize.js",
+        "node_modules/tslint/node_modules/underscore.string/decapitalize.js",
+        "node_modules/tslint/node_modules/underscore.string/dedent.js",
+        "node_modules/tslint/node_modules/underscore.string/dist/underscore.string.js",
+        "node_modules/tslint/node_modules/underscore.string/dist/underscore.string.min.js",
+        "node_modules/tslint/node_modules/underscore.string/endsWith.js",
+        "node_modules/tslint/node_modules/underscore.string/escapeHTML.js",
+        "node_modules/tslint/node_modules/underscore.string/exports.js",
+        "node_modules/tslint/node_modules/underscore.string/gulpfile.js",
+        "node_modules/tslint/node_modules/underscore.string/helper/adjacent.js",
+        "node_modules/tslint/node_modules/underscore.string/helper/defaultToWhiteSpace.js",
+        "node_modules/tslint/node_modules/underscore.string/helper/escapeChars.js",
+        "node_modules/tslint/node_modules/underscore.string/helper/escapeRegExp.js",
+        "node_modules/tslint/node_modules/underscore.string/helper/htmlEntities.js",
+        "node_modules/tslint/node_modules/underscore.string/helper/makeString.js",
+        "node_modules/tslint/node_modules/underscore.string/helper/strRepeat.js",
+        "node_modules/tslint/node_modules/underscore.string/helper/toPositive.js",
+        "node_modules/tslint/node_modules/underscore.string/humanize.js",
+        "node_modules/tslint/node_modules/underscore.string/include.js",
+        "node_modules/tslint/node_modules/underscore.string/index.js",
+        "node_modules/tslint/node_modules/underscore.string/insert.js",
+        "node_modules/tslint/node_modules/underscore.string/isBlank.js",
+        "node_modules/tslint/node_modules/underscore.string/join.js",
+        "node_modules/tslint/node_modules/underscore.string/levenshtein.js",
+        "node_modules/tslint/node_modules/underscore.string/lines.js",
+        "node_modules/tslint/node_modules/underscore.string/lpad.js",
+        "node_modules/tslint/node_modules/underscore.string/lrpad.js",
+        "node_modules/tslint/node_modules/underscore.string/ltrim.js",
+        "node_modules/tslint/node_modules/underscore.string/meteor-post.js",
+        "node_modules/tslint/node_modules/underscore.string/meteor-pre.js",
+        "node_modules/tslint/node_modules/underscore.string/naturalCmp.js",
+        "node_modules/tslint/node_modules/underscore.string/numberFormat.js",
+        "node_modules/tslint/node_modules/underscore.string/package.js",
+        "node_modules/tslint/node_modules/underscore.string/pad.js",
+        "node_modules/tslint/node_modules/underscore.string/pred.js",
+        "node_modules/tslint/node_modules/underscore.string/prune.js",
+        "node_modules/tslint/node_modules/underscore.string/quote.js",
+        "node_modules/tslint/node_modules/underscore.string/repeat.js",
+        "node_modules/tslint/node_modules/underscore.string/replaceAll.js",
+        "node_modules/tslint/node_modules/underscore.string/reverse.js",
+        "node_modules/tslint/node_modules/underscore.string/rpad.js",
+        "node_modules/tslint/node_modules/underscore.string/rtrim.js",
+        "node_modules/tslint/node_modules/underscore.string/slugify.js",
+        "node_modules/tslint/node_modules/underscore.string/splice.js",
+        "node_modules/tslint/node_modules/underscore.string/sprintf.js",
+        "node_modules/tslint/node_modules/underscore.string/startsWith.js",
+        "node_modules/tslint/node_modules/underscore.string/strLeft.js",
+        "node_modules/tslint/node_modules/underscore.string/strLeftBack.js",
+        "node_modules/tslint/node_modules/underscore.string/strRight.js",
+        "node_modules/tslint/node_modules/underscore.string/strRightBack.js",
+        "node_modules/tslint/node_modules/underscore.string/stripTags.js",
+        "node_modules/tslint/node_modules/underscore.string/succ.js",
+        "node_modules/tslint/node_modules/underscore.string/surround.js",
+        "node_modules/tslint/node_modules/underscore.string/swapCase.js",
+        "node_modules/tslint/node_modules/underscore.string/titleize.js",
+        "node_modules/tslint/node_modules/underscore.string/toBoolean.js",
+        "node_modules/tslint/node_modules/underscore.string/toNumber.js",
+        "node_modules/tslint/node_modules/underscore.string/toSentence.js",
+        "node_modules/tslint/node_modules/underscore.string/toSentenceSerial.js",
+        "node_modules/tslint/node_modules/underscore.string/trim.js",
+        "node_modules/tslint/node_modules/underscore.string/truncate.js",
+        "node_modules/tslint/node_modules/underscore.string/underscored.js",
+        "node_modules/tslint/node_modules/underscore.string/unescapeHTML.js",
+        "node_modules/tslint/node_modules/underscore.string/unquote.js",
+        "node_modules/tslint/node_modules/underscore.string/vsprintf.js",
+        "node_modules/tslint/node_modules/underscore.string/words.js",
+        "node_modules/tslint/scripts/tsc-wrapper.js"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "lib",
+          ""
+        ],
+        "dependencies": {
+          "tslint": "^2.1.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/tslint/.settings",
+          "node_modules/tslint/bin",
+          "node_modules/tslint/build/formatters",
+          "node_modules/tslint/build/rules",
+          "node_modules/tslint/docs",
+          "node_modules/tslint/lib",
+          "node_modules/tslint",
+          "node_modules/tslint/scripts"
+        ],
+        "dependencies": {
+          "findup-sync": "~0.2.1",
+          "optimist": "~0.6.0",
+          "underscore.string": "~3.1.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/tslint/node_modules/findup-sync/lib",
+          "node_modules/tslint/node_modules/findup-sync"
+        ],
+        "dependencies": {
+          "glob": "~4.3.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/tslint/node_modules/findup-sync/node_modules/glob"
+        ],
+        "dependencies": {
+          "inflight": "^1.0.4",
+          "inherits": "2",
+          "minimatch": "^2.0.1",
+          "once": "^1.3.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/inflight"
+        ],
+        "dependencies": {
+          "once": "^1.3.0",
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch"
+        ],
+        "dependencies": {
+          "brace-expansion": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion",
+          "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test"
+        ],
+        "dependencies": {
+          "balanced-match": "^0.2.0",
+          "concat-map": "0.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/once",
+          "node_modules/tslint/node_modules/findup-sync/node_modules/glob/node_modules/once/test"
+        ],
+        "dependencies": {
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/tslint/node_modules/optimist/example",
+          "node_modules/tslint/node_modules/optimist",
+          "node_modules/tslint/node_modules/optimist/test/_",
+          "node_modules/tslint/node_modules/optimist/test"
+        ],
+        "dependencies": {
+          "wordwrap": "~0.0.2",
+          "minimist": "~0.0.1"
+        }
+      }
+    ]
+  }
+}

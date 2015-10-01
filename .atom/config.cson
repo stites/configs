@@ -1,0 +1,26 @@
+"*":
+  "exception-reporting":
+    userId: "0f5929b5-6dff-090b-02fd-793306bc6e20"
+  welcome:
+    showOnStartup: false
+  core:
+    projectHome: "/Users/stites/git/seqalto_clean/portal/site/src"
+    ignoredNames: [
+      "*.js*"
+    ]
+  editor:
+    invisibles: {}
+    fontSize: 12
+    fontFamily: "inconsolata-g"
+    showIndentGuide: true
+    showInvisibles: true
+    scrollPastEnd: true
+  linter: {}
+  "markdown-preview": {}
+  "highlight-line":
+    enableBackgroundColor: false
+  autosave:
+    enabled: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
+    hideIgnoredNames: true
