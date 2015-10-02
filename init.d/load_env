@@ -31,3 +31,4 @@ safe_path_add /usr/bin
 safe_path_add /usr/sbin
 safe_path_add /usr/local/bin
 safe_path_add /usr/local/sbin
+

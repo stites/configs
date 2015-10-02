@@ -11,7 +11,7 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=/Users/stites/.task
+data.location=/Users/stitess/.task
 
 # Color theme (uncomment one to use)
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/light-16.theme
@@ -24,11 +24,11 @@ data.location=/Users/stites/.task
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-violets-256.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-gray-256.theme
-include /Users/stites/.task/extras/rc/dark-violets-256.theme
+include /Users/stitess/.task/extras/rc/dark-violets-256.theme
 
-taskd.certificate=/Users/stites/.task/private.cert
-taskd.key=/Users/stites/.task/private.key
-taskd.ca=/Users/stites/.task/ca.cert.pem
+taskd.certificate=/Users/stitess/.task/private.cert
+taskd.key=/Users/stitess/.task/private.key
+taskd.ca=/Users/stitess/.task/ca.cert.pem
 taskd.server=taskwarrior.inthe.am:53589
 taskd.credentials=inthe_am/stites.sr/d215c691-bf9b-4750-9637-95c1a5ce8683
 taskd.trust=ignore hostname

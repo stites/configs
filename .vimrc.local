@@ -1,4 +1,7 @@
 " ========== GENERAL VIM SETTINGS ==========
+" ensure that we are using bash if we are in some other terminal
+set shell=/bin/bash
+
 " do not care about vi
 set nocompatible
 " ignore case on commands
@@ -37,3 +40,29 @@ set mouse=a
 
 "set column-width to half my mb-pro"13 screen size
 set tw=85
+
+" ===========================================
+" set up tmux-vim config: https://teamgaslight.com/blog/vim-plus-tmux-a-perfect-match
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" from tmux-navigator
+let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_save_on_switch = 1
+
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
+
+auto BufEnter * let &titlestring = "vim"
+auto BufEnter * let &iconstring  = "vim"
+
+" =======More Natural Splitting=============
+set splitbelow
+set splitright
+
+let mapleader = "\<Space>"

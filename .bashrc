@@ -72,6 +72,9 @@ fi
 # Load the remaining settings               #
 # ========================================= #
 
-for SETTING in java task git bina tmux mac emacs task nginx vim; do
+for SETTING in java git bina tmux mac emacs task nginx vim; do
   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
 done
+
+safe_path_add ~/.config/fish/udf
+
