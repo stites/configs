@@ -65,4 +65,10 @@ auto BufEnter * let &iconstring  = "vim"
 set splitbelow
 set splitright
 
-let mapleader = "\<Space>"
+" ===== NerdTree settings=================
+map <Space>n :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
