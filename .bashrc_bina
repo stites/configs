@@ -11,3 +11,6 @@ alias chrome="      open -a Google\ Chrome         --args $CHROME_ARGS http://lo
 function s () {
   echo "SEQ-$1"
 }
+
+alias gogms="go Feature-GMSRAVE && gplucb"
+alias newgms="gogms && go -b "

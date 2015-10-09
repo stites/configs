@@ -2,5 +2,6 @@
 
 # bashrc to alias nginx conf
 
-alias 'nginx.conf'='vim /nix/store/d93ngrgp1jgzlgvhbl2nkh0xi4lbfq0d-nginx-1.9.4/conf/nginx.conf'
+alias 'nginx.conf'='vim ~/.config/nginx/conf/nginx.conf'
+alias 'nginx'='nginx -p ~/.config/nginx/'
 
