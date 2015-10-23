@@ -65,10 +65,17 @@ auto BufEnter * let &iconstring  = "vim"
 set splitbelow
 set splitright
 
+" =====change leader to space============
+let mapleader = "\<Space>"
+
 " ===== NerdTree settings=================
-map <Space>n :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
+" =======Markdown instant========
+" from: https://github.com/suan/vim-instant-markdown
+let g:instant_markdown_slow = 1 " slow down realtime updates
+let g:instant_markdown_autostart = 0 "manually trigger preview via the command :InstantMarkdownPreview
