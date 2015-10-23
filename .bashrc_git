@@ -96,10 +96,10 @@ function repo-name {
   remote-full $1 | cut -d '/' -f 2
 }
 
-function gitmv {
-  mv $1 $2
-  git-mv $2 $1
-}
-export -f gitmv
+# function gitmv {
+#   mv $1 $2
+#   git-mv $2 $1
+# }
+# export -f gitmv
 
 alias gitTree='tree -I ./client/bower_components -I node_modules'
