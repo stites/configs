@@ -51,6 +51,9 @@ ZSH_THEME="lambda-mod"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git taskwarrior cabal fasd)
 
+# add zsh-completions:
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # User configuration
 
 export PATH="/Users/stitess/.nix-profile/bin:/Users/stitess/.nix-profile/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/stitess/.nix-profile/bin:/Users/stitess/.nix-profile/sbin:/usr/local/opt/coreutils/libexec/gnubin:/Applications/Postgres.app/Contents/Versions/9.4/bin:/Users/stitess/.config/fish/udf"
@@ -58,17 +61,18 @@ export PATH="/Users/stitess/.nix-profile/bin:/Users/stitess/.nix-profile/sbin:/u
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bashrc_git
+source $HOME/.bashrc_emacs
 
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
