@@ -1,12 +1,17 @@
 #!/bin/bash
+# add gitcompletion
+# https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+
+if [ -f ~/.local/git/git-completion.bash ]; then
+  . ~/.local/git/git-completion.bash
+fi
 
 # ========================================================= #
 # git config                                                #
 # ========================================================= #
-
 # git alias:
 alias g="git "
-alias gf="git flow"
+alias gf="git fetch"
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad @ %cr) %C(bold blue)<%an>%Creset' --graph --abbrev-commit --date=short"
 alias go="git checkout "
 alias gs='git status'

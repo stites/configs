@@ -1,5 +1,7 @@
 #!/bin/bash
 
+alias vi=vim
+alias vim=nvim
 alias vimd="vim --servername VIM_SERVER "
 alias vimattach="vim --servername VIM_SERVER --remote-tab "
 

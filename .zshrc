@@ -56,13 +56,15 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 # User configuration
 
-export PATH="/Users/stitess/.nix-profile/bin:/Users/stitess/.nix-profile/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/stitess/.nix-profile/bin:/Users/stitess/.nix-profile/sbin:/usr/local/opt/coreutils/libexec/gnubin:/Applications/Postgres.app/Contents/Versions/9.4/bin:/Users/stitess/.config/fish/udf"
+export PATH="/Users/stitess/.nix-profile/bin:/Users/stitess/.nix-profile/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/stitess/.nix-profile/bin:/Users/stitess/.nix-profile/sbin:/usr/local/opt/coreutils/libexec/gnubin:/Applications/Postgres.app/Contents/Versions/9.4/bin:/Users/stitess/.config/fish/udf:/Users/stitess/.local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bashrc_git
+source $HOME/.bashrc_nginx
 source $HOME/.bashrc_emacs
 
+export PATH="$PATH:/Users/stitess/anaconda/bin"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

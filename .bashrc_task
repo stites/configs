@@ -1,5 +1,4 @@
 #!/bin/bash
-export PS1='$(task +in +PENDING count) '$PS1
 alias t='clear && task'
 alias in='task add +in'
 tickle () {

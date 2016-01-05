@@ -45,8 +45,8 @@ alias .....='cd ../../../..'
 # initialization scripts which are auto-generated           #
 # ========================================================= #
 # disabling for speed - you might have to run these on startx
-alias start_irssi='bitlebee -F -u stites && irssi'
-alias r='grunt'
+# alias start_irssi='bitlebee -F -u stites && irssi'
+# alias r='grunt'
 
 #export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$HOME/.nvm/v0.10.32/lib/node_modules
 
@@ -55,6 +55,13 @@ alias r='grunt'
 # ===================== #
 alias vrc='vim ~/.bashrc'
 alias src='source ~/.bashrc'
+
+#=======================#
+# Add git-aware prompt  #
+#=======================#
+# -- primarily cause I'm super lazy: https://github.com/jimeh/git-aware-prompt
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
 
 #=======================#
 # Use Nix               #
@@ -76,5 +83,6 @@ for SETTING in java git bina tmux mac emacs task nginx vim; do
   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
 done
 
-safe_path_add ~/.config/fish/udf
+# add stack installs to path
+safe_path_add ~/.local/bin/
 

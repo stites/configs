@@ -30,10 +30,25 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+dynamic_prompt (){
+  local BASE="${BRIGHT_CYAN}@"
+  local ENDING=""
+  if [ ! -z "${git_branch}" ]; then
+    ENDING="${YELLOW}\W ${CYAN}${git_branch}${RED}${git_dirty} ${RESET}"
+  else
+    ENDING="${CYAN}\W ${RESET}"
+  fi
+  # looks like we could just invoke functions in PS1 itself without having to use the
+  # PROMPT_COMMAND
+  PS1="$(task +in +PENDING count) ${BASE} ${ENDING}"
+}
 
 if [ "$color_prompt" = yes ]; then
     #PS1="${BRIGHT_YELLOW}@${BRIGHT_BLUE}\W${BRIGHT_VIOLET}~ ${RESET}"
-    PS1="${BRIGHT_CYAN}@ ${CYAN}\W ${RESET}"
+    # PS1="${BRIGHT_CYAN}@ ${CYAN}\W ${RESET}"
+    #PS1="${BRIGHT_CYAN}@ ${YELLOW}\W ${CYAN}${git_branch}${RED}${git_dirty} ${RESET}"
+    # assuminp that $PROMPT_COMMAND ends in ';'
+    PROMPT_COMMAND="$PROMPT_COMMAND dynamic_prompt;"
 else
     PS1="[\u@\h:\W]\$ "
 fi
@@ -67,4 +82,4 @@ fi
 # like xcb-shm via package config. Tell pkg-config
 # where they are.
 export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
-
+export ANDROID_HOME=/usr/local/opt/android-sdk

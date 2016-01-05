@@ -9,3 +9,9 @@ if [ -d "$GHC_DOT_APP" ]; then
 fi
 
 if [ -e /Users/stites/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/stites/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# added by Anaconda3 2.4.0 installer
+export PATH="//anaconda/bin:$PATH"
+
+# added by Anaconda3 2.4.0 installer
+export PATH="/Users/stitess/anaconda/bin:$PATH"
