@@ -1,2 +1,4 @@
 Library
 .exercism.json
+.atom/.apm
+.atom/packages

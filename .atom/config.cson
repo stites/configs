@@ -23,4 +23,5 @@
     enabled: true
   "tree-view":
     hideVcsIgnoredFiles: true
-    hideIgnoredNames: true
+    squashDirectoryNames: true
+  "atom-typescript": {}
