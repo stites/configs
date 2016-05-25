@@ -47,8 +47,10 @@ if [ "$color_prompt" = yes ]; then
     #PS1="${BRIGHT_YELLOW}@${BRIGHT_BLUE}\W${BRIGHT_VIOLET}~ ${RESET}"
     # PS1="${BRIGHT_CYAN}@ ${CYAN}\W ${RESET}"
     #PS1="${BRIGHT_CYAN}@ ${YELLOW}\W ${CYAN}${git_branch}${RED}${git_dirty} ${RESET}"
-    # assuminp that $PROMPT_COMMAND ends in ';'
-    PROMPT_COMMAND="$PROMPT_COMMAND dynamic_prompt;"
+    if [[ $PROMPT_COMMAND != *" dynamic_prompt;"* ]]; then
+      # assuming that $PROMPT_COMMAND ends in ';'
+      PROMPT_COMMAND="$PROMPT_COMMAND dynamic_prompt;"
+    fi
 else
     PS1="[\u@\h:\W]\$ "
 fi

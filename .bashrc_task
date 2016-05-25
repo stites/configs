@@ -11,18 +11,21 @@ function t {
   if [ -z "$1" ];
     then task tracking;
   else
-    TEMP="$(mktemp -dt "taskcommand.XXXXXXXXXX")/output"
-    unbuffer task $@ | tee $TEMP
-    if [ -n "`cat $TEMP | grep "assuming 'information'"`" ]; then
-       id=$1
-       shift && clear
-       if [ $# -eq 0 ]; then task $id
-       else
-         echo "Did you mean: task $id modify $@?"
-         echo -e "Running this now...\n"
-         task $id modify $@
-       fi;
-     fi;
+    task $@
+
+    #TEMP="$(mktemp -dt "taskcommand.XXXXXXXXXX")/output"
+    #unbuffer task $@ | tee $TEMP
+
+    #if [ -n "`cat $TEMP | grep "assuming 'information'"`" ]; then
+    #  id=$1
+    #  shift #&& clear
+    #  if [ $# -eq 0 ]; then task $id
+    #  else
+    #    echo "Did you mean: task $id modify $@?"
+    #    echo -e "Running this now...\n"
+    #    task $id modify $@
+    #  fi;
+    #fi;
   fi;
 }
 

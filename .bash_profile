@@ -15,3 +15,4 @@ export PATH="//anaconda/bin:$PATH"
 
 # added by Anaconda3 2.4.0 installer
 export PATH="/Users/stitess/anaconda/bin:$PATH"
+if [ -e /Users/stitess/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/stitess/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

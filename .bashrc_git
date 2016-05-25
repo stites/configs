@@ -14,6 +14,7 @@ alias g="git "
 alias gf="git fetch"
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad @ %cr) %C(bold blue)<%an>%Creset' --graph --abbrev-commit --date=short"
 alias go="git checkout "
+alias god="git checkout develop && git pull upstream develop"
 alias gs='git status'
 alias gr='git reset'
 alias gm="git merge "
@@ -33,26 +34,26 @@ alias gcm="gc -m "
 alias gim="ga . && gcm"
 
 # push
-alias gp='      git push'
-alias gpo='    gp origin'
-alias gpu='  gp upstream'
-alias gpom='  gpo master'
-alias gpum='  gpu master'
-alias gpod=' gpo develop'
-alias gpud=' gpu develop'
-alias gpocb='  gpo $(cb)'
-alias gpucb='  gpu $(cb)'
+alias gp='   git push'
+alias gpo='  git push origin'
+alias gpom=' git push origin   master'
+alias gpod=' git push origin   develop'
+alias gpocb='git push origin   $(cb)'
+alias gpu='  git push upstream'
+alias gpum=' git push upstream master'
+alias gpud=' git push upstream develop'
+alias gpucb='git push upstream $(cb)'
 
 # pull
-alias gpl='       git pull'
-alias gplo='    gpl origin'
-alias gplu='  gpl upstream'
-alias gplom='  gplo master'
-alias gplum='  gplu master'
-alias gplod=' gplo develop'
-alias gplud=' gplu develop'
-alias gplocb='  gplo $(cb)'
-alias gplucb='  gplu $(cb)'
+alias gpl='   git pull'
+alias gplo='  git pull origin'
+alias gplom=' git pull origin master'
+alias gplod=' git pull origin develop'
+alias gplocb='git pull origin $(cb)'
+alias gplu='  git pull upstream'
+alias gplum=' git pull upstream master'
+alias gplud=' git pull upstream develop'
+alias gplucb='git pull upstream $(cb)'
 
 # move and remove
 alias gmv="git mv "

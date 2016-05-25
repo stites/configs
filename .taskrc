@@ -34,25 +34,38 @@ taskd.credentials=FreeCinc\/freecinc_f41ca7d0\/2ad722b2-d515-44b9-aabc-a1c08bd1a
 taskd.trust=ignore hostname
 
 color=on
-alias.bina=project:bina
-alias.arch=project:arch
-alias.now=due:today
-alias.inbox=project:Inbox
-alias.personal=project:personal
 
-uda.url.type=string
-uda.url.label=url
-uda.isBlocker.type=string
-uda.isBlocker.label=isBlocker
-uda.issuetype.type=string
-uda.issuetype.label=type
+alias.pbina=project:bina
+alias.pdeepwork=project:deepwork
+alias.pcssr=project:cssr
+alias.plife=project:life
+
+alias.now=due:today
+
 uda.est.type=string
 uda.est.label=est
-uda.sprint.type=numeric
-uda.sprint.label=sprint
+uda.order.type=numeric
+uda.order.label=est
 
 urgency.user.tag.in.coefficient=15.0
-report.in.columns           = id,description
-report.in.description       = Inbox
-report.in.filter            = status:pending limit:page (+in)
-report.in.labels            = ID,Description
+
+report.in.description = Inbox
+report.in.filter      = status:pending limit:page (+in)
+report.in.columns     = id,est,start.age,depends,priority,project,scheduled.countdown,due.remaining,until.remaining,description,urgency
+report.in.labels      = ID,Est,Active,Deps,P,Project,S,Due,Until,Description,Urg
+report.in.sort        = urgency-
+
+report.out.description = Outbox
+report.out.filter      = status:completed limit:page (+in)
+report.out.columns     = id,est,start.end,modified,depends,priority,project,scheduled.countdown,until.remaining,description,urgency
+report.out.labels      = ID,Est,Resolved,Modified,Deps,P,Project,S,Until,Description,Urg
+report.out.sort        = modified-
+
+report.tracking.description = Taskwarrior report with time tracking
+report.tracking.columns     = id,est,start.age,depends,priority,project,tags,scheduled.countdown,due.remaining,until.remaining,description,urgency
+report.tracking.labels      = ID,Est,Active,Deps,P,Project,Tag,S,Due,Until,Description,Urg
+report.tracking.filter      = status:pending limit:page
+report.tracking.sort        = tags-/,urgency-
+
+pomodoro.defaultFilter=+in
+

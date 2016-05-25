@@ -1,5 +1,7 @@
 export TERM="screen-256color"
 export EDITOR='vim'
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 set +o vi
 
 # If not running interactively, don't do anything
@@ -55,6 +57,18 @@ alias .....='cd ../../../..'
 # ===================== #
 alias vrc='vim ~/.bashrc'
 alias src='source ~/.bashrc'
+# == ghci to bash == #
+alias ":q"=exit
+
+function myReload {
+  if [ -z "`ls | grep 'stack.yaml'`" ]; then
+    source ~/.bashrc
+  else
+    stack build
+  fi
+}
+
+alias ":r"=myReload 
 
 #=======================#
 # Add git-aware prompt  #
@@ -85,4 +99,8 @@ done
 
 # add stack installs to path
 safe_path_add ~/.local/bin/
+
+# stack autocomplete
+eval "$(stack --bash-completion-script stack)"
+
 

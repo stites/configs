@@ -1,7 +1,7 @@
 # ~/.tmuxinator/it.yml
 
 name: it
-root: ~/git/seqalto/portal/site
+root: ~/git
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,15 +19,21 @@ root: ~/git/seqalto/portal/site
 # tmux_command: byobu
 
 windows:
-  - main: clear && archey --color && uptime && sleep 1 && clear
-  - serve: grunt serve
-  - life:
-      layout: main-vertical
+
+  - seq:
+      root: ~/git/seqalto/portal/frontend2
+      panes: clear && archey --color
+  - cssr:
+      root: ~/git/CSSR
       panes:
         - clear && task
-        # - calcurse
-        - rainbowstream
-  - ssh:
+        - clear
+  - hs:
+      root: ~/git/hs/raft
+      layout: 714f,180x41,0,0{74x41,0,0[74x25,0,0,4,74x7,0,26,11,74x7,0,34,12],105x41,75,0,2}
       panes:
-        - ssh t-rex || ssh hq
-        - mosh gauss
+        - make watch-tests
+        - stack ghci
+        - clear
+        - vim src/
+
