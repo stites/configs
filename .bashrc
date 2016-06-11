@@ -1,5 +1,5 @@
 export TERM="screen-256color"
-export EDITOR='vim'
+export EDITOR='nvim'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 set +o vi
@@ -13,7 +13,7 @@ set +o vi
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
-HISTCONTROL=ignoredups:ignorespace
+export HISTCONTROL=ignoredups:ignorespace:erasedups
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
@@ -59,16 +59,7 @@ alias vrc='vim ~/.bashrc'
 alias src='source ~/.bashrc'
 # == ghci to bash == #
 alias ":q"=exit
-
-function myReload {
-  if [ -z "`ls | grep 'stack.yaml'`" ]; then
-    source ~/.bashrc
-  else
-    stack build
-  fi
-}
-
-alias ":r"=myReload 
+alias ":r"=myReload
 
 #=======================#
 # Add git-aware prompt  #
@@ -103,4 +94,7 @@ safe_path_add ~/.local/bin/
 # stack autocomplete
 eval "$(stack --bash-completion-script stack)"
 
+# ========================================= #
+# write a note                              #
+# ========================================= #
 

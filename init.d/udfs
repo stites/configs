@@ -44,6 +44,59 @@ function safe_path_add {
   fi
 }
 
+# Function safe_prompt_add
+# @description add a command to the $PROMPT_COMMAND only if it is not already present
+function safe_prompt_add {
+  if [[ $PROMPT_COMMAND != *"$1;"* ]]; then
+    export PROMPT_COMMAND="$1; $PROMPT_COMMAND"
+  fi
+}
+
+# Function append_history
+# @description After each command, append to the history file and reread it. To be used in $PROMPT_COMMAND
+function append_history {
+  history -a; history -c; history -r;
+}
+
+# Function append_history
+# @description log all commands to a logfile. To be used in $PROMPT_COMMAND
+function log_all_commands {
+   if [ $(id -u) -ne 0 ]; then
+     echo "$(date '+%Y-%m-%d.%H:%M:%S') $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date '+%Y-%m-%d').log
+   fi
+}
+
+# Function myReload
+# @description source bashrc if in shell, rebuild stack if in stack project
+function myReload {
+  if [ -z "`ls | grep 'stack.yaml'`" ]; then
+    source ~/.bashrc
+  else
+    stack build
+  fi
+}
+
+# Function dotFolder
+# @description touch personal dot folder if it does not exist
+function dotFolder {
+  if [ ! -d "~/.stites/" ]; then
+    mkdir ~/.stites
+  fi
+}
+
+# Function notes
+# @description open up notes
+function notes {
+  dotFolder
+  vim ~/.stites
+}
+
+# Function workingmemory
+# @description open up workingmemory
+function workingmemory {
+  dotFolder
+  vim ~/.stites/workingmemory.md
+}
 
 # ========================= #
 # Export functions          #
@@ -51,3 +104,16 @@ function safe_path_add {
 export -f h
 export -f l
 export -f safe_path_add
+export -f safe_prompt_add
+export -f append_history;
+export -f log_all_commands;
+export -f myReload
+export -f dotFolder
+export -f notes
+export -f workingmemory
+
+# ========================= #
+# Add functions to prompt   #
+# ========================= #
+safe_prompt_add "log_all_commands; append_history"
+
