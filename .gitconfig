@@ -1,0 +1,52 @@
+[user]
+  name = stites
+  email = sam@stites.io
+[alias]
+  brn = for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate:short) %(authorname) %(refname:short)'
+  btree = log        --all --graph --decorate=short --color  --format=format:'%C(bold blue)%h%C(reset) %C(auto)%d%C(reset) %C(black)[%cr]%C(reset) %C(black)%an - %s %C(reset)'
+[rerere]
+  enabled = true
+  autoupdate = true
+[core]
+  ignorecase = false
+  eol = lf
+  whitespace = blank-at-eol,space-before-tab,tab-in-indent,tabwidth=2
+  # editor = emacsclient -t -a=\\\"\\\"
+  editor = /Users/stites/.nix-profile/bin/vim
+  excludesfile = /Users/stites/.gitignore_global
+[color]
+  ui = auto
+[grep]
+  lineNumber = true
+  patternType = perl
+[advice]
+  pushNonFastForward = false
+  statusHints = false
+[diff]
+  renames = copies
+  mnemonicprefix = true
+[branch]
+  autosetupmerge = true
+[push]
+  default = tracking
+[merge]
+  stat = true
+  tool = vimdiff
+[url "https://"]
+  insteadOf = git://
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[help]
+  autocorrect = 1
+[http]
+  sslVerify = false
+[github]
+  user = stites
+[url "git://github.com/ghc/packages-"]
+  insteadOf = git://github.com/ghc/packages/
+[credential]
+  helper = cache --timeout=2628000
