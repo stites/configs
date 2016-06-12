@@ -1,0 +1,187 @@
+" ========== GENERAL VIM SETTINGS ==========
+" ensure that we are using bash if we are in some other terminal
+set shell=/bin/bash
+
+" do not care about vi
+set nocompatible
+" ignore case on commands
+set ignorecase
+
+" set hybrid-number-d gutters
+set relativenumber
+set number
+
+" ============================================================================================
+
+" == " Enable search highlighting
+" == set hlsearch
+" == 
+" == " Use F11 to toggle between paste and nopaste
+" == set pastetoggle=<F11>
+" == 
+" == " vim-sensible enables smarttab. Here, we configure the rest:
+" == " Set the display size of t characters
+" == set tabstop=2
+" == 
+" == " When hitting , insert combination of t and spaces for this width.
+" == " This combination is deleted as if it were 1 t when using backspace.
+" == set softtabstop=2
+" == 
+" == " Set code-shifting width. Since smarttab is enabled, this is also the tab
+" == " insert size for the beginning of a line.
+" == set shiftwidth=2
+" == 
+" == " When inserting tab characters, use spaces instead
+" == set expandtab
+" == 
+" == " Instead of failing command, present dialog if unsaved changes
+" == set confirm
+" == 
+" == " Enable mouse in all modes
+" == set mouse=a
+" == 
+" == "set column-width to half my mb-pro"13 screen size
+" == set tw=85
+" == 
+" == " ===========================================
+" == " set up tmux-vim config: https://teamgaslight.com/blog/vim-plus-tmux-a-perfect-match
+" == nnoremap <c-j> <c-w>j
+" == nnoremap <c-k> <c-w>k
+" == nnoremap <c-h> <c-w>h
+" == nnoremap <c-l> <c-w>l
+" == 
+" == " from tmux-navigator
+" == let g:tmux_navigator_no_mappings = 1
+" == let g:tmux_navigator_save_on_switch = 1
+" == 
+" == nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+" == nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+" == nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+" == nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+" == nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
+" == 
+" == auto BufEnter * let &titlestring = "vim"
+" == auto BufEnter * let &iconstring  = "vim"
+" == 
+" == " =======More Natural Splitting=============
+" == set splitbelow
+" == set splitright
+" == 
+" == " =====change leader to space============
+" == " let mapleader = "\<Space>"
+" == " let mapleader = " "
+" == 
+" == " ===== NerdTree settings=================
+" == map <leader>n :NERDTreeToggle<CR>
+" == autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" == let g:NERDTreeDirArrows = 1
+" == let g:NERDTreeDirArrowExpandable = '▸'
+" == let g:NERDTreeDirArrowCollapsible = '▾'
+" == 
+" == " =======Markdown instant========
+" == " from: https://github.com/suan/vim-instant-markdown
+" == let g:instant_markdown_slow = 1 " slow down realtime updates
+" == let g:instant_markdown_autostart = 0 "manually trigger preview via the command :InstantMarkdownPreview
+" == 
+" == " From http://www.stephendiehl.com/posts/vim_2016.html
+" == set wildignore+=*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
+" == set wildmode=longest,list,full
+" == set wildmenu
+" == set completeopt+=longest
+" == 
+" == set t_Co=256
+" == 
+" == set cmdheight=1
+" == 
+" == " ==========syntastic================
+" == map <Leader>s :SyntasticToggleMode<CR>
+" == 
+" == set statusline+=%#warningmsg#
+" == set statusline+=%{SyntasticStatuslineFlag()}
+" == set statusline+=%*
+" == 
+" == let g:syntastic_always_populate_loc_list = 1
+" == let g:syntastic_auto_loc_list = 0
+" == let g:syntastic_check_on_open = 0
+" == let g:syntastic_check_on_wq = 0
+" == 
+" == " ghc-mod =============================
+" == " To hook into GHC’s code competion capabilities we map several keyboard commands to
+" == " ghc-mod functions. To use ghc-mod’s case expand feature we highlight the
+" == " scrutinized variable and type t + s to expand out the cases.
+" == 
+" == map <silent> tw :GhcModTypeInsert<CR>
+" == map <silent> ts :GhcModSplitFunCase<CR>
+" == map <silent> tq :GhcModType<CR>
+" == map <silent> te :GhcModTypeClear<CR>
+" == 
+" == " neco-ghc ===========================
+" == " A completion plugin for Haskell, using ghc-mod
+" == let g:necoghc_debug = 1
+" == 
+" == " supertab =============================
+" == let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+" == 
+" == if has("gui_running")
+" ==   imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+" == else " no gui
+" ==   if has("unix")
+" ==     inoremap <Nul> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+" ==   endif
+" == endif
+" == 
+" == " To enable familiar tab completion we configure supertab to dispatch to neco-ghc’s
+" == " tab completion routines instead of the usual local variable completion. After that
+" == " we configure necoghc to be the default tab completion method.
+" == 
+" == let g:haskellmode_completion_ghc = 1
+" == autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+" == 
+" == let g:ycm_semantic_triggers = {'haskell' : ['.']}
+" == 
+" == let g:necoghc_enable_detailed_browse = 1
+" == 
+" == " So now pressing tab while in a LANGUAGE pragma, import statement, or anywhere in a
+" == " subexpression will use neco-ghc’s tab completion routines to find the context
+" == " appropriate statement that matches the partial expression under the cursor.
+" == 
+" == " tabularize =============================
+" == " Tabularize allows uniform aligned code formatting based on any textual regex
+" == " pagttern. For Haskell there are several common identifiers that we typically align
+" == " on; and we can map specific keys to these common patterns.
+" == "
+" == " For example typing <a>+<-> on the case arm branches will align on the right arrow.
+" == 
+" == let g:haskell_tabular = 1
+" == 
+" == vmap a= :Tabularize /=<CR>
+" == vmap a; :Tabularize /::<CR>
+" == vmap a- :Tabularize /-><CR>
+" == 
+" == " ctrl-p =============================
+" == " Ctrl-p is a fuzzy file search plugin which allows quick browsing of a project 
+" == " based on a fuzzy text search of the filename or it’s contents. We’ll bind the 
+" == " ctrl-p panel launch to \ + t.
+" == 
+" == map <silent> <Leader>t :CtrlP()<CR>
+" == noremap <leader>b<space> :CtrlPBuffer<cr>
+" == " let g:ctrlp_custom_ignore = '\v[\/]dist$'
+" == 
+" == " Summary
+" == " In summary adding these plugins and lines to the .vimrc will introduce several
+" == " Haskell specific commands which are bound to these keyboard shortcuts:
+" == 
+" == " Command
+" == "   t + w           Insert type for toplevel declaration
+" == "   t + q           Query type of expression under cursor
+" == "   t + s           Case split expression under cursor
+" == "   t + e           Erase type query
+" == "   a + =           Align on equal sign
+" == "   a + -           Align on case match
+" == "   Ctrl + x + o    Tab complete under cursor
+" == "   \ + t           Open fuzzy file finder
+" == "   \ + n           Open file explorer
+" == "   \ + t           Open fuzzy file finder
+" == "   \ + c +         Space Toggle comment of text under cursor
+" == "   \ + c + s       Toggle “sexy” comment of text
+
