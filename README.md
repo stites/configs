@@ -15,13 +15,18 @@ For the time being, I'll just write a list:
 + ... and more!
 
 things outside of this:
-install nix-env closure
-install brew for everything else (you may have to uninstall nss-cacerts from nix)
-sync git repositories (usually located in ~/git)
-sync haskell-related git repositories (usually located in ~/git/hs)
-download fonts (clone powerline/fonts, run install.sh)
-install haskell-vim-now
- - remember to include ~/.config/haskell-vim-now/scripts/neovim.sh somewhere if you are going to use neovim (which you should)
-download iterm color schemes:
- - git clone mbadolato/iTerm2-Color-Schemes
- - 
+
++ install nix-env closure
++ install brew for everything else (you may have to uninstall nss-cacerts from nix)
+   - brew cask install keepingyouawake
+   - brew install neovim/neovim/neovim hub task gnutls
++ things not installed from above package managers:
+   - Dropbox, Alfred, Flux, iTerm, Slack, Path Finder, Spectacle
+   - download Java 8, DCEVM
++ sync git repositories (usually located in ~/git, ~/git/hs)
++ download fonts (clone powerline/fonts, run install.sh)
++ install haskell-vim-now
+   - remember to run ~/.config/haskell-vim-now/scripts/neovim.sh for neovim
++ download iterm color schemes:
+   - git clone mbadolato/iTerm2-Color-Schemes
+
