@@ -62,7 +62,7 @@ function append_history {
 # @description log all commands to a logfile. To be used in $PROMPT_COMMAND
 function log_all_commands {
    if [ $(id -u) -ne 0 ]; then
-     echo "$(date '+%Y-%m-%d.%H:%M:%S') $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date '+%Y-%m-%d').log
+     echo "$(date '+%Y-%m-%d.%H:%M:%S') $(pwd) $(history 1)" >> ~/.bash/log/bash-history-$(date '+%Y-%m-%d').log
    fi
 }
 

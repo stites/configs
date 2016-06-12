@@ -3,3 +3,4 @@ Library
 .atom/.apm
 .atom/packages
 .atom/blob-store
+.bash/log
