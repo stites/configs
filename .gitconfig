@@ -12,8 +12,8 @@
   eol = lf
   whitespace = blank-at-eol,space-before-tab,tab-in-indent,tabwidth=2
   # editor = emacsclient -t -a=\\\"\\\"
-  editor = /Users/stites/.nix-profile/bin/vim
-  excludesfile = /Users/stites/.gitignore_global
+  editor = ~/.nix-profile/bin/vim
+  excludesfile = ~/.gitignore_global
 [color]
   ui = auto
 [grep]
@@ -49,4 +49,6 @@
 [url "git://github.com/ghc/packages-"]
   insteadOf = git://github.com/ghc/packages/
 [credential]
-  helper = cache --timeout=2628000
+  helper = store --file ~/.config/git/credentials
+  helper = cache --timeout=30000
+
