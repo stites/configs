@@ -11,7 +11,7 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=/Users/stitess/.task
+data.location=/Users/stites/.task
 
 # Color theme (uncomment one to use)
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/light-16.theme
@@ -24,11 +24,11 @@ data.location=/Users/stitess/.task
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-violets-256.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-gray-256.theme
-include /Users/stitess/.task/extras/rc/dark-violets-256.theme
+include /Users/stites/.task/extras/rc/dark-violets-256.theme
 
-taskd.certificate=\/Users\/stitess\/Dropbox\/certs\/freecinc_f41ca7d0.cert.pem
-taskd.key=\/Users\/stitess\/Dropbox\/certs\/freecinc_f41ca7d0.key.pem
-taskd.ca=\/Users\/stitess\/Dropbox\/certs\/freecinc_f41ca7d0.ca.pem
+taskd.certificate=\/Users\/stites\/Dropbox\/certs\/freecinc_f41ca7d0.cert.pem
+taskd.key=\/Users\/stites\/Dropbox\/certs\/freecinc_f41ca7d0.key.pem
+taskd.ca=\/Users\/stites\/Dropbox\/certs\/freecinc_f41ca7d0.ca.pem
 taskd.server=freecinc.com:53589
 taskd.credentials=FreeCinc\/freecinc_f41ca7d0\/2ad722b2-d515-44b9-aabc-a1c08bd1aafd
 taskd.trust=ignore hostname
