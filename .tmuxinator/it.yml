@@ -19,21 +19,17 @@ root: ~/git
 # tmux_command: byobu
 
 windows:
-
-  - seq:
-      root: ~/git/seqalto/portal/frontend2
-      panes: clear && archey --color
   - cssr:
       root: ~/git/CSSR
       panes:
         - clear && task
         - clear
-  - hs:
+  - raft:
       root: ~/git/hs/raft
       layout: 714f,180x41,0,0{74x41,0,0[74x25,0,0,4,74x7,0,26,11,74x7,0,34,12],105x41,75,0,2}
       panes:
-        - make watch-tests
-        - stack ghci
-        - clear
-        - vim src/
+        - cd ~/git/hs/raft && make watch-tests
+        - cd ~/git/hs/raft && stack ghci
+        - cd ~/git/hs/raft && clear
+        - cd ~/git/hs/raft && vim src/
 

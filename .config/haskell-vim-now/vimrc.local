@@ -11,8 +11,14 @@ set ignorecase
 set relativenumber
 set number
 
-" ============================================================================================
+set encoding=utf-8
 
+" auto-reload files when they are changed (like via git)
+set autoread
+
+" vim-snipmate
+noremap <C-t><Tab> snipMateTrigger
+" ==============================================================================
 " == " Enable search highlighting
 " == set hlsearch
 " == 
