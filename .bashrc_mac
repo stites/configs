@@ -40,7 +40,7 @@ dynamic_prompt (){
   fi
   # looks like we could just invoke functions in PS1 itself without having to use the
   # PROMPT_COMMAND
-  PS1="$(task +in +PENDING count) ${BASE} ${ENDING}"
+  PS1="$(task +in +PENDING count) ${venv_prompt}${BASE} ${ENDING}"
 }
 
 if [ "$color_prompt" = yes ]; then

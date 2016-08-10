@@ -47,10 +47,11 @@ function safe_path_add {
 # Function safe_prompt_add
 # @description add a command to the $PROMPT_COMMAND only if it is not already present
 function safe_prompt_add {
-  if [[ $PROMPT_COMMAND != *"$1;"* ]]; then
+  if [[ $PROMPT_COMMAND != *"$1"* ]]; then
     export PROMPT_COMMAND="$1; $PROMPT_COMMAND"
   fi
 }
+
 
 # Function append_history
 # @description After each command, append to the history file and reread it. To be used in $PROMPT_COMMAND
@@ -73,6 +74,19 @@ function myReload {
     source ~/.bashrc
   else
     stack build
+  fi
+}
+
+# Function virtualenvPrompt
+# @description because of numerous PROMPT_COMMANDs, virtualenv gets overwritten.
+# Requires virtual environments to be written to a path including the phrase "virtualenv"
+#
+# @mutates variable venv_prompt
+function virtualenvPrompt {
+  if test -z "$VIRTUAL_ENV" ; then
+    venv_prompt=""
+  else
+    venv_prompt="${BLUE}[`basename \"$VIRTUAL_ENV\"`]${RESET} "
   fi
 }
 
@@ -108,6 +122,7 @@ export -f safe_prompt_add
 export -f append_history;
 export -f log_all_commands;
 export -f myReload
+export -f virtualenvPrompt
 export -f dotFolder
 export -f notes
 export -f workingmemory
@@ -115,5 +130,5 @@ export -f workingmemory
 # ========================= #
 # Add functions to prompt   #
 # ========================= #
-safe_prompt_add "log_all_commands; append_history"
+safe_prompt_add "log_all_commands; append_history; virtualenvPrompt"
 
