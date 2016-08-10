@@ -3,11 +3,8 @@
 # DEPRECIATED                                   #
 # ============================================= #
 
-
-
 export PYENV_ROOT="${HOME}/.pyenv"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-safe_path_add $HOME/.pyenv/bin
 
 # things installed:
 #  +  https://github.com/yyuu/pyenv-virtualenvwrapper
@@ -18,10 +15,11 @@ safe_path_add $HOME/.pyenv/bin
 # run pyenv stuff only if it's there:
 if [ -d "${PYENV_ROOT}" ]; then
     safe_path_add $PYENV_ROOT/bin
+    safe_path_add $PYENV_ROOT/shims
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
 
-# pyenv
-safe_path_add $HOME/.pyenv/bin
-safe_path_add $HOME/.pyenv/shims
+# add anaconda, only if it is there
+test -e $HOME/.anaconda/bin && safe_path_add $HOME/.anaconda/bin
+

@@ -85,3 +85,7 @@ fi
 # where they are.
 export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# add new iTerm integration:
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
