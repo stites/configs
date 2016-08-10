@@ -20,6 +20,12 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
+# run virtualenvwrapper from nix
+if [ -n "`which virtualenvwrapper.sh`" ]; then
+  export WORKON_HOME=$HOME/.virtualenvs
+  source virtualenvwrapper.sh
+fi
+
 # add anaconda, only if it is there
 test -e $HOME/.anaconda/bin && safe_path_add $HOME/.anaconda/bin
 
