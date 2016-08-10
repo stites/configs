@@ -20,6 +20,7 @@ things outside of this:
 + install brew for everything else (you may have to uninstall nss-cacerts from nix)
    - brew cask install keepingyouawake
    - brew install neovim/neovim/neovim hub task gnutls
+   - brew install Caskroom/cask/java
 + things not installed from above package managers:
    - Dropbox, Alfred, Flux, iTerm, Slack, Path Finder, Spectacle
    - download Java 8, DCEVM
@@ -29,4 +30,5 @@ things outside of this:
    - remember to run ~/.config/haskell-vim-now/scripts/neovim.sh for neovim
 + download iterm color schemes:
    - git clone mbadolato/iTerm2-Color-Schemes
++ use https://github.com/StevenBlack/hosts to block malicious hosts file
 
