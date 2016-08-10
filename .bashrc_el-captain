@@ -1,0 +1,3 @@
+# This is because el captain is garbage with openssl
+# grab this cert: https://curl.haxx.se/docs/caextract.html
+export SSL_CERT_FILE="/usr/local/etc/openssl/cacert.pem"

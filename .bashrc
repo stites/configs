@@ -84,7 +84,7 @@ fi
 # Load the remaining settings               #
 # ========================================= #
 
-for SETTING in java git bina tmux mac emacs task nginx vim; do
+for SETTING in java git bina tmux mac emacs task nginx vim el-captain; do
   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
 done
 
