@@ -35,7 +35,7 @@ taskd.trust=ignore hostname
 
 color=on
 
-alias.pbina=project:bina
+alias.psentenai=project:sentenai
 alias.pdeepwork=project:deepwork
 alias.pcssr=project:cssr
 alias.plife=project:life

@@ -93,7 +93,7 @@ function virtualenvPrompt {
 # Function dotFolder
 # @description touch personal dot folder if it does not exist
 function dotFolder {
-  if [ ! -d "~/.stites/" ]; then
+  if [ ! -d $HOME/.stites/ ]; then
     mkdir ~/.stites
   fi
 }
@@ -112,6 +112,13 @@ function workingmemory {
   vim ~/.stites/workingmemory.md
 }
 
+# Function stack-intero
+# @description run stack ghci with intero as the backend
+function stack-intero {
+  stack ghci --with-ghc intero
+}
+
+
 # ========================= #
 # Export functions          #
 # ========================= #
@@ -126,6 +133,7 @@ export -f virtualenvPrompt
 export -f dotFolder
 export -f notes
 export -f workingmemory
+export -f stack-intero
 
 # ========================= #
 # Add functions to prompt   #

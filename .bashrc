@@ -66,7 +66,9 @@ alias ":r"=myReload
 #=======================#
 # -- primarily cause I'm super lazy: https://github.com/jimeh/git-aware-prompt
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
-source "${GITAWAREPROMPT}/main.sh"
+if [ -e $GITAWAREPROMPT ]; then
+  source "${GITAWAREPROMPT}/main.sh"
+fi
 
 #=======================#
 # Use Nix               #
