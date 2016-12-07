@@ -39,6 +39,11 @@ alias.psentenai=project:sentenai
 alias.pdeepwork=project:deepwork
 alias.pcssr=project:cssr
 alias.plife=project:life
+alias.pmeta=project:meta
+
+alias.pL=priority:L
+alias.pM=priority:M
+alias.pH=priority:H
 
 alias.now=due:today
 

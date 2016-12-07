@@ -5,3 +5,6 @@ alias vim=nvim
 alias vimd="nvim --headless "
 alias vimattach="vim --servername VIM_SERVER --remote-tab "
 
+# Use https://github.com/rdnetto/powerline-hs
+export POWERLINE_COMMAND=$HOME/.local/bin/powerline-hs
+

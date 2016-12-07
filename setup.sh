@@ -1,5 +1,10 @@
 #!/bin/bash
 
+function os_type {
+  ARCH=$(uname -r | grep -i arch && echo "arch" || echo "")
+  UBUNTU=$(uname -a | grep ubuntu && echo "ubuntu" || echo "")
+  # do better stuff here
+}
 function init {
   pkgmanager=$(uname -a | grep ubuntu && echo "apt-get" || echo "yum")
   os_type=$(uname -a | grep ubuntu && echo "ubuntu" || echo "centOS")
@@ -27,7 +32,7 @@ case "$1" in
     ;;
   guest)
     init
-    echo 'PS1="${NORMAL}[${BRIGHT_BLUE}\u${BLUE}@${os_type}${NORMAL}|${BRIGHT_BLACK}\W${NORMAL}] ${RESET}"' >> ~/.bashrc
+    echo 'PS1="${NORMAL}[${BRIGHT_BLUE}\u${BLUE}@`uname -n`${NORMAL}|${BRIGHT_BLACK}\W${NORMAL}] ${RESET}"' >> ~/.bashrc
     ;;
   *)
     echo "Usage: $0 {guest|host}" >&2

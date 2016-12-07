@@ -1,8 +1,12 @@
 *~
 .DS_Store
 .agignore
-portal/site/tags
 .stites
 */infinitest.filters
 codex.tags
 hscope.out
+.ghci
+.sosrc
+x
+tmp
+.myenv

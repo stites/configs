@@ -19,9 +19,9 @@ export HISTCONTROL=ignoredups:ignorespace:erasedups
 HISTSIZE=1000
 HISTFILESIZE=1000
 
-shopt -s histappend     # append to the history file, don't overwrite it
+# shopt -s histappend     # append to the history file, don't overwrite it
 shopt -s nocaseglob     # auto corrects the case
-shopt -s checkwinsize   # check the window size after each command and, if
+# shopt -s checkwinsize   # check the window size after each command and, if
                         # necessary, update the values of LINES and COLUMNS.
 
 # bash automatically fetches the last command that starts with the
@@ -34,7 +34,7 @@ export INPUTRC=$HOME/.inputrc
 # ========================================================= #
 # some ls aliases
 alias tree='tree -C'
-alias ls='ls -G'
+alias ls='ls -G --color'
 
 # Relative Jumps:
 alias ~='cd ~ '
@@ -90,6 +90,8 @@ for SETTING in java git bina tmux mac emacs task nginx vim python el-captain; do
   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
 done
 
+[[ ! -f ~/.bash-wakatime/bash-wakatime.sh  ]] || source ~/.bash-wakatime/bash-wakatime.sh
+
 # add stack installs to path
 safe_path_add ~/.local/bin/
 
@@ -99,4 +101,6 @@ eval "$(stack --bash-completion-script stack)"
 # ========================================= #
 # write a note                              #
 # ========================================= #
-
+function stacknew {
+  stack new $1 --bare ~/git/stack-templates/skeleton
+}

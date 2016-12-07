@@ -52,3 +52,7 @@
   helper = store --file ~/.config/git/credentials
   helper = cache --timeout=30000
 
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	required = true
+	clean = git-lfs clean -- %f

@@ -1,5 +1,5 @@
-:set -XOverloadedStrings
 :set prompt " \ESC[0;34mghci>\ESC[m "
-:def hoogle \s -> return $ ":! hoogle --count=15 \"" ++ s ++ "\""
-:set -cpp -DASSERTS -DDEBUG
+-- :def hoogle \s -> Prelude.return Prelude.$ (":! hoogle --count=15 \"" :: Prelude.String) Prelude.++ s Prelude.++ ("\"" :: Prelude.String)
+-- :set -XPartialTypeSignatures
+
 

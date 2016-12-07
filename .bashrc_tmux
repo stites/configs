@@ -37,3 +37,10 @@ function tmux-switch {
 #     tmuxinator       #
 # ==================== #
 [[ ! -f ~/.bin/tmuxinator.bash ]] || source ~/.bin/tmuxinator.bash
+
+[[ ! -f ~/.tmuxifier ]] || git clone https://github.com/jimeh/tmuxifier.git --depth 1 ~/.tmuxifier
+safe_path_add ~/.tmuxifier/bin
+eval "$(tmuxifier init -)"
+
+alias hside="tmuxifier load-window hs"
+

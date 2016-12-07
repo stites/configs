@@ -10,6 +10,7 @@ fi
 # git config                                                #
 # ========================================================= #
 # git alias:
+alias clone="git clone"
 alias g="git "
 alias gf="git fetch"
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad @ %cr) %C(bold blue)<%an>%Creset' --graph --abbrev-commit --date=short"

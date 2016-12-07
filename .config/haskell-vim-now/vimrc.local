@@ -4,6 +4,10 @@ set shell=/bin/bash
 
 " do not care about vi
 set nocompatible
+
+" To enable file type detection, use this command in your vimrc
+filetype plugin indent on
+
 " ignore case on commands
 set ignorecase
 
@@ -11,43 +15,99 @@ set ignorecase
 set relativenumber
 set number
 
+" use sane encodings
 set encoding=utf-8
 
 " auto-reload files when they are changed (like via git)
 set autoread
 
+" set textwidth to be 80 globally
+set tw=80
+
+" color anything greater than 80 characters as an error
+highlight OverLength ctermbg=Black guibg=Black
+" match OverLength '\%>81v.\+'
+match OverLength '\%>86v.\+'
+" match ErrorMsg '\%>101v.\+'
+
+" Enable search highlighting
+set hlsearch
+
+" Enable mouse in all modes
+set mouse=a
+
+" vim-sensible enables smarttab. Here, we configure the rest:
+" Set the display size of t characters
+set tabstop=2
+
+" When hitting , insert combination of t and spaces for this width.
+" This combination is deleted as if it were 1 t when using backspace.
+set softtabstop=2
+
+" Set code-shifting width. Since smarttab is enabled, this is also the tab
+" insert size for the beginning of a line.
+set shiftwidth=2
+
+" When inserting tab characters, use spaces instead
+set expandtab
+
+" ensure that markdown files have a textwidth of 80
+au BufRead,BufNewFile *.md setlocal textwidth=80
+
+" enable spell checking
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+autocmd FileType gitcommit setlocal spell spelllang=en_us
+
+setlocal spell spelllang=en_us
+
+" ==============================================================================
+" vim-pencil
+filetype plugin on
+" let g:pencil#textwidth = 80
+
+" augroup pencil
+"   autocmd!
+"   autocmd FileType markdown,mkd call pencil#init({'wrap': 'hard', 'autoformat': 1})
+"   autocmd FileType text         call pencil#init({'wrap': 'soft', 'autoformat': 0})
+" augroup END
+
+" ==============================================================================
+" vim-pad
+" let g:pad#dir="~/.stites"
+
+" ==============================================================================
+" vim-note
+let g:notes_directories = ["~/.stites"]
+" let g:notes_title_sync = 'off'
+
+" ==============================================================================
 " vim-snipmate
 noremap <C-t><Tab> snipMateTrigger
+
+
 " ==============================================================================
-" == " Enable search highlighting
-" == set hlsearch
+" vim-easymotion
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+nmap F <Plug>(easymotion-overwin-f2)
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" ==============================================================================
+" https://github.com/sol/hpack
+" run hpack automatically on modifications to package.yaml
+autocmd BufWritePost package.yaml silent !hpack --silent
+
+
+
+" ==============================================================================
 " == 
 " == " Use F11 to toggle between paste and nopaste
 " == set pastetoggle=<F11>
 " == 
-" == " vim-sensible enables smarttab. Here, we configure the rest:
-" == " Set the display size of t characters
-" == set tabstop=2
-" == 
-" == " When hitting , insert combination of t and spaces for this width.
-" == " This combination is deleted as if it were 1 t when using backspace.
-" == set softtabstop=2
-" == 
-" == " Set code-shifting width. Since smarttab is enabled, this is also the tab
-" == " insert size for the beginning of a line.
-" == set shiftwidth=2
-" == 
-" == " When inserting tab characters, use spaces instead
-" == set expandtab
-" == 
 " == " Instead of failing command, present dialog if unsaved changes
 " == set confirm
-" == 
-" == " Enable mouse in all modes
-" == set mouse=a
-" == 
-" == "set column-width to half my mb-pro"13 screen size
-" == set tw=85
 " == 
 " == " ===========================================
 " == " set up tmux-vim config: https://teamgaslight.com/blog/vim-plus-tmux-a-perfect-match

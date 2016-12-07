@@ -26,6 +26,6 @@ if [ -n "`which virtualenvwrapper.sh`" ]; then
   source virtualenvwrapper.sh
 fi
 
-# add anaconda, only if it is there
-test -e $HOME/.anaconda/bin && safe_path_add $HOME/.anaconda/bin
+# add anaconda for pythong 2, only if it is there
+test -e $HOME/.anaconda/bin2 && safe_path_add $HOME/.anaconda2/bin
 

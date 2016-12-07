@@ -70,16 +70,6 @@ alias displayType='ioreg -lw0 | grep "EDID" | sed "/[^<]*</s///" | xxd -p -r | s
 safe_path_add /usr/local/opt/coreutils/libexec/gnubin
 safe_path_add /Applications/Postgres.app/Contents/Versions/9.4/bin
 
-# ===========================
-# haskell stuff : from https://twdkz.wordpress.com/2015/02/25/haskell-on-yosemite-osx-10-10/
-# ===========================
-
-# Add GHC 7.10.2 to the PATH, via https://ghcformacosx.github.io/
-export GHC_DOT_APP="/Applications/ghc-7.10.2.app"
-if [ -d "$GHC_DOT_APP" ]; then
-  export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
-fi
-
 # later steps in the build processes need to find libraries
 # like xcb-shm via package config. Tell pkg-config
 # where they are.
@@ -88,4 +78,23 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # add new iTerm integration:
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# ================ Fix SSL ==================================== #
+### From https://github.com/Homebrew/legacy-homebrew/issues/32019
+# unset SSL_CERT because macs don't like that
+unset SSL_CERT_FILE
+
+##alternatively you could have:
+#cd ~/.ssh
+#sudo wget http://curl.haxx.se/ca/cacert.pem
+#export CURL_CA_BUNDLE=~/.ssh/cacert.pem
+
+### LESS ###
+# Enable syntax-highlighting in less.
+# brew install source-highlight
+# First, add these two lines to ~/.bashrc
+export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+export LESS=" -R "
+alias less='less -m -N -g -i -J --underline-special --SILENT'
+alias more='less'
 

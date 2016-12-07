@@ -28,8 +28,14 @@ windows:
       root: ~/git/hs/raft
       layout: 714f,180x41,0,0{74x41,0,0[74x25,0,0,4,74x7,0,26,11,74x7,0,34,12],105x41,75,0,2}
       panes:
-        - cd ~/git/hs/raft && make watch-tests
-        - cd ~/git/hs/raft && stack ghci
-        - cd ~/git/hs/raft && clear
-        - cd ~/git/hs/raft && vim src/
+        - cd ~/git/raft && make watch-tests
+        - cd ~/git/raft && stack ghci
+        - cd ~/git/raft && clear
+        - cd ~/git/raft && vim src/
+#  - sentenai:
+#       root: ~/git/sentenai
+#       panes:
+#         - cd ~/git/sentenai/schema-prediction && vim src
+#         - cd ~/git/sentenai/schema-prediction && stack ghci
+#         - cd ~/git/sentenai/schema-prediction
 
