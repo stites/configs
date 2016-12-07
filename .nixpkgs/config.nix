@@ -1,8 +1,12 @@
 {
   allowUnfree = true;
   allowBroken = true;
-  packageOverrides = pkgs_: with pkgs_; {  # pkgs_ is the original set of packages
-    all = with pkgs; buildEnv {  # pkgs is your overriden set of packages itself
+
+  # pkgs_ is the original set of packages
+  packageOverrides = pkgs_: with pkgs_; {
+
+    # pkgs is your overriden set of packages itself
+    all = with pkgs; buildEnv {
       name = "all";
       paths = [
         # filesystem
@@ -18,9 +22,10 @@
         emacs
         neovim
         aspell
+        aspellDicts.en
         ctags
         gnumake
-        vim
+        (import ./vim/vim.nix)
 
         # haskell
         cabal-install
@@ -37,6 +42,10 @@
         watch
         wget
         xz
+        traceroute
+        unrar
+        unzip
+        zip
 
         # extras
         graphviz
@@ -46,4 +55,36 @@
       ];
     };
   };
+
+  # develEnv = lib.lowPrio (
+  #     pkgs.buildEnv {
+  #     name = "development-env";
+  #     ignoreCollisions = true;
+  #     paths = [
+  #       automake
+  #       clang
+  #       cmake
+  #       ctags
+  #       freeglut
+  #       gdb
+  #       gcc
+  #       gnumake
+  #       jdk
+  #       llvm
+  #       manpages
+  #       mesa
+  #       pciutils
+  #       pkgconfig
+  #       python
+  #       python34
+  #       rustUnstable.rustc
+  #       cargo
+  #       smartmontools
+  #       subversion
+  #       swiProlog
+  #       xlibs.libX11
+  #       zlib
+  #     ];
+  #     }
+  # );
 }
