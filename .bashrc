@@ -1,5 +1,6 @@
 export TERM="screen-256color"
 export EDITOR='nvim'
+# export PAGER=most
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 set +o vi
@@ -104,3 +105,5 @@ eval "$(stack --bash-completion-script stack)"
 function stacknew {
   stack new $1 --bare ~/git/stack-templates/skeleton
 }
+
+alias ag='ag --path-to-ignore ~/.agignore'

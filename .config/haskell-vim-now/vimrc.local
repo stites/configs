@@ -52,13 +52,27 @@ set shiftwidth=2
 set expandtab
 
 " ensure that markdown files have a textwidth of 80
-au BufRead,BufNewFile *.md setlocal textwidth=80
+" au BufRead,BufNewFile *.md setlocal textwidth=80
 
 " enable spell checking
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
-autocmd FileType gitcommit setlocal spell spelllang=en_us
+" autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+" autocmd FileType gitcommit setlocal spell spelllang=en_us
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'        " MacOSX/Linux
 
-setlocal spell spelllang=en_us
+" setlocal spell spelllang=en_us
+
+" pep8 for python
+" au BufNewFile,BufRead *.py
+"     \ set tabstop=4
+"     \ set softtabstop=4
+"     \ set shiftwidth=4
+"     \ set textwidth=79
+"     \ set expandtab
+"     \ set autoindent
+"     \ set fileformat=unix
+
+" call vim-flake8 on every file save
+autocmd BufWritePost *.py call Flake8()
 
 " ==============================================================================
 " vim-pencil
@@ -99,7 +113,32 @@ let g:EasyMotion_smartcase = 1
 " run hpack automatically on modifications to package.yaml
 autocmd BufWritePost package.yaml silent !hpack --silent
 
+" ==============================================================================
+" Tab navigation like Firefox.
+nnoremap <C-S-Tab> :tabprevious<CR>
+nnoremap <C-Tab>   :tabnext<CR>
+inoremap <C-S-Tab> <Esc>:tabprevious<CR>i
+inoremap <C-Tab>   <Esc>:tabnext<CR>i
 
+" nnoremap <C-t>     :tabnew<CR>
+" inoremap <C-t>     <Esc>:tabnew<CR>
+nnoremap <C-w>     :tabclose<CR>
+
+" " ==============================================================================
+" " sets 'path' to:
+" " - the directory of the current file
+" " - every subdirectory of the "current directory"
+" set path=.,**
+" 
+" " enables the wildmenu
+" set wildmenu
+" 
+" " ignore specific directories and files
+" set wildignore+=*.min.*
+" set wildignore+=*.stack-work*
+" 
+" " case-insensitive search
+" set wildignorecase
 
 " ==============================================================================
 " == 

@@ -38,7 +38,7 @@ function safe_path_add {
   PATH_FOUND=$(echo $PATH | grep -o -E "(^|:)$1" | head -1)
 
   if [ -z $PATH_FOUND ] && [ -d $1 ]; then
-    export PATH=$PATH:$1
+    export PATH=$1:$PATH
   # else
   #    test -z $PATH_FOUND && echo "$1 not a directory" || echo "$1 in PATH"
   fi
@@ -114,10 +114,13 @@ function workingmemory {
 
 # Function stack-intero
 # @description run stack ghci with intero as the backend
-function stack-intero {
+function stackintero {
   stack ghci --with-ghc intero
 }
 
+function retry {
+  for i in 1 2 3 4 5; do "$@" && break || sleep 15; done
+}
 
 # ========================= #
 # Export functions          #
@@ -133,7 +136,8 @@ export -f virtualenvPrompt
 export -f dotFolder
 export -f notes
 export -f workingmemory
-export -f stack-intero
+export -f stackintero
+export -f retry
 
 # ========================= #
 # Add functions to prompt   #
