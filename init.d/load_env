@@ -4,7 +4,7 @@
 # Load "run-once" settings  #
 # ========================= #
 [[ ! -f  ~/.bash_colors         ]] || source ~/.bash_colors
-[[ ! -f  ~/git/cfg/init.d/udfs  ]] || source ~/git/cfg/init.d/udfs
+[[ ! -f  ~/git/configs/init.d/udfs  ]] || source ~/git/configs/init.d/udfs
 
 eval "$(fasd --init auto)"
 

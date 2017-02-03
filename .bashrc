@@ -108,7 +108,7 @@ fi
 # ========================================= #
 # TODO: load init configs in plist somehow  #
 # ========================================= #
-[[ ! -f ~/git/cfg/init.d/load_env  ]] || source ~/git/cfg/init.d/load_env
+[[ ! -f ~/git/configs/init.d/load_env  ]] || source ~/git/configs/init.d/load_env
 
 # ========================================= #
 # Load the remaining settings               #
