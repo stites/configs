@@ -6,7 +6,7 @@ Plug 'majutsushi/tagbar'                 " http://vimawesome.com/plugin/tagbar
 Plug 'vim-airline/vim-airline-themes'
 
 " snippets for all languages
-Plug 'garbas/vim-snipmate' | Plug 'MarcWeber/vim-addon-mw-utils' | Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate' | Plug 'MarcWeber/vim-addon-mw-utils' | Plug 'tomtom/tlib_vim' | Plug 'honza/vim-snippets'
 
 " Writing and markdown
 " Plug 'reedes/vim-pencil'
