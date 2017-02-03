@@ -1,12 +1,8 @@
 #!/bin/bash
 # ============================================= #
-# DEPRECIATED                                   #
-# ============================================= #
-export RLLAB=~/git/rllab
-export PYENV_ROOT="${HOME}/.pyenv"
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-export PYTHONPATH=$RLLAB:$PYTHONPATH
 
+# export PYENV_ROOT="${HOME}/.pyenv"
+# export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 # things installed:
 #  +  https://github.com/yyuu/pyenv-virtualenvwrapper
 #  +  https://github.com/yyuu/pyenv
@@ -30,4 +26,9 @@ fi
 # add anaconda for python 2, only if it is there
 test -e $HOME/anaconda2/bin && safe_path_add $HOME/anaconda2/bin
 test -e $HOME/anaconda3/bin && safe_path_add $HOME/anaconda3/bin
+test -e $HOME/git/rllab && export RLLAB=$HOME/git/rllab
 
+# add to python path, if available
+test -e $HOME/anaconda2/bin && export PYTHONPATH=$HOME/anaconda2/bin:$PYTHONPATH
+test -e $HOME/anaconda3/bin && export PYTHONPATH=$HOME/anaconda3/bin:$PYTHONPATH
+test -e $HOME/git/rllab     && export PYTHONPATH=$RLLAB:$PYTHONPATH
