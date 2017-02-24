@@ -1,3 +1,8 @@
+#!/bin/bash
+#set -euo pipefail
+#IFS=$'\n\t'
+# ^^^ unofficial bash mode: https://perma.cc/UQ45-72E5
+
 export TERM="screen-256color"
 export EDITOR='nvim'
 # export PAGER=most
@@ -83,8 +88,8 @@ alias .....='cd ../../../..'
 # ===================== #
 # .bashrc functions     #
 # ===================== #
-alias vrc='vim ~/.bashrc'
-alias src='source ~/.bashrc'
+alias vrc='vim $HOME/.bashrc'
+alias src='source $HOME/.bashrc'
 # == ghci to bash == #
 alias ":q"=exit
 alias ":r"=myReload
@@ -93,7 +98,7 @@ alias ":r"=myReload
 # Add git-aware prompt  #
 #=======================#
 # -- primarily cause I'm super lazy: https://github.com/jimeh/git-aware-prompt
-export GITAWAREPROMPT=~/.bash/git-aware-prompt
+export GITAWAREPROMPT=$HOME/.bash/git-aware-prompt
 if [ -e $GITAWAREPROMPT ]; then
   source "${GITAWAREPROMPT}/main.sh"
 fi
@@ -114,14 +119,15 @@ fi
 # Load the remaining settings               #
 # ========================================= #
 
-for SETTING in git tmux task nginx vim python hesse ssh; do
-  [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
+#for SETTING in git tmux task nginx vim python hesse ssh; do
+for SETTING in git tmux task nginx vim python hesse; do
+  [[ ! -f $HOME/.bashrc_$SETTING  ]] || source $HOME/.bashrc_$SETTING
 done
 
-[[ ! -f ~/.bash-wakatime/bash-wakatime.sh  ]] || source ~/.bash-wakatime/bash-wakatime.sh
+[[ ! -f $HOME/.bash-wakatime/bash-wakatime.sh  ]] || source $HOME/.bash-wakatime/bash-wakatime.sh
 
 # add stack installs to path
-safe_path_add ~/.local/bin/
+safe_path_add $HOME/.local/bin/
 
 # stack autocomplete
 eval "$(stack --bash-completion-script stack)"
@@ -133,11 +139,11 @@ function stacknew {
   stack new $1 --bare ~/git/stack-templates/skeleton
 }
 
-alias ag='ag --path-to-ignore ~/.agignore'
+alias ag='ag --path-to-ignore $HOME/.agignore'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
@@ -158,4 +164,3 @@ alias l='ls -CF'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-

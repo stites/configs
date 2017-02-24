@@ -3,8 +3,10 @@
 alias vi=vim
 alias vim=nvim
 alias vimd="nvim --headless "
-alias vimattach="vim --servername VIM_SERVER --remote-tab "
+alias vimattach="nvim --servername VIM_SERVER --remote-tab "
+alias visnippets="vim ~/.config/nvim/snippets/haskell.snippets"
 
 # Use https://github.com/rdnetto/powerline-hs
 export POWERLINE_COMMAND=$HOME/.local/bin/powerline-hs
+
 

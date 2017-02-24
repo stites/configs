@@ -75,26 +75,6 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'        " MacOSX/L
 autocmd BufWritePost *.py call Flake8()
 
 " ==============================================================================
-" vim-pencil
-filetype plugin on
-" let g:pencil#textwidth = 80
-
-" augroup pencil
-"   autocmd!
-"   autocmd FileType markdown,mkd call pencil#init({'wrap': 'hard', 'autoformat': 1})
-"   autocmd FileType text         call pencil#init({'wrap': 'soft', 'autoformat': 0})
-" augroup END
-
-" ==============================================================================
-" vim-pad
-" let g:pad#dir="~/.stites"
-
-" ==============================================================================
-" vim-note
-let g:notes_directories = ["~/.stites"]
-" let g:notes_title_sync = 'off'
-
-" ==============================================================================
 " vim-snipmate
 noremap <C-t><Tab> snipMateTrigger
 
