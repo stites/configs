@@ -11,8 +11,7 @@
   ignorecase = false
   eol = lf
   whitespace = blank-at-eol,space-before-tab,tab-in-indent,tabwidth=2
-  # editor = emacsclient -t -a=\\\"\\\"
-  editor = ~/.nix-profile/bin/vim
+  editor = nvim
   excludesfile = ~/.gitignore_global
 [color]
   ui = auto
@@ -33,26 +32,20 @@
   stat = true
   tool = vimdiff
 [url "https://"]
-  insteadOf = git://
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+  insteadOf = http://
 [help]
   autocorrect = 1
 [http]
-  sslVerify = false
+  sslVerify = true
 [github]
   user = stites
 [url "git://github.com/ghc/packages-"]
-	insteadOf = git://github.com/ghc/packages/
+  insteadOf = git://github.com/ghc/packages/
 [credential]
   helper = store --file ~/.config/git/credentials
-  helper = cache --timeout=30000
-
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	required = true
-	clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
+  clean = git-lfs clean -- %f
+[url "git@github.com:"]
+  insteadOf = https://github.com/
