@@ -71,3 +71,19 @@ let g:neomake_haskell_hlint_maker = {
     \ }
 let g:neomake_haskell_enabled_makers = ['hlint']
 
+" ==============================================================================
+" Makefile settings
+
+autocmd BufNewFile,BufRead Makefile
+     \ set tabstop=4
+     \ softtabstop=4
+     \ shiftwidth=4
+     \ autoindent
+     \ fileformat=unix
+     \ noexpandtab
+
+autocmd BufWritePre Makefile %s/\s\+$//e 
+autocmd BufWritePre Makefile %retab!
+
+
+

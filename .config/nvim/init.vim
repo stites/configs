@@ -274,7 +274,13 @@ map <leader>ap :Align
 
 map <leader>tt :TagbarToggle<CR>
 
+" https://stackoverflow.com/questions/11975316/vim-ctags-tag-not-found
 " set tags=./tags,tags;$HOME
+" set tags+=$HOME/yourpath/tags
+
+" set tags="tags;$HOME,codex.tags;$HOME"
+"set tags=./tags;,tags;,codex.tags; "codex.tags,/home/stites/git/sentenai/research/codex.tags
+"set tags+=/home/stites/git/sentenai/research/codex.tags
 set tags=tags;/,codex.tags;/
 set cst
 set csverb
@@ -326,3 +332,9 @@ let g:SuperTabDefaultCompletionType = '<c-x><c-p>'
 
 " }}}
 
+" Set up Python paths {{{
+" See: https://github.com/tweekmonster/nvim-python-doctor/wiki/Advanced%3A-Using-pyenv
+let g:python_host_prog = '/home/stites/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/home/stites/.pyenv/versions/neovim3/bin/python'
+
+" }}}

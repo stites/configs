@@ -12,14 +12,14 @@ Plug 'vim-scripts/gitignore'
 Plug 'SirVer/ultisnips'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-" Git
-Plug 'tpope/vim-fugitive'
+" " Git
+" Plug 'tpope/vim-fugitive' " <<< causes problems with ctags
 Plug 'int3/vim-extradite'
 
 " Bars, panels, and files
 Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
-" Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'                 " http://vimawesome.com/plugin/tagbar
@@ -41,7 +41,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim',     { 'for': 'haskell' }
-Plug 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
+"Plug 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
 Plug 'eagletmt/ghcmod-vim',           { 'for': 'haskell' }
 Plug 'eagletmt/neco-ghc',             { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle',           { 'for': 'haskell' }
