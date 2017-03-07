@@ -1,12 +1,15 @@
 {-# LANGUAGE TypeOperators #-}
 
+import System.Exit
 import System.IO (hPutStrLn)
+--import System.Taffybar.Hooks.PagerHints (pagerHints)
 import XMonad
 import XMonad.Actions.CycleWS (nextWS, prevWS, shiftToPrev, shiftToNext)
 import XMonad.Actions.DynamicWorkspaces (addWorkspacePrompt, removeEmptyWorkspace)
 import XMonad.Actions.Search
 import XMonad.Actions.Submap
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Hooks.ManageDocks (AvoidStruts, avoidStruts, docksEventHook, manageDocks)
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.LayoutModifier (ModifiedLayout)
@@ -25,14 +28,14 @@ import qualified XMonad.Layout.IndependentScreens as LIS
 
 main :: IO ()
 main = do
-   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
+   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc.hs"
    xmonad $ def
-      { terminal           = "terminator"
-      , workspaces         = ["1", "2", "3"]
+      { terminal           = "urxvt"
+      , workspaces         = ["1", "2", "3", "4"]
       , borderWidth        = 1
       , focusFollowsMouse  = False
       , modMask            = mod4Mask -- Rebind Mod to super
-      , manageHook         = manageDocks <+> manageHook def <+> (resource =? "synapse" --> doIgnore)
+      , manageHook         = manageDocks <+> manageHook def -- <+> (resource =? "launchy" --> doIgnore)
       , layoutHook         = layout_hook
       , handleEventHook    = docksEventHook <+> handleEventHook def
       , logHook =
@@ -91,6 +94,7 @@ removeKeys' = [ "M-S-<Return>" -- terminal
               , "M-l"          -- expand
               , "M-<Return>"   -- swap master
               , "M-m"          -- focus master
+              , "M-S-q"        -- exit X (move to M-S-e)
               ]
 
 
@@ -119,14 +123,18 @@ additionalKeys'
       -- , ("M-S-<Space>",  sendMessage ToggleLayout)
       , ("M-M1-h",       sendMessage Shrink)
       , ("M-M1-l",       sendMessage Expand)
+      -- Restart/Exit XMonad
+      ,("M-q",   spawn "killall xmobar; xmonad --restart")
+      ,("M-S-q", spawn "xmonad --recompile; killall xmobar; xmonad --restart")
+      ,("M-S-e", io (exitWith ExitSuccess))
       ]
 
     applications =
       [ ("M-o d",      spawn "thunar")
       , ("M-o h",      promptSearch xpconfig hackage)
       , ("M-<Return>", spawn =<< asks (terminal . config))
-      , ("C-<Space>",    spawn "synapse")
-      -- , ("M-i",          spawn "google-chrome-stable")
+      , ("C-<Space>",    spawn "dmenu")
+      , ("M-i",          spawn "chrome")
       ]
 
     system =
@@ -149,5 +157,5 @@ instance XPrompt Search' where
 
 myManagementHooks :: [ManageHook]
 myManagementHooks = [
-  resource =? "synapse" --> doIgnore
+  -- resource =? "synapse" --> doIgnore
   ]

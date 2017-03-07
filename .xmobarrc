@@ -24,49 +24,49 @@ Config { font         = "xft:DejaVu Sans Mono:pixelsize=12"
                          "-n", "yellow",
                          "-h", "red"]
                         10
-                    , Run ThermalZone
-                        0
-                        ["-t", "temp <temp>",
-                         "-L", "50",
-                         "-H", "70",
-                         "-l", "green",
-                         "-n", "yellow",
-                         "-h", "red"]
-                        50
-                    , Run ThermalZone
-                        1
-                        ["-t", "<temp>",
-                         "-L", "50",
-                         "-H", "70",
-                         "-l", "green",
-                         "-n", "yellow",
-                         "-h", "red"]
-                        50
-                    , Run Volume "default" "Master"
-                        ["-t", "vol <volumevbar>"]
-                        10
-                    , Run Wireless "wlp3s0"
-                        ["-t", "<fc=white><essid></fc> <qualityvbar>",
-                         "-l", "red",
-                         "-n", "yellow",
-                         "-h", "green"]
-                        10
-                    , Run DynNetwork
-                        ["-t", "<rx>",
-                         "-w", "5"]
-                        50
-                    , Run Battery
-                        ["-t", "bat <left> (<timeleft>)",
-                         "-S", "True",
-                         "-L", "15",
-                         "-H", "80",
-                         "-l", "red",
-                         "-n", "yellow",
-                         "-h", "green",
-                         "--", "-O",
-                         "+", "-o",
-                         ""]
-                        600
+                    --, Run ThermalZone
+                    --    0
+                    --    ["-t", "temp <temp>",
+                    --     "-L", "50",
+                    --     "-H", "70",
+                    --     "-l", "green",
+                    --     "-n", "yellow",
+                    --     "-h", "red"]
+                    --    50
+                    --, Run ThermalZone
+                    --    1
+                    --    ["-t", "<temp>",
+                    --     "-L", "50",
+                    --     "-H", "70",
+                    --     "-l", "green",
+                    --     "-n", "yellow",
+                    --     "-h", "red"]
+                    --    50
+                    --, Run Volume "default" "Master"
+                    --    ["-t", "vol <volumevbar>"]
+                    --    10
+                    --, Run Wireless "wlp3s0"
+                    --    ["-t", "<fc=white><essid></fc> <qualityvbar>",
+                    --     "-l", "red",
+                    --     "-n", "yellow",
+                    --     "-h", "green"]
+                    --    10
+                    --, Run DynNetwork
+                    --    ["-t", "<rx>",
+                    --     "-w", "5"]
+                    --    50
+                    --, Run Battery
+                    --    ["-t", "bat <left> (<timeleft>)",
+                    --     "-S", "True",
+                    --     "-L", "15",
+                    --     "-H", "80",
+                    --     "-l", "red",
+                    --     "-n", "yellow",
+                    --     "-h", "green",
+                    --     "--", "-O",
+                    --     "+", "-o",
+                    --     ""]
+                    --    600
                     , Run Date "%a %b %_d %l:%M" "date" 600
                     ]
        , sepChar = "%"
