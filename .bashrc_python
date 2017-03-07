@@ -1,7 +1,8 @@
 #!/bin/bash
 # ============================================= #
 
-# export PYENV_ROOT="${HOME}/.pyenv"
+export PYENV_ROOT="${HOME}/.pyenv"
+
 # export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 # things installed:
 #  +  https://github.com/yyuu/pyenv-virtualenvwrapper
@@ -11,24 +12,23 @@
 
 # run pyenv stuff only if it's there:
 if [ -d "${PYENV_ROOT}" ]; then
+    # set up pyenv
     safe_path_add $PYENV_ROOT/bin
     safe_path_add $PYENV_ROOT/shims
     eval "$(pyenv init -)"
+
+    # set up pyenv-virtualenvwrapper
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
     eval "$(pyenv virtualenv-init -)"
 fi
 
-# run virtualenvwrapper from nix
-if [ -n "`which virtualenvwrapper.sh`" ]; then
-  export WORKON_HOME=$HOME/.virtualenvs
-  source virtualenvwrapper.sh
-fi
-
-# add anaconda for python 2, only if it is there
-test -e $HOME/anaconda2/bin && safe_path_add $HOME/anaconda2/bin
-test -e $HOME/anaconda3/bin && safe_path_add $HOME/anaconda3/bin
-test -e $HOME/git/rllab && export RLLAB=$HOME/git/rllab
-
-# add to python path, if available
-test -e $HOME/anaconda2/bin && export PYTHONPATH=$HOME/anaconda2/bin:$PYTHONPATH
-test -e $HOME/anaconda3/bin && export PYTHONPATH=$HOME/anaconda3/bin:$PYTHONPATH
-test -e $HOME/git/rllab     && export PYTHONPATH=$RLLAB:$PYTHONPATH
+## add anaconda for python 2, only if it is there
+#test -e $HOME/anaconda2/bin && safe_path_add $HOME/anaconda2/bin
+#test -e $HOME/anaconda3/bin && safe_path_add $HOME/anaconda3/bin
+#test -e $HOME/git/rllab && export RLLAB=$HOME/git/rllab
+#
+## add to python path, if available
+#test -e $HOME/anaconda2/bin && export PYTHONPATH=$HOME/anaconda2/bin:$PYTHONPATH
+#test -e $HOME/anaconda3/bin && export PYTHONPATH=$HOME/anaconda3/bin:$PYTHONPATH
+#test -e $HOME/git/rllab     && export PYTHONPATH=$RLLAB:$PYTHONPATH
