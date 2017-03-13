@@ -35,7 +35,7 @@ export INPUTRC=$HOME/.inputrc
 # ========================================================= #
 # some ls aliases
 alias tree='tree -C'
-alias ls='ls -G --color'
+alias ls='ls -G'
 
 # Relative Jumps:
 alias ~='cd ~ '
@@ -87,7 +87,7 @@ fi
 # Load the remaining settings               #
 # ========================================= #
 
-for SETTING in java git bina tmux mac emacs task nginx vim python el-captain; do
+for SETTING in java git bina tmux mac emacs npm task nginx vim python el-captain; do
   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
 done
 
@@ -106,4 +106,4 @@ function stacknew {
   stack new $1 --bare ~/git/stack-templates/skeleton
 }
 
-alias ag='ag --path-to-ignore ~/.agignore'
+alias ag='ag --path-to-agignore ~/.agignore'

@@ -124,6 +124,10 @@ inoremap <C-Tab>   <Esc>:tabnext<CR>i
 " inoremap <C-t>     <Esc>:tabnew<CR>
 nnoremap <C-w>     :tabclose<CR>
 
+" ==============================================================================
+" fix haskell indentation
+let g:haskell_indent_disable=1
+
 " " ==============================================================================
 " " sets 'path' to:
 " " - the directory of the current file

@@ -30,5 +30,9 @@ Plug 'wakatime/vim-wakatime'
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 
+" Typescript
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
-
+" convert cases
+Plug 'tpope/vim-abolish'

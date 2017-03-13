@@ -28,3 +28,4 @@ fi
 test ! -d $HOME/.nvm && echo "nvm not detected" && continue;
 # find -P  $HOME/.nvm -type d -maxdepth 3 -name bin | xargs -n 1 bash -c 'safe_path_add "$@"' _
 safe_path_add ${HOME}${NVM_PATH}/current/lib/node_modules/bin
+safe_path_add "${HOME}/.local/npm/bin/"

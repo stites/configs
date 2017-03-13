@@ -2,7 +2,7 @@
 # ============================================= #
 # DEPRECIATED                                   #
 # ============================================= #
-export RLLAB=~/git/rllab
+export RLLAB=$HOME/git/rllab
 export PYENV_ROOT="${HOME}/.pyenv"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 export PYTHONPATH=$RLLAB:$PYTHONPATH

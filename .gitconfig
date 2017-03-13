@@ -13,7 +13,7 @@
   whitespace = blank-at-eol,space-before-tab,tab-in-indent,tabwidth=2
   # editor = emacsclient -t -a=\\\"\\\"
   editor = ~/.nix-profile/bin/vim
-  excludesfile = ~/.gitignore_global
+	excludesfile = /Users/stites/.gitignore_global
 [color]
   ui = auto
 [grep]
@@ -35,11 +35,11 @@
 [url "https://"]
   insteadOf = git://
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [help]
   autocorrect = 1
 [http]
