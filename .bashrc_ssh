@@ -13,19 +13,19 @@ function start_agent {
 }
 
 # Source SSH settings, if applicable
-
 if [ -f "${SSH_ENV}" ]; then
-    #     . "${SSH_ENV}" > /dev/null
-    #     #ps ${SSH_AGENT_PID} doesn't work under cywgin
-    #     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-    #         # in this case SSH_AGENT has already started, so do nothing
-    #         # start_agent;
-    #     }
-    echo "none";
+    . "${SSH_ENV}" > /dev/null
+    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+        start_agent;
+    }
 else
-    echo "starting";
     start_agent;
 fi
 
+# Fix SSH auth socket location so agent forwarding works with tmux
+if test "$SSH_AUTH_SOCK" ; then
+  ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
+fi
+
 # fun stuff:
-alias pong="ping -c 1 $(echoip | head -n 1 | tr -s ' ' | cut -d ':' -f 2)"
+#alias pong="ping -c 1 $(echoip | head -n 1 | tr -s ' ' | cut -d ':' -f 2)"

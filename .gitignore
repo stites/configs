@@ -4,3 +4,4 @@ Library
 .atom/packages
 .atom/blob-store
 .bash/log
+.config/nvim/bundle

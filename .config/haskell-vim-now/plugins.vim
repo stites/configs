@@ -6,7 +6,8 @@ Plug 'majutsushi/tagbar'                 " http://vimawesome.com/plugin/tagbar
 Plug 'vim-airline/vim-airline-themes'
 
 " snippets for all languages
-Plug 'garbas/vim-snipmate' | Plug 'MarcWeber/vim-addon-mw-utils' | Plug 'tomtom/tlib_vim'
+Plug 'Shougo/neosnippet.vim' | Plug 'Shougo/neosnippet-snippets'   " | Plug 'honza/vim-snippets'
+" Plug 'garbas/vim-snipmate' | Plug 'MarcWeber/vim-addon-mw-utils' | Plug 'tomtom/tlib_vim' | Plug 'honza/vim-snippets'
 
 " Writing and markdown
 " Plug 'reedes/vim-pencil'
@@ -19,8 +20,6 @@ Plug 'lervag/vimtex'
 " Haskell plugins
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plug 'hspec/hspec.vim'
-" Plug 'cloudhead/neovim-ghcid'
-" Plug 'myfreeweb/intero.nvim'
 
 " Productivity
 Plug 'wakatime/vim-wakatime'

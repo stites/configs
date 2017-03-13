@@ -24,7 +24,7 @@ data.location=/Users/stites/.task
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-violets-256.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-gray-256.theme
-include /nix/store/ahbj73b45bqrp42dm11wmqa4hxw31n0v-taskwarrior-2.5.1/share/doc/task/rc/dark-violets-256.theme
+include /nix/store/2crvisxzknxmvn1330s9cykiwr4ji3zx-taskwarrior-2.5.1/share/doc/task/rc/dark-violets-256.theme 
 
 taskd.certificate=\/Users\/stites\/.task\/freecinc_2c468f38.cert.pem
 taskd.key=\/Users\/stites\/.task\/freecinc_2c468f38.key.pem
