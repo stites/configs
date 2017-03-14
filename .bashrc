@@ -138,7 +138,7 @@ function stacknew {
   stack new $1 --bare ~/git/stack-templates/skeleton
 }
 
-alias ag='ag --path-to-ignore $HOME/.agignore'
+alias ag='ag --path-to-agignore ~/.agignore'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

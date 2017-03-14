@@ -1,9 +1,8 @@
 #!/bin/bash
 # ============================================= #
-
 export PYENV_ROOT="${HOME}/.pyenv"
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 
-# export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 # things installed:
 #  +  https://github.com/yyuu/pyenv-virtualenvwrapper
 #  +  https://github.com/yyuu/pyenv
