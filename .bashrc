@@ -3,7 +3,7 @@
 #IFS=$'\n\t'
 # ^^^ unofficial bash mode: https://perma.cc/UQ45-72E5
 
-export TERM="screen-256color"
+#export TERM="screen-256color"
 export EDITOR='nvim'
 # export PAGER=most
 export LC_ALL=en_US.UTF-8
@@ -67,7 +67,7 @@ fi
 # ========================================================= #
 # some ls aliases
 alias tree='tree -C'
-alias ls='ls -G --color'
+alias ls='ls -G'
 
 # Relative Jumps:
 alias ~='cd ~ '
@@ -119,8 +119,7 @@ fi
 # Load the remaining settings               #
 # ========================================= #
 
-#for SETTING in git tmux task nginx vim python hesse ssh; do
-for SETTING in git tmux task nginx vim python hesse; do
+for SETTING in git tmux task nginx node vim python hesse ssh go; do
   [[ ! -f $HOME/.bashrc_$SETTING  ]] || source $HOME/.bashrc_$SETTING
 done
 
@@ -164,3 +163,8 @@ alias l='ls -CF'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+if ! xset q &>/dev/null; then
+    echo "No X server at \$DISPLAY [$DISPLAY]" >&2
+    startx
+fi

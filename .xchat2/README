@@ -1,0 +1,20 @@
+::XChat GreyTheme
+::Smog
+  http://t0x.in/xchatthemes.html
+
+::06/2008
+::yv0n[AT]t0x[DOT]in
+
+
+
+INSTALL:
+1. Quit XChat.
+2. Move the colors.conf and pevents.conf files of your old theme to a temporary directory 
+   (you can find the conf files in XChat's data directory, see 3.).
+3. Place the colors.conf and pevents.conf files of your new theme inside XChat's data directory.
+    WINDOWS   : C:\Documents and Settings\username\Application Data\X-Chat 2\
+    VISTA     : C:\Users\username\AppData\Roaming\X-Chat 2\
+    LINUX/UNIX: ~/.xchat2/ (/home/username/.xchat2).
+4. Restart XChat.
+
+If you can't see certain characters use pevents.conf in B-Version.

@@ -5,3 +5,5 @@ Library
 .atom/blob-store
 .bash/log
 .config/nvim/bundle
+.xchat2/.xchat2/xchatlogs
+.xchat2/.xchat2/scrollback
