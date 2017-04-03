@@ -28,6 +28,8 @@ source $HOME/.config/nvim/haskell.vim
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/plugins-config.vim
 source $HOME/.config/nvim/ui.vim
+let g:python_host_prog = '/home/stites/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/home/stites/.pyenv/versions/neovim3/bin/python'
 
 " Files, backups and undo {{{
 

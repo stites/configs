@@ -13,7 +13,7 @@
   whitespace = blank-at-eol,space-before-tab,tab-in-indent,tabwidth=2
   # editor = emacsclient -t -a=\\\"\\\"
   editor = ~/.nix-profile/bin/vim
-	excludesfile = /Users/stites/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [color]
   ui = auto
 [grep]

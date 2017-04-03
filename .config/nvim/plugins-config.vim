@@ -17,7 +17,7 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'        " MacOSX/L
 "     \ set fileformat=unix
 
 " call vim-flake8 on every file save
-autocmd BufWritePost *.py call Flake8()
+"autocmd BufWritePost *.py call Flake8()
 
 " ==============================================================================
 " vim-snipmate

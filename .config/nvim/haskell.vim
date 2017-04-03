@@ -6,16 +6,16 @@ autocmd BufWritePost package.yaml silent !hpack --silent
 let @m='imodule %0wdf/f.d$a where:s/\//./g$'
 let @p='ddO  lift . print $ '
 
-" Conceal {{{
-" Use same color behind concealed unicode characters
-hi clear Conceal
-
-" Pretty unicode haskell symbols
-let g:haskell_conceal_wide = 0
-let g:haskell_conceal_enumerations = 0
-let hscoptions="𝐒𝐓𝐄𝐌xRtB𝔻w"
-
-" }}}
+" " Conceal {{{
+" " Use same color behind concealed unicode characters
+" hi clear Conceal
+" 
+" " Pretty unicode haskell symbols
+" let g:haskell_conceal_wide = 0
+" let g:haskell_conceal_enumerations = 0
+" let hscoptions="𝐒𝐓𝐄𝐌xRtB𝔻w"
+" 
+" " }}}
 
 " Tags {{{
 

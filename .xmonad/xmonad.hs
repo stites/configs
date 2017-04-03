@@ -21,34 +21,36 @@ import XMonad.Util.EZConfig (additionalKeysP, removeKeysP)
 import qualified XMonad.StackSet as W
 import Data.Monoid ((<>))
 import qualified XMonad.Layout.IndependentScreens as LIS
+import XMonad.Config.Xfce
 
 
 main :: IO ()
 main = do
-   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
-   xmonad $ def
-      { terminal           = "terminator"
-      , workspaces         = ["1", "2", "3"]
-      , borderWidth        = 1
-      , focusFollowsMouse  = False
-      , modMask            = mod4Mask -- Rebind Mod to super
-      , manageHook         = manageDocks <+> manageHook def <+> (resource =? "synapse" --> doIgnore)
-      , layoutHook         = layout_hook
-      , handleEventHook    = docksEventHook <+> handleEventHook def
-      , logHook =
-        dynamicLogWithPP xmobarPP
-          { ppCurrent = xmobarColor "black" "gray"
-          , ppHidden  = xmobarColor "orange" ""
-          , ppHiddenNoWindows = id
-          , ppOutput  = hPutStrLn xmproc
-          , ppSep     = xmobarColor "orange" "" " | "
-          , ppTitle   = xmobarColor "lightblue" "" . shorten 120
-          , ppOrder   = \[a,_,b] -> [a,b]    -- Don't log layout name
-          }
-      , startupHook = startup_hook
-      }
-      `removeKeysP` removeKeys'
-      `additionalKeysP` additionalKeys'
+  --xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
+      
+  xmonad xfceConfig { modMask = mod4Mask, terminal = "xfce4-terminal" } -- $ --def
+      -- { terminal           = "xfce4-terminal"
+      -- --, workspaces         = ["1", "2", "3"]
+      -- , borderWidth        = 1
+      -- --, focusFollowsMouse  = False
+      -- , modMask            = mod4Mask -- Rebind Mod to super
+      -- --, manageHook         = manageDocks <+> manageHook def <+> (resource =? "synapse" --> doIgnore)
+      -- , layoutHook         = layout_hook
+      -- , handleEventHook    = docksEventHook <+> handleEventHook def
+      -- --, logHook =
+      -- --  dynamicLogWithPP xmobarPP
+      -- --    { ppCurrent = xmobarColor "black" "gray"
+      -- --    , ppHidden  = xmobarColor "orange" ""
+      -- --    , ppHiddenNoWindows = id
+      -- --    --, ppOutput  = hPutStrLn xmproc
+      -- --    , ppSep     = xmobarColor "orange" "" " | "
+      -- --    , ppTitle   = xmobarColor "lightblue" "" . shorten 120
+      -- --    , ppOrder   = \[a,_,b] -> [a,b]    -- Don't log layout name
+      -- --    }
+      -- --, startupHook = startup_hook
+      -- }
+      -- `removeKeysP` removeKeys'
+      -- `additionalKeysP` additionalKeys'
 
 
 type (:+) f g = Choose f g

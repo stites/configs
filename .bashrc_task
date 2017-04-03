@@ -1,6 +1,7 @@
 #!/bin/bash
 
 alias in='task add +in'
+alias today='task add +in'
 
 alias tick=tickle
 

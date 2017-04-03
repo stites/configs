@@ -5,4 +5,4 @@ RVM=$HOME/.rvm/scripts/rvm
 test -s "$RVM" && source "$RVM"
 
 test ! -d $HOME/.rvm && echo "rvm not detected" && continue;
-find -P  $HOME/.rvm -type d -maxdepth 3 -name bin | xargs -n 1 bash -c 'safe_path_add "$@"' _
+#find -P  $HOME/.rvm -type d -maxdepth 3 -name bin | xargs -n 1 bash -c 'safe_path_add "$@"' _

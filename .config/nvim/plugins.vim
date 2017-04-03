@@ -13,7 +13,7 @@ Plug 'SirVer/ultisnips'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Git
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'int3/vim-extradite'
 
 " Bars, panels, and files
@@ -41,7 +41,6 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim',     { 'for': 'haskell' }
-Plug 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
 Plug 'eagletmt/ghcmod-vim',           { 'for': 'haskell' }
 Plug 'eagletmt/neco-ghc',             { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle',           { 'for': 'haskell' }

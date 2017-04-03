@@ -31,6 +31,12 @@ fi
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
+    xterm)
+      export TERM="xterm-256color"
+      color_prompt=yes;;
+    screen)
+      export TERM="screen-256color"
+      color_prompt=yes;;
 esac
 
 # don't put duplicate lines in the history. See bash(1) for more options
@@ -119,7 +125,7 @@ fi
 # Load the remaining settings               #
 # ========================================= #
 
-for SETTING in java git bina tmux mac emacs npm task nginx vim python el-captain; do
+for SETTING in git tmux npm task nginx vim python hesse ruby; do
   [[ ! -f $HOME/.bashrc_$SETTING  ]] || source $HOME/.bashrc_$SETTING
 done
 
@@ -163,3 +169,9 @@ alias l='ls -CF'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

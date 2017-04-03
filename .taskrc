@@ -11,7 +11,7 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=/Users/stites/.task
+data.location=~/.task
 
 # Color theme (uncomment one to use)
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/light-16.theme
@@ -26,9 +26,9 @@ data.location=/Users/stites/.task
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-gray-256.theme
 include ~/.nix-profile/share/doc/task/rc/dark-violets-256.theme
 
-taskd.certificate=\/Users\/stites\/.task\/freecinc_2c468f38.cert.pem
-taskd.key=\/Users\/stites\/.task\/freecinc_2c468f38.key.pem
-taskd.ca=\/Users\/stites\/.task\/freecinc_2c468f38.ca.pem
+taskd.certificate=~/.task/freecinc_2c468f38.cert.pem
+taskd.key=~/.task/freecinc_2c468f38.key.pem
+taskd.ca=~/.task/freecinc_2c468f38.ca.pem
 taskd.server=www.freecinc.com:53589
 taskd.credentials=FreeCinc\/freecinc_2c468f38\/8e5b98d6-9bd4-4dcc-a9a9-8beea68e200e
 taskd.trust=ignore hostname

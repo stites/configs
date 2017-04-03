@@ -2,6 +2,7 @@
 # ============================================= #
 export PYENV_ROOT="${HOME}/.pyenv"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1  # supress annoying warning for a feature I don't use
 
 # things installed:
 #  +  https://github.com/yyuu/pyenv-virtualenvwrapper
@@ -23,12 +24,14 @@ if [ -n "`which virtualenvwrapper.sh`" ]; then
   source virtualenvwrapper.sh
 fi
 
+ANACONDA2_PATH=$HOME/.anaconda2
+ANACONDA3_PATH=$HOME/.anaconda3
 # add anaconda for python 2, only if it is there
-test -e $HOME/anaconda2/bin && safe_path_add $HOME/anaconda2/bin
-test -e $HOME/anaconda3/bin && safe_path_add $HOME/anaconda3/bin
+test -e $ANACONDA3_PATH/bin && safe_path_add $ANACONDA3_PATH/bin
+test -e $ANACONDA2_PATH/bin && safe_path_add $ANACONDA2_PATH/bin
 test -e $HOME/git/rllab && export RLLAB=$HOME/git/rllab
 
 # add to python path, if available
-test -e $HOME/anaconda2/bin && export PYTHONPATH=$HOME/anaconda2/bin:$PYTHONPATH
-test -e $HOME/anaconda3/bin && export PYTHONPATH=$HOME/anaconda3/bin:$PYTHONPATH
+test -e $ANACONDA3_PATH/bin && export PYTHONPATH=$ANACONDA3_PATH/bin:$PYTHONPATH
+test -e $ANACONDA2_PATH/bin && export PYTHONPATH=$ANACONDA2_PATH/bin:$PYTHONPATH
 test -e $HOME/git/rllab     && export PYTHONPATH=$RLLAB:$PYTHONPATH
