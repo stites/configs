@@ -13,7 +13,7 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1  # supress annoying warning for a featu
 # run pyenv stuff only if it's there:
 if [ -d "${PYENV_ROOT}" ]; then
     safe_path_add $PYENV_ROOT/bin
-    safe_path_add $PYENV_ROOT/shims
+#    safe_path_add $PYENV_ROOT/shims
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi

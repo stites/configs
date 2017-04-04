@@ -128,7 +128,7 @@ function retry {
 # ========================= #
 export -f h
 export -f l
-export -f safe_path_add
+#export -f safe_path_add
 export -f safe_prompt_add
 export -f append_history;
 export -f log_all_commands;

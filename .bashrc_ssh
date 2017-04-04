@@ -15,7 +15,8 @@ function start_agent {
 # Source SSH settings, if applicable
 if [ -f "${SSH_ENV}" ]; then
     . "${SSH_ENV}" > /dev/null
-    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+    #ps ${SSH_AGENT_PID} doesn't work under cywgin
+    ps aux | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
         start_agent;
     }
 else
@@ -28,4 +29,4 @@ if test "$SSH_AUTH_SOCK" ; then
 fi
 
 # fun stuff:
-#alias pong="ping -c 1 $(echoip | head -n 1 | tr -s ' ' | cut -d ':' -f 2)"
+# alias pong="ping -c 1 $(echoip | head -n 1 | tr -s ' ' | cut -d ':' -f 2)"
