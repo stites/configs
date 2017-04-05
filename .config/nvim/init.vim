@@ -31,6 +31,9 @@ source $HOME/.config/nvim/ui.vim
 let g:python_host_prog = '/home/stites/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/home/stites/.pyenv/versions/neovim3/bin/python'
 
+let g:python_host_prog = '/home/stites/.pyenv/versions/py2neovim/bin/python'
+let g:python3_host_prog = '/home/stites/.pyenv/versions/py3neovim/bin/python'
+
 " Files, backups and undo {{{
 
 " Turn backup off, since most stuff is in Git anyway...

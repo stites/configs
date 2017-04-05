@@ -24,13 +24,14 @@ data.location=~/.task
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-violets-256.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-gray-256.theme
-include ~/.nix-profile/share/doc/task/rc/dark-violets-256.theme
+#include ~/.nix-profile/share/doc/task/rc/dark-violets-256.theme
+include /usr/local/share/taskwarrior/rc/dark-violets-256.theme
 
 taskd.certificate=~/.task/freecinc_2c468f38.cert.pem
 taskd.key=~/.task/freecinc_2c468f38.key.pem
 taskd.ca=~/.task/freecinc_2c468f38.ca.pem
 taskd.server=www.freecinc.com:53589
-taskd.credentials=FreeCinc\/freecinc_2c468f38\/8e5b98d6-9bd4-4dcc-a9a9-8beea68e200e
+taskd.credentials=FreeCinc/freecinc_2c468f38/8e5b98d6-9bd4-4dcc-a9a9-8beea68e200e
 taskd.trust=ignore hostname
 
 color=on

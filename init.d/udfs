@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # ========================= #
 # User-defined functions    #
@@ -56,7 +56,6 @@ function safe_prompt_add {
 # Function append_history
 # @description After each command, append to the history file and reread it. To be used in $PROMPT_COMMAND
 function append_history {
-  echo "append_history"
   history -a; history -c; history -r;
 }
 
