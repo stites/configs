@@ -1,6 +1,0 @@
-""
-"" Personal Customizations
-""
-
-"" make ctrl-p run in the local path
-let g:ctrlp_working_path_mode = 'cra'

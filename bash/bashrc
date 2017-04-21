@@ -114,19 +114,13 @@ if [ -e $GITAWAREPROMPT ]; then
   source "${GITAWAREPROMPT}/main.sh"
 fi
 
-#=======================#
-# Use Nix               #
-#=======================#
-safe_source $HOME/.nix-profile/etc/profile.d/nix.sh
-
 # ========================================= #
 # TODO: load init configs in plist somehow  #
 # ========================================= #
 [[ ! -f ~/.bash/load  ]] || source ~/.bash/load
 
-# ========================================= #
-# Load the remaining settings               #
-# ========================================= #
+# Use Nix
+safe_source $HOME/.nix-profile/etc/profile.d/nix.sh
 
 # add stack installs to path
 safe_path_add $HOME/.local/bin/
@@ -163,5 +157,3 @@ fi
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
