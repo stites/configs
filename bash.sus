@@ -10,25 +10,32 @@ card sus {
 
 card env {
   into ~/.bash
-  alternatives $(HOST) bash/env
+  outof bash/env
 
   load
   functions
   colors
-  prompt
 }
 
+card languages {
+  into ~/.bash
+  outof bash/languages
+  go
+  java
+  node
+  python
+  ruby
+}
 
 card tools {
   {
     into ~/.bash
     outof bash/tools
 
-    # kafka
-    # mac
-    # mu
-    # maven
-    # emacs
+    #emacs
+    #kafka
+    #maven
+    #mu
 
     git
     nginx
@@ -50,20 +57,9 @@ card tools {
   }
 }
 
-card languages {
-  into ~/.bash
-  outof bash/languages
-
-  # java
-  go
-  node
-  python
-  ruby
-}
-
 card rc {
   into ~
-  outof bash
+  alternatives $(HOST) bash
 
   .bash_profile
   .bashrc
@@ -84,7 +80,7 @@ card xmonad {
 }
 
 card ipython {
-  into ~/.ipython/profile_default
+  into .ipython/profile_default
   outof ipython/profile_default
 
   ipython_config.py

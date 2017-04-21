@@ -4,34 +4,6 @@
 # User-defined functions    #
 # ========================= #
 
-# Function h
-# @description alias for browsing history
-function h {
-  if [[ "$1" =~ "^\d+$" ]]; then
-    !$1
-  elif [ "$1" != "" ]; then
-    history | grep $1
-  else
-    history
-  fi
-}
-
-# Function l
-# @description alias for ls with flags
-function l {
-  if [ "$2" != "" ]; then
-    ls -halGpF $1 | grep $2
-    echo "--> grep $2"
-  elif [ -e "$1" ]; then
-    ls -halGpF $1
-  elif [ "$1" != "" ]; then
-    ls -halGpF | grep $1
-    echo "--> grep $1"
-  else
-    ls -halGpF
-  fi
-}
-
 # Function safe_path_add
 # @description add path to $PATH variable, if it is not already there.
 function safe_path_add {
@@ -52,6 +24,10 @@ function safe_prompt_add {
   fi
 }
 
+# Function safe_source
+function safe_source {
+  [[ ! -f $1 ]] || source $1
+}
 
 # Function append_history
 # @description After each command, append to the history file and reread it. To be used in $PROMPT_COMMAND
@@ -127,7 +103,8 @@ function retry {
 # ========================= #
 export -f h
 export -f l
-#export -f safe_path_add
+export -f safe_path_add
+export -f safe_source
 export -f safe_prompt_add
 export -f append_history;
 export -f log_all_commands;

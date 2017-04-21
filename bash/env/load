@@ -3,24 +3,20 @@
 # ========================= #
 # Load "run-once" settings  #
 # ========================= #
-[[ ! -f  ~/.bash_colors         ]] || source ~/.bash_colors
-[[ ! -f  ~/git/configs/init.d/udfs  ]] || source ~/git/configs/init.d/udfs
+[[ ! -f ~/.bash/functions  ]] || source ~/.bash/functions
 
 eval "$(fasd --init auto)"
 
-if [ -f /usr/local/etc/bash_completion ]; then
-  . /usr/local/etc/bash_completion
-fi
+safe_source /usr/local/etc/bash_completion
 
 # ========================================================= #
 # setup environments                                        #
 # ========================================================= #
-# TODO: rename spark->maven, npm->node
-# TODO: re-add ssh
+safe_source ~/.bash/colors
 
-# for SETTING in python ruby npm spark tmux java; do
-#   [[ ! -f ~/.bashrc_$SETTING  ]] || source ~/.bashrc_$SETTING
-# done
+for SETTING in git tmux node task nginx vim python ruby ssh prompt; do
+  safe_source ~/.bash/$SETTING
+done
 
 # ========================================================= #
 # PATH Exports                                              #

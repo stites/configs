@@ -36,7 +36,6 @@ RESET="\[$ESC[${DULL};${FG_WHITE};${BG_NULL}m\]"
 ##
 
 # DULL TEXT
-
 BLACK="\[$ESC[${DULL};${FG_BLACK}m\]"
 RED="\[$ESC[${DULL};${FG_RED}m\]"
 GREEN="\[$ESC[${DULL};${FG_GREEN}m\]"

@@ -1,25 +1,4 @@
-#!/bin/bash
-
-function os_type {
-  ARCH=$(uname -r | grep -i arch && echo "arch" || echo "")
-  UBUNTU=$(uname -a | grep ubuntu && echo "ubuntu" || echo "")
-  # do better stuff here
-}
-
-function init_bashrcs {
-  echo "setting up bashrcs"
-  mkdir  -p ~/.bash/log/
-  cp -f {.,~}/.bash_colors
-  cp -f {.,~}/.bash_profile 
-  cp -f {.,~}/.bashrc      
-  cp -f {.,~}/.bashrc_git 
-  cp -f {.,~}/.bashrc_ssh
-  cp -f {.,~}/.bashrc_tmux
-  # cp -f {.,~}/.bashrc_vim # implies neovim
-  cp -f {.,~}/.tmux.conf
-  cp -f {.,~}/.gitignore_global
-  cp -Rf {.,~}/.tmuxinator
-}
+#!/usr/bin/env bash
 
 function install_fasd {
   echo "install fasd?"
@@ -49,7 +28,6 @@ case "$1" in
   guest)
     pkg_managers
     install_fasd
-    init_bashrcs
     echo 'PS1="${NORMAL}[${BRIGHT_BLUE}\u${BLUE}@${os_type}${NORMAL}|${BRIGHT_BLACK}\W${NORMAL}] ${RESET}"' >> ~/.bashrc
     ;;
   *)
