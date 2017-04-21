@@ -101,8 +101,6 @@ function retry {
 # ========================= #
 # Export functions          #
 # ========================= #
-export -f h
-export -f l
 export -f safe_path_add
 export -f safe_source
 export -f safe_prompt_add
