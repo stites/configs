@@ -6,6 +6,9 @@ card sus {
   spark card logs
   spark card xmonad
   spark card ipython
+  spark card tmux
+  spark card git
+  spark card irssi
 }
 
 card env {
@@ -19,6 +22,45 @@ card env {
   git-aware-prompt
 }
 
+card tmux {
+  {
+    into ~/.bash
+    outof bash/tools
+    tmux
+  }
+  {
+    into ~
+    outof tmux
+
+    .tmux.conf
+    .tmuxinator
+  }
+  {
+    into ~/.tmuxifier/layouts
+    outof tmux/tmuxifier/layouts
+
+    hs.window.sh
+  }
+}
+
+
+card git {
+  {
+    into ~/.bash
+    outof bash/tools
+
+    git
+  }
+  {
+    into ~
+    outof shared
+
+    .gitconfig
+    .gitignore_global
+  }
+}
+
+
 card tools {
   {
     into ~/.bash
@@ -30,11 +72,9 @@ card tools {
     # maven
     # emacs
 
-    git
     nginx
     ssh
     task
-    tmux
     vim
   }
   {
@@ -43,9 +83,6 @@ card tools {
 
     .fasdrc
     .taskrc
-    .gitconfig
-    .gitignore_global
-    .tmux.conf
     .npmrc
   }
 }
@@ -82,6 +119,13 @@ card xmonad {
   xmobarrc
   xmonad.hs
 }
+
+card irssi {
+  into ~
+
+  .irssi
+}
+
 
 card ipython {
   into ~/.ipython/profile_default
