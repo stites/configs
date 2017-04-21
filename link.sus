@@ -16,6 +16,7 @@ card env {
   functions
   colors
   prompt
+  git-aware-prompt
 }
 
 card tools {
