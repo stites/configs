@@ -3,7 +3,7 @@ call plug#begin('~/.config/nvim/bundle')
 
 " Support bundles
 Plug 'jgdavey/tslime.vim'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'Shougo/vimproc.vim', { 'do': 'gmake' }
 " Plug 'ervandew/supertab'
 Plug 'benekastah/neomake'
 Plug 'moll/vim-bbye'

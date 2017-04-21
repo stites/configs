@@ -1,0 +1,121 @@
+#!/bin/bash
+
+alias in='task add +in'
+
+alias today='task add +in due:today'
+
+alias tick=tickle
+
+alias think='tickle +1d'
+
+alias rnd='task add +rnd +next +@computer +@online'
+
+function t {
+  clear
+  if [ -z "$1" ];
+    then task tracking;
+  else
+    task $@
+
+    #TEMP="$(mktemp -dt "taskcommand.XXXXXXXXXX")/output"
+    #unbuffer task $@ | tee $TEMP
+
+    #if [ -n "`cat $TEMP | grep "assuming 'information'"`" ]; then
+    #  id=$1
+    #  shift #&& clear
+    #  if [ $# -eq 0 ]; then task $id
+    #  else
+    #    echo "Did you mean: task $id modify $@?"
+    #    echo -e "Running this now...\n"
+    #    task $id modify $@
+    #  fi;
+    #fi;
+  fi;
+}
+
+tickle () {
+  deadline=$1
+  shift
+  task add +in +tickle wait:$deadline $@
+}
+
+
+process () {
+  n=$1
+  task $n info
+  echo -n "is this actionable? [y/n]: "
+  read actionable
+
+  if [ "n" == "$actionable" ]; then
+    echo -n "do you want to keep it? [y/n]: "
+    read keepit 
+    if [ "n" == "$keepit" ]; then
+      task $n delete
+    else
+      task $n modify wait:$deadline
+    fi
+  else
+    echo -n "is there more than one action required? [y/n]: "
+    read startproject 
+    if [ "y" == "$startproject" ]; then
+      echo "start a project!"
+    else
+      echo -n "can this be done in two minutes? [y/n]: "
+      read donow 
+      if [ "y" == "$donow" ]; then
+        echo "starting task now"
+        task $n start
+        sleep 120
+        echo -n "is it done? [y/n]: "
+        read isdone 
+        if [ "n" == "$isdone" ]; then
+          sleep 120
+        else
+          echo "finishing task"
+          task $n done
+        fi
+      else
+        echo -n "how long will it take? [time]: "
+        read itwilltake 
+        task $n annotate "time estimate: $itwilltake"
+        echo -n "are you going to delegate this task? [y/n]: "
+        read delegate 
+        if [ "y" == "$delegate" ]; then
+          task $n modify -in +waiting
+          echo -n "comment:: "
+          read comment 
+          echo -n "due:: "
+          read due 
+          echo -n "waiting:: "
+          read waiting 
+          task $n annotate "$comment" "due:+$due" "wait:+$waiting"
+        fi
+        echo -n "project:: "
+        read project 
+        task $n modify project:$project
+        echo -n "is next thing to do for project? [y/n]: "
+        read isnext 
+        if [ "y" == "$isnext" ]; then
+          task $n modify +next -in
+        fi
+        echo "add contexts now (eg: +@office +@phone +@computer +@online)"
+      fi
+    fi
+  fi
+}
+
+webpage_title () {
+    curl -L "$*" | hxselect -s '\n' -c  'title' 2>/dev/null
+}
+
+read_and_review (){
+    link="$1"
+    title=$(webpage_title $link)
+    echo $title
+    descr="\"Read and review: $title\""
+    id=$(task add +next +rnr "$descr" | sed -n 's/Created task \(.*\)./\1/p')
+    task "$id" annotate "$link"
+}
+
+alias rnr=read_and_review
+

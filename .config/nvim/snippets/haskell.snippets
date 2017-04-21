@@ -155,6 +155,9 @@ snippet bang
 snippet gnew
 	{-# LANGUAGE GeneralizedNewtypeDeriving #-}
 
+snippet sigs
+	{-# LANGUAGE InstanceSigs #-}
+
 snippet mono
 	{-# LANGUAGE NoMonomorphismRestriction #-}
 
@@ -259,6 +262,13 @@ snippet dd
 
 snippet dg
 	deriving (Eq, Ord, Show, Typeable, Data, Generic)
+
+snippet dm
+	deriving
+	  ( Functor
+	  , Applicative
+	  , Monad
+	  )
 
 snippet inl
 	{-# INLINE ${1} #-}

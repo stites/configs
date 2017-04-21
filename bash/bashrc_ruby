@@ -4,5 +4,5 @@ RBENV=$HOME/.rbenv
 safe_path_add "$RBENV/bin"
 #test -s "$RBENV" && source "$RBENV"
 
-test ! -d $HOME/.rvm && echo "rvm not detected" && continue;
+test ! -d $RBENV && echo "rbenv not detected" && continue;
 #find -P  $HOME/.rvm -type d -maxdepth 3 -name bin | xargs -n 1 bash -c 'safe_path_add "$@"' _

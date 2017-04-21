@@ -1,5 +1,0 @@
-#!/bin/sh
-### lolcommits hook (begin) ###
-export PATH="/usr/bin:/usr/local/bin:$PATH"
-lolcommits --capture --fork
-###  lolcommits hook (end)  ###

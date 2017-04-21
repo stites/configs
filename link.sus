@@ -1,0 +1,83 @@
+card sus {
+  spark card env
+  spark card bash
+  spark card bashlog
+  spark card shared
+  spark card xmonad
+  spark card ipython
+}
+
+card env {
+  into ~/.bash
+  outof bash
+
+  load
+  functions
+}
+
+card bash {
+  into ~
+  alternatives $(HOST) bash
+
+  .bash_colors
+  .bash_profile
+  .bashrc
+  # .bashrc_arch
+  # .bashrc_bina
+  # .bashrc_el-captain
+  # .bashrc_emacs
+  # .bashrc_gauss
+  .bashrc_git
+  .bashrc_go
+  # .bashrc_hesse
+  # .bashrc_java
+  # .bashrc_jira
+  # .bashrc_kafka
+  # .bashrc_mac
+  # .bashrc_mu
+  .bashrc_nginx
+  .bashrc_npm
+  .bashrc_python
+  .bashrc_ruby
+  # .bashrc_spark
+  .bashrc_ssh
+  .bashrc_task
+  .bashrc_tmux
+  .bashrc_vim
+}
+
+
+card bashlog {
+  into ~/.bash/log
+  .empty
+}
+
+
+card shared {
+  into ~
+  outof shared
+
+  .fasdrc
+  .taskrc
+  .gitconfig
+  .gitignore_global
+  .tmux.conf
+  .npmrc
+}
+
+
+card xmonad {
+  into ~/.xmonad
+  outof xmonad
+
+  xmobarrc
+  xmonad.hs
+}
+
+card ipython {
+  into ~/.ipython/profile_default
+  outof ipython/profile_default
+
+  ipython_config.py
+  ipython_kernel_config.py
+}

@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 #set -euo pipefail
 #IFS=$'\n\t'
 # ^^^ unofficial bash mode: https://perma.cc/UQ45-72E5
@@ -21,7 +22,7 @@ set +o vi
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+[ -x /usr/local/bin/lesspipe.sh ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -119,7 +120,7 @@ fi
 # ========================================= #
 # TODO: load init configs in plist somehow  #
 # ========================================= #
-[[ ! -f ~/git/configs/init.d/load_env  ]] || source ~/git/configs/init.d/load_env
+[[ ! -f ~/.bash/load  ]] || source ~/.bash/load
 
 # ========================================= #
 # Load the remaining settings               #

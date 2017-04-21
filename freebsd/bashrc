@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+
+BASE_PS1="${BLUE}@\h${NORMAL}|${GREEN}\W${NORMAL} "
+if hash task 2>/dev/null; then
+  PS1="$(task +in +PENDING count) $BASE_PS1"
+else
+  PS1="$BASE_PS1"
+fi
+
