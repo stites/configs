@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # ========================================================= #
 # beautify the terminal                                     #
@@ -12,6 +12,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
+
 force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
@@ -24,6 +25,7 @@ if [ -n "$force_color_prompt" ]; then
         color_prompt=
     fi
 fi
+
 
 dynamic_prompt (){
   local BASE="${BRIGHT_CYAN}@"
@@ -38,6 +40,7 @@ dynamic_prompt (){
   PS1="$(task +in +PENDING count) ${venv_prompt}${BASE} ${ENDING}"
 }
 
+
 if [ "$color_prompt" = yes ]; then
     if [[ $PROMPT_COMMAND != *" dynamic_prompt;"* ]]; then
       PROMPT_COMMAND="$PROMPT_COMMAND dynamic_prompt;"
@@ -45,6 +48,7 @@ if [ "$color_prompt" = yes ]; then
 else
     PS1="[\u@\h:\W]\$ "
 fi
+
 unset color_prompt force_color_prompt
 
 

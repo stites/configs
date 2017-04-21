@@ -18,7 +18,6 @@ card env {
   prompt
 }
 
-
 card tools {
   {
     into ~/.bash
