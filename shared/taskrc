@@ -36,42 +36,57 @@ taskd.trust=ignore hostname
 
 color=on
 
-alias.psentenai=project:sentenai
-alias.pdeepwork=project:deepwork
-alias.pcssr=project:cssr
-alias.plife=project:life
-alias.pmeta=project:meta
+alias.rm=delete
 
-alias.pL=priority:L
-alias.pM=priority:M
-alias.pH=priority:H
+alias.sentenai=project:sentenai
+alias.deepwork=project:deepwork
+alias.life=project:life
+alias.meta=project:meta
+
+alias.p:L=priority:L
+alias.p:M=priority:M
+alias.p:H=priority:H
 
 alias.now=due:today
-
-uda.est.type=string
-uda.est.label=est
-uda.order.type=numeric
-uda.order.label=est
 
 urgency.user.tag.in.coefficient=15.0
 
 report.in.description = Inbox
 report.in.filter      = status:pending limit:page (+in)
-report.in.columns     = id,est,start.age,depends,priority,project,scheduled.countdown,due.remaining,until.remaining,description,urgency
+report.in.columns     = id,estimate,start.age,depends,priority,project,scheduled.countdown,due.remaining,until.remaining,description,urgency
 report.in.labels      = ID,Est,Active,Deps,P,Project,S,Due,Until,Description,Urg
 report.in.sort        = urgency-
 
 report.out.description = Outbox
 report.out.filter      = status:completed limit:page (+in)
-report.out.columns     = id,est,start.end,modified,depends,priority,project,scheduled.countdown,until.remaining,description,urgency
+report.out.columns     = id,estimate,start.end,modified,depends,priority,project,scheduled.countdown,until.remaining,description,urgency
 report.out.labels      = ID,Est,Resolved,Modified,Deps,P,Project,S,Until,Description,Urg
 report.out.sort        = modified-
 
 report.tracking.description = Taskwarrior report with time tracking
-report.tracking.columns     = id,est,start.age,depends,priority,project,tags,scheduled.countdown,due.remaining,until.remaining,description,urgency
-report.tracking.labels      = ID,Est,Active,Deps,P,Project,Tag,S,Due,Until,Description,Urg
+report.tracking.columns     = id,estimate,start.age,depends,priority,project,tags,scheduled.countdown,due.remaining,until.remaining,description,urgency,brainpower
+report.tracking.labels      = ID,Est,Active,Deps,P,Project,Tag,S,Due,Until,Description,Urg,Brainpower
 report.tracking.filter      = status:pending limit:page
 report.tracking.sort        = tags-/,urgency-
 
 pomodoro.defaultFilter=+in
 
+context.work=+@computer or +@online
+context.home=+@computer or +@phone or +@online
+
+uda.brainpower.type=string
+uda.brainpower.label=Brainpower
+uda.brainpower.values=H,M,L
+uda.brainpower.default=M
+alias.bp:L=brainpower:L
+alias.bp:M=brainpower:M
+alias.bp:H=brainpower:H
+
+report.next.description     = Most urgent tasks
+report.next.columns         = id,start.age,entry.age,urgency,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description,brainpower
+#report.next.filter          = status:pending and +next
+report.next.labels          = ID,Active,Age,Urgency,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Brainpower
+report.next.sort            = brainpower-,priority-,urgency-
+
+uda.estimate.type=numeric
+uda.estimate.label=Estimate
