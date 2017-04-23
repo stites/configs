@@ -14,7 +14,7 @@ safe_source /usr/local/etc/bash_completion
 # ========================================================= #
 safe_source ~/.bash/colors
 
-for SETTING in git tmux node task nginx vim python ruby ssh prompt; do
+for SETTING in git tmux node task nginx vim python ruby ssh prompt hostname; do
   safe_source ~/.bash/$SETTING
 done
 
