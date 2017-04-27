@@ -46,11 +46,11 @@ function log_all_commands {
 # Function myReload
 # @description source bashrc if in shell, rebuild stack if in stack project
 function myReload {
-  if [ -z "`ls | grep 'stack.yaml'`" ]; then
-    source ~/.bashrc
-  else
-    stack build
-  fi
+  # if [ -z "`ls | grep 'stack.yaml'`" ]; then
+    exec $SHELL
+  #else
+  #  stack build
+  #fi
 }
 
 # Function virtualenvPrompt

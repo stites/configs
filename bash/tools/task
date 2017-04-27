@@ -10,8 +10,22 @@ alias think='tickle +1d'
 
 alias rnd='task add +rnd +next +@computer +@online'
 
+alias agenda='nvim ~/.task/day'
+alias plan='vl ~/.task/week ~/.task/day'
+
 function t {
   clear
+  local startline=$(( ( $((10#`date +"%H"`)) - 8 ) * 4 ))   # -8 because of zero-indexed first hour
+
+  tmp=$( mktemp )
+  if head -n $startline ~/.task/day > $tmp 2>&1; then
+    tail -n 4 $tmp
+  else
+    echo "your day hasn't started yet!"
+  fi
+  rm $tmp
+
+
   if [ -z "$1" ];
     then task tracking;
   else
