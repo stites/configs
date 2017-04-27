@@ -1,10 +1,10 @@
 #!/bin/bash
 
-RBENV=$HOME/.rbenv
-safe_path_add "$RBENV/bin"
+# RBENV=$HOME/.rbenv
+# safe_path_add "$RBENV/bin"
 #test -s "$RBENV" && source "$RBENV"
 
-test ! -d $RBENV && echo "rbenv not detected" && continue;
+# test ! -d $RBENV && echo "rbenv not detected" && continue;
 #find -P  $HOME/.rvm -type d -maxdepth 3 -name bin | xargs -n 1 bash -c 'safe_path_add "$@"' _
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.

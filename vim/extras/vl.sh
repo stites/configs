@@ -5,7 +5,7 @@
 if [ $# -eq 0 ] || [ $1 == "-h" ] || [ $1 == "--help" ];
 then 
     echo "Usage: vl [OPTION] [FILE]..."
-    echo "Open vim for FILEs with automatic layouts."
+    echo "Open nvim for FILEs with automatic layouts."
     echo "OPTION:"
     echo -e "  -t, --tabbed  \t open 2 FILEs per tab, splitting each tab vertically"
     echo -e "  -H, --htabbed \t open 2 FILEs per tab, splitting each tab horizontally"
@@ -16,9 +16,9 @@ fi
 
 #Install and exit
 if [ "$1" == "-i" ] || [ "$1" == "--install" ];
-then 
+then
     install -m 755 $BASH_SOURCE /usr/local/bin/vl
-    exit    
+    exit
 fi
 
 tabbed_mode=false
@@ -27,15 +27,15 @@ vimc_split_mode="-O"
 
 #If tabbed mode or the number of files is more than 5
 if [ "$1" == "-t" ] || [ "$1" == "--tabbed" ] || [ $1 == "-H" ] || [ $1 == "--htabbed" ] || [ $# -ge 5 ];
-then 
+then
     tabbed_mode=true
     if [ $1 == "-H" ] || [ $1 == "--htabbed" ];
-    then 
+    then
         split_mode="split"
         vimc_split_mode="-o"
         shift #remove the argument
     elif [ $1 == "-t" ] || [ $1 == "--tabbed" ];
-    then 
+    then
         shift #remove the argument
     fi
 fi
@@ -64,21 +64,21 @@ then
             shift
         fi
     done
-    vim $(echo $vimc_split_mode) -c "$vimcommand" $first2files
+    nvim $(echo $vimc_split_mode) -c "$vimcommand" $first2files
 #Smart split
 else
     if [ $# -eq 4 ];
     then
-        vim -O -c ":split $3 | wincmd l | split $4" $1 $2;
+        nvim -O -c ":split $3 | wincmd l | split $4" $1 $2;
     elif [ $# -eq 3 ];  
     then
-        vim -O -c ":wincmd l | split $3" $1 $2; 
+        nvim -O -c ":wincmd l | split $3" $1 $2; 
     elif [ $# -eq 2 ];
     then
-        vim -O $1 $2; 
+        nvim -O $1 $2; 
     elif [ $# -eq 1 ];
     then
-        vim $1; 
+        nvim $1; 
     fi
 fi
 

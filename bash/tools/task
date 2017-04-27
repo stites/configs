@@ -15,11 +15,11 @@ alias plan='vl ~/.task/week ~/.task/day'
 
 function t {
   clear
-  local startline=$(( ( $((10#`date +"%H"`)) - 8 ) * 4 ))   # -8 because of zero-indexed first hour
+  local startline=$(( ( $((10#`date +"%H"`)) - 8 + 1 ) * 4 ))   # -8 because of zero-indexed first hour
 
   tmp=$( mktemp )
   if head -n $startline ~/.task/day > $tmp 2>&1; then
-    tail -n 4 $tmp
+    tail -n 8 $tmp
   else
     echo "your day hasn't started yet!"
   fi

@@ -4,7 +4,7 @@
 #IFS=$'\n\t'
 # ^^^ unofficial bash mode: https://perma.cc/UQ45-72E5
 
-export TERM="screen-256color"
+export TERM="xterm-256color"
 export EDITOR='nvim'
 # export PAGER=most
 export LC_ALL=en_US.UTF-8
