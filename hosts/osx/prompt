@@ -1,10 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # ========================================================= #
 # beautify the terminal                                     #
 # ========================================================= #
-
-#HOSTNAME="MacAir"
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -83,6 +81,10 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 ### From https://github.com/Homebrew/legacy-homebrew/issues/32019
 # unset SSL_CERT because macs don't like that
 unset SSL_CERT_FILE
+
+# This is because el captain is garbage with openssl
+# grab this cert: https://curl.haxx.se/docs/caextract.html
+export SSL_CERT_FILE="/usr/local/etc/openssl/cacert.pem"
 
 ##alternatively you could have:
 #cd ~/.ssh
