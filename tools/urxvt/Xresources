@@ -1,0 +1,11 @@
+urxvt.keysym.Shift-Control-V: eval:paste_clipboard
+urxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+urxvt.keysym.Control-Up:    \033[1;5A
+urxvt.keysym.Control-K:     \033[1;5A
+urxvt.keysym.Control-Down:  \033[1;5B
+urxvt.keysym.Control-J:     \033[1;5B
+urxvt.keysym.Control-Left:  \033[1;5D
+urxvt.keysym.Control-H:     \033[1;5D
+urxvt.keysym.Control-Right: \033[1;5C
+urxvt.keysym.Control-L:     \033[1;5C
+
