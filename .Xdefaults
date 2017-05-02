@@ -1,0 +1,86 @@
+! xscreensaver ---------------------------------------------------------------
+
+urxvt.termName: rxvt-256color
+urxvt.reverseVideo: True
+urxvt.font: xft:FiraCode:pixelsize=12
+urxvt.letterSpace: -1
+urxvt.urlLauncher: google-chrome
+urxvt.matcher.button: 1
+urxvt.scrollstyle: plain
+!urxvt.borderColor: #000030
+!urxvt.internalBorder: 1
+urxvt.saveLines: 4055
+urxvt.iso14755: False
+
+urxvt.perl-ext-common: default,matcher
+urxvt.keysym.M-escape: perl:keyboard-select:activate
+urxvt.keysym.Shift-Control-V: eval:paste_clipboard
+
+
+!urxvt*foreground: #f2f2f2
+!urxvt*background: #101010
+
+! Dark Pastel
+!normalcolor0 black
+urxvt*color0: #3f3f3f
+!normalcolor1 red
+urxvt*color1: #705050
+!normalcolor2 green
+urxvt*color2: #60b48a
+!normalcolor3 yellow
+urxvt*color3: #dfaf8f
+!normalcolor4 blue
+urxvt*color4: #9ab8d7
+!normalcolor5 purple
+urxvt*color5: #dc8cc3
+!normalcolor6 cyan
+urxvt*color6: #8cd0d3
+!normalcolor7 white
+urxvt*color7: #dcdccc
+
+!lightcolor8  black
+urxvt*color8: #709080
+!lightcolor9  red
+urxvt*color9: #dca3a3
+!lightcolor10  green
+urxvt*color10: #72d5a3
+!lightcolor11  yellow
+urxvt*color11: #f0dfaf
+!lightcolor12  blue
+urxvt*color12: #94bff3
+!lightcolor13  purple
+urxvt*color13: #ec93d3
+!lightcolor14  cyan
+urxvt*color14: #93e0e3
+!lightcolor15  white
+urxvt*color15: #ffffff
+
+
+!font settings
+xscreensaver.Dialog.headingFont:        -*-dina-bold-r-*-*-10-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-dina-bold-r-*-*-10-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-dina-bold-r-*-*-10-*-*-*-*-*-*-*
+!general dialog box (affects main hostname, username, password text)
+xscreensaver.Dialog.foreground:         #EDEDED
+xscreensaver.Dialog.background:         #202020
+xscreensaver.Dialog.topShadowColor:     #202024
+xscreensaver.Dialog.bottomShadowColor:  #202024
+xscreensaver.Dialog.Button.foreground:  #EDEDFF
+xscreensaver.Dialog.Button.background:  #444
+!username/password input box and date text colour
+xscreensaver.Dialog.text.foreground:    #EDEDFF
+xscreensaver.Dialog.text.background:    #444
+xscreensaver.Dialog.internalBorderWidth:24
+xscreensaver.Dialog.borderWidth:        0
+xscreensaver.Dialog.shadowThickness:    2
+!timeout bar (background is actually determined by Dialog.text.background)
+xscreensaver.passwd.thermometer.foreground:  #A9B7C4
+xscreensaver.passwd.thermometer.background:  #202020
+xscreensaver.passwd.thermometer.width:       8
+!datestamp format--see the strftime(3) manual page for details
+xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
+

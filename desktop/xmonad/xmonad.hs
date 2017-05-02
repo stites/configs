@@ -2,6 +2,7 @@
 
 import System.IO (hPutStrLn)
 import XMonad
+import XMonad.Config.Desktop
 import XMonad.Actions.CycleWS (nextWS, prevWS, shiftToPrev, shiftToNext)
 import XMonad.Actions.DynamicWorkspaces (addWorkspacePrompt, removeEmptyWorkspace)
 import XMonad.Actions.Search
@@ -17,41 +18,41 @@ import XMonad.Util.Cursor
 import XMonad.Layout.ToggleLayouts
 import XMonad.Layout.WindowNavigation
 import XMonad.Util.Run (safeSpawn, spawnPipe)
-import XMonad.Util.EZConfig (additionalKeysP, removeKeysP)
 import qualified XMonad.StackSet as W
 import Data.Monoid ((<>))
 import qualified XMonad.Layout.IndependentScreens as LIS
-import XMonad.Config.Xfce
+import XMonad.Util.EZConfig
 
 
 main :: IO ()
 main = do
-  --xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
-      
-  xmonad xfceConfig { modMask = mod4Mask, terminal = "xfce4-terminal" } -- $ --def
-      -- { terminal           = "xfce4-terminal"
-      -- --, workspaces         = ["1", "2", "3"]
-      -- , borderWidth        = 1
-      -- --, focusFollowsMouse  = False
-      -- , modMask            = mod4Mask -- Rebind Mod to super
-      -- --, manageHook         = manageDocks <+> manageHook def <+> (resource =? "synapse" --> doIgnore)
-      -- , layoutHook         = layout_hook
-      -- , handleEventHook    = docksEventHook <+> handleEventHook def
-      -- --, logHook =
-      -- --  dynamicLogWithPP xmobarPP
-      -- --    { ppCurrent = xmobarColor "black" "gray"
-      -- --    , ppHidden  = xmobarColor "orange" ""
-      -- --    , ppHiddenNoWindows = id
-      -- --    --, ppOutput  = hPutStrLn xmproc
-      -- --    , ppSep     = xmobarColor "orange" "" " | "
-      -- --    , ppTitle   = xmobarColor "lightblue" "" . shorten 120
-      -- --    , ppOrder   = \[a,_,b] -> [a,b]    -- Don't log layout name
-      -- --    }
-      -- --, startupHook = startup_hook
-      -- }
-      -- `removeKeysP` removeKeys'
-      -- `additionalKeysP` additionalKeys'
+  -- xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc.hs"
+  xmonad =<< xmobar myConfig
 
+myConfig = desktopConfig
+  { modMask    = mod4Mask  -- Rebind Mod to super
+  , terminal   = "urxvt"
+  , workspaces = ["1", "2", "3"]
+  , borderWidth        = 1
+  , focusFollowsMouse  = False
+  , manageHook         = manageDocks <+> manageHook def <+> (resource =? launcher --> doIgnore)
+  , layoutHook         = layout_hook
+  , handleEventHook    = docksEventHook <+> handleEventHook def
+  , logHook =
+      dynamicLogWithPP xmobarPP
+        { ppCurrent = xmobarColor "black" "gray"
+        , ppHidden  = xmobarColor "orange" ""
+        , ppHiddenNoWindows = id
+        --, ppOutput  = hPutStrLn xmproc
+        , ppSep     = xmobarColor "orange" "" " | "
+        , ppTitle   = xmobarColor "lightblue" "" . shorten 120
+        , ppOrder   = \[a,_,b] -> [a,b]    -- Don't log layout name
+        }
+  , startupHook = startup_hook
+  } `removeKeysP` removeKeys'
+    `additionalKeysP` additionalKeys'
+
+launcher = "launchy"
 
 type (:+) f g = Choose f g
 infixr 5 :+
@@ -127,7 +128,7 @@ additionalKeys'
       [ ("M-o d",      spawn "thunar")
       , ("M-o h",      promptSearch xpconfig hackage)
       , ("M-<Return>", spawn =<< asks (terminal . config))
-      , ("C-<Space>",    spawn "synapse")
+      , ("C-<Space>",  spawn launcher)
       -- , ("M-i",          spawn "google-chrome-stable")
       ]
 
@@ -151,5 +152,5 @@ instance XPrompt Search' where
 
 myManagementHooks :: [ManageHook]
 myManagementHooks = [
-  resource =? "synapse" --> doIgnore
+  resource =? launcher --> doIgnore
   ]
