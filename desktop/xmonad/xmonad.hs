@@ -8,7 +8,7 @@ import XMonad.Actions.DynamicWorkspaces (addWorkspacePrompt, removeEmptyWorkspac
 import XMonad.Actions.Search
 import XMonad.Actions.Submap
 import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.ManageDocks (AvoidStruts, avoidStruts, docksEventHook, manageDocks)
+import XMonad.Hooks.ManageDocks (AvoidStruts, ToggleStruts(..), avoidStruts, docksEventHook, manageDocks)
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.LayoutModifier (ModifiedLayout)
 import XMonad.Layout.Maximize (Maximize, maximize, maximizeRestore)
@@ -134,6 +134,7 @@ additionalKeys'
 
     system =
       [ ("M-S-<Delete>", spawn "sudo pm-hibernate")
+      , ("M-b", sendMessage ToggleStruts)
       ]
 
 -- Like promptSearchBrowser, but open it up so I have access to the flags to

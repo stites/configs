@@ -98,6 +98,10 @@ function retry {
   for i in 1 2 3 4 5; do "$@" && break || sleep 15; done
 }
 
+function note {
+  vim ~/.stites/$1
+}
+
 # ========================= #
 # Export functions          #
 # ========================= #
@@ -113,6 +117,7 @@ export -f notes
 export -f workingmemory
 export -f stackintero
 export -f retry
+export -f note
 
 # ========================= #
 # Add functions to prompt   #

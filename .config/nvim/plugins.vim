@@ -11,6 +11,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/gitignore'
 Plug 'SirVer/ultisnips'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'nacitar/terminalkeys.vim'
+
 
 " Git
 " Plug 'tpope/vim-fugitive'
@@ -46,13 +48,18 @@ Plug 'eagletmt/neco-ghc',             { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle',           { 'for': 'haskell' }
 Plug 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
 
+
+Plug 'ElmCast/elm-vim', { 'for': 'elm' }
+
 " Haskell, always-on
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plug 'hspec/hspec.vim'
 
 " Colorscheme
 Plug 'vim-scripts/wombat256.vim'
-
+Plug 'endel/vim-github-colorscheme'
+Plug 'mhartington/oceanic-next'
+Plug 'freeo/vim-kalisi'
 
 " LaTeX plugins
 Plug 'lervag/vimtex', { 'for': 'latex' }

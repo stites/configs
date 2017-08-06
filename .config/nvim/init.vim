@@ -17,6 +17,10 @@
 " let hvn_user_plugins = expand(resolve(hvn_config_dir . "/plugins.vim"))
 " " }}}
 
+
+" highlight whitespace
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
 " " Precustomization {{{
 " if filereadable(hvn_config_pre)
 "   execute 'source '. hvn_config_pre
@@ -25,6 +29,7 @@
 
 source $HOME/.config/nvim/defaults.vim
 source $HOME/.config/nvim/haskell.vim
+source $HOME/.config/nvim/elm.vim
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/plugins-config.vim
 source $HOME/.config/nvim/ui.vim

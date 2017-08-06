@@ -47,6 +47,20 @@ function t {
   fi;
 }
 
+function tpull {
+  for page in day week month goals; do
+    scp `whoami`@$1:~/.task/$page ~/.task/$page
+  done;
+}
+
+function tpush {
+  for page in day week month goals; do
+    scp ~/.task/$page `whoami`@$1:~/.task/$page 
+  done;
+}
+
+
+
 tickle () {
   deadline=$1
   shift

@@ -3,8 +3,8 @@
 " run hpack automatically on modifications to package.yaml
 autocmd BufWritePost package.yaml silent !hpack --silent
 
-let @m='imodule %0wdf/f.d$a where:s/\//./g$'
-let @p='ddO  lift . print $ '
+let @m='imodule %0wdf/f.d$a where:s/\//./g$:nohl'
+let @p='ddO  liftIO . print $ '
 
 " " Conceal {{{
 " " Use same color behind concealed unicode characters

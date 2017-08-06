@@ -4,7 +4,6 @@
 #IFS=$'\n\t'
 # ^^^ unofficial bash mode: https://perma.cc/UQ45-72E5
 
-export TERM="xterm-256color"
 export EDITOR='nvim'
 # export PAGER=most
 export LC_ALL=en_US.UTF-8
@@ -75,7 +74,8 @@ fi
 # some ls aliases
 alias tree='tree -C'
 alias ls='ls -G'
-alias ll='ls -alF'
+alias ll='ls -Fhil'
+alias lll='ls -Failh'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -135,7 +135,7 @@ function stacknew {
   stack new $1 --bare ~/git/stack-templates/skeleton
 }
 
-alias ag='ag --path-to-agignore ~/.agignore'
+# alias ag='ag --path-to-agignore ~/.agignore'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

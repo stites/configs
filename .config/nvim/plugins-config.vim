@@ -1,8 +1,23 @@
-
 " enable spell checking
 " autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
 " autocmd FileType gitcommit setlocal spell spelllang=en_us
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'        " MacOSX/Linux
+
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_max_files=0
+let g:ctrlp_show_hidden=1
+let g:ctrlp_custom_ignore =
+  \ {
+  \   'dir': '\v[\/](.git|.cabal-sandbox|.stack-work)$',
+  \   'file': '\v\.(o|hi|beam|dyn_hi|dyn_o)$'
+  \ }
+
+let g:haskell_tabular = 1
+
+vmap a= :Tabularize /=<CR>
+vmap a; :Tabularize /::<CR>
+vmap a- :Tabularize /-><CR>
+vmap am :Tabularize / as<CR>
+vmap a, :Tabularize /,<CR>
 
 " setlocal spell spelllang=en_us
 
@@ -41,8 +56,8 @@ autocmd BufWritePost package.yaml silent !hpack --silent
 " Add these to your vimrc to automatically keep the tags file up to date.
 " Unfortunately silent means the errors look a little ugly, I suppose I could
 " capture those and print them out with echohl WarningMsg.
-au BufWritePost *.hs            silent !codex update --force %
-au BufWritePost *.hsc           silent !codex update --force %
+au BufWritePost *.hs  silent !codex update --force %
+au BufWritePost *.hsc silent !codex update --force %
 
 " ==============================================================================
 " disable haskell indents

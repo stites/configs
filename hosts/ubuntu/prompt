@@ -37,7 +37,12 @@ dynamic_prompt (){
   fi
   # looks like we could just invoke functions in PS1 itself without having to use the
   # PROMPT_COMMAND
-  PS1="$(task +in +PENDING count) ${venv_prompt}${BASE} ${ENDING}"
+  local VENV=""
+  if [ ! -z "$VIRTUAL_ENV" ]; then
+    VENV="(`echo "$VIRTUAL_ENV" | egrep '[a-zA-Z\-]+$' -o`) "
+  fi
+
+  PS1="$(task +in +PENDING count) ${VENV}${BASE} ${ENDING}"
 }
 
 
