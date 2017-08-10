@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+test -x "$(which docker-machine)" && test "$(uname -s)" == "FreeBSD" && eval $(docker-machine env docker1)

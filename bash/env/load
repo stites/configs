@@ -14,8 +14,10 @@ safe_source /usr/local/etc/bash_completion
 # ========================================================= #
 safe_source ~/.bash/colors
 
-for SETTING in git tmux node task nginx vim python ruby ssh prompt hostname; do
-  safe_source ~/.bash/$SETTING
+for SETTING in $(find ~/.bash -depth 1 -type l); do
+  if echo "$SETTING" | grep -Ev "/(colors|load|git-aware-prompt)$" >/dev/null; then
+    safe_source $SETTING
+  fi
 done
 
 # ========================================================= #
