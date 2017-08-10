@@ -2,7 +2,7 @@
 !termName must be screen otherwise vim colorschemes will break in a very subtle way
 URxvt.termName: screen-256color
 URxvt.reverseVideo: True
-URxvt.font: xft:FiraCode:pixelsize=24
+URxvt.font: xft:FiraCode:pixelsize=14
 URxvt.letterSpace: -1
 URxvt.url-launcher: firefox
 ! google-chrome
