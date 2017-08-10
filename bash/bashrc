@@ -99,7 +99,7 @@ alias .....='cd ../../../..'
 # .bashrc functions     #
 # ===================== #
 alias vrc='vim $HOME/.bashrc'
-alias src='source $HOME/.bashrc'
+alias src='exec $SHELL'
 # == ghci to bash == #
 alias ":q"=exit
 alias ":r"=myReload
