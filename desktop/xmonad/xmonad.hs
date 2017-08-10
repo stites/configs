@@ -10,6 +10,8 @@ import XMonad.Actions.Submap
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks (AvoidStruts, ToggleStruts(..), avoidStruts, docksEventHook, manageDocks)
 import XMonad.Hooks.SetWMName
+import XMonad.Layout.BinarySpacePartition
+import qualified XMonad.Layout.BinarySpacePartition as BSP
 import XMonad.Layout.LayoutModifier (ModifiedLayout)
 import XMonad.Layout.Maximize (Maximize, maximize, maximizeRestore)
 import XMonad.Layout.Spacing
@@ -46,23 +48,23 @@ myConfig = desktopConfig
         --, ppOutput  = hPutStrLn xmproc
         , ppSep     = xmobarColor "orange" "" " | "
         , ppTitle   = xmobarColor "lightblue" "" . shorten 120
-        , ppOrder   = \[a,_,b] -> [a,b]    -- Don't log layout name
+        , ppOrder   = \[a,_,b] -> [a, b]    -- Don't log layout name
         }
   , startupHook = startup_hook
   } `removeKeysP` removeKeys'
     `additionalKeysP` additionalKeys'
 
-launcher = "launchy"
+launcher = "dmenu"
 
 type (:+) f g = Choose f g
 infixr 5 :+
 
-layout_hook
-  :: ModifiedLayout AvoidStruts
-       (ModifiedLayout Maximize
-         (ModifiedLayout SmartSpacing (Tall :+ Mirror Tall :+ Full)))
-     Window
-layout_hook = modify (tall ||| Mirror tall ||| Full)
+-- layout_hook
+--   :: ModifiedLayout AvoidStruts
+--        (ModifiedLayout Maximize
+--          (ModifiedLayout SmartSpacing (BSP.BinarySpacePartition :+ Full)))
+--      Window
+layout_hook = modify (emptyBSP ||| Full)
  where
   modify = avoidStruts . maximize . smartSpacing 0
   tall = Tall 1 (3/100) (1/2)
@@ -80,8 +82,8 @@ startup_hook = do
         xrandrToggle :: Int -> String
         xrandrToggle sc =
           case compare sc 1 of
-            GT        -> "xrandr --output HDMI-2 --auto --primary --mode 3440x1440 --left-of eDP-1"
-            otherwise -> "xrandr --output HDMI-2 --off"
+            GT        -> "echo \"foo\" && xrandr"
+            otherwise -> "echo \"bar\" && xrandr"
 
 
 removeKeys' :: [String]
@@ -111,6 +113,7 @@ additionalKeys'
   = windowsAndWorkspace
   <> applications
   <> system
+  <> binaryPartitionLayout
   where
     windowsAndWorkspace =
       [ ("M-S-w",   kill)
@@ -137,6 +140,16 @@ additionalKeys'
       , ("M-b", sendMessage ToggleStruts)
       ]
 
+    binaryPartitionLayout =
+      [ ("M-M1-<Left>",    sendMessage $ ExpandTowards L)
+      , ("M-M1-<Right>",   sendMessage $ ShrinkFrom L)
+      , ("M-M1-<Up>",      sendMessage $ ExpandTowards U)
+      , ("M-M1-<Down>",    sendMessage $ ExpandTowards D)
+      , ("M-s",            sendMessage $ BSP.Swap)
+      , ("M-M1-s",         sendMessage $ Rotate)
+      , ("M-M1-p",         sendMessage $ FocusParent)
+      ]
+
 -- Like promptSearchBrowser, but open it up so I have access to the flags to
 -- pass to the browser. This lets me pass "--new-window" to chrome, so my
 -- searches don't appear in new tabs on some random existing browser window.
@@ -146,6 +159,7 @@ promptSearchBrowser' config browser (SearchEngine name site) =
       (\query -> safeSpawn browser ["--new-window", site query])
 
 data Search' = Search' Name
+
 instance XPrompt Search' where
     showXPrompt (Search' name)= "Search [" ++ name ++ "]: "
     nextCompletion _ = getNextCompletion

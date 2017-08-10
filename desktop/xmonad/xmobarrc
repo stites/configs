@@ -45,7 +45,7 @@ Config { font         = "xft:DejaVu Sans Mono:pixelsize=12"
                     , Run Volume "default" "Master"
                         ["-t", "vol <volumevbar>"]
                         10
-                    , Run Wireless "wlp3s0"
+                    , Run Wireless "wlan0"
                         ["-t", "<fc=white><essid></fc> <qualityvbar>",
                          "-l", "red",
                          "-n", "yellow",
@@ -71,5 +71,6 @@ Config { font         = "xft:DejaVu Sans Mono:pixelsize=12"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %uptime% | %multicpu% | %memory% | %thermal0% %thermal1% | %default:Master% | %wlp3s0wi% %dynnetwork% | %battery% | <fc=orange>%date%</fc>"
+       , template = "%StdinReader% }{ %uptime% | %multicpu% | %memory% | %thermal0% %thermal1% | %default:Master% | %wlan0wi% %dynnetwork% | %battery% | <fc=orange>%date%</fc>"
+       -- , template = "%StdinReader% }{ %uptime% | <fc=orange>%date%</fc>"
        }

@@ -41,7 +41,7 @@
 [github]
   user = stites
 [url "git://github.com/ghc/packages-"]
-	insteadOf = git://github.com/ghc/packages/
+  insteadOf = git://github.com/ghc/packages/
 [credential]
   helper = store --file ~/.config/git/credentials
-  helper = cache --timeout=30000
+  # helper = cache --timeout=30000
