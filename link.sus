@@ -97,6 +97,7 @@ card tools {
     nginx
     ssh
     vim
+    docker
   }
   {
     into ~

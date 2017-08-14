@@ -5,4 +5,5 @@ completionType: MenuCompletion
 completionPaging: True
 completionPromptLimit: Just 200
 listCompletionImmediately: True
-historyDuplicates: IgnoreAll
+historyDuplicates: IgnoreConsecutive
+-- IgnoreConsecutive | IgnoreAll
