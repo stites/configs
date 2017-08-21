@@ -28,6 +28,7 @@ export BG_NULL=00
 # ANSI Escape Commands
 ##
 ESC="\033"
+#ESC="\e"
 export NORMAL="\[$ESC[m\]"
 export RESET="\[$ESC[${DULL};${FG_WHITE};${BG_NULL}m\]"
 

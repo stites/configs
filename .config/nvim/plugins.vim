@@ -68,6 +68,9 @@ Plug 'lervag/vimtex', { 'for': 'latex' }
 
 " Productivity
 " Plug 'wakatime/vim-wakatime'
+"
+" Vim improvements:
+Plug 'kana/vim-textobj-user' | Plug 'reedes/vim-textobj-sentence'
 
 " Python
 " Plug 'nvie/vim-flake8', { 'for': 'python' }

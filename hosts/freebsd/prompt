@@ -5,6 +5,7 @@ BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}/>${GREEN}\W${RESET} "
 BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}||${GREEN}\W${RESET} "
 BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}<>${GREEN}\W${RESET} "
 BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}::${GREEN}\W${RESET} "
+BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${RESET}::${GREEN}\W${RESET} "
 
 
 dynamic_prompt (){
@@ -13,8 +14,11 @@ dynamic_prompt (){
     TASK_COUNT="$(task +in +PENDING count) "
   fi
 
+
+  # \[\e[1;34m\]@\[\e[0;34m\]\h\[\e[m\]::\[\e[0;32m\]\W \[\e[0;37;00m\]
+
   local BASE="${TASK_COUNT}${BRIGHT_BLUE}@${BLUE}\h"
-  local SEP="${NORMAL}::"
+  local SEP=' '
 
   local ENDING=""
   local FIRST_C="${GREEN}"
@@ -26,14 +30,13 @@ dynamic_prompt (){
     ENDING="${FIRST_C}\W"
   fi
 
-  if [ ! -z "${PYENV_VERSION}" ]; then
-    ENVS="$PYENV_VERSION"
-  else
-    ENVS=""
+  local VENV=""
+  if [ ! -z "$VIRTUAL_ENV" ]; then
+    VENV="(`echo "$VIRTUAL_ENV" | egrep '[a-zA-Z\-]+$' -o`) "
   fi
 
   # looks like we could just invoke functions in PS1 itself without having to use the PROMPT_COMMAND
-  PS1="${ENVS}${BASE}${SEP}${ENDING} ${RESET}"
+  PS1="${VENV}${BASE}${NORMAL}${SEP}${ENDING} ${RESET}"
 }
 
 if [[ $PROMPT_COMMAND != *" dynamic_prompt;"* ]]; then
