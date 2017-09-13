@@ -25,34 +25,41 @@ import Data.Monoid ((<>))
 import qualified XMonad.Layout.IndependentScreens as LIS
 import XMonad.Util.EZConfig
 
+import XMonad.Hooks.EwmhDesktops        (ewmh)
+-- import System.Taffybar.Hooks.PagerHints (pagerHints)
 
 main :: IO ()
 main = do
-  -- xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc.hs"
   xmonad =<< xmobar myConfig
+  -- xmonad myConfig
 
-myConfig = desktopConfig
-  { modMask    = mod4Mask  -- Rebind Mod to super
-  , terminal   = "urxvt"
-  , workspaces = ["1", "2", "3"]
-  , borderWidth        = 1
-  , focusFollowsMouse  = False
-  , manageHook         = manageDocks <+> manageHook def <+> (resource =? launcher --> doIgnore)
-  , layoutHook         = layout_hook
-  , handleEventHook    = docksEventHook <+> handleEventHook def
-  , logHook =
-      dynamicLogWithPP xmobarPP
-        { ppCurrent = xmobarColor "black" "gray"
-        , ppHidden  = xmobarColor "orange" ""
-        , ppHiddenNoWindows = id
-        --, ppOutput  = hPutStrLn xmproc
-        , ppSep     = xmobarColor "orange" "" " | "
-        , ppTitle   = xmobarColor "lightblue" "" . shorten 120
-        , ppOrder   = \[a,_,b] -> [a, b]    -- Don't log layout name
-        }
-  , startupHook = startup_hook
-  } `removeKeysP` removeKeys'
-    `additionalKeysP` additionalKeys'
+myConfig =
+  -- gives taffybar logger information
+  -- ewmh $
+  -- pagerHints $
+    desktopConfig
+    { modMask    = mod4Mask  -- Rebind Mod to super
+    , terminal   = "urxvt"
+    , workspaces = ["1", "2", "3", "4", "5", "6"]
+    , borderWidth        = 1
+    , focusFollowsMouse  = False
+    -- manageDocks allows xmonad to handle taffybar
+    , manageHook         = manageDocks <+> manageHook def <+> (resource =? launcher --> doIgnore)
+    , layoutHook         = layout_hook
+    , handleEventHook    = docksEventHook <+> handleEventHook def
+    , logHook =
+        dynamicLogWithPP xmobarPP
+          { ppCurrent = xmobarColor "black" "gray"
+          , ppHidden  = xmobarColor "orange" ""
+          , ppHiddenNoWindows = id
+          --, ppOutput  = hPutStrLn xmproc
+          , ppSep     = xmobarColor "orange" "" " | "
+          , ppTitle   = xmobarColor "lightblue" "" . shorten 120
+          , ppOrder   = \[a,_,b] -> [a, b]    -- Don't log layout name
+          }
+    , startupHook = startup_hook
+    } `removeKeysP` removeKeys'
+      `additionalKeysP` additionalKeys'
 
 launcher = "dmenu"
 
@@ -137,6 +144,7 @@ additionalKeys'
 
     system =
       [ ("M-S-<Delete>", spawn "sudo pm-hibernate")
+      , ("M-S-l", spawn "xlock -mode juggle")
       , ("M-b", sendMessage ToggleStruts)
       ]
 
