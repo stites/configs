@@ -128,6 +128,14 @@ safe_path_add $HOME/.local/bin/
 # stack autocomplete
 eval "$(stack --bash-completion-script stack)"
 
+# stack aliases
+alias sb=' stack build'
+alias sbw='stack build --file-watch'
+alias st=' stack test'
+alias stw='stack test --file-watch'
+alias si=' stack install'
+alias siw='stack install --file-watch'
+
 # ========================================= #
 # write a note                              #
 # ========================================= #
