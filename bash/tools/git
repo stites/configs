@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # add gitcompletion
 # https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 
@@ -28,43 +28,51 @@ alias gb='git branch'
 alias stash="git stash"
 alias pop="git stash pop"
 
+function ssh_checked_git {
+  $(command -v ssh-add) -l | grep ssh/id_rsa &>2 >/dev/null || ssh-add ~/.ssh/id_rsa
+  $(command -v git) $@
+}
+export -f ssh_checked_git
+
 # commit
 alias gc="git commit "
 alias gcm="gc -m "
 alias gim="ga . && gcm"
 
 # push
-alias gp='   git push'
-alias gpo='  git push origin'
-alias gpom=' git push origin   master'
-alias gpod=' git push origin   develop'
-alias gpocb='git push origin   $(cb)'
-alias gpu='  git push upstream'
-alias gpum=' git push upstream master'
-alias gpud=' git push upstream develop'
-alias gpucb='git push upstream $(cb)'
+alias gp='   ssh_checked_git push'
+alias gpo='  gp origin'
+alias gpom=' gp origin   master'
+alias gpod=' gp origin   develop'
+alias gpocb='gp origin   $(cb)'
+alias gpu='  gp upstream'
+alias gpum=' gp upstream master'
+alias gpud=' gp upstream develop'
+alias gpucb='gp upstream $(cb)'
 
 # pull
-alias gpl='   git pull'
-alias gplo='  git pull origin'
-alias gplom=' git pull origin master'
-alias gplod=' git pull origin develop'
-alias gplocb='git pull origin $(cb)'
-alias gplu='  git pull upstream'
-alias gplum=' git pull upstream master'
-alias gplud=' git pull upstream develop'
-alias gplucb='git pull upstream $(cb)'
+alias gpl='   ssh_checked_git pull'
+alias gplo='  gpl origin'
+alias gplom=' gpl origin master'
+alias gplod=' gpl origin develop'
+alias gplocb='gpl origin $(cb)'
+alias gplu='  gpl upstream'
+alias gplum=' gpl upstream master'
+alias gplud=' gpl upstream develop'
+alias gplucb='gpl upstream $(cb)'
 
 # move and remove
 alias gmv="git mv "
 alias grm="git rm "
 
 # update index
-alias guiau=' git update-index --assume-unchanged'
-alias guinau='git update-index --no-assume-unchanged'
+#
+# use git-lock from git-extras
+#alias guiau=' git update-index --assume-unchanged'
+#alias guinau='git update-index --no-assume-unchanged'
 
-alias gcl="git clone "
-alias gfl="git fetch && gl"
+alias gcl="ssh_checked_git clone "
+alias gfl="ssh_checked_git fetch && gl"
 
 alias gpub='go gh-pages && gpog && go master && gm gh-pages && gpom && go gh-pages && gs'
 alias ghUp="gh pr --remote upstream -s"

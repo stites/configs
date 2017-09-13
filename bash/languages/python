@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # ============================================= #
 export PYENV_ROOT="${HOME}/.pyenv"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
@@ -35,3 +35,4 @@ test -e $HOME/git/rllab && export RLLAB=$HOME/git/rllab
 test -e $ANACONDA3_PATH/bin && export PYTHONPATH=$ANACONDA3_PATH/bin:$PYTHONPATH
 test -e $ANACONDA2_PATH/bin && export PYTHONPATH=$ANACONDA2_PATH/bin:$PYTHONPATH
 test -e $HOME/git/rllab     && export PYTHONPATH=$RLLAB:$PYTHONPATH
+
