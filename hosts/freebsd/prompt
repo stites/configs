@@ -26,8 +26,14 @@ dynamic_prompt (){
     ENDING="${FIRST_C}\W"
   fi
 
+  if [ ! -z "${PYENV_VERSION}" ]; then
+    ENVS="$PYENV_VERSION"
+  else
+    ENVS=""
+  fi
+
   # looks like we could just invoke functions in PS1 itself without having to use the PROMPT_COMMAND
-  PS1="${venv_prompt}${BASE}${SEP}${ENDING} ${RESET}"
+  PS1="${ENVS}${BASE}${SEP}${ENDING} ${RESET}"
 }
 
 if [[ $PROMPT_COMMAND != *" dynamic_prompt;"* ]]; then
