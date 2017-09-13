@@ -119,6 +119,9 @@ fi
 # ========================================= #
 [[ ! -f ~/.bash/load  ]] || source ~/.bash/load
 
+[[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
+  source /usr/local/share/bash-completion/bash_completion.sh
+
 # Use Nix
 safe_source $HOME/.nix-profile/etc/profile.d/nix.sh
 
@@ -166,3 +169,6 @@ fi
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+
+# added by travis gem
+[ -f /usr/home/stites/.travis/travis.sh ] && source /usr/home/stites/.travis/travis.sh
