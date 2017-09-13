@@ -12,7 +12,7 @@ Plug 'vim-scripts/gitignore'
 Plug 'SirVer/ultisnips'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nacitar/terminalkeys.vim'
-
+Plug 'xolox/vim-session' | Plug 'xolox/vim-misc'
 
 " Git
 " Plug 'tpope/vim-fugitive'
