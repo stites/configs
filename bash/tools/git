@@ -30,7 +30,7 @@ alias pop="git stash pop"
 
 function ssh_checked_git {
   $(command -v ssh-add) -l | grep ssh/id_rsa &>2 >/dev/null || ssh-add ~/.ssh/id_rsa
-  $(command -v git) $@
+  $(which git) $@
 }
 export -f ssh_checked_git
 
