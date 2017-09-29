@@ -20,12 +20,12 @@
 #NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
 # load nvm if exported variable does not exist
-if [ -n $NVM_DIR ]; then
-    NVM_DIR=$HOME/.nvm
+if [ -n "$NVM_DIR" ]; then
+    NVM_DIR="$HOME/.nvm"
     safe_source "$NVM_DIR/nvm.sh"
 fi
 
 # test ! -d $HOME/.nvm && echo "nvm not detected" && continue;
 # find -P  $HOME/.nvm -type d -maxdepth 3 -name bin | xargs -n 1 bash -c 'safe_path_add "$@"' _
-safe_path_add ${HOME}${NVM_PATH}/current/lib/node_modules/bin
+safe_path_add "${HOME}${NVM_PATH}/current/lib/node_modules/bin"
 safe_path_add "${HOME}/.local/npm/bin/"

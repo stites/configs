@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}|${GREEN}\W${RESET} "
+#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}/>${GREEN}\W${RESET} "
+#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}||${GREEN}\W${RESET} "
+#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}<>${GREEN}\W${RESET} "
+#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}::${GREEN}\W${RESET} "
+
+
+pre_dynamic_prompt (){
+  export LAST_CODE="$?"
+}
+
+dynamic_prompt (){
+  #local TASK_COUNT=""
+  #if hash task 2>/dev/null; then
+  #  TASK_COUNT="$(task +in +PENDING count) "
+  #fi
+
+  local COLOR_AT=""
+  case $LAST_CODE in
+    0) COLOR_AT="$BRIGHT_BLUE" ;;
+    1) COLOR_AT="$BRIGHT_RED" ;;
+    *) COLOR_AT="$YELLOW" ;;
+  esac
+
+  local BASE="${COLOR_AT}@${BLUE}\h"
+  local SEP="${NORMAL}::"
+
+  local ENDING=""
+  local FIRST_C="${GREEN}"
+  local SECOND_C="${YELLOW}"
+
+  if [ ! -z "${git_branch}" ]; then
+    ENDING="${SECOND_C}\W${FIRST_C}#_${git_branch}${RED}${git_dirty}"
+  else
+    ENDING="${FIRST_C}\W"
+  fi
+
+  if [ ! -z "${PYENV_VERSION}" ]; then
+    ENVS="$PYENV_VERSION"
+  else
+    ENVS=""
+  fi
+
+  # looks like we could just invoke functions in PS1 itself without having to use the PROMPT_COMMAND
+  PS1="${ENVS}${BASE}${SEP}${ENDING} ${RESET}"
+}
+if [[ $PROMPT_COMMAND != "pre_dynamic_prompt; "* ]]; then
+  PROMPT_COMMAND="pre_dynamic_prompt; $PROMPT_COMMAND"
+  if [[ $PROMPT_COMMAND != *" dynamic_prompt;"* ]]; then
+    PROMPT_COMMAND="$PROMPT_COMMAND ; dynamic_prompt; "
+  else
+    PS1="[\u@\h:\W]\$ "
+  fi
+else
+  PS1="[\u@\h:\W]\$ "
+fi
+
+

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-#safe_path_add "$HOME/.rvm/bin"
+# Add rbenv to PATH for scripting. Make sure this is the last PATH variable change.
+safe_path_add "$HOME/.rbenv/bin"
 
-command -v rbenv 2>&1 >/dev/null && eval "$(rbenv init -)"
+command -v rbenv >/dev/null && eval "$(rbenv init -)"
 
 
 

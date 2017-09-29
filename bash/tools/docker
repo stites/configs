@@ -7,16 +7,16 @@ if [[ -x "$(which docker-machine)" && "$(uname -s)" == "FreeBSD" ]]; then
       local DOCKER_VM=docker1
       if [[ -z "$DOCKER_MACHINE_NAME" ]]; then
           # docker vm is uninitialized for environment
-          if docker-machine env $DOCKER_VM &>/dev/null; then
+          if docker-machine env "$DOCKER_VM" &>/dev/null; then
               # try initializing environment
-              eval $(docker-machine env $DOCKER_VM)
-              $(which docker) $@
+              eval "$(docker-machine env $DOCKER_VM)"
+              $(which docker) "$@"
           else
               # can't initialize environment - is the docker vm down?
               if docker-machine start $DOCKER_VM; then
                   # docker vm was down
-                  eval $(docker-machine env $DOCKER_VM)
-                  $(which docker) $@
+                  eval "$(docker-machine env $DOCKER_VM)"
+                  $(which docker) "$@"
               else
                   # docker vm is borked
                   echo ""
@@ -25,7 +25,7 @@ if [[ -x "$(which docker-machine)" && "$(uname -s)" == "FreeBSD" ]]; then
 
       else
           # happy path
-          $(which docker) $@
+          $(which docker) "$@"
       fi
   }
 

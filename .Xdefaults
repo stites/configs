@@ -1,59 +1,60 @@
 ! xscreensaver ---------------------------------------------------------------
 
-urxvt.termName: rxvt-256color
-urxvt.reverseVideo: True
-urxvt.font: xft:FiraCode:pixelsize=12
-urxvt.letterSpace: -1
-urxvt.urlLauncher: google-chrome
-urxvt.matcher.button: 1
-urxvt.scrollstyle: plain
-!urxvt.borderColor: #000030
-!urxvt.internalBorder: 1
-urxvt.saveLines: 4055
-urxvt.iso14755: False
+URxvt.termName: rxvt-256color
+URxvt.reverseVideo: True
+URxvt.font: xft:FiraCodeMonoPlus:pixelsize=14
+URxvt.boldFont: xft:FiraCodeMonoPlus:bold:pixelsize=14
+URxvt.letterSpace: -1
+URxvt.urlLauncher: firefox
+URxvt.matcher.button: 1
+URxvt.scrollstyle: plain
+!URxvt.borderColor: #000030
+!URxvt.internalBorder: 1
+URxvt.saveLines: 4055
+URxvt.iso14755: False
 
-urxvt.perl-ext-common: default,matcher
-urxvt.keysym.M-escape: perl:keyboard-select:activate
-urxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.perl-ext-common: default,matcher,font-size
+URxvt.keysym.M-escape: perl:keyboard-select:activate
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 
 
-!urxvt*foreground: #f2f2f2
-!urxvt*background: #101010
+!URxvt*foreground: #f2f2f2
+!URxvt*background: #101010
 
 ! Dark Pastel
-!normalcolor0 black
-urxvt*color0: #3f3f3f
-!normalcolor1 red
-urxvt*color1: #705050
-!normalcolor2 green
-urxvt*color2: #60b48a
-!normalcolor3 yellow
-urxvt*color3: #dfaf8f
-!normalcolor4 blue
-urxvt*color4: #9ab8d7
-!normalcolor5 purple
-urxvt*color5: #dc8cc3
-!normalcolor6 cyan
-urxvt*color6: #8cd0d3
-!normalcolor7 white
-urxvt*color7: #dcdccc
+!Normalcolor0 black
+URxvt*color0: #3f3f3f
+!Normalcolor1 red
+URxvt*color1: #705050
+!Normalcolor2 green
+URxvt*color2: #60b48a
+!Normalcolor3 yellow
+URxvt*color3: #dfaf8f
+!Normalcolor4 blue
+URxvt*color4: #9ab8d7
+!Normalcolor5 purple
+URxvt*color5: #dc8cc3
+!Normalcolor6 cyan
+URxvt*color6: #8cd0d3
+!Normalcolor7 white
+URxvt*color7: #dcdccc
 
-!lightcolor8  black
-urxvt*color8: #709080
-!lightcolor9  red
-urxvt*color9: #dca3a3
-!lightcolor10  green
-urxvt*color10: #72d5a3
-!lightcolor11  yellow
-urxvt*color11: #f0dfaf
-!lightcolor12  blue
-urxvt*color12: #94bff3
-!lightcolor13  purple
-urxvt*color13: #ec93d3
-!lightcolor14  cyan
-urxvt*color14: #93e0e3
-!lightcolor15  white
-urxvt*color15: #ffffff
+!Lightcolor8  black
+URxvt*color8: #709080
+!Lightcolor9  red
+URxvt*color9: #dca3a3
+!Lightcolor10  green
+URxvt*color10: #72d5a3
+!Lightcolor11  yellow
+URxvt*color11: #f0dfaf
+!Lightcolor12  blue
+URxvt*color12: #94bff3
+!Lightcolor13  purple
+URxvt*color13: #ec93d3
+!Lightcolor14  cyan
+URxvt*color14: #93e0e3
+!Lightcolor15  white
+URxvt*color15: #ffffff
 
 
 !font settings

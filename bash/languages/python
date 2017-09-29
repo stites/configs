@@ -12,27 +12,26 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1  # supress annoying warning for a featu
 
 # run pyenv stuff only if it's there:
 if [ -d "${PYENV_ROOT}" ]; then
-    safe_path_add $PYENV_ROOT/bin
-#    safe_path_add $PYENV_ROOT/shims
+    safe_path_add "$PYENV_ROOT/bin"
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
 
 # run virtualenvwrapper from nix
-if [ -n "`which virtualenvwrapper.sh`" ]; then
-  export WORKON_HOME=$HOME/.virtualenvs
-  source virtualenvwrapper.sh
-fi
+#if [ -n "`which virtualenvwrapper.sh`" ]; then
+#  export WORKON_HOME=$HOME/.virtualenvs
+#  source virtualenvwrapper.sh
+#fi
 
-ANACONDA2_PATH=$HOME/.anaconda2
-ANACONDA3_PATH=$HOME/.anaconda3
+#ANACONDA2_PATH=$HOME/.anaconda2
+#ANACONDA3_PATH=$HOME/.anaconda3
 # add anaconda for python 2, only if it is there
-test -e $ANACONDA3_PATH/bin && safe_path_add $ANACONDA3_PATH/bin
-test -e $ANACONDA2_PATH/bin && safe_path_add $ANACONDA2_PATH/bin
-test -e $HOME/git/rllab && export RLLAB=$HOME/git/rllab
+#test -e $ANACONDA3_PATH/bin && safe_path_add $ANACONDA3_PATH/bin
+#test -e $ANACONDA2_PATH/bin && safe_path_add $ANACONDA2_PATH/bin
+#test -e $HOME/git/rllab && export RLLAB=$HOME/git/rllab
 
 # add to python path, if available
-test -e $ANACONDA3_PATH/bin && export PYTHONPATH=$ANACONDA3_PATH/bin:$PYTHONPATH
-test -e $ANACONDA2_PATH/bin && export PYTHONPATH=$ANACONDA2_PATH/bin:$PYTHONPATH
-test -e $HOME/git/rllab     && export PYTHONPATH=$RLLAB:$PYTHONPATH
+#test -e $ANACONDA3_PATH/bin && export PYTHONPATH=$ANACONDA3_PATH/bin:$PYTHONPATH
+#test -e $ANACONDA2_PATH/bin && export PYTHONPATH=$ANACONDA2_PATH/bin:$PYTHONPATH
+#test -e $HOME/git/rllab     && export PYTHONPATH=$RLLAB:$PYTHONPATH
 

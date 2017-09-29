@@ -3,7 +3,6 @@
 #set -euo pipefail
 #IFS=$'\n\t'
 # ^^^ unofficial bash mode: https://perma.cc/UQ45-72E5
-
 export EDITOR='nvim'
 # export PAGER=most
 export LC_ALL=en_US.UTF-8
@@ -13,6 +12,7 @@ set +o vi
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+source ~/.fonts/*.sh
 # ========================================================= #
 # history and autofill                                      #
 # ========================================================= #
@@ -67,17 +67,19 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+[[ "$PS1" && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
+  source /usr/local/share/bash-completion/bash_completion.sh
 
 # ========================================================= #
 # ls config                                                 #
 # ========================================================= #
 # some ls aliases
 alias tree='tree -C'
-alias ls='ls -G'
-alias ll='ls -Fhil'
-alias lll='ls -Failh'
-alias la='ls -A'
-alias l='ls -CF'
+alias ls=' $(which ls) --color -C -G -X --group-directories-first'
+alias la=' $(which ls) --color -C -A'
+alias l='  $(which ls) --color -C -F -X --group-directories-first'
+alias ll=' $(which ls) --color -C -F -X --group-directories-first --si -i -hl'
+alias lll='$(which ls) --color -C -F -X --group-directories-first --si -i -hl -a'
 
 # Relative Jumps:
 alias ~='cd ~ '
@@ -108,9 +110,9 @@ alias ":r"=myReload
 # Add git-aware prompt  #
 #=======================#
 # -- primarily cause I'm super lazy: https://github.com/jimeh/git-aware-prompt
-export GITAWAREPROMPT=$HOME/.bash/git-aware-prompt
+export GITAWAREPROMPT="$HOME/.bash/git-aware-prompt"
 
-if [ -e $GITAWAREPROMPT ]; then
+if [ -e "$GITAWAREPROMPT" ]; then
   source "${GITAWAREPROMPT}/main.sh"
 fi
 
@@ -119,14 +121,11 @@ fi
 # ========================================= #
 [[ ! -f ~/.bash/load  ]] || source ~/.bash/load
 
-[[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
-  source /usr/local/share/bash-completion/bash_completion.sh
-
 # Use Nix
-safe_source $HOME/.nix-profile/etc/profile.d/nix.sh
+safe_source "$HOME/.nix-profile/etc/profile.d/nix.sh"
 
 # add stack installs to path
-safe_path_add $HOME/.local/bin/
+safe_path_add "$HOME/.local/bin/"
 
 # stack autocomplete
 eval "$(stack --bash-completion-script stack)"
@@ -143,14 +142,14 @@ alias siw='stack install --file-watch'
 # write a note                              #
 # ========================================= #
 function stacknew {
-  stack new $1 --bare ~/git/stack-templates/skeleton
+  stack new "$1" --bare ~/git/stack-templates/skeleton
 }
 
 # alias ag='ag --path-to-agignore ~/.agignore'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
+    test -r "$HOME/.dircolors" && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
@@ -171,4 +170,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 
 # added by travis gem
-[ -f /usr/home/stites/.travis/travis.sh ] && source /usr/home/stites/.travis/travis.sh
+[ -f /home/stites/.travis/travis.sh ] && source /home/stites/.travis/travis.sh

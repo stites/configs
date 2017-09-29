@@ -31,7 +31,7 @@ split_v
 run_cmd "vim Setup.hs +Ghcid" 1
 # run_cmd "make ghcid && echo \"ghcid ran from make\" || ghcid --height=8 --command=\"stack ghci --test\"" 2
 run_cmd "git status"     2
-run_cmd "stack ghci"     3
+run_cmd "stack ghci --test"     3
 run_cmd "sos -p 'app/.*\.hs' -p 'src/.*\.hs' -c 'hlint \0'" 4
 run_cmd "sos -p '.*\.hs' -c 'codex update --force'"         5
 

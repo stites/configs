@@ -1,3 +1,6 @@
 [submodule "bash/env/git-aware-prompt"]
 	path = bash/env/git-aware-prompt
 	url = git@github.com:stites/git-aware-prompt.git
+[submodule "tools/urxvt/urxvt-scripts"]
+	path = tools/urxvt/urxvt-scripts
+	url = git@github.com:pkkolos/urxvt-scripts.git
