@@ -7,10 +7,10 @@
 # Function safe_path_add
 # @description add path to $PATH variable, if it is not already there.
 function safe_path_add {
-  PATH_FOUND=$(echo $PATH | grep -o -E "(^|:)$1" | head -1)
+  PATH_FOUND=$(echo "$PATH" | grep -o -E "(^|:)$1" | head -1)
 
-  if [ -z $PATH_FOUND ] && [ -d $1 ]; then
-    export PATH=$1:$PATH
+  if [ -z "$PATH_FOUND" ] && [ -d "$1" ]; then
+    export PATH="$1:$PATH"
   # else
   #    test -z $PATH_FOUND && echo "$1 not a directory" || echo "$1 in PATH"
   fi
@@ -26,7 +26,9 @@ function safe_prompt_add {
 
 # Function safe_source
 function safe_source {
-  [[ ! -f $1 ]] || source $1
+  # File may not exist, so don't follow for shellcheck linting (SC1090).
+  # shellcheck source=/dev/null
+  [[ ! -f "$1" ]] || source "$1"
 }
 
 # Function append_history
@@ -38,8 +40,8 @@ function append_history {
 # Function append_history
 # @description log all commands to a logfile. To be used in $PROMPT_COMMAND
 function log_all_commands {
-   if [ $(id -u) -ne 0 ]; then
-     echo "$(date '+%Y-%m-%d.%H:%M:%S') $(pwd) $(history 1)" >> ~/.bash/log/bash-history-$(date '+%Y-%m-%d').log
+   if [ "$(id -u)" -ne 0 ]; then
+     echo "$(date '+%Y-%m-%d.%H:%M:%S') $(pwd) $(history 1)" >> ~/.bash/log/bash-history-"$(date '+%Y-%m-%d')".log
    fi
 }
 
@@ -47,7 +49,7 @@ function log_all_commands {
 # @description source bashrc if in shell, rebuild stack if in stack project
 function myReload {
   # if [ -z "`ls | grep 'stack.yaml'`" ]; then
-    exec $SHELL
+    exec "$SHELL"
   #else
   #  stack build
   #fi
@@ -62,14 +64,15 @@ function virtualenvPrompt {
   if test -z "$VIRTUAL_ENV" ; then
     venv_prompt=""
   else
-    venv_prompt="${BLUE}[`basename \"$VIRTUAL_ENV\"`]${RESET} "
+    venv_prompt="${BLUE}[$(basename \""$VIRTUAL_ENV"\")]${RESET} "
   fi
+  export venv_prompt
 }
 
 # Function dotFolder
 # @description touch personal dot folder if it does not exist
 function dotFolder {
-  if [ ! -d $HOME/.stites/ ]; then
+  if [ ! -d "$HOME/.stites/" ]; then
     mkdir ~/.stites
   fi
 }
@@ -95,11 +98,16 @@ function stackintero {
 }
 
 function retry {
-  for i in 1 2 3 4 5; do "$@" && break || sleep 15; done
+  for _ in 1 2 3 4 5; do
+    "$@" && break
+    if $?; then
+      sleep 15
+    fi
+  done
 }
 
 function note {
-  vim ~/.stites/$1
+  vim "$HOME/.stites/$1"
 }
 
 # ========================= #

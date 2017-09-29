@@ -8,15 +8,19 @@ function start_agent {
     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
     echo succeeded
     chmod 600 "${SSH_ENV}"
+    # File may not exist, so don't follow for shellcheck linting (SC1090).
+    # shellcheck source=/dev/null
     . "${SSH_ENV}" > /dev/null
     #/usr/bin/ssh-add;
 }
 
 # Source SSH settings, if applicable
 if [ -f "${SSH_ENV}" ]; then
+    # File may not exist, so don't follow for shellcheck linting (SC1090).
+    # shellcheck source=/dev/null
     . "${SSH_ENV}" > /dev/null
     #ps ${SSH_AGENT_PID} doesn't work under cywgin
-    ps aux | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+    pgrep "${SSH_AGENT_PID}" | grep ssh-agent$ > /dev/null || {
         start_agent;
     }
 else
@@ -25,7 +29,7 @@ fi
 
 # Fix SSH auth socket location so agent forwarding works with tmux
 if test "$SSH_AUTH_SOCK" ; then
-  ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
 fi
 
 # fun stuff:

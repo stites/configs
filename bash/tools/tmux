@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # ===================== #
 # tmux functionality    #
@@ -6,36 +6,39 @@
 alias tmux='tmux -2'
 
 function trc {
-  if which tmux 2>&1 >/dev/null; then
+  if command -v tmux >/dev/null 2>&1; then
     # if no session is started, start a new session
-    test -z ${TMUX} && tmux new -s default
+    test -z "${TMUX}" && tmux new -s default
     # when quitting tmux, try to attach
-    while test -z ${TMUX}; do
+    while test -z "${TMUX}"; do
       tmux attach || break
     done
   fi
 }
 
 function rsc() {
-  CLIENTID=$1.`date +%S`
-  tmux new-session -d -t $1 -s $CLIENTID \; set-option destroy-unattached \; attach-session -t $CLIENTID
+  CLIENTID=$1.$(date +%S)
+  tmux new-session -d -t "$1" -s "$CLIENTID" \; set-option destroy-unattached \; attach-session -t "$CLIENTID"
 }
 
 function mksc() {
-  tmux new-session -d -s $1
-  rsc $1
+  tmux new-session -d -s "$1"
+  rsc "$1"
 }
 
 # init tmux on startup
 # trc
 
 function tmux-switch {
-  TMUX= tmux new-session -d -s $1
-  tmux switch-client -t $1
+  TMUX=tmux new-session -d -s "$1"
+  tmux switch-client -t "$1"
 }
 # ==================== #
 #     tmuxinator       #
 # ==================== #
+
+# File may not exist, so don't follow for shellcheck linting (SC1090).
+# shellcheck source=/dev/null
 [[ ! -f ~/.bin/tmuxinator.bash ]] || source ~/.bin/tmuxinator.bash
 
 [[ ! -f ~/.tmuxifier ]] || git clone https://github.com/jimeh/tmuxifier.git --depth 1 ~/.tmuxifier
@@ -43,4 +46,5 @@ safe_path_add ~/.tmuxifier/bin
 eval "$(tmuxifier init -)"
 
 alias hside="tmuxifier load-window hs"
+alias yiide="tmuxifier load-window yi"
 

@@ -2,8 +2,11 @@
 # add gitcompletion
 # https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 
-if [ -f ~/.local/git/git-completion.bash ]; then
-  . ~/.local/git/git-completion.bash
+GIT_COMPLETION="$HOME/.local/git/git-completion.bash"
+if [ -f "$GIT_COMPLETION" ]; then
+  # File may not exist, so don't follow for shellcheck linting (SC1090).
+  # shellcheck source=/dev/null
+  source "$GIT_COMPLETION"
 fi
 
 # ========================================================= #
@@ -20,7 +23,6 @@ alias gr='git reset'
 alias gm="git merge "
 alias ga="git add "
 alias ga\.="git add . "
-alias gim="ga . && gcm"
 alias gd="git diff"
 alias gb='git branch'
 
@@ -29,14 +31,15 @@ alias stash="git stash"
 alias pop="git stash pop"
 
 function ssh_checked_git {
-  $(command -v ssh-add) -l | grep ssh/id_rsa &>2 >/dev/null || ssh-add ~/.ssh/id_rsa
-  $(which git) $@
+  $(command -v ssh-add) -l | grep ssh/id_rsa &>/dev/null || ssh-add ~/.ssh/id_rsa
+  $(which git) "$@"
 }
 export -f ssh_checked_git
 
 # commit
 alias gc="git commit "
 alias gcm="gc -m "
+alias gcma="gc --amend -m "
 alias gim="ga . && gcm"
 
 # push
@@ -78,14 +81,14 @@ alias gpub='go gh-pages && gpog && go master && gm gh-pages && gpom && go gh-pag
 alias ghUp="gh pr --remote upstream -s"
 
 # ====================================== #
-# git helpers: hub, flow, twig           #
+# git helpers: hub           #
 # ====================================== #
-TWIG_COMPLETION=~/.twig/twig-completion.bash
-FLOW_COMPLETION=/usr/local/etc/bash_completion.d/git-flow-completion.bash
-
-for GIT_HELPER in $TWIG_COMPLETION $FLOW_COMPLETION; do
-  [[ -s $GIT_HELPER ]] && source $GIT_HELPER
-done
+#TWIG_COMPLETION=~/.twig/twig-completion.bash
+#FLOW_COMPLETION=/usr/local/etc/bash_completion.d/git-flow-completion.bash
+#
+#for GIT_HELPER in $TWIG_COMPLETION $FLOW_COMPLETION; do
+#  [[ -s $GIT_HELPER ]] && source $GIT_HELPER
+#done
 
 alias git=hub
 
@@ -94,20 +97,20 @@ alias gpr='  hub pull-request'
 alias gprud='hub pull-request -b `remote-name upstream`\/`repo-name upstream`:develop -h `remote-name origin`\/`repo-name origin`:`cb`'
 
 function ignore {
-  echo $1 >> .gitignore
+  echo "$1" >> .gitignore
 }
 
 function cb {
   git status | grep "On branch " | cut -c 11-
 }
 function remote-full {
-  git remote -v | grep $1 | head -n 1 | cut -d ':' -f 2 | cut -d '.' -f 1
+  git remote -v | grep "$1" | head -n 1 | cut -d ':' -f 2 | cut -d '.' -f 1
 }
 function remote-name {
-  remote-full $1 | cut -d '/' -f 1
+  remote-full "$1" | cut -d '/' -f 1
 }
 function repo-name {
-  remote-full $1 | cut -d '/' -f 2
+  remote-full "$1" | cut -d '/' -f 2
 }
 
 # function gitmv {

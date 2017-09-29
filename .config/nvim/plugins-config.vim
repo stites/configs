@@ -90,6 +90,7 @@ let g:neomake_haskell_enabled_makers = ['hlint']
 " vim-session
 " https://peterodding.com/code/vim/session/
 " https://perma.cc/E487-SS2S
+let g:session_autoload = 'no'
 let g:session_autosave_periodic = 30   " minutes
 let g:session_directory = "/home/stites/.vim/session/"
 let g:session_lock_directory = "/home/stites/.vim/session-locks/"

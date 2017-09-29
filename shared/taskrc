@@ -25,7 +25,7 @@ data.location=~/.task
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/dark-gray-256.theme
 #include ~/.nix-profile/share/doc/task/rc/dark-violets-256.theme
-include /usr/local/share/taskwarrior/rc/dark-violets-256.theme
+#include /usr/local/share/taskwarrior/rc/dark-violets-256.theme
 
 taskd.certificate=~/.task/freecinc_2c468f38.cert.pem
 taskd.key=~/.task/freecinc_2c468f38.key.pem

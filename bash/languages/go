@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 export GOPATH=$HOME/.go
-safe_path_add $GOPATH
-safe_path_add $GOPATH/bin
+safe_path_add "$GOPATH"
+safe_path_add "$GOPATH/bin"
 

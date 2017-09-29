@@ -3,7 +3,8 @@ call plug#begin('~/.config/nvim/bundle')
 
 " Support bundles
 Plug 'jgdavey/tslime.vim'
-Plug 'Shougo/vimproc.vim', { 'do': 'gmake' }
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+
 " Plug 'ervandew/supertab'
 Plug 'benekastah/neomake'
 Plug 'moll/vim-bbye'
@@ -37,6 +38,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'                " http://vimawesome.com/plugin/surround-vim
+Plug 'vim-syntastic/syntastic'
 
 " Allow pane movement to jump out of vim into tmux
 Plug 'christoomey/vim-tmux-navigator'

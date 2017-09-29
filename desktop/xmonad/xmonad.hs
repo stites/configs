@@ -30,38 +30,37 @@ import XMonad.Hooks.EwmhDesktops        (ewmh)
 
 main :: IO ()
 main = do
-  xmonad =<< xmobar myConfig
-  -- xmonad myConfig
-
-myConfig =
-  -- gives taffybar logger information
-  -- ewmh $
-  -- pagerHints $
+  -- xmproc <- spawnPipe "xmobar -d ~/git/configs/desktop/xmonad/xmobar.hs"
+  -- xmonad =<< xmobar myConfig
+  xmonad $
+    -- gives taffybar logger information
+    -- ewmh $
+    -- pagerHints $
     desktopConfig
-    { modMask    = mod4Mask  -- Rebind Mod to super
-    , terminal   = "urxvt"
-    , workspaces = ["1", "2", "3", "4", "5", "6"]
-    , borderWidth        = 1
-    , focusFollowsMouse  = False
-    -- manageDocks allows xmonad to handle taffybar
-    , manageHook         = manageDocks <+> manageHook def <+> (resource =? launcher --> doIgnore)
-    , layoutHook         = layout_hook
-    , handleEventHook    = docksEventHook <+> handleEventHook def
-    , logHook =
-        dynamicLogWithPP xmobarPP
-          { ppCurrent = xmobarColor "black" "gray"
-          , ppHidden  = xmobarColor "orange" ""
-          , ppHiddenNoWindows = id
-          --, ppOutput  = hPutStrLn xmproc
-          , ppSep     = xmobarColor "orange" "" " | "
-          , ppTitle   = xmobarColor "lightblue" "" . shorten 120
-          , ppOrder   = \[a,_,b] -> [a, b]    -- Don't log layout name
-          }
-    , startupHook = startup_hook
-    } `removeKeysP` removeKeys'
-      `additionalKeysP` additionalKeys'
+      { modMask    = mod4Mask  -- Rebind Mod to super
+      , terminal   = "urxvt"
+      , workspaces = ["1", "2", "3", "4", "5", "6"]
+      , borderWidth        = 1
+      , focusFollowsMouse  = False
+      -- manageDocks allows xmonad to handle taffybar
+      , manageHook         = manageDocks <+> manageHook def <+> (resource =? launcher --> doIgnore)
+      , layoutHook         = layout_hook
+      , handleEventHook    = docksEventHook <+> handleEventHook def
+      , logHook =
+          dynamicLogWithPP xmobarPP
+            { ppCurrent = xmobarColor "black" "gray"
+            -- , ppHidden  = xmobarColor "orange" ""
+            -- , ppHiddenNoWindows = id
+            -- , ppOutput  = hPutStrLn xmproc
+            -- , ppSep     = xmobarColor "orange" "" " | "
+            , ppTitle   = xmobarColor "lightblue" "" . shorten 120
+            -- , ppOrder   = \[a,_,b] -> [a, b]    -- Don't log layout name
+            }
+      , startupHook = startup_hook
+      } `removeKeysP` removeKeys'
+        `additionalKeysP` additionalKeys'
 
-launcher = "dmenu"
+launcher = "albert"
 
 type (:+) f g = Choose f g
 infixr 5 :+
@@ -143,8 +142,14 @@ additionalKeys'
       ]
 
     system =
-      [ ("M-S-<Delete>", spawn "sudo pm-hibernate")
+      [ ("M-S-<Delete>", spawn "pm-hibernate")
       , ("M-S-l", spawn "xlock -mode juggle")
+      , ("C-S-<F3>", spawn "amixer -q sset Master toggle")
+      , ("C-S-<F5>", spawn "amixer -q sset Master 3%-")
+      , ("C-S-<F6>", spawn "amixer -q sset Master 3%+")
+      , ("C-S-<F8>", spawn "xbacklight -dec 10")
+      , ("C-S-<F9>", spawn "xbacklight -inc 10")
+      , ("C-S-<F12>", spawn "xscreensaver-command -lock")
       , ("M-b", sendMessage ToggleStruts)
       ]
 

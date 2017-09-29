@@ -17,7 +17,6 @@
 " let hvn_user_plugins = expand(resolve(hvn_config_dir . "/plugins.vim"))
 " " }}}
 
-
 " highlight whitespace
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
@@ -27,6 +26,7 @@
 " endif
 " }}}
 
+set encoding=utf-8
 source $HOME/.config/nvim/defaults.vim
 source $HOME/.config/nvim/haskell.vim
 source $HOME/.config/nvim/elm.vim
