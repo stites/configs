@@ -20,7 +20,14 @@ safe_source ~/.bash/colors
 #          |  `--------.                       |        `-.        `-------.__                finally, execute safe_source
 #          |            `--.                   |           `-.                `--.                            |          .-,--- but make sure to inject the file correctly
 #          v               |                   |             |                   |                            |         /  |
-find ~/.bash -type l \( -iname "*" ! -iname "colors" ! -iname "prompt" ! -iname "load" \) -exec bash -c 'safe_source "$0"' {} \;
+#find ~/.bash -type l \( -iname "*" ! -iname "colors" ! -iname "prompt" ! -iname "load" \) -exec bash -c 'safe_source "$0"' {} \;
+# FIXME: this doesn't alter the current shell
+
+# vvvv    we want to ignore SC2044 because we need to execute safe_source in the current shell (ie: i can't get the above line to work)
+# shellcheck disable=SC2044
+for SETTING in $(find ~/.bash -type l \( -iname "*" ! -iname "colors" ! -iname "prompt" ! -iname "load" \)); do
+  safe_source "$SETTING"
+done
 
 safe_source ~/.bash/prompt # must be last
 
