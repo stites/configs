@@ -8,6 +8,3 @@ save-prefix=
 parseable=true
 loglevel=warn
 foo:port=80
-prefix=~/.local/npm
-
-

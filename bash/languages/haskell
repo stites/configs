@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# add stack installs to path
+safe_path_add "$HOME/.local/bin/"
+
+# stack autocomplete
+eval "$(stack --bash-completion-script stack)"
+
+# stack aliases
+alias sb=' stack build'
+alias sbw='stack build --file-watch'
+alias st=' stack test'
+alias stw='stack test --file-watch'
+alias si=' stack install'
+alias siw='stack install --file-watch'
+
+# load a new stack project from a hard-coded template repo
+function stacknew {
+  stack new "$1" --bare ~/git/stack-templates/skeleton
+}
+
+export -f stacknew

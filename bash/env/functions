@@ -24,6 +24,23 @@ function safe_prompt_add {
   fi
 }
 
+function find_git_branch {
+  # Based on: http://stackoverflow.com/a/13003854/170413
+  local branch
+  if branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null); then
+    if [[ "$branch" == "HEAD" ]]; then
+      branch='detached*'
+    fi
+    echo "${branch//[^a-z0-9\/]/-}"
+  fi
+}
+
+function find_git_dirty {
+  if [[ "$(git status --porcelain 2> /dev/null)" != "" ]]; then
+    echo '*'
+  fi
+}
+
 # Function safe_source
 function safe_source {
   # File may not exist, so don't follow for shellcheck linting (SC1090).

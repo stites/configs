@@ -88,20 +88,35 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    if test -r "$HOME/.dircolors"; then
+      eval "$(dircolors -b "$HOME/.dircolors")"
+    else
+      eval "$(dircolors -b)"
+    fi
+
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+    alias vgrep='vgrep -v'
+fi
+
 # ========================================================= #
 # initialization scripts which are auto-generated           #
 # ========================================================= #
 # disabling for speed - you might have to run these on startx
-# alias start_irssi='bitlebee -F -u stites && irssi'
-# alias r='grunt'
-
-#export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$HOME/.nvm/v0.10.32/lib/node_modules
 
 # ===================== #
 # .bashrc functions     #
 # ===================== #
 alias vrc='vim $HOME/.bashrc'
 alias src='exec $SHELL'
+
 # == ghci to bash == #
 alias ":q"=exit
 alias ":r"=myReload
@@ -121,45 +136,7 @@ fi
 # ========================================= #
 [[ ! -f ~/.bash/load  ]] || source ~/.bash/load
 
-# Use Nix
-safe_source "$HOME/.nix-profile/etc/profile.d/nix.sh"
-
-# add stack installs to path
-safe_path_add "$HOME/.local/bin/"
-
-# stack autocomplete
-eval "$(stack --bash-completion-script stack)"
-
-# stack aliases
-alias sb=' stack build'
-alias sbw='stack build --file-watch'
-alias st=' stack test'
-alias stw='stack test --file-watch'
-alias si=' stack install'
-alias siw='stack install --file-watch'
-
-# ========================================= #
-# write a note                              #
-# ========================================= #
-function stacknew {
-  stack new "$1" --bare ~/git/stack-templates/skeleton
-}
-
 # alias ag='ag --path-to-agignore ~/.agignore'
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r "$HOME/.dircolors" && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-    alias vgrep='vgrep -v'
-fi
-
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
