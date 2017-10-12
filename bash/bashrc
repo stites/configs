@@ -12,7 +12,6 @@ set +o vi
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-source ~/.fonts/*.sh
 # ========================================================= #
 # history and autofill                                      #
 # ========================================================= #
@@ -30,13 +29,13 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-color|*-256color) export color_prompt=yes;;
     xterm)
       export TERM="xterm-256color"
-      color_prompt=yes;;
+      export color_prompt=yes;;
     screen)
       export TERM="screen-256color"
-      color_prompt=yes;;
+      export color_prompt=yes;;
 esac
 
 # don't put duplicate lines in the history. See bash(1) for more options
@@ -67,8 +66,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-[[ "$PS1" && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
-  source /usr/local/share/bash-completion/bash_completion.sh
+[[ "$PS1" && -f /usr/local/share/bash-completion/bash_completion.sh ]] && source /usr/local/share/bash-completion/bash_completion.sh
 
 # ========================================================= #
 # ls config                                                 #
@@ -121,20 +119,13 @@ alias src='exec $SHELL'
 alias ":q"=exit
 alias ":r"=myReload
 
-#=======================#
-# Add git-aware prompt  #
-#=======================#
-# -- primarily cause I'm super lazy: https://github.com/jimeh/git-aware-prompt
-export GITAWAREPROMPT="$HOME/.bash/git-aware-prompt"
-
-if [ -e "$GITAWAREPROMPT" ]; then
-  source "${GITAWAREPROMPT}/main.sh"
-fi
-
 # ========================================= #
 # TODO: load init configs in plist somehow  #
 # ========================================= #
-[[ ! -f ~/.bash/load  ]] || source ~/.bash/load
+# shellcheck source=$HOME/.bash/load
+[[ ! -f ~/.bash/load  ]] || source "$HOME/.bash/load"
+
+safe_source "$HOME/.fonts/*.sh"
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
@@ -144,6 +135,5 @@ fi
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-
-# added by travis gem
-[ -f /home/stites/.travis/travis.sh ] && source /home/stites/.travis/travis.sh
+# needed by travis gem
+safe_source "$HOME/.travis/travis.sh"

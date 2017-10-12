@@ -15,11 +15,12 @@ eval "$(fasd --init auto)"
 # ========================================================= #
 safe_source ~/.bash/colors
 
-for SETTING in $(find ~/.bash -type l); do
-  if echo "$SETTING" | grep -Ev "/(colors|load|git-aware-prompt|prompt)$" >/dev/null; then
-    safe_source "$SETTING"
-  fi
-done
+# match on all symlinks in ~/.bash
+#          | \          remove anything with colors, prompt or load in the file name
+#          |  `--------.                       |        `-.        `-------.__                finally, execute safe_source
+#          |            `--.                   |           `-.                `--.                            |          .-,--- but make sure to inject the file correctly
+#          v               |                   |             |                   |                            |         /  |
+find ~/.bash -type l \( -iname "*" ! -iname "colors" ! -iname "prompt" ! -iname "load" \) -exec bash -c 'safe_source "$0"' {} \;
 
 safe_source ~/.bash/prompt # must be last
 
