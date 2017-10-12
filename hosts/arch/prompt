@@ -17,22 +17,24 @@ dynamic_prompt (){
   #  TASK_COUNT="$(task +in +PENDING count) "
   #fi
 
-  local COLOR_AT=""
+  COLOR_AT=""
   case $LAST_CODE in
     0) COLOR_AT="$BRIGHT_BLUE" ;;
     1) COLOR_AT="$BRIGHT_RED" ;;
     *) COLOR_AT="$YELLOW" ;;
   esac
 
-  local BASE="${COLOR_AT}@${BLUE}\h"
-  local SEP="${NORMAL}::"
+  BASE="${COLOR_AT}@${BLUE}\h"
+  SEP="${NORMAL}::"
 
-  local ENDING=""
-  local FIRST_C="${GREEN}"
-  local SECOND_C="${YELLOW}"
+  ENDING=""
+  FIRST_C="${GREEN}"
+  SECOND_C="${YELLOW}"
 
-  if [ ! -z "${git_branch}" ]; then
-    ENDING="${SECOND_C}\W${FIRST_C}#_${git_branch}${RED}${git_dirty}"
+  GBRANCH="$(find_git_branch)"
+
+  if [ ! -z "${GBRANCH}" ]; then
+    ENDING="${SECOND_C}\W${FIRST_C}#_(${GBRANCH})${RED}$(find_git_dirty)"
   else
     ENDING="${FIRST_C}\W"
   fi
@@ -46,10 +48,16 @@ dynamic_prompt (){
   # looks like we could just invoke functions in PS1 itself without having to use the PROMPT_COMMAND
   PS1="${ENVS}${BASE}${SEP}${ENDING} ${RESET}"
 }
+
 if [[ $PROMPT_COMMAND != "pre_dynamic_prompt; "* ]]; then
   PROMPT_COMMAND="pre_dynamic_prompt; $PROMPT_COMMAND"
-  if [[ $PROMPT_COMMAND != *" dynamic_prompt;"* ]]; then
-    PROMPT_COMMAND="$PROMPT_COMMAND ; dynamic_prompt; "
+
+  if [[ $PROMPT_COMMAND != *"dynamic_prompt; " ]]; then
+    if [[ $PROMPT_COMMAND != *"; " ]]; then
+      PROMPT_COMMAND="$PROMPT_COMMAND; dynamic_prompt; "
+    else
+      PROMPT_COMMAND="$PROMPT_COMMAND dynamic_prompt; "
+    fi
   else
     PS1="[\u@\h:\W]\$ "
   fi
