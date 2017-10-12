@@ -19,7 +19,7 @@ if [ -f "${SSH_ENV}" ]; then
     # File may not exist, so don't follow for shellcheck linting (SC1090).
     # shellcheck source=/dev/null
     . "${SSH_ENV}" > /dev/null
-    #ps ${SSH_AGENT_PID} doesn't work under cywgin
+
     pgrep ssh-agent$ > /dev/null || {
         start_agent;
     }
