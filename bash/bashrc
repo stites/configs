@@ -60,24 +60,41 @@ export INPUTRC=$HOME/.inputrc
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
+  if [ -f /usr/local/share/bash-completion/bash_completion.sh ]; then
+    # shellcheck source=/dev/null
+    source /usr/local/share/bash-completion/bash_completion.sh
+
+  elif [ -f /usr/share/bash-completion/bash_completion ]; then
+    # shellcheck source=/dev/null
+    source /usr/share/bash-completion/bash_completion
+
   elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+    # shellcheck source=/dev/null
+    source /etc/bash_completion
   fi
 fi
-[[ "$PS1" && -f /usr/local/share/bash-completion/bash_completion.sh ]] && source /usr/local/share/bash-completion/bash_completion.sh
 
 # ========================================================= #
 # ls config                                                 #
 # ========================================================= #
 # some ls aliases
 alias tree='tree -C'
-alias ls=' $(command -v ls) --color -C -G -X --group-directories-first'
-alias la=' $(command -v ls) --color -C -A'
-alias l='  $(command -v ls) --color -C -F -X --group-directories-first'
-alias ll=' $(command -v ls) --color -C -F -X --group-directories-first --si -i -hl'
-alias lll='$(command -v ls) --color -C -F -X --group-directories-first --si -i -hl -a'
+
+if $(command -v ls) --color 2&>1 > /dev/null; then
+  # we are in bsd
+  alias ls=' $(command -v ls) --color -C -G -X --group-directories-first'
+  alias la=' $(command -v ls) --color -C -A'
+  alias l='  $(command -v ls) --color -C -F -X --group-directories-first'
+  alias ll=' $(command -v ls) --color -C -F -X --group-directories-first --si -i -hl'
+  alias lll='$(command -v ls) --color -C -F -X --group-directories-first --si -i -hl -a'
+else
+  # we are in linux
+  alias ls=' ls -G'
+  alias la=' ls -A'
+  alias l='  ls -CF'
+  alias ll=' ls -Fhil'
+  alias lll='ls -Failh'
+fi
 
 # Relative Jumps:
 alias ~='cd ~ '
