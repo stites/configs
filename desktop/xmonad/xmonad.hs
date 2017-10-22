@@ -163,23 +163,19 @@ additionalKeys'
       ]
 
     binaryPartitionLayout =
-      [ ("M-M1-<Left>",    sendMessage $ ExpandTowards L)
-      , ("M-M1-<Right>",   sendMessage $ ShrinkFrom L)
-      , ("M-M1-<Up>",      sendMessage $ ExpandTowards U)
-      , ("M-M1-<Down>",    sendMessage $ ExpandTowards D)
-      , ("M-s",            sendMessage $ BSP.Swap)
-      , ("M-M1-s",         sendMessage $ Rotate)
-      , ("M-M1-p",         sendMessage $ FocusParent)
-      ]
+      [ ("M-S-<Left>",    sendMessage $ BSP.ExpandTowards L)
+      , ("M-S-<Right>",   sendMessage $ BSP.ExpandTowards R)
+      , ("M-S-<Up>",      sendMessage $ BSP.ExpandTowards U)
+      , ("M-S-<Down>",    sendMessage $ BSP.ExpandTowards D)
 
-    bspLayoutKeys =
-      [ ("M-M1-h", sendMessage $ BSP.ExpandTowards L)
-      , ("M-M1-l", sendMessage $ BSP.ShrinkFrom    L)
-      , ("M-M1-k", sendMessage $ BSP.ExpandTowards U)
-      , ("M-M1-j", sendMessage $ BSP.ShrinkFrom    U)
-      , ("M-M1-s", sendMessage $ BSP.Swap)
-      , ("M-M1-r", sendMessage $ BSP.Rotate)
-      , ("M-M1-p", sendMessage $ BSP.FocusParent)
+      , ("M-S-h",         sendMessage $ BSP.ExpandTowards L)
+      , ("M-S-l",         sendMessage $ BSP.ExpandTowards R)
+      , ("M-S-k",         sendMessage $ BSP.ExpandTowards U)
+      , ("M-S-j",         sendMessage $ BSP.ExpandTowards D)
+
+      , ("M-s",           sendMessage   BSP.Swap)
+      , ("M-S-s",         sendMessage   Rotate)
+      , ("M-S-p",         sendMessage   FocusParent)
       ]
 
 -- Like promptSearchBrowser, but open it up so I have access to the flags to
@@ -190,7 +186,7 @@ promptSearchBrowser' config browser (SearchEngine name site) =
     Prompt.mkXPrompt (Search' name) config (Prompt.historyCompletionP ("Search [" `isPrefixOf`))
       (\query -> Run.safeSpawn browser ["--new-window", site query])
 
-data Search' = Search' Name
+newtype Search' = Search' Name
 
 instance XPrompt Search' where
     showXPrompt (Search' name)= "Search [" ++ name ++ "]: "
