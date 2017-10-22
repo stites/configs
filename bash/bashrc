@@ -80,7 +80,7 @@ fi
 # some ls aliases
 alias tree='tree -C'
 
-if $(command -v ls) --color 2&>1 > /dev/null; then
+if $(command -v ls) --color 2>&1 > /dev/null; then
   # we are in bsd
   alias ls=' $(command -v ls) --color -C -G -X --group-directories-first'
   alias la=' $(command -v ls) --color -C -A'
