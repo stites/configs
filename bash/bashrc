@@ -158,7 +158,7 @@ safe_source "$HOME/.travis/travis.sh"
 # ========================================== #
 #     Silence that fucking hardware bell     #
 # ========================================== #
-xset b off
+[[ -n "$DISPLAY" ]] && xset b off
 # xset b 0 0 0
 # setterm -blength 0
 # set bell-style none
