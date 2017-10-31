@@ -1,6 +1,7 @@
 [user]
   name = stites
   email = sam@stites.io
+  signingkey = 5BFB2C5EE8E72B14
 [alias]
   brn = for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate:short) %(authorname) %(refname:short)'
   btree = log        --all --graph --decorate=short --color  --format=format:'%C(bold blue)%h%C(reset) %C(auto)%d%C(reset) %C(black)[%cr]%C(reset) %C(black)%an - %s %C(reset)'
@@ -46,7 +47,9 @@
   helper = store --file ~/.config/git/credentials
   # helper = cache --timeout=30000
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+[commit]
+  gpgsign = true
