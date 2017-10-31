@@ -1,7 +1,9 @@
 :set prompt "\ESC[0;34mghci>\ESC[m "
 :def hoogle \s -> Prelude.return Prelude.$ (":! hoogle --count=15 \"" :: Prelude.String) Prelude.++ s Prelude.++ ("\"" :: Prelude.String)
--- :set -XPartialTypeSignatures
+
 :set -Wno-name-shadowing
+:set -XOverloadedStrings
+-- :set -XPartialTypeSignatures
 
 import qualified Data.Text   as T
 import qualified Data.Vector as V
