@@ -59,13 +59,16 @@ set shiftwidth=2
 
 " ==============================================================================
 " Tab navigation like Firefox.
-nnoremap <C-S-Tab> :tabprevious<CR>
-nnoremap <C-Tab>   :tabnext<CR>
-inoremap <C-S-Tab> <Esc>:tabprevious<CR>i
-inoremap <C-Tab>   <Esc>:tabnext<CR>i
-nnoremap <C-t>     :tabnew<CR>
-inoremap <C-t>     <Esc>:tabnew<CR>
-nnoremap <C-w>     :tabclose<CR>
+" ----------------------------
+" no need! i don't use tabs
+
+" nnoremap <C-S-Tab> :tabprevious<CR>
+" nnoremap <C-Tab>   :tabnext<CR>
+" inoremap <C-S-Tab> <Esc>:tabprevious<CR>i
+" inoremap <C-Tab>   <Esc>:tabnext<CR>i
+" nnoremap <C-t>     :tabnew<CR>
+" inoremap <C-t>     <Esc>:tabnew<CR>
+" nnoremap <C-w>     :tabclose<CR>
 
 " }}}
 

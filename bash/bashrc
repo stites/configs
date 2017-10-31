@@ -139,9 +139,10 @@ alias ":r"=myReload
 # ========================================= #
 # TODO: load init configs in plist somehow  #
 # ========================================= #
-# shellcheck source=$HOME/.bash/load
+# shellcheck source=/home/stites/.bash/load
 [[ ! -f ~/.bash/load  ]] || source "$HOME/.bash/load"
 
+# we can now start using safe_source
 safe_source "$HOME/.fonts/*.sh"
 
 # colored GCC warnings and errors
@@ -162,3 +163,11 @@ safe_source "$HOME/.travis/travis.sh"
 # xset b 0 0 0
 # setterm -blength 0
 # set bell-style none
+
+
+# Setting rg as the default source for fzf
+export FZF_DEFAULT_COMMAND='rg --files'
+# To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+safe_source "$HOME/.fzf.bash"

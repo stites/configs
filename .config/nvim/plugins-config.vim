@@ -2,15 +2,47 @@
 " autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
 " autocmd FileType gitcommit setlocal spell spelllang=en_us
 
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-let g:ctrlp_max_files=0
-let g:ctrlp_show_hidden=1
-let g:ctrlp_custom_ignore =
-  \ {
-  \   'dir': '\v[\/](.git|.cabal-sandbox|.stack-work)$',
-  \   'file': '\v\.(o|hi|beam|dyn_hi|dyn_o)$'
-  \ }
+" let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+" let g:ctrlp_max_files=0
+" let g:ctrlp_show_hidden=1
+" let g:ctrlp_custom_ignore =
+"   \ {
+"   \   'dir': '\v[\/](.git|.cabal-sandbox|.stack-work)$',
+"   \   'file': '\v\.(o|hi|beam|dyn_hi|dyn_o)$'
+"   \ }
+"
+" bufkill-vim ==================================================================
+nmap <C-w> :BD<CR>
+" vim-polyglot =================================================================
+let g:polyglot_disabled = ['elm', 'haskell']
 
+" FZF commands:
+nmap ; :Buffers<CR>
+nmap <C-p> :Files<CR>
+nmap <Leader>t :Files<CR>
+nmap <Leader>r :Tags<CR>
+
+nmap <Esc><Esc> :cclose<CR>
+nmap \x :cclose<CR>
+" ack.vim ======================================================================
+" don't jump to the first result automatically.
+cnoreabbrev Ack Ack!
+
+" use ripgrep or the_silver_searcher (in that order), follow symlinks
+if executable('rg')
+  let g:ackprg = 'rg -L --vimgrep'
+elseif executable('ag')
+  let g:ackprg = 'ag -f --vimgrep'
+endif
+
+" bind to a
+nnoremap <Leader>a :Ack!<Space>
+
+" search on the current word
+nmap \f      :Ack "\b<cword>\b" <CR>
+nmap <Esc>f  :Ack "\b<cword>\b" <CR>
+
+"===============================================================================
 let g:haskell_tabular = 1
 
 vmap a= :Tabularize /=<CR>

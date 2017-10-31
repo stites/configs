@@ -33,6 +33,7 @@ source $HOME/.config/nvim/elm.vim
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/plugins-config.vim
 source $HOME/.config/nvim/ui.vim
+source $HOME/.config/nvim/spelling.vim
 let g:python_host_prog = '/home/stites/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/home/stites/.pyenv/versions/neovim3/bin/python'
 
@@ -164,6 +165,9 @@ noremap <leader>bd :Bd<cr>
 
 " fuzzy find buffers
 noremap <leader>b<space> :CtrlPBuffer<cr>
+
+set incsearch
+set nohlsearch
 
 " Neovim terminal configurations
 if has('nvim')

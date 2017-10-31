@@ -4,6 +4,7 @@ call plug#begin('~/.config/nvim/bundle')
 " Support bundles
 Plug 'jgdavey/tslime.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'sheerun/vim-polyglot'
 
 " Plug 'ervandew/supertab'
 Plug 'benekastah/neomake'
@@ -14,19 +15,24 @@ Plug 'SirVer/ultisnips'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nacitar/terminalkeys.vim'
 Plug 'xolox/vim-session' | Plug 'xolox/vim-misc'
+Plug 'qpkorr/vim-bufkill'
+Plug 'tpope/vim-eunuch'
 
 " Git
-" Plug 'tpope/vim-fugitive'
-Plug 'int3/vim-extradite'
+" Plug 'int3/vim-extradite'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-rhubarb' | Plug 'tpope/vim-fugitive'
 
 " Bars, panels, and files
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
 " Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-unimpaired'
 Plug 'majutsushi/tagbar'                 " http://vimawesome.com/plugin/tagbar
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Text manipulation
 Plug 'vim-scripts/Align'
@@ -38,7 +44,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'                " http://vimawesome.com/plugin/surround-vim
+Plug 'tpope/vim-repeat'                  " to be used with vim-surround
 Plug 'vim-syntastic/syntastic'
+Plug 'junegunn/goyo.vim'
 
 " Allow pane movement to jump out of vim into tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -50,8 +58,14 @@ Plug 'eagletmt/neco-ghc',             { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle',           { 'for': 'haskell' }
 Plug 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
 
+" HTML, XML
+Plug 'docunext/closetag.vim', { 'for': 'html' }
 
+" elm
 Plug 'ElmCast/elm-vim', { 'for': 'elm' }
+
+" ruby
+Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 
 " Haskell, always-on
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
