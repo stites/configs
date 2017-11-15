@@ -20,3 +20,20 @@ function stacknew {
 }
 
 export -f stacknew
+
+# load 'shakeup' script
+function dl_shakeup {
+  local SHAKEUP_LOCATION="$HOME/.local/bin/shakeup"
+  local SHAKEUP_URL="https://gist.githubusercontent.com/stites/bc45f92f567af90ee73e4ce7cd263f80/raw/80cedfd9e65d89087bc669354661873e17d2f212/shakeup.sh"
+
+  if command -v shake > /dev/null 2>&1; then
+    if [ ! -f $SHAKEUP_LOCATION ]; then
+      curl -o $SHAKEUP_LOCATION $SHAKEUP_URL
+      chmod u+x $SHAKEUP_LOCATION
+    fi
+  fi
+}
+
+dl_shakeup
+
+
