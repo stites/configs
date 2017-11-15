@@ -14,7 +14,8 @@ URxvt.saveLines: 4055
 URxvt.iso14755: False
 
 URxvt.perl-ext-common: default,matcher,font-size
-URxvt.bell-command: notify-send "rxvt-unicode: bell!"
+URxvt.bell-command: notify-send "Beep, Beep"
+URxvt.urgentOnBell: true
 URxvt.keysym.M-escape: perl:keyboard-select:activate
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 
