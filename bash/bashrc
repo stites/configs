@@ -171,3 +171,4 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 safe_source "$HOME/.fzf.bash"
+safe_path_add "$HOME/.local/bin"
