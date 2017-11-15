@@ -1,0 +1,45 @@
+#! /usr/bin/env bash
+
+BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}|${GREEN}\W${RESET} "
+BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}/>${GREEN}\W${RESET} "
+BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}||${GREEN}\W${RESET} "
+BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}<>${GREEN}\W${RESET} "
+BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}::${GREEN}\W${RESET} "
+BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${RESET}::${GREEN}\W${RESET} "
+
+
+dynamic_prompt (){
+  local TASK_COUNT=""
+  if hash task 2>/dev/null; then
+    TASK_COUNT="$(task +in +PENDING count) "
+  fi
+
+  local BASE="${TASK_COUNT}${BRIGHT_BLUE}@${BLUE}\h"
+  local SEP=' '
+
+  local ENDING=""
+  local FIRST_C="${GREEN}"
+  local SECOND_C="${YELLOW}"
+
+  if [ ! -z "${git_branch}" ]; then
+    ENDING="${SECOND_C}\W${FIRST_C}#_(${git_branch})${RED}${git_dirty}"
+  else
+    ENDING="${FIRST_C}\W"
+  fi
+
+  local VENV=""
+  if [ ! -z "$VIRTUAL_ENV" ]; then
+    VENV="(`echo "$VIRTUAL_ENV" | egrep '[a-zA-Z\-]+$' -o`) "
+  fi
+
+  # looks like we could just invoke functions in PS1 itself without having to use the PROMPT_COMMAND
+  PS1="${VENV}${BASE}${NORMAL}${SEP}${ENDING} ${RESET}"
+}
+
+if [[ $PROMPT_COMMAND != *" dynamic_prompt;"* ]]; then
+  PROMPT_COMMAND="$PROMPT_COMMAND dynamic_prompt;"
+else
+  PS1="[\u@\h:\W]\$ "
+fi
+
+

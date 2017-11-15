@@ -1,45 +1,70 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
-BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}|${GREEN}\W${RESET} "
-BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}/>${GREEN}\W${RESET} "
-BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}||${GREEN}\W${RESET} "
-BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}<>${GREEN}\W${RESET} "
-BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}::${GREEN}\W${RESET} "
-BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${RESET}::${GREEN}\W${RESET} "
+#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}|${GREEN}\W${RESET} "
+#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}/>${GREEN}\W${RESET} "
+#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}||${GREEN}\W${RESET} "
+#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}<>${GREEN}\W${RESET} "
+#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}::${GREEN}\W${RESET} "
 
+
+pre_dynamic_prompt (){
+  export LAST_CODE="$?"
+}
 
 dynamic_prompt (){
-  local TASK_COUNT=""
-  if hash task 2>/dev/null; then
-    TASK_COUNT="$(task +in +PENDING count) "
-  fi
+  #local TASK_COUNT=""
+  #if hash task 2>/dev/null; then
+  #  TASK_COUNT="$(task +in +PENDING count) "
+  #fi
 
-  local BASE="${TASK_COUNT}${BRIGHT_BLUE}@${BLUE}\h"
-  local SEP=' '
+  COLOR_AT=""
+  case $LAST_CODE in
+    0) COLOR_AT="$BRIGHT_BLUE" ;;
+    1) COLOR_AT="$BRIGHT_RED" ;;
+    *) COLOR_AT="$YELLOW" ;;
+  esac
 
-  local ENDING=""
-  local FIRST_C="${GREEN}"
-  local SECOND_C="${YELLOW}"
+  BASE="${COLOR_AT}@${BLUE}\h"
+  SEP="${NORMAL}::"
 
-  if [ ! -z "${git_branch}" ]; then
-    ENDING="${SECOND_C}\W${FIRST_C}#_(${git_branch})${RED}${git_dirty}"
+  ENDING=""
+  FIRST_C="${GREEN}"
+  SECOND_C="${YELLOW}"
+
+  GBRANCH="$(find_git_branch)"
+
+  if [ ! -z "${GBRANCH}" ]; then
+    ENDING="${SECOND_C}\W${FIRST_C}#_(${GBRANCH})${RED}$(find_git_dirty)"
   else
     ENDING="${FIRST_C}\W"
   fi
 
-  local VENV=""
-  if [ ! -z "$VIRTUAL_ENV" ]; then
-    VENV="(`echo "$VIRTUAL_ENV" | egrep '[a-zA-Z\-]+$' -o`) "
+  if [ ! -z "${PYENV_VERSION}" ]; then
+    ENVS="$PYENV_VERSION"
+  else
+    ENVS=""
   fi
 
   # looks like we could just invoke functions in PS1 itself without having to use the PROMPT_COMMAND
-  PS1="${VENV}${BASE}${NORMAL}${SEP}${ENDING} ${RESET}"
+  PS1="${ENVS}${BASE}${SEP}${ENDING} ${RESET}"
 }
 
-if [[ $PROMPT_COMMAND != *" dynamic_prompt;"* ]]; then
-  PROMPT_COMMAND="$PROMPT_COMMAND dynamic_prompt;"
-else
-  PS1="[\u@\h:\W]\$ "
+if [ $PROMPT_COMMAND != "pre_dynamic_prompt; "* ]; then
+  PROMPT_COMMAND="pre_dynamic_prompt; $PROMPT_COMMAND"
+
+  case "$PROMPT_COMMAND" in
+    *"dynamic_prompt;"|*"dynamic_prompt; ")
+      echo "dynamic_prompt already set"
+      ;;
+
+    *";"|*"; ")
+      PROMPT_COMMAND="$PROMPT_COMMAND dynamic_prompt; "
+      ;;
+
+    *)
+      PROMPT_COMMAND="$PROMPT_COMMAND; dynamic_prompt; "
+      ;;
+  esac
 fi
 
 
