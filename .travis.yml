@@ -57,6 +57,6 @@ before_install:
 script:
 - |
   set -ex
-  stack exec spark -- check
+  HOST=arch stack exec spark check
   set +ex
 

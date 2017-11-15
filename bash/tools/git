@@ -41,8 +41,6 @@ alias gc="  git commit "
 alias gcm=" git commit -m "
 alias gca=" git commit --amend "
 alias gcma="git commit --amend -m "
-alias gim=" git add . && git commit -m"
-alias gima="git add . && git commit --amend"
 
 # push
 alias gp='   ssh_checked_git push'

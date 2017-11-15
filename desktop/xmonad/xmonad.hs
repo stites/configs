@@ -42,6 +42,7 @@ main = do
     -- gives taffybar logger information
     -- ewmh $
     -- pagerHints $
+    -- xmonad $ defaultConfig { startupHook = setWMName "LG3D" }
 
 myConfig = desktopConfig
   { modMask    = mod4Mask  -- Rebind Mod to super
@@ -86,9 +87,9 @@ layout_hook = modify (emptyBSP ||| Full)
 
 startup_hook :: X ()
 startup_hook = do
-  -- Window.setWMName "LG3D"
+  Window.setWMName "LG3D"
   setDefaultCursor xC_top_left_arrow
-  toggleHDMI
+  -- toggleHDMI
   where
     toggleHDMI :: MonadIO m => m ()
     toggleHDMI = LIS.countScreens >>= spawn . xrandrToggle
@@ -96,8 +97,8 @@ startup_hook = do
         xrandrToggle :: Int -> String
         xrandrToggle sc =
           case compare sc 1 of
-            GT        -> "echo \"foo\" && xrandr"
-            otherwise -> "echo \"bar\" && xrandr"
+            GT -> "echo \"foo\" && xrandr"
+            _  -> "echo \"bar\" && xrandr"
 
 
 removeKeys' :: [String]
