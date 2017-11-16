@@ -1,0 +1,2 @@
+sudo /sbin/ip link set enp0s5 up
+sudo /sbin/dhclient enp0s5

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+safe_source "$HOME/git/torch/install/bin/torch-activate"
+
