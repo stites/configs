@@ -2,7 +2,7 @@ card all {
   spark card aspell
   spark card bhyve
   spark card gpg
-  spark card ipython
+  spark card jupyter
   spark card irssi
   spark card stack
   spark card tmux
@@ -33,6 +33,14 @@ card ipython {
   ipython_kernel_config.py
 }
 
+card jupyter {
+  into ~/.jupyter
+  outof jupyter
+
+  jupyter_notebook_config.py
+}
+
+
 card irssi {
  into ~
 
@@ -53,7 +61,7 @@ card stack {
     stack.yaml
   }
 }
-  
+
 card tmux {
   {
     into ~
