@@ -1,31 +1,40 @@
 #!/usr/bin/env bash
 
-ARG="$1"
+COMMAND="$1"
 TARGET="$2"
-COMMAND=super-user-spark
-case $ARG in
+FLAG="$3"
+SUS=super-user-spark
+case $COMMAND in
   ""|"help"|"-h"|"--help")
-    $COMMAND -h
+    $SUS -h
+    echo "running through ./run_sus. run_sus arguments are:"
+    echo ""
+    echo "  ./run_sus COMMAND [TARGET FLAG]"
+    echo ""
+    echo "- COMMAND is passed down to $SUS"
+    echo "- TARGET (optional) and is one of bash|config|desktop|home|tools"
+    echo "- FLAG (optional) requires a target and is passed down to $SUS"
+    echo "    only one flag is currently supported"
     ;;
   *)
     case $TARGET in
       "bash"|"config"|"desktop"|"home"|"tools")
-        super-user-spark $ARG $TARGET/spark.sus
-	;;
+        $SUS $COMMAND $TARGET/spark.sus $FLAG
+        ;;
       *"bash/"|*"config/"|*"desktop/"|*"home/"|*"tools/")
-        super-user-spark $ARG ${TARGET}spark.sus
-	;;
+        $SUS $COMMAND ${TARGET}spark.sus $FLAG
+        ;;
       "")
-        super-user-spark $ARG    bash/spark.sus
-        super-user-spark $ARG  config/spark.sus
-        super-user-spark $ARG desktop/spark.sus
-        super-user-spark $ARG    home/spark.sus
-        super-user-spark $ARG   tools/spark.sus
+        $SUS $COMMAND    bash/spark.sus
+        $SUS $COMMAND  config/spark.sus
+        $SUS $COMMAND desktop/spark.sus
+        $SUS $COMMAND    home/spark.sus
+        $SUS $COMMAND   tools/spark.sus
         ;;
       *)
         echo "bad target. Leave empty or use one of: bash, config, desktop, home, tools"
-	exit 1
-	;;
+        exit 1
+        ;;
     esac
 esac
 
