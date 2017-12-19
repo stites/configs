@@ -1,0 +1,34 @@
+card all {
+  spark card redshift
+  spark card glirc
+  spark card nvim
+}
+
+card redshift {
+  into ~/.config
+
+  redshift.conf
+}
+
+card glirc {
+  into ~/.config/glirc
+  outof glirc
+
+  config
+}
+
+card nvim {
+  into ~/.config/nvim
+  outof nvim
+
+  defaults.vim
+  elm.vim
+  haskell.vim
+  plugins-config.vim
+  plugins.vim
+  snippets
+  spelling.vim
+  ui.vim
+}
+
+

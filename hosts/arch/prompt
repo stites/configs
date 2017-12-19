@@ -53,11 +53,10 @@ if [[ $PROMPT_COMMAND != "pre_dynamic_prompt; "* ]]; then
   PROMPT_COMMAND="pre_dynamic_prompt; $PROMPT_COMMAND"
 
   if [[ $PROMPT_COMMAND != *"dynamic_prompt; " ]]; then
-    if [[ $PROMPT_COMMAND != *"; " ]]; then
-      PROMPT_COMMAND="$PROMPT_COMMAND; dynamic_prompt; "
-    else
-      PROMPT_COMMAND="$PROMPT_COMMAND dynamic_prompt; "
-    fi
+    case $PROMPT_COMMAND in
+      *";"|*"; ") PROMPT_COMMAND="$PROMPT_COMMAND dynamic_prompt; " ;;
+      *)          PROMPT_COMMAND="$PROMPT_COMMAND; dynamic_prompt; " ;;
+    esac
   else
     PS1="[\u@\h:\W]\$ "
   fi

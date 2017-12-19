@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+safe_path_add "$HOME/.cargo/bin"
+

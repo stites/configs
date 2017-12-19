@@ -9,7 +9,12 @@
 flags: {}
 extra-package-dbs: []
 packages: []
-extra-deps: []
-resolver: lts-8.12
+resolver: lts-9.20
 extra-lib-dirs:
-  - /usr/local/lib/gcc46
+- /usr/local/lib/gcc46
+extra-deps:
+# for super-user-spark
+- iostring-0.0.0.0
+- validity-0.3.3.0
+- validity-path-0.1.0.1
+

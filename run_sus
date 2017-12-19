@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+ARG="$1"
+TARGET="$2"
+COMMAND=super-user-spark
+case $ARG in
+  ""|"help"|"-h"|"--help")
+    $COMMAND -h
+    ;;
+  *)
+    case $TARGET in
+      "bash"|"config"|"desktop"|"home"|"tools")
+        super-user-spark $ARG $TARGET/spark.sus
+	;;
+      *"bash/"|*"config/"|*"desktop/"|*"home/"|*"tools/")
+        super-user-spark $ARG ${TARGET}spark.sus
+	;;
+      "")
+        super-user-spark $ARG    bash/spark.sus
+        super-user-spark $ARG  config/spark.sus
+        super-user-spark $ARG desktop/spark.sus
+        super-user-spark $ARG    home/spark.sus
+        super-user-spark $ARG   tools/spark.sus
+        ;;
+      *)
+        echo "bad target. Leave empty or use one of: bash, config, desktop, home, tools"
+	exit 1
+	;;
+    esac
+esac
+

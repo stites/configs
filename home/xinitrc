@@ -1,6 +1,7 @@
 xrdb -merge .Xresources &
 setxkbmap -layout us -variant colemak -option 'ctrl:nocaps' &
 pgrep redshift &> /dev/null || redshift &> /dev/null &
+command -v nvidia-settings &> /dev/null || nvidia-settings --assign GPULogoBrightness=0 &> /dev/null &
 xscreensaver -nosplash &
 set r rate 200 100 &
 exec xmonad

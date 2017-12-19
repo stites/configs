@@ -1,0 +1,20 @@
+card all {
+  spark card home
+}
+
+card home {
+  into ~
+  
+  .fasdrc
+  .gitconfig
+  .gitignore_global
+  .ghci
+  .haskline
+  .npmrc
+  # .offlineimaprc
+  # .taskrc
+  # .vimrc.local
+  .xinitrc
+  .Xdefaults
+  .Xresources
+}
