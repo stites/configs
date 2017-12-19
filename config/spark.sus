@@ -21,6 +21,7 @@ card nvim {
   into ~/.config/nvim
   outof nvim
 
+  init.vim
   defaults.vim
   elm.vim
   haskell.vim
