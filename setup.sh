@@ -1,9 +1,27 @@
 #!/usr/bin/env bash
 
+[ -n "$DEBUG" ] && set -x
+set -e
+
+if ! command -v git 1>/dev/null 2>&1; then
+  echo "setup.sh: Git is not installed, can't continue." >&2
+  exit 1
+fi
+
 # provision folders (mkdir -p always succeeds)
 mkdir -p ~/.tmux/plugins
 mkdir -p ~/.config/nvim/autoload
 mkdir -p ~/.bash/log
+
+function colorize {
+  if [ -t 1 ]; then printf "\e[%sm%s\e[m" "$1" "$2"
+  else echo -n "$2"
+  fi
+}
+
+function checkout {
+  [ -d "$2" ] || git clone --depth 1 "$1" "$2"
+}
 
 function install_fasd {
   echo "install fasd?"
@@ -39,16 +57,25 @@ function pkg_managers {
   esac
 }
 
-if [ ! -d "$HOME/.tmuxifier" ]; then
-  git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
+if [ -n "$USE_GIT_URI" ]; then
+  GITHUB="git://github.com"
+else
+  GITHUB="https://github.com"
 fi
 
-if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-fi
+checkout "$GITHUB/jimeh/tmuxifier.git" "$HOME/.tmuxifier"
+checkout "$GITHUB/tmux-plugins/tpm" "$HOME/.tmux/plugins/tpm"
+
+checkout "$GITHUB/pyenv/pyenv.git"            "$HOME/.pyenv"
+checkout "$GITHUB/pyenv/pyenv-doctor.git"     "$HOME/.pyenv/plugins/pyenv-doctor"
+checkout "$GITHUB/pyenv/pyenv-installer.git"  "$HOME/.pyenv/plugins/pyenv-installer"
+checkout "$GITHUB/pyenv/pyenv-update.git"     "$HOME/.pyenv/plugins/pyenv-update"
+checkout "$GITHUB/pyenv/pyenv-virtualenv.git" "$HOME/.pyenv/plugins/pyenv-virtualenv"
+checkout "$GITHUB/pyenv/pyenv-which-ext.git"  "$HOME/.pyenv/plugins/pyenv-which-ext"
 
 if [ ! -f "$HOME/.config/nvim/autoload/plug.vim" ]; then
   curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 pkg_managers
+
