@@ -29,7 +29,8 @@ for SETTING in $(find ~/.bash -type l \( -iname "*" ! -iname "colors" ! -iname "
   safe_source "$SETTING"
 done
 
-safe_source ~/.bash/prompt # must be last
+safe_source ~/.bash/prompt_variables   # must be declared before the prompt function
+safe_source ~/.bash/prompt             # must be last
 
 # ========================================================= #
 # PATH Exports                                              #

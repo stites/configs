@@ -4,12 +4,6 @@ pre_dynamic_prompt (){
   export LAST_CODE="$?"
 }
 
-export PROMPT_HOST_COLOR="${BLUE}"
-export PROMPT_HOST_COLOR_GIT=""
-export PROMPT_SEP_COLOR="${NORMAL}"
-export PROMPT_PATH_COLOR="${GREEN}"
-export PROMPT_PATH_COLOR_GIT="${YELLOW}"
-
 dynamic_prompt (){
   #local TASK_COUNT=""
   #if hash task 2>/dev/null; then
