@@ -38,21 +38,22 @@ function install_fasd {
 function pkg_managers {
   case "$(uname -a)" in
     *"Ubuntu"*)
-      echo "hello Ubuntu!"	
+      echo "hello Ubuntu!"
       sudo apt update -y && sudo apt upgrade -y
       sudo apt install fasd
-      sudo apt install vim wget git neovim curl
+      sudo apt install vim wget git neovim curl git-lfs
+      sudo apt install fonts-firacode
       ;;
     *"ARCH"*)
-      echo "hello Archlinux!"	
+      echo "hello Archlinux!"
       sudo aura -Ay
       sudo aura -A fasd-git
-      sudo pacman -S vim wget git neovim
+      sudo pacman -S vim wget git neovim git-lfs
       ;;
     *"FreeBSD"*)
-      echo "hello FreeBSD!"	
+      echo "hello FreeBSD!"
       sudo pkg update && sudo pkg upgrade
-      sudo pkg install vim wget git neovim
+      sudo pkg install vim wget git neovim git-lfs
       ;;
   esac
 }
