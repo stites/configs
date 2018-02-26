@@ -15,7 +15,7 @@ case $COMMAND in
     echo "  ./run_sus COMMAND [TARGET FLAG]"
     echo ""
     echo "- COMMAND is passed down to $SUS"
-    echo "- TARGET (optional) and is one of bash|config|desktop|home|tools"
+    echo "- TARGET (optional) and is one of bash|config|desktop|home|tools|all"
     echo "- FLAG (optional) requires a target and is passed down to $SUS"
     echo "    only one flag is currently supported"
     ;;
@@ -27,12 +27,12 @@ case $COMMAND in
       *"bash/"|*"config/"|*"desktop/"|*"home/"|*"tools/")
         $SUS $COMMAND ${TARGET}spark.sus $FLAG
         ;;
-      "")
-        $SUS $COMMAND    bash/spark.sus
-        $SUS $COMMAND  config/spark.sus
-        $SUS $COMMAND desktop/spark.sus
-        $SUS $COMMAND    home/spark.sus
-        $SUS $COMMAND   tools/spark.sus
+      ""|"all")
+        for folder in bash config desktop home tools; do
+          printf "running $COMMAND in $folder"
+          test -n "$FLAG" && printf " with flag: $FLAG\n" || printf "\n"
+          $SUS $COMMAND $folder/spark.sus $FLAG
+        done
         ;;
       *)
         echo "bad target. Leave empty or use one of: bash, config, desktop, home, tools"
