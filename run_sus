@@ -4,6 +4,9 @@ COMMAND="$1"
 TARGET="$2"
 FLAG="$3"
 SUS=super-user-spark
+
+git submodule update --init --recursive
+
 case $COMMAND in
   ""|"help"|"-h"|"--help")
     $SUS -h
