@@ -1,10 +1,8 @@
 init-author-name=Sam Stites
 init-author-email=sam@stites.io
-init-author-url=http://stites.io/
+init-author-url=https://stites.io/
 init-version=0.0.1
 python=python2.7
 progress=true
-save-prefix=
 parseable=true
 loglevel=warn
-foo:port=80
