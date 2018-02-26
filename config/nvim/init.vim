@@ -34,8 +34,10 @@ source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/plugins-config.vim
 source $HOME/.config/nvim/ui.vim
 source $HOME/.config/nvim/spelling.vim
+source $HOME/.config/nvim/python.vim
 let g:python_host_prog = '/home/stites/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/home/stites/.pyenv/versions/neovim3/bin/python'
+let @x=':%s/<Plug>_*//g'
 
 " Files, backups and undo {{{
 

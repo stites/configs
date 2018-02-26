@@ -5,9 +5,14 @@ snippet #!3
 	#!/usr/bin/env python3
 	# -*- coding: utf-8 -*-
 snippet im
-	import ${0:module}
+	import ${0:torch}
+snippet ith
+	import torch as th
+	import torchvision as thv
+	import matplotlib.pyplot as plt
+	import numpy as np
 snippet ia
-	import ${0:module} as
+	import ${0:numpy} as ${1:np}
 snippet from
 	from ${1:package} import ${0:module}
 # Module Docstring
@@ -29,7 +34,7 @@ snippet cl
 	class ${1:ClassName}(${2:object}):
 		"""${3:docstring for $1}"""
 		def __init__(self, ${4:arg}):
-			${5:super($1, self).__init__()}
+			${5:super().__init__()}
 			self.$4 = $4
 			${0}
 
@@ -46,7 +51,7 @@ snippet class
 	class ${1:ClassName}(${2:object}):
 		"""${3:docstring for $1}"""
 		def __init__(self, ${4:arg}):
-			${5:super($1, self).__init__()}
+			${5:super().__init__()}
 			self.$4 = $4
 			${0}
 # New Function
@@ -240,3 +245,10 @@ snippet kwargs
 	**kwargs${1:,}${0}
 snippet akw
 	*args, **kwargs${1:,}${0}
+
+snippet main
+	def main():
+	    ${1}
+	
+	if __name__ == "__main__":
+	    main()

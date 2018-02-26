@@ -97,6 +97,15 @@ au BufWritePost *.hsc silent !codex update --force %
 " ==============================================================================
 " disable haskell indents
 let g:haskell_indent_disable=1
+" enable type information while typing
+let g:necoghc_enable_detailed_browse = 1
+" use stack in necoghc
+let g:necoghc_use_stack = 1
+
+" ==============================================================================
+" disable syntastic in python
+let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
+
 
 " ==============================================================================
 " Use deoplete.
