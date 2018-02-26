@@ -17,7 +17,17 @@ dynamic_prompt (){
     *) COLOR_AT="$YELLOW" ;;
   esac
 
-  BASE="${COLOR_AT}@${PROMPT_HOST_COLOR}\h"
+  if [ "$PROMPT_INCL_USER" = true ]; then
+    if [[ "$(whoami)" == "stites" ]]; then
+      MUSER=""
+    else
+      MUSER="$(whoami)"
+    fi
+    BASE="${PROMPT_USER_COLOR}${MUSER}${COLOR_AT}@${PROMPT_HOST_COLOR}\h"
+  else
+    BASE="${COLOR_AT}@${PROMPT_HOST_COLOR}\h"
+  fi
+
   SEP="${PROMPT_SEP_COLOR}::"
 
   ENDING=""
