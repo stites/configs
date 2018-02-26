@@ -27,6 +27,7 @@ card nvim {
   haskell.vim
   plugins-config.vim
   plugins.vim
+  python.vim
   snippets
   spelling.vim
   ui.vim

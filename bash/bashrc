@@ -7,6 +7,7 @@ export EDITOR='nvim'
 # export PAGER=most
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export HOSTNAME="$HOSTNAME"
 set +o vi
 
 # If not running interactively, don't do anything
@@ -46,13 +47,13 @@ export HISTCONTROL=ignoredups:ignorespace:erasedups:ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# shopt -s histappend     # append to the history file, don't overwrite it
+# shopt -s histappend   # append to the history file, don't overwrite it
 shopt -s nocaseglob     # auto corrects the case
 shopt -s checkwinsize   # check the window size after each command and, if
                         # necessary, update the values of LINES and COLUMNS.
 shopt -s globstar       # If set, the pattern "**" used in a pathname
                         # expansion context will match all files and zero or
-			# more directories and subdirectories.
+                        # more directories and subdirectories.
 
 
 # bash automatically fetches the last command that starts with the

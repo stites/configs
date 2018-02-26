@@ -8,12 +8,18 @@ card all {
 
 card env {
   into ~/.bash
-  alternatives ../hosts/$(HOST) env
+  alternatives ../hosts/$(HOSTNAME) env
 
   load
   functions
   colors
   prompt
+}
+
+card logs {
+  into ~/.bash/log
+
+  .empty
 }
 
 card languages {
@@ -52,9 +58,9 @@ card tools {
 
 card rc {
   into ~
-  
+
   .bash_profile
   .bashrc
 }
- 
+
 
