@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # NPM packages in homedir
 # NPM_PACKAGES="$HOME/.npm-packages"
@@ -21,9 +21,13 @@
 
 # load nvm if exported variable does not exist
 if [ -n "$NVM_DIR" ]; then
-    safe_source "/usr/share/nvm/init-nvm.sh" # start NVM
     export NVM_DIR="$HOME/.nvm"
+    safe_source "$NVM_DIR/nvm.sh"           # This loads nvm
+    safe_source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
+
+# NPM packages in homedir
+# NPM_PACKAGES="$HOME/.npm-packages"
 
 # test ! -d $HOME/.nvm && echo "nvm not detected" && continue;
 # find -P  $HOME/.nvm -type d -maxdepth 3 -name bin | xargs -n 1 bash -c 'safe_path_add "$@"' _
