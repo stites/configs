@@ -10,7 +10,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'benekastah/neomake'
 Plug 'moll/vim-bbye'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'vim-scripts/gitignore'
+" Plug 'vim-scripts/gitignore'
 Plug 'SirVer/ultisnips'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nacitar/terminalkeys.vim'

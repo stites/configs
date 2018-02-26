@@ -290,10 +290,31 @@ map <leader>ap :Align
 
 map <leader>tt :TagbarToggle<CR>
 
-" set tags=./tags,tags;$HOME
-set tags=tags;/,codex.tags;/
+set tags+=./tags;$HOME,./codex.tags;$HOME
 set cst
 set csverb
+
+" IGNORES ARE HERE BECAUSE THEY INTERFERE WITH CTAG LOOKUP
+" Web ignores
+set wildignore+=*.min.*
+" Haskell ignores
+set wildignore+=*.stack-work*
+" C ignores
+set wildignore+=*.so
+" Python ignores
+set wildignore+=__pycache__/*,*.py[cod],*$py.class,*.ipynb,.Python,env/*,build/*
+set wildignore+=develop-eggs/*,dist/*,downloads/*,eggs/*,.eggs/*,lib/*,lib64/*
+set wildignore+=parts/*,sdist/*,var/*,*.egg-info/*,.installed.cfg,*.egg,*.manifest
+set wildignore+=*.spec,pip-log.txt,pip-delete-this-directory.txt,htmlcov/*
+set wildignore+=__pycache__/*,.tox/*,.coverage,.coverage.*,.cache,nosetests.xml
+set wildignore+=coverage.xml,cover,.hypothesis/*,*.mo,*.pot,*.log,local_settings.py
+set wildignore+=instance/*,.webassets-cache,.scrapy,docs/_build/*,target/*
+set wildignore+=.ipynb_checkpoints,.python-version,celerybeat-schedule,.env,venv/*
+set wildignore+=ENV/*,.spyderproject,.ropeproject,.DS_Store,*.sublime-workspace
+
+" case-insensitive search
+set wildignorecase
+
 
 " }}}
 

@@ -4,6 +4,9 @@
 .stites
 */infinitest.filters
 codex.tags
+tags
+cscope.files
+cscope.out
 hscope.out
 .ghci
 .sosrc

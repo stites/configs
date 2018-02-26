@@ -19,7 +19,7 @@ let @p='ddO  liftIO . print $ '
 
 " Tags {{{
 
-set tags+=codex.tags;/
+"set tags+=codex.tags;/
 
 let g:tagbar_type_haskell = {
     \ 'ctagsbin'  : 'hasktags',
