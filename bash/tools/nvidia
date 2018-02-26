@@ -11,6 +11,19 @@ function GPULogoOff {
   fi
 }
 
+function nvidia-pids {
+  nvidia-smi --query-compute-apps=pid --format=csv | grep -v pid | sort | uniq
+}
+
+function nvidia-killall {
+  for pid in $(nvidia-pids); do
+    kill -15 $pid
+  done
+}
+
+export -f nvidia-pids
+export -f nvidia-killall
+
 if command -v nvidia-settings &> /dev/null ; then
   GPULogoOff 0
   GPULogoOff 1
