@@ -4,7 +4,8 @@ card all {
 
 card home {
   into ~
-  
+
+  .pylintrc
   .fasdrc
   .gitconfig
   .gitignore_global
