@@ -9,7 +9,7 @@
 flags: {}
 extra-package-dbs: []
 packages: []
-resolver: lts-9.20
+resolver: lts-10.4
 extra-lib-dirs:
 - /usr/local/lib/gcc46
 extra-deps:

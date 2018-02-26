@@ -19,6 +19,9 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
+# used by jupyter notebook to set the notebook directory
+unset XDG_RUNTIME_DIR
+
 # run virtualenvwrapper from nix
 #if [ -n "`which virtualenvwrapper.sh`" ]; then
 #  export WORKON_HOME=$HOME/.virtualenvs
