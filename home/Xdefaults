@@ -1,6 +1,6 @@
 ! xscreensaver ---------------------------------------------------------------
 ! termName must be screen otherwise vim colorschemes will break in subtle ways
-URxvt.termName: screen-256color
+URxvt.termName: rxvt-256color
 URxvt.reverseVideo: True
 URxvt.font: xft:FiraCode:pixelsize=14
 URxvt.boldFont: xft:FiraCode:bold:pixelsize=14
