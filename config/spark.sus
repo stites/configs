@@ -18,19 +18,27 @@ card glirc {
 }
 
 card nvim {
-  into ~/.config/nvim
-  outof nvim
+  {
+    into ~/.config/nvim
+    outof nvim
 
-  init.vim
-  defaults.vim
-  elm.vim
-  haskell.vim
-  plugins-config.vim
-  plugins.vim
-  python.vim
-  snippets
-  spelling.vim
-  ui.vim
+    init.vim
+    defaults.vim
+    elm.vim
+    haskell.vim
+    plugins-config.vim
+    plugins.vim
+    python.vim
+    spelling.vim
+    ui.vim
+  }
+  {
+    into ~/.config/nvim/snippets
+    outof nvim/snippets
+
+    haskell.snippets
+    python.snippets
+  }
 }
 
 
