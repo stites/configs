@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 
-#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}|${GREEN}\W${RESET} "
-#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}/>${GREEN}\W${RESET} "
-#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}||${GREEN}\W${RESET} "
-#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}<>${GREEN}\W${RESET} "
-#BASE_PS1="${BRIGHT_BLUE}@${BLUE}\h${NORMAL}::${GREEN}\W${RESET} "
-
-
 pre_dynamic_prompt (){
   export LAST_CODE="$?"
 }
+
+export PROMPT_HOST_COLOR="${BLUE}"
+export PROMPT_HOST_COLOR_GIT=""
+export PROMPT_SEP_COLOR="${NORMAL}"
+export PROMPT_PATH_COLOR="${GREEN}"
+export PROMPT_PATH_COLOR_GIT="${YELLOW}"
 
 dynamic_prompt (){
   #local TASK_COUNT=""
@@ -24,12 +23,12 @@ dynamic_prompt (){
     *) COLOR_AT="$YELLOW" ;;
   esac
 
-  BASE="${COLOR_AT}@${BLUE}\h"
-  SEP="${NORMAL}::"
+  BASE="${COLOR_AT}@${PROMPT_HOST_COLOR}\h"
+  SEP="${PROMPT_SEP_COLOR}::"
 
   ENDING=""
-  FIRST_C="${GREEN}"
-  SECOND_C="${YELLOW}"
+  FIRST_C="${PROMPT_PATH_COLOR}"
+  SECOND_C="${PROMPT_PATH_COLOR_GIT}"
 
   GBRANCH="$(find_git_branch)"
 
@@ -49,22 +48,19 @@ dynamic_prompt (){
   PS1="${ENVS}${BASE}${SEP}${ENDING} ${RESET}"
 }
 
-if [ $PROMPT_COMMAND != "pre_dynamic_prompt; "* ]; then
+if [[ $PROMPT_COMMAND != "pre_dynamic_prompt; "* ]]; then
   PROMPT_COMMAND="pre_dynamic_prompt; $PROMPT_COMMAND"
 
-  case "$PROMPT_COMMAND" in
-    *"dynamic_prompt;"|*"dynamic_prompt; ")
-      echo "dynamic_prompt already set"
-      ;;
-
-    *";"|*"; ")
-      PROMPT_COMMAND="$PROMPT_COMMAND dynamic_prompt; "
-      ;;
-
-    *)
-      PROMPT_COMMAND="$PROMPT_COMMAND; dynamic_prompt; "
-      ;;
-  esac
+  if [[ $PROMPT_COMMAND != *"dynamic_prompt; " ]]; then
+    case $PROMPT_COMMAND in
+      *";"|*"; ") PROMPT_COMMAND="$PROMPT_COMMAND dynamic_prompt; " ;;
+      *)          PROMPT_COMMAND="$PROMPT_COMMAND; dynamic_prompt; " ;;
+    esac
+  else
+    PS1="[\u@\h:\W]\$ "
+  fi
+else
+  PS1="[\u@\h:\W]\$ "
 fi
 
 
