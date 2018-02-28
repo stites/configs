@@ -22,8 +22,31 @@
 # load nvm if exported variable does not exist
 if [ -n "$NVM_DIR" ]; then
     export NVM_DIR="$HOME/.nvm"
-    safe_source "$NVM_DIR/nvm.sh"           # This loads nvm
     safe_source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+    # See: https://gist.github.com/stites/085998c020f7d2fdfb2cf2f3638d2f73
+    # See: http://broken-by.me/lazy-load-nvm/
+    lazynvm() {
+      unset -f nvm node npm
+      export NVM_DIR=~/.nvm
+      safe_source "$NVM_DIR/nvm.sh"  # This loads nvm
+    }
+
+    nvm() {
+      lazynvm
+      nvm $@
+    }
+
+    node() {
+      lazynvm
+      node $@
+    }
+
+    npm() {
+      lazynvm
+      npm $@
+    }
+
 fi
 
 # NPM packages in homedir

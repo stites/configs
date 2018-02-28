@@ -55,6 +55,7 @@ card tools {
   vim
   nvidia
   gpg
+  fasd
 }
 
 card rc {

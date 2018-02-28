@@ -15,8 +15,45 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1  # supress annoying warning for a featu
 # run pyenv stuff only if it's there:
 if [ -d "${PYENV_ROOT}" ]; then
     safe_path_add "$PYENV_ROOT/bin"
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
+
+    # ================================ #
+    # eval "$(pyenv init -)"
+    safe_path_add "/home/stites/.pyenv/shims"
+    export PYENV_SHELL=bash
+    source '/opt/pyenv/libexec/../completions/pyenv.bash'
+    nohup command pyenv rehash > /dev/null 2>&1 &
+    pyenv() {
+      local command
+      command="$1"
+      if [ "$#" -gt 0 ]; then
+        shift
+      fi
+
+      case "$command" in
+      activate|deactivate|rehash|shell|virtualenvwrapper|virtualenvwrapper_lazy)
+        eval "$(pyenv "sh-$command" "$@")";;
+      *)
+        command pyenv "$command" "$@";;
+      esac
+    }
+
+    # ================================ #
+    # eval "$(pyenv virtualenv-init -)"
+    safe_path_add "/home/stites/.pyenv/plugins/pyenv-virtualenv/shims"
+    export PYENV_VIRTUALENV_INIT=1;
+    _pyenv_virtualenv_hook() {
+      local ret=$?
+      if [ -n "$VIRTUAL_ENV" ]; then
+        eval "$(pyenv sh-activate --quiet || pyenv sh-deactivate --quiet || true)" || true
+      else
+        eval "$(pyenv sh-activate --quiet || true)" || true
+      fi
+      return $ret
+    };
+    if ! [[ "$PROMPT_COMMAND" =~ _pyenv_virtualenv_hook ]]; then
+      PROMPT_COMMAND="_pyenv_virtualenv_hook;$PROMPT_COMMAND";
+    fi
+
 fi
 
 # used by jupyter notebook to set the notebook directory

@@ -7,14 +7,17 @@
 # Function safe_path_add
 # @description add path to $PATH variable, if it is not already there.
 function safe_path_add {
-  PATH_FOUND=$(echo "$PATH" | grep -o -E "(^|:)$1" | head -1)
+  # OLD WAY OF DOING IT:
+  # PATH_FOUND=$(echo "$PATH" | grep -o -E "(^|:)$1" | head -1)
+  # if [ -z "$PATH_FOUND" ] && [ -d "$1" ]; then
 
-  if [ -z "$PATH_FOUND" ] && [ -d "$1" ]; then
+  if [[ "$PATH" == *"$1"* ]] && [ -d "$1" ]; then
     export PATH="$1:$PATH"
   # else
   #    test -z $PATH_FOUND && echo "$1 not a directory" || echo "$1 in PATH"
   fi
 }
+
 
 # Function safe_prompt_add
 # @description add a command to the $PROMPT_COMMAND only if it is not already present

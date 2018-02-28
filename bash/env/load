@@ -8,8 +8,6 @@
 # shellcheck source=/dev/null
 [[ ! -f ~/.bash/functions  ]] || source ~/.bash/functions
 
-eval "$(fasd --init auto)"
-
 # ========================================================= #
 # setup environments                                        #
 # ========================================================= #
@@ -25,11 +23,15 @@ safe_source ~/.bash/colors
 
 # vvvv    we want to ignore SC2044 because we need to execute safe_source in the current shell (ie: i can't get the above line to work)
 # shellcheck disable=SC2044
-for SETTING in $(find ~/.bash -type l \( -iname "*" ! -iname "colors" ! -iname "prompt" ! -iname "load" \)); do
+for SETTING in $(find ~/.bash -type l \( -iname "*" ! -iname "colors" ! -iname "prompt" ! -iname "functions" ! -iname "load" ! -iname ".empty" \)); do
+  # # For performance, use these:
+  # echo $SETTING
+  # time safe_source "$SETTING"
+
   safe_source "$SETTING"
 done
 
-safe_source ~/.bash/prompt_variables   # must be declared before the prompt function
+# safe_source ~/.bash/prompt_variables   # will be covered in the above for-loop.
 safe_source ~/.bash/prompt             # must be last
 
 # ========================================================= #

@@ -39,12 +39,16 @@ function tmux-switch {
 
 # File may not exist, so don't follow for shellcheck linting (SC1090).
 # shellcheck source=/dev/null
-[[ ! -f ~/.bin/tmuxinator.bash ]] || source ~/.bin/tmuxinator.bash
+safe_source "$HOME/.bin/tmuxinator.bash"
 
 [[ ! -f ~/.tmuxifier ]] || git clone https://github.com/jimeh/tmuxifier.git --depth 1 ~/.tmuxifier
 safe_path_add ~/.tmuxifier/bin
-eval "$(tmuxifier init -)"
+
+# eval "$(tmuxifier init -)"
+export TMUXIFIER="/home/stites/.tmuxifier";
+safe_source "$TMUXIFIER/init.sh";
 
 alias hside="tmuxifier load-window hs"
 alias yiide="tmuxifier load-window yi"
+alias pyide="tmuxifier load-window py"
 
