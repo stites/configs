@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 safe_source "$HOME/git/torch/install/bin/torch-activate"
-
+safe_source "$HOME/torch/install/bin/torch-activate"
