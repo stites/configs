@@ -6,7 +6,7 @@ safe_path_add "$HOME/.rbenv/bin"
 # command -v rbenv >/dev/null && eval "$(rbenv init -)"
 if command -v rbenv >/dev/null; then
   export RBENV_SHELL=bash
-  safe_path_add "/home/stites/.rbenv/shims"
+  safe_path_add "$HOME/.rbenv/shims"
   safe_source '/usr/lib/rbenv/libexec/../completions/rbenv.bash'
   nohup command rbenv rehash > /dev/null 2>&1 &
   rbenv() {

@@ -18,9 +18,9 @@ if [ -d "${PYENV_ROOT}" ]; then
 
     # ================================ #
     # eval "$(pyenv init -)"
-    safe_path_add "/home/stites/.pyenv/shims"
+    safe_path_add "$HOME/.pyenv/shims"
     export PYENV_SHELL=bash
-    source '/opt/pyenv/libexec/../completions/pyenv.bash'
+    source "$HOME/.pyenv/libexec/../completions/pyenv.bash"
     nohup command pyenv rehash > /dev/null 2>&1 &
     pyenv() {
       local command
@@ -39,7 +39,7 @@ if [ -d "${PYENV_ROOT}" ]; then
 
     # ================================ #
     # eval "$(pyenv virtualenv-init -)"
-    safe_path_add "/home/stites/.pyenv/plugins/pyenv-virtualenv/shims"
+    safe_path_add "$HOME/.pyenv/plugins/pyenv-virtualenv/shims"
     export PYENV_VIRTUALENV_INIT=1;
     _pyenv_virtualenv_hook() {
       local ret=$?
