@@ -12,6 +12,10 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1  # supress annoying warning for a featu
 # be wary of this:
 #  +  https://stackoverflow.com/questions/24358572/pyenv-virtualenv-not-activating-tried-everything-i-know
 
+if [ -d "${PYENV_ROOT}" ] && [ ! -f "$HOME/.pyenv/bin/pyenv" ]; then
+  echo "[WARNING] PYENV IS NOT LOCATED AT $HOME/.pyenv/bin/pyenv - this will break things."
+fi
+
 # run pyenv stuff only if it's there:
 if [ -d "${PYENV_ROOT}" ]; then
     safe_path_add "$PYENV_ROOT/bin"
