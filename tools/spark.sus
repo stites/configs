@@ -86,6 +86,7 @@ card vim {
   outof vim/extras
 
   vl.sh -> vl
+  vim_gmake
 }
 
 card yi {
