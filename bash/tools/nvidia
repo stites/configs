@@ -6,7 +6,7 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 function GPULogoOff {
   local GPU_NUM="$1"
   GPU_BRIGHTNESS="$(nvidia-settings --query [gpu:$GPU_NUM]/GPULogoBrightness --terse 2>/dev/null)"
-  if [ "$GPU_BRIGHTNESS" != "0" ] && [ "$GPU_BRIGHTNESS" != "" ]; then
+  if $GPU_LIGHTS_OFF && [ "$GPU_BRIGHTNESS" != "0" ] && [ "$GPU_BRIGHTNESS" != "" ]; then
     nvidia-settings --assign [gpu:$GPU_NUM]/GPULogoBrightness=0 1> /dev/null
   fi
 }
@@ -24,11 +24,12 @@ function nvidia-killall {
 export -f nvidia-pids
 export -f nvidia-killall
 
-if command -v nvidia-settings &> /dev/null ; then
+if command -v nvidia-settings &> /dev/null && [ -z "$GPU_LIGHTS_ON" ]; then
   GPULogoOff 0
   GPULogoOff 1
   GPULogoOff 2
   GPULogoOff 3
+  GPU_LIGHTS_ON=false
 fi
 
 

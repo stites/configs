@@ -18,3 +18,13 @@ extra-deps:
 - validity-0.3.3.0
 - validity-path-0.1.0.1
 
+# for haddock
+- haddock-api-2.18.1
+- haddock-library-1.4.4
+
+# for c2hsc
+- logging-3.0.5
+
+
+
+
