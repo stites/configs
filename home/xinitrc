@@ -8,3 +8,4 @@ fi
 xscreensaver -nosplash &
 set r rate 200 100 &
 exec my-xmonad
+# exec startxfce4

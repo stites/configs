@@ -23,6 +23,8 @@ card xmonad {
 
   xmobar.hs
   xmonad.hs
+  stack.yaml
+  my-xmonad.cabal
 }
 
 

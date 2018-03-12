@@ -3,7 +3,7 @@
 # Use Nix
 # safe_source "$HOME/.nix-profile/etc/profile.d/nix.sh"
 
-if [ -n "$HOME" ]; then
+if command -v nix-env &> /dev/null && [ -n "$HOME" ]; then
     NIX_LINK="$HOME/.nix-profile"
 
     # Set the default profile.

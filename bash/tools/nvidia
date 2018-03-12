@@ -1,7 +1,16 @@
 #!/usr/bin/env bash
 
 safe_path_add "/usr/local/cuda/bin"
-export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+
+if [ -d "/usr/local/cuda/lib64" ]; then
+  # for cuda libraries
+  export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+fi
+
+if [ -d "/usr/local/cuda/extras/CUPTI/lib64" ]; then
+  # for cuda profiling tools
+  export LD_LIBRARY_PATH="/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
+fi
 
 function GPULogoOff {
   local GPU_NUM="$1"
