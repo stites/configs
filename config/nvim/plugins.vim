@@ -48,16 +48,20 @@ Plug 'tpope/vim-repeat'                  " to be used with vim-surround
 Plug 'tpope/vim-speeddating'
 Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/rainbow_parentheses.vim'
 
 " Allow pane movement to jump out of vim into tmux
 Plug 'christoomey/vim-tmux-navigator'
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim',     { 'for': 'haskell' }
-Plug 'eagletmt/ghcmod-vim',           { 'for': 'haskell' }
-Plug 'eagletmt/neco-ghc',             { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle',           { 'for': 'haskell' }
 Plug 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
+Plug 'eagletmt/neco-ghc',             { 'for': 'haskell' }
+" Plug 'autozimu/LanguageClient-neovim', {
+"     \ 'branch': 'next',
+"     \ 'do': 'bash ./install.sh'
+"     \ }
 
 " HTML, XML
 Plug 'docunext/closetag.vim', { 'for': 'html' }
@@ -91,7 +95,7 @@ Plug 'kana/vim-textobj-user' | Plug 'reedes/vim-textobj-sentence'
 " Python
 " Plug 'nvie/vim-flake8', { 'for': 'python' }
 " Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
-
+Plug 'szymonmaszke/vimpyter'
 
 " Automatically executes `filetype plugin indent on` and `syntax enable`.
 " You can revert the settings after the call. (e.g. filetype indent off, syntax off, etc.)

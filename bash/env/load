@@ -45,5 +45,6 @@ for SETTING in $(find ~/.bash -type l \( -iname "*" ! -iname "colors" ! -iname "
 done
 
 # safe_source ~/.bash/prompt_variables   # will be covered in the above for-loop.
+safe_source ~/.bash/nix                # to override pyenv
 safe_source ~/.bash/prompt             # must be last
 

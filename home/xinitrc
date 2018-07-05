@@ -5,9 +5,11 @@ if command -v redshift &> /dev/null; then
   pgrep redshift &> /dev/null || redshift &> /dev/null &
 fi
 
-xscreensaver -nosplash &
+# xscreensaver -nosplash &
 set r rate 200 100 &
+
 signal-desktop &
 slack &
+
 exec my-xmonad
 # exec startxfce4

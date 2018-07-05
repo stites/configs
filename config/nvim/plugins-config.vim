@@ -100,7 +100,20 @@ let g:haskell_indent_disable=1
 " enable type information while typing
 let g:necoghc_enable_detailed_browse = 1
 " use stack in necoghc
-let g:necoghc_use_stack = 1
+let g:necoghc_use_stack = 0
+
+" use haskell-ide-engine
+set hidden
+let g:LanguageClient_serverCommands = {
+    \ 'haskell': ['hie', '--lsp'],
+    \ }
+
+" let g:LanguageClient_rootMarkers = {
+"     \ 'haskell': ['cabal.project', 'stack.yaml'],
+"     \ }
+nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 
 " ==============================================================================
 " disable syntastic in python
@@ -153,3 +166,38 @@ augroup END
 let g:textobj#sentence#select = 's'
 let g:textobj#sentence#move_p = '('
 let g:textobj#sentence#move_n = ')'
+
+" ==============================================================================
+" rainbow_parentheses.vim
+
+let g:rbpt_colorpairs = [
+    \ ['red',         'firebrick3'],
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ]
+
+
+" Activation based on file type
+augroup rainbow_lisp
+  autocmd!
+  autocmd FileType * RainbowParentheses
+  " autocmd FileType lisp,clojure,scheme,haskell,python RainbowParentheses
+augroup END
+
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces

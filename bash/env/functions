@@ -48,7 +48,12 @@ function find_git_branch {
 }
 
 function find_git_dirty {
-  if [[ "$(git status --porcelain 2> /dev/null)" != "" ]]; then
+  # find all new files, but only show the first one (we don't need more)
+  # git ls-files --others --exclude-standard | head -n 1
+  # See https://stackoverflow.com/questions/11122410/fastest-way-to-get-git-status-in-bash
+  # for more speed tips
+
+  if [[ "$(git status -uno --porcelain 2> /dev/null)" != "" ]]; then
     echo '*'
   fi
 }

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+GHC_VERSION="8.2.2"
+PRIORITY="5"
+sudo update-alternatives \
+  --install /usr/bin/ghc ghc /opt/ghc/${GHC_VERSION}/bin/ghc $PRIORITY \
+  --slave /usr/bin/ghci ghci /opt/ghc/${GHC_VERSION}/bin/ghci \
+  --slave /usr/bin/ghc-pkg ghc-pkg /opt/ghc/${GHC_VERSION}/bin/ghc-pkg \
+  --slave /usr/bin/haddock haddock /opt/ghc/${GHC_VERSION}/bin/haddock \
+  --slave /usr/bin/runghc runghc /opt/ghc/${GHC_VERSION}/bin/runghc \
+  --slave /usr/bin/runhaskell runhaskell /opt/ghc/${GHC_VERSION}/bin/runhaskell
+

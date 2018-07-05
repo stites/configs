@@ -2,6 +2,12 @@
 
 safe_path_add "/usr/local/cuda/bin"
 
+# for NNPack
+export CUDADIR=/usr/local/cuda
+export ATLASDIR=/usr/lib/x86_64-linux-gnu/atlas
+# export ATLASDIR=/usr/include/x86_64-linux-gnu/atlas
+export LAPACKDIR=/usr/lib/x86_64-linux-gnu/lapack
+
 if [ -d "/usr/local/cuda/lib64" ]; then
   # for cuda libraries
   export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
@@ -10,6 +16,17 @@ fi
 if [ -d "/usr/local/cuda/extras/CUPTI/lib64" ]; then
   # for cuda profiling tools
   export LD_LIBRARY_PATH="/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
+fi
+
+if [ -d "/usr/local/magma/lib" ]; then
+  # for cuda LAPACK
+  export LD_LIBRARY_PATH="/usr/local/magma/lib:$LD_LIBRARY_PATH"
+fi
+
+if [ -d "/opt/intel/lib" ]; then
+  # for cuda LAPACK
+  export LD_LIBRARY_PATH="/opt/intel/lib:$LD_LIBRARY_PATH"
+  source /opt/intel/compilers_and_libraries/linux/bin/compilervars.sh intel64
 fi
 
 function GPULogoOff {

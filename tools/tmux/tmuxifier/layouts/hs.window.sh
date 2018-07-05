@@ -16,6 +16,8 @@ new_window "hs-ide"
 # |         |    4    |
 # |         |---------|
 # |         |    5    |
+# |         |---------|
+# |         |    6    |
 # |--------- ---------|
 
 # Split window into panes.
@@ -23,6 +25,7 @@ split_h
 # select_pane 1
 # split_v 8
 select_pane 2
+split_v
 split_v
 split_v
 split_v
@@ -34,6 +37,7 @@ run_cmd "git status"     2
 run_cmd "stack ghci --test"     3
 run_cmd "sos -p 'app/.*\.hs' -p 'src/.*\.hs' -c 'hlint \0'" 4
 run_cmd "sos -p '.*\.hs' -c 'codex update --force'"         5
+run_cmd "vim .stites"           6
 
 # Set active pane.
 select_pane 1

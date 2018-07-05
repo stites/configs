@@ -207,12 +207,20 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 safe_source "$HOME/.fzf/shell/key-bindings.bash"
 
-# if command -v pacman &> /dev/null; then
-#   sudo pacman -Syu
-# fi
-
 if command -v keybase &> /dev/null && [ ! -d "$XDG_RUNTIME_DIR" ]; then
   # export XDG_RUNTIME_DIR=/run/user/$USER
-  export XDG_RUNTIME_DIR=
-  mkdir -p $XDG_RUNTIME_DIR/keybase
+  export XDG_RUNTIME_DIR=/tmp/
+  mkdir -p $XDG_RUNTIME_DIR
 fi
+
+# echo "$XDG_RUNTIME_DIR"
+# if [ -n "$SSH_CONNECTION" ] && [ -z "$XDG_RUNTIME_DIR" ] ; then
+#   echo "XDG_RUNTIME_DIR $XDG_RUNTIME_DIR"
+#   export XDG_RUNTIME_DIR=/tmp/
+# fi
+
+# dictd:https://www.unixmen.com/look-dictionary-definitions-via-terminal/
+alias define="dict -d gcide "
+
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.en"

@@ -159,3 +159,6 @@ endif
 " }}}
 
 
+" File format stuff {{{
+au! BufNewFile,BufRead *.coco set filetype=python
+" }}}
