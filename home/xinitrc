@@ -10,3 +10,4 @@ set r rate 200 100 &
 signal-desktop &
 slack &
 exec my-xmonad
+# exec startxfce4
