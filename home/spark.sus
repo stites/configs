@@ -12,10 +12,11 @@ card home {
   .ghci
   .haskline
   .npmrc
+  .aspell.en.pws
   # .offlineimaprc
   # .taskrc
   # .vimrc.local
   .xinitrc
   .Xdefaults
-  .Xresources
+  # .Xresources
 }

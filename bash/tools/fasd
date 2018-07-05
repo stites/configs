@@ -65,7 +65,7 @@ if type "fasd" &> /dev/null && [ "$BASH_VERSION" ] && type complete &> /dev/null
   # enable bash command mode completion
   _fasd_bash_hook_cmd_complete fasd a s d f sd sf z zz
 else
-  echo "install fasd"
+  echo "fasd not found, but you have it loaded in your ~/.bash"
 fi
 
 

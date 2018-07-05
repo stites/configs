@@ -31,7 +31,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-unimpaired'
-Plug 'majutsushi/tagbar'                 " http://vimawesome.com/plugin/tagbar
+" Plug 'majutsushi/tagbar'                 " http://vimawesome.com/plugin/tagbar
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Text manipulation
@@ -45,6 +45,7 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'                " http://vimawesome.com/plugin/surround-vim
 Plug 'tpope/vim-repeat'                  " to be used with vim-surround
+Plug 'tpope/vim-speeddating'
 Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/goyo.vim'
 
@@ -82,7 +83,8 @@ Plug 'lervag/vimtex', { 'for': 'latex' }
 
 " Productivity
 " Plug 'wakatime/vim-wakatime'
-"
+Plug 'jceb/vim-orgmode' | Plug 'mattn/calendar-vim' | Plug 'inkarkat/vim-SyntaxRange' | Plug 'vim-scripts/utl.vim'
+
 " Vim improvements:
 Plug 'kana/vim-textobj-user' | Plug 'reedes/vim-textobj-sentence'
 

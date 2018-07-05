@@ -32,4 +32,3 @@ if command -v nvidia-settings &> /dev/null && [ -z "$GPU_LIGHTS_ON" ]; then
   GPU_LIGHTS_ON=false
 fi
 
-

@@ -91,6 +91,11 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     # shellcheck source=/dev/null
     source /etc/bash_completion
+
+  # crazy hack for nix
+  elif [ -f /nix/store/kn8022ash6nbmr92yk9a02gjfrx808ib-bash-completion-2.8/etc/profile.d/bash_completion.sh ]; then
+    # shellcheck source=/dev/null
+    source /nix/store/kn8022ash6nbmr92yk9a02gjfrx808ib-bash-completion-2.8/etc/profile.d/bash_completion.sh
   fi
 fi
 
@@ -151,6 +156,16 @@ fi
 # ===================== #
 alias vrc='vim $HOME/.bashrc'
 alias src='exec $SHELL'
+alias mr='monitors reset'
+alias mh='monitors home'
+alias ms='monitors sentenai'
+function ssh_add_mosh {
+  $(command -v ssh-add) -l | grep ssh/id_rsa &>/dev/null || ssh-add ~/.ssh/id_rsa
+  $(which mosh) "$@"
+}
+export -f ssh_add_mosh
+alias mosh="ssh_add_mosh"
+export PATH=$HOME/.cabal/bin:$PATH
 
 # == ghci to bash == #
 alias ":q"=exit
@@ -190,4 +205,14 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden'
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-safe_source "$HOME/.fzf.bash"
+safe_source "$HOME/.fzf/shell/key-bindings.bash"
+
+# if command -v pacman &> /dev/null; then
+#   sudo pacman -Syu
+# fi
+
+if command -v keybase &> /dev/null && [ ! -d "$XDG_RUNTIME_DIR" ]; then
+  # export XDG_RUNTIME_DIR=/run/user/$USER
+  export XDG_RUNTIME_DIR=
+  mkdir -p $XDG_RUNTIME_DIR/keybase
+fi

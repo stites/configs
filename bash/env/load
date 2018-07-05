@@ -32,9 +32,11 @@ safe_source ~/.bash/colors
 #find ~/.bash -type l \( -iname "*" ! -iname "colors" ! -iname "prompt" ! -iname "load" \) -exec bash -c 'safe_source "$0"' {} \;
 # FIXME: this doesn't alter the current shell
 
+safe_source "~/.bash/gpg"
+
 # vvvv    we want to ignore SC2044 because we need to execute safe_source in the current shell (ie: i can't get the above line to work)
 # shellcheck disable=SC2044
-for SETTING in $(find ~/.bash -type l \( -iname "*" ! -iname "colors" ! -iname "prompt" ! -iname "functions" ! -iname "load" ! -iname ".empty" \)); do
+for SETTING in $(find ~/.bash -type l \( -iname "*" ! -iname "colors" ! -iname "prompt" ! -iname "functions" ! -iname "load" ! -iname ".empty" ! -iname "gpg" \)); do
   # # For performance, use these:
   # echo $SETTING
   # time safe_source "$SETTING"

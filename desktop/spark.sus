@@ -1,6 +1,7 @@
 card all {
   spark card gtk
   spark card xmonad
+  spark card Xresources
 }
 
 card gtk {
@@ -8,6 +9,15 @@ card gtk {
   outof gtk
 
   .gtkrc-2.0.mine
+}
+
+card Xresources {
+  into ~
+  outof Xresources
+
+  darkpastel      -> .Xresources.darkpastel
+  solarized.light -> .Xresources.solarized.light
+  solarized.dark  -> .Xresources.solarized.dark
 }
 
 card x11 {

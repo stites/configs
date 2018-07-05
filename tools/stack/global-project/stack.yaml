@@ -10,13 +10,13 @@ flags: {}
 extra-package-dbs: []
 packages: []
 resolver: lts-10.4
-extra-lib-dirs:
-- /usr/local/lib/gcc46
+#extra-lib-dirs:
+#- /usr/local/lib/gcc46
 extra-deps:
 # for super-user-spark
-- iostring-0.0.0.0
-- validity-0.3.3.0
-- validity-path-0.1.0.1
+#- iostring-0.0.0.0
+#- validity-0.3.3.0
+#- validity-path-0.1.0.1
 
 # for haddock
 - haddock-api-2.18.1

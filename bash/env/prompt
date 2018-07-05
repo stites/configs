@@ -9,7 +9,6 @@ dynamic_prompt (){
   #if hash task 2>/dev/null; then
   #  TASK_COUNT="$(task +in +PENDING count) "
   #fi
-
   COLOR_AT=""
   case $LAST_CODE in
     0) COLOR_AT="$BRIGHT_BLUE" ;;
@@ -44,6 +43,12 @@ dynamic_prompt (){
 
   if [ ! -z "${PYENV_VERSION}" ]; then
     ENVS="$PYENV_VERSION"
+  else
+    ENVS=""
+  fi
+
+  if [ ! -z "${NIX_NO_SELF_RPATH}" ]; then
+    ENVS="(nix) $ENVS"
   else
     ENVS=""
   fi

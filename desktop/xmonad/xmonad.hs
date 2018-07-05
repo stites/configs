@@ -1,36 +1,36 @@
 {-# LANGUAGE TypeOperators #-}
 
+import Data.Monoid ((<>))
 import System.IO (hPutStrLn)
 import XMonad
-import XMonad.Config.Desktop
 import XMonad.Actions.CycleWS (nextWS, prevWS, shiftToPrev, shiftToNext)
 import XMonad.Actions.DynamicWorkspaces (addWorkspacePrompt, removeEmptyWorkspace)
 import XMonad.Actions.Search
 import XMonad.Actions.Submap
-import XMonad.Hooks.DynamicLog
+import XMonad.Config.Desktop
+import XMonad.Hooks.DynamicLog (xmobar, PP(..))
+import XMonad.Hooks.EwmhDesktops (ewmh)
+import XMonad.Hooks.FadeWindows -- (fadeWindowsLogHook)
 import XMonad.Hooks.ManageDocks (AvoidStruts, ToggleStruts(..), avoidStruts, docksEventHook, manageDocks)
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.BinarySpacePartition
-import qualified XMonad.Layout.BinarySpacePartition as BSP
-import XMonad.Hooks.DynamicLog (xmobar, PP(..))
-import qualified XMonad.Hooks.DynamicLog as DLog
-import XMonad.Hooks.ManageDocks (AvoidStruts, avoidStruts, docksEventHook, manageDocks)
-import qualified XMonad.Hooks.SetWMName as Window
 import XMonad.Layout.LayoutModifier (ModifiedLayout)
 import XMonad.Layout.Maximize (Maximize, maximize, maximizeRestore)
-import qualified XMonad.Layout.Spacing as Spacing
-import XMonad.Layout.BinarySpacePartition as BSP
+import XMonad.ManageHook
 import XMonad.Prompt (XPrompt, XPConfig(..))
-import qualified XMonad.Prompt as Prompt
 import XMonad.Util.Cursor (setDefaultCursor)
-import qualified XMonad.Layout.WindowNavigation as Window (Navigate(..))
-import qualified XMonad.Util.Run as Run (safeSpawn, spawnPipe)
-import qualified XMonad.StackSet as W
-import Data.Monoid ((<>))
+
+import qualified XMonad.Hooks.DynamicLog as DLog
+import qualified XMonad.Hooks.SetWMName as Window
+import qualified XMonad.Layout.BinarySpacePartition as BSP
 import qualified XMonad.Layout.IndependentScreens as LIS
+import qualified XMonad.Layout.Spacing as Spacing
+import qualified XMonad.Layout.WindowNavigation as Window (Navigate(..))
+import qualified XMonad.Prompt as Prompt
+import qualified XMonad.StackSet as W
+import qualified XMonad.Util.Run as Run (safeSpawn, spawnPipe)
 import qualified XMonad.Util.EZConfig as EZ
 
-import XMonad.Hooks.EwmhDesktops        (ewmh)
 -- import System.Taffybar.Hooks.PagerHints (pagerHints)
 
 main :: IO ()
@@ -47,28 +47,29 @@ main = do
 myConfig = desktopConfig
   { modMask    = mod4Mask  -- Rebind Mod to super
   , terminal   = "urxvt"
-  , workspaces = ["1", "2", "3", "4", "5", "6"]
+  , workspaces = ["1", "2", "3", "4"]
   , borderWidth        = 1
   , focusFollowsMouse  = False
-  , manageHook         = manageDocks <+> manageHook def <+> (resource =? launcher --> doIgnore)
+  -- , manageHook         = manageDocks <+> manageHook def <+> (resource =? launcher --> doIgnore)
   , layoutHook         = layout_hook
   , handleEventHook    = docksEventHook <+> handleEventHook def
-  , logHook =
-      DLog.dynamicLogWithPP DLog.xmobarPP
-        { ppCurrent = DLog.xmobarColor "black" "gray"
-        , ppHidden  = DLog.xmobarColor "orange" ""
-        , ppHiddenNoWindows = id
-        --, ppOutput  = hPutStrLn xmproc
-        , ppSep     = DLog.xmobarColor "orange" "" " | "
-        , ppTitle   = DLog.xmobarColor "lightblue" "" . DLog.shorten 120
-        , ppOrder   = \[a,_,b] -> [a, b]    -- Don't log layout name
-        }
-  , startupHook = startup_hook
+  -- , logHook = do
+  --     -- fadeWindowsLogHook (composeAll [isUnfocused --> transparency 1.0, opaque]) -- This doesn't seem to do anything
+  --     DLog.dynamicLogWithPP DLog.xmobarPP
+  --       { ppCurrent = DLog.xmobarColor "black" "gray"
+  --       , ppHidden  = DLog.xmobarColor "orange" ""
+  --       , ppHiddenNoWindows = id
+  --       --, ppOutput  = hPutStrLn xmproc
+  --       , ppSep     = DLog.xmobarColor "orange" "" " | "
+  --       , ppTitle   = DLog.xmobarColor "lightblue" "" . DLog.shorten 120
+  --       , ppOrder   = \[a,_,b] -> [a, b]    -- Don't log layout name
+  --       }
+  -- , startupHook = startup_hook
   } `EZ.removeKeysP` removeKeys'
     `EZ.additionalKeysP` additionalKeys'
 
 launcher :: String
-launcher = "dmenu"
+launcher = "albert"
 
 type (:+) f g = Choose f g
 infixr 5 :+
@@ -85,20 +86,20 @@ layout_hook = modify (emptyBSP ||| Full)
   tall = Tall 1 (3/100) (1/2)
 
 
-startup_hook :: X ()
-startup_hook = do
-  Window.setWMName "LG3D"
-  setDefaultCursor xC_top_left_arrow
-  -- toggleHDMI
-  where
-    toggleHDMI :: MonadIO m => m ()
-    toggleHDMI = LIS.countScreens >>= spawn . xrandrToggle
-      where
-        xrandrToggle :: Int -> String
-        xrandrToggle sc =
-          case compare sc 1 of
-            GT -> "echo \"foo\" && xrandr"
-            _  -> "echo \"bar\" && xrandr"
+-- startup_hook :: X ()
+-- startup_hook = do
+--   Window.setWMName "LG3D"
+--   setDefaultCursor xC_top_left_arrow
+--   -- toggleHDMI
+--   where
+--     toggleHDMI :: MonadIO m => m ()
+--     toggleHDMI = LIS.countScreens >>= spawn . xrandrToggle
+--       where
+--         xrandrToggle :: Int -> String
+--         xrandrToggle sc =
+--           case compare sc 1 of
+--             GT -> "echo \"foo\" && xrandr"
+--             _  -> "echo \"bar\" && xrandr"
 
 
 removeKeys' :: [String]
@@ -147,13 +148,13 @@ additionalKeys'
       [ ("M-o d",      spawn "thunar")
       , ("M-o h",      promptSearch xpconfig hackage)
       , ("M-<Return>", spawn =<< asks (terminal . config))
-      , ("C-<Space>",  spawn launcher)
+      , ("C-S-<Space>",  spawn "albert show")
       -- , ("M-i",          spawn "google-chrome-stable")
       ]
 
     system =
       [ ("M-S-<Delete>", spawn "pm-hibernate")
-      , ("M-S-l", spawn "xlock -mode juggle")
+      , ("M-S-l", spawn "xfce4-session-logout")
       , ("C-S-<F3>", spawn "amixer -q sset Master toggle")
       , ("C-S-<F5>", spawn "amixer -q sset Master 3%-")
       , ("C-S-<F6>", spawn "amixer -q sset Master 3%+")
