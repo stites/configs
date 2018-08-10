@@ -41,12 +41,6 @@ dynamic_prompt (){
     ENDING="${FIRST_C}\W"
   fi
 
-  if [ ! -z "${NIX_ENFORCE_NO_NATIVE}" ]; then
-    NIX_ENV="nix"
-  else
-    NIX_ENV=""
-  fi
-
   if [ ! -z "${PYENV_VERSION}" ]; then
     ENVS="$PYENV_VERSION"
   else
@@ -56,7 +50,7 @@ dynamic_prompt (){
   if [ ! -z "${NIX_NO_SELF_RPATH}" ]; then
     ENVS="(nix) $ENVS"
   else
-    ENVS=""
+    ENVS="$ENVS"
   fi
 
   # looks like we could just invoke functions in PS1 itself without having to use the PROMPT_COMMAND
