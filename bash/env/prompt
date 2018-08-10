@@ -60,7 +60,7 @@ dynamic_prompt (){
   fi
 
   # looks like we could just invoke functions in PS1 itself without having to use the PROMPT_COMMAND
-  export PS1="${NIX_ENV}${ENVS}${BASE}${SEP}${ENDING} ${RESET}"
+  export PS1="${ENVS}${BASE}${SEP}${ENDING} ${RESET}"
 }
 
 if [[ $PROMPT_COMMAND != "pre_dynamic_prompt; "* ]]; then

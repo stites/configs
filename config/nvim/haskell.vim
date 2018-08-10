@@ -2,9 +2,15 @@
 " https://github.com/sol/hpack
 " run hpack automatically on modifications to package.yaml
 autocmd BufWritePost package.yaml silent !hpack --silent
+autocmd FileType haskell iabbrev ;; ::
 
 let @m='imodule %0wdf/f.d$a where:s/\//./g$:nohl'
 let @p='ddO  liftIO . print $ '
+
+function! HaskellModuleName() " {{{
+  let l:path = substitute(expand('%:r'), '\%(\U[^/]*/\)*', '', '')
+  return substitute(l:path, '/', '.', 'g')
+endfunction " }}}
 
 " " Conceal {{{
 " " Use same color behind concealed unicode characters

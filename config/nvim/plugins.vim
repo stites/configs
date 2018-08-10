@@ -49,6 +49,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'pelodelfuego/vim-swoop'
 
 " Allow pane movement to jump out of vim into tmux
 Plug 'christoomey/vim-tmux-navigator'

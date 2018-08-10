@@ -213,6 +213,8 @@ if command -v keybase &> /dev/null && [ ! -d "$XDG_RUNTIME_DIR" ]; then
   mkdir -p $XDG_RUNTIME_DIR
 fi
 
+alias find="echo 'try using fd' && sleep 1 && find"
+# alias cat="(>&2 echo 'try using bat') && sleep 1 && cat"
 # echo "$XDG_RUNTIME_DIR"
 # if [ -n "$SSH_CONNECTION" ] && [ -z "$XDG_RUNTIME_DIR" ] ; then
 #   echo "XDG_RUNTIME_DIR $XDG_RUNTIME_DIR"
@@ -224,3 +226,5 @@ alias define="dict -d gcide "
 
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.en"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -19,6 +19,7 @@
 
 " highlight whitespace
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+tnoremap <Esc> <C-\><C-n>
 
 " " Precustomization {{{
 " if filereadable(hvn_config_pre)
