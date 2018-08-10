@@ -47,6 +47,15 @@ set nobackup
 set nowb
 set noswapfile
 
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+autocmd FileType haskell,c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
 " Source the vimrc file after saving it
 augroup sourcing
   autocmd!
