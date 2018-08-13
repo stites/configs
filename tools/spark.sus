@@ -2,7 +2,7 @@ card all {
   spark card aspell
   spark card bhyve
   spark card gpg
-  spark card jupyter
+#  spark card jupyter
   spark card irssi
   spark card stack
   spark card tmux

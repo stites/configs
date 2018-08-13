@@ -3,7 +3,7 @@
 COMMAND="$1"
 TARGET="$2"
 FLAG="$3"
-SUS=super-user-spark
+SUS=/home/stites/.local/bin/super-user-spark
 
 git submodule update --init --recursive
 
