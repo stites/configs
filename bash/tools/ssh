@@ -49,6 +49,6 @@ fi
 #  $(which mosh) "$@"
 #}
 #export -f ssh_add_mosh
-alias mosh="ssh_add_mosh"
+#alias mosh="ssh_add_mosh"
 
 
