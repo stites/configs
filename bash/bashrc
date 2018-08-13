@@ -107,18 +107,18 @@ alias tree='tree -C'
 
 if $(which ls) --color > /dev/null 2>&1; then
   # use preferred ls commands
-  alias ls=" \$(which ls) --color -C -G -X --group-directories-first"
+  alias ls=" \$(which ls) --color -C -X --group-directories-first"
   alias la=" \$(which ls) --color -C -A"
   alias l="  \$(which ls) --color -C -F -X --group-directories-first"
   alias ll=" \$(which ls) --color -C -F -X --group-directories-first --si -i -hl"
   alias lll="\$(which ls) --color -C -F -X --group-directories-first --si -i -hl -a"
 else
   # use fallback ls commands
-  alias ls=' ls -G'
+  # alias ls=' ls -G'
   alias la=' ls -A'
   alias l='  ls -CF'
   alias ll=' ls -Fhil'
-  alias lll='ls -Failh'
+  alias lll='ls -FAilh'
 fi
 
 # Relative Jumps:
