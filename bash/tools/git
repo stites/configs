@@ -30,11 +30,11 @@ alias gb='git branch'
 alias stash="git stash"
 alias pop="git stash pop"
 
-function ssh_checked_git {
-  $(command -v ssh-add) -l | grep ssh/id_rsa &>/dev/null || ssh-add ~/.ssh/id_rsa
-  $(which git) "$@"
-}
-export -f ssh_checked_git
+#function ssh_checked_git {
+#  $(command -v ssh-add) -l | grep ssh/id_rsa &>/dev/null || ssh-add ~/.ssh/id_rsa
+#  $(which git) "$@"
+#}
+#export -f ssh_checked_git
 
 # commit
 alias gc="  git commit "
@@ -43,7 +43,8 @@ alias gca=" git commit --amend "
 alias gcma="git commit --amend -m "
 
 # push
-alias gp='   ssh_checked_git push'
+# alias gp='   ssh_checked_git push'
+alias gp='   git push'
 alias gpo='  gp origin'
 alias gpom=' gp origin   master'
 alias gpod=' gp origin   develop'
@@ -54,7 +55,8 @@ alias gpud=' gp upstream develop'
 alias gpucb='gp upstream $(cb)'
 
 # pull
-alias gpl='   ssh_checked_git pull'
+# alias gpl='   ssh_checked_git pull'
+alias gpl='   git pull'
 alias gplo='  gpl origin'
 alias gplom=' gpl origin master'
 alias gplod=' gpl origin develop'
@@ -74,8 +76,10 @@ alias grm="git rm "
 #alias guiau=' git update-index --assume-unchanged'
 #alias guinau='git update-index --no-assume-unchanged'
 
-alias gcl="ssh_checked_git clone "
-alias gfl="ssh_checked_git fetch && gl"
+#alias gcl="ssh_checked_git clone "
+#alias gfl="ssh_checked_git fetch && gl"
+alias gcl="git clone "
+alias gfl="git fetch && gl"
 
 alias gpub='go gh-pages && gpog && go master && gm gh-pages && gpom && go gh-pages && gs'
 alias ghUp="gh pr --remote upstream -s"
@@ -96,9 +100,9 @@ alias git=hub
 alias gpr='  hub pull-request'
 alias gprud='hub pull-request -b `remote-name upstream`\/`repo-name upstream`:develop -h `remote-name origin`\/`repo-name origin`:`cb`'
 
-function ignore {
-  echo "$1" >> .gitignore
-}
+#function ignore {
+#  echo "$1" >> .gitignore
+#}
 
 function cb {
   git status | grep "On branch " | cut -c 11-
