@@ -159,13 +159,8 @@ alias src='exec $SHELL'
 alias mr='monitors reset'
 alias mh='monitors home'
 alias ms='monitors sentenai'
-function ssh_add_mosh {
-  $(command -v ssh-add) -l | grep ssh/id_rsa &>/dev/null || ssh-add ~/.ssh/id_rsa
-  $(which mosh) "$@"
-}
-export -f ssh_add_mosh
-alias mosh="ssh_add_mosh"
-export PATH=$HOME/.cabal/bin:$PATH
+
+safe_path_add "$HOME/.cabal/bin"
 
 # == ghci to bash == #
 alias ":q"=exit

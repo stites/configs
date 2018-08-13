@@ -4,27 +4,31 @@
 SSH_ENV="$HOME/.ssh/environment"
 
 function start_agent {
-    echo "Initialising new SSH agent..."
-    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-    echo succeeded
-    chmod 600 "${SSH_ENV}"
-    # File may not exist, so don't follow for shellcheck linting (SC1090).
-    # shellcheck source=/dev/null
-    . "${SSH_ENV}" > /dev/null
-    #/usr/bin/ssh-add;
+  echo "Initialising new SSH agent..."
+  /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+  echo succeeded
+  chmod 600 "${SSH_ENV}"
+  # File may not exist, so don't follow for shellcheck linting (SC1090).
+  # shellcheck source=/dev/null
+  . "${SSH_ENV}" > /dev/null
 }
 
 # Source SSH settings, if applicable
 if [ -f "${SSH_ENV}" ]; then
-    # File may not exist, so don't follow for shellcheck linting (SC1090).
-    # shellcheck source=/dev/null
-    . "${SSH_ENV}" > /dev/null
+  # File may not exist, so don't follow for shellcheck linting (SC1090).
+  # shellcheck source=/dev/null
+  . "${SSH_ENV}" > /dev/null
 
-    pgrep ssh-agent$ > /dev/null || {
-        start_agent;
+  # make ssh-agent idempotent.
+  if [ -n "${SSH_AGENT_PID}" ]; then
+    ps aux | awk '{print $2}' | grep $SSH_AGENT_PID > /dev/null || {
+      start_agent
+      /usr/bin/ssh-add
     }
+  fi
 else
-    start_agent;
+    start_agent
+    /usr/bin/ssh-add
 fi
 
 # Fix SSH auth socket location so agent forwarding works with tmux
@@ -34,3 +38,17 @@ fi
 
 # fun stuff:
 # alias pong="ping -c 1 $(echoip | head -n 1 | tr -s ' ' | cut -d ':' -f 2)"
+
+#function ssh_add_mosh {
+#  for key in rsa ed25519; do
+#    if [ -f $HOME/.ssh/id_$key ]; then
+#      $(command -v ssh-add) -l | grep ssh/id_rsa &>/dev/null || ssh-add ~/.ssh/id_rsa
+#    fi
+#  done
+#
+#  $(which mosh) "$@"
+#}
+#export -f ssh_add_mosh
+alias mosh="ssh_add_mosh"
+
+
