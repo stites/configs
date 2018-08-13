@@ -30,15 +30,12 @@ dynamic_prompt (){
   SEP="${PROMPT_SEP_COLOR}::"
 
   ENDING=""
-  FIRST_C="${PROMPT_PATH_COLOR}"
-  SECOND_C="${PROMPT_PATH_COLOR_GIT}"
-
   GBRANCH="$(find_git_branch)"
 
   if [ ! -z "${GBRANCH}" ]; then
-    ENDING="${SECOND_C}\W${FIRST_C}#_(${GBRANCH})${RED}$(find_git_dirty)"
+    ENDING="${PROMPT_PATH_COLOR_GIT}\W${PROMPT_BRANCH_COLOR_GIT}#_(${GBRANCH})${RED}$(find_git_dirty)"
   else
-    ENDING="${FIRST_C}\W"
+    ENDING="${PROMPT_PATH_COLOR}\W"
   fi
 
   if [ ! -z "${PYENV_VERSION}" ]; then
