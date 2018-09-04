@@ -2,6 +2,7 @@ card all {
   spark card redshift
   spark card glirc
   spark card nvim
+  spark card nixpkgs
 }
 
 card redshift {
@@ -9,6 +10,14 @@ card redshift {
 
   redshift.conf
 }
+
+card nixpkgs {
+  into ~/.config/nixpkgs
+  outof nixpkgs
+
+  config.nix
+}
+
 
 card glirc {
   into ~/.config/glirc
