@@ -11,12 +11,22 @@
     all = with pkgs; let exe = haskell.lib.justStaticExecutables; in buildEnv {
       name = "all";
       paths = [
+        # window manager (maybe desktop manager)
+        taffybar
+        haskellPackages.xmobar
+        haskellPackages.xmonad
+        haskellPackages.xmonad-contrib
+
         # system-level GUI deps
         albert
         signal-desktop
         firefox-devedition-bin
         gitter
         slack
+        # mendeley # broken
+
+        # keybase     # <<< needs some more coordination
+        # keybase-gui # <<< needs some more coordination
 
         # system level deps
         bash-completion
@@ -36,7 +46,15 @@
         more
         watch
         xz
+        aircrack-ng
+        youtube-dl
+        pmutils
+        syncthing
+        zip
+        gnused
+        # gl # sed for json
 
+        mosh
         tmux
         tmuxinator
         tree
