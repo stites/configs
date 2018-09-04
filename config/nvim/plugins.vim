@@ -1,6 +1,38 @@
 " using vim-plug
 call plug#begin('~/.config/nvim/bundle')
 
+" LANGUAGE PLUGINS
+
+" Haskell
+Plug 'neovimhaskell/haskell-vim',     { 'for': 'haskell' }
+Plug 'Twinside/vim-hoogle',           { 'for': 'haskell' }
+Plug 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
+Plug 'eagletmt/neco-ghc',             { 'for': 'haskell' }
+" Plug 'autozimu/LanguageClient-neovim', {
+"     \ 'branch': 'next',
+"     \ 'do': 'bash ./install.sh'
+"     \ }
+
+" HTML, XML
+Plug 'docunext/closetag.vim', { 'for': 'html' }
+
+" elm - elm-vim MUST be before vim-polyglot
+Plug 'ElmCast/elm-vim', { 'for': 'elm' }
+
+" ruby
+Plug 'tpope/vim-endwise', { 'for': 'ruby' }
+
+" LaTeX plugins
+Plug 'lervag/vimtex', { 'for': 'latex' }
+
+
+" SYSTEM PLUGINS
+"
+
+" Haskell, always-on
+Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
+Plug 'hspec/hspec.vim'
+
 " Support bundles
 Plug 'jgdavey/tslime.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'vim_gmake' }
@@ -17,6 +49,7 @@ Plug 'nacitar/terminalkeys.vim'
 Plug 'xolox/vim-session' | Plug 'xolox/vim-misc'
 Plug 'qpkorr/vim-bufkill'
 Plug 'tpope/vim-eunuch'
+Plug 'mbbill/undotree'
 
 " Git
 " Plug 'int3/vim-extradite'
@@ -54,37 +87,12 @@ Plug 'pelodelfuego/vim-swoop'
 " Allow pane movement to jump out of vim into tmux
 Plug 'christoomey/vim-tmux-navigator'
 
-" Haskell
-Plug 'neovimhaskell/haskell-vim',     { 'for': 'haskell' }
-Plug 'Twinside/vim-hoogle',           { 'for': 'haskell' }
-Plug 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
-Plug 'eagletmt/neco-ghc',             { 'for': 'haskell' }
-" Plug 'autozimu/LanguageClient-neovim', {
-"     \ 'branch': 'next',
-"     \ 'do': 'bash ./install.sh'
-"     \ }
-
-" HTML, XML
-Plug 'docunext/closetag.vim', { 'for': 'html' }
-
-" elm
-Plug 'ElmCast/elm-vim', { 'for': 'elm' }
-
-" ruby
-Plug 'tpope/vim-endwise', { 'for': 'ruby' }
-
-" Haskell, always-on
-Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
-Plug 'hspec/hspec.vim'
-
 " Colorscheme
 Plug 'vim-scripts/wombat256.vim'
 Plug 'endel/vim-github-colorscheme'
 Plug 'mhartington/oceanic-next'
 Plug 'freeo/vim-kalisi'
 
-" LaTeX plugins
-Plug 'lervag/vimtex', { 'for': 'latex' }
 
 " Productivity
 " Plug 'wakatime/vim-wakatime'
