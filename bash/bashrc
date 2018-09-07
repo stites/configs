@@ -20,10 +20,6 @@ set +o vi
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/local/bin/lesspipe.sh ] && eval "$(SHELL=/bin/sh lesspipe.sh)"
-[ -x /usr/sbin/lesspipe.sh ] && eval "$(SHELL=/bin/sh lesspipe.sh)"
-
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
@@ -105,7 +101,13 @@ fi
 # some ls aliases
 alias tree='tree -C'
 
-if $(which ls) --color > /dev/null 2>&1; then
+if command -v exa > /dev/null 2>&1; then
+  alias ls=" exa -s extension"
+  alias la=" exa"
+  alias l="  exa -s extension --group-directories-first -l"
+  alias ll=" exa -s extension --group-directories-first -a -l"
+  alias lll="exa -s extension --group-directories-first -aa -l"
+elif $(which ls) --color > /dev/null 2>&1; then
   # use preferred ls commands
   alias ls=" \$(which ls) --color -C -X --group-directories-first"
   alias la=" \$(which ls) --color -C -A"
@@ -198,8 +200,21 @@ safe_source "$HOME/.travis/travis.sh"
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
 
 safe_source "$HOME/.fzf/shell/key-bindings.bash"
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+
+alias find="fd"
+alias cat="bat"
+alias ping="prettyping --nolegend"
+alias top="htop"
+alias find="fd"
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules --exclude .stack-work --exclude dist-newstyle"
+alias help="tldr"
+alias curl="http"
 
 if command -v keybase &> /dev/null && [ ! -d "$XDG_RUNTIME_DIR" ]; then
   # export XDG_RUNTIME_DIR=/run/user/$USER
@@ -207,8 +222,7 @@ if command -v keybase &> /dev/null && [ ! -d "$XDG_RUNTIME_DIR" ]; then
   mkdir -p $XDG_RUNTIME_DIR
 fi
 
-alias find="echo 'try using fd' && sleep 1 && find"
-# alias cat="(>&2 echo 'try using bat') && sleep 1 && cat"
+
 # echo "$XDG_RUNTIME_DIR"
 # if [ -n "$SSH_CONNECTION" ] && [ -z "$XDG_RUNTIME_DIR" ] ; then
 #   echo "XDG_RUNTIME_DIR $XDG_RUNTIME_DIR"
@@ -221,4 +235,7 @@ alias define="dict -d gcide "
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.en"
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# make less more friendly for non-text input files, see lesspipe(1)
+command -v lesspipe.sh 2>&1 > /dev/null && eval "$(SHELL=/bin/sh lesspipe.sh)"
+
+
