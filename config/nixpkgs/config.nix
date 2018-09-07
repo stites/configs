@@ -97,51 +97,20 @@
         # system level deps
         noti
         prettyping
+        prettyping
         bash-completion
         bashInteractive
-        bat
-        cmake
-        curl
-        ncdu
-        fd
-        xclip
-        ripgrep
-        rxvt_unicode_with-plugins
-        aspell
-        aspellDicts.en
-        gawk
-        less
-        lesspipe
-        most
-        watch
-        xz
-        aircrack-ng
-        youtube-dl
-        pmutils
-        syncthing
-        zip
-        gnused
-        # gl # sed for json
-        entr # for when sos fails us
 
-
-
-        mosh
-        tmuxinator
-        tmux-bundled
-        tree
-        wget
-        fasd
-        fzf
-        htop
-        httpie
-        exa
-        # prettyping # <<< not in nixpkgs
-        tldr
-        jq
+        #tmuxinator
+        ## tmux-bundled
+        ## tmuxPlugins.battery
+        ## tmuxPlugins.continuum
+        ## tmuxPlugins.cpu
+        ## tmuxPlugins.fzf-tmux-url
+        ## tmuxPlugins.resurrect
+        ## tmuxPlugins.sensible
 
         # dev tools
-        emacs
         vagrant
         vim
         neovim
@@ -156,13 +125,6 @@
 
         # git stuff
         git
-        tig
-        git-lfs
-        git-radar
-        gitAndTools.git-extras
-        gitAndTools.diff-so-fancy
-        gitAndTools.hub
-        # (exe haskellPackages.git-monitor)
 
         # haskell
         hledger
@@ -182,20 +144,11 @@
         # CLI benchmarking
         hyperfine
 
-        # nix
-        nix-prefetch-git
-        nix-serve
-        nix-bash-completions
-        nix-info
-
         # yubico, unexplored tools
         yubico-piv-tool
         yubikey-manager
         yubikey-personalization
 
-        # fonts
-        fira
-        powerline-fonts
       ];
     };
 

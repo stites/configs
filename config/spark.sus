@@ -16,6 +16,7 @@ card nixpkgs {
   outof nixpkgs
 
   config.nix
+  home.nix
 }
 
 

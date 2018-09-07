@@ -239,3 +239,5 @@ export LANGUAGE="en_US.en"
 command -v lesspipe.sh 2>&1 > /dev/null && eval "$(SHELL=/bin/sh lesspipe.sh)"
 
 
+# homemanager, temporarily
+. "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
