@@ -127,8 +127,8 @@
 
 
         mosh
-        tmux
         tmuxinator
+        tmux-bundled
         tree
         wget
         fasd
