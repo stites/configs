@@ -20,6 +20,24 @@ function safe_path_add {
   fi
 }
 
+function can_safe_add {
+  local strings="$1"
+  local newstr="$2"
+
+  if [ -d "$newstr" ]; then
+    if [[ "$strings" =~ "$newstr" ]]; then
+      # exists in end? but we add????
+      return 0
+    elif [[ "$strings" == *"$newstr"* ]]; then
+      # exists in middle? but we add????
+      return 0
+    elif echo "$strings" | grep -o -E "(^|:)$newstr" | head -1 &> /dev/null; then
+      # exists in beginning? but we add????
+      return 0
+    fi
+  fi
+  return 1
+}
 
 # Function safe_prompt_add
 # @description add a command to the $PROMPT_COMMAND only if it is not already present

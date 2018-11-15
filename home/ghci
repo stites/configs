@@ -5,7 +5,7 @@
 :set -Wno-name-shadowing
 :set -XOverloadedStrings -XScopedTypeVariables -XTupleSections -XFlexibleContexts -XDataKinds
 
-:set +s
+-- :set +s
 -- :set -XPartialTypeSignatures
 
 -- import qualified Data.Text   as T

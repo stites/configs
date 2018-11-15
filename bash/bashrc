@@ -4,6 +4,7 @@
 #IFS=$'\n\t'
 # ^^^ unofficial bash mode: https://perma.cc/UQ45-72E5
 export EDITOR='nvim'
+export BROWSER='lynx'
 # export PAGER=most
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -161,6 +162,25 @@ alias src='exec $SHELL'
 alias mr='monitors reset'
 alias mh='monitors home'
 alias ms='monitors sentenai'
+
+
+# == mail functions for bash == #
+alias neomutt="cd ~/.mail/attachments && neomutt"
+alias mutt="neomutt"
+alias protonmail-bridge="tmux new-session -d -s mail 'Desktop-Bridge --cli'"
+function draft {
+  local DRAFT_FOLDER=~/.stites/emails/drafts/
+  mkdir -p $DRAFT_FOLDER
+  local NUM_DRAFTS=$(\exa -l $DRAFT_FOLDER | wc -l)
+
+  if echo $NUM_DRAFTS >> /dev/null; then
+    echo "You have $NUM_DRAFTS in $DRAFT_FOLDER"
+    sleep 1
+  fi
+  local NEXT_DRAFT=$(( $NUM_DRAFTS+1 ))
+  nvim -c 'set tw=72 et' '+/^$' ${DRAFT_FOLDER}draft_${NEXT_DRAFT}
+}
+
 
 # == ghci to bash == #
 alias ":q"=exit

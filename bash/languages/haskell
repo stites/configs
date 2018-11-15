@@ -3,6 +3,11 @@
 # add stack installs to path
 safe_path_add "$HOME/.local/bin/"
 safe_path_add "$HOME/.cabal/bin/"
+safe_path_add "/opt/ghc/bin/"
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/hasktorch/aten/lib
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/opt/hasktorch/aten/include
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/opt/hasktorch/aten/include
 
 # stack autocomplete
 eval "$(stack --bash-completion-script stack)"

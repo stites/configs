@@ -56,3 +56,5 @@
   clean = git-lfs clean -- %f
 #[commit]
 #  gpgsign = true
+[bulkworkspaces]
+	all = /home/stites/git

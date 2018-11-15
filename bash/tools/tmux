@@ -52,3 +52,6 @@ alias hside="tmuxifier load-window hs"
 alias yiide="tmuxifier load-window yi"
 alias pyide="tmuxifier load-window py"
 
+alias protonmail-bridge="tmux new-session -d -s mail 'Desktop-Bridge --cli'"
+alias ws="tmux attach -t stites"
+alias mail="tmux attach -t mail"

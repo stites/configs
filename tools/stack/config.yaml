@@ -5,7 +5,9 @@
 templates:
   params:
     author-name: Sam Stites
-    author-email: sam@stites.io
-    copyright: 'Copyright: (c) 2017 Sam Stites'
+    author-email: 'fnz@fgvgrf.vb (cipher:rot13)'
+    copyright: 'Copyright: (c) 2018 Sam Stites'
     github-username: stites
 
+nix:
+  enable: true
