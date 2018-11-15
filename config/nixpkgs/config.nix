@@ -8,72 +8,49 @@
   # };
 
   packageOverrides = pkgs_: with pkgs_; {
-    noti = buildGoPackage rec {
-      name = "noti-${version}";
-      version = "3.1.0";
-      owner = "variadico";
-      projectPath = "github.com/${owner}/noti";
-      src = fetchFromGitHub {
-        inherit owner;
-        repo = "noti";
-        rev = "${version}";
-        sha256 = "1chsqfqk0pnhx5k2nr4c16cpb8m6zv69l1jvv4v4903zgfzcm823";
-        fetchSubmodules = true;
-      };
-      goPackagePath = "github.com/${owner}/noti";
-      preBuild = '' buildFlagsArray+=("-ldflags" "-X ${goPackagePath}/internal/command.Version=${version}") '';
-      postInstall = ''
-        mkdir -p $out/share/man/man{1,5}/
-        cp $src/docs/man/noti.1      $out/share/man/man1/
-        cp $src/docs/man/noti.yaml.5 $out/share/man/man5/
-      '';
-      meta = with stdenv.lib; {
-        description = "Monitor a process and trigger a notification.";
-        longDescription = ''
-          Monitor a process and trigger a notification.
 
-          Never sit and wait for some long-running process to finish. Noti can alert you when it's done. You can receive messages on your computer or phone.
+    rubber151 =
+      python2Packages.buildPythonApplication rec {
+        name = "rubber-${version}";
+        version = "1.5.1";
+      
+      src = fetchurl {
+          url = "https://launchpad.net/rubber/trunk/${version}/+download/${name}.tar.gz";
+          sha256 = "1d7hq19vpb3l31grldbxg8lx1qdd18f5f3gqw96q0lhf58agcjl2";
+        };
+      
+        propagatedBuildInputs = [ texinfo ];
+      
+        # I couldn't figure out how to pass the proper parameter to disable pdf generation, so we
+        # use sed to change the default
+      preBuild = ''
+          sed -i -r 's/pdf\s+= True/pdf = False/g' setup.py
         '';
-        homepage = https://github.com/variadico/noti;
-        license = licenses.mit;
-        # maintainers = [ maintainers.stites ];
-        platforms = platforms.all;
-      };
-    };
-
-    prettyping = stdenv.mkDerivation rec {
-      name = "prettyping-${version}";
-      version = "1.0.1";
-
-      src = fetchgit {
-        url = "https://github.com/denilsonsa/prettyping";
-        rev = "e8d7538b8742b27cffe28e9dfe13d1d1a12288e3";
-        sha256 = "05vfaq9y52z40245j47yjk1xaiwrazv15sgjq64w91dfyahjffxf";
-        fetchSubmodules = false;
-      };
-
-      installPhase = ''
-        mkdir -p $out/bin
-        chmod +x $src/prettyping
-        install $src/prettyping $out/bin/
-      '';
-
-      meta = with stdenv.lib; {
-        description = "A wrapper around the standard ping tool, making the output prettier, more colorful, more compact, and easier to read.";
-        longDescription = ''
-          `prettyping` runs the standard ping in background and parses its output, showing ping responses in a graphical way at the terminal (by using colors and Unicode characters). Don’t have support for UTF-8 in your terminal? No problem, you can disable it and use standard ASCII characters instead. Don’t have support for colors? No problem, you can also disable them.
+      
+        # the check scripts forces python2. If we need to use python3 at some point, we should use
+        # the correct python
+      checkPhase = ''
+          sed -i 's|python=python2|python=${python2Packages.python.interpreter}|' tests/run.sh
+          cd tests && ${stdenv.shell} run.sh
         '';
-        homepage = http://denilson.sa.nom.br/prettyping/;
-        license = licenses.mit;
-        # maintainers = [ maintainers.stites ];
-        platforms = platforms.all;
+      
+      meta = with stdenv.lib; {
+          description = "Wrapper for LaTeX and friends";
+      longDescription = ''
+            Rubber is a program whose purpose is to handle all tasks related
+            to the compilation of LaTeX documents.  This includes compiling
+            the document itself, of course, enough times so that all
+            references are defined, and running BibTeX to manage
+            bibliographic references.  Automatic execution of dvips to
+            produce PostScript documents is also included, as well as usage
+            of pdfLaTeX to produce PDF documents.
+          '';
+          license = licenses.gpl2Plus;
+          homepage = https://launchpad.net/rubber;
+          maintainers = with maintainers; [ ttuegel peterhoeg ];
+          platforms = platforms.unix;
+        };
       };
-    };
-
-    tmux-bundled = import ./tmux-bundled (with pkgs; {
-      inherit makeWrapper symlinkJoin writeText tmux git;
-    });
-
     all = with pkgs; let exe = haskell.lib.justStaticExecutables; in buildEnv {
       name = "all";
       paths = [
@@ -95,60 +72,16 @@
         # keybase-gui # <<< needs some more coordination
 
         # system level deps
-        noti
-        prettyping
-        prettyping
         bash-completion
         bashInteractive
 
-        #tmuxinator
-        ## tmux-bundled
-        ## tmuxPlugins.battery
-        ## tmuxPlugins.continuum
-        ## tmuxPlugins.cpu
-        ## tmuxPlugins.fzf-tmux-url
-        ## tmuxPlugins.resurrect
-        ## tmuxPlugins.sensible
-
         # dev tools
-        vagrant
         vim
         neovim
         gotty
         graphviz
         sqlite
         sqliteman
-
-        # elm
-        elmPackages.elm
-        elmPackages.elm-format
-
-        # git stuff
-        git
-
-        # haskell
-        hledger
-        cabal-install
-        hlint
-        haskellPackages.shake
-        # haskellPackages.shake-extras
-        (exe haskellPackages.alex)
-        (exe haskellPackages.happy)
-        (exe haskellPackages.hpack)
-        (exe haskellPackages.pointfree)
-        (exe haskellPackages.hasktags)
-        (exe haskellPackages.hspec-discover)
-        (exe haskellPackages.ghcid)
-        (exe haskellPackages.nvim-hs-ghcid)
-
-        # CLI benchmarking
-        hyperfine
-
-        # yubico, unexplored tools
-        yubico-piv-tool
-        yubikey-manager
-        yubikey-personalization
-
       ];
     };
 
@@ -165,26 +98,6 @@
     golangEnv = buildEnv {
       name = "golangEnv";
       paths = [ dep2nix go2nix go ];
-    };
-
-    luatorch-env = buildEnv {
-      name = "luatorch-env";
-      paths = [
-        torchPackages.torch
-        # torchPackages.sys
-        torchPackages.trepl
-        # torchPackages.nn
-        # torchPackages.nngraph
-        # torchPackages.optim
-        # torchPackages.cwrap
-        # torchPackages.dok
-        # torchPackages.luafilesystem
-        # torchPackages.gnuplot
-        # torchPackages.graph
-        torchPackages.luarocks
-        # torchPackages.paths
-        # torchPackages.penlight
-      ];
     };
   };
 }

@@ -10,9 +10,54 @@
 "   \   'dir': '\v[\/](.git|.cabal-sandbox|.stack-work)$',
 "   \   'file': '\v\.(o|hi|beam|dyn_hi|dyn_o)$'
 "   \ }
-"
+
+" LanguageClient-neovim ========================================================
+" set rtp+=~/.config/nvim/bundle/LanguageClient-neovim//pack/XXX/start/LanguageClient-neovim
+"set rtp+=~/.nix-profil/bin/
+" set runtimepath+=$HOME/.nix-profile/bin
+let g:LanguageClient_settingsPath='~/.config/nvim/lsp/settings.json'
+
+" there seems to be a bug where this is not sourced correctly. Moved to the bottom of init.vim
+"let g:LanguageClient_serverCommands = {
+"    \ 'haskell': ['/home/stites/.nix-profile/bin/hie-wrapper', '--lsp'],
+"    \ 'rust': ['/home/stites/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+"    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+"    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+"    \ 'python': ['/usr/local/bin/pyls'],
+"    \ }
+
+" You'll probably want to add some mappings for common commands:
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+map <Leader>lk :call LanguageClient#textDocument_hover()<CR>
+map <Leader>lg :call LanguageClient#textDocument_definition()<CR>
+map <Leader>lr :call LanguageClient#textDocument_rename()<CR>
+map <Leader>lf :call LanguageClient#textDocument_formatting()<CR>
+map <Leader>lb :call LanguageClient#textDocument_references()<CR>
+map <Leader>la :call LanguageClient#textDocument_codeAction()<CR>
+map <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
+" If you'd like diagnostics to be highlighted, add a highlight group for ALEError/ALEWarning/ALEInfo,
+" or customize g:LanguageClient_diagnosticsDisplay:
+" hi link ALEError Error
+" hi Warning term=underline cterm=underline ctermfg=Yellow gui=undercurl guisp=Gold
+" hi link ALEWarning Warning
+" hi link ALEInfo SpellCap
+
+"let g:LanguageClient_devel = 1 " Use rust debug build
+"let g:LanguageClient_loggingLevel = 'DEBUG' " Use highest logging level
+
+" If you're finding that the server isn't starting at the correct project root, it may also be helpful to also specify root markers:
+let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml', 'cabal.project']
+
 " vim-session ==================================================================
 let g:session_autosave = 'no'
+
+
+" work with neomutt ============================================================
+au BufRead /tmp/neomutt-* set tw=72
+augroup filetypedetect
+  " Mail
+  autocmd BufRead,BufNewFile *mutt-*  setfiletype mail
+augroup END
 
 " bufkill-vim ==================================================================
 nmap <C-w> :BD<CR>

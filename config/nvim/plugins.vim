@@ -2,6 +2,13 @@
 call plug#begin('~/.config/nvim/bundle')
 
 " LANGUAGE PLUGINS
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': './install.sh'
+    \ }
+
+" Dhall
+Plug 'vmchale/dhall-vim',     { 'for': 'dhall' }
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim',     { 'for': 'haskell' }
@@ -24,6 +31,9 @@ Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 
 " LaTeX plugins
 Plug 'lervag/vimtex', { 'for': 'latex' }
+
+" C++ plugins
+Plug 'Rip-Rip/clang_complete', { 'for': 'c' }
 
 
 " SYSTEM PLUGINS

@@ -1,3 +1,5 @@
+source $HOME/.config/nvim/plugins.vim
+
 " HVN paths {{{
 " " Set XDG_CONFIG_HOME/haskell-vim-now to load user's config files
 " if exists($XDG_CONFIG_HOME)
@@ -31,7 +33,6 @@ set encoding=utf-8
 source $HOME/.config/nvim/defaults.vim
 source $HOME/.config/nvim/haskell.vim
 source $HOME/.config/nvim/elm.vim
-source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/plugins-config.vim
 source $HOME/.config/nvim/ui.vim
 source $HOME/.config/nvim/spelling.vim
@@ -372,4 +373,13 @@ set completeopt+=longest
 let g:SuperTabDefaultCompletionType = '<c-x><c-p>'
 
 " }}}
+
+let g:LanguageClient_serverCommands = {
+    \ 'haskell': ['hie-wrapper', '--lsp'],
+    \ 'haskell.hspec': ['hie-wrapper', '--lsp'],
+    \ 'rust': ['/home/stites/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+    \ 'python': ['/usr/local/bin/pyls'],
+    \ }
 

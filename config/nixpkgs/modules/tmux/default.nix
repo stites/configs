@@ -9,6 +9,7 @@ let
     tmuxPlugins.battery
     tmuxPlugins.cpu
     tmuxPlugins.sensible
+    tmuxPlugins.fzf-tmux-url
   ];
 
   systemSettings = builtins.readFile ./global.conf;
