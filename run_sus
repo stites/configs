@@ -3,7 +3,11 @@
 COMMAND="$1"
 TARGET="$2"
 FLAG="$3"
-SUS=/home/stites/.local/bin/super-user-spark
+if [ -f /home/stites/.local/bin/super-user-spark ]; then
+  SUS=/home/stites/.local/bin/super-user-spark
+else
+  SUS=spark
+fi
 
 git submodule update --init --recursive
 
