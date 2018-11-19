@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 # ============================================= #
 export PYENV_ROOT="${HOME}/.pyenv"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
@@ -23,9 +24,30 @@ if [ -d "${PYENV_ROOT}" ]; then
     # ================================ #
     # eval "$(pyenv init -)"
     safe_path_add "$HOME/.pyenv/shims"
+
     export PYENV_SHELL=bash
-    source "$HOME/.pyenv/libexec/../completions/pyenv.bash"
-    nohup command pyenv rehash > /dev/null 2>&1 &
+    _pyenv() {
+      COMPREPLY=()
+      local completions
+      local word
+      local words
+      word="${COMP_WORDS[COMP_CWORD]}"
+      if [ "$COMP_CWORD" -eq 1 ]; then
+        # shellcheck disable=SC2207
+        COMPREPLY=( $(compgen -W "$(pyenv commands)" -- "$word") )
+      else
+        words=("${COMP_WORDS[@]}")
+        unset "words[0]"
+        unset "words[$COMP_CWORD]"
+        completions=$(pyenv completions "${words[@]}")
+        # shellcheck disable=SC2207
+        COMPREPLY=( $(compgen -W "$completions" -- "$word") )
+      fi
+    }
+    complete -F _pyenv pyenv
+
+    (nohup command pyenv rehash </dev/null >/dev/null 2>&1 &) || true
+
     pyenv() {
       local command
       command="$1"
@@ -44,24 +66,25 @@ if [ -d "${PYENV_ROOT}" ]; then
     # ================================ #
     # eval "$(pyenv virtualenv-init -)"
     safe_path_add "$HOME/.pyenv/plugins/pyenv-virtualenv/shims"
+
     export PYENV_VIRTUALENV_INIT=1;
     _pyenv_virtualenv_hook() {
       local ret=$?
-      if [ -n "$VIRTUAL_ENV" ]; then
+      if [ -n "${VIRTUAL_ENV:-}" ]; then
         eval "$(pyenv sh-activate --quiet || pyenv sh-deactivate --quiet || true)" || true
       else
         eval "$(pyenv sh-activate --quiet || true)" || true
       fi
       return $ret
     };
-    if ! [[ "$PROMPT_COMMAND" =~ _pyenv_virtualenv_hook ]]; then
-      PROMPT_COMMAND="_pyenv_virtualenv_hook;$PROMPT_COMMAND";
-    fi
 
+    if [[ "${PROMPT_COMMAND:-}" != *"_pyenv_virtualenv_hook"* ]]; then
+      PROMPT_COMMAND="_pyenv_virtualenv_hook; ${PROMPT_COMMAND:-}"
+    fi
 fi
 
 # used by jupyter notebook to set the notebook directory
-unset XDG_RUNTIME_DIR
+#unset XDG_RUNTIME_DIR
 
 # run virtualenvwrapper from nix
 #if [ -n "`which virtualenvwrapper.sh`" ]; then

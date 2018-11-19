@@ -22,8 +22,10 @@ dynamic_prompt (){
     else
       MUSER="$(whoami)"
     fi
+    #shellcheck disable=SC1117
     BASE="${PROMPT_USER_COLOR}${MUSER}${COLOR_AT}@${PROMPT_HOST_COLOR}\h"
   else
+    #shellcheck disable=SC1117
     BASE="${COLOR_AT}@${PROMPT_HOST_COLOR}\h"
   fi
 
@@ -33,8 +35,10 @@ dynamic_prompt (){
   GBRANCH="$(find_git_branch)"
 
   if [ ! -z "${GBRANCH}" ]; then
+    #shellcheck disable=SC1117
     ENDING="${PROMPT_PATH_COLOR_GIT}\W${PROMPT_BRANCH_COLOR_GIT}#_(${GBRANCH})${RED}$(find_git_dirty)"
   else
+    #shellcheck disable=SC1117
     ENDING="${PROMPT_PATH_COLOR}\W"
   fi
 
@@ -54,7 +58,7 @@ dynamic_prompt (){
   export PS1="${ENVS}${BASE}${SEP}${ENDING} ${RESET}"
 }
 
-if [[ $PROMPT_COMMAND != "pre_dynamic_prompt; "* ]]; then
+if ! [[ $PROMPT_COMMAND == "pre_dynamic_prompt; "* ]]; then
   PROMPT_COMMAND="pre_dynamic_prompt; $PROMPT_COMMAND"
 
   if [[ $PROMPT_COMMAND != *"dynamic_prompt; " ]]; then
@@ -63,9 +67,11 @@ if [[ $PROMPT_COMMAND != "pre_dynamic_prompt; "* ]]; then
       *)          PROMPT_COMMAND="$PROMPT_COMMAND; dynamic_prompt; " ;;
     esac
   else
+    #shellcheck disable=SC1117
     export PS1="[\u@\h:\W]\$ "
   fi
 else
+  #shellcheck disable=SC1117
   export PS1="[\u@\h:\W]\$ "
 fi
 

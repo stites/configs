@@ -20,7 +20,7 @@
 #NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
 # load nvm if exported variable does not exist
-if [ -n "$NVM_DIR" ]; then
+if [ -n "${NVM_DIR:-}" ]; then
     export NVM_DIR="$HOME/.nvm"
     safe_source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
@@ -34,17 +34,17 @@ if [ -n "$NVM_DIR" ]; then
 
     nvm() {
       lazynvm
-      nvm $@
+      nvm "$@"
     }
 
     node() {
       lazynvm
-      node $@
+      node "$@"
     }
 
     npm() {
       lazynvm
-      npm $@
+      npm "$@"
     }
 
 fi

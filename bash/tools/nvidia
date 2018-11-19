@@ -9,7 +9,9 @@ echo "$LD_LIBRARY_PATH" | grep hasktorch > /dev/null || {
 
 # MKL Required for cuda LAPACK
 if [ -d "/opt/intel/lib" ]; then
+  #shellcheck disable=1091
   source /opt/intel/compilers_and_libraries/linux/bin/compilervars.sh intel64
+  #shellcheck disable=1091
   source /opt/intel/mkl/bin/mklvars.sh intel64
 
   export LD_LIBRARY_PATH="/opt/intel/mkl/lib/intel64:/opt/intel/lib/intel64:$LD_LIBRARY_PATH"
@@ -57,9 +59,12 @@ if [ -n "$CUDADIR" ] && [ -z "$CUDADIRS_SET" ]; then
   fi
 
   function GPULogoOff {
+    #shellcheck disable=SC2034
     local GPU_NUM="$1"
+    #shellcheck disable=SC2102
     GPU_BRIGHTNESS="$(nvidia-settings --query [gpu:$GPU_NUM]/GPULogoBrightness --terse 2>/dev/null)"
-    if $GPU_LIGHTS_OFF && [ "$GPU_BRIGHTNESS" != "0" ] && [ "$GPU_BRIGHTNESS" != "" ]; then
+    if [ -n "${GPU_LIGHTS_OFF:-}" ] && [ "$GPU_BRIGHTNESS" != "0" ] && [ "$GPU_BRIGHTNESS" != "" ]; then
+      #shellcheck disable=SC2102
       nvidia-settings --assign [gpu:$GPU_NUM]/GPULogoBrightness=0 1> /dev/null
     fi
   }
@@ -70,7 +75,7 @@ if [ -n "$CUDADIR" ] && [ -z "$CUDADIRS_SET" ]; then
 
   function nvidia-killall {
     for pid in $(nvidia-pids); do
-      kill -15 $pid
+      kill -15 "$pid"
     done
   }
 
