@@ -13,6 +13,7 @@ let
   nix = import ./bash/nix.nix;
   haskell = import ./bash/haskell.nix { inherit lib; };
   functions = import ./bash/functions.nix { inherit lib; };
+  nix-profile = "${homeDir}/.nix-profile/";
 in
 {
   enable = true;
@@ -57,11 +58,11 @@ in
 
     # Use https://github.com/rdnetto/powerline-hs
     POWERLINE_COMMAND="${homeDir}/.local/bin/powerline-hs";
-    POWERLINE_CONFIG_COMMAND="${pkgs.coreutils}/bin/true";
+    POWERLINE_CONFIG_COMMAND="${nix-profile}/bin/true";
 
     # make less more friendly for non-text input files, see lesspipe(1)
     # the output of eval "$(SHELL=/bin/sh lesspipe.sh)"
-    LESSOPEN="|${pkgs.lesspipe}/bin/lesspipe.sh %s"; # FIXME << do we even need this?
+    LESSOPEN="|${nix-profile}/bin/lesspipe.sh %s"; # FIXME << do we even need this?
 
   } // colors // pyenv.variables // prompt.variables;
 
@@ -85,38 +86,38 @@ in
 
     # == mail functions for bash == #
     neomutt="cd ~/.mail/attachments && neomutt";
-    mutt="${pkgs.neomutt}/bin/neomutt";
+    mutt="${nix-profile}/bin/neomutt";
 
     # tmux aliases
-    protonmail-bridge="${pkgs.tmux}/bin/tmux new-session -d -s mail 'Desktop-Bridge --cli'";
-    ws="${pkgs.tmux}/bin/tmux attach -t stites";
-    mail="${pkgs.tmux}/bin/tmux attach -t mail";
+    protonmail-bridge="${nix-profile}/bin/tmux new-session -d -s mail 'Desktop-Bridge --cli'";
+    ws="${nix-profile}/bin/tmux attach -t stites";
+    mail="${nix-profile}/bin/tmux attach -t mail";
 
     # vim aliases
-    vimd="${pkgs.neovim}/bin/nvim --headless ";
-    vimattach="${pkgs.neovim}/bin/nvim --servername VIM_SERVER --remote-tab ";
-    visnippets="${pkgs.neovim}/bin/nvim ~/.config/nvim/snippets/haskell.snippets";
+    vimd="${nix-profile}/bin/nvim --headless ";
+    vimattach="${nix-profile}/bin/nvim --servername VIM_SERVER --remote-tab ";
+    visnippets="${nix-profile}/bin/nvim ~/.config/nvim/snippets/haskell.snippets";
 
     # == ghci to bash == #
     ":q"="exit";
     ":r"="myReload";
 
-    preview="${pkgs.fzf}/bin/fzf --preview 'bat --color \"always\" {}'";
+    preview="${nix-profile}/bin/fzf --preview 'bat --color \"always\" {}'";
 
-    cat  = "${pkgs.bat}/bin/bat";
-    less = "${pkgs.most}/bin/most";
-    ping = "${pkgs.prettyping}/bin/prettyping --nolegend";
-    top  = "${pkgs.ncdu}/bin/htop";
-    du   = "${pkgs.ncdu}/bin/ncdu --color dark -rr -x --exclude .git --exclude node_modules --exclude .stack-work --exclude dist-newstyle";
-    help = "${pkgs.tldr}/bin/tldr";
-    curl = "${pkgs.httpie}/bin/http";
+    cat  = "${nix-profile}/bin/bat";
+    less = "${nix-profile}/bin/most";
+    ping = "${nix-profile}/bin/prettyping --nolegend";
+    top  = "${nix-profile}/bin/htop";
+    du   = "${nix-profile}/bin/ncdu --color dark -rr -x --exclude .git --exclude node_modules --exclude .stack-work --exclude dist-newstyle";
+    help = "${nix-profile}/bin/tldr";
+    curl = "${nix-profile}/bin/http";
 
     # the lss
-    la   = "${pkgs.exa}/bin/exa";
-    ls   = "${pkgs.exa}/bin/exa -s extension";
-    l    = "${pkgs.exa}/bin/exa -s extension --group-directories-first -l";
-    ll   = "${pkgs.exa}/bin/exa -s extension --group-directories-first -a -l";
-    lll  = "${pkgs.exa}/bin/exa -s extension --group-directories-first -aa -l";
+    la   = "${nix-profile}/bin/exa";
+    ls   = "${nix-profile}/bin/exa -s extension";
+    l    = "${nix-profile}/bin/exa -s extension --group-directories-first -l";
+    ll   = "${nix-profile}/bin/exa -s extension --group-directories-first -a -l";
+    lll  = "${nix-profile}/bin/exa -s extension --group-directories-first -aa -l";
 
     # the greps
     grep="grep --color=auto";
@@ -126,7 +127,7 @@ in
     vgrep="vgrep -v";
 
     # dictd:https://www.unixmen.com/look-dictionary-definitions-via-terminal/
-    define="${pkgs.dict}/bin/dictd -d gcide ";
+    define="${nix-profile}/bin/dictd -d gcide ";
 
     # Add an "alert" alias for long running commands.  Use like so:
     #   sleep 10; alert
@@ -147,8 +148,8 @@ in
     # FIXME: remove this? it's legacy from debian and ubuntu
     ''
     if ! shopt -oq posix; then
-      if [ -f ${pkgs.bash-completion}/etc/profile.d/bash_completion.sh ]; then
-        source ${pkgs.bash-completion}/etc/profile.d/bash_completion.sh
+      if [ -f ${nix-profile}/etc/profile.d/bash_completion.sh ]; then
+        source ${nix-profile}/etc/profile.d/bash_completion.sh
       else
         echo "warning! <nixpkgs>.bash-completion/etc/profile.d/bash_completion.sh not found. maybe garbage collection occured?"
       fi
@@ -198,7 +199,7 @@ in
     # core aliases which must be added last -- PR for home-manager #
     # ============================================================ #
     ''
-    alias find="${pkgs.fd}/bin/fd"
+    alias find="${nix-profile}/bin/fd"
     safe_source "$HOME/.fonts/*.sh"
     ''
   ]);

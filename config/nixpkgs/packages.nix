@@ -28,6 +28,8 @@ in
 [
   fortune
   cowsay
+  coreutils
+  neofetch
 
   # alacritty
   noti
@@ -59,6 +61,8 @@ in
   # gl # sed for json
   entr # for when sos fails us
   mosh
+  shellcheck
+  par
 
   # email
   protonmail-bridge
@@ -105,6 +109,7 @@ in
   # haskell
   hledger
   cabal-install
+  stack
   hlint
   (exe haskellPackages.shake)
   # haskellPackages.shake-extras
