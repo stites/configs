@@ -1,7 +1,5 @@
 #!/bin/bash
 
-alias vi=nvim
-alias vim=nvim
 alias vimd="nvim --headless "
 alias vimattach="nvim --servername VIM_SERVER --remote-tab "
 alias visnippets="nvim ~/.config/nvim/snippets/haskell.snippets"

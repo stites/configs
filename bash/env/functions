@@ -8,7 +8,7 @@
 # @description add path to $PATH variable, if it is not already there.
 function safe_path_add {
   if [ -d "$1" ]; then
-    if [[ "$PATH" =~ "$1" ]]; then
+    if [[ "$PATH" =~ $1 ]]; then
       export PATH="$1:$PATH"
     elif [[ "$PATH" == *"$1"* ]]; then
       # echo "ADDING WITH FALLBACK CHECK $1"
@@ -25,7 +25,7 @@ function can_safe_add {
   local newstr="$2"
 
   if [ -d "$newstr" ]; then
-    if [[ "$strings" =~ "$newstr" ]]; then
+    if [[ "$strings" =~ $newstr ]]; then
       # exists in end? but we add????
       return 0
     elif [[ "$strings" == *"$newstr"* ]]; then
@@ -42,8 +42,10 @@ function can_safe_add {
 # Function safe_prompt_add
 # @description add a command to the $PROMPT_COMMAND only if it is not already present
 function safe_prompt_add {
-  if [[ $PROMPT_COMMAND != *"$1"* ]]; then
-    export PROMPT_COMMAND="$1; $PROMPT_COMMAND"
+  local promptcmd
+  promptcmd="${PROMPT_COMMAND:-}"
+  if [[ "$promptcmd" != *"$1"* ]]; then
+    export PROMPT_COMMAND="$1; $promptcmd"
   fi
 }
 
@@ -52,21 +54,21 @@ function find_git_branch {
   local branch tag_0 tag t0 SLOW_DIR
   SLOW_DIR=$HOME/.bash/_find_git_brach.last
   MILLI_CAP=40
-  touch $SLOW_DIR
+  touch "$SLOW_DIR"
 
   if branch=$(\git rev-parse --abbrev-ref HEAD 2> /dev/null) && [[ "$branch" == "HEAD" ]]; then
-    if [[ "$(\cat $SLOW_DIR)" == "$PWD" ]]; then
+    if [[ "$(\cat "$SLOW_DIR")" == "$PWD" ]]; then
       branch="$(\git rev-parse --short=7 HEAD)-notags"
     else
       t0=$(date +%s%3N)
       tag_0="$(\git describe --tags --abbrev=0 2> /dev/null)"
-      tdiff=$(($(date +%s%3N)-$t0))
+      tdiff=$(($(date +%s%3N)-t0))
 
-      if (( $tdiff > $MILLI_CAP )); then
-        echo $PWD > $SLOW_DIR
+      if (( tdiff > MILLI_CAP )); then
+        echo "$PWD" > "$SLOW_DIR"
         branch="$(\git rev-parse --short=7 HEAD)-notags"
       else
-        echo "" > $SLOW_DIR
+        echo "" > "$SLOW_DIR"
 
         tag="$(\git describe --tags 2> /dev/null)"
 
@@ -80,7 +82,7 @@ function find_git_branch {
       fi
     fi
   fi
-  echo $branch
+  echo "$branch"
 }
 
 function find_git_dirty {
@@ -158,6 +160,20 @@ function notes {
 function workingmemory {
   dotFolder
   vim ~/.stites/workingmemory.md
+}
+
+function draft {
+  local DRAFT_FOLDER="$HOME/.stites/emails/drafts/"
+  mkdir -p "$DRAFT_FOLDER"
+  local NUM_DRAFTS
+  NUM_DRAFTS=$(\exa -l "$DRAFT_FOLDER" | wc -l)
+
+  if echo "$NUM_DRAFTS" >> /dev/null; then
+    echo "You have $NUM_DRAFTS in $DRAFT_FOLDER"
+    sleep 1
+  fi
+  local NEXT_DRAFT=$(( NUM_DRAFTS+1 ))
+  nvim -c 'set tw=72 et' '+/^$' "${DRAFT_FOLDER}draft_${NEXT_DRAFT}"
 }
 
 # Function stack-intero

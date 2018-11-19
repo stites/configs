@@ -1,27 +1,32 @@
 #!/bin/bash
 # WARNING - THIS SCRIPT IS INCREDIBLY SLOW
 # ========================================
-SSH_ENV="$HOME/.ssh/environment"
+export SSH_ENV="$HOME/.ssh/environment"
 
 function start_agent {
+  local sshenv
+  sshenv="${SSH_ENV:-}"
+
   echo "Initialising new SSH agent..."
-  /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+  #shellcheck disable=SC2091
+  $(command -v ssh-agent) | sed 's/^echo/#echo/' > "${sshenv}"
   echo succeeded
-  chmod 600 "${SSH_ENV}"
+  chmod 600 "${sshenv}"
   # File may not exist, so don't follow for shellcheck linting (SC1090).
   # shellcheck source=/dev/null
-  . "${SSH_ENV}" > /dev/null
+  . "${sshenv}" > /dev/null
 }
 
 # Source SSH settings, if applicable
 if [ -f "${SSH_ENV}" ]; then
   # File may not exist, so don't follow for shellcheck linting (SC1090).
   # shellcheck source=/dev/null
-  . "${SSH_ENV}" > /dev/null
+  . "${SSH_ENV:-}" > /dev/null
+  agentpid="${SSH_AGENT_PID:-}"
 
   # make ssh-agent idempotent.
-  if [ -n "${SSH_AGENT_PID}" ]; then
-    ps aux | awk '{print $2}' | grep $SSH_AGENT_PID > /dev/null || {
+  if [ -n "${agentpid}" ]; then
+    ps aux | awk '{print $2}' | grep "$agentpid" > /dev/null || {
       start_agent
       /usr/bin/ssh-add
     }
@@ -32,8 +37,8 @@ else
 fi
 
 # Fix SSH auth socket location so agent forwarding works with tmux
-if test "$SSH_AUTH_SOCK" ; then
-  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+if test "${SSH_AUTH_SOCK:-}" ; then
+  ln -sf "${SSH_AUTH_SOCK:-}" ~/.ssh/ssh_auth_sock
 fi
 
 # fun stuff:

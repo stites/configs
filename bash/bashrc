@@ -1,6 +1,23 @@
 #!/usr/bin/env bash
 
-#set -euo pipefail
+# See https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/ (perma: https://perma.cc/Q3D3-H6CY )
+#set -Eeo pipefail
+#   / | \
+#  |  |  |
+#   `-------- 'E' allows us to capture traps like EXIT, DEBUG, RETURN, and ERR in conjunction with 'e'
+#     |  |
+#      `----- 
+#        |
+#         `-- 
+#
+# Missing
+# -------
+# set -x  : causes bash to print each command before executing it.
+# set -u  : causes bash shell to treat unset variables as an error and exit immediately. Defaults set with ${a:-b} will still succeed.
+#           Using conditional statements that check if variables are set:
+#             if [ -z "${MY_VAR:-}" ]; then echo "MY_VAR was not set"; fi
+#
+
 #IFS=$'\n\t'
 # ^^^ unofficial bash mode: https://perma.cc/UQ45-72E5
 export EDITOR='nvim'
@@ -42,7 +59,7 @@ esac
 export HISTCONTROL=ignoredups:ignorespace:erasedups:ignoreboth
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
+HISTSIZE=10000
 HISTFILESIZE=2000
 
 # shopt -s histappend   # append to the history file, don't overwrite it
@@ -108,7 +125,7 @@ if command -v exa > /dev/null 2>&1; then
   alias l="  exa -s extension --group-directories-first -l"
   alias ll=" exa -s extension --group-directories-first -a -l"
   alias lll="exa -s extension --group-directories-first -aa -l"
-elif $(which ls) --color > /dev/null 2>&1; then
+elif $(command -v ls) --color > /dev/null 2>&1; then
   # use preferred ls commands
   alias ls=" \$(which ls) --color -C -X --group-directories-first"
   alias la=" \$(which ls) --color -C -A"
@@ -216,14 +233,14 @@ safe_source "$HOME/.travis/travis.sh"
 # set bell-style none
 
 
-# Setting rg as the default source for fzf
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
-# To apply the command to CTRL-T as well
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
-
-safe_source "$HOME/.fzf/shell/key-bindings.bash"
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# # Setting rg as the default source for fzf
+# export FZF_DEFAULT_COMMAND='rg --files --hidden'
+# # To apply the command to CTRL-T as well
+# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
+# 
+# safe_source "$HOME/.fzf/shell/key-bindings.bash"
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 
@@ -231,7 +248,6 @@ alias find="fd"
 alias cat="bat"
 alias ping="prettyping --nolegend"
 alias top="htop"
-alias find="fd"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules --exclude .stack-work --exclude dist-newstyle"
 alias help="tldr"
 alias curl="http"
@@ -252,12 +268,29 @@ fi
 # dictd:https://www.unixmen.com/look-dictionary-definitions-via-terminal/
 alias define="dict -d gcide "
 
-export LANG="en_US.UTF-8"
-export LANGUAGE="en_US.en"
+#export LANG="en_US.UTF-8"
+#export LANGUAGE="en_US.en"
 
 # make less more friendly for non-text input files, see lesspipe(1)
-command -v lesspipe.sh 2>&1 > /dev/null && eval "$(SHELL=/bin/sh lesspipe.sh)"
+( command -v lesspipe.sh &> /dev/null ) && eval "$(SHELL=/bin/sh lesspipe.sh)"
 
+# HOMEMANAGER, TEMPORARILY
+# shellcheck disable=1090
+source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 
-# homemanager, temporarily
-. "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+if [ -f /etc/nixos/configuration.nix ] && ( command -v systemctl &> /dev/null ); then
+  systemctl status display-manager.service &> /dev/null
+  ret=$?
+  if [ $ret -ne 0 ]; then
+    printf "Non-root user %s without display. Boot X? ([y]|n) " "$(whoami)"
+    read -r bootx
+    case "$bootx" in
+      ""|"y"|"Y")
+        systemctl start display-manager.service
+        ;;
+    esac
+  fi
+  if [ -z "${TMUX_PANE:-}" ] && command -v neofetch &> /dev/null; then
+    neofetch
+  fi
+fi

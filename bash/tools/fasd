@@ -54,11 +54,11 @@ if type "fasd" &> /dev/null && [ "$BASH_VERSION" ] && type complete &> /dev/null
           printf %q "$line" 2>/dev/null  && \
           printf \\n
       done)
-    local IFS=$'\n'; COMPREPLY=( $RESULT )
+    local IFS=$'\n'; COMPREPLY=( "$RESULT" )
   }
   _fasd_bash_hook_cmd_complete() {
-    for cmd in $*; do
-      complete -F _fasd_bash_cmd_complete $cmd
+    for cmd in "$@"; do
+      complete -F _fasd_bash_cmd_complete "$cmd"
     done
   }
 
