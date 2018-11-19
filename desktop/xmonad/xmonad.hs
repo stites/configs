@@ -2,6 +2,12 @@
 
 import Data.Monoid ((<>))
 import System.IO (hPutStrLn)
+import Control.Monad.IO.Class (liftIO)
+import Data.Map (Map)
+import Graphics.X11.Xlib ()
+import System.Exit (ExitCode(ExitSuccess), exitWith)
+import System.Taffybar.Support.PagerHints (pagerHints)
+
 import XMonad
 import XMonad.Actions.CycleWS (nextWS, prevWS, shiftToPrev, shiftToNext)
 import XMonad.Actions.DynamicWorkspaces (addWorkspacePrompt, removeEmptyWorkspace)
@@ -11,7 +17,8 @@ import XMonad.Config.Desktop
 import XMonad.Hooks.DynamicLog (xmobar, PP(..))
 import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Hooks.FadeWindows -- (fadeWindowsLogHook)
-import XMonad.Hooks.ManageDocks (AvoidStruts, ToggleStruts(..), avoidStruts, docksEventHook, manageDocks)
+import XMonad.Hooks.ManageDocks (AvoidStruts, ToggleStruts(..), avoidStruts, docksEventHook, manageDocks, docks)
+import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.BinarySpacePartition
 import XMonad.Layout.LayoutModifier (ModifiedLayout)
@@ -20,6 +27,7 @@ import XMonad.ManageHook
 import XMonad.Prompt (XPrompt, XPConfig(..))
 import XMonad.Util.Cursor (setDefaultCursor)
 
+import qualified Data.Map as M
 import qualified XMonad.Hooks.DynamicLog as DLog
 import qualified XMonad.Hooks.SetWMName as Window
 import qualified XMonad.Layout.BinarySpacePartition as BSP
@@ -33,43 +41,42 @@ import qualified XMonad.Util.EZConfig as EZ
 
 -- import System.Taffybar.Hooks.PagerHints (pagerHints)
 
+
 main :: IO ()
 main = do
   -- xmproc <- spawnPipe "xmobar -d ~/git/configs/desktop/xmonad/xmobar.hs"
   -- xmproc <- Run.spawnPipe "xmobar ~/.xmonad/xmobarrc.hs"
   -- xmonad =<< xmobar myConfig
-  xmonad $ myConfig
-    -- gives taffybar logger information
-    -- ewmh $
-    -- pagerHints $
-    -- xmonad $ defaultConfig { startupHook = setWMName "LG3D" }
 
-myConfig = desktopConfig
-  { modMask    = mod4Mask  -- Rebind Mod to super
-  , terminal   = "urxvt"
-  , workspaces = ["1", "2", "3", "4"]
-  , borderWidth        = 1
-  , focusFollowsMouse  = False
-  -- , manageHook         = manageDocks <+> manageHook def <+> (resource =? launcher --> doIgnore)
-  , layoutHook         = layout_hook
-  , handleEventHook    = docksEventHook <+> handleEventHook def
-  -- , logHook = do
-  --     -- fadeWindowsLogHook (composeAll [isUnfocused --> transparency 1.0, opaque]) -- This doesn't seem to do anything
-  --     DLog.dynamicLogWithPP DLog.xmobarPP
-  --       { ppCurrent = DLog.xmobarColor "black" "gray"
-  --       , ppHidden  = DLog.xmobarColor "orange" ""
-  --       , ppHiddenNoWindows = id
-  --       --, ppOutput  = hPutStrLn xmproc
-  --       , ppSep     = DLog.xmobarColor "orange" "" " | "
-  --       , ppTitle   = DLog.xmobarColor "lightblue" "" . DLog.shorten 120
-  --       , ppOrder   = \[a,_,b] -> [a, b]    -- Don't log layout name
-  --       }
-  -- , startupHook = startup_hook
-  } `EZ.removeKeysP` removeKeys'
-    `EZ.additionalKeysP` additionalKeys'
-
-launcher :: String
-launcher = "albert"
+  xmonad
+    . ewmh . pagerHints        -- gives taffybar logger information
+    . docks
+    $ desktopConfig
+      { modMask    = mod4Mask  -- Rebind Mod to super
+      , terminal   = "urxvt"
+      , workspaces = show <$> [1..6]
+      , borderWidth        = 4
+      , focusFollowsMouse  = False
+      , manageHook         = manageDocks <+> manageHook def <+> launcherHook
+      , layoutHook         = myLayout
+      , handleEventHook    = docksEventHook <+> handleEventHook def
+      -- , logHook = do
+      --     -- fadeWindowsLogHook (composeAll [isUnfocused --> transparency 1.0, opaque]) -- This doesn't seem to do anything
+      --     DLog.dynamicLogWithPP DLog.xmobarPP
+      --       { ppCurrent = DLog.xmobarColor "black" "gray"
+      --       , ppHidden  = DLog.xmobarColor "orange" ""
+      --       , ppHiddenNoWindows = id
+      --       --, ppOutput  = hPutStrLn xmproc
+      --       , ppSep     = DLog.xmobarColor "orange" "" " | "
+      --       , ppTitle   = DLog.xmobarColor "lightblue" "" . DLog.shorten 120
+      --       , ppOrder   = \[a,_,b] -> [a, b]    -- Don't log layout name
+      --       }
+      -- , startupHook = startup_hook
+      } `EZ.removeKeysP` removeKeys'
+        `EZ.additionalKeysP` additionalKeys'
+  where
+    launcherHook :: ManageHook
+    launcherHook = resource =? "albert" --> doIgnore
 
 type (:+) f g = Choose f g
 infixr 5 :+
@@ -80,39 +87,23 @@ infixr 5 :+
 --        (ModifiedLayout Maximize
 --          (ModifiedLayout SmartSpacing (BSP.BinarySpacePartition :+ Full)))
 --      Window
-layout_hook = modify (emptyBSP ||| Full)
+myLayout = modify (emptyBSP ||| Full)
  where
   modify = avoidStruts . maximize . Spacing.smartSpacing 0
   tall = Tall 1 (3/100) (1/2)
 
-
--- startup_hook :: X ()
--- startup_hook = do
---   Window.setWMName "LG3D"
---   setDefaultCursor xC_top_left_arrow
---   -- toggleHDMI
---   where
---     toggleHDMI :: MonadIO m => m ()
---     toggleHDMI = LIS.countScreens >>= spawn . xrandrToggle
---       where
---         xrandrToggle :: Int -> String
---         xrandrToggle sc =
---           case compare sc 1 of
---             GT -> "echo \"foo\" && xrandr"
---             _  -> "echo \"bar\" && xrandr"
-
-
 removeKeys' :: [String]
-removeKeys' = [ "M-S-<Return>" -- terminal
-              , "M-S-c"        -- kill
-              , "M-<Tab>"      -- focus down
-              , "M-S-<Tab>"    -- focus up
-              --, "M-<Space>"    -- rebind in additional keys
-              , "M-h"          -- shrink
-              , "M-l"          -- expand
-              , "M-<Return>"   -- swap master
-              , "M-m"          -- focus master
-              ]
+removeKeys' =
+  [ "M-S-<Return>" -- terminal
+  , "M-S-c"        -- kill
+  , "M-<Tab>"      -- focus down
+  , "M-S-<Tab>"    -- focus up
+  --, "M-<Space>"    -- rebind in additional keys
+  , "M-h"          -- shrink
+  , "M-l"          -- expand
+  , "M-<Return>"   -- swap master
+  , "M-m"          -- focus master
+  ]
 
 
 xpconfig :: XPConfig
@@ -145,9 +136,9 @@ additionalKeys'
       ]
 
     applications =
-      [ ("M-o d",      spawn "thunar")
-      , ("M-o h",      promptSearch xpconfig hackage)
-      , ("M-<Return>", spawn =<< asks (terminal . config))
+      [ ("M-o d",        spawn "thunar")
+      , ("M-o h",        promptSearch xpconfig hackage)
+      , ("M-<Return>",   spawn =<< asks (terminal . config))
       , ("C-S-<Space>",  spawn "albert show")
       -- , ("M-i",          spawn "google-chrome-stable")
       ]
@@ -191,12 +182,8 @@ promptSearchBrowser' config browser (SearchEngine name site) =
 newtype Search' = Search' Name
 
 instance XPrompt Search' where
-    showXPrompt (Search' name)= "Search [" ++ name ++ "]: "
-    nextCompletion _ = Prompt.getNextCompletion
-    commandToComplete _ c = c
+  showXPrompt (Search' name)= "Search [" ++ name ++ "]: "
+  nextCompletion _ = Prompt.getNextCompletion
+  commandToComplete _ c = c
 
-myManagementHooks :: [ManageHook]
-myManagementHooks = [
-  resource =? launcher --> doIgnore
-  ]
 
