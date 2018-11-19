@@ -9,5 +9,28 @@ templates:
     copyright: 'Copyright: (c) 2018 Sam Stites'
     github-username: stites
 
+# Have stack cooperate with nix
 nix:
   enable: true
+  # pure set to `true` means that environment variables won't be forwarded when when running stack build
+  # at the global level we _do_ want these sorts of things
+  pure: false
+  # pacakges passed to the nix environment when running `stack build` or `stack exec`. stack will NOT see
+  # anything that hasen't been passed in here.
+
+  packages:
+    - zlib
+  #   - cario
+  #   - gcc
+  #   - gnome2.pango
+  #   - gtk2-x11
+  #   - libxml2
+  #   - pkgconfig
+  #   - upower
+  #   - x11
+  #   - xorg.libX11
+  #   - xorg.libXext
+  #   - xorg.libXinerama
+  #   - xorg.libXrandr
+  #   - xorg.libXrender
+
