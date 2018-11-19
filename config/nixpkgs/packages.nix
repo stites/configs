@@ -129,6 +129,8 @@ in
   nix-serve
   nix-bash-completions
   nix-info
+  # (exe haskellPackages.stack2nix)
+  (exe haskellPackages.cabal2nix)
 
   # security tools
   yubico-piv-tool
@@ -153,5 +155,8 @@ in
   nim
   scrot
   xdotool
+  pstree
+  texlive.combined.scheme-full
+  weechat
 ]
 

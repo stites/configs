@@ -1,0 +1,79 @@
+{ lib }:
+
+{
+  initConfig = lib.strings.concatStringsSep "\n" [
+    # (builtins.readFile ./bash/tools/fasd.sh)
+    # if fasd is in programs then
+    ''
+      # This is the output of:
+      # eval "$(fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install)"
+
+      alias a='fasd -a'
+      alias s='fasd -si'
+      alias sd='fasd -sid'
+      alias sf='fasd -sif'
+      alias d='fasd -d'
+      alias f='fasd -f'
+      # function to execute built-in cd
+      fasd_cd() {
+        if [ $# -le 1 ]; then
+          fasd "$@"
+        else
+          local _fasd_ret="$(fasd -e 'printf %s' "$@")"
+          [ -z "$_fasd_ret" ] && return
+          [ -d "$_fasd_ret" ] && cd "$_fasd_ret" || printf %s\n "$_fasd_ret"
+        fi
+      }
+      alias z='fasd_cd -d'
+      alias zz='fasd_cd -d -i'
+
+      _fasd_prompt_func() {
+        eval "fasd --proc $(fasd --sanitize $(history 1 | \
+          sed "s/^[ ]*[0-9]*[ ]*//"))" >> "/dev/null" 2>&1
+      }
+
+      # add bash hook
+      case $PROMPT_COMMAND in
+        *_fasd_prompt_func*) ;;
+        *) PROMPT_COMMAND="_fasd_prompt_func;$PROMPT_COMMAND";;
+      esac
+
+      # bash command mode completion
+      ''
+
+      "
+      _fasd_bash_cmd_complete() {
+        # complete command after \"-e\"
+        local cur=\${COMP_WORDS[COMP_CWORD]}
+        [[ \${COMP_WORDS[COMP_CWORD-1]} == -*e ]] && \
+          COMPREPLY=( $(compgen -A command $cur) ) && return
+        # complete using default readline complete after \"-A\" or \"-D\"
+        case \${COMP_WORDS[COMP_CWORD-1]} in
+          -A|-D) COMPREPLY=( $(compgen -o default $cur) ) && return;;
+        esac
+        # get completion results using expanded aliases
+        local RESULT=$( fasd --complete \"$(alias -p $COMP_WORDS \
+          2>> \"/dev/null\" | sed -n \"\\$s/^.*'\\(.*\\)'/\\1/p\")
+          \${COMP_LINE#* }\" | while read -r line; do
+            quote_readline \"$line\" 2>/dev/null || \
+              printf %q \"$line\" 2>/dev/null  && \
+              printf \\n
+          done)
+        local IFS=$'\\n'; COMPREPLY=( \"$RESULT\" )
+      }
+      "
+
+      ''
+      _fasd_bash_hook_cmd_complete() {
+        for cmd in "$@"; do
+          complete -F _fasd_bash_cmd_complete "$cmd"
+        done
+      }
+
+      # enable bash command mode completion
+      _fasd_bash_hook_cmd_complete fasd a s d f sd sf z zz
+    ''
+  ];
+}
+
+
