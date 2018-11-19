@@ -1,9 +1,13 @@
 { pkgs }:
 
+let
+  nix-profile = "~/.nix-profile";
+in
 {
   shellAliases = {
+
     # git
-    git   = "${pkgs.git-hub}/bin/hub";
+    git   = "${nix-profile}/bin/hub";
     g     = "git ";
     gf    = "git fetch";
     gl    = "git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad @ %cr) %C(bold blue)<%an>%Creset' --graph --abbrev-commit --date=short";
@@ -48,16 +52,16 @@
     pop   = "git stash pop";
 
     # hub-functionality
-    gpr   = "${pkgs.git-hub}/bin/hub pull-request";
-    gprud = "${pkgs.git-hub}/bin/hub pull-request -b $(remote-name upstream)\\/$(repo-name upstream):develop -h $(remote-name origin)\\/$(repo-name origin):$(cb)";
+    gpr   = "${nix-profile}/bin/hub pull-request";
+    gprud = "${nix-profile}/bin/hub pull-request -b $(remote-name upstream)\\/$(repo-name upstream):develop -h $(remote-name origin)\\/$(repo-name origin):$(cb)";
   };
 
   functions = ''
     function cb {
-      ${pkgs.git}/bin/git status | grep "On branch " | cut -c 11-
+      ${nix-profile}/bin/git status | grep "On branch " | cut -c 11-
     }
     function remote-full {
-      ${pkgs.git}/bin/git remote -v | grep "$1" | head -n 1 | cut -d ':' -f 2 | cut -d '.' -f 1
+      ${nix-profile}/bin/git remote -v | grep "$1" | head -n 1 | cut -d ':' -f 2 | cut -d '.' -f 1
     }
     function remote-name {
       remote-full "$1" | cut -d '/' -f 1
