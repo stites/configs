@@ -91,6 +91,8 @@ in
 
   initConfig = ''
     dl_shakeup
+    safe_path_add "$HOME/.cabal/bin"
+    safe_path_add "$HOME/.local/bin"
   '';
 }
 

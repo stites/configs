@@ -185,40 +185,13 @@ in
     prompt.initConfig
 
     # this is all rust needs
-    (if builtins.pathExists (homeDir + "/.cargo/bin") then "safe_path_add \"$HOME/.cargo/bin\"" else "")
-
-    # we can now start using safe_source
-    ''
-    safe_source "$HOME/.fonts/*.sh"
-    safe_path_add "$HOME/.cabal/bin"
-    ''
-
-    # needed by travis gem
-    # '' safe_source "$HOME/.travis/travis.sh" ''
+    (if builtins.pathExists "${homeDir}/.cargo/bin" then ''safe_path_add "${homeDir}/.cargo/bin"'' else "")
 
     # ========================================== #
     #     Silence that fucking hardware bell     #
     # ========================================== #
     ''
     [[ -n "$DISPLAY" ]] && xset b off
-    # xset b 0 0 0
-    # setterm -blength 0
-    # set bell-style none
-    ''
-
-    # enable color support of ls and also add handy aliases
-    ''
-    if [ -x /usr/bin/dircolors ]; then
-        if test -r "$HOME/.dircolors"; then
-          eval "$(dircolors -b "$HOME/.dircolors")"
-        else
-          eval "$(dircolors -b)"
-        fi
-
-        #alias ls='ls --color=auto'
-        #alias dir='dir --color=auto'
-        #alias vdir='vdir --color=auto'
-    fi
     ''
 
     # ============================================================ #
@@ -226,6 +199,7 @@ in
     # ============================================================ #
     ''
     alias find="${pkgs.fd}/bin/fd"
+    safe_source "$HOME/.fonts/*.sh"
     ''
   ]);
 }

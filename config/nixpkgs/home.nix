@@ -22,14 +22,29 @@ in
 
   xdg.enable = true;
 
+  xdg.configFile.taffyBar = {
+    source = ./xmonad/taffybar.hs;
+    target = "taffybar/taffybar.hs";
+  };
+
   xsession.enable = true;
-  xsession.windowManager.xmonad.enable = true;
-  xsession.windowManager.xmonad.extraPackages = hpkgs: [
-    hpkgs.xmonad-contrib
-    hpkgs.xmonad-extras
-    hpkgs.monad-logger
-    hpkgs.taffybar
-  ];
+  xsession.pointerCursor = {
+    size = 64;
+    name = "Vanilla-DMZ";
+    package = pkgs.vanilla-dmz;
+  };
+
+  xsession.windowManager.xmonad = {
+    enable = true;
+    enableContribAndExtras = true;
+    config = ./xmonad/xmonad.hs;
+    extraPackages = hpkgs: [
+      hpkgs.xmonad-contrib
+      hpkgs.xmonad-extras
+      hpkgs.monad-logger
+      hpkgs.taffybar
+    ];
+  };
 
   gtk = {
     enable = true;
