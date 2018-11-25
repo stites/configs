@@ -5,7 +5,6 @@ with pkgs;
 let
   elmPackages = pkgs.elmPackages;
   haskellPackages = pkgs.haskellPackages;
-  rPackages = pkgs.rPackages;
   exe = pkgs.haskell.lib.justStaticExecutables;
 
   RStudio-with-packages = rstudioWrapper.override { packages = with rPackages; [
@@ -24,6 +23,19 @@ let
     stringr
     lubridate
   ]; };
+
+  my-dictionaries = with pkgs; buildEnv {
+    name = "my-dictionary";
+    paths = [
+      dict
+      # dictdDBs.eng2rus
+      dictdDBs.wiktionary
+      dictdDBs.wordnet
+
+      aspell
+      aspellDicts.en
+    ];
+  };
 in
 [
   fortune
@@ -44,8 +56,6 @@ in
   xclip
   ripgrep
   rxvt_unicode_with-plugins
-  aspell
-  aspellDicts.en
   gawk
   less
   lesspipe
@@ -122,6 +132,7 @@ in
   (exe haskellPackages.ghcid)
   (exe haskellPackages.patat)
   (exe haskellPackages.nvim-hs-ghcid)
+  # (exe pkgs.haskell.packages.ghc822.codex)
 
   RStudio-with-packages
 
@@ -146,7 +157,7 @@ in
   # fonts
   fira
   powerline-fonts
-  # nerdfonts
+  # nerdfonts # this takes >30m to download
   asciinema
 
   bench
@@ -155,6 +166,7 @@ in
   dhall-json
   gv
   imagemagick
+  file
   macchanger
   ngrok
   nim
@@ -162,6 +174,25 @@ in
   xdotool
   pstree
   texlive.combined.scheme-full
-  weechat
+  # weechat # << install 2.4-devel version
+  bash-completion
+  my-dictionaries
+
+  # dev tools
+  gotty
+  graphviz
+  sqlite
+  sqliteman
+
+  # GUI TOOLS (needs to be changed to nixos-only)
+  signal-desktop
+  firefox-devedition-bin
+  gitter
+  slack
+  mendeley
+
+  # migrate to home-manager
+  keybase
+  keybase-gui
 ]
 

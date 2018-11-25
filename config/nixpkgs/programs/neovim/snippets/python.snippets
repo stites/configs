@@ -1,0 +1,304 @@
+snippet #!2
+	#!/usr/bin/env python
+	# -*- coding: utf-8 -*-
+endsnippet
+snippet #!3
+	#!/usr/bin/env python3
+	# -*- coding: utf-8 -*-
+endsnippet
+snippet im
+	import ${0:torch}
+endsnippet
+snippet ith
+	import torch as th
+	import torchvision as thv
+	import matplotlib.pyplot as plt
+	import numpy as np
+endsnippet
+snippet ia
+	import ${0:numpy} as ${1:np}
+endsnippet
+snippet from
+	from ${1:package} import ${0:module}
+endsnippet
+snippet docs "Module Docstring"
+	"""
+	File: ${1:`vim_snippets#Filename('$1.py', 'foo.py')`}
+	Author: `g:snips_author`
+	Email: `g:snips_email`
+	Github: `g:snips_github`
+	Description: ${0}
+	"""
+endsnippet
+
+snippet with
+	with ${1:expr} as ${2:var}:
+		${0:${VISUAL}}
+endsnippet
+
+snippet cl "New Class"
+class ${1:ClassName}(${2:object}):
+	"""${3:docstring for $1}"""
+	def __init__(self, ${4:args}):
+		${5:super().__init__()}
+		`!p snip.rv = ", self.".join(t[4].split(", "))`
+		${0}
+endsnippet
+
+snippet self,
+	self.${0} = $0
+endsnippet
+
+snippet ,self
+	$0 = self.${0}
+endsnippet
+
+snippet class "New Class2"
+	class ${1:ClassName}(${2:object}):
+		"""${3:docstring for $1}"""
+		def __init__(self, ${4:arg}):
+			${5:super().__init__()}
+			self.$4 = $4
+			${0}
+endsnippet
+# New Function
+snippet def
+	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
+		"""${3:docstring for $1}"""
+		${0}
+endsnippet
+snippet deff
+	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
+		${0}
+endsnippet
+# New Method
+snippet defm
+	def ${1:mname}(self, ${2:arg}):
+		${0}
+endsnippet
+# New Property
+snippet property
+	def ${1:foo}():
+		doc = "${2:The $1 property.}"
+		def fget(self):
+			${3:return self._$1}
+		def fset(self, value):
+			${4:self._$1 = value}
+		def fdel(self):
+			${0:del self._$1}
+		return locals()
+	$1 = property(**$1())
+endsnippet
+# Ifs
+snippet if
+	if ${1:condition}:
+		${0:${VISUAL}}
+endsnippet
+snippet el
+	else:
+		${0:${VISUAL}}
+endsnippet
+snippet ei
+	elif ${1:condition}:
+		${0:${VISUAL}}
+endsnippet
+# For
+snippet for
+	for ${1:item} in ${2:items}:
+		${0}
+endsnippet
+# Lambda
+snippet la
+	lambda ${0:vars}: ${1:action}
+endsnippet
+snippet .
+	self.
+endsnippet
+snippet try "Try/Except"
+	try:
+		${1:${VISUAL}}
+	except ${2:Exception} as ${3:e}:
+		${0:raise $3}
+endsnippet
+snippet tee "Try/Except/Else"
+	try:
+		${1:${VISUAL}}
+	except ${2:Exception} as ${3:e}:
+		${4:raise $3}
+	else:
+		${0}
+endsnippet
+snippet tef "Try/Except/Finally"
+	try:
+		${1:${VISUAL}}
+	except ${2:Exception} as ${3:e}:
+		${4:raise $3}
+	finally:
+		${0}
+endsnippet
+snippet teef "Try/Except/Else/Finally"
+	try:
+		${1:${VISUAL}}
+	except ${2:Exception} as ${3:e}:
+		${4:raise $3}
+	else:
+		${5}
+	finally:
+		${0}
+endsnippet
+# if __name__ == '__main__':
+snippet ifmain
+	if __name__ == '__main__':
+		${0:main()}
+endsnippet
+# __magic__
+snippet _
+	__${1:init}__
+endsnippet
+# python debugger (pdb)
+snippet pdb
+	import pdb; pdb.set_trace()
+endsnippet
+# bpython debugger (bpdb)
+snippet bpdb
+	import bpdb; bpdb.set_trace()
+endsnippet
+# ipython debugger (ipdb)
+snippet ipdb
+	import ipdb; ipdb.set_trace()
+endsnippet
+# embed ipython itself
+snippet iem
+	import IPython; IPython.embed()
+endsnippet
+# ipython debugger (pdbbb)
+snippet pdbbb
+	import pdbpp
+	pdbpp.set_trace()
+endsnippet
+# remote python debugger (rpdb)
+snippet rpdb
+	import rpdb
+	rpdb.set_trace()
+endsnippet
+# ptpython
+snippet ptpython
+	from ptpython.repl import embed
+	embed(globals(), locals(), vi_mode=${1:False}, history_filename=${2:None})
+endsnippet
+# python console debugger (pudb)
+snippet pudb
+	import pudb
+	pudb.set_trace()
+endsnippet
+# pdb in nosetests
+snippet nosetrace
+	from nose.tools import set_trace
+	set_trace()
+endsnippet
+snippet pprint
+	import pprint
+	pprint.pprint(${1})
+endsnippet
+snippet "
+	"""${0:doc}
+	"""
+endsnippet
+# assertions
+snippet a=
+	self.assertEqual(${0}, ${1})
+endsnippet
+# test function/method
+snippet test
+	def test_${1:description}(${2:`indent('.') ? 'self' : ''`}):
+		${0}
+endsnippet
+# test case
+snippet testcase
+class ${1:ExampleCase}(unittest.TestCase):
+
+	def test_${2:description}(self):
+		${0}
+endsnippet
+snippet fut
+	from __future__ import ${0}
+endsnippet
+#getopt
+snippet getopt
+	try:
+		# Short option syntax: "hv:"
+		# Long option syntax: "help" or "verbose="
+		opts, args = getopt.getopt(sys.argv[1:], "${1:short_options}", [${2:long_options}])
+
+	except getopt.GetoptError, err:
+		# Print debug info
+		print str(err)
+		${3:error_action}
+
+	for option, argument in opts:
+		if option in ("-h", "--help"):
+			${0}
+		elif option in ("-v", "--verbose"):
+			verbose = argument
+endsnippet
+# logging
+# glog = get log
+snippet glog
+	import logging
+	logger = logging.getLogger(${0:__name__})
+endsnippet
+snippet le
+	logger.error(${0:msg})
+endsnippet
+# conflict with lambda=ld, therefor we change into Logger.debuG
+snippet lg
+	logger.debug(${0:msg})
+endsnippet
+snippet lw
+	logger.warning(${0:msg})
+endsnippet
+snippet lc
+	logger.critical(${0:msg})
+endsnippet
+snippet li
+	logger.info(${0:msg})
+endsnippet
+snippet epydoc
+	"""${1:Description}
+
+	@param ${2:param}: ${3: Description}
+	@type  $2: ${4: Type}
+
+	@return: ${5: Description}
+	@rtype : ${6: Type}
+
+	@raise e: ${0: Description}
+	"""
+endsnippet
+snippet dol
+	def ${1:__init__}(self, *args, **kwargs):
+	    super(${0:ClassName}, self).$1(*args, **kwargs)
+endsnippet
+snippet kwg
+self.${1:var_name} = kwargs.get('$1', ${2:None})
+endsnippet
+snippet lkwg
+${1:var_name} = kwargs.get('$1', ${2:None})
+endsnippet
+snippet args
+*args${1:,}${0}
+endsnippet
+snippet kwargs
+**kwargs${1:,}${0}
+endsnippet
+snippet akw
+*args, **kwargs${1:,}${0}
+endsnippet
+
+snippet main
+def main():
+	${1}
+
+if __name__ == "__main__":
+	main()
+endsnippet
