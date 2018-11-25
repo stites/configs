@@ -170,7 +170,6 @@ in
   macchanger
   ngrok
   nim
-  scrot
   xdotool
   pstree
   texlive.combined.scheme-full
@@ -194,5 +193,8 @@ in
   # migrate to home-manager
   keybase
   keybase-gui
+
+  # compute stuff
+  pkgs.liblapack
 ]
 

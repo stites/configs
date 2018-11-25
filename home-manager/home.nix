@@ -7,36 +7,24 @@ let
   lib = stdenv.lib;
   exe = pkgs.haskell.lib.justStaticExecutables;
   neovim = import ./programs/neovim { inherit pkgs lib; };
+  mail = import ./mail.nix;
 in
 {
   manual.html.enable = true;
   manual.manpages.enable = true;
 
   home = {
-    packages = import ./packages.nix { inherit pkgs; };
+    sessionVariables = {
+      # so that electron apps play nicely with taffybar
+      XDG_CURRENT_DESKTOP = "Unity";
+    };
+    packages = (import ./packages.nix { inherit pkgs; })
+      ++ [ pkgs.protonmail-bridge pkgs.screen ];
     keyboard = {
       layout = "us";
       variant = "colemak";
       options = [ "ctrl:nocaps" ];
     };
-
-    file.".ghci".text = ''
-      :set prompt "\ESC[0;34mghci>\ESC[m "
-      :def hoogle \s -> Prelude.return Prelude.$ (":! hoogle --count=15 \"" :: Prelude.String) Prelude.++ s Prelude.++ ("\"" :: Prelude.String)
-      :set -cpp -DASSERTS -DDEBUG
-
-      :set -Wno-name-shadowing
-      :set -XOverloadedStrings -XScopedTypeVariables -XTupleSections -XFlexibleContexts -XDataKinds
-
-      -- :set +s
-      -- :set -XPartialTypeSignatures
-
-      -- import qualified Data.Text   as T
-      -- import qualified Data.Vector as V
-      -- import qualified Data.HashSet as HS
-      -- import qualified Data.HashMap.Strict as HM
-      -- import Data.Monoid ((<>))
-    '';
 
     file.".fasdrc".text = ''
       # Fasd defaults to track your "$PWD". Set this to 0 to disable this behavior.
@@ -52,28 +40,17 @@ in
       # _FASD_IGNORE="fasd ls echo"
     '';
 
-    file.".haskline".text = ''
-      bellStyle: NoBell
-      maxHistorySize: Nothing
-      editMode: Vi
-      completionType: MenuCompletion
-      completionPaging: True
-      completionPromptLimit: Just 200
-      listCompletionImmediately: True
-      historyDuplicates: IgnoreConsecutive
-      -- IgnoreConsecutive | IgnoreAll
-    '';
 
-    file.".npmrc".text = ''
-      init-author-name=Sam Stites
-      init-author-email=sam@stites.io
-      init-author-url=https://stites.io
-      init-version=0.0.1
-      python=python2.7
-      progress=true
-      parseable=true
-      loglevel=warn
-    '';
+    #file.".npmrc".text = ''
+    #  init-author-name=Sam Stites
+    #  init-author-email=sam@stites.io
+    #  init-author-url=https://stites.io
+    #  init-version=0.0.1
+    #  python=python2.7
+    #  progress=true
+    #  parseable=true
+    #  loglevel=warn
+    #'';
 
     file.".aspell.en.pws".text = ''
       personal_ws-1.1 en 2 utf-8
@@ -93,54 +70,11 @@ in
       compositional
       backpropagation
     '';
-    file.".stack/config.yaml".text = ''
-      templates:
-        params:
-          author-name: Sam Stites
-          author-email: 'fnz@fgvgrf.vb (cipher:rot13)'
-          copyright: 'Copyright: (c) 2018 Sam Stites'
-          github-username: stites
 
-      # Have stack cooperate with nix
-      nix:
-        enable: true
-        # pure set to `true` means that environment variables won't be forwarded when when running stack build
-        # at the global level we _do_ want these sorts of things
-        pure: false
-        # pacakges passed to the nix environment when running `stack build` or `stack exec`. stack will NOT see
-        # anything that hasen't been passed in here.
-
-        packages:
-          - zlib
-    '';
-    file.".stack/global-project/stack.yaml".text = ''
-        # This is the implicit global project's config file, which is only used when
-        # 'stack' is run outside of a real project.  Settings here do _not_ act as
-        # defaults for all projects.  To change stack's default settings, edit
-        # '/usr/home/stites/.stack/config.yaml' instead.
-        #
-        # For more information about stack's configuration, see
-        # http://docs.haskellstack.org/en/stable/yaml_configuration/
-        #
-        flags: {}
-        extra-package-dbs: []
-        packages: []
-        resolver: lts-10.4
-        #extra-lib-dirs:
-        #- /usr/local/lib/gcc46
-        extra-deps:
-        # for super-user-spark
-        #- iostring-0.0.0.0
-        #- validity-0.3.3.0
-        #- validity-path-0.1.0.1
-
-        # for haddock
-        - haddock-api-2.18.1
-        - haddock-library-1.4.4
-
-        # for c2hsc
-        - logging-3.0.5
-      '';
+    file.".ghci".source                            = ./haskell/configs/ghci;
+    file.".haskline".source                        = ./haskell/configs/haskline;
+    file.".stack/config.yaml".source               = ./haskell/configs/stack-local.yaml;
+    file.".stack/global-project/stack.yaml".source = ./haskell/configs/stack-global.yaml;
   };
 
   nixpkgs.config = import ./config.nix;
@@ -157,12 +91,30 @@ in
         source = ./xmonad/taffybar.css;
         onChange = "rm -rf ${homedir}/.cache/taffybar/";
       };
-      "nvim/snippets" = {
+      "nvim/UltiSnips" = {
         recursive = true;
-        source = ./programs/neovim/snippets;
+        source = ./programs/neovim/UltiSnips;
+      };
+      "urxvt/color-themes" = {
+        recursive = true;
+        source = pkgs.fetchFromGitHub {
+          owner = "felixr";
+          repo = "urxvt-color-themes";
+          rev = "56589a340f76c26486d8575fa639834aa7c248ea";
+          sha256 = "1jhk606ayd1qkphm63da7g5wy4y68n1bjdqjwrjy37nxsri01hvy";
+        };
       };
     };
-    dataFile = neovim.xdg.dataFile;
+    dataFile = neovim.xdg.dataFile // {
+      "home-manager-dev" = {
+        executable = true;
+          target = "../bin/home-manager-dev";
+          text = ''
+            #!/usr/bin/env bash
+            home-manager -I home-manager=$HOME/git/home-manager $@
+          '';
+        };
+    };
   };
 
 
@@ -208,7 +160,7 @@ in
   services.taffybar.enable = true;
   services.status-notifier-watcher.enable = true;
   services.syncthing = {
-    enable = true;
+    enable = false;
     tray = true;
   };
   services.udiskie.enable = true;
@@ -244,16 +196,18 @@ in
       allow-preset-passphrase
     '';
   };
-  services.blueman-applet.enable = true;
+  services.blueman-applet.enable = false;
   services.network-manager-applet.enable = true;
   services.pasystray.enable = true;
   services.parcellite.enable = true;
   services.compton.enable = true;
+  # services.protonmail-bridge.enable = true;
 
   programs = {
     home-manager = {
       enable = true;
       path = https://github.com/rycee/home-manager/archive/master.tar.gz;
+      # path = "${homedir}/git/home-manager";
     };
 
     bash = import ./programs/bash.nix { inherit pkgs lib; };
@@ -269,10 +223,6 @@ in
     noti.enable = true;
     zathura.enable = true;
 
-    offlineimap = {
-      enable = true;
-    };
-
     texlive = {
       enable = false;
       package = pkgs.texlive; #.combined.scheme-full;
@@ -284,18 +234,30 @@ in
     tmux   = import ./programs/tmux.nix { inherit pkgs; };
     urxvt  = import ./programs/urxvt.nix { inherit pkgs; };
     neovim = neovim.config;
-  };
+  } // mail.programs;
 
-  systemd.user.services.weechat-daemon = {
-    Unit = { Description = "Weechat daemon as a service"; };
-    Service = {
-      ExecStart = "${pkgs.weechat}/bin/weechat --daemon";
-      Restart = "on-failure";
+  accounts.email = mail.email;
+
+  systemd.user.services.protonmail-bridge = {
+    Unit = {
+      Description = "ProtonMail Bridge";
+      # Requires = [ "network.target" ];
+      # After    = [ "network.target" ];
     };
+
+    Service = {
+      # ExecStart ="${pkgs.protonmail-bridge}/bin/Desktop-Bridge --cli";
+      ExecStart ="${pkgs.screen}/bin/screen -dm ${pkgs.protonmail-bridge}/bin/Desktop-Bridge --cli";
+      ExecStop ="${pkgs.killall}/bin/killall Desktop-Bridge";
+      Restart = "on-failure";
+      RestartSec = "5s";
+      RemainAfterExit = "true";
+      Type="forking";
+    };
+
     Install = {
       WantedBy = [ "default.target" ];
     };
   };
-
 }
 

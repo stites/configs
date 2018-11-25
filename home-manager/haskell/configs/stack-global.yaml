@@ -1,0 +1,26 @@
+# This is the implicit global project's config file, which is only used when
+# 'stack' is run outside of a real project.  Settings here do _not_ act as
+# defaults for all projects.  To change stack's default settings, edit
+# '/usr/home/stites/.stack/config.yaml' instead.
+#
+# For more information about stack's configuration, see
+# http://docs.haskellstack.org/en/stable/yaml_configuration/
+#
+flags: {}
+extra-package-dbs: []
+packages: []
+resolver: lts-10.4
+#extra-lib-dirs:
+#- /usr/local/lib/gcc46
+extra-deps:
+# for super-user-spark
+#- iostring-0.0.0.0
+#- validity-0.3.3.0
+#- validity-path-0.1.0.1
+
+# for haddock
+- haddock-api-2.18.1
+- haddock-library-1.4.4
+
+# for c2hsc
+- logging-3.0.5

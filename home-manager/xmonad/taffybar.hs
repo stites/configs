@@ -6,6 +6,7 @@ import System.Taffybar.Information.Memory
 import System.Taffybar.Information.CPU
 import System.Taffybar.SimpleConfig
 import System.Taffybar.Widget
+import System.Taffybar.Widget.SNITray
 import System.Taffybar.Widget.Generic.PollingBar
 import System.Taffybar.Widget.Generic.PollingGraph
 
