@@ -6,20 +6,23 @@ TODO
 - [ ] grothendieck -> NVME
 - [ ] grothendieck -> zfs + mirroring
 - [ ] theme gtk
-- [ ] theme taffybar
+- [x] theme taffybar
 - [ ] set up notifier with taffybar
-- [ ] remove `os/`
-- [ ] remove `nix/`
-- [ ] remove `conjobs/`
-- [ ] remove `config/{alacritty,haskell-vim-now,redshift}`
-- [ ] revamp `glirc/` -- replace with weechat?
-- [ ] encode `home/` into home-manager
+- [x] remove `os/`
+- [x] remove `nix/`
+- [x] remove `conjobs/`
+- [x] remove `config/{alacritty,haskell-vim-now,redshift}`
+- [x] revamp `glirc/` -- replace with weechat?
+- [x] encode `home/` into home-manager
 - [ ] make `nixpkgs` top-level
 - [ ] set up cuda on grothendieck
 - [ ] set up NixOS so that critical battery usage hibernates system, inactive screen goes to hybrid-suspend
 - [ ] NixOS keyboard bindings
 - [ ] add backlight kernel module
 - [ ] Variational methods missing from [wikipedia](https://en.wikipedia.org/wiki/Bayesian_inference) @.@
+- [ ] make flameshot work with xmonad
+- [ ] move /etc/nixos/configuration.nix to this repo (elide sensitive information)
+- [ ] move StevenBlack/hosts to NixOS
 
 Setup
 ==========
@@ -28,14 +31,6 @@ To initiate configs on a computer run:
 
     ./setup.sh
     ./run_sus deploy
-
-Other packages to install:
-
-+ StevenBlack/hosts
-+ redshift (caffeine for mac)
-+ nix
-+ albert
-+ FiraCode font (dependency from urxvt), and NerdFonts
 
 Mac-specific:
 - Dropbox, Flux, iTerm, Slack, Path Finder, Spectacle

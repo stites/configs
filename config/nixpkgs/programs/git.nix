@@ -35,6 +35,7 @@
     "hscope.out"
     ".ghci"
     ".sosrc"
+    ".envrc"
     "tmp"
     "foo"
     "bar"

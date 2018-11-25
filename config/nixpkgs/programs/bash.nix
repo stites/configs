@@ -188,12 +188,12 @@ in
     # this is all rust needs
     (if builtins.pathExists "${homeDir}/.cargo/bin" then ''safe_path_add "${homeDir}/.cargo/bin"'' else "")
 
-    # ========================================== #
-    #     Silence that fucking hardware bell     #
-    # ========================================== #
-    ''
-    [[ -n "$DISPLAY" ]] && xset b off
-    ''
+    # # ========================================== #
+    # #     Silence that fucking hardware bell     #
+    # # ========================================== #
+    # ''
+    # [[ -n "$DISPLAY" ]] && xset b off
+    # ''
 
     # ============================================================ #
     # core aliases which must be added last -- PR for home-manager #

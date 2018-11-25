@@ -1,48 +1,16 @@
 {
   allowUnfree = true;
+  # overlays = [ (self: super: {
+  #   weechat = super.weechat.overrideAttrs (oldAttrs: {
+  #     version = "devel";
+  #     src = self.fetchurl {
+  #       url = "https://weechat.org/files/src/weechat-devel.tar.bz2";
+  #       sha256 = "102i38hra1g0hml684hsilr2psc1klp3gy206zbndbzm9y75yddq";
+  #     };
+  #   });
+  # } ) ];
+
   packageOverrides = pkgs_: with pkgs_; {
-    my-dictionary = with pkgs; buildEnv {
-      name = "my-dictionary";
-      paths = [
-        dict
-        # dictdDBs.eng2rus
-        dictdDBs.wiktionary
-        dictdDBs.wordnet
-      ];
-    };
-
-    all = with pkgs; let exe = haskell.lib.justStaticExecutables; in buildEnv {
-      name = "all";
-      paths = [
-        # window manager (maybe desktop manager)
-        # taffybar
-        # haskellPackages.xmobar
-        # haskellPackages.xmonad
-        # haskellPackages.xmonad-contrib
-
-        # system-level GUI deps
-        albert
-        signal-desktop
-        firefox-devedition-bin
-        gitter
-        slack
-        # mendeley # broken
-
-        # keybase     # <<< needs some more coordination
-        # keybase-gui # <<< needs some more coordination
-
-        # system level deps
-        bash-completion
-        bashInteractive
-
-        # dev tools
-        gotty
-        graphviz
-        sqlite
-        sqliteman
-      ];
-    };
-
     haskellEnv = buildEnv {
       name = "haskellEnv";
       paths = [ python36 neovim cabal-install ];
