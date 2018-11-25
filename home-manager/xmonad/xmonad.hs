@@ -123,6 +123,7 @@ additionalKeys'
   <> binaryPartitionLayout
   -- <> bspLayoutKeys
   where
+    windowsAndWorkspace :: [(String, X ())]
     windowsAndWorkspace =
       [ ("M-S-w",   kill)
       , ("M-l",   sendMessage $ Window.Go R)
@@ -135,17 +136,20 @@ additionalKeys'
       -- , ("M-M1-l",       sendMessage Expand)
       ]
 
+    applications :: [(String, X ())]
     applications =
       [ ("M-o d",        spawn "thunar")
       , ("M-o h",        promptSearch xpconfig hackage)
       , ("M-<Return>",   spawn =<< asks (terminal . config))
       , ("C-S-<Space>",  spawn "albert show")
+      , ("<Print>",      spawn "flameshot gui")
       -- , ("M-i",          spawn "google-chrome-stable")
       ]
 
+    system :: [(String, X ())]
     system =
       [ ("M-S-<Delete>", spawn "pm-hibernate")
-      , ("M-S-l", spawn "xfce4-session-logout")
+      , ("M-S-l",    spawn "xfce4-session-logout")
       , ("C-S-<F3>", spawn "amixer -q sset Master toggle")
       , ("C-S-<F5>", spawn "amixer -q sset Master 3%-")
       , ("C-S-<F6>", spawn "amixer -q sset Master 3%+")

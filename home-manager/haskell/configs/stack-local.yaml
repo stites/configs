@@ -1,0 +1,20 @@
+templates:
+  params:
+    author-name: Sam Stites
+    author-email: 'fnz@fgvgrf.vb (cipher:rot13)'
+    copyright: 'Copyright: (c) 2018 Sam Stites'
+    github-username: stites
+
+# Have stack cooperate with nix
+nix:
+  enable: true
+  # pure set to `true` means that environment variables won't be forwarded when when running stack build
+  # at the global level we _do_ want these sorts of things
+  pure: false
+  # pacakges passed to the nix environment when running `stack build` or `stack exec`. stack will NOT see
+  # anything that hasen't been passed in here.
+
+  packages:
+    - zlib
+  # - ghc44
+

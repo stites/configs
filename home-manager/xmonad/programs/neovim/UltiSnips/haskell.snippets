@@ -1,0 +1,384 @@
+# vim: foldmethod=marker
+
+# Pragmas {{{
+
+snippet pragma "Compiler pragma" !b
+{-# $1 #-}
+endsnippet
+
+snippet pra "Shorter Compiler pragma" !b
+{-# $1 #-}
+endsnippet
+
+snippet lang "LANGUAGE pragma" !b
+{-# LANGUAGE $1 #-}
+endsnippet
+
+snippet ghcopt "GHC options" !b
+{-# OPTIONS_GHC $1 #-}
+endsnippet
+
+snippet preproc "Preprocessor" !b
+{-# OPTIONS_GHC -F -pgmF ${1:executable} #-}
+endsnippet
+
+snippet str "" !b
+{-# LANGUAGE OverloadedStrings #-}
+endsnippet
+
+snippet gadt "" !b
+{-# LANGUAGE GADTs #-}
+endsnippet
+
+snippet rank "" !b
+{-# LANGUAGE RankNTypes #-}
+endsnippet
+
+snippet scoped "" !b
+{-# LANGUAGE ScopedTypeVariables #-}
+endsnippet
+
+snippet ffi "" !b
+{-# LANGUAGE ForeignFunctionInterface #-}
+endsnippet
+
+snippet flex "" !b
+{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE FlexibleContexts #-}
+{-# LANGUAGE TypeSynonymInstances #-}
+endsnippet
+
+snippet syn "" !b
+{-# LANGUAGE TypeSynonymInstances #-}
+endsnippet
+
+snippet mparam "" !b
+{-# LANGUAGE MultiParamTypeClasses #-}
+endsnippet
+
+snippet bang "" !b
+{-# LANGUAGE BangPatterns #-}
+endsnippet
+
+snippet gen "" !b
+{-# LANGUAGE DeriveFunctor #-}
+{-# LANGUAGE GeneralizedNewtypeDeriving #-}
+endsnippet
+
+snippet gnew "" !b
+{-# LANGUAGE DeriveFunctor #-}
+{-# LANGUAGE GeneralizedNewtypeDeriving #-}
+endsnippet
+
+snippet inst "" !b
+{-# LANGUAGE InstanceSigs #-}
+endsnippet
+snippet sigs "" !b
+{-# LANGUAGE InstanceSigs #-}
+endsnippet
+
+snippet mono "" !b
+{-# LANGUAGE NoMonomorphismRestriction #-}
+endsnippet
+
+snippet stand "" !b
+{-# LANGUAGE StandaloneDeriving #-}
+endsnippet
+
+snippet datakinds "" !b
+{-# LANGUAGE DataKinds #-}
+endsnippet
+
+snippet instancesigs "" !b
+{-# LANGUAGE InstanceSigs #-}
+endsnippet
+
+
+snippet constraints "" !b
+{-# LANGUAGE ConstraintKinds #-}
+{-# LANGUAGE FlexibleContexts #-}
+endsnippet
+
+snippet lambda "" !b
+{-# LANGUAGE LambdaCase #-}
+endsnippet
+
+snippet tuple "" !b
+{-# LANGUAGE TupleSections #-}
+endsnippet
+
+snippet puns "" !b
+{-# LANGUAGE NamedFieldPuns #-}
+endsnippet
+
+snippet inline "INLINE pragma" !b
+{-# INLINE ${1:name} #-}
+endsnippet
+
+snippet inlinable "INLINABLE pragma" !b
+{-# INLINABLE ${1:name} #-}
+endsnippet
+
+snippet noinline "NOINLINE pragma" !b
+{-# NOINLINE ${1:name} #-}
+endsnippet
+
+snippet specialize "SPECIALIZE pragma" !b
+{-# SPECIALIZE ${1:name} :: ${2:type} #-}
+endsnippet
+
+snippet rules "RULES pragma" !b
+{-# RULES "${1:name}" ${2:rule} #-}
+endsnippet
+
+snippet unpack "UNPACK pragma" !w
+{-# UNPACK #-}
+endsnippet
+
+snippet nounpack "NOUNPACK pragma" !w
+{-# NOUNPACK #-}
+endsnippet
+
+# }}} Pragmas
+
+# Statements {{{
+
+global !p
+def last_module(mod):
+	return mod.rstrip('.').rsplit('.', 1)[-1]
+
+def modules(mod, excludes=["Strict", "Control", "Data"]):
+	return [m for m in mod.split('.') if not (m in excludes)]
+
+def qualified_ns(mod):
+	return "".join([c for c in "".join(modules(mod)) if c.isupper()])
+
+def qualified_type(mod):
+	excludes = ["Strict", "Control", "Data", "Lazy"]
+	mods = modules(mod, excludes)
+	return "" if len(mods) == 0 else mods[-1]
+
+def space_if(p):
+	return " " if p else ""
+endglobal
+
+snippet mod "Module declaration" !b
+module ${1:`!v HaskellModuleName()`}
+		( $2
+		)
+	where
+
+$0
+endsnippet
+
+snippet main "Main module" !b
+module Main (main) where
+
+main :: IO ()
+main = ${1:error "undefined: \`main' in `!v expand('%')`"}
+endsnippet
+
+snippet qual "Qualified import, name by last module" !b
+import qualified ${1:Module} as ${2:`!p snip.rv = last_module(t[1])`}
+endsnippet
+
+snippet as "Qualified import, name by first character of last module" !b
+import qualified ${1:Module} as ${2:`!p snip.rv = last_module(t[1])[0]`}
+endsnippet
+
+snippet data "Algebraic data type" !b
+data ${1:Type} ${2:variables}`!p snip.rv = space_if(t[2])`= ${3:Constructor} | ${0:Constructor}
+endsnippet
+
+snippet rec "Data record" !b
+data ${1:Type} = $1
+		{ ${3:foo} :: ${4:Type}
+		, ${5:bar} :: ${5:Type}
+		} deriving (${5:Classes})
+endsnippet
+
+snippet new "Newtype" !b
+newtype ${1:Type} ${2:variables}`!p snip.rv = space_if(t[2])`= $1 ${3:Oldtype}
+endsnippet
+
+snippet cls "Type class definition" !b
+class ${1:Name} where
+		$0
+endsnippet
+
+snippet in "Instance definition" !b
+instance ${1:Class} ${2:Type} where
+	$0
+endsnippet
+
+# }}} Statements
+
+# Definitions {{{
+
+snippet :: "Type signature" !b
+${1:name} :: ${2:Type}
+endsnippet
+
+snippet => "Class constraint" !w
+${1:Class} ${2:variable} => $2
+endsnippet
+
+snippet fun "Function definition" !b
+-- | ${5:Documentation for '$1'}
+$1 :: ${3:Type} -> ${4:Type}
+${1:name} ${2:args} = ${6:error "undefined: \`$1' in `!v expand('%')`"}
+endsnippet
+
+snippet fn "Value definition" !b
+-- | ${4:Documentation for $1}
+$1 :: ${2:Type}
+${1:name} = ${5:error "undefined: \`$1' in `!v expand('%')`"}
+endsnippet
+
+snippet let "" !b
+let ${1} = ${2:undefined}
+endsnippet
+
+# }}} Definitions
+
+# Expressions {{{
+
+snippet do "do notation" !b
+do ${1:undefined}
+	${2:undefined}
+endsnippet
+
+snippet \ "Lambda" !w
+(\ ${1:args} -> ${2:undefined})
+endsnippet
+
+snippet if "Boolean conditional" !w
+if ${1:condition}
+then ${2:true}
+else ${3:false}
+endsnippet
+
+snippet case "Pattern match" !w
+case ${1} of
+	${2:_} -> ${3:undefined}
+endsnippet
+
+snippet qq "Quasi quote" !w
+[${1:quoter}|${2:content}|]
+endsnippet
+
+snippet wh "" !b
+where
+	${1:fn} :: ${2:undefined}
+	$1 = ${3:undefined}
+endsnippet
+
+# }}} Expressions
+
+snippet dd ""
+deriving (Eq, Ord, Show)
+endsnippet
+
+snippet dg ""
+deriving (Eq, Ord, Show, Typeable, Data, Generic)
+endsnippet
+
+snippet un ""
+undefined
+endsnippet
+
+snippet er "" !b
+error "${1}"
+endsnippet
+
+snippet im "" !b
+import ${1:Data.Text}
+endsnippet
+
+snippet imd "" !b
+import Data.${1:Text}
+endsnippet
+
+snippet imn "" !b
+import Numeric.${1:Dimensions}
+endsnippet
+
+snippet imc "" !b
+import Control.${1:Monad}
+endsnippet
+
+snippet ims "" !b
+import System.${1:IO}
+endsnippet
+
+snippet debug "" !b
+import Debug.Trace
+endsnippet
+
+snippet img "" !b
+import GHC.${1:Generics}
+endsnippet
+
+snippet it "" !b
+import ${1:Data.Vector} (${2:`!p snip.rv = qualified_type(t[1])`})
+endsnippet
+
+snippet iqt "" !b
+import ${1:Data.Vector} (${2:`!p snip.rv = qualified_type(t[1])`})
+import qualified $1 as ${3:`!p snip.rv = qualified_ns(t[1])`}
+endsnippet
+
+snippet iq "" !b
+import qualified ${1:Data.Vector} as ${2:`!p snip.rv = qualified_ns(t[1])`}
+endsnippet
+
+snippet cl "" !b
+	class ${1:Name} where
+		${2:name} :: ${3}
+endsnippet
+
+snippet lcase "" !b
+>>= \case
+	${1} -> ${2}
+endsnippet
+
+# Comments {{{
+
+snippet bar "" b
+-------------------------------------------------------------------------------
+-- ${1}
+-------------------------------------------------------------------------------
+
+endsnippet
+
+snippet fbar "" b
+-- ========================================================================= --
+--`!p snip.rv = (int((75 - len(t[1])) / 2) * " ") `${1}`!p snip.rv = (int((75 - len(t[1])) / 2) * " ") `--
+-- ========================================================================= --
+
+endsnippet
+
+snippet --= "" !b
+-- ========================================================================= --
+
+endsnippet
+
+snippet --- "" !b
+-------------------------------------------------------------------------------
+
+endsnippet
+
+snippet box "" !b
+-------------------------------------------------------------------------------
+-- |
+-- Module    :  `!v HaskellModuleName()`
+-- Copyright :  (c) Sam Stites 2017
+-- License   :  BSD3
+-- Maintainer:  sam@stites.io
+-- Stability :  experimental
+-- Portability: non-portable
+-------------------------------------------------------------------------------
+
+endsnippet
+
+# }}}

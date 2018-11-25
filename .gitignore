@@ -7,3 +7,4 @@ Library
 .bash/log
 .config/nvim/bundle
 tools/jupyter/jupyter_notebook_config.py
+secrets.nix
