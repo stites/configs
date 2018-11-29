@@ -30,7 +30,7 @@
 
   config = {
     enable = true;
-    extraPython3Packages = (ps: with ps; [ python-language-server ]);
+    # extraPython3Packages = (ps: with ps; [ python-language-server ]);
     viAlias = true;
     vimAlias = true;
     configure = {
