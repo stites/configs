@@ -18,6 +18,8 @@ in
     sessionVariables = {
       # so that electron apps play nicely with taffybar
       XDG_CURRENT_DESKTOP = "Unity";
+      GDK_SCALE=2;
+      GDK_DPI_SCALE="1.5";
     };
     packages = (import ./packages.nix { inherit pkgs; })
       ++ [ pkgs.protonmail-bridge pkgs.screen ];
@@ -71,11 +73,19 @@ in
   };
 
   nixpkgs.config = import ./config.nix;
+  nixpkgs.overlays = [];
 
   xdg = {
     enable = true;
     configFile = {
       "nixpkgs/config.nix".source = ./config.nix;
+      "nixpkgs/overlays" = {
+        recursive = true;
+        source = ./overlays;
+      };
+      "nixpkgs/local-nixpkgs".source      = "${homedir}/git/configs/nixpkgs";
+      "nixpkgs/slack.nix".source          = "${homedir}/git/configs/home-manager/slack.nix";
+      "nixpkgs/signal-desktop.nix".source = "${homedir}/git/configs/home-manager/signal-desktop-beta.nix";
       "taffybar/taffybar.hs" = {
         source = ./xmonad/taffybar.hs;
         onChange = "rm -rf ${homedir}/.cache/taffybar/";
@@ -155,7 +165,19 @@ in
 
   gtk = {
     enable = true;
-    gtk3.waylandSupport = true;
+    gtk3 = {
+      waylandSupport = true;
+      extraConfig = {
+        scaling-factor = 2;
+        gtk-cursor-blink = false;
+        gtk-recent-files-limit = 20;
+      };
+    };
+    theme = {
+      package = pkgs.gnome3.gnome_themes_standard;
+      # name = "Arc-Dark";
+      name = "Adwaita";
+    };
     font = {
       name = "DejaVu Sans 12";
       package = pkgs.dejavu_fonts;
@@ -218,7 +240,6 @@ in
     home-manager = {
       enable = true;
       path = https://github.com/rycee/home-manager/archive/master.tar.gz;
-      # path = "${homedir}/git/home-manager";
     };
 
     bash = import ./programs/bash.nix { inherit pkgs lib; };
