@@ -6,6 +6,7 @@ let
   ca-bundle_crt = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"; # just in case
   lib = stdenv.lib;
   exe = pkgs.haskell.lib.justStaticExecutables;
+  concatStringsSep = lib.strings.concatStringsSep;
   neovim = import ./programs/neovim { inherit pkgs lib; };
   mail = import ./mail.nix;
 in
@@ -26,6 +27,10 @@ in
       options = [ "ctrl:nocaps" ];
     };
 
+    file.".mailcap".text = ''
+      text/html;  w3m -dump -o document_charset=%{charset} '%s'; nametemplate=%s.html; copiousoutput
+    '';
+
     file.".fasdrc".text = ''
       # Fasd defaults to track your "$PWD". Set this to 0 to disable this behavior.
       # _FASD_TRACK_PWD=0
@@ -39,18 +44,6 @@ in
       # List of all commands that will be ignored, defaults to "fasd ls echo".
       # _FASD_IGNORE="fasd ls echo"
     '';
-
-
-    #file.".npmrc".text = ''
-    #  init-author-name=Sam Stites
-    #  init-author-email=sam@stites.io
-    #  init-author-url=https://stites.io
-    #  init-version=0.0.1
-    #  python=python2.7
-    #  progress=true
-    #  parseable=true
-    #  loglevel=warn
-    #'';
 
     file.".aspell.en.pws".text = ''
       personal_ws-1.1 en 2 utf-8
@@ -91,9 +84,27 @@ in
         source = ./xmonad/taffybar.css;
         onChange = "rm -rf ${homedir}/.cache/taffybar/";
       };
-      "nvim/UltiSnips" = {
-        recursive = true;
-        source = ./programs/neovim/UltiSnips;
+      "nvim/UltiSnips/python.snippets" = {
+        source = ./programs/neovim/UltiSnips/python.snippets;
+      };
+      "nvim/UltiSnips/haskell.snippets" = {
+        text = concatStringsSep "\n" [
+          (builtins.readFile ./programs/neovim/UltiSnips/haskell.snippets)
+          ''
+            snippet box "" !b
+            -------------------------------------------------------------------------------
+            -- |
+            -- Module    :  `!v HaskellModuleName()`
+            -- Copyright :  (c) Sam Stites 2017
+            -- License   :  BSD-3-Clause
+            -- Maintainer:  ${(import ./secrets.nix).piis.address-rot13}
+            -- Stability :  experimental
+            -- Portability: non-portable
+            -------------------------------------------------------------------------------
+
+            endsnippet
+          ''
+        ];
       };
       "urxvt/color-themes" = {
         recursive = true;
