@@ -53,7 +53,7 @@ main = do
     . docks
     $ desktopConfig
       { modMask    = mod4Mask  -- Rebind Mod to super
-      , terminal   = "urxvtc"
+      , terminal   = "urxvt"
       , workspaces = show <$> [1..6]
       , borderWidth        = 4
       , focusFollowsMouse  = False

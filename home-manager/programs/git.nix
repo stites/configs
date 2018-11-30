@@ -1,11 +1,14 @@
+let
+  secrets = import ../secrets.nix;
+in
 {
   enable = true;
 
   userName  = "Sam Stites";
-  userEmail = "sam@stites.io";
+  userEmail = secrets.piis.address;
 
   signing = {
-    key = "5BFB2C5EE8E72B14";
+    key = secrets.gpg.signing-key;
     signByDefault = true;
   };
 

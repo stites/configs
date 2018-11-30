@@ -18,8 +18,8 @@
     "scrollstyle" = "plain";
     "URxvt*fading" = "30";
     "saveLines" = "4055";
-    # "iso14755" = "False"; # unicode?
-    # "iso14755_52" = "False"; # unicode?
+    "iso14755" = "False"; # unicode?
+    "iso14755_52" = "False"; # unicode?
 
     "perl-ext-common" = "default,matcher,font-size,color-themes";
     "color-themes.state-file" = "~/.urxvt-theme";
