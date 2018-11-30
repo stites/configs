@@ -1,3 +1,6 @@
 [submodule "tools/urxvt/urxvt-scripts"]
 	path = tools/urxvt/urxvt-scripts
 	url = git@github.com:pkkolos/urxvt-scripts.git
+[submodule "nixpkgs"]
+	path = nixpkgs
+	url = git://github.com/stites/nixpkgs.git

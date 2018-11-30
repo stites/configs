@@ -81,6 +81,8 @@ in
   neomutt
   offlineimap
   lynx
+  xpdf # view pdf in the terminal via pdftotext
+  w3m # view html in the terminal
 
   tree
   wget
@@ -132,6 +134,7 @@ in
   (exe haskellPackages.ghcid)
   (exe haskellPackages.patat)
   (exe haskellPackages.nvim-hs-ghcid)
+  # (exe haskellPackages.glirc)
   # (exe pkgs.haskell.packages.ghc822.codex)
 
   RStudio-with-packages
