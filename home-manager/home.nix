@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 
 let
   stdenv = pkgs.stdenv;
@@ -19,7 +19,7 @@ in
       # so that electron apps play nicely with taffybar
       XDG_CURRENT_DESKTOP = "Unity";
       GDK_SCALE=2;
-      GDK_DPI_SCALE="1.5";
+      GDK_DPI_SCALE="0.5";
     };
     packages = (import ./packages.nix { inherit pkgs; })
       ++ [ pkgs.protonmail-bridge pkgs.screen ];
@@ -72,13 +72,13 @@ in
     file.".stack/global-project/stack.yaml".source = ./haskell/configs/stack-global.yaml;
   };
 
-  nixpkgs.config = import ./config.nix;
+  nixpkgs.config = (import ./config.nix { inherit config; });
   nixpkgs.overlays = [];
 
   xdg = {
     enable = true;
     configFile = {
-      "nixpkgs/config.nix".source = ./config.nix;
+      "nixpkgs/config.nix".source = "${homedir}/git/configs/home-manager/config.nix";
       "nixpkgs/overlays" = {
         recursive = true;
         source = ./overlays;
@@ -257,8 +257,8 @@ in
 
     texlive = {
       enable = false;
-      package = pkgs.texlive; #.combined.scheme-full;
-      # extraPackages = tpkgs: { inherit (tpkgs) collection-fontsrecommended algorithms; };
+      package = pkgs.texlive.combined.scheme-medium;
+      extraPackages = tpkgs: { inherit (tpkgs) collection-fontsrecommended algorithms; };
     };
     ssh    = import ./programs/ssh.nix;
     fzf    = import ./programs/fzf.nix;
@@ -285,6 +285,23 @@ in
       RestartSec = "5s";
       RemainAfterExit = "true";
       Type="forking";
+    };
+
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
+  };
+  systemd.user.services.offlineimap = {
+    Unit = {
+      Description = "Offlineimap service";
+      Requires = [ "protonmail-bridge.service" ];
+      After    = [ "protonmail-bridge.service" ];
+    };
+
+    Service = {
+      ExecStart ="${pkgs.offlineimap}/bin/offlineimap";
+      Restart = "on-failure";
+      RestartSec = "5s";
     };
 
     Install = {

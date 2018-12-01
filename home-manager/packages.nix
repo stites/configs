@@ -3,11 +3,11 @@
 with pkgs;
 
 let
-  elmPackages = pkgs.elmPackages;
-  haskellPackages = pkgs.haskellPackages;
-  exe = pkgs.haskell.lib.justStaticExecutables;
+  elmPackages = unstable.elmPackages;
+  # haskellPackages = pkgs.haskellPackages;
+  exe = haskell.lib.justStaticExecutables;
 
-  RStudio-with-packages = rstudioWrapper.override { packages = with rPackages; [
+  RStudio-with-packages = unstable.rstudioWrapper.override { packages = with rPackages; [
     xts
     rstan
     ggplot2
@@ -27,77 +27,76 @@ let
   my-dictionaries = with pkgs; buildEnv {
     name = "my-dictionary";
     paths = [
-      dict
+      unstable.dict
       # dictdDBs.eng2rus
-      dictdDBs.wiktionary
-      dictdDBs.wordnet
+      unstable.dictdDBs.wiktionary
+      unstable.dictdDBs.wordnet
 
-      aspell
-      aspellDicts.en
+      unstable.aspell
+      unstable.aspellDicts.en
     ];
   };
 in
 [
-  fortune
-  cowsay
-  coreutils
-  neofetch
+  unstable.fortune
+  unstable.cowsay
+  unstable.coreutils
+  unstable.neofetch
 
   # alacritty
-  noti
-  cloc
-  bat
-  socat
-  xsv
-  cmake
-  curl
-  ncdu
-  fd
-  xclip
-  ripgrep
-  rxvt_unicode_with-plugins
-  gawk
-  less
-  lesspipe
-  most
-  watch
-  xz
-  aircrack-ng
-  youtube-dl
-  pmutils
-  syncthing
-  zip
-  gnused
+  unstable.noti
+  unstable.cloc
+  unstable.bat
+  unstable.socat
+  unstable.xsv
+  unstable.cmake
+  unstable.curl
+  unstable.ncdu
+  unstable.fd
+  unstable.xclip
+  unstable.ripgrep
+  unstable.rxvt_unicode_with-plugins
+  unstable.gawk
+  unstable.less
+  unstable.lesspipe
+  unstable.most
+  unstable.watch
+  unstable.xz
+  unstable.aircrack-ng
+  unstable.youtube-dl
+  unstable.pmutils
+  unstable.syncthing
+  unstable.zip
+  unstable.gnused
   # gl # sed for json
-  entr # for when sos fails us
-  mosh
-  shellcheck
-  par
+  unstable.entr # for when sos fails us
+  unstable.mosh
+  unstable.shellcheck
+  unstable.par
 
   # email
-  protonmail-bridge
-  notmuch
-  notmuch-mutt
-  neomutt
-  offlineimap
-  lynx
-  xpdf # view pdf in the terminal via pdftotext
-  w3m # view html in the terminal
+  unstable.protonmail-bridge
+  #stable.notmuch
+  unstable.notmuch-mutt
+  unstable.neomutt
+  #stable.offlineimap
+  unstable.lynx
+  unstable.xpdf # view pdf in the terminal via pdftotext
+  unstable.w3m # view html in the terminal
 
-  tree
-  wget
-  fasd
-  fzf
-  htop
-  httpie
-  exa
+  unstable.tree
+  unstable.wget
+  unstable.fasd
+  # unstable.htop
+  unstable.httpie
+  unstable.exa
   prettyping
 
-  tldr
-  jq
+  unstable.tldr
+  unstable.jq
 
   # dev tools
-  vagrant
+  unstable.vagrant
   # vim
   # neovim
   # gotty
@@ -110,19 +109,19 @@ in
   elmPackages.elm-format
 
   # extra git stuff
-  tig
-  git-lfs
-  git-radar
-  gitAndTools.git-extras
-  gitAndTools.diff-so-fancy
-  gitAndTools.hub
+  unstable.tig
+  unstable.git-lfs
+  unstable.git-radar
+  unstable.gitAndTools.git-extras
+  unstable.gitAndTools.diff-so-fancy
+  unstable.gitAndTools.hub
   (exe haskellPackages.git-monitor)
 
   # haskell
-  hledger
-  cabal-install
-  stack
-  hlint
+  unstable.hledger
+  unstable.cabal-install
+  unstable.stack
+  unstable.hlint
   (exe haskellPackages.shake)
   # haskellPackages.shake-extras
   (exe haskellPackages.alex)
@@ -140,64 +139,64 @@ in
   RStudio-with-packages
 
   # profiling tools
-  hyperfine
-  flamegraph
+  unstable.hyperfine
+  unstable.flamegraph
 
   # nix
-  nix-prefetch-git
-  nix-serve
-  nix-bash-completions
-  nix-info
+  unstable.nix-prefetch-git
+  unstable.nix-serve
+  unstable.nix-bash-completions
+  unstable.nix-info
   # (exe haskellPackages.stack2nix)
   (exe haskellPackages.cabal2nix)
 
   # security tools
-  yubico-piv-tool
-  yubikey-manager
-  yubikey-personalization
-  gnupg22
+  unstable.yubico-piv-tool
+  unstable.yubikey-manager
+  unstable.yubikey-personalization
+  unstable.gnupg22
 
   # fonts
-  fira
-  powerline-fonts
+  unstable.fira
+  unstable.powerline-fonts
   # nerdfonts # this takes >30m to download
-  asciinema
+  unstable.asciinema
 
-  bench
-  cachix
-  ddgr
-  dhall-json
-  gv
-  imagemagick
-  file
-  macchanger
-  ngrok
-  nim
-  xdotool
-  pstree
-  texlive.combined.scheme-full
+  unstable.bench
+  unstable.cachix
+  unstable.ddgr
+  unstable.dhall-json
+  unstable.gv
+  unstable.imagemagick
+  unstable.file
+  unstable.macchanger
+  unstable.ngrok
+  unstable.nim
+  unstable.xdotool
+  unstable.pstree
+  # texlive.combined.scheme-full
   # weechat # << install 2.4-devel version
-  bash-completion
+  unstable.bash-completion
   my-dictionaries
 
   # dev tools
-  gotty
-  graphviz
-  sqlite
-  sqliteman
+  unstable.gotty
+  unstable.graphviz
+  unstable.sqlite
+  unstable.sqliteman
 
   # GUI TOOLS (needs to be changed to nixos-only)
   signal-desktop
-  firefox-devedition-bin
-  gitter
+  unstable.firefox-devedition-bin
+  unstable.gitter
   slack
-  mendeley
+  unstable.mendeley
 
   # migrate to home-manager
-  keybase
-  keybase-gui
+  unstable.keybase
+  unstable.keybase-gui
 
   # compute stuff
-  pkgs.liblapack
+  unstable.liblapack
 ]
 
