@@ -1,39 +1,23 @@
+# { config, ... }:
+{ ... }:
+
 {
   allowUnfree = true;
-  # overlays = [ (self: super: {
-  #   weechat = super.weechat.overrideAttrs (oldAttrs: {
-  #     version = "devel";
-  #     src = self.fetchurl {
-  #       url = "https://weechat.org/files/src/weechat-devel.tar.bz2";
-  #       sha256 = "102i38hra1g0hml684hsilr2psc1klp3gy206zbndbzm9y75yddq";
-  #     };
-  #   });
-  # } ) ];
+  packageOverrides = pkgs_: (with pkgs_;
+  let
+    # _unstable = import <nixpkgs-unstable> { config = config.nixpkgs.config; };
+    # _stable = import <nixpkgs-18.09> { config = config.nixpkgs.config; };
+    _unstable = import <nixpkgs-unstable> { config = pkgs_.config; };
+    _stable = import <nixpkgs-18.09> { config = pkgs_.config; };
+  in {
+    stable = _stable;
+    unstable = _unstable;
+    # this seems to cause OOM errors.
+    # neovim = _unstable.neovim;
 
-  packageOverrides = pkgs_: with pkgs_; {
-    slack = import /home/stites/git/configs/home-manager/slack.nix {
-      inherit (pkgs_)
-        stdenv dpkg fetchurl makeWrapper
-        alsaLib atk cairo cups curl dbus expat
-        fontconfig freetype glib gnome2 gtk3 gdk_pixbuf
-        libnotify nspr nss pango systemd xorg libappindicator;
-      inherit (pkgs_.xorg) libxcb;
-    };
+    slack = callPackage /home/stites/git/configs/home-manager/slack.nix {};
 
-    signal-desktop = import /home/stites/git/configs/home-manager/signal-desktop.nix {
-      inherit (pkgs_)
-      stdenv lib fetchurl dpkg wrapGAppsHook
-      gnome2 gtk3 atk cairo pango gdk_pixbuf glib freetype fontconfig
-      dbus nss nspr alsaLib
-      cups expat udev libnotify xorg
-      hunspellDicts;
-
-      inherit (pkgs_.xorg) libX11 libXi libXcursor libXdamage libXrandr libXcomposite
-      libXext libXfixes libXrender libXtst libXScrnSaver;
-
-      spellcheckerLanguage = "en_US";
-      libappindicator = libappindicator;
-    };
+    signal-desktop = callPackage /home/stites/git/configs/home-manager/signal-desktop.nix {spellcheckerLanguage = "en_US";};
 
     haskellEnv = buildEnv {
       name = "haskellEnv";
@@ -44,5 +28,5 @@
       name = "golangEnv";
       paths = [ dep2nix go2nix go ];
     };
-  };
+  });
 }
