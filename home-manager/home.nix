@@ -47,24 +47,26 @@ in
       # _FASD_IGNORE="fasd ls echo"
     '';
 
-    file.".aspell.en.pws".text = ''
-      personal_ws-1.1 en 2 utf-8
-      differentiable
-      invariants
-      PyTorch
-      TensorFlow
-      Keras
-      dplyr
-      Hasktorch
-      stites
-      compositionality
-      treebank
-      monoidal
-      formalise
-      amongst
-      compositional
-      backpropagation
-    '';
+    file.".aspell.en.pws".source = "${homedir}/git/configs/home-manager/my-aspell-ws";
+    file.".aspell.en.prepl".source = "${homedir}/git/configs/home-manager/my-aspell-repl";
+    # file.".aspell.en.pws".text = ''
+    #   personal_ws-1.1 en 2 utf-8
+    #   differentiable
+    #   invariants
+    #   PyTorch
+    #   TensorFlow
+    #   Keras
+    #   dplyr
+    #   Hasktorch
+    #   stites
+    #   compositionality
+    #   treebank
+    #   monoidal
+    #   formalise
+    #   amongst
+    #   compositional
+    #   backpropagation
+    # '';
 
     file.".ghci".source                            = ./haskell/configs/ghci;
     file.".haskline".source                        = ./haskell/configs/haskline;
@@ -132,7 +134,7 @@ in
           target = "../bin/home-manager-dev";
           text = ''
             #!/usr/bin/env bash
-            home-manager -I home-manager=$HOME/git/home-manager $@
+            home-manager -I home-manager=${homedir}/git/home-manager $@
           '';
         };
     };
@@ -257,8 +259,8 @@ in
 
     texlive = {
       enable = false;
-      package = pkgs.texlive.combined.scheme-medium;
-      extraPackages = tpkgs: { inherit (tpkgs) collection-fontsrecommended algorithms; };
+      package = pkgs.texlive; # .combined.scheme-full;
+      extraPackages = tpkgs: { inherit (tpkgs) collection-fontsrecommended algorithms latexmk xelatex; };
     };
     ssh    = import ./programs/ssh.nix;
     fzf    = import ./programs/fzf.nix;
