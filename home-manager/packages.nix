@@ -174,7 +174,7 @@ in
   unstable.nim
   unstable.xdotool
   unstable.pstree
-  # texlive.combined.scheme-full
+  stable.texlive.combined.scheme-full
   # weechat # << install 2.4-devel version
   unstable.bash-completion
   my-dictionaries

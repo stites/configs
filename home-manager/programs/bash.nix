@@ -48,6 +48,10 @@ in
     LC_ALL="en_US.UTF-8";
     LANG="en_US.UTF-8";
 
+    # provide consistent interface for single-user nix
+    # see https://github.com/NixOS/nix/issues/2033
+    NIX_PATH="$NIX_PATH:$HOME/.nix-defexpr/channels";
+
     # bash automatically fetches the last command that starts with the
     # given term: E.G. you type in ‘ssh’ and press the ‘Page Up’ key and bash
     # scrolls through your history for this. Store function in .inputrc
@@ -98,9 +102,11 @@ in
     vimattach="${nix-profile}/bin/nvim --servername VIM_SERVER --remote-tab ";
     visnippets="${nix-profile}/bin/nvim ~/.config/nvim/snippets/haskell.snippets";
 
-    # == ghci to bash == #
+    # == ghci-to-bash == #
     ":q"="exit";
     ":r"="myReload";
+    # == vim-to-bash == #
+    ":e"="vim";
 
     preview="${nix-profile}/bin/fzf --preview 'bat --color \"always\" {}'";
 
