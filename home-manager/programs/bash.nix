@@ -1,4 +1,4 @@
-{ pkgs, lib }:
+{ pkgs, lib, ... }:
 
 let
   concatStringsSep = lib.strings.concatStringsSep;
@@ -9,11 +9,13 @@ let
   nvm = import ./bash/nvm.nix { inherit lib; };
   rbenv = import ./bash/rbenv.nix;
   fasd = import ./bash/fasd.nix { inherit lib; };
-  prompt = import ./bash/prompt.nix;
+  prompt = import ./bash/prompt.nix { inherit pkgs lib; };
   nix = import ./bash/nix.nix;
   haskell = import ./bash/haskell.nix { inherit lib; };
   functions = import ./bash/functions.nix { inherit lib; };
   nix-profile = "${homeDir}/.nix-profile/";
+  host = import ../hosts.nix { inherit pkgs lib; };
+  hostExtraConfig = host.bash.extraConfig;
 in
 {
   enable = true;
@@ -171,6 +173,13 @@ in
     (if builtins.pathExists "/usr/sbin"       then "safe_path_add /usr/sbin"       else "")
     (if builtins.pathExists "/usr/local/bin"  then "safe_path_add /usr/local/bin"  else "")
     (if builtins.pathExists "/usr/local/sbin" then "safe_path_add /usr/local/sbin" else "")
+    (if host.isNixOS then "" else "source ${homeDir}/.nix-profile/etc/profile.d/nix.sh")
+    (if host.isNixOS then "" else "source ${homeDir}/.nix-profile/etc/profile.d/hm-session-vars.sh")
+
+    # provide consistent interface for single-user nix
+    # see https://github.com/NixOS/nix/issues/2033
+    # FIXME: This is repeated in .profile but doesn't seem to stick
+    ''export NIX_PATH="$NIX_PATH:$HOME/.nix-defexpr/channels"''
 
     git.functions
 
@@ -208,5 +217,7 @@ in
     alias find="${nix-profile}/bin/fd"
     safe_source "$HOME/.fonts/*.sh"
     ''
+
+    host.bash.extraConfig
   ]);
 }

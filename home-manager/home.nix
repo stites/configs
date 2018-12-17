@@ -9,6 +9,7 @@ let
   concatStringsSep = lib.strings.concatStringsSep;
   neovim = import ./programs/neovim { inherit pkgs lib; };
   mail = import ./mail.nix;
+  host = import ./hosts.nix { inherit pkgs lib config; };
 in
 {
   manual.html.enable = true;
@@ -143,7 +144,7 @@ in
 
   fonts.fontconfig.enableProfileFonts = true;
   xsession = {
-    enable = true;
+    enable = host.isNixOS;
     preferStatusNotifierItems = true;
 
     pointerCursor = {
@@ -153,8 +154,8 @@ in
     };
 
     windowManager.xmonad = {
-      enable = true;
-      enableContribAndExtras = true;
+      enable = host.isNixOS;
+      enableContribAndExtras = host.isNixOS;
       config = ./xmonad/xmonad.hs;
       extraPackages = hpkgs: [
         hpkgs.xmonad-contrib
@@ -166,7 +167,7 @@ in
   };
 
   gtk = {
-    enable = true;
+    enable = host.isNixOS;
     gtk3 = {
       waylandSupport = true;
       extraConfig = {
@@ -186,14 +187,13 @@ in
     };
   };
   qt = {
-    enable = true;
+    enable = host.isNixOS;
     useGtkTheme = true;
   };
 
-
   services.flameshot.enable = true;
-  services.taffybar.enable = true;
-  services.status-notifier-watcher.enable = true;
+  services.taffybar.enable = host.isNixOS;
+  services.status-notifier-watcher.enable = host.isNixOS;
   services.syncthing = {
     enable = false;
     tray = true;
