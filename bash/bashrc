@@ -222,3 +222,6 @@ export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.en"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# add direnv
+eval "$(direnv hook bash)"

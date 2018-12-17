@@ -3,6 +3,7 @@
 # add stack installs to path
 safe_path_add "$HOME/.local/bin/"
 safe_path_add "$HOME/.cabal/bin/"
+safe_path_add "/opt/ghc/bin"
 
 # stack autocomplete
 eval "$(stack --bash-completion-script stack)"

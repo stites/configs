@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Use Nix
-# safe_source "$HOME/.nix-profile/etc/profile.d/nix.sh"
+safe_source "$HOME/.nix-profile/etc/profile.d/nix.sh"
 
 if [ -n "$HOME" ] && [ -n "$USER" ]; then
     __savedpath="$PATH"
