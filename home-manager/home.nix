@@ -268,6 +268,18 @@ in
     tmux   = import ./programs/tmux.nix { inherit pkgs; };
     urxvt  = import ./programs/urxvt.nix { inherit pkgs; };
     neovim = neovim.config;
+    jq = {
+      enable = true;
+      colors = {
+        null    = "1;30";
+        false   = "0;31";
+        true    = "0;32";
+        numbers = "0;36";
+        strings = "0;33";
+        arrays  = "1;35";
+        objects = "1;37";
+      };
+    };
   } // mail.programs;
 
   accounts.email = mail.email;

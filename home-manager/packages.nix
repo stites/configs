@@ -93,7 +93,6 @@ in
   prettyping
 
   unstable.tldr
-  unstable.jq
 
   # dev tools
   unstable.vagrant
