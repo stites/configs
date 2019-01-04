@@ -3,7 +3,7 @@
 with pkgs;
 
 let
-  elmPackages = unstable.elmPackages;
+  elmPackages = stable.elmPackages;
   # haskellPackages = pkgs.haskellPackages;
   exe = haskell.lib.justStaticExecutables;
 
@@ -62,6 +62,7 @@ in
   unstable.most
   unstable.watch
   unstable.xz
+  unstable.unar
   unstable.aircrack-ng
   unstable.youtube-dl
   unstable.pmutils
@@ -91,6 +92,7 @@ in
   unstable.httpie
   unstable.exa
   prettyping
+  # nix-linting
 
   unstable.tldr
 
@@ -104,8 +106,8 @@ in
   # sqliteman
 
   # elm
-  elmPackages.elm
-  elmPackages.elm-format
+  # elmPackages.elm
+  # elmPackages.elm-format
 
   # extra git stuff
   unstable.tig
@@ -132,6 +134,7 @@ in
   (exe haskellPackages.ghcid)
   (exe haskellPackages.patat)
   (exe haskellPackages.nvim-hs-ghcid)
+  (exe haskellPackages.threadscope)
   # (exe haskellPackages.glirc)
   # (exe pkgs.haskell.packages.ghc822.codex)
 
