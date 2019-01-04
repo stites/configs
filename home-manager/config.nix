@@ -1,8 +1,47 @@
 # { config, ... }:
 { ... }:
 
+let
+  mypython36 = pkgs:
+      pkgs.python36.override {
+        # packageOverrides = (self: super: {
+        #   bokeh = super.bokeh.overridePythonAttrs (oldAttrs: { checkPhase = "true"; });
+        #   pandas = super.pandas.overridePythonAttrs (oldAttrs: { checkPhase = "true"; });
+        # });
+    };
+  mypythonPkgs = args: [
+    (args.python36.withPackages (ps: with ps; [
+      beautifulsoup4
+      bokeh.overridePythonAttrs (oldAttrs: { checkPhase = "true"; })
+      h5py
+      ipython
+      matplotlib
+      mypy
+      nose
+      numpy
+      pygments
+      pandas.overridePythonAttrs (oldAttrs: { checkPhase = "true"; })
+      (if args.useCuda then pytorchWithCuda else pytorch)
+      requests
+      scipy
+      scikitlearn
+      torchvision
+    ]))
+  ];
+in
 {
   allowUnfree = true;
+  # THIS ACTUALLY GOES INTO CONFIGURATION.NIX
+  # nix = {
+  #   binaryCaches = [
+  #     "https://cache.nixos.org/"
+  #     "https://nix-linter.cachix.org"
+  #   ];
+  #   binaryCachePublicKeys = [
+  #     "nix-linter.cachix.org-1:<redacted>"
+  #   ];
+  #   trustedUsers = [ "root" "stites" ];
+  # };
   packageOverrides = pkgs_: (with pkgs_;
   let
     # _unstable = import <nixpkgs-unstable> { config = config.nixpkgs.config; };
@@ -41,7 +80,17 @@
 
     golangEnv = buildEnv {
       name = "golangEnv";
-      paths = [ dep2nix go2nix go ];
+      paths = with pkgs; [ dep2nix go2nix go ];
     };
+
+    pythonEnv = buildEnv {
+      name = "pythonEnv";
+      paths = mypythonPkgs { python36 = (mypython36 pkgs); useCuda = false;};
+    };
+
+    pythonEnvWithCuda = buildEnv {
+      name = "pythonEnvWithCuda";
+      paths = mypythonPkgs { python36 = (mypython36 pkgs); useCuda = true;};
+    }; 
   });
 }
