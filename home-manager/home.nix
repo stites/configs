@@ -48,6 +48,16 @@ in
       # _FASD_IGNORE="fasd ls echo"
     '';
 
+    file.".codex".text = ''
+      currentProjectIncluded: true
+      hackagePath: ${homedir}/.cabal/packages/hackage.haskell.org/
+      tagsFileHeader: false
+      tagsFileName: codex.tags
+      tagsFileSorted: false
+      tagsCmd: hasktags --etags --follow-symlinks --output="$TAGS" "$SOURCES"
+      stackOpts: ""
+    '';
+
     file.".aspell.en.pws".source = "${homedir}/git/configs/home-manager/my-aspell-ws";
     file.".aspell.en.prepl".source = "${homedir}/git/configs/home-manager/my-aspell-repl";
     # file.".aspell.en.pws".text = ''
