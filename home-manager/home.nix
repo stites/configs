@@ -179,7 +179,6 @@ in
   gtk = {
     enable = host.isNixOS;
     gtk3 = {
-      waylandSupport = true;
       extraConfig = {
         scaling-factor = 2;
         gtk-cursor-blink = false;
@@ -293,6 +292,11 @@ in
   } // mail.programs;
 
   accounts.email = mail.email;
+
+  dconf  = {
+    enable = true;
+    settings = { };
+  };
 
   systemd.user.services.protonmail-bridge = {
     Unit = {
