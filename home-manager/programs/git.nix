@@ -42,6 +42,7 @@ in
     "tmp"
     "foo"
     "bar"
+    "result"
     "?"
     ".myenv"
     "data/*.gz"
@@ -87,9 +88,6 @@ in
     [merge]
     stat = true
     tool = vimdiff
-
-    [url "https://"]
-    insteadOf = git://
 
     [help]
     autocorrect = 1

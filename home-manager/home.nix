@@ -5,11 +5,11 @@ let
   homedir = builtins.getEnv "HOME";
   ca-bundle_crt = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"; # just in case
   lib = stdenv.lib;
-  exe = pkgs.haskell.lib.justStaticExecutables;
   concatStringsSep = lib.strings.concatStringsSep;
   neovim = import ./programs/neovim { inherit pkgs lib; };
   mail = import ./mail.nix;
   host = import ./hosts.nix { inherit pkgs lib config; };
+  hpkgs844 = pkgs.stable.haskell.packages.ghc844;
 in
 {
   manual.html.enable = true;
@@ -22,7 +22,7 @@ in
       GDK_SCALE=2;
       GDK_DPI_SCALE="0.5";
     };
-    packages = (import ./packages.nix { inherit pkgs; })
+    packages = (import ./packages.nix { inherit pkgs lib config; })
       ++ [ pkgs.protonmail-bridge pkgs.screen ];
     keyboard = {
       layout = "us";
@@ -60,37 +60,32 @@ in
 
     file.".aspell.en.pws".source = "${homedir}/git/configs/home-manager/my-aspell-ws";
     file.".aspell.en.prepl".source = "${homedir}/git/configs/home-manager/my-aspell-repl";
-    # file.".aspell.en.pws".text = ''
-    #   personal_ws-1.1 en 2 utf-8
-    #   differentiable
-    #   invariants
-    #   PyTorch
-    #   TensorFlow
-    #   Keras
-    #   dplyr
-    #   Hasktorch
-    #   stites
-    #   compositionality
-    #   treebank
-    #   monoidal
-    #   formalise
-    #   amongst
-    #   compositional
-    #   backpropagation
-    # '';
-
     file.".ghci".source                            = ./haskell/configs/ghci;
     file.".haskline".source                        = ./haskell/configs/haskline;
     file.".stack/config.yaml".source               = ./haskell/configs/stack-local.yaml;
     file.".stack/global-project/stack.yaml".source = ./haskell/configs/stack-global.yaml;
+    file.".mozilla/chrome/userChrome.css".text = ''
+      /* Hide tab bar in FF Quantum */
+      @-moz-document url("chrome://browser/content/browser.xul") {
+        #TabsToolbar {
+          visibility: collapse !important;
+          margin-bottom: 21px !important;
+        }
+
+        #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+          visibility: collapse !important;
+        }
+      }
+    '';
   };
 
-  nixpkgs.config = (import ./config.nix { inherit config; });
+  nixpkgs.config = (import ./config.nix { inherit pkgs lib config; });
   nixpkgs.overlays = [];
 
   xdg = {
     enable = true;
     configFile = {
+      "nixpkgs/isNixOS".text = "${if host.isNixOS then "true" else "false"}";
       "nixpkgs/config.nix".source = "${homedir}/git/configs/home-manager/config.nix";
       "nixpkgs/overlays" = {
         recursive = true;
@@ -110,6 +105,55 @@ in
       "nvim/UltiSnips/python.snippets" = {
         source = ./programs/neovim/UltiSnips/python.snippets;
       };
+
+      "brittany/config.yaml".text = ''
+        conf_debug:
+          dconf_roundtrip_exactprint_only: false
+          dconf_dump_bridoc_simpl_par: false
+          dconf_dump_ast_unknown: false
+          dconf_dump_bridoc_simpl_floating: false
+          dconf_dump_config: false
+          dconf_dump_bridoc_raw: false
+          dconf_dump_bridoc_final: false
+          dconf_dump_bridoc_simpl_alt: false
+          dconf_dump_bridoc_simpl_indent: false
+          dconf_dump_annotations: false
+          dconf_dump_bridoc_simpl_columns: false
+          dconf_dump_ast_full: false
+        conf_forward:
+          options_ghc: []
+        conf_errorHandling:
+          econf_ExactPrintFallback: ExactPrintFallbackModeInline
+          econf_Werror: false
+          econf_omit_output_valid_check: false
+          econf_produceOutputOnErrors: false
+        conf_preprocessor:
+          ppconf_CPPMode: CPPModeAbort
+          ppconf_hackAroundIncludes: false
+        conf_obfuscate: false
+        conf_roundtrip_exactprint_only: false
+        conf_version: 1
+        conf_layout:
+          lconfig_reformatModulePreamble: true
+          lconfig_altChooser:
+            tag: AltChooserBoundedSearch
+            contents: 3
+          lconfig_allowSingleLineExportList: false
+          lconfig_importColumn: 50
+          lconfig_hangingTypeSignature: false
+          lconfig_importAsColumn: 50
+          lconfig_alignmentLimit: 30
+          lconfig_indentListSpecial: true
+          lconfig_indentAmount: 2
+          lconfig_alignmentBreakOnMultiline: true
+          lconfig_cols: 80
+          lconfig_indentPolicy: IndentPolicyLeft
+          lconfig_indentWhereSpecial: true
+          lconfig_columnAlignMode:
+            tag: ColumnAlignModeMajority
+            contents: 0.7
+      '';
+
       "nvim/UltiSnips/haskell.snippets" = {
         text = concatStringsSep "\n" [
           (builtins.readFile ./programs/neovim/UltiSnips/haskell.snippets)
@@ -142,12 +186,25 @@ in
     dataFile = neovim.xdg.dataFile // {
       "home-manager-dev" = {
         executable = true;
-          target = "../bin/home-manager-dev";
+        target = "../bin/home-manager-dev";
+        text = ''
+          #!/usr/bin/env bash
+          home-manager -I home-manager=${homedir}/git/home-manager $@
+        '';
+      };
+      "remarkable-upload" = {
+        executable = true;
+        target = "../bin/remarkable-upload";
           text = ''
             #!/usr/bin/env bash
-            home-manager -I home-manager=${homedir}/git/home-manager $@
+            f="$1"
+            f=${ lib.concatStrings ["$" "{f//" "\\" "\\" "/\\" "\\" "\\" "\\" "}" ] }
+            f=${ lib.concatStrings ["$" "{f//" "\\" ''"'' "/" "\\" "\\" "\\" ''"'' "}" ] }
+            f=${ lib.concatStrings ["$" "{f//;/\\\\;}" ] }
+            ${pkgs.curl}/bin/curl -w '\n' --form "file=@\"$f\"" "http://10.11.99.1/upload"
           '';
         };
+
     };
   };
 
@@ -167,6 +224,7 @@ in
       enable = host.isNixOS;
       enableContribAndExtras = host.isNixOS;
       config = ./xmonad/xmonad.hs;
+      haskellPackages = hpkgs844;
       extraPackages = hpkgs: [
         hpkgs.xmonad-contrib
         hpkgs.xmonad-extras
@@ -201,8 +259,16 @@ in
   };
 
   services.flameshot.enable = true;
-  services.taffybar.enable = host.isNixOS;
-  services.status-notifier-watcher.enable = host.isNixOS;
+  services.taffybar = {
+    enable = host.isNixOS;
+    package = hpkgs844.taffybar;
+  };
+
+  services.status-notifier-watcher = {
+    enable = host.isNixOS;
+    package = hpkgs844.status-notifier-item;
+  };
+
   services.syncthing = {
     enable = false;
     tray = true;
@@ -250,6 +316,7 @@ in
   programs = {
     home-manager = {
       enable = true;
+      # path = https://github.com/rycee/home-manager/archive/release-18.09.tar.gz;
       path = https://github.com/rycee/home-manager/archive/master.tar.gz;
     };
 
@@ -266,10 +333,24 @@ in
     noti.enable = true;
     zathura.enable = true;
 
+    firefox = {
+      enable = true;
+      enableAdobeFlash = false;
+      enableGoogleTalk = true;
+      enableIcedTea = false;
+      package = pkgs.firefox-unwrapped;
+    };
     texlive = {
-      enable = false;
-      package = pkgs.texlive; # .combined.scheme-full;
-      extraPackages = tpkgs: { inherit (tpkgs) collection-fontsrecommended algorithms latexmk xelatex; };
+      enable = true;
+      extraPackages = tpkgs: {
+        inherit (tpkgs)
+          scheme-full
+          # scheme-medium
+          collection-fontsrecommended
+          algorithms
+          latexmk;
+          # xelatex;
+      };
     };
     ssh    = import ./programs/ssh.nix;
     fzf    = import ./programs/fzf.nix;
@@ -319,6 +400,14 @@ in
       WantedBy = [ "default.target" ];
     };
   };
+
+  # systemd.user.services.qsyncthingtray.Unit.After         = [ "taffybar.service" ] ++ systemd.user.services.qsyncthingtray.Unit.After;
+  # systemd.user.services.flameshot.Unit.After              = [ "taffybar.service" ] ++ systemd.user.services.flameshot.Unit.After;
+  # systemd.user.services.redshift.Unit.After               = [ "taffybar.service" ] ++ systemd.user.services.redshift.Unit.After;
+  # systemd.user.services.pasystray.Unit.After              = [ "taffybar.service" ];
+  # systemd.user.services.parcellite.Unit.After             = [ "taffybar.service" ];
+  # systemd.user.services.network-manager-applet.Unit.After = [ "taffybar.service" ];
+
   systemd.user.services.offlineimap = {
     Unit = {
       Description = "Offlineimap service";
@@ -332,6 +421,18 @@ in
       RestartSec = "5s";
     };
 
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
+  };
+
+  systemd.user.services.sovushka-server = {
+    Unit = {
+      Description = "Sovushka server service";
+    };
+    Service = {
+      ExecStart ="sovushka-server";
+    };
     Install = {
       WantedBy = [ "default.target" ];
     };
