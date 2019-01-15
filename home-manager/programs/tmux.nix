@@ -4,7 +4,7 @@ with pkgs;
 
 {
   enable = true;
-  tmuxp.enable = true;
+  tmuxp.enable = false;
 
   plugins = [
     tmuxPlugins.battery
