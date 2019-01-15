@@ -71,8 +71,9 @@ in
     LESSOPEN="|${nix-profile}/bin/lesspipe.sh %s"; # FIXME << do we even need this?
 
     # and https://github.com/NixOS/nixpkgs/issues/44144
-    # CPATH="${homeDir}/.nix-profile/include";
-    # LIBRARY_PATH="${homeDir}/.nix-profile/lib";
+    CPATH="${homeDir}/.nix-profile/include";
+    LIBRARY_PATH="${homeDir}/.nix-profile/lib";
+    LD_LIBRARY_PATH="${homeDir}/.nix-profile/lib";
   } // colors // pyenv.variables // prompt.variables;
 
   shellAliases = {

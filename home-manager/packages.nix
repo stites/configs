@@ -176,9 +176,21 @@ let
       prettyping
       # nix-linting
       my-dictionaries
+
+      # In order to build things outside of nix
       zlib
       zlib.out
       zlib.dev
+      openssl
+      openssl.out
+      openssl.dev
+      bzip2
+      bzip2.out
+      bzip2.dev
+      sqlite.out
+      sqlite.dev
+      readline.out
+      readline.dev
     ]);
 
   unstableNixOS =
