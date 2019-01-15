@@ -18,13 +18,13 @@
 let g:LanguageClient_settingsPath='~/.config/nvim/lsp/settings.json'
 
 " there seems to be a bug where this is not sourced correctly. Moved to the bottom of init.vim
-"let g:LanguageClient_serverCommands = {
-"    \ 'haskell': ['/home/stites/.nix-profile/bin/hie-wrapper', '--lsp'],
-"    \ 'rust': ['/home/stites/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-"    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
-"    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-"    \ 'python': ['/usr/local/bin/pyls'],
-"    \ }
+let g:LanguageClient_serverCommands = {
+    \ 'haskell': ['hie-wrapper', '--lsp'],
+    \ }
+    " \ 'rust': ['/home/stites/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    " \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    " \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+    " \ 'python': ['/usr/local/bin/pyls'],
 
 " You'll probably want to add some mappings for common commands:
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>

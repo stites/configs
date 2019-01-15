@@ -1,13 +1,14 @@
-{ pkgs, ... }:
-
-with pkgs;
+{ pkgs, lib, config, ... }:
 
 let
-  elmPackages = stable.elmPackages;
-  # haskellPackages = pkgs.haskellPackages;
-  exe = haskell.lib.justStaticExecutables;
+  host = import ./hosts.nix { inherit pkgs lib config; };
+  stable = pkgs.stable;
+  unstable = pkgs;
 
-  RStudio-with-packages = unstable.rstudioWrapper.override { packages = with rPackages; [
+  elmPackages = stable.elmPackages;
+  haskellPackages844 = pkgs.haskellPackages.packages.ghc844;
+
+  RStudio-with-packages = unstable.rstudioWrapper.override { packages = with unstable.rPackages; [
     xts
     rstan
     ggplot2
@@ -15,7 +16,7 @@ let
     rgl
     shiny
     zoo
-    parallel
+    # parallel
     jug
     data_table
     dplyr
@@ -27,178 +28,180 @@ let
   my-dictionaries = with pkgs; buildEnv {
     name = "my-dictionary";
     paths = [
-      unstable.dict
+      dict
       # dictdDBs.eng2rus
-      unstable.dictdDBs.wiktionary
-      unstable.dictdDBs.wordnet
+      dictdDBs.wiktionary
+      dictdDBs.wordnet
 
-      unstable.aspell
-      unstable.aspellDicts.en
+      aspell
+      aspellDicts.en
     ];
   };
-in
-[
-  unstable.fortune
-  unstable.cowsay
-  unstable.coreutils
-  unstable.neofetch
 
-  # alacritty
-  unstable.noti
-  unstable.cloc
-  unstable.bat
-  unstable.socat
-  unstable.xsv
-  unstable.cmake
-  unstable.curl
-  unstable.ncdu
-  unstable.fd
-  unstable.xclip
-  unstable.ripgrep
-  unstable.rxvt_unicode_with-plugins
-  unstable.gawk
-  unstable.less
-  unstable.lesspipe
-  unstable.most
-  unstable.watch
-  unstable.xz
-  unstable.unar
-  unstable.aircrack-ng
-  unstable.youtube-dl
-  unstable.pmutils
-  unstable.syncthing
-  unstable.zip
-  unstable.gnused
-  # gl # sed for json
-  unstable.entr # for when sos fails us
-  unstable.mosh
-  unstable.shellcheck
-  unstable.par
+  stableNixPkgs =
+    let exe = stable.haskell.lib.justStaticExecutables;
+    in (with stable; [
+      fortune
+      cowsay
+      coreutils
+      neofetch
+      calibre
 
-  # email
-  unstable.protonmail-bridge
-  #stable.notmuch
-  unstable.notmuch-mutt
-  unstable.neomutt
-  #stable.offlineimap
-  unstable.lynx
-  unstable.xpdf # view pdf in the terminal via pdftotext
-  unstable.w3m # view html in the terminal
+      cloc
+      bat
+      socat
+      xsv
+      cmake
+      curl
+      ncdu
+      fd
+      xclip
+      ripgrep
+      gawk
+      less
+      lesspipe
+      most
+      watch
+      xz
+      unar
+      aircrack-ng
+      youtube-dl
+      pmutils
+      syncthing
+      zip
+      gnused
+      # gl # sed for json
+      entr # when sos fails us
+      mosh
+      shellcheck
+      par
+      tree
+      wget
+      fasd
+      httpie
+      exa
 
-  unstable.tree
-  unstable.wget
-  unstable.fasd
-  # unstable.htop
-  unstable.httpie
-  unstable.exa
-  prettyping
-  # nix-linting
+      # email
+      notmuch-mutt
+      neomutt
+      lynx
+      xpdf # view pdf in the terminal via pdftotext
+      w3m # view html in the terminal
 
-  unstable.tldr
+      # dev tools
+      vagrant
+      tldr
+      asciinema
+      gotty
+      graphviz
+      sqlite
+      sqliteman
 
-  # dev tools
-  unstable.vagrant
-  # vim
-  # neovim
-  # gotty
-  # graphviz
-  # sqlite
-  # sqliteman
+      # haskell
+      hledger
+      hlint
+      (exe haskellPackages.shake)
+      # haskellPackages.shake-extras
+      (exe haskellPackages.alex)
+      (exe haskellPackages.brittany)
+      (exe haskellPackages.happy)
+      (exe haskellPackages.hpack)
+      (exe haskellPackages.pointfree)
+      (exe haskellPackages.hasktags)
+      (exe haskellPackages.hspec-discover)
+      (exe haskellPackages.ghcid)
+      (exe haskellPackages.patat)
+      (exe haskellPackages.nvim-hs-ghcid)
+      # (exe haskellPackages.threadscope)
+      # (exe haskellPackages.glirc)
+      # (exe pkgs.haskell.packages.ghc822.codex)
 
-  # elm
-  # elmPackages.elm
-  # elmPackages.elm-format
+      # extra git stuff
+      tig
+      git-lfs
+      git-radar
+      gitAndTools.git-extras
+      gitAndTools.diff-so-fancy
+      gitAndTools.hub
+      (exe haskellPackages.git-monitor)
+      (exe haskellPackages.git-annex)
 
-  # extra git stuff
-  unstable.tig
-  unstable.git-lfs
-  unstable.git-radar
-  unstable.gitAndTools.git-extras
-  unstable.gitAndTools.diff-so-fancy
-  unstable.gitAndTools.hub
-  (exe haskellPackages.git-monitor)
+      # profiling tools
+      hyperfine
+      flamegraph
 
-  # haskell
-  unstable.hledger
-  unstable.cabal-install
-  unstable.stack
-  unstable.hlint
-  (exe haskellPackages.shake)
-  # haskellPackages.shake-extras
-  (exe haskellPackages.alex)
-  (exe haskellPackages.happy)
-  (exe haskellPackages.hpack)
-  (exe haskellPackages.pointfree)
-  (exe haskellPackages.hasktags)
-  (exe haskellPackages.hspec-discover)
-  (exe haskellPackages.ghcid)
-  (exe haskellPackages.patat)
-  (exe haskellPackages.nvim-hs-ghcid)
-  (exe haskellPackages.threadscope)
-  # (exe haskellPackages.glirc)
-  # (exe pkgs.haskell.packages.ghc822.codex)
+      # nix
+      nix-prefetch-git
+      nix-serve
+      nix-bash-completions
+      nix-info
+      nix-index
+      # (exe haskellPackages.stack2nix)
+      (exe haskellPackages.cabal2nix)
 
-  RStudio-with-packages
+      # security tools
+      yubico-piv-tool
+      yubikey-manager
+      yubikey-personalization
+      gnupg22
 
-  # profiling tools
-  unstable.hyperfine
-  unstable.flamegraph
+      bench
+      ddgr
+      dhall-json
+      gv
+      imagemagick
+      file
+      macchanger
+      ngrok
+      nim
+      xdotool
+      pstree
+      # texlive.combined.scheme-full
+      # weechat # << install 2.4-devel version
+      bash-completion
 
-  # nix
-  unstable.nix-prefetch-git
-  unstable.nix-serve
-  unstable.nix-bash-completions
-  unstable.nix-info
-  # (exe haskellPackages.stack2nix)
-  (exe haskellPackages.cabal2nix)
+      cachix
+      hies
+    ]);
 
-  # security tools
-  unstable.yubico-piv-tool
-  unstable.yubikey-manager
-  unstable.yubikey-personalization
-  unstable.gnupg22
 
-  # fonts
-  unstable.fira
-  unstable.powerline-fonts
-  # nerdfonts # this takes >30m to download
-  unstable.asciinema
+  unstableNixPkgs =
+    let exe = unstable.haskell.lib.justStaticExecutables;
+    in (with unstable; [
+      cabal-install
+      stack
+      noti
+      rxvt_unicode_with-plugins
+      protonmail-bridge
+      prettyping
+      # nix-linting
+      my-dictionaries
+      zlib
+      zlib.out
+      zlib.dev
+    ]);
 
-  unstable.bench
-  unstable.cachix
-  unstable.ddgr
-  unstable.dhall-json
-  unstable.gv
-  unstable.imagemagick
-  unstable.file
-  unstable.macchanger
-  unstable.ngrok
-  unstable.nim
-  unstable.xdotool
-  unstable.pstree
-  stable.texlive.combined.scheme-full
-  # weechat # << install 2.4-devel version
-  unstable.bash-completion
-  my-dictionaries
+  unstableNixOS =
+    if host.isNixOS
+    then (with unstable; [
+        # fonts
+        fira
+        powerline-fonts
+        # nerdfonts # this takes >30m to download
 
-  # dev tools
-  unstable.gotty
-  unstable.graphviz
-  unstable.sqlite
-  unstable.sqliteman
+        # GUI TOOLS (needs to be changed to nixos-only)
+        signal-desktop
+        stable.gitter
+        slack
 
-  # GUI TOOLS (needs to be changed to nixos-only)
-  signal-desktop
-  unstable.firefox-devedition-bin
-  unstable.gitter
-  slack
-  unstable.mendeley
+        # migrate to home-manager
+        keybase
+        keybase-gui
 
-  # migrate to home-manager
-  unstable.keybase
-  unstable.keybase-gui
+        # compute stuff
+        liblapack
+        RStudio-with-packages
+    ]) else [];
 
-  # compute stuff
-  unstable.liblapack
-]
+in stableNixPkgs ++ unstableNixPkgs ++ unstableNixOS
 

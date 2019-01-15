@@ -52,12 +52,12 @@ in
 
     # provide consistent interface for single-user nix
     # see https://github.com/NixOS/nix/issues/2033
-    NIX_PATH="$NIX_PATH:$HOME/.nix-defexpr/channels";
+    NIX_PATH="$NIX_PATH:${homeDir}/.nix-defexpr/channels";
 
     # bash automatically fetches the last command that starts with the
     # given term: E.G. you type in ‘ssh’ and press the ‘Page Up’ key and bash
     # scrolls through your history for this. Store function in .inputrc
-    INPUTRC="$HOME/.inputrc";
+    INPUTRC="${homeDir}/.inputrc";
 
     # colored GCC warnings and errors
     # export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
@@ -70,6 +70,9 @@ in
     # the output of eval "$(SHELL=/bin/sh lesspipe.sh)"
     LESSOPEN="|${nix-profile}/bin/lesspipe.sh %s"; # FIXME << do we even need this?
 
+    # and https://github.com/NixOS/nixpkgs/issues/44144
+    # CPATH="${homeDir}/.nix-profile/include";
+    # LIBRARY_PATH="${homeDir}/.nix-profile/lib";
   } // colors // pyenv.variables // prompt.variables;
 
   shellAliases = {
