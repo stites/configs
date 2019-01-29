@@ -6,6 +6,7 @@ let
   elmPackages = stable.elmPackages;
   # haskellPackages = pkgs.haskellPackages;
   exe = haskell.lib.justStaticExecutables;
+  host = import ./hosts.nix { inherit pkgs; lib = pkgs.lib; };
 
   RStudio-with-packages = unstable.rstudioWrapper.override { packages = with rPackages; [
     xts
@@ -192,7 +193,7 @@ in
   unstable.firefox-devedition-bin
   unstable.gitter
   slack
-  unstable.mendeley
+  # unstable.mendeley
 
   # migrate to home-manager
   unstable.keybase
@@ -200,5 +201,7 @@ in
 
   # compute stuff
   unstable.liblapack
-]
+
+  # servers
+] ++ (pkgs.lib.optional host.isServer [ znc ])
 
