@@ -1,6 +1,15 @@
 " using vim-plug
 call plug#begin('~/.config/nvim/bundle')
 
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash ./install.sh',
+    \ 'for': 'haskell'
+    \ } " Just Haskell for the time being
+
+" C/C++ development
+Plug 'JBakamovic/cxxd-vim', { 'for': ['c', 'cpp'] }
+
 " Dhall
 Plug 'vmchale/dhall-vim',     { 'for': 'dhall' }
 
@@ -9,10 +18,7 @@ Plug 'neovimhaskell/haskell-vim',     { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle',           { 'for': 'haskell' }
 Plug 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
 Plug 'eagletmt/neco-ghc',             { 'for': 'haskell' }
-" Plug 'autozimu/LanguageClient-neovim', {
-"     \ 'branch': 'next',
-"     \ 'do': 'bash ./install.sh'
-"     \ }
+Plug 'meck/vim-brittany',             { 'for': 'haskell' }
 
 " HTML, XML
 Plug 'docunext/closetag.vim', { 'for': 'html' }
@@ -96,7 +102,7 @@ Plug 'vim-scripts/wombat256.vim'
 Plug 'endel/vim-github-colorscheme'
 Plug 'mhartington/oceanic-next'
 Plug 'freeo/vim-kalisi'
-
+Plug 'JBakamovic/yaflandia'
 
 " Productivity
 " Plug 'wakatime/vim-wakatime'
