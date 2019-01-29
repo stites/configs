@@ -5,6 +5,7 @@ let
   colors = import ./programs/bash/colors.nix;
   isGrothendieck = hostname == "grothendieck";
   isMirzakhani = hostname == "mirzakhani";
+
   grothendieck.bash = {
     prompt = {
       PROMPT_INCL_USER="false";
@@ -62,4 +63,5 @@ in
   inherit hostname;
   isNixOS = isGrothendieck;
   bash = if isGrothendieck then grothendieck.bash else mirzakhani.bash;
+  isServer = isMirzakhani;
 }
