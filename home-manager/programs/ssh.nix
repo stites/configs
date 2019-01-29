@@ -20,5 +20,14 @@
       hostname = "10.0.0.12";
       forwardX11Trusted = true;
     };
+    # ssh root@10.11.99.1 "mkdir -p ~/.ssh && \
+    #    touch .ssh/authorized_keys && \
+    #    chmod -R u=rwX,g=,o= ~/.ssh && \
+    #    cat >> .ssh/authorized_keys" < ~/.ssh/id_rsa.pub
+    remarkable = {
+      hostname = "10.11.99.1";
+      user = "root";
+      identityFile = "/home/stites/.ssh/id_rsa"; # This _must_ be rsa because of reMarkable's sshd client
+    };
   };
 }
