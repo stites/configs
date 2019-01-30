@@ -136,7 +136,7 @@ in
     rbnix = rbnix pkgs_;
     tmuxp = tmuxp pkgs_;
     slack = callPackage /home/stites/git/configs/home-manager/slack.nix {};
-    signal-desktop = callPackage /home/stites/git/configs/home-manager/signal-desktop.nix {spellcheckerLanguage = "en_US";};
+    signal-desktop-beta = callPackage /home/stites/git/configs/home-manager/signal-desktop.nix {spellcheckerLanguage = "en_US";};
     reMarkable-sdk = reMarkable-sdk;
     hies = hies;
 

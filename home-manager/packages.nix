@@ -99,6 +99,8 @@ let
 
       # haskell
       hledger
+      hledger-ui
+      hledger-web
       hlint
       (exe haskellPackages.shake)
       # haskellPackages.shake-extras
@@ -191,6 +193,7 @@ let
       sqlite.dev
       readline.out
       readline.dev
+      gcc7.out
     ]);
 
   unstableNixOS =
