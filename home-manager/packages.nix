@@ -48,7 +48,6 @@ let
       calibre
 
       cloc
-      bat
       socat
       xsv
       cmake
@@ -173,6 +172,7 @@ let
       cabal-install
       stack
       noti
+      bat
       rxvt_unicode_with-plugins
       protonmail-bridge
       prettyping
