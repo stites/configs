@@ -18,6 +18,7 @@ in
     "10.0.6.154 genbu"
     "10.0.6.124 grothendieck"
     "10.0.6.132 mirzakhani"
+    "10.0.6.213 hesse"
     (builtins.readFile (fetchFromRawGitHub {
       owner = "StevenBlack";
       repo = "hosts";
@@ -40,7 +41,6 @@ in
         { from = 8000;  to = 8010; } # web servers
         { from = 60000; to = 60050; } # mosh
         { from = 655;   to = 656; } # tinc
-        # 655 # tinc
       ];
       trustedInterfaces = [ "tun" ];
     };
