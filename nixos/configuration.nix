@@ -68,18 +68,9 @@ in
   # should.
   system.stateVersion = "18.09"; # Did you read the comment?
 
-  nix = {
-    binaryCaches = [
-      "https://cache.nixos.org/"
-      "https://hie-nix.cachix.org"
-    ];
-    binaryCachePublicKeys = [
-      "hie-nix.cachix.org-1:EjBSHzF6VmDnzqlldGXbi0RM3HdjfTU3yDRi9Pd0jTY="
-    ];
-    # POTENTIALLY USEFUL, BUT DON'T DO IT BECAUSE I AM NOT READY
-    # nix.nixPath = [
-    #   "nixpkgs=/root/nixpkgs"
-    #   "nixos-config=/etc/nixos/configuration.nix"
-    # ];
-  };
+  # POTENTIALLY USEFUL, BUT DON'T DO IT BECAUSE I AM NOT READY
+  # nix.nixPath = [
+  #   "nixpkgs=/root/nixpkgs"
+  #   "nixos-config=/etc/nixos/configuration.nix"
+  # ];
 }
