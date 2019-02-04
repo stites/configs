@@ -88,7 +88,12 @@ in
     mr   = "monitors reset";
     mh   = "monitors home";
     ms   = "monitors sentenai";
+
+    # tree with color
     tree = "tree -C";
+
+    # dd with sync and show IO errors
+    dd="dd sync=progress conv=fsync";
 
     # Relative Jumps:
     "~"="cd ~ ";
