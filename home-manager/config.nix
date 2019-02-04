@@ -130,13 +130,14 @@ let
 in
 {
   allowUnfree = true;
+  allowUnsupportedSystem = true;
 
   packageOverrides = pkgs_: (with pkgs_; {
     stable   = nixos18_09;
     rbnix = rbnix pkgs_;
     tmuxp = tmuxp pkgs_;
     slack = callPackage /home/stites/git/configs/home-manager/slack.nix {};
-    signal-desktop-beta = callPackage /home/stites/git/configs/home-manager/signal-desktop.nix {spellcheckerLanguage = "en_US";};
+    signal-desktop-beta = callPackage /home/stites/git/configs/home-manager/signal-desktop-beta.nix {spellcheckerLanguage = "en_US";};
     reMarkable-sdk = reMarkable-sdk;
     hies = hies;
 
