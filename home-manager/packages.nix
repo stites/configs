@@ -164,7 +164,7 @@ let
 
       cachix
       hies
-    ]) ++ (if host.isServer then [ znc ] else []);
+    ]) ++ (if host.isServer then [ pkgs.znc ] else []);
 
 
   unstableNixPkgs =
