@@ -138,7 +138,19 @@ in
           dconf_dump_bridoc_simpl_columns: false
           dconf_dump_ast_full: false
         conf_forward:
-          options_ghc: []
+          options_ghc:
+          - -XLambdaCase
+          - -XMultiWayIf
+          - -XGADTs
+          - -XPatternGuards
+          - -XViewPatterns
+          - -XRecursiveDo
+          - -XTupleSections
+          - -XExplicitForAll
+          - -XImplicitParams
+          - -XQuasiQuotes
+          - -XTemplateHaskell
+          - -XBangPatterns
         conf_errorHandling:
           econf_ExactPrintFallback: ExactPrintFallbackModeInline
           econf_Werror: false
@@ -341,7 +353,7 @@ in
       path = https://github.com/rycee/home-manager/archive/master.tar.gz;
     };
 
-    bash = import ./programs/bash.nix { inherit pkgs lib; };
+    bash = import ./programs/bash { inherit pkgs lib; };
 
     autorandr.enable = true;
     command-not-found.enable = true;
