@@ -2,19 +2,20 @@
 
 let
   concatStringsSep = lib.strings.concatStringsSep;
-  colors = import ./bash/colors.nix;
+  colors = import ./colors.nix;
   homeDir = builtins.getEnv "HOME";
-  pyenv = import ./bash/pyenv.nix { inherit lib; };
-  git = import ./bash/git.nix { inherit pkgs; };
-  nvm = import ./bash/nvm.nix { inherit lib; };
-  rbenv = import ./bash/rbenv.nix;
-  fasd = import ./bash/fasd.nix { inherit lib; };
-  prompt = import ./bash/prompt.nix { inherit pkgs lib; };
-  nix = import ./bash/nix.nix;
-  haskell = import ./bash/haskell.nix { inherit lib; };
-  functions = import ./bash/functions.nix { inherit lib; };
+  pyenv = pkgs.callPackage ./pyenv.nix { };
+  git = pkgs.callPackage ./git.nix { };
+  nvm = pkgs.callPackage ./nvm.nix { };
+  rbenv = pkgs.callPackage ./rbenv.nix { };
+  fasd = pkgs.callPackage ./fasd.nix { };
+  prompt = pkgs.callPackage ./prompt.nix { };
+  nix = pkgs.callPackage ./nix.nix { };
+  haskell = pkgs.callPackage ./haskell.nix { };
+  functions = pkgs.callPackage ./functions.nix { };
   nix-profile = "${homeDir}/.nix-profile/";
-  host = import ../hosts.nix { inherit pkgs lib; };
+  host = pkgs.callPackage ../../hosts.nix { };
+  secrets = import ../../secrets.nix;
   hostExtraConfig = host.bash.extraConfig;
 in
 {
@@ -70,10 +71,16 @@ in
     # the output of eval "$(SHELL=/bin/sh lesspipe.sh)"
     LESSOPEN="|${nix-profile}/bin/lesspipe.sh %s"; # FIXME << do we even need this?
 
+    # hledger stuff
+    LEDGER_FILE="${homeDir}/accounting/2019.journal";
+
     # and https://github.com/NixOS/nixpkgs/issues/44144
     CPATH="${homeDir}/.nix-profile/include";
     LIBRARY_PATH="${homeDir}/.nix-profile/lib";
-    LD_LIBRARY_PATH="${homeDir}/.nix-profile/lib";
+    LD_LIBRARY_PATH="/run/current-system/sw/lib/:${homeDir}/.nix-profile/lib";
+
+    # TODO: bundle this into a function call
+    NOTI_PUSHBULLET_ACCESSTOKEN = secrets.bash.pushbullet.token;
   } // colors // pyenv.variables // prompt.variables;
 
   shellAliases = {
@@ -85,7 +92,12 @@ in
     mr   = "monitors reset";
     mh   = "monitors home";
     ms   = "monitors sentenai";
+
+    # tree with color
     tree = "tree -C";
+
+    # dd with sync and show IO errors
+    dd="dd sync=progress conv=fsync";
 
     # Relative Jumps:
     "~"="cd ~ ";

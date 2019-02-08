@@ -47,8 +47,8 @@ let
       neofetch
       calibre
 
+      finger_bsd
       cloc
-      bat
       socat
       xsv
       cmake
@@ -99,6 +99,8 @@ let
 
       # haskell
       hledger
+      hledger-ui
+      hledger-web
       hlint
       (exe haskellPackages.shake)
       # haskellPackages.shake-extras
@@ -171,11 +173,14 @@ let
       cabal-install
       stack
       noti
+      bat
       rxvt_unicode_with-plugins
       protonmail-bridge
       prettyping
       # nix-linting
       my-dictionaries
+      # zoom-us
+      weechat
 
       # In order to build things outside of nix
       zlib
@@ -191,6 +196,7 @@ let
       sqlite.dev
       readline.out
       readline.dev
+      gcc7.out
     ]);
 
   unstableNixOS =

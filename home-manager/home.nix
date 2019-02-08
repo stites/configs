@@ -93,7 +93,7 @@ in
       };
       "nixpkgs/local-nixpkgs".source      = "${homedir}/git/configs/nixpkgs";
       "nixpkgs/slack.nix".source          = "${homedir}/git/configs/home-manager/slack.nix";
-      "nixpkgs/signal-desktop.nix".source = "${homedir}/git/configs/home-manager/signal-desktop-beta.nix";
+      "nixpkgs/signal-desktop-beta.nix".source = "${homedir}/git/configs/home-manager/signal-desktop-beta.nix";
       "taffybar/taffybar.hs" = {
         source = ./xmonad/taffybar.hs;
         onChange = "rm -rf ${homedir}/.cache/taffybar/";
@@ -105,6 +105,23 @@ in
       "nvim/UltiSnips/python.snippets" = {
         source = ./programs/neovim/UltiSnips/python.snippets;
       };
+      "bat/config".text = ''
+        --theme="TwoDark"
+        --italic-text=never
+
+        # Show line numbers, Git modifications and file header (but no grid)
+        --style="numbers,changes,header,grid"
+
+        # Add mouse scrolling support in less (does not work with older
+        # versions of "less").
+        --pager="less -FR"
+
+        # Use C++ syntax (instead of C) for .h header files
+        --map-syntax h:cpp
+
+        # Use "gitignore" highlighting for ".ignore" files
+        --map-syntax .ignore:.gitignore
+      '';
 
       "brittany/config.yaml".text = ''
         conf_debug:
@@ -121,7 +138,19 @@ in
           dconf_dump_bridoc_simpl_columns: false
           dconf_dump_ast_full: false
         conf_forward:
-          options_ghc: []
+          options_ghc:
+          - -XLambdaCase
+          - -XMultiWayIf
+          - -XGADTs
+          - -XPatternGuards
+          - -XViewPatterns
+          - -XRecursiveDo
+          - -XTupleSections
+          - -XExplicitForAll
+          - -XImplicitParams
+          - -XQuasiQuotes
+          - -XTemplateHaskell
+          - -XBangPatterns
         conf_errorHandling:
           econf_ExactPrintFallback: ExactPrintFallbackModeInline
           econf_Werror: false
@@ -258,6 +287,7 @@ in
     useGtkTheme = true;
   };
 
+  services.xembed-sni-proxy.enable = true;
   services.flameshot.enable = true;
   services.taffybar = {
     enable = host.isNixOS;
@@ -273,7 +303,10 @@ in
     enable = false;
     tray = true;
   };
-  services.udiskie.enable = true;
+  services.udiskie = {
+    enable = true;
+    tray = "auto";
+  };
 
   services.redshift ={
     enable = true;
@@ -320,7 +353,7 @@ in
       path = https://github.com/rycee/home-manager/archive/master.tar.gz;
     };
 
-    bash = import ./programs/bash.nix { inherit pkgs lib; };
+    bash = import ./programs/bash { inherit pkgs lib; };
 
     autorandr.enable = true;
     command-not-found.enable = true;
@@ -369,6 +402,23 @@ in
         arrays  = "1;35";
         objects = "1;37";
       };
+    };
+    # Note that this doesn't install matplotlib, it only configures the global properties of it.
+    matplotlib = {
+      # Whether to enable matplotlib, a plotting library for python.
+      enable = true;
+      # Add terms to the matplotlibrc file to control the default matplotlib behavior.
+      config = {
+        backend = "Qt5Agg";
+        axes = {
+          grid = true;
+          facecolor = "black";
+          edgecolor = "FF9900";
+        };
+        grid.color = "FF9900";
+      };
+      # Additional commands for matplotlib that will be added to the matplotlibrc file.
+      extraConfig = "";
     };
   } // mail.programs;
 

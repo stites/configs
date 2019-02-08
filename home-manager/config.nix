@@ -130,13 +130,15 @@ let
 in
 {
   allowUnfree = true;
+  allowUnsupportedSystem = true;
+  android_sdk.accept_license = true;
 
   packageOverrides = pkgs_: (with pkgs_; {
     stable   = nixos18_09;
     rbnix = rbnix pkgs_;
     tmuxp = tmuxp pkgs_;
     slack = callPackage /home/stites/git/configs/home-manager/slack.nix {};
-    signal-desktop = callPackage /home/stites/git/configs/home-manager/signal-desktop.nix {spellcheckerLanguage = "en_US";};
+    signal-desktop-beta = callPackage /home/stites/git/configs/home-manager/signal-desktop-beta.nix {spellcheckerLanguage = "en_US";};
     reMarkable-sdk = reMarkable-sdk;
     hies = hies;
 
@@ -171,6 +173,18 @@ in
       paths = mypythonPkgs { python36 = (mypython36 pkgs); useCuda = true;};
     };
   });
+
+  systemd.user.services.weechat = {
+    environment.WEECHAT_HOME = "/var/lib/weechat";
+    serviceConfig = {
+      User = "stites";
+      Group = "users";
+      # RemainAfterExit = "yes";
+    };
+    script = "${pkgs.weechat}/bin/weechat-headless --colors";
+    wantedBy = [ "multi-user.target" ];
+    wants = [ "network.target" ];
+  };
 
   # THIS ACTUALLY GOES INTO CONFIGURATION.NIX
   nix = {

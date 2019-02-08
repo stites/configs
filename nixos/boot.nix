@@ -1,13 +1,11 @@
-{ pinnedKernelPackages }: { config, pkgs, ...}:
+{ pinnedKernelPackages }: { config, pkgs, ... }:
 
 {
+  boot.kernelModules = [ "it87" "coretemp" ];
+
   # add i915 to be lazy-loaded by xserver
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "sd_mod" "sdhci_pci" "i915" ];
-  boot.initrd.kernelModules = [
-    "acpi" "fb"
-    # from https://github.com/Church-/NixOS-Config/blob/master/boot.nix
-    "it87" "coretemp"
-  ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "sd_mod" "sdhci_pci" "i915" "enum" ];
+  boot.initrd.kernelModules = [ "acpi" "fb" ];
 
   hardware.enableAllFirmware = true;
   hardware.cpu.intel.updateMicrocode = true;
@@ -22,7 +20,7 @@
   boot.loader.efi.efiSysMountPoint = "/boot";
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.useOSProber = true;
-  boot.loader.grub.configurationLimit = 30;
+  boot.loader.grub.configurationLimit = 10;
 
   systemd.services.acpid.enable = true;
 }
