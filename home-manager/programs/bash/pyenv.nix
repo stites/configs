@@ -1,7 +1,10 @@
-{ lib }:
+{ lib, pkgs }:
 
 let
   homeDir = builtins.getEnv "HOME";
+  
+  no-nix-shell = (pkgs.callPackage ./functions.nix { }).no-nix-shell;
+
   variables = {
     PYENV_ROOT= "${homeDir}/.pyenv";
     PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true";
@@ -20,7 +23,7 @@ in
 {
   inherit variables;
   initConfig =
-    (if ! builtins.pathExists variables.PYENV_ROOT then "" else (lib.strings.concatStringsSep "\n" [ ''
+    (if ! builtins.pathExists variables.PYENV_ROOT then "" else no-nix-shell (lib.strings.concatStringsSep "\n" [ ''
       safe_path_add "${variables.PYENV_ROOT}/bin"
 
       # ================================ #
