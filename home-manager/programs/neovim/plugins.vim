@@ -35,6 +35,9 @@ Plug 'lervag/vimtex', { 'for': 'latex' }
 " C++ plugins
 Plug 'Rip-Rip/clang_complete', { 'for': 'c' }
 
+" HLedger
+Plug 'anekos/hledger-vim', { 'for': 'journal' }
+
 
 " SYSTEM PLUGINS
 "

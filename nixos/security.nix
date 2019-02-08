@@ -11,20 +11,13 @@
     dirmngr.enable = true;
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.stites = {
-    isNormalUser = true;
-    home = "/home/stites";
-    description = "Sam Stites";
-    extraGroups = [ "wheel" "networkmanager" ];
-  };
-
   security.sudo = {
     enable = true;
     wheelNeedsPassword = false;
   };
 
-  nix = let superusers = [ "@wheel" "root" ]; in {
+  # FIXME: remove stites when cachix can do group checks
+  nix = let superusers = [ "@wheel" "root" "stites" ]; in {
     allowedUsers = superusers;
     trustedUsers = superusers;
   };

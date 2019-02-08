@@ -11,30 +11,26 @@ import System.Taffybar.Widget.Generic.PollingBar
 import System.Taffybar.Widget.Generic.PollingGraph
 
 main :: IO ()
-main =
-  simpleTaffybar
-    $ defaultSimpleTaffyConfig
-      { startWidgets = [ workspaces, mpris2 ]
-      , centerWidgets = [ currenttime ]
-      , endWidgets   = [ currentdate, batt, mem, cpu, tray ]
-      }
+main = simpleTaffybar $ defaultSimpleTaffyConfig
+  { startWidgets  = [workspaces, mpris2]
+  , centerWidgets = [currentdatetime]
+  , endWidgets    = [batt, mem, cpu, tray]
+  }
+ where
+  currentdatetime =
+    textClockNew Nothing "<span fgcolor='orange'>%m/%_d %a %I:%M %p</span>" 1
 
-  where
-    currenttime = textClockNew Nothing "<span fgcolor='orange'>%a %I:%M %p</span>" 1
+  workspaces = workspacesNew defaultWorkspacesConfig
 
-    currentdate = textClockNew Nothing "<span fgcolor='orange'>%m/%_d </span>" 1
+  mpris2     = mpris2New
 
-    workspaces = workspacesNew defaultWorkspacesConfig
+  mem        = pollingGraphNew memCfg 1 memCallback
 
-    mpris2 = mpris2New
+  cpu        = pollingGraphNew cpuCfg 0.5 cpuCallback
 
-    mem = pollingGraphNew memCfg 1 memCallback
+  tray       = sniTrayNew
 
-    cpu = pollingGraphNew cpuCfg 0.5 cpuCallback
-
-    tray = sniTrayNew
-
-    batt = textBatteryNew "$percentage$ ($time$)"
+  batt       = textBatteryNew "$percentage$ ($time$)"
 
 
 memCallback = do
@@ -45,16 +41,15 @@ cpuCallback = do
   (userLoad, systemLoad, totalLoad) <- cpuLoad
   return [totalLoad, systemLoad]
 
-mkRGBA (r, g, b, a) = (r/256, g/256, b/256, a/256)
+mkRGBA (r, g, b, a) = (r / 256, g / 256, b / 256, a / 256)
 
-yellow1 = mkRGBA (242 , 163 , 54  , 256)
-yellow2 = mkRGBA (254 , 204 , 83  , 256)
-yellow3 = mkRGBA (227 , 134 , 18  , 256)
-blue    = mkRGBA (42  , 99  , 140 , 256)
-red     = mkRGBA (210 , 77  , 37  , 256)
+yellow1 = mkRGBA (242, 163, 54, 256)
+yellow2 = mkRGBA (254, 204, 83, 256)
+yellow3 = mkRGBA (227, 134, 18, 256)
+blue = mkRGBA (42, 99, 140, 256)
+red = mkRGBA (210, 77, 37, 256)
 
-myGraphConfig
-  = defaultGraphConfig
+myGraphConfig = defaultGraphConfig
   { graphPadding         = 0
   , graphBorderWidth     = 0
   , graphWidth           = 75
@@ -63,12 +58,12 @@ myGraphConfig
 
 memCfg = myGraphConfig
   { graphDataColors = [(0.129, 0.588, 0.953, 1)]
-  , graphLabel = Just "mem"
+  , graphLabel      = Just "mem"
   }
 
 cpuCfg = myGraphConfig
   { graphDataColors = [(0, 1, 0, 1), (1, 0, 1, 0.5)]
-  , graphLabel = Just "cpu"
+  , graphLabel      = Just "cpu"
   }
 
 {-

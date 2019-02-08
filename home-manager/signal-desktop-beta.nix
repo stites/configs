@@ -1,5 +1,5 @@
 { stdenv, lib, fetchurl, dpkg, wrapGAppsHook
-, gnome2, gtk3, atk, cairo, pango, gdk_pixbuf, glib, freetype, fontconfig
+, gnome2, gtk3, atk, at-spi2-atk, cairo, pango, gdk_pixbuf, glib, freetype, fontconfig
 , dbus, libX11, xorg, libXi, libXcursor, libXdamage, libXrandr, libXcomposite
 , libXext, libXfixes, libXrender, libXtst, libXScrnSaver, nss, nspr, alsaLib
 , cups, expat, udev, libnotify
@@ -8,6 +8,8 @@
 , hunspellDicts, spellcheckerLanguage ? null # E.g. "de_DE"
 # For a full list of available languages:
 # $ cat pkgs/development/libraries/hunspell/dictionaries.nix | grep "dictFileName =" | awk '{ print $3 }'
+
+# MINE:
 , libappindicator
 }:
 
@@ -18,13 +20,14 @@ let
       spellLangComponents = splitString "_" spellcheckerLanguage;
       hunspellDict = elemAt spellLangComponents 0 + "-" + toLower (elemAt spellLangComponents 1);
     in if spellcheckerLanguage != null
-    then ''
+      then ''
         --set HUNSPELL_DICTIONARIES "${hunspellDicts.${hunspellDict}}/share/hunspell" \
         --set LC_MESSAGES "${spellcheckerLanguage}"''
       else "");
   rpath = lib.makeLibraryPath [
     alsaLib
     atk
+    at-spi2-atk
     cairo
     cups
     dbus
@@ -36,7 +39,6 @@ let
     gnome2.GConf
     gtk3
     pango
-    libappindicator
     libnotify
     libX11
     libXScrnSaver
@@ -51,20 +53,23 @@ let
     libXtst
     nspr
     nss
-    stdenv.cc.cc
     udev
     xorg.libxcb
+
+    # MINE:
+    libappindicator
   ];
+
 in stdenv.mkDerivation rec {
   name = "signal-desktop-${version}";
-  version = "1.18.1";
+  version = "1.20.0";
 
-  src = fetchurl {
+src = fetchurl {
     url = "https://updates.signal.org/desktop/apt/pool/main/s/signal-desktop/signal-desktop_${version}_amd64.deb";
-    sha256 = "1gak6nhv5gk37iv1bfmjx6wf0p1vcln5y29i6fkzmvcrp3j2cmfh";
+    sha256 = "1w75g7i7hf9b3yilnd6ivhd4xgp4z000x9wnrqcba2dgbr5pz7c7";
   };
 
-  phases = [ "unpackPhase" "installPhase" "postInstallPhase" ];
+  phases = [ "unpackPhase" "installPhase" ];
 
   nativeBuildInputs = [ dpkg wrapGAppsHook ];
 
@@ -82,6 +87,7 @@ in stdenv.mkDerivation rec {
              --set-rpath ${rpath}:$out/libexec $out/libexec/signal-desktop
     wrapProgram $out/libexec/signal-desktop \
       --prefix XDG_DATA_DIRS : "${gtk3}/share/gsettings-schemas/${gtk3.name}/" \
+      --prefix LD_LIBRARY_PATH : "${stdenv.cc.cc.lib}/lib" \
       ${customLanguageWrapperArgs} \
       "''${gappsWrapperArgs[@]}"
     # Symlink to bin
@@ -90,11 +96,6 @@ in stdenv.mkDerivation rec {
     # Fix the desktop link
     substituteInPlace $out/share/applications/signal-desktop.desktop \
       --replace /opt/Signal/signal-desktop $out/bin/signal-desktop
-  '';
-
-  postInstallPhase = ''
-    # workaround to use system tray
-    wrapProgram $out/libexec/signal-desktop --add-flags "--use-tray-icon"
   '';
 
   meta = {

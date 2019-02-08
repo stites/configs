@@ -1,3 +1,5 @@
+{ }:
+
 { initConfig =
     (if ! builtins.pathExists ''${builtins.getEnv "HOME"}/.rbenv/bin'' then "" else ''
       # Add rbenv to PATH for scripting. Make sure this is the last PATH variable change.
