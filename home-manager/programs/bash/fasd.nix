@@ -1,10 +1,14 @@
-{ lib }:
+{ pkgs, lib }:
+
+let
+  no-nix-shell = (pkgs.callPackage ./functions.nix { }).no-nix-shell;
+in
 
 {
-  initConfig = lib.strings.concatStringsSep "\n" [
+  initConfig = (no-nix-shell (lib.strings.concatStringsSep "\n" [
     # (builtins.readFile ./bash/tools/fasd.sh)
     # if fasd is in programs then
-    ''
+      ''
       # This is the output of:
       # eval "$(fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install)"
 
@@ -73,7 +77,7 @@
       # enable bash command mode completion
       _fasd_bash_hook_cmd_complete fasd a s d f sd sf z zz
     ''
-  ];
+  ]));
 }
 
 
