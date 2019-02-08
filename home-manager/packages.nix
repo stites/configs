@@ -47,6 +47,7 @@ let
       neofetch
       calibre
 
+      finger_bsd
       cloc
       socat
       xsv
@@ -178,6 +179,8 @@ let
       prettyping
       # nix-linting
       my-dictionaries
+      # zoom-us
+      weechat
 
       # In order to build things outside of nix
       zlib

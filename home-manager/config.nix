@@ -131,6 +131,7 @@ in
 {
   allowUnfree = true;
   allowUnsupportedSystem = true;
+  android_sdk.accept_license = true;
 
   packageOverrides = pkgs_: (with pkgs_; {
     stable   = nixos18_09;
@@ -172,6 +173,18 @@ in
       paths = mypythonPkgs { python36 = (mypython36 pkgs); useCuda = true;};
     };
   });
+
+  systemd.user.services.weechat = {
+    environment.WEECHAT_HOME = "/var/lib/weechat";
+    serviceConfig = {
+      User = "stites";
+      Group = "users";
+      # RemainAfterExit = "yes";
+    };
+    script = "${pkgs.weechat}/bin/weechat-headless --colors";
+    wantedBy = [ "multi-user.target" ];
+    wants = [ "network.target" ];
+  };
 
   # THIS ACTUALLY GOES INTO CONFIGURATION.NIX
   nix = {
