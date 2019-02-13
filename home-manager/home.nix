@@ -9,7 +9,9 @@ let
   neovim = import ./programs/neovim { inherit pkgs lib; };
   mail = import ./mail.nix;
   host = import ./hosts.nix { inherit pkgs lib config; };
+  secrets = import ./secrets.nix;
   hpkgs844 = pkgs.stable.haskell.packages.ghc844;
+  optionalString = lib.optionalString;
 in
 {
   manual.html.enable = true;
