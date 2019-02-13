@@ -1,12 +1,22 @@
 { pkgs, lib, ... }:
 
 let
+  concatStringsSep = lib.strings.concatStringsSep;
   hostname = lib.strings.removeSuffix "\n" (builtins.readFile "/etc/hostname");
   colors = import ./programs/bash/colors.nix;
   isGrothendieck = hostname == "grothendieck";
   isMirzakhani = hostname == "mirzakhani";
+  libraryPaths = {
+    nixpkgs = "${builtins.getEnv "HOME"}/.nix-profile/lib";
+    nixos = "/run/current-system/sw/lib/";
+  };
+  includePaths = {
+    nixpkgs = "${builtins.getEnv "HOME"}/.nix-profile/include";
+  };
 
   grothendieck.bash = {
+    libraryPath = concatStringsSep ":" [libraryPaths.nixpkgs libraryPaths.nixos];
+    includePath = includePaths.nixpkgs;
     prompt = {
       PROMPT_INCL_USER="false";
       PROMPT_USER_COLOR="${colors.WHITE}";
@@ -20,7 +30,11 @@ let
     };
     extraConfig = "";
   };
-  mirzakhani.bash = {
+  mirzakhani.bash = let
+    libraryPath = concatStringsSep ":" [libraryPaths.nixpkgs "/usr/local/lib/" "/usr/lib/x86_64-linux-gnu/" "/lib/x86_64-linux-gnu/"];
+    includePath = concatStringsSep ":" [includePaths.nixpkgs "/usr/local/include/" "/usr/include/"];
+  in {
+    inherit libraryPath includePath;
     prompt = {
       PROMPT_INCL_USER="false";
       PROMPT_USER_COLOR="${colors.WHITE}";
@@ -33,13 +47,19 @@ let
       GPU_LIGHTS_ON="check";
     };
     extraConfig = ''
-      export PATH="/usr/local/cuda/bin:$PATH"
-      # export PATH="/home/stites/.local/bin:$PATH"
-      export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
-      # eval "$(hub alias -s)"
+      source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+      safe_path_add "/usr/local/cuda/bin"
+
+      # export CPATH="${includePath}"
+      # export C_INCLUDE_PATH="${includePath}"
+      # export CPLUS_INCLUDE_PATH="${includePath}"
+
+      # export LIBRARY_PATH="${libraryPath}"
+      # export LD_LIBRARY_PATH="${libraryPath}"
 
       export PYENV_ROOT="$HOME/.pyenv"
-      export PATH="$PYENV_ROOT/bin:$PATH"
+      safe_path_add "$PYENV_ROOT/bin"
+
       eval "$(pyenv init -)"
       eval "$(pyenv virtualenv-init -)"
 
