@@ -4,7 +4,7 @@ call plug#begin('~/.config/nvim/bundle')
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash ./install.sh',
-    \ 'for': 'haskell'
+    \ 'for': [ 'haskell', 'python' ]
     \ } " Just Haskell for the time being
 
 " C/C++ development
