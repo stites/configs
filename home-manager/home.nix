@@ -9,7 +9,9 @@ let
   neovim = import ./programs/neovim { inherit pkgs lib; };
   mail = import ./mail.nix;
   host = import ./hosts.nix { inherit pkgs lib config; };
+  secrets = import ./secrets.nix;
   hpkgs844 = pkgs.stable.haskell.packages.ghc844;
+  optionalString = lib.optionalString;
 in
 {
   manual.html.enable = true;
@@ -105,7 +107,6 @@ in
       "nvim/UltiSnips/python.snippets" = {
         source = ./programs/neovim/UltiSnips/python.snippets;
       };
-
       "glirc/config".text = (import ./programs/glirc/config.nix {}).config;
       "bat/config".text = ''
         --theme="TwoDark"
@@ -292,7 +293,7 @@ in
   services.xembed-sni-proxy.enable = true;
   services.flameshot.enable = true;
   services.taffybar = {
-    enable = true;
+    enable = host.isNixOS;
     package = hpkgs844.taffybar;
   };
 
