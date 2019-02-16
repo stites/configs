@@ -8,3 +8,4 @@ Library
 .config/nvim/bundle
 tools/jupyter/jupyter_notebook_config.py
 secrets.nix
+host.nix
