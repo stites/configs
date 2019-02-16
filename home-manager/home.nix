@@ -105,6 +105,8 @@ in
       "nvim/UltiSnips/python.snippets" = {
         source = ./programs/neovim/UltiSnips/python.snippets;
       };
+
+      "glirc/config".text = (import ./programs/glirc/config.nix {}).config;
       "bat/config".text = ''
         --theme="TwoDark"
         --italic-text=never
@@ -290,7 +292,7 @@ in
   services.xembed-sni-proxy.enable = true;
   services.flameshot.enable = true;
   services.taffybar = {
-    enable = host.isNixOS;
+    enable = true;
     package = hpkgs844.taffybar;
   };
 
