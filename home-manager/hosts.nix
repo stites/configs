@@ -61,7 +61,7 @@ let
 in
 {
   inherit hostname;
-  isNixOS = isGrothendieck;
+  isNixOS = (builtins.tryEval (import <nixos> {})).success;
   bash = if isGrothendieck then grothendieck.bash else mirzakhani.bash;
   isServer = isMirzakhani;
 }

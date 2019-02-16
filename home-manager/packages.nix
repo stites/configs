@@ -80,6 +80,7 @@ let
       fasd
       httpie
       exa
+      colordiff
 
       # email
       notmuch-mutt
@@ -108,6 +109,7 @@ let
       (exe haskellPackages.brittany)
       (exe haskellPackages.happy)
       (exe haskellPackages.hpack)
+      (exe haskellPackages.hindent)
       (exe haskellPackages.pointfree)
       (exe haskellPackages.hasktags)
       (exe haskellPackages.hspec-discover)
@@ -181,6 +183,7 @@ let
       my-dictionaries
       # zoom-us
       weechat
+      (exe haskellPackages.glirc)
 
       # In order to build things outside of nix
       zlib
