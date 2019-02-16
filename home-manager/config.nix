@@ -127,6 +127,27 @@ let
           maintainers = with maintainers; [ jgeerds ];
         };
       };
+
+  cuda-shell = cudas: pkgs.stdenv.mkDerivation {
+    name = "cuda-env-shell";
+    buildInputs = with pkgs;
+      [ git gitRepo gnupg autoconf curl
+        procps gnumake utillinux m4 gperf unzip
+        cudas.cudatoolkit cudas.cudnn linuxPackages.nvidia_x11
+        libGLU_combined
+        xorg.libXi xorg.libXmu freeglut
+        xorg.libXext xorg.libX11 xorg.libXv xorg.libXrandr zlib 
+        ncurses5 stdenv.cc binutils
+      ];
+    shellHook = ''
+       export CUDA_PATH=${cudas.cudatoolkit}
+       # export LD_LIBRARY_PATH=${pkgs.linuxPackages.nvidia_x11}/lib:${pkgs.ncurses5}/lib:${cudas.cudnn}/lib
+       export EXTRA_LDFLAGS="-L/lib -L${pkgs.linuxPackages.nvidia_x11}/lib"
+       export EXTRA_CCFLAGS="-I/usr/include"
+    '';
+  };
+  cuda9-shell  = cuda-shell { cudatoolkit = pkgs.cudatoolkit_9_0;  cudnn = pkgs.cudnn_cudatoolkit_9_0; };
+  cuda10-shell = cuda-shell { cudatoolkit = pkgs.cudatoolkit_10_0; cudnn = pkgs.cudnn_cudatoolkit_10_0; };
 in
 {
   allowUnfree = true;
@@ -134,13 +155,13 @@ in
   android_sdk.accept_license = true;
 
   packageOverrides = pkgs_: (with pkgs_; {
-    stable   = nixos18_09;
+    stable = nixos18_09;
     rbnix = rbnix pkgs_;
     tmuxp = tmuxp pkgs_;
     slack = callPackage /home/stites/git/configs/home-manager/slack.nix {};
     signal-desktop-beta = callPackage /home/stites/git/configs/home-manager/signal-desktop-beta.nix {spellcheckerLanguage = "en_US";};
-    reMarkable-sdk = reMarkable-sdk;
-    hies = hies;
+    inherit hies cuda9-shell cuda10-shell;
+    cuda-shell = cuda9-shell;
 
     haskellPackages =
       pkgs_.haskellPackages.override {
