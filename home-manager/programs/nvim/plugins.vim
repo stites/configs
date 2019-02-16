@@ -1,11 +1,13 @@
 " using vim-plug
 call plug#begin('~/.config/nvim/bundle')
 
+" handle loading in configs:
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash ./install.sh',
-    \ 'for': [ 'haskell', 'python' ]
-    \ } " Just Haskell for the time being
+    \ }
+" Use with LSP to search for, substitute, and abbreviate multiple variants of a word
+Plug "tpope/vim-abolish"
 
 " C/C++ development
 Plug 'JBakamovic/cxxd-vim', { 'for': ['c', 'cpp'] }
