@@ -162,6 +162,7 @@ in
     signal-desktop-beta = callPackage /home/stites/git/configs/home-manager/signal-desktop-beta.nix {spellcheckerLanguage = "en_US";};
     inherit hies cuda9-shell cuda10-shell;
     cuda-shell = cuda9-shell;
+    reMarkable-sdk = reMarkable-sdk;
 
     haskellPackages =
       pkgs_.haskellPackages.override {

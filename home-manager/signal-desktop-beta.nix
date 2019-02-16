@@ -55,6 +55,7 @@ let
     nss
     udev
     xorg.libxcb
+
     # MINE:
     libappindicator
   ];

@@ -156,7 +156,6 @@ let
       imagemagick
       file
       macchanger
-      ngrok
       nim
       xdotool
       pstree
@@ -165,8 +164,8 @@ let
       bash-completion
 
       cachix
-      hies
-    ]) ++ (if host.isServer then [ pkgs.znc ] else []);
+    ]) ++ (if host.isServer then (with stable; [ znc ]) else [])
+       ++ (let firstHomeManagerBoot = false; in if firstHomeManagerBoot then [] else (with stable; [ ngrok hies ]));
 
 
   unstableNixPkgs =

@@ -75,9 +75,12 @@ in
     LEDGER_FILE="${homeDir}/accounting/2019.journal";
 
     # and https://github.com/NixOS/nixpkgs/issues/44144
-    CPATH="${homeDir}/.nix-profile/include";
-    LIBRARY_PATH="${homeDir}/.nix-profile/lib";
-    LD_LIBRARY_PATH="/run/current-system/sw/lib/:${homeDir}/.nix-profile/lib";
+    CPATH=host.bash.includePath;
+    C_INCLUDE_PATH=host.bash.includePath;
+    CPLUS_INCLUDE_PATH=host.bash.includePath;
+
+    LIBRARY_PATH=host.bash.libraryPath;
+    LD_LIBRARY_PATH=host.bash.libraryPath;
 
     # TODO: bundle this into a function call
     NOTI_PUSHBULLET_ACCESSTOKEN = secrets.bash.pushbullet.token;

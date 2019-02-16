@@ -98,6 +98,9 @@ in
     [github]
     user = stites
 
+    [url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
+
     [url "git://github.com/ghc/packages-"]
     insteadOf = git://github.com/ghc/packages/
 
