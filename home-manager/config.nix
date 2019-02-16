@@ -1,8 +1,6 @@
-{ pkgs, ... }:
-# { config, ... }:
+{ config, pkgs, ... }:
 
 let
-  config = pkgs.config;
   nixos18_09 = import (builtins.fetchTarball https://github.com/NixOS/nixpkgs-channels/archive/nixos-18.09.tar.gz) { };
   moz_overlay = import (builtins.fetchTarball https://github.com/mozilla/nixpkgs-mozilla/archive/master.tar.gz);
 
@@ -16,21 +14,58 @@ let
 
   mypythonPkgs = args: [
     (args.python36.withPackages (ps: with ps; [
+      ############################################################
+      # data science, munging, and analysis
+      ############################################################
       beautifulsoup4
-      bokeh.overridePythonAttrs (oldAttrs: { checkPhase = "true"; })
-      h5py
+      pandas.overridePythonAttrs (oldAttrs: { checkPhase = "true"; })
+      scikitlearn
+      numpy
+      pymc3
+      pyro-ppl
+      vowpalwabbit
       ipython
+      imageio
       matplotlib
+      pycv
+      h5py
+      (if args.useCuda then pytorchWithCuda else pytorch)
+      scipy
+      torchvision
+      pyarrow
+      numba
+      dask
+      dask-glm
+      dask-image
+      dask-jobqueue
+      dask-ml
+      dask-xgboost
+      xgboost
+      tensorflow-tensorboard
+      tensorflowWithCuda
+
+      ############################################################
+      # interacting with the web
+      ############################################################
+      bokeh.overridePythonAttrs (oldAttrs: { checkPhase = "true"; })
+      requests
+
+      ############################################################
+      # clean your code
+      ############################################################
+      mccabe
       mypy
       nose
-      numpy
+      pycodestyle
+      pydocstyle
+
       pygments
-      pandas.overridePythonAttrs (oldAttrs: { checkPhase = "true"; })
-      (if args.useCuda then pytorchWithCuda else pytorch)
-      requests
-      scipy
-      scikitlearn
-      torchvision
+      pytest-mypy
+      python-language-server
+      pyls-isort
+      pyls-mypy
+      pyflakes
+      yapf
     ]))
   ];
 
@@ -192,7 +227,10 @@ in
 
     pythonEnvWithCuda = buildEnv {
       name = "pythonEnvWithCuda";
-      paths = mypythonPkgs { python36 = (mypython36 pkgs); useCuda = true;};
+      paths = mypythonPkgs {
+        useCuda = true;
+        python36 = (mypython36 pkgs);
+      };
     };
   });
 

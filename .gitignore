@@ -1,11 +1,4 @@
 result*
 Library
-.exercism.json
-.atom/.apm
-.atom/packages
-.atom/blob-store
-.bash/log
-.config/nvim/bundle
-tools/jupyter/jupyter_notebook_config.py
 secrets.nix
 host.nix
