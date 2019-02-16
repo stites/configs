@@ -16,9 +16,9 @@
 let
   customLanguageWrapperArgs = (with lib;
     let
-      # E.g. "de_DE" -> "de-de" (spellcheckerLanguage -> hunspellDict)
-      spellLangComponents = splitString "_" spellcheckerLanguage;
-      hunspellDict = elemAt spellLangComponents 0 + "-" + toLower (elemAt spellLangComponents 1);
+          # E.g. "de_DE" -> "de-de" (spellcheckerLanguage -> hunspellDict)
+          spellLangComponents = splitString "_" spellcheckerLanguage;
+          hunspellDict = elemAt spellLangComponents 0 + "-" + toLower (elemAt spellLangComponents 1);
     in if spellcheckerLanguage != null
       then ''
         --set HUNSPELL_DICTIONARIES "${hunspellDicts.${hunspellDict}}/share/hunspell" \
@@ -98,7 +98,7 @@ src = fetchurl {
       --replace /opt/Signal/signal-desktop $out/bin/signal-desktop
   '';
 
-  meta = {
+    meta = {
     description = "Private, simple, and secure messenger";
     longDescription = ''
       Signal Desktop is an Electron application that links with your

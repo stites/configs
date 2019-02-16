@@ -23,7 +23,7 @@ in
       GDK_DPI_SCALE="0.5";
     };
     packages = (import ./packages.nix { inherit pkgs lib config; })
-      ++ [ pkgs.protonmail-bridge pkgs.screen ];
+      ++ [ pkgs.protonmail-bridge pkgs.screen  hpkgs844.taffybar ];
     keyboard = {
       layout = "us";
       variant = "colemak";
@@ -451,10 +451,6 @@ in
     };
   };
 
-  # systemd.user.services.qsyncthingtray.Unit.After         = [ "taffybar.service" ] ++ systemd.user.services.qsyncthingtray.Unit.After;
-  # systemd.user.services.flameshot.Unit.After              = [ "taffybar.service" ] ++ systemd.user.services.flameshot.Unit.After;
-  # systemd.user.services.redshift.Unit.After               = [ "taffybar.service" ] ++ systemd.user.services.redshift.Unit.After;
-  # systemd.user.services.pasystray.Unit.After              = [ "taffybar.service" ];
   # systemd.user.services.parcellite.Unit.After             = [ "taffybar.service" ];
   # systemd.user.services.network-manager-applet.Unit.After = [ "taffybar.service" ];
 
