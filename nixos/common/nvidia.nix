@@ -1,4 +1,4 @@
-{ pinnedKernelPackages }: # { pkgs, ... }:
+{ pinnedKernelPackages }: { ... }:
 
 {
   # make nvidia available
