@@ -296,8 +296,8 @@ let g:rbpt_colorpairs = [
 " Activation based on file type
 augroup rainbow_lisp
   autocmd!
-  autocmd FileType * RainbowParentheses
-  " autocmd FileType lisp,clojure,scheme,haskell,python RainbowParentheses
+  " autocmd FileType * RainbowParenthesesActive
+  autocmd FileType lisp,clojure,scheme,haskell,python RainbowParenthesesActivate
 augroup END
 
 " au VimEnter * RainbowParenthesesToggle

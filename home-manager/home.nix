@@ -6,7 +6,7 @@ let
   ca-bundle_crt = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"; # just in case
   lib = stdenv.lib;
   concatStringsSep = lib.strings.concatStringsSep;
-  neovim = pkgs.callPackage ./programs/neovim { };
+  neovim = pkgs.callPackage ./programs/nvim { };
   mail = pkgs.callPackage ./mail.nix { };
   host = pkgs.callPackage ./hosts.nix { };
   secrets = import ./secrets.nix;
@@ -152,7 +152,7 @@ in
         onChange = "rm -rf ${homedir}/.cache/taffybar/";
       };
       "nvim/UltiSnips/python.snippets" = {
-        source = ./programs/neovim/UltiSnips/python.snippets;
+        source = ./programs/nvim/UltiSnips/python.snippets;
       };
       "glirc/config".text = (import ./programs/glirc/config.nix {}).config;
       "bat/config".text = ''
@@ -235,7 +235,7 @@ in
 
       "nvim/UltiSnips/haskell.snippets" = {
         text = concatStringsSep "\n" [
-          (builtins.readFile ./programs/neovim/UltiSnips/haskell.snippets)
+          (builtins.readFile ./programs/nvim/UltiSnips/haskell.snippets)
           ''
             snippet box "" !b
             -------------------------------------------------------------------------------
