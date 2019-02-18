@@ -1,5 +1,5 @@
 " using vim-plug
-call plug#begin('~/.config/nvim/bundle')
+call plug#begin('~/.local/share/nvim/site/')
 
 " handle loading in configs:
 Plug 'autozimu/LanguageClient-neovim', {

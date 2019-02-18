@@ -1,12 +1,22 @@
 { pkgs, lib, config, ... }:
 
 let
-  host = import ./hosts.nix { inherit pkgs lib config; };
+  host = pkgs.callPackage ./hosts.nix { };
   stable = pkgs.stable;
   unstable = pkgs;
 
   elmPackages = stable.elmPackages;
   haskellPackages844 = pkgs.haskellPackages.packages.ghc844;
+
+  pyls = (with unstable.python36Packages; python-language-server.override {
+    autopep8 = autopep8;
+    mccabe = mccabe;
+    pycodestyle = pycodestyle;
+    pydocstyle = pydocstyle;
+    pyflakes = pyflakes;
+    rope = rope;
+    yapf = yapf;
+  });
 
   RStudio-with-packages = unstable.rstudioWrapper.override { packages = with unstable.rPackages; [
     xts
@@ -199,6 +209,10 @@ let
       readline.out
       readline.dev
       gcc7.out
+
+      pyls
+      python36Packages.pyls-isort
+      python36Packages.pyls-mypy
     ]);
 
   unstableNixOS =
