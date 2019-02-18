@@ -51,9 +51,9 @@ in
     LC_ALL="en_US.UTF-8";
     LANG="en_US.UTF-8";
 
-    # provide consistent interface for single-user nix
-    # see https://github.com/NixOS/nix/issues/2033
-    NIX_PATH="$NIX_PATH:${homeDir}/.nix-defexpr/channels";
+    # # provide consistent interface for single-user nix
+    # # see https://github.com/NixOS/nix/issues/2033
+    # NIX_PATH="$NIX_PATH:${homeDir}/.nix-defexpr/channels";
 
     # bash automatically fetches the last command that starts with the
     # given term: E.G. you type in ‘ssh’ and press the ‘Page Up’ key and bash
@@ -67,9 +67,9 @@ in
     POWERLINE_COMMAND="${homeDir}/.local/bin/powerline-hs";
     POWERLINE_CONFIG_COMMAND="${nix-profile}/bin/true";
 
-    # make less more friendly for non-text input files, see lesspipe(1)
-    # the output of eval "$(SHELL=/bin/sh lesspipe.sh)"
-    LESSOPEN="|${nix-profile}/bin/lesspipe.sh %s"; # FIXME << do we even need this?
+    # # make less more friendly for non-text input files, see lesspipe(1)
+    # # the output of eval "$(SHELL=/bin/sh lesspipe.sh)"
+    # LESSOPEN="|${nix-profile}/bin/lesspipe.sh %s"; # FIXME << do we even need this?
 
     # hledger stuff
     LEDGER_FILE="${homeDir}/accounting/2019.journal";
@@ -158,7 +158,7 @@ in
 
     # Add an "alert" alias for long running commands.  Use like so:
     #   sleep 10; alert
-    alert = "notify-send --urgency=low -i \\\"$([ $? = 0 ] && echo terminal || echo error)\\\" \\\"$(history|tail -n1|sed -e '\\''s/^\\s*[0-9]\\+\\s*//;s/[;&|]\\s*alert$//'\\'')\\\"'";
+    # alert = "notify-send --urgency=low -i \\\"$([ $? = 0 ] && echo terminal || echo error)\\\" \\\"$(history|tail -n1|sed -e '\\''s/^\\s*[0-9]\\+\\s*//;s/[;&|]\\s*alert$//'\\'')\\\"'";
 
 
     # disabled unless we install nginx

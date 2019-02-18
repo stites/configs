@@ -60,7 +60,7 @@ in
       stackOpts: ""
     '';
 
-    file.".jupyter/jupyter_notebook_config.py".text = (pkgs.callPackage ./programs/jupyter/jupyter_notebook_config.py {}).text;
+    file.".jupyter/jupyter_notebook_config.py".text = (pkgs.callPackage ./programs/jupyter/jupyter_notebook_config.nix {}).text;
     file.".aspell.en.pws".source = "${homedir}/git/configs/home-manager/my-aspell-ws";
     file.".aspell.en.prepl".source = "${homedir}/git/configs/home-manager/my-aspell-repl";
     file.".ghci".source                            = ./haskell/configs/ghci;
@@ -263,14 +263,14 @@ in
       };
     };
     dataFile = neovim.xdg.dataFile // {
-      "home-manager-dev" = {
-        executable = true;
-        target = "../bin/home-manager-dev";
-        text = ''
-          #!/usr/bin/env bash
-          home-manager -I home-manager=${homedir}/git/home-manager $@
-        '';
-      };
+      # "home-manager-dev" = {
+      #   executable = true;
+      #   target = "../bin/home-manager-dev";
+      #   text = ''
+      #     #!/usr/bin/env bash
+      #     home-manager -I home-manager=${homedir}/git/home-manager $@
+      #   '';
+      # };
       "remarkable-upload" = {
         executable = true;
         target = "../bin/remarkable-upload";
@@ -351,7 +351,7 @@ in
 
   services.syncthing = {
     enable = false;
-    tray = true;
+    tray = false;
   };
   services.udiskie = {
     enable = true;
@@ -382,29 +382,37 @@ in
   services.gpg-agent = {
     enable = true;
     enableSshSupport  = true;
-    enableExtraSocket = false;
+    enableExtraSocket = true;
     maxCacheTtl       = 60480000;
     defaultCacheTtl   = 60480000;
     extraConfig = ''
       allow-preset-passphrase
     '';
   };
-  services.blueman-applet.enable = false;
+  # services.blueman-applet.enable = false; # requires system install
+  # services.dunst.enable = false;          # notification daemon
   services.network-manager-applet.enable = true;
-  services.pasystray.enable = true;
-  services.parcellite.enable = true;
-  services.compton.enable = true;
+  services.pasystray.enable = true;         # PulseAudio system tray
+  services.parcellite.enable = true;        # clipboard daemon
+  services.compton.enable = true;           # needs configuration
   # services.protonmail-bridge.enable = true;
 
   programs = {
+    # rofi
     home-manager = {
       enable = true;
-      # path = https://github.com/rycee/home-manager/archive/release-18.09.tar.gz;
       path = https://github.com/rycee/home-manager/archive/master.tar.gz;
     };
 
-    bash = import ./programs/bash { inherit pkgs lib; };
-
+    bash = import ./programs/bash { inherit lib pkgs; };
+    keychain = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = false;
+      agents = [ "ssh" "gpg" ];
+      inheritType = null;
+      keys = [ "id_rsa" "id_ed25519" secrets.gpg.signing-key ];
+    };
     autorandr.enable = true;
     command-not-found.enable = true;
     direnv.enable = true;
@@ -414,7 +422,7 @@ in
     lesspipe.enable = true;
     man.enable = true;
     noti.enable = true;
-    zathura.enable = true;
+    # zathura.enable = true;
 
     firefox = {
       enable = true;

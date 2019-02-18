@@ -5,6 +5,10 @@ with pkgs;
 {
   enable = true;
   tmuxp.enable = false;
+  aggressiveResize = true;
+  sensibleOnTop = true;
+  baseIndex = 1;
+  escapeTime = 0;
 
   plugins = [
     tmuxPlugins.battery
@@ -13,7 +17,6 @@ with pkgs;
       extraConfig = ''
         set -g @resurrect-strategy-nvim 'session'
         set -g @resurrect-dir '/home/stites/.tmux/resurrect'
-
       '';
     }
     {
@@ -24,7 +27,14 @@ with pkgs;
       '';
     }
   ];
+  keyMode = "vi";
+  historyLimit = 500000;
+  newSession = true;
+  resizeAmount = 5;
+  shortcut = "b";
+  terminal = "screen-256color";
   extraConfig = ''
+    #### ADDED TO HOME_MANAGER
     # use vi mode
     set-window-option -g mode-keys vi
 
@@ -90,21 +100,23 @@ with pkgs;
     # move tmux copy buffer into x clipboard
     bind C-y run "tmux save-buffer - | xclip -i"
 
-    # ++++++++++++++++++++++++++++ #
-    #    set panes to start at 1   #
-    # ++++++++++++++++++++++++++++ #
-    set-window-option -g pane-base-index 1
-    set-window-option -g base-index 1
+    #### ADDED TO HOME_MANAGER
+    #### # ++++++++++++++++++++++++++++ #
+    #### #    set panes to start at 1   #
+    #### # ++++++++++++++++++++++++++++ #
+    #### set-window-option -g pane-base-index 1
+    #### set-window-option -g base-index 1
 
     set -g status-bg blue
     set -g status-fg black
 
-    # ++++++++++++++++++++++++++++ #
-    #    change the prefix key     #
-    # ++++++++++++++++++++++++++++ #
-    set -g prefix C-b
-    unbind C-b
-    bind C-b send-prefix
+    #### ADDED TO HOME_MANAGER
+    #### # ++++++++++++++++++++++++++++ #
+    #### #    change the prefix key     #
+    #### # ++++++++++++++++++++++++++++ #
+    #### set -g prefix C-b
+    #### unbind C-b
+    #### bind C-b send-prefix
 
     # +++++++++++++++++++++++++++++ #
     # set titles on and use un@host #
@@ -159,7 +171,8 @@ with pkgs;
     set-window-option -g monitor-activity off
     set-option -g bell-action none
 
-    # set -g default-terminal "screen-256color"
+    #### ADDED TO HOME_MANAGER
+    #### # set -g default-terminal "screen-256color"
 
     # The modes {
     setw -g clock-mode-colour colour135

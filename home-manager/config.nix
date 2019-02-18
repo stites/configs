@@ -59,6 +59,7 @@ let
       pycodestyle
       pydocstyle
 
+      flake8
       pygments
       pytest-mypy
       python-language-server

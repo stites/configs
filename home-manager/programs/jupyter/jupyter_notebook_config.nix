@@ -4,7 +4,7 @@ let
   secrets = import ../../secrets.nix;
 in
 {
-  text = lib.strings.concatStringSep "\n" [
+  text = lib.strings.concatStringsSep "\n" [
     #------------------------------------------------------------------------------
     # Application(SingletonConfigurable) configuration
     #------------------------------------------------------------------------------

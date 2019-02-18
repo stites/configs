@@ -1,3 +1,4 @@
+{ ... }:
 let
   secrets = import ./secrets.nix;
   pii = secrets.piis;

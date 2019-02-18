@@ -23,13 +23,14 @@ in
   };
 
   ##################################################################################
-  # Keyboard layout
+  # Keyboard layout & editor
   ##################################################################################
   services.xserver = {
     layout = "us";
     xkbVariant = "colemak";
     xkbOptions = "ctrl:nocaps";
   };
+  programs.vim.defaultEditor = true;
 
   ##################################################################################
   # Users
@@ -37,6 +38,7 @@ in
 
   # do I need this???
   # home-manager.users.stites = import ./home.nix;
+  home-manager.useUserPackages = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   # TODO: what is the difference between users.users and users.extraUsers?

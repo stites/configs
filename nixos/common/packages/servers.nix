@@ -74,7 +74,16 @@
     openssl.dev openssl.out zlib.dev
 
     # make sure you can access the filesystem
-    ranger tree
+    tree
+
+    ranger
+    # ranger previews
+    libcaca   # video
+    highlight # code
+    atool     # archives
+    w3m       # web
+    poppler   # PDF
+    mediainfo # audio and video
 
     # Basic utilities
     fd
