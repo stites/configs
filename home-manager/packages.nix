@@ -17,6 +17,7 @@ let
     rope = rope;
     yapf = yapf;
   });
+  firstHomeManagerBoot = !(builtins.pathExists "${builtins.getEnv "HOME"}/.config/nixpkgs/config.nix");
 
   RStudio-with-packages = unstable.rstudioWrapper.override { packages = with unstable.rPackages; [
     xts
@@ -175,7 +176,7 @@ let
 
       cachix
     ]) ++ (if host.isServer then (with stable; [ znc ]) else [])
-       ++ (let firstHomeManagerBoot = false; in if firstHomeManagerBoot then [] else (with stable; [ ngrok hies ]));
+       ++ (if firstHomeManagerBoot then [] else (with stable; [ ngrok hies ]));
 
 
   unstableNixPkgs =
