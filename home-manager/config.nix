@@ -8,33 +8,30 @@ let
   mypython36 = pkgs:
     pkgs.python36.override {
       packageOverrides = (self: super: {
-        # bokeh        = super.bokeh.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # pandas       = super.pandas.overridePythonAttrs            (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        ############## CONFIGURE PARAMETERS #########################
+        pytorchWithCuda = super.pytorchWithCuda.override {
+          cudatoolkit = pkgs.cudatoolkit_10_0;
+          cudnn = pkgs.cudnn_cudatoolkit_10_0;
+        };
+
+        ################### STOP TESTS ###########################
         numpy        = super.numpy.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # beautifulsoup4 = super.beautifulsoup4.overridePythonAttrs  (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # scikitlearn  = super.scikitlearn.overridePythonAttrs       (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # pymc3        = super.pymc3.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # pyro-ppl     = super.pyro-ppl.overridePythonAttrs          (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # vowpalwabbit = super.vowpalwabbit.overridePythonAttrs      (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # ipython      = super.ipython.overridePythonAttrs           (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # imageio      = super.imageio.overridePythonAttrs           (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # matplotlib   = super.matplotlib.overridePythonAttrs        (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # # pycv
-        # h5py         = super.h5py.overridePythonAttrs              (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # tensorflow-tensorboard = super.tensorflow-tensorboard.overridePythonAttrs (oldAttrs: { cdoCheck = false; checkPhase = "true"; });
-        # # (if args.useCuda then pytorchWithCuda else pytorch)
-        # # (if args.useCuda then tensorflowWithCuda else tensorflow)
-        # scipy        = super.scipy.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # torchvision  = super.torchvision.overridePythonAttrs       (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # pyarrow      = super.pyarrow.overridePythonAttrs           (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # numba        = super.numba.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # dask         = super.dask.overridePythonAttrs              (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # dask-glm     = super.dask-glm.overridePythonAttrs          (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # dask-image   = super.dask-image.overridePythonAttrs        (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # dask-jobqueue= super.dask-jobqueue.overridePythonAttrs     (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # dask-ml      = super.dask-ml.overridePythonAttrs           (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # dask-xgboost = super.dask-xgboost.overridePythonAttrs      (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        # xgboost      = super.xgboost.overridePythonAttrs           (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        pandas       = super.pandas.overridePythonAttrs            (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        scikitlearn  = super.scikitlearn.overridePythonAttrs       (oldAttrs: { doCheck = false; checkPhase = "true"; });
+
+        ################# TOTALLY BROKEN ########################
+        pymc3        = super.pymc3.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        pyls = super.python-language-server.override {
+          autopep8 = super.autopep8;
+          mccabe = super.mccabe;
+          pycodestyle = super.pycodestyle;
+          pydocstyle = super.pydocstyle;
+          pyflakes = super.pyflakes;
+          rope = super.rope;
+          yapf = super.yapf;
+        };
+
+
       });
     };
 
@@ -53,32 +50,23 @@ let
       ############################################################
       # data science, munging, and analysis
       ############################################################
-      pandas
-      scikitlearn
       numpy
-      pymc3
-      pyro-ppl
-      vowpalwabbit
+      scipy
+      pandas
+      pyarrow
+      scikitlearn
+      # pymc3 # <<< TOTALLY BROKEN
       ipython
       jupyter
       imageio
       matplotlib
-      # pycv
+      # pycv # <<< NOT IN NIXPKGS
+      (if args.useCuda then pytorchWithCuda else pytorch)
+      # (if args.useCuda then tensorflowWithCuda else tensorflow)
+      # pyro-ppl
+      # torchvision
       h5py
       tensorflow-tensorboard
-      (if args.useCuda then pytorchWithCuda else pytorch)
-      (if args.useCuda then tensorflowWithCuda else tensorflow)
-      scipy
-      torchvision
-      pyarrow
-      numba
-      dask
-      dask-glm
-      dask-image
-      dask-jobqueue
-      dask-ml
-      dask-xgboost
-      xgboost
 
       ############################################################
       # interacting with the web
@@ -93,9 +81,11 @@ let
       flake8
       pygments
       pytest-mypy
+      hypothesis
 
       #### LSP
-      (pyls ps)
+      # (pyls ps)
+      pyls
       mccabe
       mypy
       nose
