@@ -97,5 +97,19 @@
 
     # in case you forget something on that other operating system you are dual booting
     # lvm2 cryptsetup
+
+    (python3.withPackages(ps: [
+      (ps.python-language-server.override {
+        autopep8 = ps.autopep8;
+        mccabe = ps.mccabe;
+        pycodestyle = ps.pycodestyle;
+        pydocstyle = ps.pydocstyle;
+        pyflakes = ps.pyflakes;
+        rope = ps.rope;
+        yapf = ps.yapf;
+      })
+      # the following plugins are optional, they provide type checking and import sorting
+      ps.pyls-mypy ps.pyls-isort
+    ]))
   ];
 }

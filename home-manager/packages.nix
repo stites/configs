@@ -7,17 +7,17 @@ let
 
   elmPackages = stable.elmPackages;
   haskellPackages844 = pkgs.haskellPackages.packages.ghc844;
-
-  pyls = (with unstable.python36Packages; python-language-server.override {
-    autopep8 = autopep8;
-    mccabe = mccabe;
-    pycodestyle = pycodestyle;
-    pydocstyle = pydocstyle;
-    pyflakes = pyflakes;
-    rope = rope;
-    yapf = yapf;
-  });
   firstHomeManagerBoot = !(builtins.pathExists "${builtins.getEnv "HOME"}/.config/nixpkgs/config.nix");
+
+  # pyls = (with unstable.python3Packages; python-language-server.override {
+  #   autopep8 = autopep8;
+  #   mccabe = mccabe;
+  #   pycodestyle = pycodestyle;
+  #   pydocstyle = pydocstyle;
+  #   pyflakes = pyflakes;
+  #   rope = rope;
+  #   yapf = yapf;
+  # });
 
   RStudio-with-packages = unstable.rstudioWrapper.override { packages = with unstable.rPackages; [
     xts
@@ -135,6 +135,7 @@ let
       tig
       git-lfs
       git-radar
+      git-secrets # FIXME: add "install hook if you own the repository" warning on cd
       gitAndTools.git-extras
       gitAndTools.diff-so-fancy
       gitAndTools.hub
@@ -210,10 +211,6 @@ let
       readline.out
       readline.dev
       gcc7.out
-
-      pyls
-      python36Packages.pyls-isort
-      python36Packages.pyls-mypy
     ]);
 
   unstableNixOS =
@@ -236,6 +233,9 @@ let
         # compute stuff
         liblapack
         RStudio-with-packages
+
+        pythonEnv # WithCuda
+        # cuda10-shell
     ]) else [];
 
 in stableNixPkgs ++ unstableNixPkgs ++ unstableNixOS

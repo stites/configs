@@ -43,6 +43,7 @@
     nix-bash-completions
     nix-info
     nix-index
+    nox
 
     # email
     neomutt lynx notmuch-mutt

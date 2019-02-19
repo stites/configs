@@ -7,30 +7,67 @@ let
 
   mypython36 = pkgs:
     pkgs.python36.override {
-      # packageOverrides = (self: super: {
-      #   bokeh = super.bokeh.overridePythonAttrs (oldAttrs: { checkPhase = "true"; });
-      #   pandas = super.pandas.overridePythonAttrs (oldAttrs: { checkPhase = "true"; });
-      # });
+      packageOverrides = (self: super: {
+        # bokeh        = super.bokeh.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # pandas       = super.pandas.overridePythonAttrs            (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        numpy        = super.numpy.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # beautifulsoup4 = super.beautifulsoup4.overridePythonAttrs  (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # scikitlearn  = super.scikitlearn.overridePythonAttrs       (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # pymc3        = super.pymc3.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # pyro-ppl     = super.pyro-ppl.overridePythonAttrs          (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # vowpalwabbit = super.vowpalwabbit.overridePythonAttrs      (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # ipython      = super.ipython.overridePythonAttrs           (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # imageio      = super.imageio.overridePythonAttrs           (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # matplotlib   = super.matplotlib.overridePythonAttrs        (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # # pycv
+        # h5py         = super.h5py.overridePythonAttrs              (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # tensorflow-tensorboard = super.tensorflow-tensorboard.overridePythonAttrs (oldAttrs: { cdoCheck = false; checkPhase = "true"; });
+        # # (if args.useCuda then pytorchWithCuda else pytorch)
+        # # (if args.useCuda then tensorflowWithCuda else tensorflow)
+        # scipy        = super.scipy.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # torchvision  = super.torchvision.overridePythonAttrs       (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # pyarrow      = super.pyarrow.overridePythonAttrs           (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # numba        = super.numba.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # dask         = super.dask.overridePythonAttrs              (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # dask-glm     = super.dask-glm.overridePythonAttrs          (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # dask-image   = super.dask-image.overridePythonAttrs        (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # dask-jobqueue= super.dask-jobqueue.overridePythonAttrs     (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # dask-ml      = super.dask-ml.overridePythonAttrs           (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # dask-xgboost = super.dask-xgboost.overridePythonAttrs      (oldAttrs: { doCheck = false; checkPhase = "true"; });
+        # xgboost      = super.xgboost.overridePythonAttrs           (oldAttrs: { doCheck = false; checkPhase = "true"; });
+      });
     };
 
+  pyls = (ps: with ps; python-language-server.override {
+    autopep8 = autopep8;
+    mccabe = mccabe;
+    pycodestyle = pycodestyle;
+    pydocstyle = pydocstyle;
+    pyflakes = pyflakes;
+    rope = rope;
+    yapf = yapf;
+  });
+
   mypythonPkgs = args: [
-    (args.python36.withPackages (ps: with ps; [
+    (args.python3.withPackages (ps: with ps; [
       ############################################################
       # data science, munging, and analysis
       ############################################################
-      beautifulsoup4
-      pandas.overridePythonAttrs (oldAttrs: { checkPhase = "true"; })
+      pandas
       scikitlearn
       numpy
       pymc3
       pyro-ppl
       vowpalwabbit
       ipython
+      jupyter
       imageio
       matplotlib
-      pycv
+      # pycv
       h5py
+      tensorflow-tensorboard
       (if args.useCuda then pytorchWithCuda else pytorch)
+      (if args.useCuda then tensorflowWithCuda else tensorflow)
       scipy
       torchvision
       pyarrow
@@ -42,32 +79,33 @@ let
       dask-ml
       dask-xgboost
       xgboost
-      tensorflow-tensorboard
-      tensorflowWithCuda
 
       ############################################################
       # interacting with the web
       ############################################################
-      bokeh.overridePythonAttrs (oldAttrs: { checkPhase = "true"; })
+      bokeh
+      beautifulsoup4
       requests
 
       ############################################################
       # clean your code
       ############################################################
+      flake8
+      pygments
+      pytest-mypy
+
+      #### LSP
+      (pyls ps)
       mccabe
       mypy
       nose
       pycodestyle
       pydocstyle
-
-      flake8
-      pygments
-      pytest-mypy
-      python-language-server
-      pyls-isort
-      pyls-mypy
       pyflakes
       yapf
+      #### optionals:
+      pyls-isort
+      pyls-mypy
     ]))
   ];
 
@@ -224,14 +262,19 @@ in
 
     pythonEnv = buildEnv {
       name = "pythonEnv";
-      paths = mypythonPkgs { python36 = (mypython36 pkgs); useCuda = false;};
+      paths = mypythonPkgs {
+        python3 = (mypython36 pkgs);
+        python3Packages = python36Packages;
+        useCuda = false;
+      };
     };
 
     pythonEnvWithCuda = buildEnv {
       name = "pythonEnvWithCuda";
       paths = mypythonPkgs {
         useCuda = true;
-        python36 = (mypython36 pkgs);
+        python3 = (mypython36 pkgs);
+        python3Packages = python36Packages;
       };
     };
   });
