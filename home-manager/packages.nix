@@ -234,7 +234,7 @@ let
         liblapack
         RStudio-with-packages
 
-        pythonEnv # WithCuda
+        pythonEnvWithCuda
         # cuda10-shell
     ]) else [];
 
