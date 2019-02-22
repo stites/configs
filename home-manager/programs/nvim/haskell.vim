@@ -4,8 +4,8 @@
 autocmd BufWritePost package.yaml silent !hpack --silent
 autocmd FileType haskell iabbrev ;; ::
 
-let @m='imodule %0wdf/f.d$a where:s/\//./g$:nohl'
-let @p='ddO  liftIO . print $ '
+" let @m='imodule %0wdf/f.d$a where:s/\//./g$:nohl'
+" let @p='ddO  liftIO . print $ '
 
 function! HaskellModuleName() " {{{
   let l:path = substitute(expand('%:r'), '\%(\U[^/]*/\)*', '', '')

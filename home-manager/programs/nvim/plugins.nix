@@ -238,22 +238,67 @@
     };
   };
 
-  # fzf = vimUtils.buildVimPlugin rec {
-  #   name = "fzf";
-  #   buildInputs = [go];
-  #   src = (fetchFromGitHub {
-  #     owner = "junegunn";
-  #     repo = name;
-  #     rev = "master";
-  #     sha256 = "05lrdp95c3nl9nrpkl13svxp72gwgsvxc6l4hgk03i38fd5ip7s7";
-  #   });
+  chromatica-nvim = vimUtils.buildVimPlugin rec {
+    name = "chromatica-nvim";
+    src = (fetchFromGitHub {
+      owner = "arakashic";
+      repo = "chromatica.nvim";
+      rev = "master";
+      sha256 = "0s0ypnd8w7m3bhy9rj7blxdpbkwhpw774lib7p2m6nkz4jv5364n";
+    });
 
-  #   meta = {
-  #     homepage = https://github.com/junegunn/fzf-wrapper;
-  #     maintainers = [ ];
-  #   };
-  # };
+    meta = {
+      homepage = https://github.com/arakashic/chromatica.nvim;
+      maintainers = [ ];
+      shortDescription = "Clang based syntax highlighting for Neovim";
+    };
+  };
 
+  lessspace-vim = vimUtils.buildVimPlugin rec {
+    name = "lessspace-vim";
+    src = (fetchFromGitHub {
+      owner = "thirtythreeforty";
+      repo = "lessspace.vim";
+      rev = "master";
+      sha256 = "0vf7m94fig0s1yy6ybn1pb8fxjxqzncf9ya576m6ay30q8pg7yw1";
+    });
+
+    meta = {
+      homepage = https://github.com/thirtythreeforty/lessspace.vim;
+      maintainers = [ ];
+      shortDescription = "Strip trailing whitespace from files, but only on the lines you edit or visit in Insert mode";
+    };
+  };
+
+  vim-highlightedyank = vimUtils.buildVimPlugin rec {
+    name = "vim-highlightedyank";
+    src = fetchFromGitHub {
+      owner = "machakann";
+      repo = name;
+      rev = "master";
+      sha256 = "1way32pgp0cb74p47g0fa5dqrz804lrypbddy65zcf3nd6rnr5qy";
+    };
+
+    meta = {
+      homepage = https://github.com/machakann/vim-highlightedyank;
+      maintainers = [ ];
+    };
+  };
+
+  vim-sandwich = vimUtils.buildVimPlugin rec {
+    name = "vim-sandwich";
+    src = fetchFromGitHub {
+      owner = "machakann";
+      repo = name;
+      rev = "master";
+      sha256 = "1qkadkisfw21834848rphliry5h6h9mj010n2p3y27wp6xkq9phj";
+    };
+
+    meta = {
+      homepage = https://github.com/machakann/vim-sandwich;
+      maintainers = [ ];
+    };
+  };
 
   ghcid = vimUtils.buildVimPlugin rec {
     name = "ghcid";
