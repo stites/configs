@@ -54,7 +54,6 @@ let
     in (with stable; [
       fortune
       cowsay
-      coreutils
       neofetch
       calibre
 
@@ -152,7 +151,7 @@ let
       nix-bash-completions
       nix-info
       nix-index
-      # (exe haskellPackages.stack2nix)
+      (exe haskellPackages.stack2nix)
       (exe haskellPackages.cabal2nix)
 
       # security tools
@@ -193,7 +192,8 @@ let
       # nix-linting
       my-dictionaries
       # zoom-us
-      weechat
+      # weechat
+      watchexec
       (exe haskellPackages.glirc)
 
       # In order to build things outside of nix
@@ -210,12 +210,14 @@ let
       sqlite.dev
       readline.out
       readline.dev
-      gcc7.out
     ]);
 
   unstableNixOS =
     if host.isNixOS
     then (with unstable; [
+        coreutils
+        ffmpeg
+
         # fonts
         fira
         powerline-fonts
@@ -225,6 +227,7 @@ let
         signal-desktop
         stable.gitter
         slack
+        spotify
 
         # migrate to home-manager
         keybase
@@ -232,10 +235,40 @@ let
 
         # compute stuff
         liblapack
+        # mkl      # <<< look to llvm for openmp
         RStudio-with-packages
 
         pythonEnvWithCuda
-        # cuda10-shell
+
+        # c/cpp dev
+        valgrind bazel
+
+        # enter the clang
+        ncurses
+        ncurses.out
+        llvmPackages_7.clang
+        llvmPackages_7.clang.out
+        llvmPackages_7.clang-manpages
+        llvmPackages_7.compiler-rt
+        llvmPackages_7.libclang
+        llvmPackages_7.libclang.out
+        llvmPackages_7.lld
+        llvmPackages_7.lldb
+        llvmPackages_7.llvm
+        llvmPackages_7.llvm-manpages
+        llvmPackages_7.openmp
+        llvmPackages_7.stdenv
+        rtags
+        # ccls # clang/llvm C++17 language server, uses clang-index
+
+        # c/cpp code analysis
+        clang-tools
+        cpplint
+        cppcheck
+        include-what-you-use
+        uncrustify             # code formatter
+
+        # cuda-shell
     ]) else [];
 
 in stableNixPkgs ++ unstableNixPkgs ++ unstableNixOS

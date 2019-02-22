@@ -43,6 +43,7 @@ in
     EDITOR="nvim";
     BROWSER="firefox"; # toggle with lynx for headless servers
     PAGER="most";
+    MOST_SWITCHES="-w -s"; # -s don't show excess blank lines, -w line wrap the output
 
     # extra exports that nix doesn't support
     HISTCONTROL="ignoredups:ignorespace:erasedups:ignoreboth";
@@ -168,6 +169,7 @@ in
 
   initExtra = (concatStringsSep "\n" [
     "set +o vi"
+    # "export TERM='screen-256color'" # since rxvt-256color doesn't seem to cut it for vim
 
     # enable programmable completion features (you don't need to enable
     # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

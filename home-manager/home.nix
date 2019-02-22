@@ -140,6 +140,16 @@ in
         recursive = true;
         source = ./overlays;
       };
+      "lsp/settings.json".text = ''
+        {
+          "languageServerHaskell": {
+            "hlintOn": true,
+            "maxNumberOfProblems": 10,
+            "useCustomHieWrapper": true,
+            "useCustomHieWrapperPath": "hie-wrapper"
+          }
+        }
+      '';
       "nixpkgs/local-nixpkgs".source      = "${homedir}/git/configs/nixpkgs";
       "nixpkgs/slack.nix".source          = "${homedir}/git/configs/home-manager/slack.nix";
       "nixpkgs/signal-desktop-beta.nix".source = "${homedir}/git/configs/home-manager/signal-desktop-beta.nix";
@@ -422,6 +432,10 @@ in
     lesspipe.enable = true;
     man.enable = true;
     noti.enable = true;
+    beets = {
+      enable = true;
+      # settings = 
+    };
     # zathura.enable = true;
 
     firefox = {
