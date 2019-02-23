@@ -2,3 +2,5 @@ result*
 Library
 secrets.nix
 host.nix
+nixos.bk
+tools
