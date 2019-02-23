@@ -1,9 +1,6 @@
 [submodule "tools/urxvt/urxvt-scripts"]
 	path = tools/urxvt/urxvt-scripts
 	url = git@github.com:pkkolos/urxvt-scripts.git
-[submodule "nixpkgs"]
-	path = nixpkgs
-	url = git://github.com/stites/nixpkgs.git
-[submodule "nixos/system76-nixos"]
-	path = nixos/system76-nixos
-	url = git@github.com:stites/system76-nixos.git
+[submodule "nixos"]
+	path = nixos
+	url = git@github.com:stites/nixos.git
