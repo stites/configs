@@ -91,6 +91,7 @@ let
       httpie
       exa
       colordiff
+      unzip
 
       # email
       notmuch-mutt
@@ -242,6 +243,8 @@ let
 
         # c/cpp dev
         valgrind bazel
+        protobuf
+        # glxinfo
 
         # enter the clang
         ncurses
@@ -250,14 +253,14 @@ let
         llvmPackages_7.clang.out
         llvmPackages_7.clang-manpages
         llvmPackages_7.compiler-rt
-        llvmPackages_7.libclang
-        llvmPackages_7.libclang.out
+        # llvmPackages_7.libcxxClang
+        # llvmPackages_7.libcxxClang.out
         llvmPackages_7.lld
         llvmPackages_7.lldb
         llvmPackages_7.llvm
         llvmPackages_7.llvm-manpages
         llvmPackages_7.openmp
-        llvmPackages_7.stdenv
+        # llvmPackages_7.stdenv
         rtags
         # ccls # clang/llvm C++17 language server, uses clang-index
 

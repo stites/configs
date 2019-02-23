@@ -714,7 +714,7 @@ in
         # endfunction
         # autocmd FileType * call LC_maps()
 
-        "let g:chromatica#libclang_path='${pkgs.llvm_7}/lib'"
+        "let g:chromatica#libclang_path='/home/stites/.nix-profile/lib'"
         "let g:chromatica#enable_at_startup=1"
       ];
 
