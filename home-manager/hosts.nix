@@ -8,7 +8,11 @@ let
   isMirzakhani = hostname == "mirzakhani";
   libraryPaths = {
     nixpkgs = "${builtins.getEnv "HOME"}/.nix-profile/lib";
-    nixos = "/run/current-system/sw/lib/";
+    nixos = concatStringsSep ":" [
+      # This is a global graphics parameter which MUST BE SET for nvidia to work.
+      "/run/opengl-driver/lib"
+      "/run/current-system/sw/lib"
+    ];
   };
   includePaths = {
     nixpkgs = "${builtins.getEnv "HOME"}/.nix-profile/include";

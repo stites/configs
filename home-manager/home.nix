@@ -21,11 +21,11 @@ in
     sessionVariables = {
       # so that electron apps play nicely with taffybar
       XDG_CURRENT_DESKTOP = "Unity";
-      GDK_SCALE=2;
-      GDK_DPI_SCALE="0.5";
+      # GDK_SCALE=2;
+      # GDK_DPI_SCALE="0.5";
     };
-    packages = (import ./packages.nix { inherit pkgs lib config; })
-      ++ [ pkgs.protonmail-bridge pkgs.screen  hpkgs844.taffybar ];
+    packages = (import ./packages.nix { inherit pkgs lib config; });
+      # ++ [ pkgs.protonmail-bridge pkgs.screen  hpkgs822.taffybar ];
     keyboard = {
       layout = "us";
       variant = "colemak";
@@ -273,14 +273,6 @@ in
       };
     };
     dataFile = neovim.xdg.dataFile // {
-      # "home-manager-dev" = {
-      #   executable = true;
-      #   target = "../bin/home-manager-dev";
-      #   text = ''
-      #     #!/usr/bin/env bash
-      #     home-manager -I home-manager=${homedir}/git/home-manager $@
-      #   '';
-      # };
       "remarkable-upload" = {
         executable = true;
         target = "../bin/remarkable-upload";
@@ -297,37 +289,37 @@ in
     };
   };
 
-
   fonts.fontconfig.enableProfileFonts = true;
   xsession = {
     enable = host.isNixOS;
     preferStatusNotifierItems = true;
 
-    pointerCursor = {
-      size = 64;
-      name = "Vanilla-DMZ";
-      package = pkgs.vanilla-dmz;
-    };
+    # pointerCursor = {
+    #   size = 128;
+    #   name = "redglass";
+    #   # package = pkgs.vanilla-dmz;
+    # };
 
-    windowManager.xmonad = {
-      enable = host.isNixOS;
-      enableContribAndExtras = host.isNixOS;
-      config = ./xmonad/xmonad.hs;
-      haskellPackages = hpkgs844;
-      extraPackages = hpkgs: [
-        hpkgs.xmonad-contrib
-        hpkgs.xmonad-extras
-        hpkgs.monad-logger
-        hpkgs.taffybar
-      ];
+    windowManager = {
+      # command = "/run/current-system/sw/bin/xfce4-session";
+      xmonad = {
+        enable = true;
+        enableContribAndExtras = true;
+        config = ./xmonad/xmonad.hs;
+        # haskellPackages = hpkgs822;
+        # extraPackages = hpkgs: with hpkgs [
+        #   taffybar
+        # ];
+      };
     };
   };
 
+
   gtk = {
-    enable = host.isNixOS;
+    enable = true;
     gtk3 = {
       extraConfig = {
-        scaling-factor = 2;
+        scaling-factor = 1;
         gtk-cursor-blink = false;
         gtk-recent-files-limit = 20;
       };
@@ -349,29 +341,21 @@ in
 
   services.xembed-sni-proxy.enable = true;
   services.flameshot.enable = true;
-  services.taffybar = {
-    enable = host.isNixOS;
-    package = hpkgs844.taffybar;
-  };
-
-  services.status-notifier-watcher = {
-    enable = host.isNixOS;
-    package = hpkgs844.status-notifier-item;
-  };
 
   services.syncthing = {
     enable = false;
     tray = false;
   };
+
   services.udiskie = {
     enable = true;
     tray = "auto";
   };
 
   services.redshift ={
-    enable = true;
+    enable = false;
     tray = true;
-    brightness.night = "0.8";
+    brightness.night = "0.5";
     provider = "manual";
     latitude = "42.3601202";
     longitude = "-71.1318836";
@@ -399,7 +383,7 @@ in
       allow-preset-passphrase
     '';
   };
-  # services.blueman-applet.enable = false; # requires system install
+  services.blueman-applet.enable = true; # requires system install
   # services.dunst.enable = false;          # notification daemon
   services.network-manager-applet.enable = true;
   services.pasystray.enable = true;         # PulseAudio system tray
@@ -432,11 +416,7 @@ in
     lesspipe.enable = true;
     man.enable = true;
     noti.enable = true;
-    beets = {
-      enable = true;
-      # settings = 
-    };
-    # zathura.enable = true;
+    zathura.enable = true;
 
     firefox = {
       enable = true;
@@ -501,109 +481,37 @@ in
     settings = { };
   };
 
-  systemd.user.services.protonmail-bridge = {
-    Unit = {
-      Description = "ProtonMail Bridge";
-      # Requires = [ "network.target" ];
-      # After    = [ "network.target" ];
-    };
-
-    Service = {
-      # ExecStart ="${pkgs.protonmail-bridge}/bin/Desktop-Bridge --cli";
-      ExecStart ="${pkgs.screen}/bin/screen -dm ${pkgs.protonmail-bridge}/bin/Desktop-Bridge --cli";
-      ExecStop ="${pkgs.killall}/bin/killall Desktop-Bridge";
-      Restart = "on-failure";
-      RestartSec = "5s";
-      RemainAfterExit = "true";
-      Type="forking";
-    };
-
-    Install = {
-      WantedBy = [ "default.target" ];
-    };
-  };
-
-  systemd.user.services.znc = let
-    zncConfFile = "${homedir}/.znc/configs/znc.conf";
-    modules = [ "partyline" "webadmin" "adminlog" "log" ];
-    # modules = [];
-    cfg = {
-      dataDir = "${homedir}/.local/share/znc/";
-      mutable = false;
-      user = "stites";
-      extraFlags = "";
-    };
-  in {
-    Unit = {
-      Description = "ZNC Server";
-      WantedBy = [ "multi-user.target" ];
-      After = [ "network.service" ];
-    };
-    Service = {
-      Restart = "always";
-      ExecReload = "${pkgs.coreutils}/bin/kill -HUP $MAINPID";
-      ExecStop   = "${pkgs.coreutils}/bin/kill -INT $MAINPID";
-      ExecStartPre =
-        ''
-        ${pkgs.coreutils}/bin/mkdir -p ${cfg.dataDir}/configs
-        # If mutable, regenerate conf file every time.
-        ${optionalString (!cfg.mutable) ''
-          ${pkgs.coreutils}/bin/echo "znc is set to be system-managed. Now deleting old znc.conf file to be regenerated."
-          ${pkgs.coreutils}/bin/rm -f ${cfg.dataDir}/configs/znc.conf
-        ''}
-        # Ensure essential files exist.
-        if [[ ! -f ${cfg.dataDir}/configs/znc.conf ]]; then
-            ${pkgs.coreutils}/bin/echo "No znc.conf file found in ${cfg.dataDir}. Creating one now."
-            ${pkgs.coreutils}/bin/cp --no-clobber ${zncConfFile} ${cfg.dataDir}/configs/znc.conf
-            ${pkgs.coreutils}/bin/chmod u+rw ${cfg.dataDir}/configs/znc.conf
-            ${pkgs.coreutils}/bin/chown ${cfg.user} ${cfg.dataDir}/configs/znc.conf
-        fi
-        if [[ ! -f ${cfg.dataDir}/znc.pem ]]; then
-          ${pkgs.coreutils}/bin/echo "No znc.pem file found in ${cfg.dataDir}. Creating one now."
-          ${pkgs.znc}/bin/znc --makepem --datadir ${cfg.dataDir}
-        fi
-        ''
-     #    ''
-     #  # Symlink modules
-     #  # rm ${cfg.dataDir}/modules || true
-     #  # ln -fs ${modules}/lib/znc ${cfg.dataDir}/modules
-     #''
-      ;
-      ExecStart = "${pkgs.znc}/bin/znc --foreground --datadir ${cfg.dataDir} ${toString cfg.extraFlags}";
-    };
-  };
-
   # systemd.user.services.parcellite.Unit.After             = [ "taffybar.service" ];
   # systemd.user.services.network-manager-applet.Unit.After = [ "taffybar.service" ];
 
-  systemd.user.services.offlineimap = {
-    Unit = {
-      Description = "Offlineimap service";
-      Requires = [ "protonmail-bridge.service" ];
-      After    = [ "protonmail-bridge.service" ];
-    };
+  # systemd.user.services.offlineimap = {
+  #   Unit = {
+  #     Description = "Offlineimap service";
+  #     Requires = [ "protonmail-bridge.service" ];
+  #     After    = [ "protonmail-bridge.service" ];
+  #   };
 
-    Service = {
-      ExecStart ="${pkgs.offlineimap}/bin/offlineimap";
-      Restart = "on-failure";
-      RestartSec = "5s";
-    };
+  #   Service = {
+  #     ExecStart ="${pkgs.offlineimap}/bin/offlineimap";
+  #     Restart = "on-failure";
+  #     RestartSec = "5s";
+  #   };
 
-    Install = {
-      WantedBy = [ "default.target" ];
-    };
-  };
+  #   Install = {
+  #     WantedBy = [ "default.target" ];
+  #   };
+  # };
 
-  systemd.user.services.sovushka-server = {
-    Unit = {
-      Description = "Sovushka server service";
-    };
-    Service = {
-      ExecStart ="sovushka-server";
-    };
-    Install = {
-      WantedBy = [ "default.target" ];
-    };
-  };
+  # systemd.user.services.sovushka-server = {
+  #   Unit = {
+  #     Description = "Sovushka server service";
+  #   };
+  #   Service = {
+  #     ExecStart ="sovushka-server";
+  #   };
+  #   Install = {
+  #     WantedBy = [ "default.target" ];
+  #   };
+  # };
 }
 

@@ -2,6 +2,7 @@
 
 {
   vim-textobj-sentence = vimUtils.buildVimPlugin rec {
+    # last update 2017
     name = "vim-textobj-sentence";
     src = fetchFromGitHub {
       owner = "reedes";
@@ -15,6 +16,7 @@
     };
   };
    vim-textobj-user = vimUtils.buildVimPlugin rec {
+    # last update 2018
     name = "vim-textobj-user";
     src = fetchFromGitHub {
       owner = "kana";
@@ -29,12 +31,13 @@
   };
 
   papercolor-theme = vimUtils.buildVimPlugin rec {
+    # last update 2019
     name = "papercolor-theme";
     src = fetchFromGitHub {
       owner = "NLKNguyen";
       repo = name;
       rev = "master";
-      sha256 = "061551ih3pndnlimxqwa5hrxwn8knpzf87hr6q3zwr9pdfmqpm9l";
+      sha256 = "01136926mr8z0b78srzvx6wkm8ipf3hv2vb8cj5sj8zgq6xs7kwg";
     };
     meta = {
       homepage = https://github.com/NLKNguyen/papercolor-theme;
@@ -43,6 +46,7 @@
   };
 
   vim-bufkill = vimUtils.buildVimPlugin rec {
+    # last update 2018
     name = "vim-bufkill";
     src = fetchFromGitHub {
       owner = "qpkorr";
@@ -57,6 +61,7 @@
   };
 
   vim-bbye = vimUtils.buildVimPlugin rec {
+    # last update 2018
     name = "vim-bbye";
     src = fetchFromGitHub {
       owner = "moll";
@@ -71,6 +76,7 @@
   };
 
   closetag-vim = vimUtils.buildVimPlugin rec {
+    # last update 2015
     name = "closetag-vim";
     src = fetchFromGitHub {
       owner = "docunext";
@@ -85,6 +91,7 @@
   };
 
   terminalkeys-vim = vimUtils.buildVimPlugin {
+    # last update 2012
     name = "terminalkeys-vim";
     src = fetchFromGitHub {
       owner = "nacitar";
@@ -99,6 +106,7 @@
   };
 
   oceanic-next = vimUtils.buildVimPlugin rec {
+    # last update 2018
     name = "oceanic-next";
     src = fetchFromGitHub {
       owner = "mhartington";
@@ -113,6 +121,7 @@
   };
 
   yaflandia = vimUtils.buildVimPlugin rec {
+    # last update 2017
     name = "yaflandia";
     src = fetchFromGitHub {
       owner = "JBakamovic";
@@ -127,6 +136,7 @@
   };
 
   vim-misc = vimUtils.buildVimPlugin rec {
+    # last update 2015
     name = "vim-misc";
     src = fetchFromGitHub {
       owner = "xolox";
@@ -141,6 +151,7 @@
   };
 
   vim-session = vimUtils.buildVimPlugin rec {
+    # last update 2015
     name = "vim-session";
     src = fetchFromGitHub {
       owner = "xolox";
@@ -155,12 +166,13 @@
   };
 
   hspec-vim = vimUtils.buildVimPlugin {
+    # last update 2019
     name = "hspec-vim";
     src = fetchFromGitHub {
       owner = "hspec";
       repo = "hspec.vim";
       rev = "master";
-      sha256 = "0lq2sphh2mfciva184b4b3if202hr4yls4d2gzbjx7ibch45zb9i";
+      sha256 = "1k24kqkkic19h8rff64jnhjm294y63kmri7hqsrrxvfg9xwrzhj8";
     };
     meta = {
       homepage = https://github.com/hspec/hspec.vim;
@@ -169,6 +181,7 @@
   };
 
   vim-endwise = vimUtils.buildVimPlugin rec {
+    # last update 2018
     name = "vim-endwise";
     src = fetchFromGitHub {
       owner = "tpope";
@@ -183,6 +196,7 @@
   };
 
   hledger-vim = vimUtils.buildVimPlugin rec {
+    # last update 2019
     name = "hledger-vim";
     src = fetchFromGitHub {
       owner = "anekos";
@@ -197,6 +211,7 @@
   };
 
   vim-swoop = vimUtils.buildVimPlugin rec {
+    # last update 2017
     name = "vim-swoop";
     src = fetchFromGitHub {
       owner = "pelodelfuego";
@@ -211,6 +226,7 @@
   };
 
   vim-bracketed-paste = vimUtils.buildVimPlugin rec {
+    # last update 2018
     name = "vim-bracketed-paste";
     src = fetchFromGitHub {
       owner = "ConradIrwin";
@@ -225,12 +241,13 @@
   };
 
   vim-mundo = vimUtils.buildVimPlugin rec {
+    # last update 2019
     name = "vim-mundo";
     src = fetchFromGitHub {
       owner = "simnalamburt";
       repo = name;
       rev = "master";
-      sha256 = "021lyyibqxkvjamb8yjmf6vvw6d1xfypnm1mw6jkjdp2zm46m40h";
+      sha256 = "178lay0b4wxxz5qws3f27kwj5s38y0qmzr3z1gk4bnczbm13zs64";
     };
     meta = {
       homepage = https://github.com/simnalamburt/vim-mundo;
@@ -239,12 +256,13 @@
   };
 
   chromatica-nvim = vimUtils.buildVimPlugin rec {
+    # last update 2019
     name = "chromatica-nvim";
     src = (fetchFromGitHub {
       owner = "arakashic";
       repo = "chromatica.nvim";
       rev = "master";
-      sha256 = "0s0ypnd8w7m3bhy9rj7blxdpbkwhpw774lib7p2m6nkz4jv5364n";
+      sha256 = "1wsnfhw0niw7wfy7ix338l5sppvychmhr9abdhkm1yqdfgm8pqw8";
     });
 
     meta = {
@@ -255,6 +273,7 @@
   };
 
   lessspace-vim = vimUtils.buildVimPlugin rec {
+    # last update 2019
     name = "lessspace-vim";
     src = (fetchFromGitHub {
       owner = "thirtythreeforty";
@@ -271,6 +290,7 @@
   };
 
   vim-highlightedyank = vimUtils.buildVimPlugin rec {
+    # last update 2018
     name = "vim-highlightedyank";
     src = fetchFromGitHub {
       owner = "machakann";
@@ -286,12 +306,13 @@
   };
 
   vim-sandwich = vimUtils.buildVimPlugin rec {
+    # last update 2019
     name = "vim-sandwich";
     src = fetchFromGitHub {
       owner = "machakann";
       repo = name;
       rev = "master";
-      sha256 = "1qkadkisfw21834848rphliry5h6h9mj010n2p3y27wp6xkq9phj";
+      sha256 = "0chmgm3xbsih6v497kcwfnhscmykkgc5iya8gpb87j0r086bx3h5";
     };
 
     meta = {
@@ -301,12 +322,13 @@
   };
 
   ghcid = vimUtils.buildVimPlugin rec {
+    # last update 2019
     name = "ghcid";
     src = (fetchFromGitHub {
       owner = "ndmitchell";
       repo = name;
       rev = "master";
-      sha256 = "0bwcd4k4sl5nhyyk2660p4dd2gr7in1jrzx8z556idzd1pfv96h2";
+      sha256 = "0dgxsl1dci6w3x662c7z1zw8yvfnch4ymhsvx29n7jkgqmcy1lki";
     }) + "/plugins/nvim";
 
     meta = {
@@ -316,6 +338,7 @@
   };
 
   vim-kalisi = vimUtils.buildVimPlugin rec {
+    # last update 2016
     name = "vim-kalisi";
     src = fetchFromGitHub {
       owner = "freeo";
@@ -330,6 +353,7 @@
   };
 
   utl-vim = vimUtils.buildVimPlugin {
+    # last update 2008
     name = "utl-vim";
     src = fetchFromGitHub {
       owner = "vim-scripts";
@@ -344,6 +368,7 @@
   };
 
   vim-github-colorscheme = vimUtils.buildVimPlugin rec {
+    # last update 2014
     name = "vim-github-colorscheme";
     src = fetchFromGitHub {
       owner = "endel";
@@ -358,12 +383,13 @@
   };
 
   vim-brittany = vimUtils.buildVimPlugin rec {
+    # last update 2019
     name = "vim-brittany";
     src = fetchFromGitHub {
       owner = "meck";
       repo = name;
       rev = "master";
-      sha256 = "1mrv1sc837v3zmq4wl09kkb3hil7add99npjnflivdm3fc8lar3q";
+      sha256 = "178lay0b4wxxz5qws3f27kwj5s38y0qmzr3z1gk4bnczbm13zs64";
     };
     meta = {
       homepage = https://github.com/meck/vim-brittany;

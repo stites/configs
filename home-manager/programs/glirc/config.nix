@@ -52,7 +52,7 @@ in
 
       * name: "mysplits"
         commands:
-          * "splits znc/gitter:#dataHaskell/Lobby znc/freenode:#haskell znc/freenode:#vim znc/freenode:#nixos znc/freenode:##machinelearning"
+          * "splits znc/gitter:#dataHaskell/Lobby znc/freenode:#haskell znc/freenode:#vim znc/freenode:#nixos znc/freenode:#mlpack"
 
       -- -- Example use of macro in combination with an extension
       -- * name: "extra"

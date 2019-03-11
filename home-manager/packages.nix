@@ -19,22 +19,22 @@ let
   #   yapf = yapf;
   # });
 
-  RStudio-with-packages = unstable.rstudioWrapper.override { packages = with unstable.rPackages; [
-    xts
-    rstan
-    ggplot2
-    ggvis
-    rgl
-    shiny
-    zoo
-    # parallel
-    jug
-    data_table
-    dplyr
-    tidyr
-    stringr
-    lubridate
-  ]; };
+  # RStudio-with-packages = unstable.rstudioWrapper.override { packages = with unstable.rPackages; [
+  #   xts
+  #   rstan
+  #   ggplot2
+  #   ggvis
+  #   rgl
+  #   shiny
+  #   zoo
+  #   # parallel
+  #   jug
+  #   data_table
+  #   dplyr
+  #   tidyr
+  #   stringr
+  #   lubridate
+  # ]; };
 
   my-dictionaries = with pkgs; buildEnv {
     name = "my-dictionary";
@@ -115,12 +115,12 @@ let
       hledger-web
       hlint
       (exe haskellPackages.shake)
-      # haskellPackages.shake-extras
       (exe haskellPackages.alex)
       (exe haskellPackages.brittany)
       (exe haskellPackages.happy)
       (exe haskellPackages.hpack)
       (exe haskellPackages.hindent)
+      (exe haskellPackages.hoogle)
       (exe haskellPackages.pointfree)
       (exe haskellPackages.hasktags)
       (exe haskellPackages.hspec-discover)
@@ -175,7 +175,7 @@ let
       # weechat # << install 2.4-devel version
       bash-completion
 
-      cachix
+      # cachix  # << install via cachix.com
     ]) ++ (if host.isServer then (with stable; [ znc ]) else [])
        ++ (if firstHomeManagerBoot then [] else (with stable; [ ngrok hies ]));
 
@@ -237,9 +237,9 @@ let
         # compute stuff
         liblapack
         # mkl      # <<< look to llvm for openmp
-        RStudio-with-packages
+        # RStudio-with-packages
 
-        pythonEnvWithCuda
+        # pythonEnvWithCuda
 
         # c/cpp dev
         valgrind bazel
@@ -248,13 +248,9 @@ let
 
         # enter the clang
         ncurses
-        ncurses.out
         llvmPackages_7.clang
-        llvmPackages_7.clang.out
         llvmPackages_7.clang-manpages
         llvmPackages_7.compiler-rt
-        # llvmPackages_7.libcxxClang
-        # llvmPackages_7.libcxxClang.out
         llvmPackages_7.lld
         llvmPackages_7.lldb
         llvmPackages_7.llvm

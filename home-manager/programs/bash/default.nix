@@ -81,7 +81,10 @@ in
     CPLUS_INCLUDE_PATH=host.bash.includePath;
 
     LIBRARY_PATH=host.bash.libraryPath;
-    LD_LIBRARY_PATH=host.bash.libraryPath;
+    TMUXIFIER="${homeDir}/.tmuxifier";
+
+    #########################################################
+    #########################################################
 
     # TODO: bundle this into a function call
     NOTI_PUSHBULLET_ACCESSTOKEN = secrets.bash.pushbullet.token;
@@ -115,7 +118,7 @@ in
     mutt="${nix-profile}/bin/neomutt";
 
     # tmux aliases
-    protonmail-bridge="${nix-profile}/bin/tmux new-session -d -s mail 'Desktop-Bridge --cli'";
+    protonmail-bridge="echo 'running Desktop-Bridge --cli in \\'mail\\' tmux session' && ${nix-profile}/bin/tmux new-session -d -s mail 'Desktop-Bridge --cli'";
     ws="${nix-profile}/bin/tmux attach -t stites";
     mail="${nix-profile}/bin/tmux attach -t mail";
 
@@ -156,6 +159,8 @@ in
 
     # dictd:https://www.unixmen.com/look-dictionary-definitions-via-terminal/
     define="${nix-profile}/bin/dictd -d gcide ";
+    hside="tmuxifier load-window hs";
+    pyide="tmuxifier load-window py";
 
     # Add an "alert" alias for long running commands.  Use like so:
     #   sleep 10; alert
@@ -202,6 +207,10 @@ in
     # FIXME: This is repeated in .profile but doesn't seem to stick
     ''export NIX_PATH="$NIX_PATH:$HOME/.nix-defexpr/channels"''
 
+    # This breaks graphics in 19.03 if moved to 'sessionVariables'...
+    # Maybe
+    (if host.isNixOS then "" else "export LD_LIBRARY_PATH=${host.bash.libraryPath}")
+
     git.functions
 
     fasd.initConfig
@@ -236,7 +245,14 @@ in
     # ============================================================ #
     ''
     alias find="${nix-profile}/bin/fd"
-    safe_source "$HOME/.fonts/*.sh"
+    safe_source "${homeDir}/.fonts/*.sh"
+    ''
+
+    # set up tmuxifier
+    ''
+    safe_path_add "$TMUXIFIER/bin"
+    safe_source "$TMUXIFIER/init.sh"
+    safe_source "$TMUXIFIER/completion/tmuxifier.bash"
     ''
 
     host.bash.extraConfig
