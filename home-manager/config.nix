@@ -348,23 +348,11 @@ in
       name = "pythonEnvWithCuda";
       paths = mypythonPkgs {
         useCuda = true;
-        python3 = (mypython36 pkgs);
+        python3 = mypython36 pkgs;
         python3Packages = python36Packages;
       };
     };
   });
-
-  systemd.user.services.weechat = {
-    environment.WEECHAT_HOME = "/var/lib/weechat";
-    serviceConfig = {
-      User = "stites";
-      Group = "users";
-      # RemainAfterExit = "yes";
-    };
-    script = "${pkgs.weechat}/bin/weechat-headless --colors";
-    wantedBy = [ "multi-user.target" ];
-    wants = [ "network.target" ];
-  };
 
   # THIS ACTUALLY GOES INTO CONFIGURATION.NIX
   nix = {
@@ -376,5 +364,11 @@ in
       "hie-nix.cachix.org-1:EjBSHzF6VmDnzqlldGXbi0RM3HdjfTU3yDRi9Pd0jTY="
     ];
     trustedUsers = [ "root" "stites" ];
+    nixPath = [
+      "nixpkgs=$HOME/git/nix/nixpkgs/"
+      # "nixos-18_09=$HOME/git/nix/nixpkgs"
+      "home-manager=$HOME/git/nix/home-manager/"
+      "nixpkgs-overlays=$HOME/git/config/overlays/"
+    ];
   };
 }
