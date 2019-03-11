@@ -305,14 +305,32 @@ in
   packageOverrides = pkgs_: (with pkgs_; {
     # stdenv = pkgs_.clangStdenv; # pkgs_.llvmPackages_7.stdenv;
     stable = nixos18_09;
-    rbnix = rbnix pkgs_;
-    tmuxp = tmuxp pkgs_;
+    # tmuxp = tmuxp pkgs_;
     # slack = callPackage /home/stites/git/configs/home-manager/slack.nix {};
     # signal-desktop-beta = callPackage /home/stites/git/configs/home-manager/signal-desktop-beta.nix {spellcheckerLanguage = "en_US";};
     inherit hies;
-    inherit cuda9-shell cuda10-shell cuda-shell;
-    inherit clang7-shell clang-shell;
-    reMarkable-sdk = reMarkable-sdk;
+    # inherit cuda9-shell cuda10-shell cuda-shell;
+    # inherit clang7-shell clang-shell;
+
+    # stable.haskell.packages.ghc844 = nixos18_09.stable.haskell.packages.ghc844.extend (sel: sup: {
+    #   mkDerivation = drv: sup.mkDerivation (drv // { doHaddock = false; }); # jailbreak = true; });
+    # });
+    ubiquiti = pkgs_.stdenv.mkDerivation {
+          name = "dumb-cryptomator";
+          builder = ./builder.sh;
+          dpkg = pkgs_.dpkg;
+          src = pkgs_.fetchurl {
+            url = "https://www.ui.com/download/unifi/default/default/unifi-network-controller-51019-debianubuntu-linux-and-unifi-cloud-key";
+            sha256 = "0z7xrg9r7hrnqqjmmvgx5hixayq5fczd0ay3nxs7bmzgzkn48q1n";
+          };
+        };
+        # full-cryptomator = nixpkgs.buildFHSUserEnv {
+        #   name = "full-cryptomator";
+        #   targetPkgs = pkgs: [ dumb-cryptomator ];
+        #   multiPkgs = pkgs: [ pkgs.dpkg ];
+        #   runScript = "Cryptomator";
+        # };
+      # };
 
     haskellPackages =
       pkgs_.haskellPackages.override {
