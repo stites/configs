@@ -11,7 +11,6 @@
 "   \   'file': '\v\.(o|hi|beam|dyn_hi|dyn_o)$'
 "   \ }
 
-
 " vim-session ==================================================================
 let g:session_autosave = 'no'
 

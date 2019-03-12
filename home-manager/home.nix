@@ -289,6 +289,14 @@ in
       };
     };
     dataFile = neovim.xdg.dataFile // {
+      # "home-manager-dev" = {
+      #   executable = true;
+      #   target = "../bin/home-manager-dev";
+      #   text = ''
+      #     #!/usr/bin/env bash
+      #     home-manager -I home-manager=${homedir}/git/home-manager $@
+      #   '';
+      # };
       "remarkable-upload" = {
         executable = true;
         target = "../bin/remarkable-upload";
@@ -357,6 +365,15 @@ in
 
   services.xembed-sni-proxy.enable = true;
   services.flameshot.enable = true;
+  # services.taffybar = {
+  #   enable = host.isNixOS;
+  #   package = hpkgs844.taffybar;
+  # };
+
+  # services.status-notifier-watcher = {
+  #   enable = host.isNixOS;
+  #   package = hpkgs844.status-notifier-item;
+  # };
 
   services.syncthing = {
     enable = false;
