@@ -6,7 +6,7 @@ import Control.Monad.IO.Class (liftIO)
 import Data.Map (Map)
 import Graphics.X11.Xlib ()
 import System.Exit (ExitCode(ExitSuccess), exitWith)
-import System.Taffybar.Support.PagerHints (pagerHints)
+-- import System.Taffybar.Support.PagerHints (pagerHints)
 
 import XMonad
 import XMonad.Actions.CycleWS (nextWS, prevWS, shiftToPrev, shiftToNext)
@@ -49,7 +49,8 @@ main = do
   -- xmonad =<< xmobar myConfig
 
   xmonad
-    . ewmh . pagerHints        -- gives taffybar logger information
+    . ewmh
+    -- . pagerHints        -- gives taffybar logger information
     . docks
     $ desktopConfig
       { modMask    = mod4Mask  -- Rebind Mod to super
