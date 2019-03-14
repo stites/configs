@@ -14,6 +14,7 @@ import XMonad.Actions.DynamicWorkspaces (addWorkspacePrompt, removeEmptyWorkspac
 import XMonad.Actions.Search
 import XMonad.Actions.Submap
 import XMonad.Config.Desktop
+import XMonad.Config.Xfce
 import XMonad.Hooks.DynamicLog (xmobar, PP(..))
 import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Hooks.FadeWindows -- (fadeWindowsLogHook)
@@ -41,6 +42,7 @@ import qualified XMonad.Util.EZConfig as EZ
 
 -- import System.Taffybar.Hooks.PagerHints (pagerHints)
 
+launcherString = "rofi -combi-modi window,drun,ssh,run -show combi -modi combi -show drun -show-icons -drun-icon-theme -matching fuzzy -theme android_notification"
 
 main :: IO ()
 main = do
@@ -52,15 +54,17 @@ main = do
     . ewmh
     -- . pagerHints        -- gives taffybar logger information
     . docks
-    $ desktopConfig
-      { modMask    = mod4Mask  -- Rebind Mod to super
-      , terminal   = "urxvt"
-      , workspaces = show <$> [1..6]
-      , borderWidth        = 4
-      , focusFollowsMouse  = False
-      , manageHook         = manageDocks <+> manageHook def <+> launcherHook
-      , layoutHook         = myLayout
-      , handleEventHook    = docksEventHook <+> handleEventHook def
+
+    -- $ desktopConfig
+    $ xfceConfig
+      { modMask           = mod4Mask  -- Rebind Mod to super
+      , terminal          = "/home/stites/.local/bin/termonad"
+      , workspaces        = show <$> [1 .. 6]
+      , borderWidth       = 4
+      , focusFollowsMouse = False
+      , manageHook        = manageDocks <+> manageHook def <+> launcherHook
+      , layoutHook        = myLayout
+      , handleEventHook   = docksEventHook <+> handleEventHook def
       -- , logHook = do
       --     -- fadeWindowsLogHook (composeAll [isUnfocused --> transparency 1.0, opaque]) -- This doesn't seem to do anything
       --     DLog.dynamicLogWithPP DLog.xmobarPP
@@ -77,7 +81,7 @@ main = do
         `EZ.additionalKeysP` additionalKeys'
   where
     launcherHook :: ManageHook
-    launcherHook = resource =? "albert" --> doIgnore
+    launcherHook = resource =? launcherString --> doIgnore
 
 type (:+) f g = Choose f g
 infixr 5 :+
@@ -142,9 +146,12 @@ additionalKeys'
       [ ("M-o d",        spawn "thunar")
       , ("M-o h",        promptSearch xpconfig hackage)
       , ("M-<Return>",   spawn =<< asks (terminal . config))
-      , ("C-S-<Space>",  spawn "albert show")
+      -- , ("C-S-<Space>",  spawn "albert show")
       , ("<Print>",      spawn "flameshot gui")
       -- , ("M-i",          spawn "google-chrome-stable")
+
+      , ("C-S-<Space>",  spawn launcherString) -- old OSX style
+      , ("M-p",          spawn launcherString) -- linux style
       ]
 
     system :: [(String, X ())]

@@ -3,6 +3,7 @@
 let
   stdenv = pkgs.stdenv;
   homedir = builtins.getEnv "HOME";
+  confroot = "${homedir}/git/configs/home-manager/";
   ca-bundle_crt = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"; # just in case
   lib = stdenv.lib;
   concatStringsSep = lib.strings.concatStringsSep;
@@ -64,8 +65,8 @@ in
     '';
 
     file.".jupyter/jupyter_notebook_config.py".text = (pkgs.callPackage ./programs/jupyter/jupyter_notebook_config.nix {}).text;
-    file.".aspell.en.pws".source = "${homedir}/git/configs/home-manager/my-aspell-ws";
-    file.".aspell.en.prepl".source = "${homedir}/git/configs/home-manager/my-aspell-repl";
+    file.".aspell.en.pws".source = "${confroot}/programs/aspell/my-aspell-ws";
+    file.".aspell.en.prepl".source = "${confroot}/programs/aspell/my-aspell-repl";
     file.".tmuxifier" = {
       recursive = true;
       source = pkgs.fetchFromGitHub {
@@ -145,8 +146,8 @@ in
     };
     file.".ghci".source                            = ./haskell/configs/ghci;
     file.".haskline".source                        = ./haskell/configs/haskline;
-    file.".stack/config.yaml".source               = ./haskell/configs/stack-local.yaml;
-    file.".stack/global-project/stack.yaml".source = ./haskell/configs/stack-global.yaml;
+    file.".stack/config.yaml".source               = "${confroot}/programs/stack/local.yaml";
+    file.".stack/global-project/stack.yaml".source = "${confroot}/programs/stack/global.yaml";
   };
 
   nixpkgs.config = (import ./config.nix { inherit pkgs lib config; });
@@ -155,8 +156,8 @@ in
     enable = true;
     configFile = {
       "nixpkgs/isNixOS".text = "${if host.isNixOS then "true" else "false"}";
-      "nixpkgs/config.nix".source = "${homedir}/git/configs/home-manager/config.nix";
-      "termonad/termonad.hs".source = ./programs/termonad/termonad.hs;
+      "nixpkgs/config.nix".source = "${confroot}/config.nix";
+      "termonad/termonad.hs".source = "${confroot}/programs/termonad/termonad.hs";
       "lsp/settings.json".text = ''
         {
           "languageServerHaskell": {
@@ -168,13 +169,13 @@ in
         }
       '';
       # "nixpkgs/local-nixpkgs".source      = "${homedir}/git/configs/nixpkgs";
-      "nixpkgs/signal-desktop-beta.nix".source = "${homedir}/git/configs/home-manager/signal-desktop-beta.nix";
+      "nixpkgs/signal-desktop-beta.nix".source = "${confroot}/signal-desktop-beta.nix";
       # "taffybar/taffybar.hs" = {
-      #   source = ./xmonad/taffybar.hs;
+      #   source = ./programs/taffybar/taffybar.hs;
       #   onChange = "rm -rf ${homedir}/.cache/taffybar/";
       # };
       # "taffybar/taffybar.css" = {
-      #   source = ./xmonad/taffybar.css;
+      #   source = ./programs/taffybar/taffybar.css;
       #   onChange = "rm -rf ${homedir}/.cache/taffybar/";
       # };
       "nvim/UltiSnips/python.snippets" = {
@@ -329,7 +330,7 @@ in
       xmonad = {
         enable = true;
         enableContribAndExtras = true;
-        config = ./xmonad/xmonad.hs;
+        config = "${confroot}/programs/xmonad/xmonad.hs";
         # haskellPackages = hpkgs822;
         # extraPackages = hpkgs: with hpkgs [
         #   taffybar
@@ -428,7 +429,7 @@ in
     rofi = {
       enable = true;
       borderWidth = 1;
-      terminal = "urxvt";
+      terminal = "termonad";
       theme = "Arc";
     };
     home-manager = {
