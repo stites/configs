@@ -54,6 +54,19 @@ in
       # _FASD_IGNORE="fasd ls echo"
     '';
 
+    file.".xmonad/xmonad.hs" = {
+      source = "${confroot}/programs/xmonad/xmonad.hs";
+      onChange = ''
+        echo "Recompiling xmonad"
+        $DRY_RUN_CMD xmonad --recompile
+
+        # Attempt to restart xmonad if X is running.
+        if [[ -v DISPLAY ]] ; then
+          echo "Restarting xmonad"
+          $DRY_RUN_CMD xmonad --restart
+        fi
+      '';
+    };
     file.".codex".text = ''
       currentProjectIncluded: true
       hackagePath: ${homedir}/.cabal/packages/hackage.haskell.org/
@@ -157,7 +170,10 @@ in
     configFile = {
       "nixpkgs/isNixOS".text = "${if host.isNixOS then "true" else "false"}";
       "nixpkgs/config.nix".source = "${confroot}/config.nix";
-      "termonad/termonad.hs".source = "${confroot}/programs/termonad/termonad.hs";
+      "termonad/termonad.hs" = {
+        source = "${confroot}/programs/termonad/termonad.hs";
+        onChange = "rm -rf ~/.cache/termonad/termonad-linux-x86_64";
+      };
       "lsp/settings.json".text = ''
         {
           "languageServerHaskell": {
