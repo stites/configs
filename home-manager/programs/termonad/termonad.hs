@@ -17,23 +17,23 @@ import GI.Vte.Objects.Terminal
   -- , defaultColourConfig
   -- )
 
--- | This sets the color of the cursor in the terminal.
+-- -- | This sets the color of the cursor in the terminal.
+-- --
+-- -- This uses the "Data.Colour" module to define a dark-red color.
+-- -- There are many default colors defined in "Data.Colour.Names".
+-- cursBgColor :: Colour Double
+-- -- cursBgColor = sRGB24 204 0 0 -- default
+-- cursBgColor = sRGB24 100 54 22 -- dot color: cursorColor2
 --
--- This uses the "Data.Colour" module to define a dark-red color.
--- There are many default colors defined in "Data.Colour.Names".
-cursBgColor :: Colour Double
-cursBgColor = sRGB24 204 0 0
-
--- | This sets the colors used for the terminal.  We only specify the background
--- color of the cursor.
-colConf :: ColourConfig (Colour Double)
-colConf =
-  defaultColourConfig
+-- -- | This sets the colors used for the terminal.  We only specify the background
+-- -- color of the cursor.
+-- colConf :: ColourConfig (Colour Double)
+-- colConf =
+--   defaultColourConfig
 
 main :: IO ()
 main = do
-  colExt <- createColourExtension solarizedDark -- defaultColourConfig -- solarizedDark solarizedLight
-  -- colExts <- createColourExtensions "C-p" [solarizedDark solarizedLight]
+  colExt <- createColourExtension dotShare -- defaultColourConfig -- solarizedDark solarizedLight
   defaultMain $ TMConfig myOptions (ConfigHooks myHooks) `addColourExtension` colExt
  where
   myOptions :: ConfigOptions
@@ -55,17 +55,17 @@ main = do
   myHooks :: TMState -> Terminal -> IO ()
   myHooks s term = pure ()
 
-data MultiColourExtension = MultiColourExtension
-  { colourExtConf :: MVar (NonEmpty (ColourConfig (Colour Double)))
-  , colourExtCreateTermHook :: TMState -> Terminal -> IO ()
-  }
+-- data MultiColourExtension = MultiColourExtension
+--   { colourExtConf :: MVar (NonEmpty (ColourConfig (Colour Double)))
+--   , colourExtCreateTermHook :: TMState -> Terminal -> IO ()
+--   }
 
-createMultiColourExtension :: NonEmpty (ColourConfig (Color Double)) -> IO ColourExtension
-createMultiColourExtension confs = newMVar confs >>= \mvarconf -> do
-  pure $ MultiColourExtension
-    { colourExtConf = mvarConf
-    , colourExtCreateTermHook = colourHook mvarConf
-    }
+-- createMultiColourExtension :: NonEmpty (ColourConfig (Color Double)) -> IO ColourExtension
+-- createMultiColourExtension confs = newMVar confs >>= \mvarconf -> do
+--   pure $ MultiColourExtension
+--     { colourExtConf = mvarConf
+--     , colourExtCreateTermHook = colourHook mvarConf
+--     }
 
 -- This is our Solarized dark 'ColourConfig'.  It holds all of our dark-related settings.
 solarizedDark :: ColourConfig (Colour Double)
@@ -100,6 +100,41 @@ solarizedDark =
       :* sRGB24 101 123 131 -- base00
       :* sRGB24 253 246 227 -- base3
       :* EmptyVec
+
+-- From: http://dotshare.it/dots/87/
+dotShare :: ColourConfig (Colour Double)
+dotShare =
+  defaultColourConfig
+    -- Set the default foreground colour of text of the terminal.
+    { foregroundColour = sRGB24 84 83 78 -- base0
+    -- Set the extended palette that has 2 Vecs of 8 Solarized pallette colours
+    , palette = ExtendedPalette colors1 colors2
+    }
+  where
+    colors1 :: Vec N8 (Colour Double)
+    colors1 =
+         sRGB24   6   6   6 -- base03, background
+      :* sRGB24  91  31  31 -- red
+      :* sRGB24  72  84  91 -- green
+      :* sRGB24  88  67  36 -- yellow
+      :* sRGB24  49  76  81 -- blue
+      :* sRGB24  61  39  98 -- magenta
+      :* sRGB24  43  53  55 -- cyan
+      :* sRGB24  87  87  87 -- base2
+      :* EmptyVec
+
+    colors2 :: Vec N8 (Colour Double)
+    colors2 =
+         sRGB24  25  25  25 -- base02, background highlights
+      :* sRGB24  82  24  24 -- orange
+      :* sRGB24  63  81  36 -- base01, comments / secondary text
+      :* sRGB24  93  62  13 -- base0, body text / default code / primary content
+      :* sRGB24  32  98  69 -- base1, optional emphasised content
+      :* sRGB24  52  26 100 -- violet
+      :* sRGB24  26  44  48 -- base00
+      :* sRGB24  87  87  87 -- base3
+      :* EmptyVec
+
 
 -- This is our Solarized light 'ColourConfig'.  It holds all of our light-related settings.
 solarizedLight :: ColourConfig (Colour Double)

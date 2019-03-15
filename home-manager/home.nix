@@ -332,8 +332,10 @@ in
 
   fonts.fontconfig.enableProfileFonts = true;
   xsession = {
+    # enable = false;
     enable = host.isNixOS;
     preferStatusNotifierItems = true;
+    windowManager.command = "startxfce4";
 
     # pointerCursor = {
     #   size = 128;
@@ -341,26 +343,24 @@ in
     #   # package = pkgs.vanilla-dmz;
     # };
 
-    windowManager = {
-      # command = "/run/current-system/sw/bin/xfce4-session";
-      xmonad = {
-        enable = true;
-        enableContribAndExtras = true;
-        config = "${confroot}/programs/xmonad/xmonad.hs";
-        # haskellPackages = hpkgs822;
-        # extraPackages = hpkgs: with hpkgs [
-        #   taffybar
-        # ];
-      };
-    };
+    # windowManager = {
+    #   # command = "/run/current-system/sw/bin/xfce4-session";
+    #   xmonad = {
+    #     enable = true;
+    #     enableContribAndExtras = true;
+    #     config = "${confroot}/programs/xmonad/xmonad.hs";
+    #     # haskellPackages = hpkgs822;
+    #     # extraPackages = hpkgs: with hpkgs [
+    #     #   taffybar
+    #     # ];
+    #   };
+    # };
   };
-
 
   gtk = {
     enable = true;
     gtk3 = {
       extraConfig = {
-        scaling-factor = 1;
         gtk-cursor-blink = false;
         gtk-recent-files-limit = 20;
       };
@@ -375,35 +375,37 @@ in
       package = pkgs.dejavu_fonts;
     };
   };
+
   qt = {
     enable = host.isNixOS;
     useGtkTheme = true;
   };
 
   services.xembed-sni-proxy.enable = true;
-  services.flameshot.enable = true;
-  # services.taffybar = {
-  #   enable = host.isNixOS;
-  #   package = hpkgs844.taffybar;
-  # };
 
-  # services.status-notifier-watcher = {
-  #   enable = host.isNixOS;
-  #   package = hpkgs844.status-notifier-item;
-  # };
+  # # services.taffybar = {
+  # #   enable = host.isNixOS;
+  # #   package = hpkgs844.taffybar;
+  # # };
 
-  services.syncthing = {
-    enable = false;
-    tray = false;
-  };
+  # # services.status-notifier-watcher = {
+  # #   enable = host.isNixOS;
+  # #   package = hpkgs844.status-notifier-item;
+  # # };
 
+  ###########################
+  # added
+  ###########################
   services.udiskie = {
     enable = true;
-    tray = "auto";
+    tray = "always";
   };
 
+  services.keybase.enable = true;
+  services.kbfs.enable = true;
+
   services.redshift ={
-    enable = false;
+    enable = true;
     tray = true;
     brightness.night = "0.5";
     provider = "manual";
@@ -415,24 +417,23 @@ in
     };
   };
 
-  services.keybase.enable = true;
-  services.kbfs.enable = true;
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
+  # # Some programs need SUID wrappers, can be configured further or are
+  # # started in user sessions.
+  # # programs.mtr.enable = true;
 
-  #services.gnome-keyring.enable = true;
-  services.gpg-agent = {
-    enable = true;
-    enableSshSupport  = true;
-    enableExtraSocket = true;
-    maxCacheTtl       = 60480000;
-    defaultCacheTtl   = 60480000;
-    extraConfig = ''
-      allow-preset-passphrase
-    '';
-  };
+  # #services.gnome-keyring.enable = true;
+  # services.gpg-agent = {
+  #   enable = true;
+  #   enableSshSupport  = true;
+  #   enableExtraSocket = true;
+  #   maxCacheTtl       = 60480000;
+  #   defaultCacheTtl   = 60480000;
+  #   extraConfig = ''
+  #     allow-preset-passphrase
+  #   '';
+  # };
+
   services.blueman-applet.enable = true; # requires system install
   # services.dunst.enable = false;          # notification daemon
   services.network-manager-applet.enable = true;
@@ -440,6 +441,16 @@ in
   services.parcellite.enable = true;        # clipboard daemon
   services.compton.enable = true;           # needs configuration
   # services.protonmail-bridge.enable = true;
+
+  xresources.extraConfig = ''
+    Xft.dpi: 96
+    Xft.autohint: 0
+    Xft.lcdfilter: lcddefault
+    Xft.hintstyle: hintfull
+    Xft.hinting: 1
+    Xft.antialias: 1
+    Xft.rgba: rgb
+  '';
 
   programs = {
     rofi = {
@@ -450,7 +461,7 @@ in
     };
     home-manager = {
       enable = true;
-      path = "$HOME/git/home-manager";
+      path = "$HOME/git/system/home-manager";
     };
 
     bash = import ./programs/bash { inherit lib pkgs; };

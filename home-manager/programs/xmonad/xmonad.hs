@@ -15,6 +15,7 @@ import XMonad.Actions.Search
 import XMonad.Actions.Submap
 import XMonad.Config.Desktop
 import XMonad.Config.Xfce
+import XMonad.Config.Gnome
 import XMonad.Hooks.DynamicLog (xmobar, PP(..))
 import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Hooks.FadeWindows -- (fadeWindowsLogHook)
@@ -46,10 +47,6 @@ launcherString = "rofi -combi-modi window,drun,ssh,run -show combi -modi combi -
 
 main :: IO ()
 main = do
-  -- xmproc <- spawnPipe "xmobar -d ~/git/configs/desktop/xmonad/xmobar.hs"
-  -- xmproc <- Run.spawnPipe "xmobar ~/.xmonad/xmobarrc.hs"
-  -- xmonad =<< xmobar myConfig
-
   xmonad
     . ewmh
     -- . pagerHints        -- gives taffybar logger information
@@ -58,7 +55,7 @@ main = do
     -- $ desktopConfig
     $ xfceConfig
       { modMask           = mod4Mask  -- Rebind Mod to super
-      , terminal          = "/home/stites/.local/bin/termonad"
+      , terminal          = "/home/stites/.local/bin/termonad" -- "urxvt" -- "/home/stites/.local/bin/termonad"
       , workspaces        = show <$> [1 .. 6]
       , borderWidth       = 4
       , focusFollowsMouse = False
