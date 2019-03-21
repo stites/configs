@@ -7,6 +7,12 @@
   controlPath = "/tmp/%r@%h:%p";
   controlPersist = "10m";
   matchBlocks = {
+    # Monad network
+    State = { hostname = "192.168.1.1"; };
+    Cont = { hostname = "192.168.1.7"; };
+    Tardis = { user = "adblock"; hostname = "192.168.1.200"; };
+
+    # Turtle network
     gauss = { hostname = "10.0.6.48"; };
     erdos = { hostname = "10.0.6.89"; };
     genbu = { hostname = "10.0.6.154"; };
