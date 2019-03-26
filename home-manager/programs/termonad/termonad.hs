@@ -33,7 +33,7 @@ import GI.Vte.Objects.Terminal
 
 main :: IO ()
 main = do
-  colExt <- createColourExtension dotShare -- defaultColourConfig -- solarizedDark solarizedLight
+  colExt <- createColourExtension eightiesDark -- defaultColourConfig -- solarizedDark solarizedLight
   defaultMain $ TMConfig myOptions (ConfigHooks myHooks) `addColourExtension` colExt
  where
   myOptions :: ConfigOptions
@@ -47,7 +47,7 @@ main = do
     , scrollbackLen = 1000000
     , confirmExit = False
     , wordCharExceptions = "-#%&+,./=?@\\_~\183:"
-    , showMenu = False
+    , showMenu = True
     , showTabBar = ShowTabBarIfNeeded
     , cursorBlinkMode = CursorBlinkModeOff
     }
@@ -101,39 +101,123 @@ solarizedDark =
       :* sRGB24 253 246 227 -- base3
       :* EmptyVec
 
--- From: http://dotshare.it/dots/87/
-dotShare :: ColourConfig (Colour Double)
-dotShare =
+ambiance :: ColourConfig (Colour Double)
+ambiance =
   defaultColourConfig
     -- Set the default foreground colour of text of the terminal.
-    { foregroundColour = sRGB24 84 83 78 -- base0
+    { cursorFgColour   = Set cursorColor
+    , cursorBgColour   = Set cursorColor
+    , backgroundColour = sRGB24read "#282828"
+    , foregroundColour = sRGB24read "#F2F1F0"
     -- Set the extended palette that has 2 Vecs of 8 Solarized pallette colours
-    , palette = ExtendedPalette colors1 colors2
+    , palette = ExtendedPalette normalColours brightColours
     }
-  where
-    colors1 :: Vec N8 (Colour Double)
-    colors1 =
-         sRGB24   6   6   6 -- base03, background
-      :* sRGB24  91  31  31 -- red
-      :* sRGB24  72  84  91 -- green
-      :* sRGB24  88  67  36 -- yellow
-      :* sRGB24  49  76  81 -- blue
-      :* sRGB24  61  39  98 -- magenta
-      :* sRGB24  43  53  55 -- cyan
-      :* sRGB24  87  87  87 -- base2
-      :* EmptyVec
 
-    colors2 :: Vec N8 (Colour Double)
-    colors2 =
-         sRGB24  25  25  25 -- base02, background highlights
-      :* sRGB24  82  24  24 -- orange
-      :* sRGB24  63  81  36 -- base01, comments / secondary text
-      :* sRGB24  93  62  13 -- base0, body text / default code / primary content
-      :* sRGB24  32  98  69 -- base1, optional emphasised content
-      :* sRGB24  52  26 100 -- violet
-      :* sRGB24  26  44  48 -- base00
-      :* sRGB24  87  87  87 -- base3
-      :* EmptyVec
+  where
+    cursorColor :: Colour Double
+    cursorColor = sRGB24read "#F07746"
+
+    normalColours :: Vec N8 (Colour Double)
+    normalColours = asVec8 $ MyPallete
+      { _black   = sRGB24read "#222222"
+      , _red     = sRGB24read "#E84F4F"
+      , _green   = sRGB24read "#B7CE42"
+      , _yellow  = sRGB24read "#F07746"
+      , _blue    = sRGB24read "#66AABB"
+      , _magenta = sRGB24read "#B7416E"
+      , _cyan    = sRGB24read "#6D878D"
+      , _white   = sRGB24read "#F2F1F0"
+      }
+
+    brightColours :: Vec N8 (Colour Double)
+    brightColours = asVec8 $ MyPallete
+      { _black   = sRGB24read "#666666"
+      , _red     = sRGB24read "#D23D3D"
+      , _green   = sRGB24read "#BDE077"
+      , _yellow  = sRGB24read "#F07746"
+      , _blue    = sRGB24read "#AACCBB"
+      , _magenta = sRGB24read "#E16A98"
+      , _cyan    = sRGB24read "#42717B"
+      , _white   = sRGB24read "#F2F1F0"
+      }
+
+-- From: https://terminal.sexy (schemes: eighties.dark, export: alacritty, xresources)
+eightiesDark :: ColourConfig (Colour Double)
+eightiesDark =
+  defaultColourConfig
+    -- Set the default foreground colour of text of the terminal.
+    { cursorFgColour   = Set fgColor
+    , cursorBgColour   = Set fgColor
+    , backgroundColour = sRGB24read "#2d2d2d"
+    , foregroundColour = fgColor
+    -- Set the extended palette that has 2 Vecs of 8 Solarized pallette colours
+    , palette = ExtendedPalette normalColours brightColours
+    }
+
+  where
+    fgColor :: Colour Double
+    fgColor = sRGB24read "#d3d0c8"
+
+    normalColours :: Vec N8 (Colour Double)
+    normalColours = asVec8 $ MyPallete
+      { _black   = sRGB24read "#2d2d2d"
+      , _red     = sRGB24read "#f2777a"
+      , _green   = sRGB24read "#99cc99"
+      , _yellow  = sRGB24read "#ffcc66"
+      , _blue    = sRGB24read "#6699cc"
+      , _magenta = sRGB24read "#cc99cc"
+      , _cyan    = sRGB24read "#66cccc"
+      , _white   = sRGB24read "#d3d0c8"
+      }
+
+    brightColours :: Vec N8 (Colour Double)
+    brightColours = asVec8 $ MyPallete
+      { _black   = sRGB24read "#747369"
+      , _red     = sRGB24read "#f2777a"
+      , _green   = sRGB24read "#99cc99"
+      , _yellow  = sRGB24read "#ffcc66"
+      , _blue    = sRGB24read "#6699cc"
+      , _magenta = sRGB24read "#cc99cc"
+      , _cyan    = sRGB24read "#66cccc"
+      , _white   = sRGB24read "#f2f0ec"
+      }
+
+data MyPallete = MyPallete
+  { _black   :: Colour Double
+  , _red     :: Colour Double
+  , _green   :: Colour Double
+  , _yellow  :: Colour Double
+  , _blue    :: Colour Double
+  , _magenta :: Colour Double
+  , _cyan    :: Colour Double
+  , _white   :: Colour Double
+  }
+
+asVec8 :: MyPallete -> Vec N8 (Colour Double)
+asVec8 p
+  =  _black p
+  :* _red p
+  :* _green p
+  :* _yellow p
+  :* _blue p
+  :* _magenta p
+  :* _cyan p
+  :* _white p
+  :* EmptyVec
+
+-- colors:
+--   # Default colors
+--   primary:
+--     background: '0x2d2d2d'
+--     foreground: '0xd3d0c8'
+
+
+
+
+
+
+
+
 
 
 -- This is our Solarized light 'ColourConfig'.  It holds all of our light-related settings.
