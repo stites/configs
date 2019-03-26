@@ -299,6 +299,7 @@ let
 in
 {
   allowUnfree = true;
+  allowBroken = true; # really just for unreal engine 4
   allowUnsupportedSystem = true;
   android_sdk.accept_license = true;
 

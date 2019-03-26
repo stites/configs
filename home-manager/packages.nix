@@ -133,7 +133,7 @@ let
 
       # extra git stuff
       tig
-      git-lfs
+      # git-lfs # added from programs.git module
       git-radar
       git-secrets # FIXME: add "install hook if you own the repository" warning on cd
       gitAndTools.git-extras

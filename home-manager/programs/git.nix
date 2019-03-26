@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 let
   secrets = import ../secrets.nix;
 in
@@ -48,73 +50,69 @@ in
     "data/*.gz"
   ];
 
-  extraConfig = ''
-    [rerere]
-    enabled = true
-    autoupdate = true
+  lfs.enable = true;
 
-    [core]
-    ignorecase = false
-    eol = lf
-    whitespace = blank-at-eol,space-before-tab,tab-in-indent,tabwidth=2
-    editor = nvim
-    # excludesfile = ~/.config/git/ignore # covered by nix
+  extraConfig = {
+    rerere = {
+      enabled = true;
+      autoupdate = true;
+    };
+    core = {
+      ignorecase = false;
+      eol = "lf";
+      whitespace = "blank-at-eol,space-before-tab,tab-in-indent,tabwidth=2";
+      editor = "nvim";
+    };
+    color.ui = "auto";
+    grep = {
+      lineNumber = true;
+      patternType = "perl";
+    };
+    advice = {
+      pushNonFastForward = false;
+      statusHints = false;
+    };
+    diff = {
+      renames = "copies";
+      mnemonicprefix = true;
+    };
+    pager = {
+      diff = "${pkgs.gitAndTools.diff-so-fancy}/bin/diff-so-fancy | less --tabs=1,5 -RFX";
+      show = "${pkgs.gitAndTools.diff-so-fancy}/bin/diff-so-fancy | less --tabs=1,5 -RFX";
+    };
+    branch.autosetupmerge = true;
+    push.default = "tracking";
 
-    [color]
-    ui = auto
+    merge = {
+      stat = true;
+      tool = "vimdiff";
+    };
 
-    [grep]
-    lineNumber = true
-    patternType = perl
+    help.autocorrect = 1;
 
-    [advice]
-    pushNonFastForward = false
-    statusHints = false
+    http.sslVerify = false;
+    github.user = "stites";
 
-    [diff]
-    renames = copies
-    mnemonicprefix = true
+    # [url "ssh://git@github.com/"]
+    # insteadOf = https://github.com/
 
-    [pager]
-    diff = diff-so-fancy | less --tabs=1,5 -RFX
-    show = diff-so-fancy | less --tabs=1,5 -RFX
+    # [url "git://github.com/ghc/packages-"]
+    # insteadOf = git://github.com/ghc/packages/
 
-    [branch]
-    autosetupmerge = true
+    credential = {
+      helper = "libsecret";
+      # helper = store --file ~/.config/git/credentials
+      # helper = cache --timeout=30000
+    };
 
-    [push]
-    default = tracking
+    # MANUAL LFS
+    # [filter "lfs"]
+    # smudge = git-lfs smudge -- %f
+    # process = git-lfs filter-process
+    # required = true
+    # clean = git-lfs clean -- %f
 
-    [merge]
-    stat = true
-    tool = vimdiff
-
-    [help]
-    autocorrect = 1
-
-    [http]
-    sslVerify = false
-
-    [github]
-    user = stites
-
-    [url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
-
-    [url "git://github.com/ghc/packages-"]
-    insteadOf = git://github.com/ghc/packages/
-
-    [credential]
-    helper = store --file ~/.config/git/credentials
-    # helper = cache --timeout=30000
-
-    [filter "lfs"]
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
-    clean = git-lfs clean -- %f
-
-    [bulkworkspaces]
-    all = $HOME/git
-  '';
+    # [bulkworkspaces]
+    # all = $HOME/git
+  };
 }

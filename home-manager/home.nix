@@ -11,10 +11,10 @@ let
   mail = pkgs.callPackage ./mail.nix { };
   host = pkgs.callPackage ./hosts.nix { };
   secrets = import ./secrets.nix;
-  hpkgs822 = pkgs.haskell.packages.ghc822;
-  # hpkgs822 = pkgs.haskell.packages.ghc822.extend (sel: sup: {
-  #   mkDerivation = drv: sup.mkDerivation (drv // { doHaddock = false; }); # jailbreak = true; });
-  # });
+  # hpkgs822 = pkgs.haskell.packages.ghc822;
+  hpkgs822 = pkgs.haskell.packages.ghc822.extend (sel: sup: {
+    mkDerivation = drv: sup.mkDerivation (drv // { doHaddock = false; }); # jailbreak = true; });
+  });
   optionalString = lib.optionalString;
 in
 {
@@ -383,15 +383,15 @@ in
 
   services.xembed-sni-proxy.enable = true;
 
-  # # services.taffybar = {
-  # #   enable = host.isNixOS;
-  # #   package = hpkgs844.taffybar;
-  # # };
+  # services.taffybar = {
+  #   enable = host.isNixOS;
+  #   package = hpkgs822.taffybar;
+  # };
 
-  # # services.status-notifier-watcher = {
-  # #   enable = host.isNixOS;
-  # #   package = hpkgs844.status-notifier-item;
-  # # };
+  # services.status-notifier-watcher = {
+  #   enable = host.isNixOS;
+  #   package = hpkgs822.status-notifier-item;
+  # };
 
   ###########################
   # added
@@ -418,11 +418,11 @@ in
   };
 
 
-  # # Some programs need SUID wrappers, can be configured further or are
-  # # started in user sessions.
-  # # programs.mtr.enable = true;
+  # Some programs need SUID wrappers, can be configured further or are
+  # started in user sessions.
+  # programs.mtr.enable = true;
 
-  # #services.gnome-keyring.enable = true;
+  # services.gnome-keyring.enable = true;
   # services.gpg-agent = {
   #   enable = true;
   #   enableSshSupport  = true;
@@ -465,14 +465,14 @@ in
     };
 
     bash = import ./programs/bash { inherit lib pkgs; };
-    keychain = {
-      enable = true;
-      enableBashIntegration = true;
-      enableZshIntegration = false;
-      agents = [ "ssh" "gpg" ];
-      inheritType = null;
-      keys = [ "id_rsa" "id_ed25519" secrets.gpg.signing-key ];
-    };
+    # keychain = {
+    #   enable = true;
+    #   enableBashIntegration = true;
+    #   enableZshIntegration = false;
+    #   agents = [ "ssh" "gpg" ];
+    #   inheritType = null;
+    #   keys = [ "id_rsa" "id_ed25519" secrets.gpg.signing-key ];
+    # };
     autorandr.enable = true;
     command-not-found.enable = true;
     direnv.enable = true;
@@ -505,7 +505,7 @@ in
     };
     ssh    = import ./programs/ssh.nix;
     fzf    = import ./programs/fzf.nix;
-    git    = import ./programs/git.nix;
+    git    = import ./programs/git.nix { inherit pkgs; };
     tmux   = import ./programs/tmux.nix { inherit pkgs; };
     urxvt  = import ./programs/urxvt.nix { inherit pkgs; };
     neovim = neovim.config;

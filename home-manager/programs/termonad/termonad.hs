@@ -2,7 +2,7 @@
 {- LANGUAGE NumericUnderscores #-}
 module Main where
 
-import Data.Colour.SRGB (Colour, sRGB24)
+import Data.Colour.SRGB -- (Colour, sRGB24, sRGB24read)
 import Termonad.App (defaultMain)
 import Termonad.Config
   -- ( FontConfig, FontSize(FontSizePoints), Option(Set)
