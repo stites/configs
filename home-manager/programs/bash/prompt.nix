@@ -22,9 +22,9 @@ in
       #fi
       COLOR_AT=\"\"
       case $LAST_CODE in
-        0) COLOR_AT=\"$BRIGHT_BLUE\" ;;
-        1) COLOR_AT=\"$BRIGHT_RED\" ;;
-        *) COLOR_AT=\"$YELLOW\" ;;
+        0) COLOR_AT=\"${colors.BRIGHT_BLUE}\" ;;
+        1) COLOR_AT=\"${colors.BRIGHT_RED}\" ;;
+        *) COLOR_AT=\"${colors.YELLOW}\" ;;
       esac
 
 
@@ -49,7 +49,7 @@ in
 
       if [ ! -z \"\${GBRANCH}\" ]; then
         #shellcheck disable=SC1117
-        ENDING=\"${variables.PROMPT_PATH_COLOR_GIT}\\W${variables.PROMPT_BRANCH_COLOR_GIT}#_(\${GBRANCH})\${RED}$(find_git_dirty)\"
+        ENDING=\"${variables.PROMPT_PATH_COLOR_GIT}\\W${variables.PROMPT_BRANCH_COLOR_GIT}#_(\${GBRANCH})${colors.RED}$(find_git_dirty)\"
       else
         #shellcheck disable=SC1117
         ENDING=\"${variables.PROMPT_PATH_COLOR}\\W\"
@@ -68,7 +68,7 @@ in
       fi
 
       # looks like we could just invoke functions in PS1 itself without having to use the PROMPT_COMMAND
-      export PS1=\"\${ENVS}\${BASE}\${SEP}\${ENDING} \${RESET}\"
+      export PS1=\"\${ENVS}\${BASE}\${SEP}\${ENDING} ${colors.RESET}\"
     }
     ";
 
