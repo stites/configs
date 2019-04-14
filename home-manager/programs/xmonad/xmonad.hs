@@ -55,7 +55,7 @@ main = do
     -- $ desktopConfig
     $ xfceConfig
       { modMask           = mod4Mask  -- Rebind Mod to super
-      , terminal          = "/home/stites/.local/bin/termonad" -- "urxvt" -- "/home/stites/.local/bin/termonad"
+      , terminal          = "kitty" -- "urxvt" -- "/home/stites/.local/bin/termonad"
       , workspaces        = show <$> [1 .. 6]
       , borderWidth       = 4
       , focusFollowsMouse = False
