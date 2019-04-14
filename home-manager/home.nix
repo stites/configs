@@ -197,7 +197,7 @@ in
       "nvim/UltiSnips/python.snippets" = {
         source = ./programs/nvim/UltiSnips/python.snippets;
       };
-      "glirc/config".text = (import ./programs/glirc/config.nix {}).config;
+      "glirc/config".text = (pkgs.callPackage ./programs/glirc/config.nix {}).config;
       "bat/config".text = ''
         --theme="TwoDark"
         --italic-text=never
@@ -332,10 +332,11 @@ in
 
   fonts.fontconfig.enableProfileFonts = true;
   xsession = {
-    # enable = false;
-    enable = host.isNixOS;
+    enable = false;
+    # enable = host.isNixOS;
     preferStatusNotifierItems = true;
     windowManager.command = "startxfce4";
+    # windowManager.command = "my-xmonad";
 
     # pointerCursor = {
     #   size = 128;
@@ -382,6 +383,7 @@ in
   };
 
   services.xembed-sni-proxy.enable = true;
+  services.xscreensaver.enable = true;
 
   # services.taffybar = {
   #   enable = host.isNixOS;
@@ -393,30 +395,17 @@ in
   #   package = hpkgs822.status-notifier-item;
   # };
 
-  ###########################
-  # added
-  ###########################
+  # ###########################
+  # # added
+  # ###########################
   services.udiskie = {
     enable = true;
     tray = "always";
   };
 
-  services.keybase.enable = true;
-  services.kbfs.enable = true;
-
-  services.redshift ={
-    enable = true;
-    tray = true;
-    brightness.night = "0.5";
-    provider = "manual";
-    latitude = "42.3601202";
-    longitude = "-71.1318836";
-    temperature = {
-      day = 5500;
-      night = 4000;
-    };
-  };
-
+  # FIXME: REMOVE (added to nixos)
+  # services.keybase.enable = true;
+  # services.kbfs.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

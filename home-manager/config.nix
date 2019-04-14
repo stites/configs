@@ -311,7 +311,7 @@ in
     # signal-desktop-beta = callPackage /home/stites/git/configs/home-manager/signal-desktop-beta.nix {spellcheckerLanguage = "en_US";};
     inherit hies;
     # inherit cuda9-shell cuda10-shell cuda-shell;
-    # inherit clang7-shell clang-shell;
+    inherit clang7-shell clang-shell;
 
     # stable.haskell.packages.ghc844 = nixos18_09.stable.haskell.packages.ghc844.extend (sel: sup: {
     #   mkDerivation = drv: sup.mkDerivation (drv // { doHaddock = false; }); # jailbreak = true; });

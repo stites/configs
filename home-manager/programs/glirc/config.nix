@@ -1,20 +1,32 @@
-{ ... }:
+{ lib, ... }:
 
 let
   secrets = import ../../secrets.nix;
   homedir = builtins.getEnv "HOME";
 in
 {
-  config = ''
-    -- vim: filetype=config-value
-    -- Grab the Vim syntax highlighting file from the config-value package
-
-    -- Learn more about these settings with `glirc2 --config-format`
-
+  config = lib.strings.concatStringsSep "\n" [
+    # Grab the Vim syntax highlighting file from the config-value package
+    # Learn more about these settings with `glirc2 --config-format`
+    "-- vim: filetype=config-value"
+    ''
     activity-bar: yes
     layout: two-column
+    extra-highlights: ["glirc", "lens"]
 
-    -- Defaults used when not specified on command line
+    nick-padding:
+       side: left -- try right if you don't like left padding
+       width: 13
+    ''
+
+    # "open" works on macOS, "gnome-open" for GNOME
+    "url-opener: \"firefox\""
+
+    # Apparently this is broken
+    # "download-dir: \"${homedir}/Downloads\""
+
+    # Defaults used when not specified on command line
+    ''
     defaults:
       nick:            "stites"
       username:        "stites"
@@ -23,8 +35,10 @@ in
       tls-client-cert: "${homedir}/.ssh/znc/certificate.pem"
       tls-client-key:  "${homedir}/.ssh/znc/key.pem"
       log-dir:         "${homedir}/.local/share/data/glirc/irclogs"
+    ''
 
-    -- Override the defaults when connecting to specific servers
+    # Override the defaults when connecting to specific servers
+    ''
     servers:
       * name: "znc/freenode"
         hostname:      "mirzakhani"
@@ -43,7 +57,9 @@ in
         -- connect-cmds:
         --   * "join #favoritechannel,#otherchannel"
         --   * "msg mybot another command"
+    ''
 
+    ''
     macros:
       * name: "wipe"
         commands:
@@ -53,20 +69,13 @@ in
       * name: "mysplits"
         commands:
           * "splits znc/gitter:#dataHaskell/Lobby znc/freenode:#haskell znc/freenode:#vim znc/freenode:#nixos znc/freenode:#mlpack"
+    ''
+    # -- Example use of macro in combination with an extension
+    # * name: "extra"
+    #   commands:
+    #     * "extension Lua some-parameter $network $channel"
 
-      -- -- Example use of macro in combination with an extension
-      -- * name: "extra"
-      --   commands:
-      --     * "extension Lua some-parameter $network $channel"
-
-    extra-highlights: ["glirc", "lens"]
-
-    nick-padding:
-       side: left -- try right if you don't like left padding
-       width: 13
-
-    url-opener: "open" -- This works on macOS, "gnome-open" for GNOME
-
+    ''
     key-bindings:
       * bind: "C-M-b"
         command: "masks b"
@@ -74,7 +83,9 @@ in
         command: "masks q"
       * bind: "C-M-k"
         command: "clear"
+    ''
 
+    ''
     palette:
       line-marker: yellow
       time:
@@ -90,5 +101,6 @@ in
         ,  25,  27,  33,  39,  51,  80,  81,  75 -- blues
         ,  69,  61,  56,  54, 129,  93,  99, 147 -- purples
         ]
-  '';
+    ''
+  ];
 }

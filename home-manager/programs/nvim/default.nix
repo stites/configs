@@ -1136,6 +1136,8 @@ in
 
         customPlugins.lessspace-vim         # Trim trailing whitespace only on lines you edit (or visit in insert mode)
         customPlugins.vim-highlightedyank   # highlight what you yank!
+
+        direnv-vim
       ]);
     };
   };

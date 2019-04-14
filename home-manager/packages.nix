@@ -139,8 +139,8 @@ let
       gitAndTools.git-extras
       gitAndTools.diff-so-fancy
       gitAndTools.hub
+      gitAndTools.git-annex
       (exe haskellPackages.git-monitor)
-      (exe haskellPackages.git-annex)
 
       # profiling tools
       hyperfine

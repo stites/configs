@@ -244,7 +244,7 @@ in
     # core aliases which must be added last -- PR for home-manager #
     # ============================================================ #
     ''
-    alias find="${nix-profile}/bin/fd"
+    # alias find="${nix-profile}/bin/fd"
     safe_source "${homeDir}/.fonts/*.sh"
     ''
 
