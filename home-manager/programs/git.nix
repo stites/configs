@@ -7,7 +7,7 @@ in
   enable = true;
 
   userName  = "Sam Stites";
-  userEmail = secrets.piis.address;
+  userEmail = "stites@users.noreply.github.com";
 
   signing = {
     key = secrets.gpg.signing-key;
