@@ -2,7 +2,7 @@
 
 let
   config = pkgs.config;
-  nixos18_09 = import (builtins.fetchTarball https://github.com/NixOS/nixpkgs-channels/archive/nixos-18.09.tar.gz) { };
+  nixos-stable = import <nixos> { };
   moz_overlay = import (builtins.fetchTarball https://github.com/mozilla/nixpkgs-mozilla/archive/master.tar.gz);
 
   mypython36 = pkgs:
@@ -305,7 +305,7 @@ in
 
   packageOverrides = pkgs_: (with pkgs_; {
     # stdenv = pkgs_.clangStdenv; # pkgs_.llvmPackages_7.stdenv;
-    stable = nixos18_09;
+    stable = nixos-stable;
     # tmuxp = tmuxp pkgs_;
     # slack = callPackage /home/stites/git/configs/home-manager/slack.nix {};
     # signal-desktop-beta = callPackage /home/stites/git/configs/home-manager/signal-desktop-beta.nix {spellcheckerLanguage = "en_US";};
@@ -333,21 +333,29 @@ in
         # };
       # };
 
-    haskellPackages =
-      pkgs_.haskellPackages.override {
-        overrides = hpkgsNew: old:
-        let
-          dontCheck = pkgs.haskell.lib.dontCheck;
-        in
-        rec {
-          # test-cereal = dontCheck old.test-cereal;
-          # cereal = dontCheck old.cereal;
-          # xmonad = dontCheck old.xmonad;
-          # taffybar = dontCheck old.taffybar;
-          # xmonad-extras = dontCheck old.xmonad-extras;
-          # xmonad-contrib = dontCheck old.xmonad-contrib;
-        };
-      };
+    # haskell.packages.ghc844 =
+    #   pkgs_.haskell.packages.ghc844.override {
+    #     overrides = hpkgsNew: old: {
+    #       # Broken in patat
+    #       Diff = pkgs_.haskell.lib.dontCheck old.Diff;
+    #     };
+    #   };
+
+    # haskellPackages =
+    #   pkgs_.haskellPackages.override {
+    #     overrides = hpkgsNew: old:
+    #     let
+    #       dontCheck = pkgs.haskell.lib.dontCheck;
+    #     in
+    #     rec {
+    #       # test-cereal = dontCheck old.test-cereal;
+    #       # cereal = dontCheck old.cereal;
+    #       # xmonad = dontCheck old.xmonad;
+    #       # taffybar = dontCheck old.taffybar;
+    #       # xmonad-extras = dontCheck old.xmonad-extras;
+    #       # xmonad-contrib = dontCheck old.xmonad-contrib;
+    #     };
+    #   };
 
     golangEnv = buildEnv {
       name = "golangEnv";

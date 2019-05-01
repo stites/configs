@@ -118,7 +118,7 @@ in
     mutt="${nix-profile}/bin/neomutt";
 
     # tmux aliases
-    protonmail-bridge="echo 'running Desktop-Bridge --cli in \\'mail\\' tmux session' && ${nix-profile}/bin/tmux new-session -d -s mail 'Desktop-Bridge --cli'";
+    # protonmail-bridge="echo 'running Desktop-Bridge --cli in \\'mail\\' tmux session' && ${nix-profile}/bin/tmux new-session -d -s mail 'Desktop-Bridge --cli'";
     ws="${nix-profile}/bin/tmux attach -t stites";
     mail="${nix-profile}/bin/tmux attach -t mail";
 

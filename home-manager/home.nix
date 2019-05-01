@@ -54,19 +54,19 @@ in
       # _FASD_IGNORE="fasd ls echo"
     '';
 
-    file.".xmonad/xmonad.hs" = {
-      source = "${confroot}/programs/xmonad/xmonad.hs";
-      onChange = ''
-        echo "Recompiling xmonad"
-        $DRY_RUN_CMD xmonad --recompile
+    # file.".xmonad/xmonad.hs" = {
+    #   source = "${confroot}/programs/xmonad/xmonad.hs";
+    #   onChange = ''
+    #     echo "Recompiling xmonad"
+    #     $DRY_RUN_CMD xmonad --recompile
 
-        # Attempt to restart xmonad if X is running.
-        if [[ -v DISPLAY ]] ; then
-          echo "Restarting xmonad"
-          $DRY_RUN_CMD xmonad --restart
-        fi
-      '';
-    };
+    #     # Attempt to restart xmonad if X is running.
+    #     if [[ -v DISPLAY ]] ; then
+    #       echo "Restarting xmonad"
+    #       $DRY_RUN_CMD xmonad --restart
+    #     fi
+    #   '';
+    # };
     file.".codex".text = ''
       currentProjectIncluded: true
       hackagePath: ${homedir}/.cabal/packages/hackage.haskell.org/
@@ -367,9 +367,12 @@ in
       };
     };
     theme = {
-      package = pkgs.gnome3.gnome_themes_standard;
-      # name = "Arc-Dark";
-      name = "Adwaita";
+      package = pkgs.numix-gtk-theme;
+      name = "Numix";
+    };
+    iconTheme = {
+      package = pkgs.numix-icon-theme;
+      name = "Numix";
     };
     font = {
       name = "DejaVu Sans 12";

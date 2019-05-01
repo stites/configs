@@ -1,7 +1,10 @@
+let
+  fdcommand = "fd --hidden --no-ignore --exclude .git  --ignore-file ~/.config/git/ignore ";
+in
 {
   enable = true;
   enableBashIntegration = true;
-  defaultCommand = "fd --hidden --no-ignore --exclude .git  --ignore-file ~/.config/git/ignore";
+  defaultCommand = fdcommand;
   defaultOptions = [ "--bind='ctrl-o:execute(nvim {})+abort'" ];
-  fileWidgetCommand="$FZF_DEFAULT_COMMAND";
+  fileWidgetCommand= fdcommand + " --exclude result";
 }

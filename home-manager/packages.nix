@@ -116,7 +116,6 @@ let
       hlint
       (exe haskellPackages.shake)
       (exe haskellPackages.alex)
-      (exe haskellPackages.brittany)
       (exe haskellPackages.happy)
       (exe haskellPackages.hpack)
       (exe haskellPackages.hindent)
@@ -125,22 +124,15 @@ let
       (exe haskellPackages.hasktags)
       (exe haskellPackages.hspec-discover)
       (exe haskellPackages.ghcid)
-      (exe haskellPackages.patat)
-      (exe haskellPackages.nvim-hs-ghcid)
-      # (exe haskellPackages.threadscope)
-      # (exe haskellPackages.glirc)
-      # (exe pkgs.haskell.packages.ghc822.codex)
 
       # extra git stuff
       tig
-      # git-lfs # added from programs.git module
       git-radar
       git-secrets # FIXME: add "install hook if you own the repository" warning on cd
       gitAndTools.git-extras
       gitAndTools.diff-so-fancy
       gitAndTools.hub
       gitAndTools.git-annex
-      (exe haskellPackages.git-monitor)
 
       # profiling tools
       hyperfine
@@ -196,6 +188,13 @@ let
       # weechat
       watchexec
       (exe haskellPackages.glirc)
+
+      # BROKEN
+      # (exe haskellPackages.git-monitor)
+      # (exe haskellPackages.nvim-hs-ghcid)
+      # (exe haskellPackages.threadscope)
+      # (exe haskell.packages.ghc844.patat)
+      # (exe haskell.packages.ghc844.codex)
 
       # In order to build things outside of nix
       zlib

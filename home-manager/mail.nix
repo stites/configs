@@ -13,9 +13,7 @@ in
     extraConfig = {
     };
   };
-  programs.offlineimap = {
-    enable = true;
-  };
+  programs.offlineimap.enable = true;
   email = {
     maildirBasePath = ".maildir";
     accounts."${pii.address}" = {
@@ -68,7 +66,7 @@ in
             expunge = "yes";
 
             # sync only these folders
-            folderfilter = "lambda foldername: foldername in ['INBOX', 'Archive', 'Sent', 'Trash', 'Folders.housing', 'Folders.conferences', 'Folders.donations', 'Folders.Support Tickets', 'Folders.kid stuff']";
+            # folderfilter = "lambda fn: fn in ['INBOX', 'Archive', 'Sent', 'Trash', 'Folders.housing', 'Folders.conferences', 'Folders.donations', 'Folders.Support Tickets', 'Folders.kid stuff']";
           };
         };
       };
