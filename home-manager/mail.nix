@@ -66,7 +66,7 @@ in
             expunge = "yes";
 
             # sync only these folders
-            # folderfilter = "lambda fn: fn in ['INBOX', 'Archive', 'Sent', 'Trash', 'Folders.housing', 'Folders.conferences', 'Folders.donations', 'Folders.Support Tickets', 'Folders.kid stuff']";
+            folderfilter = "lambda fn: fn != 'All Mail'";
           };
         };
       };
