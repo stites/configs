@@ -6,7 +6,7 @@ import Control.Monad.IO.Class (liftIO)
 import Data.Map (Map)
 import Graphics.X11.Xlib ()
 import System.Exit (ExitCode(ExitSuccess), exitWith)
--- import PagerHints (pagerHints)
+-- import System.Taffybar.Support.PagerHints (pagerHints)
 
 import XMonad
 import XMonad.Actions.CycleWS (nextWS, prevWS, shiftToPrev, shiftToNext)
@@ -16,7 +16,7 @@ import XMonad.Actions.Submap
 import XMonad.Config.Desktop
 import XMonad.Config.Xfce
 import XMonad.Config.Gnome
-import XMonad.Hooks.DynamicLog -- (xmobar, PP(..))
+import XMonad.Hooks.DynamicLog (xmobar, PP(..))
 import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Hooks.FadeWindows -- (fadeWindowsLogHook)
 import XMonad.Hooks.ManageDocks (AvoidStruts, ToggleStruts(..), avoidStruts, docksEventHook, manageDocks, docks)
@@ -46,43 +46,39 @@ import qualified XMonad.Util.EZConfig as EZ
 launcherString = "rofi -combi-modi window,drun,ssh,run -show combi -modi combi -show drun -show-icons -drun-icon-theme -matching fuzzy -theme android_notification"
 
 main :: IO ()
-main
-  = statusBar myBar myPP toggleStrutsKey myConfig
-  >>= xmonad
- where
-  myBar = "xmobar"
+main = do
+  xmonad
+    . ewmh
+    -- . pagerHints        -- gives taffybar logger information
+    . docks
 
-  -- Key binding to toggle the gap for the bar.
-  toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
-
-  myPP = xmobarPP
-    { ppCurrent = DLog.xmobarColor "black" "gray"
-    , ppHidden  = DLog.xmobarColor "orange" ""
-    , ppHiddenNoWindows = id
-    -- , ppOutput  = hPutStrLn xmproc
-    , ppSep     = DLog.xmobarColor "orange" "" " | "
-    , ppTitle   = DLog.xmobarColor "lightblue" "" . DLog.shorten 120
-    , ppOrder   = \[a,_,b] -> [a, b]    -- Don't log layout name
-    }
-
-  myConfig
-    = ewmh
-    $ desktopConfig
-      -- $ xfceConfig
-        { modMask           = mod4Mask  -- Rebind Mod to super
-        , terminal          = "kitty --single-instance" -- "urxvt" -- "/home/stites/.local/bin/termonad"
-        , workspaces        = show <$> [1 .. 6]
-        , borderWidth       = 4
-        , focusFollowsMouse = False
-        , manageHook        = manageDocks <+> manageHook def <+> launcherHook
-        , layoutHook        = myLayout
-        , handleEventHook   = docksEventHook <+> handleEventHook def
-        -- , startupHook = startup_hook
-        } `EZ.removeKeysP` removeKeys'
-          `EZ.additionalKeysP` additionalKeys'
-
-  launcherHook :: ManageHook
-  launcherHook = resource =? launcherString --> doIgnore
+    -- $ desktopConfig
+    $ xfceConfig
+      { modMask           = mod4Mask  -- Rebind Mod to super
+      , terminal          = "kitty -1" -- "urxvt" -- "/home/stites/.local/bin/termonad"
+      , workspaces        = show <$> [1 .. 6]
+      , borderWidth       = 4
+      , focusFollowsMouse = False
+      , manageHook        = manageDocks <+> manageHook def <+> launcherHook
+      , layoutHook        = myLayout
+      , handleEventHook   = docksEventHook <+> handleEventHook def
+      -- , logHook = do
+      --     -- fadeWindowsLogHook (composeAll [isUnfocused --> transparency 1.0, opaque]) -- This doesn't seem to do anything
+      --     DLog.dynamicLogWithPP DLog.xmobarPP
+      --       { ppCurrent = DLog.xmobarColor "black" "gray"
+      --       , ppHidden  = DLog.xmobarColor "orange" ""
+      --       , ppHiddenNoWindows = id
+      --       --, ppOutput  = hPutStrLn xmproc
+      --       , ppSep     = DLog.xmobarColor "orange" "" " | "
+      --       , ppTitle   = DLog.xmobarColor "lightblue" "" . DLog.shorten 120
+      --       , ppOrder   = \[a,_,b] -> [a, b]    -- Don't log layout name
+      --       }
+      -- , startupHook = startup_hook
+      } `EZ.removeKeysP` removeKeys'
+        `EZ.additionalKeysP` additionalKeys'
+  where
+    launcherHook :: ManageHook
+    launcherHook = resource =? launcherString --> doIgnore
 
 type (:+) f g = Choose f g
 infixr 5 :+

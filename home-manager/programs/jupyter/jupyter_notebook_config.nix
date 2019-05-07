@@ -4,7 +4,7 @@ let
   secrets = import ../../secrets.nix;
 in
 {
-  text = lib.strings.concatStringsSep "\n" [
+  home.file.".jupyter/jupyter_notebook_config.py".text = lib.strings.concatStringsSep "\n" [
     #------------------------------------------------------------------------------
     # Application(SingletonConfigurable) configuration
     #------------------------------------------------------------------------------

@@ -3,35 +3,69 @@ let
   customPlugins = pkgs.callPackage ./plugins.nix {};
 in
 {
-  xdg.dataFile = {
-    "vim_gmake" = {
-      executable = true;
-      target = "../bin/vim_gmake";
-      text = ''
-        #!/usr/bin/env sh
-        case "$(uname -o)" in
-          "FreeBSD") gmake ;;
-          *) make ;;
-        esac
+  xdg = {
+    configFile = {
+      "nvim/UltiSnips/python.snippets".source = ./UltiSnips/python.snippets;
+      "nvim/UltiSnips/haskell.snippets" = {
+        text = lib.strings.concatStringsSep "\n" [
+          (builtins.readFile ./UltiSnips/haskell.snippets)
+          ''
+            snippet box "" !b
+            -------------------------------------------------------------------------------
+            -- |
+            -- Module    :  `!v HaskellModuleName()`
+            -- Copyright :  (c) Sam Stites 2017
+            -- License   :  BSD-3-Clause
+            -- Maintainer:  ${(import ../../secrets.nix).piis.address-rot13}
+            -- Stability :  experimental
+            -- Portability: non-portable
+            -------------------------------------------------------------------------------
+
+            endsnippet
+          ''
+        ];
+      };
+      "lsp/settings.json".text = ''
+        {
+          "languageServerHaskell": {
+            "hlintOn": true,
+            "maxNumberOfProblems": 10,
+            "useCustomHieWrapper": true,
+            "useCustomHieWrapperPath": "hie-wrapper"
+          }
+        }
       '';
     };
+    dataFile = {
+      "vim_gmake" = {
+        executable = true;
+        target = "../bin/vim_gmake";
+        text = ''
+          #!/usr/bin/env sh
+          case "$(uname -o)" in
+            "FreeBSD") gmake ;;
+            *) make ;;
+          esac
+        '';
+      };
 
-    "vl" = {
-      executable = true;
-      target = "../bin/vl";
-      source = ./vl.sh;
-    };
+      "vl" = {
+        executable = true;
+        target = "../bin/vl";
+        source = ./vl.sh;
+      };
 
-    "vim-plug" = {
-      target = "nvim/site/autoload/plug.vim";
-      source = builtins.fetchurl {
-        url = "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim";
-        sha256 = "1rpqfgxrws6298yhaj395czmqa7nlicg5s900vnr4gf84npmr2p6";
+      "vim-plug" = {
+        target = "nvim/site/autoload/plug.vim";
+        source = builtins.fetchurl {
+          url = "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim";
+          sha256 = "1rpqfgxrws6298yhaj395czmqa7nlicg5s900vnr4gf84npmr2p6";
+        };
       };
     };
   };
 
-  config = {
+  programs.neovim = {
     enable = true;
     extraPython3Packages = (ps: with ps; [
       mccabe
@@ -978,8 +1012,10 @@ in
         # autocmd FileType * call LC_maps()
 
         # Chromatica
-        "let g:chromatica#libclang_path='${pkgs.llvmPackages_7.clang-unwrapped.lib}/lib/'"
+        "let g:chromatica#libclang_path='${pkgs.llvmPackages_7.clang-unwrapped.lib}/lib/libclang.so'"
+        "let g:chromatica#global_args = ['-isystem${pkgs.llvmPackages_7.clang-unwrapped.lib}/include']"
         "let g:chromatica#enable_at_startup=1"
+        "let g:chromatica#responsive_mode=1"
         # deoplete-clang
         # "let g:deoplete#sources#clang#libclang_path='${pkgs.llvmPackages_7.clang-unwrapped.lib}/lib/libclang.so'"
         # "let g:deoplete#sources#clang#clang_header='${pkgs.llvmPackages_7.clang-unwrapped}/lib/'"

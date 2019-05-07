@@ -4,6 +4,9 @@ let
   pii = secrets.piis;
 in
 {
+  home.file.".mailcap".text = ''
+    text/html;  w3m -dump -o document_charset=%{charset} '%s'; nametemplate=%s.html; copiousoutput
+  '';
   programs.afew.enable = true;
   programs.alot.enable = true;
   programs.notmuch.enable = true;
@@ -13,8 +16,26 @@ in
     extraConfig = {
     };
   };
+  # services.protonmail-bridge.enable = true;
   programs.offlineimap.enable = true;
-  email = {
+  # systemd.user.services.offlineimap = {
+  #   Unit = {
+  #     Description = "Offlineimap service";
+  #     Requires = [ "protonmail-bridge.service" ];
+  #     After    = [ "protonmail-bridge.service" ];
+  #   };
+
+  #   Service = {
+  #     ExecStart ="${pkgs.offlineimap}/bin/offlineimap";
+  #     Restart = "on-failure";
+  #     RestartSec = "5s";
+  #   };
+
+  #   Install = {
+  #     WantedBy = [ "default.target" ];
+  #   };
+  # };
+  accounts.email = {
     maildirBasePath = ".maildir";
     accounts."${pii.address}" = {
       address = "${pii.address}";
@@ -51,7 +72,7 @@ in
             quick = 10;
 
             # update notmuch index after sync
-            postsynchook = "notmuch new";
+            # postsynchook = "notmuch new";
           };
           local = {
             # delete remote mails that were deleted locally
@@ -66,7 +87,7 @@ in
             expunge = "yes";
 
             # sync only these folders
-            folderfilter = "lambda fn: fn != 'All Mail'";
+            folderfilter = "lambda fn: not (fn in ['All Mail', 'Folders/DMARC Reports'])";
           };
         };
       };

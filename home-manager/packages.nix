@@ -269,5 +269,8 @@ let
         # cuda-shell
     ]) else [];
 
-in stableNixPkgs ++ unstableNixPkgs ++ unstableNixOS
+in
+  {
+    home.packages = stableNixPkgs ++ unstableNixPkgs ++ unstableNixOS;
+  }
 
