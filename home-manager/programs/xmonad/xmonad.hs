@@ -157,14 +157,22 @@ additionalKeys'
 
     system :: [(String, X ())]
     system =
-      [ ("M-S-<Delete>", spawn "pm-hibernate")
-      , ("M-S-l",    spawn "xfce4-session-logout")
-      , ("C-S-<F3>", spawn "amixer -q sset Master toggle")
-      , ("C-S-<F5>", spawn "amixer -q sset Master 3%-")
-      , ("C-S-<F6>", spawn "amixer -q sset Master 3%+")
-      , ("C-S-<F8>", spawn "xbacklight -dec 10")
-      , ("C-S-<F9>", spawn "xbacklight -inc 10")
+      [ ("M-S-<Delete>", spawn "sudo hibernate")
+      -- , ("M-S-l",    spawn "xfce4-session-logout")
+      , ("<LMeta>-;",              spawn "autorandr --change")
+      , ("C-S-<F7>",               spawn "autorandr --change")
+      , ("<XF86AudioMute>",        spawn "amixer -q sset Master toggle")
+      , ("<XF86AudioLowerVolume>", spawn "amixer -q sset Master 3%-")
+      , ("<XF86AudioRaiseVolume>", spawn "amixer -q sset Master 3%+")
+
+      , ("C-S-<F8>",               spawn "xbacklight -dec 10")
+      , ("<F86MonBrightnessDown>", spawn "xbacklight -dec 10")
+
+      , ("C-S-<F9>",               spawn "xbacklight -inc 10")
+      , ("<XF86MonBrightnessUp>",  spawn "xbacklight -inc 10")
+
       , ("C-S-<F12>", spawn "xscreensaver-command -lock")
+      , ("<Scroll_lock>", spawn "xscreensaver-command -lock")
       , ("M-b", sendMessage ToggleStruts)
       ]
 

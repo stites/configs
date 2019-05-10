@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 let
   homefp = lib.strings.concatStringsSep "" [
     "00ffffffffffff0004726605a0ac37710d1b0103805825782aa195a9544d9c260f505"
@@ -30,11 +30,11 @@ in
 {
   programs.autorandr = {
     enable = true;
-    hooks.predetect = {
-      sleepabit = ''
-        sleep 2
-      '';
-    };
+    # hooks.predetect = {
+    #   sleepabit = ''
+    #     sleep 2
+    #   '';
+    # };
     profiles = {
       "laptop" = {
         fingerprint = {

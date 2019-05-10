@@ -15,7 +15,7 @@
     in
       ":def hoogle " +
       (fun1 "s" (unwords [
-        return "(" (asString ":! hoogle --count=15 \"") cat "s" cat (asString "\"") ")"
+        return "(" (asString ":! hoogle --count=15 \\\"") cat "s" cat (asString "\\\"") ")"
       ]))
     )
     ":set -cpp -DASSERTS -DDEBUG"
