@@ -168,8 +168,23 @@ let
       bash-completion
 
       # cachix  # << install via cachix.com
-    ]) ++ (if host.isServer then (with stable; [ znc ]) else [])
-       ++ (if firstHomeManagerBoot then [] else (with stable; [ ngrok hies ]));
+
+      # In order to build things outside of nix
+      zlib.out # otherwise this goes to bin
+      zlib.dev # needed for pyenv
+      openssl.out
+      openssl.dev
+      bzip2.out
+      bzip2.dev
+      sqlite.out
+      sqlite.dev
+      readline.out
+      readline.dev
+      libffi.out
+      libffi.dev
+
+    ]) ++ (if host.isServer then (with stable; [ znc ]) else []);
+       # ++ (if firstHomeManagerBoot then [] else (with unstable; [ ngrok ]));
 
 
   unstableNixPkgs =
@@ -195,21 +210,6 @@ let
       # (exe haskellPackages.threadscope)
       # (exe haskell.packages.ghc844.patat)
       # (exe haskell.packages.ghc844.codex)
-
-      # In order to build things outside of nix
-      zlib
-      zlib.out
-      zlib.dev
-      openssl
-      openssl.out
-      openssl.dev
-      bzip2
-      bzip2.out
-      bzip2.dev
-      sqlite.out
-      sqlite.dev
-      readline.out
-      readline.dev
     ]);
 
   unstableNixOS =
@@ -224,8 +224,8 @@ let
         # nerdfonts # this takes >30m to download
 
         # GUI TOOLS (needs to be changed to nixos-only)
-        signal-desktop
-        stable.gitter
+        # signal-desktop
+        # stable.gitter
         slack
         spotify
 

@@ -2,10 +2,14 @@
 
 let
   homeDir = builtins.getEnv "HOME";
-  
+
   no-nix-shell = (pkgs.callPackage ./functions.nix { }).no-nix-shell;
 
   variables = {
+
+    CPPFLAGS="-I${pkgs.zlib.dev}/include -I${pkgs.libffi.dev}/include -I${pkgs.readline.dev}/include -I${pkgs.bzip2.dev}/include -I${pkgs.openssl.dev}/include";
+    CFLAGS="-I${pkgs.openssl.dev}/include";
+    LDFLAGS="-L${pkgs.zlib.out}/lib -L${pkgs.libffi.out}/lib -L${pkgs.readline.out}/lib -L${pkgs.bzip2.out}/lib -L${pkgs.openssl.out}/lib";
     PYENV_ROOT= "${homeDir}/.pyenv";
     PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true";
     PYENV_VIRTUALENV_DISABLE_PROMPT=1;  # supress annoying warning for a feature I don't use

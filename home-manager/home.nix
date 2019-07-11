@@ -9,7 +9,6 @@ let
   concatStringsSep = lib.strings.concatStringsSep;
   host = pkgs.callPackage ./hosts.nix { };
   secrets = import ./secrets.nix;
-  # hpkgs822 = pkgs.haskell.packages.ghc822;
   hpkgs822 = pkgs.haskell.packages.ghc822.extend (sel: sup: {
     mkDerivation = drv: sup.mkDerivation (drv // { doHaddock = false; }); # jailbreak = true; });
   });
@@ -23,17 +22,20 @@ in
   programs = {
     home-manager = {
       enable = true;
-      path = "${homedir}/git/sys/home-manager";
+      # path = "${homedir}/git/sys/home-manager";
     };
     zathura.enable = true;
     feh.enable = true;
-    firefox = {
-      enable = true;
-      enableAdobeFlash = false;
-      enableGoogleTalk = true;
-      enableIcedTea = false;
-      package = pkgs.firefox-unwrapped;
-    };
+    # -----------------------------
+    # OSX OUT
+    # firefox = {
+    #   enable = true;
+    #   enableAdobeFlash = false;
+    #   enableGoogleTalk = true;
+    #   enableIcedTea = false;
+    #   package = pkgs.firefox-unwrapped;
+    # };
+    # -----------------------------
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
     # mtr.enable = true;
@@ -59,7 +61,7 @@ in
       "nixpkgs/isNixOS".text = "${if host.isNixOS then "true" else "false"}";
       "nixpkgs/config.nix".source = "${confroot}/config.nix";
       # "nixpkgs/local-nixpkgs".source      = "${homedir}/git/configs/nixpkgs";
-      "nixpkgs/signal-desktop-beta.nix".source = "${confroot}/programs/signal-desktop-beta.nix";
+      # "nixpkgs/signal-desktop-beta.nix".source = "${confroot}/programs/signal-desktop-beta.nix";
     };
   };
   nixpkgs.config = (import ./config.nix { inherit pkgs lib config; });
@@ -86,18 +88,23 @@ in
     Xft.rgba: rgb
   '';
 
-  services.blueman-applet.enable = true; # requires system install
-  # services.dunst.enable = false;          # notification daemon
-  services.network-manager-applet.enable = true;
-  services.pasystray.enable = true;         # PulseAudio system tray
-  services.parcellite.enable = true;        # clipboard daemon
-  services.compton.enable = true;           # needs configuration
-  services.xembed-sni-proxy.enable = true;
+  # -----------------------------
+  # OSX OUT
+  # services.blueman-applet.enable = true; # requires system install
+  # # services.dunst.enable = false;          # notification daemon
+  # services.network-manager-applet.enable = true;
+  # services.pasystray.enable = true;         # PulseAudio system tray
+  # services.parcellite.enable = true;        # clipboard daemon
+  # services.compton.enable = true;           # needs configuration
+  # services.xembed-sni-proxy.enable = true;
   services.xscreensaver.enable = true;
-  services.udiskie = {
-    enable = true;
-    tray = "always";
-  };
+  services.flameshot.enable = true;
+
+  # services.udiskie = {
+  #   enable = true;
+  #   tray = "always";
+  # };
+  # -----------------------------
 
   imports = [
     ./mail.nix
@@ -107,6 +114,7 @@ in
     ./programs/glirc
     ./programs/nvim
     ./programs/bash
+    ./programs/redshift
     ./programs/termonad
     (import ./programs/xmonad { inherit termcommand;})
     (import ./programs/rofi.nix { inherit termcommand; })

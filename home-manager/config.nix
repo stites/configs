@@ -2,138 +2,47 @@
 
 let
   config = pkgs.config;
-  nixos-stable = import <nixos> { };
-  moz_overlay = import (builtins.fetchTarball https://github.com/mozilla/nixpkgs-mozilla/archive/master.tar.gz);
+  # nixos-stable = import <nixos> { };
+  # moz_overlay = import (builtins.fetchTarball https://github.com/mozilla/nixpkgs-mozilla/archive/master.tar.gz);
 
-  mypython36 = pkgs:
-    pkgs.python36.override {
-      packageOverrides = (self: super: {
-        ############## CONFIGURE PARAMETERS #########################
-        pytorchWithCuda = super.pytorchWithCuda.override {
-          cudatoolkit = pkgs.cudatoolkit_10_0;
-          cudnn = pkgs.cudnn_cudatoolkit_10_0;
-        };
+  # mypython36 = pkgs:
+  #   pkgs.python36.override {
+  #     packageOverrides = (self: super: {
+  #       ############## CONFIGURE PARAMETERS #########################
+  #       pytorchWithCuda = super.pytorchWithCuda.override {
+  #         cudatoolkit = pkgs.cudatoolkit_10_0;
+  #         cudnn = pkgs.cudnn_cudatoolkit_10_0;
+  #       };
 
-        ################### STOP TESTS ###########################
-        numpy        = super.numpy.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        pandas       = super.pandas.overridePythonAttrs            (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        scikitlearn  = super.scikitlearn.overridePythonAttrs       (oldAttrs: { doCheck = false; checkPhase = "true"; });
+  #       ################### STOP TESTS ###########################
+  #       numpy        = super.numpy.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
+  #       pandas       = super.pandas.overridePythonAttrs            (oldAttrs: { doCheck = false; checkPhase = "true"; });
+  #       scikitlearn  = super.scikitlearn.overridePythonAttrs       (oldAttrs: { doCheck = false; checkPhase = "true"; });
 
-        ################# TOTALLY BROKEN ########################
-        pymc3        = super.pymc3.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
-        pyls = super.python-language-server.override {
-          autopep8 = super.autopep8;
-          mccabe = super.mccabe;
-          pycodestyle = super.pycodestyle;
-          pydocstyle = super.pydocstyle;
-          pyflakes = super.pyflakes;
-          rope = super.rope;
-          yapf = super.yapf;
-        };
+  #       ################# TOTALLY BROKEN ########################
+  #       pymc3        = super.pymc3.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
+  #       pyls = super.python-language-server.override {
+  #         autopep8 = super.autopep8;
+  #         mccabe = super.mccabe;
+  #         pycodestyle = super.pycodestyle;
+  #         pydocstyle = super.pydocstyle;
+  #         pyflakes = super.pyflakes;
+  #         rope = super.rope;
+  #         yapf = super.yapf;
+  #       };
 
 
-      });
-    };
+  #     });
+  #   };
 
-  pyls = (ps: with ps; python-language-server.override {
-    autopep8 = autopep8;
-    mccabe = mccabe;
-    pycodestyle = pycodestyle;
-    pydocstyle = pydocstyle;
-    pyflakes = pyflakes;
-    rope = rope;
-    yapf = yapf;
-  });
+  # _nixpkgsRubySource = pkgs_: pkgs_.fetchFromGitHub {
+  #     owner = "bobvanderlinden";
+  #     repo = "nixpkgs-ruby";
+  #     rev = "aaf2d46c7e166fd4cd52cc71720b72eef2486f18";
+  #     sha256 = "10rbw0kmbgq3jc2gngxqkdb6x4dkrh4fyrfqn6bx864vd4cszh5z";
+  #   };
 
-  mypythonPkgs = args: [
-    (args.python3.withPackages (ps: with ps; [
-      ############################################################
-      # data science, munging, and analysis
-      ############################################################
-      numpy
-      scipy
-      pandas
-      pyarrow
-      scikitlearn
-      # pymc3 # <<< TOTALLY BROKEN
-      ipython
-      jupyter
-      imageio
-      matplotlib
-      # pycv # <<< NOT IN NIXPKGS
-      (if args.useCuda then pytorchWithCuda else pytorch)
-      # (if args.useCuda then tensorflowWithCuda else tensorflow)
-      # pyro-ppl
-      # torchvision
-      h5py
-      tensorflow-tensorboard
-
-      ############################################################
-      # interacting with the web
-      ############################################################
-      bokeh
-      beautifulsoup4
-      requests
-
-      ############################################################
-      # clean your code
-      ############################################################
-      flake8
-      pygments
-      pytest-mypy
-      hypothesis
-
-      #### LSP
-      # (pyls ps)
-      pyls
-      mccabe
-      mypy
-      nose
-      pycodestyle
-      pydocstyle
-      pyflakes
-      yapf
-      #### optionals:
-      pyls-isort
-      pyls-mypy
-    ]))
-  ];
-
-  _nixpkgsRubySource = pkgs_: pkgs_.fetchFromGitHub {
-      owner = "bobvanderlinden";
-      repo = "nixpkgs-ruby";
-      rev = "aaf2d46c7e166fd4cd52cc71720b72eef2486f18";
-      sha256 = "10rbw0kmbgq3jc2gngxqkdb6x4dkrh4fyrfqn6bx864vd4cszh5z";
-    };
-
-  rbnix = pkgs_: import (_nixpkgsRubySource pkgs_) { inherit pkgs; };
-
-  reMarkable-sdk = (with pkgs; stdenv.mkDerivation rec {
-    name = "reMarkable-sdk-${version}";
-    version = "2.1.3";
-    srcs = [
-      "/tmp"
-      (fetchurl {
-        url = "https://remarkable.engineering/deploy/sdk/poky-glibc-x86_64-meta-toolchain-qt5-cortexa9hf-neon-toolchain-${version}.sh";
-        sha256 = "1pqhv7npcnm72alxwzjyz1z448l1xr9bblx111mizgksgi7fykxl";
-      })
-    ];
-    meta = with stdenv.lib; {
-      description = "the reMarkable toolchain";
-    };
-    buildInputs = [ xz coreutils ];
-    unpackPhase = ''
-      mkdir -p /tmp/$src
-      sed "s/\/usr\/bin\/env/env/g" $src > /tmp/$src/binary
-    '';
-    unpackCmd = ''
-      echo "do nothing"
-    '';
-    buildPhase = ''
-      ls /tmp/$src/binary
-      bash /tmp/$src/binary
-    '';
-  });
+  # rbnix = pkgs_: import (_nixpkgsRubySource pkgs_) { inherit pkgs; };
 
   #  # Make your own easy-to-access attributes for the versions you use:
   #  ruby_2_5_1 = rbnix.getVersion ["2" "5" "1"];
@@ -156,42 +65,42 @@ let
       sha256="1px146agwmsi0nznc1zd9zmhgjczz6zlb5yf21sp4mixzzbjsasq";
     }) {}).hies;
 
-  tmuxp = pkgs_: let
-      pp = pkgs_.python.pkgs;
-    in
-      pp.buildPythonApplication rec {
-        pname = "tmuxp";
-        version = "1.4.2";
+  # tmuxp = pkgs_: let
+  #     pp = pkgs_.python.pkgs;
+  #   in
+  #     pp.buildPythonApplication rec {
+  #       pname = "tmuxp";
+  #       version = "1.4.2";
 
-        src = pp.fetchPypi {
-          inherit pname version;
-          sha256 = "087icp1n1qdf53f1314g5biz16sigrnpqr835xqlr6vj85imm2dm";
-        };
+  #       src = pp.fetchPypi {
+  #         inherit pname version;
+  #         sha256 = "087icp1n1qdf53f1314g5biz16sigrnpqr835xqlr6vj85imm2dm";
+  #       };
 
-        postPatch = ''
-          sed -i 's/==.*$//' requirements/base.txt requirements/test.txt
-        '';
+  #       postPatch = ''
+  #         sed -i 's/==.*$//' requirements/base.txt requirements/test.txt
+  #       '';
 
-        checkInputs = [
-          pkgs_.pytest
-          pkgs_.pytest-rerunfailures
-        ];
+  #       checkInputs = [
+  #         pkgs_.pytest
+  #         pkgs_.pytest-rerunfailures
+  #       ];
 
-        # No tests in archive
-        doCheck = false;
+  #       # No tests in archive
+  #       doCheck = false;
 
-        propagatedBuildInputs = [
-          pp.click pp.colorama pp.kaptan pp.libtmux
-        ];
+  #       propagatedBuildInputs = [
+  #         pp.click pp.colorama pp.kaptan pp.libtmux
+  #       ];
 
-        meta = with pkgs_.stdenv.lib; {
-          description = "Manage tmux workspaces from JSON and YAML";
-          homepage = http://tmuxp.readthedocs.io;
-          license = licenses.bsd3;
-          platforms = platforms.linux;
-          maintainers = with maintainers; [ jgeerds ];
-        };
-      };
+  #       meta = with pkgs_.stdenv.lib; {
+  #         description = "Manage tmux workspaces from JSON and YAML";
+  #         homepage = http://tmuxp.readthedocs.io;
+  #         license = licenses.bsd3;
+  #         platforms = platforms.linux;
+  #         maintainers = with maintainers; [ jgeerds ];
+  #       };
+  #     };
 
   src-stub = pkgs.fetchurl {
     # url = https://static.stites.io/stub.tar.gz;
@@ -305,33 +214,20 @@ in
 
   packageOverrides = pkgs_: (with pkgs_; {
     # stdenv = pkgs_.clangStdenv; # pkgs_.llvmPackages_7.stdenv;
-    stable = nixos-stable;
+    stable = import <nixos> {};
     # tmuxp = tmuxp pkgs_;
     # slack = callPackage /home/stites/git/configs/home-manager/slack.nix {};
     # signal-desktop-beta = callPackage /home/stites/git/configs/home-manager/signal-desktop-beta.nix {spellcheckerLanguage = "en_US";};
-    inherit hies;
-    # inherit cuda9-shell cuda10-shell cuda-shell;
+
+    # hies = ((import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {})
+    #   .selection { selector = p: { inherit (p) ghc864 ghc844; });
+
+    inherit cuda9-shell cuda10-shell cuda-shell;
     inherit clang7-shell clang-shell;
 
     # stable.haskell.packages.ghc844 = nixos18_09.stable.haskell.packages.ghc844.extend (sel: sup: {
     #   mkDerivation = drv: sup.mkDerivation (drv // { doHaddock = false; }); # jailbreak = true; });
     # });
-    ubiquiti = pkgs_.stdenv.mkDerivation {
-          name = "dumb-cryptomator";
-          builder = ./builder.sh;
-          dpkg = pkgs_.dpkg;
-          src = pkgs_.fetchurl {
-            url = "https://www.ui.com/download/unifi/default/default/unifi-network-controller-51019-debianubuntu-linux-and-unifi-cloud-key";
-            sha256 = "0z7xrg9r7hrnqqjmmvgx5hixayq5fczd0ay3nxs7bmzgzkn48q1n";
-          };
-        };
-        # full-cryptomator = nixpkgs.buildFHSUserEnv {
-        #   name = "full-cryptomator";
-        #   targetPkgs = pkgs: [ dumb-cryptomator ];
-        #   multiPkgs = pkgs: [ pkgs.dpkg ];
-        #   runScript = "Cryptomator";
-        # };
-      # };
 
     # haskell.packages.ghc844 =
     #   pkgs_.haskell.packages.ghc844.override {
@@ -385,16 +281,16 @@ in
   nix = {
     binaryCaches = [
       "https://cache.nixos.org/"
-      "https://hie-nix.cachix.org"
+      "https://all-hies.cachix.org"
     ];
     binaryCachePublicKeys = [
-      "hie-nix.cachix.org-1:EjBSHzF6VmDnzqlldGXbi0RM3HdjfTU3yDRi9Pd0jTY="
+      "all-hies.cachix.org-1:JjrzAOEUsD9ZMt8fdFbzo3jNAyEWlPAwdVuHw4RD43k="
     ];
     trustedUsers = [ "root" "stites" ];
     nixPath = [
-      "nixpkgs=$HOME/git/nix/nixpkgs/"
-      # "nixos-18_09=$HOME/git/nix/nixpkgs"
-      "home-manager=$HOME/git/nix/home-manager/"
+      # "nixpkgs=$HOME/git/nix/nixpkgs/"
+      # # "nixos-18_09=$HOME/git/nix/nixpkgs"
+      # "home-manager=$HOME/git/nix/home-manager/"
       "nixpkgs-overlays=$HOME/git/config/overlays/"
     ];
   };

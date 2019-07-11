@@ -46,10 +46,6 @@ in
       enable = true;
       enableBashIntegration = true;
     };
-    lsd = {
-      enable = true;
-      enableAliases = false;
-    };
     man.enable = true;
     noti.enable = true;
     htop.enable = true;
@@ -142,7 +138,7 @@ in
         tree = "tree -C";
 
         # dd with sync and show IO errors
-        dd="dd sync=progress conv=fsync";
+        # dd="dd sync=progress conv=fsync";
 
         # Relative Jumps:
         "~"="cd ~ ";
@@ -184,9 +180,9 @@ in
         # the lss
         la   = "${nix-profile}/bin/exa";
         ls   = "${nix-profile}/bin/exa -s extension";
-        l    = "${nix-profile}/bin/exa -s extension --group-directories-first -l";
-        ll   = "${nix-profile}/bin/exa -s extension --group-directories-first -a -l";
-        lll  = "${nix-profile}/bin/exa -s extension --group-directories-first -aa -l";
+        l    = "${nix-profile}/bin/exa -s extension --group-directories-first -g -l";
+        ll   = "${nix-profile}/bin/exa -s extension --group-directories-first -g -a -l";
+        lll  = "${nix-profile}/bin/exa -s extension --group-directories-first -g -aa -l";
 
         # the greps
         grep="grep --color=auto";
