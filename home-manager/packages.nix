@@ -239,6 +239,7 @@ let
         # RStudio-with-packages
 
         # pythonEnvWithCuda
+        conda
 
         # c/cpp dev
         valgrind bazel
