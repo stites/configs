@@ -40,6 +40,14 @@ in
         ${pkgs.curl}/bin/curl -w '\n' --form "file=@\"$f\"" "http://10.11.99.1/upload"
       '';
     };
+    "bk" = {
+      executable = true;
+      target = "../bin/bk";
+      text = ''
+        #!/usr/bin/env sh
+        mv $1 $1.bk
+      '';
+    };
   };
   programs = {
     direnv = {
