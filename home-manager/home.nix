@@ -130,6 +130,7 @@ in
     ./programs/ghci.nix
     ./programs/codex.nix
     ./programs/fasd.nix
+    ./programs/keybase.nix
     ./programs/ssh.nix
     ./programs/bat.nix
     ./programs/matplotlib.nix

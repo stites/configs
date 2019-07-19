@@ -230,8 +230,8 @@ let
         spotify
 
         # migrate to home-manager
-        keybase
-        keybase-gui
+        # keybase
+        # keybase-gui
 
         # compute stuff
         liblapack

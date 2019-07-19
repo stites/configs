@@ -86,6 +86,10 @@ in
         LC_ALL="en_US.UTF-8";
         LANG="en_US.UTF-8";
 
+        # makes keybase usable again by correcting against
+        # https://github.com/systemd/systemd/issues/5247
+        XDG_RUNTIME_DIR="/run/user/$(id -u)";
+
         # # provide consistent interface for single-user nix
         # # see https://github.com/NixOS/nix/issues/2033
         # NIX_PATH="$NIX_PATH:${homeDir}/.nix-defexpr/channels";
