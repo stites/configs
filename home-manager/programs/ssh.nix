@@ -57,16 +57,13 @@ in
         hostname = "10.0.6.132";
         forwardX11Trusted = true;
       };
-      mirzakhani-local = {
-        hostname = "10.0.0.12";
-        forwardX11Trusted = true;
-      };
       # ssh root@10.11.99.1 "mkdir -p ~/.ssh && \
       #    touch .ssh/authorized_keys && \
       #    chmod -R u=rwX,g=,o= ~/.ssh && \
       #    cat >> .ssh/authorized_keys" < ~/.ssh/id_rsa.pub
       remarkable = {
-        hostname = "10.11.99.1";
+        hostname = "192.168.1.112";
+        # hostname = "10.11.99.1";
         user = "root";
         # This _must_ be rsa because of reMarkable's sshd client
         identityFile = "${builtins.getEnv "HOME"}/.ssh/id_rsa";
