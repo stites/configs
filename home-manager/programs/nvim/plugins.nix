@@ -153,12 +153,7 @@
   vim-bracketed-paste = vimUtils.buildVimPlugin rec {
     # last update 2018
     name = "vim-bracketed-paste";
-    src = fetchFromGitHub {
-      owner = "ConradIrwin";
-      repo = name;
-      rev = "master";
-      sha256 = "1hhi7ab36iscv9l7i64qymckccnjs9pzv0ccnap9gj5xigwz6p9h";
-    };
+    src = builtins.fetchTarball { url = "https://github.com/ConradIrwin/vim-bracketed-paste/archive/master.tar.gz"; };
     meta = {
       homepage = https://github.com/ConradIrwin/vim-bracketed-paste;
       maintainers = [ ];
@@ -252,14 +247,18 @@
   vim-github-colorscheme = vimUtils.buildVimPlugin rec {
     # last update 2014
     name = "vim-github-colorscheme";
-    src = fetchFromGitHub {
-      owner = "endel";
-      repo = name;
-      rev = "master";
-      sha256 = "11zdsj3y3zh47pf9yy37ykj3fnnqpgfiqyq1m6yj7yyf4kda70bs";
-    };
+    src = builtins.fetchTarball { url = "https://github.com/endel/vim-github-colorscheme/archive/master.tar.gz"; };
     meta = {
       homepage = https://github.com/endel/vim-github-colorscheme;
+      maintainers = [ ];
+    };
+  };
+
+  tabnine-vim = vimUtils.buildVimPlugin rec {
+    name = "tabnine-vim";
+    src = builtins.fetchTarball { url = "https://github.com/zxqfl/tabnine-vim/archive/master.tar.gz"; };
+    meta = {
+      homepage = https://github.com/zxqfl/tabnine-vim;
       maintainers = [ ];
     };
   };
@@ -267,12 +266,7 @@
   vim-brittany = vimUtils.buildVimPlugin rec {
     # last update 2019
     name = "vim-brittany";
-    src = fetchFromGitHub {
-      owner = "meck";
-      repo = name;
-      rev = "master";
-      sha256 = "1mrv1sc837v3zmq4wl09kkb3hil7add99npjnflivdm3fc8lar3q";
-    };
+    src = builtins.fetchTarball { url = "https://github.com/meck/vim-brittany/archive/master.tar.gz"; };
     meta = {
       homepage = https://github.com/meck/vim-brittany;
       maintainers = [ stdenv.lib.maintainers.stites ];

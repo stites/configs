@@ -1025,6 +1025,9 @@ in
         # "let g:deoplete#sources#clang#clang_complete_database='/home/stites/.config/nvim/deoplete-clang/compile_comands.json'"
        ## clang_complete
        #"let g:clang_library_path='${pkgs.llvmPackages_7.clang-unwrapped.lib}/lib/'"
+
+        # Tabnine experiment
+        "set rtp+=~/tabnine-vim"
       ];
 
       ###########################################################################
@@ -1169,6 +1172,7 @@ in
         customPlugins.vim-bufkill          # Plug 'qpkorr/vim-bufkill'
         vim-eunuch                         # Plug 'tpope/vim-eunuch'
         undotree                           # Plug 'mbbill/undotree'
+        customPlugins.tabnine-vim          # try out tabnine (not using deoplete)
 
         # tmux integration
         vim-tmux-navigator                 # Allow pane movement to jump out of vim into tmux
@@ -1182,6 +1186,7 @@ in
         customPlugins.vim-highlightedyank   # highlight what you yank!
 
         direnv-vim
+
       ]);
     };
   };
