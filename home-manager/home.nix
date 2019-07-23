@@ -115,6 +115,7 @@ in
     ./programs/nvim
     ./programs/bash
     ./programs/redshift
+    ./programs/broot.nix
     ./programs/termonad
     (import ./programs/xmonad { inherit termcommand;})
     (import ./programs/rofi.nix { inherit termcommand; })
