@@ -44,8 +44,16 @@ in
       executable = true;
       target = "../bin/bk";
       text = ''
-        #!/usr/bin/env sh
-        mv $1 $1.bk
+        #!/usr/bin/env bash
+
+        FILE="$1"
+
+        if [[ "$(printf "%s" "$FILE" | tail -c -3)" == ".bk" ]]; then
+          NEWNAME="$(printf "%s" "$FILE" | rev | cut -c 4- | rev)"
+          mv "$FILE" "$NEWNAME"
+        else
+          mv "$FILE" "$FILE.bk"
+        fi
       '';
     };
   };
