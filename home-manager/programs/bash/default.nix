@@ -106,6 +106,9 @@ in
         # https://github.com/systemd/systemd/issues/5247
         XDG_RUNTIME_DIR="/run/user/$(id -u)";
 
+        # makes zotero open pdfs
+        QT_QPA_PLATFORM_PLUGIN_PATH="/run/current-system/sw/lib/qt-5.12/plugins";
+
         # # provide consistent interface for single-user nix
         # # see https://github.com/NixOS/nix/issues/2033
         # NIX_PATH="$NIX_PATH:${homeDir}/.nix-defexpr/channels";
