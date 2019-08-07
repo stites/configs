@@ -97,8 +97,8 @@ in
   # services.parcellite.enable = true;        # clipboard daemon
   # services.compton.enable = true;           # needs configuration
   # services.xembed-sni-proxy.enable = true;
-  services.xscreensaver.enable = true;
   services.flameshot.enable = true;
+  services.xsuspender.enable = true;
 
   # services.udiskie = {
   #   enable = true;
@@ -125,6 +125,7 @@ in
     ./programs/fzf.nix
     ./programs/urxvt.nix
     ./programs/autorandr.nix
+    ./programs/xscreensaver.nix
     ./programs/jupyter/jupyter_notebook_config.nix
     ./programs/tmuxifier.nix
     ./programs/haskline.nix
