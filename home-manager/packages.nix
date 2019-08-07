@@ -108,6 +108,7 @@ let
       graphviz
       sqlite
       sqliteman
+      universal-ctags
 
       # haskell
       hledger
@@ -146,6 +147,7 @@ let
       nix-index
       (exe haskellPackages.stack2nix)
       (exe haskellPackages.cabal2nix)
+      # (exe haskellPackages.stack2cabal)
 
       # security tools
       yubico-piv-tool
@@ -225,25 +227,18 @@ let
 
         # GUI TOOLS (needs to be changed to nixos-only)
         # signal-desktop
-        # stable.gitter
+        # gitter
         slack
         spotify
-
-        # migrate to home-manager
-        # keybase
-        # keybase-gui
+        zotero qnotero
 
         # compute stuff
-        liblapack
-        # mkl      # <<< look to llvm for openmp
         # RStudio-with-packages
-
         # pythonEnvWithCuda
         conda
 
         # c/cpp dev
-        valgrind bazel
-        protobuf
+        valgrind bazel protobuf
         # glxinfo
 
         # enter the clang

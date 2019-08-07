@@ -98,7 +98,7 @@ in
   # services.compton.enable = true;           # needs configuration
   # services.xembed-sni-proxy.enable = true;
   services.flameshot.enable = true;
-  services.xsuspender.enable = true;
+  # services.xsuspender.enable = true; # <<< I think this is throttling the mouse
 
   # services.udiskie = {
   #   enable = true;
