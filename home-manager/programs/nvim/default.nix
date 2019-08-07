@@ -1027,7 +1027,7 @@ in
        #"let g:clang_library_path='${pkgs.llvmPackages_7.clang-unwrapped.lib}/lib/'"
 
         # Tabnine experiment
-        "set rtp+=~/tabnine-vim"
+        # "set rtp+=~/tabnine-vim"
       ];
 
       ###########################################################################
@@ -1050,7 +1050,7 @@ in
         vim-hoogle                 # Plug 'Twinside/vim-hoogle',           { 'for': 'haskell' }
         hlint-refactor-vim         # Plug 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
         neco-ghc                   # Plug 'eagletmt/neco-ghc',             { 'for': 'haskell' }
-        customPlugins.vim-brittany # Plug 'meck/vim-brittany',             { 'for': 'haskell' }
+        # customPlugins.vim-brittany # Plug 'meck/vim-brittany',             { 'for': 'haskell' }
 
         # Haskell, always-on
         customPlugins.ghcid
@@ -1172,7 +1172,7 @@ in
         customPlugins.vim-bufkill          # Plug 'qpkorr/vim-bufkill'
         vim-eunuch                         # Plug 'tpope/vim-eunuch'
         undotree                           # Plug 'mbbill/undotree'
-        customPlugins.tabnine-vim          # try out tabnine (not using deoplete)
+        # customPlugins.tabnine-vim          # try out tabnine (not using deoplete)
 
         # tmux integration
         vim-tmux-navigator                 # Allow pane movement to jump out of vim into tmux
