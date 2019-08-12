@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# assumes that ~/git exists and git is installed:
+(cd "$HOME/git" && git clone git@github.com:stites/sys.git --recursive)
