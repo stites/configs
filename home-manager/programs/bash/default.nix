@@ -145,6 +145,8 @@ in
 
         # TODO: bundle this into a function call
         NOTI_PUSHBULLET_ACCESSTOKEN = secrets.bash.pushbullet.token;
+        NOTI_PUSHOVER_APITOKEN = secrets.bash.pushover.apikey;
+        NOTI_PUSHOVER_USERKEY = secrets.bash.pushover.userkey;
       } // colors // pyenv.variables // prompt.variables;
 
       shellAliases = {
