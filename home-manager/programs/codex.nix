@@ -5,7 +5,7 @@
     tagsFileHeader: false
     tagsFileName: codex.tags
     tagsFileSorted: false
-    tagsCmd: hasktags --etags --follow-symlinks --output="$TAGS" "$SOURCES"
+    tagsCmd: hasktags --ctags --extendedctag --follow-symlinks --output="$TAGS" "$SOURCES"
     stackOpts: ""
   '';
 }
