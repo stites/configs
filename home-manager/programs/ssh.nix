@@ -51,6 +51,7 @@ in
       gauss = { hostname = "10.0.6.48"; };
       erdos = { hostname = "10.0.6.89"; };
       genbu = { hostname = "10.0.6.154"; };
+      lambek = { hostname = "10.0.6.63"; };
       grothendieck = { hostname = "10.0.6.124"; };
       kovalevskaya = { hostname = "10.0.6.103"; };
       mirzakhani = {
