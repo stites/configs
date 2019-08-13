@@ -66,11 +66,11 @@ let
       # export LIBRARY_PATH="${libraryPath}"
       # export LD_LIBRARY_PATH="${libraryPath}"
 
-      export PYENV_ROOT="$HOME/.pyenv"
-      safe_path_add "$PYENV_ROOT/bin"
+      # export PYENV_ROOT="$HOME/.pyenv"
+      # safe_path_add "$PYENV_ROOT/bin"
 
-      eval "$(pyenv init -)"
-      eval "$(pyenv virtualenv-init -)"
+      # eval "$(pyenv init -)"
+      # eval "$(pyenv virtualenv-init -)"
 
       function GPULogoOff {
         local GPU_NUM="$1"
