@@ -30,15 +30,13 @@ with pkgs;
     ];
     keyMode = "vi";
     historyLimit = 500000;
+    secureSocket = false;
+    customPaneNavigationAndResize = true;
     newSession = true;
     resizeAmount = 5;
     shortcut = "b";
     terminal = "screen-256color";
     extraConfig = ''
-      #### ADDED TO HOME_MANAGER
-      # use vi mode
-      set-window-option -g mode-keys vi
-
       # make sure new windows start from older ones
       bind c   new-window      -c "#{pane_current_path}"
       bind %   split-window -h -c "#{pane_current_path}"
@@ -47,35 +45,14 @@ with pkgs;
       # Sync panes
       bind y setw synchronize-panes
 
-      # bind h select-pane -L
-      # bind j select-pane -D
-      # bind k select-pane -U
-      # bind l select-pane -R
-      # bind \ select-pane -l
-
-      # resize panes
-      bind-key -r J resize-pane -D 5
-      bind-key -r K resize-pane -U 5
-      bind-key -r H resize-pane -L 5
-      bind-key -r L resize-pane -R 5
-
-      # # Fixes for ssh-agent
+      # Fixes for ssh-agent
       set -g update-environment "SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTION"
-      # set-option -g default-shell /usr/local/bin/bash
 
-      # # Stop renaming windows automatically
+      # Stop renaming windows automatically
       set-option -g allow-rename off
 
       # But reorder windows automatically
       set-option -g renumber-windows on
-
-      # ++++++++++++++++++++++++++++ #
-      #        mouse control         #
-      # ++++++++++++++++++++++++++++ #
-      # clickable windows, panes, resizable panes:
-      # set -g mouse-select-window on
-      # set -g mouse-select-pane on
-      # set -g mouse-resize-pane on
 
       # Enable mouse mode (tmux 2.1 and above)
       set -g mouse on
@@ -101,23 +78,8 @@ with pkgs;
       # move tmux copy buffer into x clipboard
       bind C-y run "tmux save-buffer - | xclip -i"
 
-      #### ADDED TO HOME_MANAGER
-      #### # ++++++++++++++++++++++++++++ #
-      #### #    set panes to start at 1   #
-      #### # ++++++++++++++++++++++++++++ #
-      #### set-window-option -g pane-base-index 1
-      #### set-window-option -g base-index 1
-
       set -g status-bg blue
       set -g status-fg black
-
-      #### ADDED TO HOME_MANAGER
-      #### # ++++++++++++++++++++++++++++ #
-      #### #    change the prefix key     #
-      #### # ++++++++++++++++++++++++++++ #
-      #### set -g prefix C-b
-      #### unbind C-b
-      #### bind C-b send-prefix
 
       # +++++++++++++++++++++++++++++ #
       # set titles on and use un@host #
@@ -223,21 +185,9 @@ with pkgs;
       set -g message-bg colour166
 
       # }
-      #######################################################
-      #######################################################
-      #######################################################
-      #######################################################
-      ###set -g @plugin 'tmux-plugins/tpm'
 
-      ###set -g @plugin 'tmux-plugins/tmux-sensible'
-      ###set -g @plugin 'tmux-plugins/tmux-resurrect'
-      ###set -g @plugin 'tmux-plugins/tmux-continuum'
-
-      ###set -g @continuum-restore 'on'
-      ###set -g @continuum-save-interval '60' # in minutes
-
-      ###set -g @resurrect-strategy-nvim 'session'
-      ###set -g @plugin 'tmux-plugins/tmux-battery'
+      #######################################################
+      # functions come from 'tmux-plugins/tmux-battery'
       set -g status-right '#{battery_icon} #{battery_percentage} | Remaining: #{battery_remain} | %a %h-%d %H:%M '
 
       # Smart pane switching with awareness of vim splits
@@ -248,8 +198,6 @@ with pkgs;
       bind -n C-h if-shell "$is_vim" "send-keys C-h" "select-pane -L"
       bind -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -l"
 
-      # bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
-
       set -ag terminal-overrides ',screen*:cvvis=\E[34l\E[?25h'
 
       # Restoring Clear Screen (C-l) <<< This is blocking the above
@@ -259,9 +207,6 @@ with pkgs;
 
       # Start GoTTY in a new window with C-t
       bind-key C-t new-window "gotty tmux attach -t `tmux display -p '#S'`"
-
-      ###### Enable tpm (tmux package manager)
-      #####run '~/.tmux/plugins/tpm/tpm'
     '';
   };
 }
