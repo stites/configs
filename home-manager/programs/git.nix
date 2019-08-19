@@ -49,6 +49,8 @@ in
       "?"
       ".myenv"
       "data/*.gz"
+      ".syncthing*"
+      "*.tmp"
     ];
 
     lfs.enable = true;
