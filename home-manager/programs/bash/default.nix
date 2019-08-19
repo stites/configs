@@ -57,6 +57,7 @@ in
       '';
     };
   };
+  home.file.".bash/empty".text = "";
   programs = {
     direnv = {
       enable = true;
@@ -72,10 +73,12 @@ in
       enable = true;
 
       # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-      historyIgnore = [ "ls" "cd" "exit" ".." "..." ];
+      historyIgnore = [ "ls" "cd" "exit" ".." "..." "gs" "ll" "lll" ];
+
+      # These parameters are overwritten later. See "Eternal bash history" in extraConfig
       historySize = 100000;
-      # historyControl = [ "ignoredups" "ignorespace" "erasedups" ]; #"ignoreboth" ];
       historyFileSize = 200000;
+      historyFile = "${homeDir}/.bash/eternal_history";
       shellOptions = [
         "histappend"     # append to the history file, don't overwrite it
         "nocaseglob"     # auto corrects the case
@@ -232,8 +235,22 @@ in
       } // git.shellAliases // haskell.shellAliases;
 
       initExtra = (concatStringsSep "\n" [
+        # Eternal bash history.
+        # ---------------------
+        # Undocumented feature which sets the size to "unlimited".
+        # http://stackoverflow.com/questions/9457233/unlimited-bash-history
+        ''
+        export HISTFILESIZE=
+        export HISTSIZE=
+        ''
+        # include time and date in history
+        "export HISTTIMEFORMAT=\"[%F %T] \""
+
+        # Change the file location because certain bash sessions truncate .bash_history file upon close.
+        # http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
+        ''export HISTFILE="${homeDir}/.bash/eternal_history";''
+
         "set +o vi"
-        # "export TERM='screen-256color'" # since rxvt-256color doesn't seem to cut it for vim
 
         # enable programmable completion features (you don't need to enable
         # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

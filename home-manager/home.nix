@@ -1,5 +1,7 @@
 { pkgs, lib, config, ... }:
 
+# WARNING: THIS SHOULD NOT BE USED ON NON-NIXOS BUILDS ANYMORE
+
 let
   stdenv = pkgs.stdenv;
   homedir = builtins.getEnv "HOME";
@@ -91,19 +93,19 @@ in
   # -----------------------------
   # OSX OUT
   # services.blueman-applet.enable = true; # requires system install
-  # # services.dunst.enable = false;          # notification daemon
-  # services.network-manager-applet.enable = true;
+  # services.dunst.enable = false;          # notification daemon
+  services.network-manager-applet.enable = true;
   # services.pasystray.enable = true;         # PulseAudio system tray
-  # services.parcellite.enable = true;        # clipboard daemon
-  # services.compton.enable = true;           # needs configuration
-  # services.xembed-sni-proxy.enable = true;
-  services.flameshot.enable = true;
-  # services.xsuspender.enable = true; # <<< I think this is throttling the mouse
+  services.parcellite.enable = true;        # clipboard daemon
+  services.compton.enable = true;           # needs configuration
+  services.xembed-sni-proxy.enable = true;
+  # services.flameshot.enable = true;
+  services.xsuspender.enable = true; # <<< I think this is throttling the mouse
 
-  # services.udiskie = {
-  #   enable = true;
-  #   tray = "always";
-  # };
+  services.udiskie = {
+    enable = true;
+    tray = "always";
+  };
   # -----------------------------
 
   imports = [

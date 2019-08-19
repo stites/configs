@@ -13,6 +13,7 @@ in
   functions = "
     pre_dynamic_prompt (){
       export LAST_CODE=\"$?\"
+      history -a
     }
 
     dynamic_prompt (){
