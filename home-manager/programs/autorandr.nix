@@ -34,11 +34,11 @@ in
 {
   programs.autorandr = {
     enable = true;
-    hooks.predetect = {
-      sleepabit = ''
-        sleep 2
-      '';
-    };
+    # hooks.predetect = {
+    #   sleepabit = ''
+    #     sleep 2
+    #   '';
+    # };
     profiles = {
       "laptop" = {
         fingerprint = laptop-monitor;
