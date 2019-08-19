@@ -13,6 +13,7 @@ import XMonad.Actions.CycleWS (nextWS, prevWS, shiftToPrev, shiftToNext)
 import XMonad.Actions.DynamicWorkspaces (addWorkspacePrompt, removeEmptyWorkspace)
 import XMonad.Actions.Search
 import XMonad.Actions.Submap
+import XMonad.Actions.SpawnOn (spawnOn, manageSpawn)
 import XMonad.Config.Desktop
 import XMonad.Config.Xfce
 import XMonad.Config.Gnome
@@ -59,7 +60,7 @@ main = do
       , workspaces        = show <$> [1 .. 6]
       , borderWidth       = 4
       , focusFollowsMouse = False
-      , manageHook        = manageDocks <+> manageHook def <+> launcherHook
+      , manageHook        = manageDocks <+> launcherHook <+> manageSpawn <+> manageHook def
       , layoutHook        = myLayout
       , handleEventHook   = docksEventHook <+> handleEventHook def
       -- , logHook = do
@@ -73,7 +74,12 @@ main = do
       --       , ppTitle   = DLog.xmobarColor "lightblue" "" . DLog.shorten 120
       --       , ppOrder   = \[a,_,b] -> [a, b]    -- Don't log layout name
       --       }
-      -- , startupHook = startup_hook
+      , startupHook = do
+          spawnOn "1" "slack"
+          spawnOn "1" "signal-desktop"
+          spawnOn "1" "Gitter"
+          spawnOn "2" "firefox"
+          spawnOn "2" "kitty -1"
       } `EZ.removeKeysP` removeKeys'
         `EZ.additionalKeysP` additionalKeys'
   where
