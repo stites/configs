@@ -17,32 +17,33 @@ nix:
   # running stack build. At the global level we _do_ want these sorts of things
   pure: false
 
-  # Empty by default. The list of packages you want to be
-  # available in the nix-shell at build time (with `stack
-  # build`) and run time (with `stack exec`).
-  #
-  # Packages passed to the nix environment when running `stack build` or
-  # `stack exec`. stack will NOT see anything that hasen't been passed in here.
-  packages:
-    - cairo
-    - gcc
-    - gnome2.pango
-    - gobjectIntrospection
-    - gtk2
-    - gtk3
-    - hicolor-icon-theme
-    - libdbusmenu-glib
-    - libdbusmenu-gtk3
-    - libxml2
-    - numix-icon-theme-circle
-    - pkgconfig
-    - x11
-    - xorg.libX11
-    - xorg.libXext
-    - xorg.libXinerama
-    - xorg.libXrandr
-    - xorg.libXrender
-    - zlib
+  # This is commented out because you can't mix `shell: shell.nix` with `packages: []`
+  # # # Empty by default. The list of packages you want to be
+  # # # available in the nix-shell at build time (with `stack
+  # # # build`) and run time (with `stack exec`).
+  # # #
+  # # # Packages passed to the nix environment when running `stack build` or
+  # # # `stack exec`. stack will NOT see anything that hasen't been passed in here.
+  # # packages:
+  # #   - cairo
+  # #   - gcc
+  # #   - gnome2.pango
+  # #   - gobjectIntrospection
+  # #   - gtk2
+  # #   - gtk3
+  # #   - hicolor-icon-theme
+  # #   - libdbusmenu-glib
+  # #   - libdbusmenu-gtk3
+  # #   - libxml2
+  # #   - numix-icon-theme-circle
+  # #   - pkgconfig
+  # #   - x11
+  # #   - xorg.libX11
+  # #   - xorg.libXext
+  # #   - xorg.libXinerama
+  # #   - xorg.libXrandr
+  # #   - xorg.libXrender
+  # #   - zlib
 
   # Unset by default. You cannot set this option if `packages:`
   # is already present and not empty.
