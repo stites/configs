@@ -51,6 +51,7 @@ in
       "data/*.gz"
       ".syncthing*"
       "*.tmp"
+      ".st*"
     ];
 
     lfs.enable = true;
