@@ -10,19 +10,20 @@ in
     inheritType = null;
     keys = [ "id_rsa" "id_ed25519" secrets.gpg.signing-key ];
   };
-  services.gnome-keyring = {
-    enable = true;
-    components = [
-      # Public-Key Cryptography Standards # 11 for token interface and token behavior
-      "pkcs11"   # Manage certificates
+  # Just use nixos-gnome-keyring for this
+  # services.gnome-keyring = {
+  #   enable = true;
+  #   components = [
+  #     # Public-Key Cryptography Standards # 11 for token interface and token behavior
+  #     "pkcs11"   # Manage certificates
 
-      # A store where GNOME applications can store and find passwords and other sensitive data.
-      "secrets"  # Required for protonmail-bridge
+  #     # A store where GNOME applications can store and find passwords and other sensitive data.
+  #     "secrets"  # Required for protonmail-bridge
 
-      # Use the gnome kering ssh agent which uses X.509 and/or OpenSSH encryption keys.
-      # "ssh" << use keychain (or gpg-agent) for this
-    ];
-  };
+  #     # Use the gnome kering ssh agent which uses X.509 and/or OpenSSH encryption keys.
+  #     # "ssh" << use keychain (or gpg-agent) for this
+  #   ];
+  # };
   # services.gpg-agent = {
   #   enable = true;
   #   enableSshSupport  = true;
