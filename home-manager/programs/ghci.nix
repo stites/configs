@@ -20,7 +20,7 @@
     )
     ":set -cpp -DASSERTS -DDEBUG"
     ":set -Wno-name-shadowing"
-    ":set -XOverloadedStrings -XScopedTypeVariables -XTupleSections -XFlexibleContexts -XDataKinds"
+    # ":set -XOverloadedStrings -XScopedTypeVariables -XTupleSections -XFlexibleContexts -XDataKinds"
 
     # -- :set +s
     # -- :set -XPartialTypeSignatures
