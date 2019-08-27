@@ -64,7 +64,17 @@ in
       enableBashIntegration = true;
     };
     man.enable = true;
-    noti.enable = true;
+    noti = {
+      enable = true;
+      # TODO: bundle this into a function call
+      settings = {
+        pushover = {
+          apiToken = secrets.bash.pushover.apikey;
+          userKey = secrets.bash.pushover.userkey;
+        };
+      };
+    };
+
     htop.enable = true;
     lesspipe.enable = true;
     command-not-found.enable = true;
@@ -146,10 +156,6 @@ in
         #########################################################
         #########################################################
 
-        # TODO: bundle this into a function call
-        NOTI_PUSHBULLET_ACCESSTOKEN = secrets.bash.pushbullet.token;
-        NOTI_PUSHOVER_APITOKEN = secrets.bash.pushover.apikey;
-        NOTI_PUSHOVER_USERKEY = secrets.bash.pushover.userkey;
       } // colors // pyenv.variables // prompt.variables;
 
       shellAliases = {
