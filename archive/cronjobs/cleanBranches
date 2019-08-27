@@ -1,3 +1,0 @@
-#! /bin/bash
-cd ~/git/bina/seqalto
-git branch | xargs -n 1 git branch -d

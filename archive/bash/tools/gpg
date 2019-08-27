@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-GPG_TTY=$(tty); export GPG_TTY
-
-eval "$(gpg-agent -q --daemon --enable-ssh-support --allow-preset-passphrase &> /dev/null )"
-

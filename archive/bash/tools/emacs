@@ -1,7 +1,0 @@
-#!/bin/bash
-alias e='emacsclient -t'
-alias ec='emacsclient -c'
-alias kille='emacsclient -e "(kill-emacs)"'
-alias starte='emacs --daemon'
-alias restarte='kille & starte'
-

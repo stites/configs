@@ -1,8 +1,0 @@
-#!/usr/bin/env sh
-
-case "$(uname -o)" in
-  "FreeBSD") gmake ;;
-  *) make ;;
-esac
-
-
