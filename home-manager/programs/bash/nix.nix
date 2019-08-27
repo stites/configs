@@ -29,19 +29,19 @@ in
       systemctl status display-manager.service &> /dev/null
       ret=$?
 
-      # optionally boot up X when logging into nixos
-      if [ $ret -ne 0 ]; then
-        printf "Non-root user %s without display. Boot X? ([y]|n) " "$(whoami)"
-        read -r bootx
-        case "$bootx" in
-          ""|"y"|"Y")
-            systemctl start display-manager.service
-            ;;
-        esac
-      fi
+      # # optionally boot up X when logging into nixos
+      # if [ $ret -ne 0 ]; then
+      #   printf "Non-root user %s without display. Boot X? ([y]|n) " "$(whoami)"
+      #   read -r bootx
+      #   case "$bootx" in
+      #     ""|"y"|"Y")
+      #       systemctl start display-manager.service
+      #       ;;
+      #   esac
+      # fi
 
       # neofetch when on nixos and _not in tmux_
-      if [ -z "$\{TMUX_PANE:-}" ] && command -v neofetch &> /dev/null; then
+      if [ -z "''${TMUX_PANE:-}" ] && command -v neofetch &> /dev/null; then
         neofetch
       fi
     '');
