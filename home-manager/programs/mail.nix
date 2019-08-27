@@ -1,9 +1,17 @@
-{ ... }:
+{ pkgs, ... }:
 let
-  secrets = import ./secrets.nix;
+  secrets = import ../secrets.nix;
   pii = secrets.piis;
 in
 {
+  home.packages = with pkgs; [
+    # mutt-based MUA
+    notmuch-mutt
+    neomutt
+
+    xpdf # view pdf in the terminal via pdftotext
+    w3m  # view html in the terminal
+  ];
   home.file.".mailcap".text = ''
     text/html;  w3m -dump -o document_charset=%{charset} '%s'; nametemplate=%s.html; copiousoutput
   '';
@@ -16,45 +24,33 @@ in
     extraConfig = {
     };
   };
-  # services.protonmail-bridge.enable = true;
   programs.offlineimap.enable = true;
-  # systemd.user.services.offlineimap = {
-  #   Unit = {
-  #     Description = "Offlineimap service";
-  #     Requires = [ "protonmail-bridge.service" ];
-  #     After    = [ "protonmail-bridge.service" ];
-  #   };
-
-  #   Service = {
-  #     ExecStart ="${pkgs.offlineimap}/bin/offlineimap";
-  #     Restart = "on-failure";
-  #     RestartSec = "5s";
-  #   };
-
-  #   Install = {
-  #     WantedBy = [ "default.target" ];
-  #   };
-  # };
   accounts.email = {
-    maildirBasePath = ".maildir";
+    maildirBasePath = "${builtins.getEnv "HOME"}/.maildir";
     accounts."${pii.address}" = {
       address = "${pii.address}";
       flavor = "plain";
+      folders = {
+        drafts = "Drafts";
+        inbox = "Inbox";
+        sent = "Sent";
+        trash = "Trash";
+      };
       primary = true;
       realName = "Sam Stites";
       userName = "${pii.address}";
       # passwordCommand = "";
       signature = {
         showSignature = "append";
-        text = ''
-          cell: ${pii.cell}
-          blog: ${pii.blog}
-          more: ${pii.keybase}
-        '';
+        text = "/cell: ${pii.cell} /blog: ${pii.blog} /more: ${pii.keybase}";
       };
       astroid.enable = true;
       notmuch.enable = true;
       msmtp.enable = true;
+      imapnotify = {
+        enable = true;
+        boxes = ["Inbox"];
+      };
       imap = {
         host = "127.0.0.1";
         port = 1143;
@@ -93,4 +89,5 @@ in
       };
     };
   };
+
 }

@@ -109,8 +109,8 @@ in
   # -----------------------------
 
   imports = [
-    ./mail.nix
     ./packages.nix
+    ./programs/mail.nix
     ./programs/aspell
     ./programs/stack
     ./programs/glirc

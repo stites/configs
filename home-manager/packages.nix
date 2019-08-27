@@ -93,13 +93,6 @@ let
       colordiff
       unzip
 
-      # email
-      notmuch-mutt
-      neomutt
-      lynx
-      xpdf # view pdf in the terminal via pdftotext
-      w3m # view html in the terminal
-
       # dev tools
       vagrant
       tldr
@@ -168,6 +161,8 @@ let
       # texlive.combined.scheme-full
       # weechat # << install 2.4-devel version
       bash-completion
+      lynx # view html on the command line
+
 
       # cachix  # << install via cachix.com
 
