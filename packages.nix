@@ -36,19 +36,6 @@ let
   #   lubridate
   # ]; };
 
-  my-dictionaries = with pkgs; buildEnv {
-    name = "my-dictionary";
-    paths = [
-      dict
-      # dictdDBs.eng2rus
-      dictdDBs.wiktionary
-      dictdDBs.wordnet
-
-      aspell
-      aspellDicts.en
-    ];
-  };
-
   stableNixPkgs =
     let exe = stable.haskell.lib.justStaticExecutables;
     in (with stable; [
@@ -195,7 +182,6 @@ let
       protonmail-bridge
       prettyping
       # nix-linting
-      my-dictionaries
       # zoom-us
       # weechat
       watchexec

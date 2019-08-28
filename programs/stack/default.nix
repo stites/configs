@@ -1,6 +1,6 @@
 {...}:
 let
-  confroot = "${builtins.getEnv "HOME"}/git/configs/home-manager/";
+  confroot = (import ../../vars.nix).confroot;
 in
 {
   home.file = {

@@ -4,8 +4,8 @@
 
 let
   stdenv = pkgs.stdenv;
-  homedir = builtins.getEnv "HOME";
-  confroot = "${homedir}/git/configs/home-manager/";
+  homedir = (import ./vars.nix).homedir;
+  confroot = (import ./vars.nix).confroot;
   ca-bundle_crt = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"; # just in case
   lib = stdenv.lib;
   concatStringsSep = lib.strings.concatStringsSep;
@@ -141,6 +141,7 @@ in
     ./programs/brittany.nix
     ./programs/texlive.nix
     ./programs/jq.nix
+    ./programs/neofetch.nix
     # ./programs/xsession.nix
   ];
 }

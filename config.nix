@@ -216,11 +216,6 @@ in
     # stdenv = pkgs_.clangStdenv; # pkgs_.llvmPackages_7.stdenv;
     stable = import <nixos> {};
     # tmuxp = tmuxp pkgs_;
-    # slack = callPackage /home/stites/git/configs/home-manager/slack.nix {};
-    # signal-desktop-beta = callPackage /home/stites/git/configs/home-manager/signal-desktop-beta.nix {spellcheckerLanguage = "en_US";};
-
-    # hies = ((import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {})
-    #   .selection { selector = p: { inherit (p) ghc864 ghc844; });
 
     inherit cuda9-shell cuda10-shell cuda-shell;
     inherit clang7-shell clang-shell;
