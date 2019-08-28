@@ -3,7 +3,7 @@ let
   colors = import ../../programs/bash/colors.nix;
   libraryPaths = {
     nixpkgs = "${builtins.getEnv "HOME"}/.nix-profile/lib";
-    nixos = concatStringsSep ":" [
+    nixos = lib.strings.concatStringsSep ":" [
       # This is a global graphics parameter which MUST BE SET for nvidia to work.
       # FIXME: find reference
       "/run/opengl-driver/lib"
