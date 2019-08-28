@@ -25,7 +25,7 @@ in
     prompt = {
       PROMPT_INCL_USER="false";
       PROMPT_USER_COLOR="${colors.WHITE}";
-      PROMPT_HOST_COLOR="${colors.GREEN}";
+      PROMPT_HOST_COLOR="${colors.RED}";
       PROMPT_HOST_COLOR_GIT="";
       PROMPT_SEP_COLOR="${colors.NORMAL}";
       PROMPT_PATH_COLOR="${colors.YELLOW}";

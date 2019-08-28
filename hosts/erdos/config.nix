@@ -27,11 +27,11 @@ in
     prompt = {
       PROMPT_INCL_USER="false";
       PROMPT_USER_COLOR="${colors.WHITE}";
-      PROMPT_HOST_COLOR="${colors.GREEN}";
+      PROMPT_HOST_COLOR="${colors.YELLOW}";
       PROMPT_HOST_COLOR_GIT="";
       PROMPT_SEP_COLOR="${colors.NORMAL}";
       PROMPT_PATH_COLOR="${colors.BLUE}";
-      PROMPT_PATH_COLOR_GIT="${colors.YELLOW}";
+      PROMPT_PATH_COLOR_GIT="${colors.WHITE}";
       PROMPT_BRANCH_COLOR_GIT="${colors.CYAN}";
       GPU_LIGHTS_ON="check";
     };

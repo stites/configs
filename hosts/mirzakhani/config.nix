@@ -1,5 +1,6 @@
 { lib, ... }:
 let
+  colors = import ../../programs/bash/colors.nix;
   libraryPaths = {
     nixpkgs = "${builtins.getEnv "HOME"}/.nix-profile/lib";
     nixos = lib.strings.concatStringsSep ":" [
