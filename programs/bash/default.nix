@@ -1,9 +1,8 @@
 { pkgs, lib, ... }:
 
 let
-  concatStringsSep = lib.strings.concatStringsSep;
+  host = pkgs.callPackage ../../hosts { };
   colors = import ./colors.nix;
-  homeDir = builtins.getEnv "HOME";
   pyenv = pkgs.callPackage ./pyenv.nix { };
   git = pkgs.callPackage ./git.nix { };
   nvm = pkgs.callPackage ./nvm.nix { };
@@ -13,8 +12,8 @@ let
   nix = pkgs.callPackage ./nix.nix { };
   haskell = pkgs.callPackage ./haskell.nix { };
   functions = pkgs.callPackage ./functions.nix { };
-  nix-profile = "${homeDir}/.nix-profile/";
-  host = pkgs.callPackage ../../hosts.nix { };
+  homedir = host.homedir;
+  nix-profile = "${host.homedir}/.nix-profile/";
   secrets = import ../../secrets.nix;
   hostExtraConfig = host.bash.extraConfig;
 in
@@ -88,7 +87,7 @@ in
       # These parameters are overwritten later. See "Eternal bash history" in extraConfig
       historySize = 100000;
       historyFileSize = 200000;
-      historyFile = "${homeDir}/.bash/eternal_history";
+      historyFile = "${homedir}/.bash/eternal_history";
       shellOptions = [
         "histappend"     # append to the history file, don't overwrite it
         "nocaseglob"     # auto corrects the case
@@ -129,13 +128,13 @@ in
         # bash automatically fetches the last command that starts with the
         # given term: E.G. you type in ‘ssh’ and press the ‘Page Up’ key and bash
         # scrolls through your history for this. Store function in .inputrc
-        INPUTRC="${homeDir}/.inputrc";
+        INPUTRC="${homedir}/.inputrc";
 
         # colored GCC warnings and errors
         # export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
         # Use https://github.com/rdnetto/powerline-hs
-        POWERLINE_COMMAND="${homeDir}/.local/bin/powerline-hs";
+        POWERLINE_COMMAND="${homedir}/.local/bin/powerline-hs";
         POWERLINE_CONFIG_COMMAND="${nix-profile}/bin/true";
 
         # # make less more friendly for non-text input files, see lesspipe(1)
@@ -143,7 +142,7 @@ in
         # LESSOPEN="|${nix-profile}/bin/lesspipe.sh %s"; # FIXME << do we even need this?
 
         # hledger stuff
-        LEDGER_FILE="${homeDir}/accounting/2019.journal";
+        LEDGER_FILE="${homedir}/accounting/2019.journal";
 
         # and https://github.com/NixOS/nixpkgs/issues/44144
         CPATH=host.bash.includePath;
@@ -151,7 +150,7 @@ in
         CPLUS_INCLUDE_PATH=host.bash.includePath;
 
         LIBRARY_PATH=host.bash.libraryPath;
-        TMUXIFIER="${homeDir}/.tmuxifier";
+        TMUXIFIER="${homedir}/.tmuxifier";
 
         #########################################################
         #########################################################
@@ -240,7 +239,7 @@ in
         # "nginx"="nginx -p ~/.config/nginx/";
       } // git.shellAliases // haskell.shellAliases;
 
-      initExtra = (concatStringsSep "\n" [
+      initExtra = (lib.strings.concatStringsSep "\n" [
         # Eternal bash history.
         # ---------------------
         # Undocumented feature which sets the size to "unlimited".
@@ -254,7 +253,7 @@ in
 
         # Change the file location because certain bash sessions truncate .bash_history file upon close.
         # http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
-        ''export HISTFILE="${homeDir}/.bash/eternal_history";''
+        ''export HISTFILE="${homedir}/.bash/eternal_history";''
 
         "set +o vi"
 
@@ -281,8 +280,8 @@ in
         (if builtins.pathExists "/usr/sbin"       then "safe_path_add /usr/sbin"       else "")
         (if builtins.pathExists "/usr/local/bin"  then "safe_path_add /usr/local/bin"  else "")
         (if builtins.pathExists "/usr/local/sbin" then "safe_path_add /usr/local/sbin" else "")
-        (if host.isNixOS then "" else "source ${homeDir}/.nix-profile/etc/profile.d/nix.sh")
-        (if host.isNixOS then "" else "source ${homeDir}/.nix-profile/etc/profile.d/hm-session-vars.sh")
+        (if host.is.NixOS then "" else "source ${homedir}/.nix-profile/etc/profile.d/nix.sh")
+        (if host.is.NixOS then "" else "source ${homedir}/.nix-profile/etc/profile.d/hm-session-vars.sh")
 
         # provide consistent interface for single-user nix
         # see https://github.com/NixOS/nix/issues/2033
@@ -291,7 +290,7 @@ in
 
         # This breaks graphics in 19.03 if moved to 'sessionVariables'...
         # Maybe
-        (if host.isNixOS then "" else "export LD_LIBRARY_PATH=${host.bash.libraryPath}")
+        (if host.is.NixOS then "" else "export LD_LIBRARY_PATH=${host.bash.libraryPath}")
 
         git.functions
 
@@ -313,7 +312,7 @@ in
         prompt.initConfig
 
         # this is all rust needs
-        (if builtins.pathExists "${homeDir}/.cargo/bin" then ''safe_path_add "${homeDir}/.cargo/bin"'' else "")
+        (if builtins.pathExists "${homedir}/.cargo/bin" then ''safe_path_add "${homedir}/.cargo/bin"'' else "")
 
         # # ========================================== #
         # #     Silence that fucking hardware bell     #
@@ -327,7 +326,7 @@ in
         # ============================================================ #
         ''
         # alias find="${nix-profile}/bin/fd"
-        safe_source "${homeDir}/.fonts/*.sh"
+        safe_source "${homedir}/.fonts/*.sh"
         ''
 
         # set up tmuxifier

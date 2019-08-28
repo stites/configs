@@ -1,10 +1,11 @@
 { pkgs, ... }:
 let
-  confroot = (import ../vars.nix).confroot;
+  host = pkgs.callPackage ../hosts {};
+  confroot = host.confroot;
 in
 {
   xsession = {
-    enable = (pkgs.callPackage ../hosts.nix { }).isNixOS;
+    enable = host.is.NixOS;
     preferStatusNotifierItems = true;
     # windowManager.command = "startxfce4";
     # windowManager.command = "my-xmonad";
@@ -20,7 +21,7 @@ in
       xmonad = {
         enable = true;
         enableContribAndExtras = true;
-        config = "${builtins.getEnv "HOME"}/.xmonad/xmonad.hs";
+        config = "${host.homedir}/.xmonad/xmonad.hs";
         # config = "${confroot}/programs/xmonad/xmonad.hs";
         # haskellPackages = hpkgs822;
         # extraPackages = hpkgs: with hpkgs [

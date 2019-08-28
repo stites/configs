@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+export PROMPT_INCL_USER=true
+export PROMPT_USER_COLOR="${WHITE}"
+export PROMPT_HOST_COLOR="${VIOLET}"
+export PROMPT_HOST_COLOR_GIT=""
+export PROMPT_SEP_COLOR="${NORMAL}"
+export PROMPT_PATH_COLOR="${YELLOW}"
+export PROMPT_PATH_COLOR_GIT="${BLUE}"
+export PROMPT_BRANCH_COLOR_GIT="${YELLOW}"
+

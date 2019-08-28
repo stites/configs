@@ -44,7 +44,7 @@ in
   # };
 
   xsession = {
-    enable = (pkgs.callPackage ../../hosts.nix { }).isNixOS;
+    enable = (pkgs.callPackage ../../hosts { }).is.NixOS;
     preferStatusNotifierItems = true;
     # windowManager.command = "startxfce4";
     # windowManager.command = "my-xmonad";

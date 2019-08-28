@@ -4,12 +4,12 @@
 
 let
   stdenv = pkgs.stdenv;
-  homedir = (import ./vars.nix).homedir;
-  confroot = (import ./vars.nix).confroot;
+  host = pkgs.callPackage ./hosts { };
+  homedir = host.homedir;
+  confroot = host.confroot;
   ca-bundle_crt = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"; # just in case
   lib = stdenv.lib;
   concatStringsSep = lib.strings.concatStringsSep;
-  host = pkgs.callPackage ./hosts.nix { };
   secrets = import ./secrets.nix;
   hpkgs822 = pkgs.haskell.packages.ghc822.extend (sel: sup: {
     mkDerivation = drv: sup.mkDerivation (drv // { doHaddock = false; }); # jailbreak = true; });
@@ -60,18 +60,18 @@ in
   xdg = {
     enable = true;
     configFile = {
-      "nixpkgs/isNixOS".text = "${if host.isNixOS then "true" else "false"}";
+      "nixpkgs/isNixOS".text = "${if host.is.NixOS then "true" else "false"}";
       "nixpkgs/config.nix".source = "${confroot}/config.nix";
       # "nixpkgs/local-nixpkgs".source      = "${homedir}/git/configs/nixpkgs";
       # "nixpkgs/signal-desktop-beta.nix".source = "${confroot}/programs/signal-desktop-beta.nix";
     };
   };
-  nixpkgs.config = (import ./config.nix { inherit pkgs lib config; });
+  nixpkgs.config = import ./config.nix { inherit pkgs lib config; };
 
   fonts.fontconfig.enable = true;
 
   qt = {
-    enable = host.isNixOS;
+    enable = host.is.NixOS;
     platformTheme = "gtk";
   };
 
@@ -89,6 +89,14 @@ in
     Xft.antialias: 1
     Xft.rgba: rgb
   '';
+
+  home.file.".XCompose".source = (pkgs.fetchFromGitHub {
+    owner = "kragen";
+    repo = "xcompose";
+    rev = "3fb0a8ce54087bddf3d266c7de59d5e524750a6a";
+    sha256 = "01nv5psi4klw06hp2i9q9wjw05mj0cwibrsp78vhn2gwb0lac1vv";
+  }) + "/dotXCompose";
+
 
   # -----------------------------
   # OSX OUT

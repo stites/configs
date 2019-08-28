@@ -1,6 +1,6 @@
-{...}:
+{ pkgs, ... }:
 let
-  confroot = (import ../../vars.nix).confroot;
+  confroot = (pkgs.callPackage ../../hosts {}).confroot;
 in
 {
   home.file = {

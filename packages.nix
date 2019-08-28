@@ -1,13 +1,13 @@
 { pkgs, lib, config, ... }:
 
 let
-  host = pkgs.callPackage ./hosts.nix { };
+  host = pkgs.callPackage ./hosts { };
   stable = pkgs.stable;
   unstable = pkgs;
 
   elmPackages = stable.elmPackages;
   haskellPackages844 = pkgs.haskellPackages.packages.ghc844;
-  firstHomeManagerBoot = !(builtins.pathExists "${builtins.getEnv "HOME"}/.config/nixpkgs/config.nix");
+  firstHomeManagerBoot = !(builtins.pathExists "${host.homedir}/.config/nixpkgs/config.nix");
 
   # pyls = (with unstable.python3Packages; python-language-server.override {
   #   autopep8 = autopep8;
@@ -167,7 +167,7 @@ let
       libffi.out
       libffi.dev
 
-    ]) ++ (if host.isServer then (with stable; [ znc ]) else []);
+    ]) ++ (if host.is.server then (with stable; [ znc ]) else []);
        # ++ (if firstHomeManagerBoot then [] else (with unstable; [ ngrok ]));
 
 
@@ -196,7 +196,7 @@ let
     ]);
 
   unstableNixOS =
-    if host.isNixOS
+    if host.is.NixOS
     then (with unstable; [
         coreutils
         ffmpeg

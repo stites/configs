@@ -358,7 +358,7 @@
     # disk_show=('/'):
     #      'disk (/): 74g / 118g (66%)'
     #
-    ''disk_show=('/')''
+    ''disk_show=('/', '/home/stites', '/boot')''
 
     # disk subtitle.
     # what to append to the disk subtitle.
