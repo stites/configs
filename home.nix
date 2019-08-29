@@ -97,6 +97,19 @@ in
     sha256 = "01nv5psi4klw06hp2i9q9wjw05mj0cwibrsp78vhn2gwb0lac1vv";
   }) + "/dotXCompose";
 
+  xdg.configFile."pycodestyle".text =
+    let
+      ignorelist = lib.strings.concatStringsSep "," [
+        "E222" # ignore "space after operator" to get text to line up
+      ];
+    in
+      ''
+        [pycodestyle]
+        count = False
+        ignore = ${ignorelist}
+        max-line-length = 120
+        statistics = True
+      '';
 
   # -----------------------------
   # OSX OUT
