@@ -127,7 +127,6 @@ in
     enable = true;
     tray = "always";
   };
-  # -----------------------------
 
   imports = [
     ./packages.nix
@@ -135,7 +134,7 @@ in
     ./programs/aspell
     ./programs/stack
     ./programs/glirc
-    ./programs/nvim
+    ./programs/neovim
     ./programs/bash
     ./programs/redshift
     ./programs/broot.nix

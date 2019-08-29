@@ -68,7 +68,7 @@ in
             quick = 10;
 
             # update notmuch index after sync
-            # postsynchook = "notmuch new";
+            postsynchook = "notmuch new";
           };
           local = {
             # delete remote mails that were deleted locally
@@ -83,7 +83,7 @@ in
             expunge = "yes";
 
             # sync only these folders
-            folderfilter = "lambda fn: not (fn in ['All Mail', 'Folders/DMARC Reports'])";
+            folderfilter = "lambda fn: not (fn in ['Trash', 'All Mail', 'Folders/DMARC Reports'])";
           };
         };
       };
