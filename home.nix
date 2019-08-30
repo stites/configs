@@ -162,6 +162,7 @@ in
     ./programs/texlive.nix
     ./programs/jq.nix
     ./programs/neofetch.nix
+    ./programs/pijul.nix
     # ./programs/xsession.nix
   ];
 }
