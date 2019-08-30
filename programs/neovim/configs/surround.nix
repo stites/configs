@@ -96,5 +96,19 @@
     "xmap am <Plug>(textobj-sandwich-literal-query-a)"
     "omap im <Plug>(textobj-sandwich-literal-query-i)"
     "omap am <Plug>(textobj-sandwich-literal-query-a)"
+
+    # ==============================================================================
+    # vim-textobj-sentence is best used on text and markdown
+    ''
+    augroup textobj_sentence
+      autocmd!
+      autocmd FileType markdown call textobj#sentence#init()
+      autocmd FileType textile call textobj#sentence#init()
+    augroup END
+
+    let g:textobj#sentence#select = 's'
+    let g:textobj#sentence#move_p = '('
+    let g:textobj#sentence#move_n = ')'
+    ''
   ];
 }

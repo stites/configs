@@ -22,6 +22,21 @@ in
 {
   xdg = {
     configFile = {
+      "nvim/coc-settings.json".text = builtins.toJSON {
+        "suggest.timeout" = 500;
+        "coc.preferences.formatOnSaveFiletypes" = ["python"];
+
+        "python.autoComplete.showAdvancedMembers" = false;
+        "python.pythonPath" = "python";
+        "python.formatting.provider" = "black";
+        "python.formatting.blackPath" = "black";
+        "python.linting.mypyEnabled" = true;
+        "python.linting.mypyPath" = "mypy";
+        "python.linting.pylintEnabled" = false;
+        "python.linting.pylamaEnabled" = true;
+        "python.linting.pylamaPath" = "pylama";
+        "python.sortImports.path" = "isort";
+      };
       "nvim/init.vim".text = ''
         set shell=/bin/sh
       '';
@@ -306,20 +321,6 @@ in
       " let g:session_lock_enabled = 0
 
       ''
-      # ==============================================================================
-      # vim-textobj-sentence is best used on text and markdown
-      ''
-      augroup textobj_sentence
-        autocmd!
-        autocmd FileType markdown call textobj#sentence#init()
-        autocmd FileType textile call textobj#sentence#init()
-      augroup END
-
-      let g:textobj#sentence#select = 's'
-      let g:textobj#sentence#move_p = '('
-      let g:textobj#sentence#move_n = ')'
-      ''
-
       # ==============================================================================
       # rainbow_parentheses.vim
       ''

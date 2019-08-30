@@ -3,7 +3,7 @@
 {
   rc = lib.strings.concatStringsSep "\n" [
     # Manually create key mappings (to avoid rebinding C-\)
-    "let g:tmux_navigator_no_mappings = 1"
+    # "let g:tmux_navigator_no_mappings = 1"
 
     "nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>"
     "nnoremap <silent> <C-j> :TmuxNavigateDown<cr>"

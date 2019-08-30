@@ -1,5 +1,11 @@
 { lib, pkgs, pluginBuilder, ... }:
 {
+  rc = lib.strings.concatStringsSep "\n" [
+
+    ''
+      let @x=':%s/<Plug>_*//g'
+    ''
+  ];
   plugins = with pkgs.vimPlugins; [
     # alignment stuff
     align                   # align characters
@@ -32,10 +38,5 @@
       tarball = "https://github.com/pelodelfuego/${name}/archive/master.tar.gz";
       homepage = https://github.com/pelodelfuego/vim-swoop;
     })
-  ];
-  rc = lib.strings.concatStringsSep "\n" [
-    ''
-      let @x=':%s/<Plug>_*//g'
-    ''
   ];
 }
