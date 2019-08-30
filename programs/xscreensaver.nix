@@ -20,9 +20,10 @@
     dpmsStandby = "2:00:00";
     dpmsSuspend = "2:00:00";
     dpmsOff = "4:00:00";
+
     # User switching from the lock screen:
     # Add `xscreensaver.newLoginCommand` to ~/.Xresources, to use LightDM's switching mode:
-    # newLoginCommand "dm-tool switch-to-greeter";
+    newLoginCommand = "dm-tool switch-to-greeter";
 
     mode = "blank";
     selected = "-1";
