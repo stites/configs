@@ -12,7 +12,7 @@
     # coc-tabnine
     # coc-texlab
   ];
-  rc = lib.strings.concatStringSep "\n" [
+  rc = lib.strings.concatStringsSep "\n" [
     # if hidden is not set, TextEdit might fail.
     "set hidden"
 

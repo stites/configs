@@ -8,6 +8,7 @@
     vim-airline                          # add statusbar
     vim-airline-themes                   # theme statusbar
     vim-devicons                         # add unknown icons for statusbar
+
     gruvbox                              # [?????] retro theme
     papercolor-theme                     # [?????]
     wombat256-vim                        # [dark]  haskell favorite theme

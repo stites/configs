@@ -1,83 +1,6 @@
-{ lib, pkgs, pluginBuilder, ... }:
+{ pkgs, lib, ... }:
 {
-  plugins = with pkgs.vimPlugins; [
-    vimproc
-    neomake
-    (pluginBuilder rec {
-      name = "vim-bbye";
-      tarball = "${homepage}/archive/master.tar.gz";
-      homepage = https://github.com/moll/vim-bbye;
-    })
-
-    vim-indent-guides
-    ultisnips     # snippet manager
-    vim-snippets  # default snippets
-    deoplete-nvim
-    (pluginBuilder rec {
-      name = "terminalkeys-vim";
-      tarball = "${homepage}/archive/master.tar.gz";
-      homepage = https://github.com/nacitar/terminalkeys.vim;
-    })
-    (pluginBuilder rec {
-      name = "vim-bufkill";
-      tarball = "${homepage}/archive/master.tar.gz";
-      homepage = https://github.com/qpkorr/vim-bufkill;
-    })
-
-    # (pluginBuilder rec {
-    #   name = "vim-misc";
-    #   tarball = "${homepage}/archive/master.tar.gz";
-    #   homepage = https://github.com/xolox/vim-misc;
-    # })
-
-    # (pluginBuilder rec { # Plug 'xolox/vim-session' | Plug 'xolox/vim-misc'
-    #   name = "vim-session";
-    #   tarball = "${homepage}/archive/master.tar.gz";
-    #   homepage = https://github.com/xolox/vim-session;
-    # })
-
-
-    vim-eunuch
-    undotree
-
-    # Vim improvements:
-    (pluginBuilder rec {
-      name = "vim-textobj-sentence";
-      tarball = "${homepage}/archive/master.tar.gz";
-      homepage = https://github.com/reedes/vim-textobj-sentence;
-    })
-    # Plug 'kana/vim-textobj-user' | Plug 'reedes/vim-textobj-sentence'
-    (pluginBuilder rec {
-      name = "vim-textobj-user";
-      tarball = "${homepage}/archive/master.tar.gz";
-      homepage = https://github.com/kana/vim-textobj-user;
-    })
-
-    # Trim trailing whitespace on lines you edit (or visit in insert mode)
-    (pluginBuilder rec {
-      name = "lessspace-vim";
-      tarball = "${homepage}/archive/master.tar.gz";
-      homepage = https://github.com/thirtythreeforty/lessspace.vim;
-    })
-
-    # highlight what you yank!
-    (pluginBuilder rec {
-      name = "vim-highlightedyank";
-      tarball = "${homepage}/archive/master.tar.gz";
-      homepage = https://github.com/machakann/vim-highlightedyank;
-    })
-
-    direnv-vim
-
-    ######################################
-    # Writing support
-    ######################################
-    goyo-vim                # enter "writing mode"
-    limelight-vim           # highlight cursor's text object (paragraph) when in writing mode
-    vim-grammarous          # grammar checking
-  ];
-
-  rc = lib.strings.concatStringsSep "\n" [
+  extraConfig = lib.strings.concatStringsSep "\n" [
     # DEFAULTS
 
     # General {{{
@@ -88,32 +11,33 @@
     set foldlevelstart=99
     set foldcolumn=0
     ''
-    ''
-    augroup vimrcFold
-      " fold rc itself by categories
-      autocmd!
-      autocmd FileType vim set foldmethod=marker
-      autocmd FileType vim set foldlevel=0
-    augroup END
-    ''
+    # we don't need this anymore since we are working in nix!
+    # ''
+    # augroup vimrcFold
+    #   " fold rc itself by categories
+    #   autocmd!
+    #   autocmd FileType vim set foldmethod=marker
+    #   autocmd FileType vim set foldlevel=0
+    # augroup END
+    # ''
     # With a map leader it's possible to do extra key combinations
     # like <leader>w saves the current file
-    (let
-      leader = ''\<space>'';
-    in
-    ''
-      if ! exists("mapleader")
-        let mapleader = "${leader}"
-      endif
-      if ! exists("g:mapleader")
-        let g:mapleader = "${leader}"
-      endif
-    '')
+    (let leader = ''\<space>'';
+      in lib.strings.concatStringsSep "\n" ([
+        ''
+          if ! exists("mapleader")
+            let mapleader = "${leader}"
+          endif
+          if ! exists("g:mapleader")
+            let g:mapleader = "${leader}"
+          endif
+        ''
+      # Allow the normal use of "," by pressing it twice
+      ] ++ lib.optional (leader == ",") ["noremap ,, ,"])
+    )
 
     # Leader key timeout
     "set tm=2000"
-    # Allow the normal use of "," by pressing it twice
-    "noremap ,, ,"
     # Use par for prettier line formatting
     ''
     set formatprg=par
@@ -158,14 +82,13 @@
     "set wildignorecase"                       # case-insensitive search
     ################################################################################################
     "set incsearch"                            # Makes search act like search in modern browsers
-    "set number" "set relativenumber"          # set hybrid-number-d gutters
+    "set number relativenumber"                # set hybrid-number-d gutters
     "set autoread"                             # auto-reload files when they are changed (like via git)
     "set history=700"                          # Set lines of history
     "set shell=bash"                           # ensure that we always use bash
     "set tw=120"                               # set textwidth to be 120 globally
     "set hlsearch"                             # Enable search highlighting
     "set mouse=a"                              # Enable mouse in all modes
-    "set expandtab"                            # When inserting tab characters, use spaces instead
     "set so=7"                                 # Set 7 lines to the cursor - when moving vertically using j/k
     "set hidden"                               # don't close buffers when you aren't displaying them
     "set wildmenu"                             # Turn on the WiLd menu
@@ -188,6 +111,8 @@
     "set ffs=unix,dos,mac"                     # Use Unix as the standard file type
     "set laststatus=2"                         # Always show the status line
     "set list"                                 # Show trailing whitespace
+    "set listchars=tab:▸▸,trail:·"             # Show `▸▸` for tabs: 	, `·` for tailing whitespace
+    "set clipboard=unnamed"                    # Use the system clipboard
 
     # "set nohlsearch"                           # <<<<< actually don't highlight ??????
     # And never type :nohlsearch again!!!
@@ -288,6 +213,61 @@
     vnoremap <silent> # :call VisualSelection('b', '''''')<CR>
     ''
     # }}}
+
+    # Spell checking {{{
+    # Pressing ,ss will toggle and untoggle spell checking
+    ''
+    map <leader>ss :setlocal spell!<cr>
+    ''
+    # }}}
+
+      # Neovim terminal configurations
+      ''
+      if has('nvim')
+        " Use <Esc> to escape terminal insert mode
+        tnoremap <Esc> <C-\><C-n>
+        " Make terminal split moving behave like normal neovim
+        tnoremap <c-h> <C-\><C-n><C-w>h
+        tnoremap <c-j> <C-\><C-n><C-w>j
+        tnoremap <c-k> <C-\><C-n><C-w>k
+        tnoremap <c-l> <C-\><C-n><C-w>l
+      endif
+      " }}}
+      ''
+      # Remember info about open buffers on close
+      "set viminfo^=%"
+
+      # Treat long lines as break lines (useful when moving around in them)
+      "nnoremap j gj"
+      "nnoremap k gk"
+
+      "noremap <c-h> <c-w>h"
+      "noremap <c-k> <c-w>k"
+      "noremap <c-j> <c-w>j"
+      "noremap <c-l> <c-w>l"
+
+      # Open file prompt with current path
+      ''nmap <leader>e :e <C-R>=expand("%:p:h") . '/'<CR>''
+
+      # Tags {{{
+
+      "set tags+=./tags;$HOME,./codex.tags;$HOME"
+      "set cst"
+      "set csverb"
+
+      # IGNORES ARE HERE BECAUSE THEY INTERFERE WITH CTAG LOOKUP
+      "set wildignore+=*.min.*"       # Web ignores
+      "set wildignore+=*.stack-work*" # Haskell ignores
+      "set wildignore+=*.so"          # C ignores
+
+      # }}}
+
+    # Spelling
+    ''
+    abbr Lunix Linux
+    abbr accross across
+    abbr hte the
+    abbr Probablistic Probabilistic
+    ''
   ];
 }
-

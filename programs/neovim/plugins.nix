@@ -1,5 +1,0 @@
-{ vimUtils, fetchFromGitHub, stdenv }:
-
-{
-
-}

@@ -1,19 +1,22 @@
 { lib, pkgs, pluginBuilder, ... }:
-{
-  plugins = [
-    (pluginBuilder {
+let
+  vim-sandwich = pluginBuilder {
       name = "vim-sandwich";
       tarball = "https://github.com/machakann/vim-sandwich/archive/master.tar.gz";
       homepage = https://github.com/machakann/vim-sandwich;
-    })
+  };
+in
+{
+  plugins = [
+    vim-sandwich
     # vim-surround               # 'tpope/vim-surround'   " http://vimawesome.com/plugin/surround-vim
 
-    # HTML, XML
-    (pluginBuilder { # Plug 'docunext/closetag.vim', { 'for': 'html' }
-      name = "closetag-vim";
-      tarball = "https://github.com/docunext/closetag.vim/archive/master.tar.gz";
-      homepage = https://github.com/docunext/closetag.vim;
-    })
+    # # HTML, XML
+    # (pluginBuilder { # Plug 'docunext/closetag.vim', { 'for': 'html' }
+    #   name = "closetag-vim";
+    #   tarball = "https://github.com/docunext/closetag.vim/archive/master.tar.gz";
+    #   homepage = https://github.com/docunext/closetag.vim;
+    # })
   ];
   rc = lib.strings.concatStringsSep "\n" [
     # ================================================== #
@@ -24,7 +27,7 @@
     # Use vim-surround keymap
     # -------------------------------------------------- #
     # If you want to use with vim-surround keymappings, add the following line to your vimrc.
-    "runtime macros/sandwich/keymap/surround.vim"
+    "runtime ${vim-sandwich}/share/vim-plugins/vim-sandwich/macros/sandwich/keymap/surround.vim"
 
     # `ys`, `yss`, `yS`, `ds`, `cs` in normal mode and `S` in visual mode are available.
     # Not in vim-surround, but `dss` and `css` are also available, these are similar as
