@@ -15,7 +15,7 @@ in
 with functions;
 {
   functions = {
-    inherit (functions) compile mergeplugs countAll calltree flatten-plugins smoosh smooshAll;
+    inherit (functions) compile mergeplugs countAll calltree flatten-plugins smoosh smooshAll validPluginFile;
     inherit all-deps;
   };
   tests = {
@@ -23,5 +23,8 @@ with functions;
     all-deps = test-suite all-deps;
     smoosh = test-suite smoosh;
     smooshAll = smooshAll [ ./tests/single.nix ./tests/simple-dep.nix ./tests/tree ./tests/rc-merge ./tests/diamond ];
+    smooshAllSorted = smooshAllSorted [ ./tests/single.nix ./tests/simple-dep.nix ./tests/tree ./tests/rc-merge ./tests/diamond ];
   };
+
+  myplugins = pkgs.callPackage ../myplugins {};
 }

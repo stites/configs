@@ -4,6 +4,6 @@ let
 in
 {
   compile = functions.smoosh;
-  compileAll = functions.smoosh;
+  compileAll = functions.smooshAllSorted;
 }
 
