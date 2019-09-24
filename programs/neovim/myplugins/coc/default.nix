@@ -1,26 +1,35 @@
-{ lib, pkgs, pluginBuilder, ... }:
+{ pkgs, ... }:
+let
+  keybindings = (pkgs.callPackage ../../keybindings {});
+  leader = keybindings.leader;
+  usetabnine = true;
+in
+with keybindings.lib;
 {
-  plugins = with pkgs.vimPlugins; [
-    # MIGRATED coc-nvim
-    coc-yaml
-    coc-python
-    coc-highlight
-    coc-snippets
-    coc-lists
-    coc-git
-    coc-yank
-    # coc-tabnine
-    # coc-texlab
+  pkg = pkgs.vimPlugins.coc-nvim;
+  priority = 100;
+
+  # TODO: need a way to specify reverse dependencies or reorder priorities
+  dependencies = [
+    # use out-of-the-box airline integration
+    ../vim-airline.nix
+    # ./highlight.nix
+    # ./yank.nix
+    # ./snippets.nix
+    # ./lists.nix
+  # ] ++ (if usetabnine then [./tabnine.nix] else [
+    # # ./neco.nix
+    # # ./html.nix
+    # ./python.nix
+    # ./vimtex.nix
+  # ]);
   ];
-  rc = lib.strings.concatStringsSep "\n" [
+  extraConfig = [
     # if hidden is not set, TextEdit might fail.
     "set hidden"
 
     # Some servers have issues with backup files, see #649
-    ''
-    set nobackup
-    set nowritebackup
-    ''
+    "set nobackup nowritebackup"
 
     # Better display for messages
     "set cmdheight=2"
@@ -57,16 +66,14 @@
     ''inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"''
 
     # Use `[c` and `]c` to navigate diagnostics
-    "nmap <silent> [c <Plug>(coc-diagnostic-prev)"
-    "nmap <silent> ]c <Plug>(coc-diagnostic-next)"
+    (nmap {silent=true; plugin=true; key="[c"; cmd="coc-diagnostic-prev";})
+    (nmap {silent=true; plugin=true; key="]c"; cmd="coc-diagnostic-next";})
 
     # Remap keys for gotos
-    ''
-    nmap <silent> gd <Plug>(coc-definition)
-    nmap <silent> gy <Plug>(coc-type-definition)
-    nmap <silent> gi <Plug>(coc-implementation)
-    nmap <silent> gr <Plug>(coc-references)
-    ''
+    (nmap {silent=true; plugin=true; key="gd"; cmd="coc-definition";})
+    (nmap {silent=true; plugin=true; key="gy"; cmd="coc-type-definition";})
+    (nmap {silent=true; plugin=true; key="gi"; cmd="coc-implementation";})
+    (nmap {silent=true; plugin=true; key="gr"; cmd="coc-references";})
 
     # Use K to show documentation in preview window
     ''
@@ -81,16 +88,13 @@
     endfunction
     ''
 
-    # Highlight symbol under cursor on CursorHold
-    "autocmd CursorHold * silent call CocActionAsync('highlight')"
-
     # Remap for rename current word
-    "nmap <leader>rn <Plug>(coc-rename)"
+    (nmap {plugin=true; key="${leader}rn"; cmd="coc-rename";})
 
     # Remap for format selected region
     ''
-    xmap <leader>f  <Plug>(coc-format-selected)
-    nmap <leader>f  <Plug>(coc-format-selected)
+    xmap ${leader}f  <Plug>(coc-format-selected)
+    nmap ${leader}f  <Plug>(coc-format-selected)
 
     augroup mygroup
       autocmd!
@@ -103,14 +107,14 @@
 
     # Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
     ''
-    xmap <leader>a  <Plug>(coc-codeaction-selected)
-    nmap <leader>a  <Plug>(coc-codeaction-selected)
+    xmap ${leader}a  <Plug>(coc-codeaction-selected)
+    nmap ${leader}a  <Plug>(coc-codeaction-selected)
     ''
 
     # Remap for do codeAction of current line
-    "nmap <leader>ac  <Plug>(coc-codeaction)"
+    "nmap ${leader}ac  <Plug>(coc-codeaction)"
     # Fix autofix problem of current line
-    "nmap <leader>qf  <Plug>(coc-fix-current)"
+    "nmap ${leader}qf  <Plug>(coc-fix-current)"
 
     # Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
     ''
@@ -149,13 +153,16 @@
     # Resume latest coc list
     "nnoremap <silent> <space>p  :<C-u>CocListResume<CR>"
 
-    # https://github.com/neoclide/coc.nvim/wiki/Multiple-cursors-support
-    ''
-    nmap <silent> <C-c> <Plug>(coc-cursors-position)
-    nmap <silent> <C-d> <Plug>(coc-cursors-word)
-    xmap <silent> <C-d> <Plug>(coc-cursors-range)
-    " use normal command like `<leader>xi(`
-    nmap <leader>x  <Plug>(coc-cursors-operator)
-    ''
+    # # https://github.com/neoclide/coc.nvim/wiki/Multiple-cursors-support
+    # ''
+    # nmap <silent> <C-c> <Plug>(coc-cursors-position)
+    # nmap <silent> <C-d> <Plug>(coc-cursors-word)
+    # xmap <silent> <C-d> <Plug>(coc-cursors-range)
+    # " use normal command like `<leader>xi(`
+    # nmap <leader>x  <Plug>(coc-cursors-operator)
+    # ''
+
+    # use out-of-the-box airline integration
+    "let g:airline#extensions#coc#enabled = 1"
   ];
 }

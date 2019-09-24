@@ -13,12 +13,14 @@ let
     assert p ? pkg ; # && (p ? description || p ? pkg.meta.description);
     assert p ? name || p ? pkg.name;
     assert !(p ? extraConfig) || (isString p.extraConfig || (listOf string).check p.extraConfig);
+    assert !(p ? extraConfigs); # make sure there isn't an extraConfigs, plural
     optionalAttrs (!(hasAttr "disable" p) || !p.disable) {
       # "${if p ? name then p.name else p.pkg.name}" = {
       "${if p ? name then p.name else p.pkg.name}" = {
         name = "${if p ? name then p.name else p.pkg.name}";
         inherit (p) pkg;
         inherit depth;
+        # priority = if p ? priority then p.priority else (-1);
         extraConfig = optionalString (p ? extraConfig)
           (if isString p.extraConfig then p.extraConfig else concatStringsSep "\n" p.extraConfig);
       };

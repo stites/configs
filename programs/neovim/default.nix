@@ -8,6 +8,7 @@ let
     tmux             = pkgs.callPackages ./migrated/tmux.nix             { inherit pluginBuilder; };
     layout           = pkgs.callPackages ./migrated/layout.nix           { inherit pluginBuilder; };
     spelling         = pkgs.callPackages ./migrated/spelling.nix         { inherit pluginBuilder; };
+    surround         = pkgs.callPackages ./migrated/surround.nix         { inherit pluginBuilder; };
     # nix              = pkgs.callPackages ./old/nix.nix              { inherit pluginBuilder; };
 
     git              = pkgs.callPackages ./old/git.nix              { inherit pluginBuilder; };
@@ -16,7 +17,6 @@ let
     lsp              = pkgs.callPackages ./old/lsp.nix              { inherit pluginBuilder; };
     coc              = pkgs.callPackages ./old/coc.nix              { inherit pluginBuilder; };
     python           = pkgs.callPackages ./old/python.nix           { inherit pluginBuilder; };
-    surround         = pkgs.callPackages ./old/surround.nix         { inherit pluginBuilder; };
     textmanipulation = pkgs.callPackages ./old/textmanipulation.nix { inherit pluginBuilder; };
   };
 
@@ -25,21 +25,21 @@ in
 {
   xdg = {
     configFile = {
-      "nvim/coc-settings.json".text = builtins.toJSON {
-        "suggest.timeout" = 500;
-        "coc.preferences.formatOnSaveFiletypes" = ["python"];
+      # "nvim/coc-settings.json".text = builtins.toJSON {
+      #   "suggest.timeout" = 500;
+      #   "coc.preferences.formatOnSaveFiletypes" = ["python"];
 
-        "python.autoComplete.showAdvancedMembers" = false;
-        "python.pythonPath" = "python";
-        "python.formatting.provider" = "black";
-        "python.formatting.blackPath" = "black";
-        "python.linting.mypyEnabled" = true;
-        "python.linting.mypyPath" = "mypy";
-        "python.linting.pylintEnabled" = false;
-        "python.linting.pylamaEnabled" = true;
-        "python.linting.pylamaPath" = "pylama";
-        "python.sortImports.path" = "isort";
-      };
+      #   "python.autoComplete.showAdvancedMembers" = false;
+      #   "python.pythonPath" = "python";
+      #   "python.formatting.provider" = "black";
+      #   "python.formatting.blackPath" = "black";
+      #   "python.linting.mypyEnabled" = true;
+      #   "python.linting.mypyPath" = "mypy";
+      #   "python.linting.pylintEnabled" = false;
+      #   "python.linting.pylamaEnabled" = true;
+      #   "python.linting.pylamaPath" = "pylama";
+      #   "python.sortImports.path" = "isort";
+      # };
       "nvim/init.vim".text = ''
         set shell=/bin/sh
       '';

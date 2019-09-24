@@ -1,3 +1,12 @@
+global !p
+def last_module(mod):
+	return "" if len(mods) == 0 else [m for m in mod.split('.')][-1]
+endglobal
+
+snippet ia
+import ${1:numpy} as ${2:`!p snip.rv = last_module(t[1])`}
+endsnippet
+
 snippet #!2
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
@@ -15,11 +24,8 @@ import torchvision as thv
 import matplotlib.pyplot as plt
 import numpy as np
 endsnippet
-snippet ia
-import ${0:numpy} as ${1:np}
-endsnippet
 snippet from
-from ${1:package} import ${0:module}
+from ${1:package} import ${2:module}
 endsnippet
 snippet docs "Module Docstring"
 """

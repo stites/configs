@@ -20,7 +20,7 @@
       tarball = "${homepage}/archive/3.1.0-1.tar.gz";
       homepage = https://github.com/simnalamburt/vim-mundo;
     })
-    vim-commentary          # 'tpope/vim-commentary'
+    # MIGRATED vim-commentary          # 'tpope/vim-commentary'
     vim-indent-object       # 'michaeljsmith/vim-indent-object'
     vim-easymotion          # 'easymotion/vim-easymotion'
     (pluginBuilder {
