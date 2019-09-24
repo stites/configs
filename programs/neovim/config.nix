@@ -215,10 +215,8 @@
     # }}}
 
     # Spell checking {{{
-    # Pressing ,ss will toggle and untoggle spell checking
-    ''
-    map <leader>ss :setlocal spell!<cr>
-    ''
+    "map <leader>ss :setlocal spell!<cr>"               # Pressing ,ss will toggle and untoggle spell checking
+    "au BufRead,BufNewFile *.md,*.tex setlocal spell!"  # turn on spell-checking by default for markdown and latex
     # }}}
 
       # Neovim terminal configurations
@@ -268,6 +266,7 @@
     abbr accross across
     abbr hte the
     abbr Probablistic Probabilistic
+    abbr cplus oplus
     ''
   ];
 }
