@@ -67,8 +67,36 @@
     # insert size for the beginning of a line.
     "set shiftwidth=2"
 
-    # ensure that markdown files and python have a textwidth of 80
-    "au BufRead,BufNewFile *.md,*.py setlocal textwidth=120"
+    # ensure that markdown files have a textwidth of 120
+    "au BufRead,BufNewFile *.md setlocal textwidth=120"
+
+    # adjust python files to uniform formatting
+    ''
+    " au BufNewFile,BufRead *.py
+    "     \ set tabstop=4
+    "     \ set softtabstop=4
+    "     \ set shiftwidth=4
+    "     \ set textwidth=120
+    "     \ set expandtab
+    "     \ set autoindent
+    "     \ set fileformat=unix
+    ''
+
+    # Python ignores
+    ''
+    set wildignore+=__pycache__/*,*.py[cod],*$py.class,*.ipynb,.Python,env/*,build/*
+    set wildignore+=develop-eggs/*,dist/*,downloads/*,eggs/*,.eggs/*,lib/*,lib64/*
+    set wildignore+=parts/*,sdist/*,var/*,*.egg-info/*,.installed.cfg,*.egg,*.manifest
+    set wildignore+=*.spec,pip-log.txt,pip-delete-this-directory.txt,htmlcov/*
+    set wildignore+=__pycache__/*,.tox/*,.coverage,.coverage.*,.cache,nosetests.xml
+    set wildignore+=coverage.xml,cover,.hypothesis/*,*.mo,*.pot,*.log,local_settings.py
+    set wildignore+=instance/*,.webassets-cache,.scrapy,docs/_build/*,target/*
+    set wildignore+=.ipynb_checkpoints,.python-version,celerybeat-schedule,.env,venv/*
+    set wildignore+=ENV/*,.spyderproject,.ropeproject,.DS_Store,*.sublime-workspace
+    ''
+
+    # Read coco format as python (coco is "functional python")
+    "au! BufNewFile,BufRead *.coco set filetype=python"
 
     # VIM user interface {{{
     # This is the default in neovim (and might cause problems when set)

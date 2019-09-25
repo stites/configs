@@ -24,6 +24,9 @@ with keybindings.lib;
     # ./vimtex.nix
   # ]);
   ];
+  coc-settings = {
+    "suggest.timeout" = 500;
+  };
   extraConfig = [
     # if hidden is not set, TextEdit might fail.
     "set hidden"
@@ -141,7 +144,7 @@ with keybindings.lib;
     # Manage extensions
     "nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>"
     # Show commands
-    "nnoremap <silent> <space>c  :<C-u>CocList commands<cr>"
+    "noremap <silent> <space>c  :<C-u>CocList commands<cr>"
     # Find symbol of current document
     "nnoremap <silent> <space>o  :<C-u>CocList outline<cr>"
     # Search workspace symbols
@@ -156,13 +159,15 @@ with keybindings.lib;
     # # https://github.com/neoclide/coc.nvim/wiki/Multiple-cursors-support
     # ''
     # nmap <silent> <C-c> <Plug>(coc-cursors-position)
-    # nmap <silent> <C-d> <Plug>(coc-cursors-word)
-    # xmap <silent> <C-d> <Plug>(coc-cursors-range)
+    # nmap <silent> <C-n> <Plug>(coc-cursors-word)
+    # xmap <silent> <C-n> <Plug>(coc-cursors-range)
     # " use normal command like `<leader>xi(`
     # nmap <leader>x  <Plug>(coc-cursors-operator)
     # ''
 
     # use out-of-the-box airline integration
     "let g:airline#extensions#coc#enabled = 1"
+    # add status to the end of your statusline
+    "set statusline^=%{coc#status()}"
   ];
 }

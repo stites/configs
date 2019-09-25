@@ -13,7 +13,7 @@
     tabular                 # 'godlygeek/tabular'
 
     # Text manipulation
-    vim-sensible            # make vim sane
+    # vim-sensible            # make vim sane <<< NOT NESSECARY FOR NEOVIM
     vim-unimpaired          # pairs of handy bracket mappings
     (pluginBuilder rec {
       name = "vim-mundo";
@@ -29,8 +29,6 @@
       tarball = "https://github.com/ConradIrwin/vim-bracketed-paste/archive/master.tar.gz";
       homepage = https://github.com/ConradIrwin/vim-bracketed-paste;
     })
-    vim-repeat              # 'tpope/vim-repeat'     " to be used with vim-surround
-    vim-speeddating         # 'tpope/vim-speeddating'
     syntastic               # 'vim-syntastic/syntastic'
     vim-github-dashboard    # 'junegunn/vim-github-dashboard'
     (pluginBuilder rec {

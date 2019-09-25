@@ -20,9 +20,11 @@ let
         name = "${if p ? name then p.name else p.pkg.name}";
         inherit (p) pkg;
         inherit depth;
-        # priority = if p ? priority then p.priority else (-1);
+        priority = if p ? priority then p.priority else (-1);
         extraConfig = optionalString (p ? extraConfig)
           (if isString p.extraConfig then p.extraConfig else concatStringsSep "\n" p.extraConfig);
+        # all other configs
+        home = optionalAttrs (p ? home) p.home;
       };
     };
 
@@ -33,13 +35,17 @@ let
     {
       inherit (new) pkg;
       extraConfig = if (memo ? extraConfig) then memo.extraConfig + "\n" + new.extraConfig else new.extraConfig;
-      priority =
-        if !(memo ? priority)
-        then new.depth
-        else
-          if memo.priority > new.depth
-          then memo.priority
-          else new.depth;
+      priority = let
+          new-priority = if new.priority > -1 then new.depth else new.priority;
+        in
+          if !(memo ? priority)
+          then new-priority
+          else
+            if memo.priority > new-priority
+            then memo.priority
+            else new-priority;
+      # somehow merge all configs
+      # home = memo.home //
     };
 
   countAll = count (a: true);

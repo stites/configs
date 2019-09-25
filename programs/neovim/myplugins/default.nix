@@ -3,6 +3,18 @@ let
   validPluginFiles = (pkgs.callPackage ../plugin/functions.nix {}).validPluginFiles;
   compileAll = (pkgs.callPackage ../plugin/compile.nix {}).compileAll;
 
+  plugins = [
+    ./vim-polyglot.nix
+    ./vim-multiple-cursors.nix
+    ./themes/wombat256-vim.nix
+    ./vim-sandwich.nix
+    ./vim-commentary.nix
+  ] ++ tmux-plugins
+    ++ txt-plugins
+    ++ layout-plugins
+    ++ coc-plugins
+    ;
+
   tmux-plugins = [
     ./vim-tmux-navigator.nix
     ./tslime.nix
@@ -11,6 +23,7 @@ let
   txt-plugins = [
     ./goyo-vim.nix
     ./vim-textobj-sentence.nix
+    ./vim-speeddating.nix # increment dates with <c-x> and <c-a>
   ];
 
   layout-plugins = [
@@ -23,10 +36,10 @@ let
   coc-plugins = let usetabnine = true; in [
     ./coc
     ./coc/highlight.nix
+    ./coc/lists.nix
     ./coc/yank.nix
     ./coc/json.nix
     ./coc/snippets.nix
-    ./coc/lists.nix
     ./coc/prettier.nix
   ] ++ (if usetabnine then [./coc/tabnine.nix] else [
     # ./neco.nix
@@ -35,25 +48,23 @@ let
     ./coc/vimtex.nix
   ]);
 
-  plugins = [
-    ./vim-polyglot.nix
-    ./coc
-    ./vim-multiple-cursors.nix
-    ./themes/wombat256-vim.nix
-    ./vim-sandwich.nix
-    ./vim-commentary.nix
-  ] ++ tmux-plugins
-    ++ txt-plugins
-    ++ layout-plugins
-    ++ coc-plugins
-    ;
 in
 
 assert validPluginFiles plugins;
 let
   ps = compileAll plugins;
-in {
+in rec {
   plugins = map (p: p.pkg) ps;
   extraConfig = lib.strings.concatStringsSep "\n" (map (p: p.extraConfig) ps);
+  coc1 = (map (p: pkgs.callPackage p {}) coc-plugins);
+  coc2 = map (p: lib.attrsets.optionalAttrs (p ? coc-settings) p.coc-settings)
+          (map (p: pkgs.callPackage p {}) coc-plugins);
+
+  coc-settings = let
+      allsettings =
+        map (p: lib.attrsets.optionalAttrs (p ? coc-settings) p.coc-settings)
+          (map (p: pkgs.callPackage p {}) coc-plugins);
+    in
+      lib.attrsets.foldAttrs (new: memo: assert memo == null || memo == new; new) null allsettings;
 }
 

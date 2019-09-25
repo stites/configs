@@ -3,43 +3,12 @@ let
   customPlugins = pkgs.callPackage ./plugins.nix {};
   pluginBuilder = pkgs.callPackage ./plugin/builder.nix {};
 
-  configs = {
-    prelude          = pkgs.callPackages ./migrated/prelude.nix          { inherit pluginBuilder; };
-    tmux             = pkgs.callPackages ./migrated/tmux.nix             { inherit pluginBuilder; };
-    layout           = pkgs.callPackages ./migrated/layout.nix           { inherit pluginBuilder; };
-    spelling         = pkgs.callPackages ./migrated/spelling.nix         { inherit pluginBuilder; };
-    surround         = pkgs.callPackages ./migrated/surround.nix         { inherit pluginBuilder; };
-    # nix              = pkgs.callPackages ./old/nix.nix              { inherit pluginBuilder; };
-
-    git              = pkgs.callPackages ./old/git.nix              { inherit pluginBuilder; };
-    cplusplus        = pkgs.callPackages ./old/cplusplus.nix        { inherit pluginBuilder; };
-    haskell          = pkgs.callPackages ./old/haskell.nix          { inherit pluginBuilder; };
-    lsp              = pkgs.callPackages ./old/lsp.nix              { inherit pluginBuilder; };
-    coc              = pkgs.callPackages ./old/coc.nix              { inherit pluginBuilder; };
-    python           = pkgs.callPackages ./old/python.nix           { inherit pluginBuilder; };
-    textmanipulation = pkgs.callPackages ./old/textmanipulation.nix { inherit pluginBuilder; };
-  };
-
   myplugins = pkgs.callPackage ./myplugins {};
 in
 {
   xdg = {
     configFile = {
-      # "nvim/coc-settings.json".text = builtins.toJSON {
-      #   "suggest.timeout" = 500;
-      #   "coc.preferences.formatOnSaveFiletypes" = ["python"];
-
-      #   "python.autoComplete.showAdvancedMembers" = false;
-      #   "python.pythonPath" = "python";
-      #   "python.formatting.provider" = "black";
-      #   "python.formatting.blackPath" = "black";
-      #   "python.linting.mypyEnabled" = true;
-      #   "python.linting.mypyPath" = "mypy";
-      #   "python.linting.pylintEnabled" = false;
-      #   "python.linting.pylamaEnabled" = true;
-      #   "python.linting.pylamaPath" = "pylama";
-      #   "python.sortImports.path" = "isort";
-      # };
+      "nvim/coc-settings.json".text = builtins.toJSON myplugins.coc-settings;
       "nvim/init.vim".text = ''
         set shell=/bin/sh
       '';
@@ -121,22 +90,22 @@ in
 
   programs.neovim = {
     enable = true;
-    # extraPython3Packages = (ps: with ps; [
-    #   mccabe
-    #   mypy
-    #   nose
-    #   pycodestyle
-    #   pydocstyle
+    extraPython3Packages = (ps: with ps; [
+      mccabe
+      mypy
+      nose
+      pycodestyle
+      pydocstyle
 
-    #   jedi
-    #   flake8
-    #   pygments
-    #   pytest-mypy
-    #   pyls-isort
-    #   pyls-mypy
-    #   pyflakes
-    #   yapf
-    # ]);
+      jedi
+      flake8
+      pygments
+      pytest-mypy
+      pyls-isort
+      pyls-mypy
+      pyflakes
+      yapf
+    ]);
     viAlias = true;
     vimAlias = true;
     withNodeJs = true;
