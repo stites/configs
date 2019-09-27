@@ -148,7 +148,7 @@ in
     ./programs/urxvt.nix
     ./programs/autorandr.nix
     ./programs/xscreensaver.nix
-    ./programs/jupyter/jupyter_notebook_config.nix
+    ./programs/python
     ./programs/tmuxifier.nix
     ./programs/haskline.nix
     ./programs/ghci.nix
