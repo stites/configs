@@ -1,43 +1,61 @@
 { pkgs, lib, ... }:
+
+with builtins;
+let
+  ifBlock = cond: block:
+    let blockstr = if isList block then lib.strings.concatStringsSep "\n  " block else "  " + block;
+    in ''
+      if ${cond}
+      ${blockstr}
+      endif
+    '';
+  has = cond: "has('${cond}')";
+  set = val:
+    if isString val then "set ${val}"
+    else if isList val then "set ${lib.strings.concatStringsSep " " val}"
+    else if isAttrs val then assert length (values val) == 1; "set ${head (attrNames val)}=${toString (head (lib.attrsets.attrValues val))}" # only work with one assignment for now
+    else assert false; "";
+  letifexists = key: val: (ifBlock "! exists(\"${key}\")" "let ${key} = ${val}");
+in
 {
   extraConfig = lib.strings.concatStringsSep "\n" [
     # DEFAULTS
+    (ifBlock (has "folding") [
+      (ifBlock (has "windows")
+        "let &fillchars='vert: '"  # less cluttered vertical window separators
+      )
+      (set "foldenable")         # allow folds
+      (set "foldmethod=indent")  # Use indentation for folds (not as slick as `syntax`, but faster.
+      (set "foldnestmax=5")
+      (let
+        startunfolded = true;
+      in set (if startunfolded then "foldlevelstart=99" else "foldlevelstart=1"))
+      (set "foldcolumn=0")
+      (set "foldopen-=block")    # when a fold is made, allow moving with "}" past the fold, without opening/deleting that fold
+      "nnoremap <s-tab> za"      # toggle fold at current posision with s-tab (to avoid collision between <tab> and <c-i>
+    ])
 
-    # General {{{
-    # Use indentation for folds
+    # technically we don't need this anymore since we are configuring in nix!
     ''
-    set foldmethod=indent
-    set foldnestmax=5
-    set foldlevelstart=99
-    set foldcolumn=0
+    augroup vimrcFold
+      " fold rc itself by categories
+      autocmd!
+      autocmd FileType vim set foldmethod=marker
+      autocmd FileType vim set foldlevel=0
+    augroup END
     ''
-    # we don't need this anymore since we are working in nix!
-    # ''
-    # augroup vimrcFold
-    #   " fold rc itself by categories
-    #   autocmd!
-    #   autocmd FileType vim set foldmethod=marker
-    #   autocmd FileType vim set foldlevel=0
-    # augroup END
-    # ''
     # With a map leader it's possible to do extra key combinations
     # like <leader>w saves the current file
-    (let leader = ''\<space>'';
+    (let leader = ''"\<space>"'';
       in lib.strings.concatStringsSep "\n" ([
-        ''
-          if ! exists("mapleader")
-            let mapleader = "${leader}"
-          endif
-          if ! exists("g:mapleader")
-            let g:mapleader = "${leader}"
-          endif
-        ''
+        (letifexists "mapleader"   leader)
+        (letifexists "g:mapleader" leader)
       # Allow the normal use of "," by pressing it twice
       ] ++ lib.optional (leader == ",") ["noremap ,, ,"])
     )
 
     # Leader key timeout
-    "set tm=2000"
+    (set "tm=2000")
     # Use par for prettier line formatting
     ''
     set formatprg=par
@@ -48,11 +66,8 @@
     #nnoremap Q <nop>"
 
     # Make <c-h> work like <c-h> again (this is a problem with libterm)
-    ''
-    if has('nvim')
-      nnoremap <BS> <C-w>h
-    endif
-    ''
+    (ifBlock (has "nvim") "nnoremap <BS> <C-w>h")
+
     # color anything greater than 80 characters as an error
     ''
     highlight OverLength ctermbg=Black guibg=Black
@@ -70,17 +85,17 @@
     # ensure that markdown files have a textwidth of 120
     "au BufRead,BufNewFile *.md setlocal textwidth=120"
 
-    # adjust python files to uniform formatting
-    ''
-    " au BufNewFile,BufRead *.py
-    "     \ set tabstop=4
-    "     \ set softtabstop=4
-    "     \ set shiftwidth=4
-    "     \ set textwidth=120
-    "     \ set expandtab
-    "     \ set autoindent
-    "     \ set fileformat=unix
-    ''
+    # # adjust python files to uniform formatting
+    # ''
+    # " au BufNewFile,BufRead *.py
+    # "     \ set tabstop=4
+    # "     \ set softtabstop=4
+    # "     \ set shiftwidth=4
+    # "     \ set textwidth=120
+    # "     \ set expandtab
+    # "     \ set autoindent
+    # "     \ set fileformat=unix
+    # ''
 
     # Python ignores
     ''
@@ -141,6 +156,27 @@
     "set list"                                 # Show trailing whitespace
     "set listchars=tab:▸▸,trail:·"             # Show `▸▸` for tabs: 	, `·` for tailing whitespace
     "set clipboard=unnamed"                    # Use the system clipboard
+    # TEST THESE
+    "set cursorline"                           # show an underline for the current cursor position
+    "set ruler"         # DO I WANT THIS WITH STATUSLINE?    # show file and line position info on bottom right
+    "set autoindent"
+    "set smartindent"
+    "set laststatus=2"
+    "set ignorecase"
+    "set smartcase"
+    "set undofile"
+    "set undodir=${builtins.getEnv "HOME"}/.config/nvim/undodir" # note you must `mkdir -p ~/.config/nvim/undodir`
+    "set undolevels=1000"
+    "set undoreload=10000"
+
+    # change the speed of upward and downward scrolling
+    "nnoremap <C-e> 3<C-e>"
+    "nnoremap <C-y> 3<C-y>"
+
+    # set behaviors to be invoked using :make
+    "autocmd Filetype python setlocal makeprg=python3\\ %"
+    "autocmd Filetype c setlocal makeprg=make\\ clean\\ test"
+    "autocmd Filetype text,markdown setlocal nocindent"
 
     # "set nohlsearch"                           # <<<<< actually don't highlight ??????
     # And never type :nohlsearch again!!!
@@ -161,11 +197,20 @@
     # disable Background Color Erase (BCE) so that color schemes
     # render properly when inside 256-color tmux and GNU screen.
     # see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-    ''
-    if &term =~ '256color'
-      set t_ut=
-    endif
-    ''
+    (ifBlock "&term =~ '256color'" "set t_ut=")
+
+    # http://vimdoc.sourceforge.net/htmldoc/options.html#'autowrite'
+    # https://web.archive.org/web/20191003035623/http://vimdoc.sourceforge.net/htmldoc/options.html
+    # Write the contents of the file, if it has been modified, on each :next,
+    # :rewind, :last, :first, :previous, :stop, :suspend, :tag, :!, :make, CTRL-]
+    # and CTRL-^ command;
+    # "set autowrite"
+    # If you want to save on _every_ action: autowriteall (includes :edit, :quit, :qall, etc)
+    "set autowriteall"
+
+    # ex mode is basically useless, and we often get there accidentally, so disable it
+    "map q: <Nop>"
+    "nnoremap Q <nop>"
 
     # Force redraw
     "map <silent> <leader>r :redraw!<CR>"
@@ -201,14 +246,20 @@
     # only work in 256 colors
     "set t_Co=256"
 
-    # Set utf8 as standard encoding and en_US as the standard language
-    # ''
-    # if !has('nvim')
-    #   " Only set this for vim, since neovim is utf8 as default and setting it
-    #   " causes problems when reloading the .vimrc configuration
-    #   set encoding=utf8
-    # endif
-    # ''
+    # strip trailing whitespace everywhere and save the cursor position
+    # https://stackoverflow.com/a/1618401
+    (let
+      allfiles = false;
+      files = if allfiles then "*" else "haskell,c,cpp,java,php,ruby,python,markdown";
+    in ''
+    fun! <SID>StripTrailingWhitespaces()
+        let l = line(".")
+        let c = col(".")
+        %s/\s\+$//e
+        call cursor(l, c)
+    endfun
+    autocmd FileType ${files} autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+    '')
 
     # Visual mode related {{{
 
@@ -247,46 +298,44 @@
     "au BufRead,BufNewFile *.md,*.tex setlocal spell!"  # turn on spell-checking by default for markdown and latex
     # }}}
 
-      # Neovim terminal configurations
-      ''
-      if has('nvim')
-        " Use <Esc> to escape terminal insert mode
-        tnoremap <Esc> <C-\><C-n>
-        " Make terminal split moving behave like normal neovim
-        tnoremap <c-h> <C-\><C-n><C-w>h
-        tnoremap <c-j> <C-\><C-n><C-w>j
-        tnoremap <c-k> <C-\><C-n><C-w>k
-        tnoremap <c-l> <C-\><C-n><C-w>l
-      endif
-      " }}}
-      ''
-      # Remember info about open buffers on close
-      "set viminfo^=%"
+    # Neovim terminal configurations
+    (ifBlock (has "nvim") [
+      # Use <Esc> to escape terminal insert mode
+      "tnoremap <Esc> <C-\\><C-n>"
+      # Make terminal split moving behave like normal neovim
+      "tnoremap <c-h> <C-\\><C-n><C-w>h"
+      "tnoremap <c-j> <C-\\><C-n><C-w>j"
+      "tnoremap <c-k> <C-\\><C-n><C-w>k"
+      "tnoremap <c-l> <C-\\><C-n><C-w>l"
+    ])
 
-      # Treat long lines as break lines (useful when moving around in them)
-      "nnoremap j gj"
-      "nnoremap k gk"
+    # Remember info about open buffers on close
+    "set viminfo^=%"
 
-      "noremap <c-h> <c-w>h"
-      "noremap <c-k> <c-w>k"
-      "noremap <c-j> <c-w>j"
-      "noremap <c-l> <c-w>l"
+    # Treat long lines as break lines (useful when moving around in them)
+    "nnoremap j gj"
+    "nnoremap k gk"
 
-      # Open file prompt with current path
-      ''nmap <leader>e :e <C-R>=expand("%:p:h") . '/'<CR>''
+    "noremap <c-h> <c-w>h"
+    "noremap <c-k> <c-w>k"
+    "noremap <c-j> <c-w>j"
+    "noremap <c-l> <c-w>l"
 
-      # Tags {{{
+    # Open file prompt with current path
+    ''nmap <leader>e :e <C-R>=expand("%:p:h") . '/'<CR>''
 
-      "set tags+=./tags;$HOME,./codex.tags;$HOME"
-      "set cst"
-      "set csverb"
+    # Tags {{{
 
-      # IGNORES ARE HERE BECAUSE THEY INTERFERE WITH CTAG LOOKUP
-      "set wildignore+=*.min.*"       # Web ignores
-      "set wildignore+=*.stack-work*" # Haskell ignores
-      "set wildignore+=*.so"          # C ignores
+    "set tags+=./tags;$HOME,./codex.tags;$HOME"
+    "set cst"
+    "set csverb"
 
-      # }}}
+    # IGNORES ARE HERE BECAUSE THEY INTERFERE WITH CTAG LOOKUP
+    "set wildignore+=*.min.*"       # Web ignores
+    "set wildignore+=*.stack-work*" # Haskell ignores
+    "set wildignore+=*.so"          # C ignores
+
+    # }}}
 
     # Spelling
     ''

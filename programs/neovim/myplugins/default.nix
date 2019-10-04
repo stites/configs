@@ -9,6 +9,7 @@ let
     ./themes/wombat256-vim.nix
     ./vim-sandwich.nix
     ./vim-commentary.nix
+    ./vim-eunuch.nix
   ] ++ tmux-plugins
     ++ txt-plugins
     ++ layout-plugins

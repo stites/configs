@@ -9,6 +9,7 @@ in
   xdg = {
     configFile = {
       "nvim/coc-settings.json".text = builtins.toJSON myplugins.coc-settings;
+      "nvim/undodir/.empty".text = "";
       "nvim/init.vim".text = ''
         set shell=/bin/sh
       '';
@@ -324,20 +325,6 @@ in
     #   # ''
 
     #   # Files, backups and undo {{{
-
-    #   ## USE LESSSPACE INSTEAD!
-    #   ## # strip trailing whitespace everywhere
-    #   ## ''
-    #   ## fun! <SID>StripTrailingWhitespaces()
-    #   ##     let l = line(".")
-    #   ##     let c = col(".")
-    #   ##     %s/\s\+$//e
-    #   ##     call cursor(l, c)
-    #   ## endfun
-    #   ## autocmd FileType * autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
-    #   ## " autocmd FileType * autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
-    #   ## ''
-    #   ## # autocmd FileType haskell,c,cpp,java,php,ruby,python,markdown autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
     #   ## # # ALTERNATIVE: Utility function to delete trailing white space
     #   ## # ''
