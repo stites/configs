@@ -2,105 +2,6 @@
 
 let
   config = pkgs.config;
-  # nixos-stable = import <nixos> { };
-  # moz_overlay = import (builtins.fetchTarball https://github.com/mozilla/nixpkgs-mozilla/archive/master.tar.gz);
-
-  # mypython36 = pkgs:
-  #   pkgs.python36.override {
-  #     packageOverrides = (self: super: {
-  #       ############## CONFIGURE PARAMETERS #########################
-  #       pytorchWithCuda = super.pytorchWithCuda.override {
-  #         cudatoolkit = pkgs.cudatoolkit_10_0;
-  #         cudnn = pkgs.cudnn_cudatoolkit_10_0;
-  #       };
-
-  #       ################### STOP TESTS ###########################
-  #       numpy        = super.numpy.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
-  #       pandas       = super.pandas.overridePythonAttrs            (oldAttrs: { doCheck = false; checkPhase = "true"; });
-  #       scikitlearn  = super.scikitlearn.overridePythonAttrs       (oldAttrs: { doCheck = false; checkPhase = "true"; });
-
-  #       ################# TOTALLY BROKEN ########################
-  #       pymc3        = super.pymc3.overridePythonAttrs             (oldAttrs: { doCheck = false; checkPhase = "true"; });
-  #       pyls = super.python-language-server.override {
-  #         autopep8 = super.autopep8;
-  #         mccabe = super.mccabe;
-  #         pycodestyle = super.pycodestyle;
-  #         pydocstyle = super.pydocstyle;
-  #         pyflakes = super.pyflakes;
-  #         rope = super.rope;
-  #         yapf = super.yapf;
-  #       };
-
-
-  #     });
-  #   };
-
-  # _nixpkgsRubySource = pkgs_: pkgs_.fetchFromGitHub {
-  #     owner = "bobvanderlinden";
-  #     repo = "nixpkgs-ruby";
-  #     rev = "aaf2d46c7e166fd4cd52cc71720b72eef2486f18";
-  #     sha256 = "10rbw0kmbgq3jc2gngxqkdb6x4dkrh4fyrfqn6bx864vd4cszh5z";
-  #   };
-
-  # rbnix = pkgs_: import (_nixpkgsRubySource pkgs_) { inherit pkgs; };
-
-  #  # Make your own easy-to-access attributes for the versions you use:
-  #  ruby_2_5_1 = rbnix.getVersion ["2" "5" "1"];
-  #  ruby_2_4_4 = rbnix.getVersion ["2" "4" "4"];
-
-  #  # ... or use it directly as buildInput in your derivation:
-  #  example = stdenv.mkDerivation {
-  #    name = "example";
-  #    buildInputs = [ (rbnix.getVersion ["2" "5" "1"]) ];
-  #    installPhase = ''
-  #      ruby --version > $out
-  #    '';
-  #  };
-
-  hies = (import
-    (pkgs.fetchFromGitHub {
-      owner="domenkozar";
-      repo="hie-nix";
-      rev="19f47e0bf2e2f1a793bf87d64bf8266062f422b1";
-      sha256="1px146agwmsi0nznc1zd9zmhgjczz6zlb5yf21sp4mixzzbjsasq";
-    }) {}).hies;
-
-  # tmuxp = pkgs_: let
-  #     pp = pkgs_.python.pkgs;
-  #   in
-  #     pp.buildPythonApplication rec {
-  #       pname = "tmuxp";
-  #       version = "1.4.2";
-
-  #       src = pp.fetchPypi {
-  #         inherit pname version;
-  #         sha256 = "087icp1n1qdf53f1314g5biz16sigrnpqr835xqlr6vj85imm2dm";
-  #       };
-
-  #       postPatch = ''
-  #         sed -i 's/==.*$//' requirements/base.txt requirements/test.txt
-  #       '';
-
-  #       checkInputs = [
-  #         pkgs_.pytest
-  #         pkgs_.pytest-rerunfailures
-  #       ];
-
-  #       # No tests in archive
-  #       doCheck = false;
-
-  #       propagatedBuildInputs = [
-  #         pp.click pp.colorama pp.kaptan pp.libtmux
-  #       ];
-
-  #       meta = with pkgs_.stdenv.lib; {
-  #         description = "Manage tmux workspaces from JSON and YAML";
-  #         homepage = http://tmuxp.readthedocs.io;
-  #         license = licenses.bsd3;
-  #         platforms = platforms.linux;
-  #         maintainers = with maintainers; [ jgeerds ];
-  #       };
-  #     };
 
   src-stub = pkgs.fetchurl {
     # url = https://static.stites.io/stub.tar.gz;
@@ -213,63 +114,10 @@ in
   android_sdk.accept_license = true;
 
   packageOverrides = pkgs_: (with pkgs_; {
-    # stdenv = pkgs_.clangStdenv; # pkgs_.llvmPackages_7.stdenv;
-    stable = import <nixos> {};
-    # tmuxp = tmuxp pkgs_;
-
+    stable = import <nixos> { inherit config; };
+    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") { pkgs = pkgs_; };
     inherit cuda9-shell cuda10-shell cuda-shell;
     inherit clang7-shell clang-shell;
-
-    # stable.haskell.packages.ghc844 = nixos18_09.stable.haskell.packages.ghc844.extend (sel: sup: {
-    #   mkDerivation = drv: sup.mkDerivation (drv // { doHaddock = false; }); # jailbreak = true; });
-    # });
-
-    # haskell.packages.ghc844 =
-    #   pkgs_.haskell.packages.ghc844.override {
-    #     overrides = hpkgsNew: old: {
-    #       # Broken in patat
-    #       Diff = pkgs_.haskell.lib.dontCheck old.Diff;
-    #     };
-    #   };
-
-    # haskellPackages =
-    #   pkgs_.haskellPackages.override {
-    #     overrides = hpkgsNew: old:
-    #     let
-    #       dontCheck = pkgs.haskell.lib.dontCheck;
-    #     in
-    #     rec {
-    #       # test-cereal = dontCheck old.test-cereal;
-    #       # cereal = dontCheck old.cereal;
-    #       # xmonad = dontCheck old.xmonad;
-    #       # taffybar = dontCheck old.taffybar;
-    #       # xmonad-extras = dontCheck old.xmonad-extras;
-    #       # xmonad-contrib = dontCheck old.xmonad-contrib;
-    #     };
-    #   };
-
-    golangEnv = buildEnv {
-      name = "golangEnv";
-      paths = with pkgs; [ dep2nix go2nix go ];
-    };
-
-    pythonEnv = buildEnv {
-      name = "pythonEnv";
-      paths = mypythonPkgs {
-        python3 = (mypython36 pkgs);
-        python3Packages = python36Packages;
-        useCuda = false;
-      };
-    };
-
-    pythonEnvWithCuda = buildEnv {
-      name = "pythonEnvWithCuda";
-      paths = mypythonPkgs {
-        useCuda = true;
-        python3 = mypython36 pkgs;
-        python3Packages = python36Packages;
-      };
-    };
   });
 
   # THIS ACTUALLY GOES INTO CONFIGURATION.NIX
