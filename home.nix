@@ -21,23 +21,19 @@ in
   manual.html.enable = true;
   manual.manpages.enable = true;
 
+  nixpkgs.overlays = [
+    (import ./overlays/pytorch-world.nix)
+    (import ./overlays/starship.nix)
+  ];
+
   programs = {
     home-manager = {
       enable = true;
       # path = "${homedir}/git/sys/home-manager";
     };
     zathura.enable = true;
+    zathura.options = {};
     feh.enable = true;
-    # -----------------------------
-    # OSX OUT
-    # firefox = {
-    #   enable = true;
-    #   enableAdobeFlash = false;
-    #   enableGoogleTalk = true;
-    #   enableIcedTea = false;
-    #   package = pkgs.firefox-unwrapped;
-    # };
-    # -----------------------------
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
     # mtr.enable = true;
@@ -60,6 +56,8 @@ in
   xdg = {
     enable = true;
     configFile = {
+      # "nixpkgs/overlays/firefox-devedition.nix".source = ./overlays/firefox-devedition.nix;
+      # "nixpkgs/overlays/pytorch-world.nix".source = ./overlays/pytorch-world.nix;
       "nixpkgs/isNixOS".text = "${if host.is.NixOS then "true" else "false"}";
       "nixpkgs/config.nix".source = "${confroot}/config.nix";
       # "nixpkgs/local-nixpkgs".source      = "${homedir}/git/configs/nixpkgs";
@@ -120,8 +118,11 @@ in
   services.parcellite.enable = true;        # clipboard daemon
   # services.compton.enable = true;           # needs configuration
   services.xembed-sni-proxy.enable = true;
-  # services.flameshot.enable = true;
+  services.flameshot.enable = true;
   services.xsuspender.enable = true; # <<< I think this is throttling the mouse
+
+  # Absolute path to the systemctl tool. This option is set because I'm having trouble running gnome-keyring service on NixOS.
+  systemd.user.systemctlPath = "/run/current-system/sw/bin/systemctl";
 
   services.udiskie = {
     enable = true;
@@ -139,7 +140,6 @@ in
     ./programs/redshift
     ./programs/broot.nix
     ./programs/termonad
-    (import ./programs/xmonad { inherit termcommand;})
     (import ./programs/rofi.nix { inherit termcommand; })
     ./programs/tmux.nix
     ./programs/gtk.nix
