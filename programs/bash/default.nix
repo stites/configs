@@ -19,14 +19,6 @@ let
 in
 {
   xdg.dataFile = {
-    # "home-manager-dev" = {
-    #   executable = true;
-    #   target = "../bin/home-manager-dev";
-    #   text = ''
-    #     #!/usr/bin/env bash
-    #     home-manager -I home-manager=${homedir}/git/home-manager $@
-    #   '';
-    # };
     "remarkable-upload" = {
       executable = true;
       target = "../bin/remarkable-upload";
