@@ -1,5 +1,5 @@
 let
-  fdcommand = "fd --hidden --no-ignore --exclude .git  --ignore-file ~/.config/git/ignore ";
+  fdcommand = "fd --hidden --no-ignore --exclude .direnv --exclude .git  --ignore-file ~/.config/git/ignore ";
 in
 {
   programs.fzf = {
