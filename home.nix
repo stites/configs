@@ -164,8 +164,13 @@ in
     ./programs/neofetch.nix
     ./programs/pijul.nix
     ./programs/htop.nix
+    ./programs/nix-scripts
+    ./programs/nodejs.nix
+    ./programs/mimeApps.nix
     ./programs/firefox.nix
     ./experiments.nix
+  # ] ++ lib.optionals host.is.NixOS [(import ./programs/xmonad { inherit termcommand;})];
+    (import ./programs/xmonad { inherit termcommand;})
   ];
 }
 
