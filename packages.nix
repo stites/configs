@@ -41,7 +41,6 @@ let
     in (with stable; [
       fortune
       cowsay
-      neofetch
       calibre
 
       finger_bsd
@@ -153,19 +152,19 @@ let
 
       # cachix  # << install via cachix.com
 
-      # In order to build things outside of nix
-      zlib.out # otherwise this goes to bin
-      zlib.dev # needed for pyenv
-      openssl.out
-      openssl.dev
-      bzip2.out
-      bzip2.dev
-      sqlite.out
-      sqlite.dev
-      readline.out
-      readline.dev
-      libffi.out
-      libffi.dev
+      # # In order to build things outside of nix
+      # zlib.out # otherwise this goes to bin
+      # zlib.dev # needed for pyenv
+      # openssl.out
+      # openssl.dev
+      # bzip2.out
+      # bzip2.dev
+      # sqlite.out
+      # sqlite.dev
+      # readline.out
+      # readline.dev
+      # libffi.out
+      # libffi.dev
 
     ]) ++ (if host.is.server then (with stable; [ znc ]) else []);
        # ++ (if firstHomeManagerBoot then [] else (with unstable; [ ngrok ]));
@@ -187,6 +186,8 @@ let
       watchexec
       (exe haskellPackages.glirc)
 
+      ngrok
+
       # BROKEN
       # (exe haskellPackages.git-monitor)
       # (exe haskellPackages.nvim-hs-ghcid)
@@ -199,7 +200,7 @@ let
     if host.is.NixOS
     then (with unstable; [
         coreutils
-        ffmpeg
+        ffmpeg_4
 
         # fonts
         fira
@@ -209,7 +210,7 @@ let
         # GUI TOOLS (needs to be changed to nixos-only)
         # signal-desktop
         # gitter
-        slack
+        # slack
         spotify
         zotero qnotero
 
