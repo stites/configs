@@ -163,6 +163,7 @@ in
     ./programs/jq.nix
     ./programs/neofetch.nix
     ./programs/pijul.nix
+    ./programs/htop.nix
     ./programs/firefox.nix
     ./experiments.nix
   ];
