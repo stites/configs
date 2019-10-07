@@ -1,24 +1,10 @@
 { termcommand # more of an annotation to indicate that this requires updating a string somewhere
 }:
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 let
   homedir = builtins.getEnv "HOME";
 in
 {
-  # home.file.".xmonad/xmonad.hs" = {
-  #   # source = ./xmonad.hs;
-  #   source = ./xmonad-with-taffybar.hs;
-  #   onChange = ''
-  #     echo "Recompiling xmonad"
-  #     $DRY_RUN_CMD xmonad --recompile
-
-  #     # Attempt to restart xmonad if X is running.
-  #     if [[ -v DISPLAY ]] ; then
-  #       echo "Restarting xmonad"
-  #       $DRY_RUN_CMD xmonad --restart
-  #     fi
-  #   '';
-  # };
   xdg.configFile = {
     "taffybar/taffybar.hs" = {
       source = ../taffybar/taffybar.hs;
@@ -33,19 +19,19 @@ in
   services.taffybar.enable = true;
   services.status-notifier-watcher.enable = true;
 
-  # services.taffybar = {
-  #   enable = host.isNixOS;
-  #   package = hpkgs822.taffybar;
-  # };
-
-  # services.status-notifier-watcher = {
-  #   enable = host.isNixOS;
-  #   package = hpkgs822.status-notifier-item;
-  # };
-
   xsession = {
-    enable = (pkgs.callPackage ../../hosts { }).is.NixOS;
+    enable = true;
     preferStatusNotifierItems = true;
+    # initExtra = ''
+    #   export GTK_DATA_PREFIX=${config.system.path}
+    #   export GTK_PATH=${config.system.path}/lib/gtk-3.0:${config.system.path}/lib/gtk-2.0
+    #   # export XCURSOR_PATH=~/.icons:~/.nix-profile/share/iconts:/var/run/current-system/sw/share/iconts
+    #   ${pkgs.xorg.xset}/bin/xset r rate 220 50
+    # '';
+    # profileExtra = ''
+    #   eval $(${pkgs.gnome3.gnome-keyring}/bin/gnome-keyring-daemon --start -d --components=pksc11,secrets,ssh)
+    #   export SSH_AUTH_SOCK
+    # '';
     # windowManager.command = "startxfce4";
     # windowManager.command = "my-xmonad";
 
@@ -56,16 +42,13 @@ in
     # };
 
     windowManager = {
-      # command = "/run/current-system/sw/bin/xfce4-session";
       xmonad = {
         enable = true;
         enableContribAndExtras = true;
         config = ./xmonad-with-taffybar.hs;
-        # config = "${confroot}/programs/xmonad/xmonad.hs";
-        # haskellPackages = hpkgs822;
-        # extraPackages = hpkgs: with hpkgs [
-        #   taffybar
-        # ];
+        extraPackages = hpkgs: with hpkgs; [
+          taffybar
+        ];
       };
     };
   };

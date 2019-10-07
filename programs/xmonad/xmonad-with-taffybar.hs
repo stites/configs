@@ -53,8 +53,8 @@ main = do
     -- . pagerHints        -- gives taffybar logger information
     . docks
 
-    -- $ desktopConfig
-    $ xfceConfig
+    $ desktopConfig
+    -- $ xfceConfig
       { modMask           = mod4Mask  -- Rebind Mod to super
       , terminal          = "kitty -1" -- "urxvt" -- "/home/stites/.local/bin/termonad"
       , workspaces        = show <$> [1 .. 6]
@@ -77,7 +77,7 @@ main = do
       , startupHook = do
           spawnOn "1" "slack"
           spawnOn "1" "signal-desktop"
-          spawnOn "1" "Gitter"
+          -- spawnOn "1" "Gitter"
           spawnOn "2" "firefox"
           spawnOn "2" "kitty -1"
           spawnOn "3" "zotero"
@@ -131,7 +131,6 @@ additionalKeys'
   <> applications
   <> system
   <> binaryPartitionLayout
-  -- <> bspLayoutKeys
   where
     windowsAndWorkspace :: [(String, X ())]
     windowsAndWorkspace =
@@ -151,9 +150,7 @@ additionalKeys'
       [ ("M-o d",        spawn "thunar")
       , ("M-o h",        promptSearch xpconfig hackage)
       , ("M-<Return>",   spawn =<< asks (terminal . config))
-      -- , ("C-S-<Space>",  spawn "albert show")
       , ("<Print>",      spawn "flameshot gui")
-      -- , ("M-i",          spawn "google-chrome-stable")
 
       , ("C-S-<Space>",  spawn launcherString) -- old OSX style
       , ("M-p",          spawn launcherString) -- linux style
