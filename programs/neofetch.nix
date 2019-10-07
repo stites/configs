@@ -1,5 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
+let
+  host = pkgs.callPackage ../hosts {};
+in
 {
+  # home.packages = lib.optionals (!host.is.NixOS) [ pkgs.neofetch ];
   home.packages = [ pkgs.neofetch ];
   xdg.configFile."neofetch/config.conf".text = pkgs.lib.strings.concatStringsSep "\n" [
     # see this wiki page for more info:
