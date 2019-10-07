@@ -7,10 +7,13 @@ import logging
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 logging.info(gitroot + " appended to python path")
 
-from IPython import get_ipython;
+from IPython import get_ipython
 ipython = get_ipython()
 ipython.magic("load_ext autoreload"); logging.info("%load_ext autoreload")
 ipython.magic("autoreload 2"); logging.info("%autoreload 2")
+
+from IPython.core.debugger import set_trace; logging.info("from IPython.core.debugger import set_trace")
+from IPython.core.display import display, HTML; logging.info("from IPython.core.display import display, HTML")
 
 try:
     import torch      ; logging.info("import torch")
@@ -42,5 +45,5 @@ try:
 except:
     logging.debug("pandas import failed")
 
-__all__ = ["logging", "pd", "torch", "np", "sp", "mpl", "plt", "sns"]
+__all__ = ["logging", "pd", "torch", "np", "sp", "matplotlib", "plt", "sns", "set_trace", "display", "HTML"]
 
