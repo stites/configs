@@ -2,14 +2,14 @@ let
   secrets = import ../secrets.nix;
 in
 {
-  programs.keychain = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = false;
-    agents = [ "ssh" "gpg" ];
-    inheritType = null;
-    keys = [ "id_rsa" "id_ed25519" secrets.gpg.signing-key ];
-  };
+  # programs.keychain = {
+  #   enable = true;
+  #   enableBashIntegration = true;
+  #   enableZshIntegration = false;
+  #   agents = [ "ssh" "gpg" ];
+  #   inheritType = null;
+  #   keys = [ "id_rsa" "id_ed25519" secrets.gpg.signing-key ];
+  # };
   # Just use nixos-gnome-keyring for this
   services.gnome-keyring = {
     enable = true;
@@ -49,10 +49,13 @@ in
         hostname = "10.0.6.132";
         forwardX11Trusted = true;
       };
+
+      # Utils
       # ssh root@10.11.99.1 "mkdir -p ~/.ssh && \
       #    touch .ssh/authorized_keys && \
       #    chmod -R u=rwX,g=,o= ~/.ssh && \
       #    cat >> .ssh/authorized_keys" < ~/.ssh/id_rsa.pub
+      fathom = { user = "root"; hostname = "fathom.stites.io"; };
       remarkable = {
         hostname = "192.168.1.112";
         # hostname = "10.11.99.1";
